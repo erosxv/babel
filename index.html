@@ -939,7 +939,42 @@ const SAMPLE = { en: "Hey! Can I get a coffee, please?", es: "¡Hola! ¿Me pones
 // can still speak a language by its code even when it is not listed.
 const canSpeak = () => "speechSynthesis" in window;
 let noVoiceWarned = {};
+// Recorded voices: lines read once by an AI voice with a native accent (tools/gerar-audio.py) and kept
+// in audio/<lang>/, one mp3 per line, named by audioKey. audio/<lang>/index.json lists the lines that
+// have a file; any other line is read by the device's own voice.
+const AUDIO_LANGS = ["en"];
+// One audio element plays every line: phones only let a page play sound from an element it has
+// already used after a tap, so it is unlocked on the first tap.
+const AUDIO = {}, clip = { a: null, held: false, n: 0 }, clipUrls = new Map(), voiceEl = new Audio();
+voiceEl.preservesPitch = true;
+document.addEventListener("pointerdown", () => { if (clip.a) return; voiceEl.src = "data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQAAAAA="; voiceEl.play().catch(() => {}); }, { once: true });
+const audioKey = s => { let h = 0x811c9dc5; for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 0x01000193) >>> 0; } return h.toString(16).padStart(8, "0"); };
+for (const l of AUDIO_LANGS) fetch(`audio/${l}/index.json`).then(r => r.ok ? r.json() : []).then(ks => { AUDIO[l] = new Set(ks); }).catch(() => {});
+function stopVoice() {
+  clip.n++; if (clip.a) { voiceEl.pause(); clip.a = null; }
+  try { speechSynthesis.cancel(); } catch {}
+}
+// plays the recorded line and returns true, or returns false when there is none
+function playRecorded(text, lang, slow, onEnd) {
+  const k = audioKey(text);
+  if (!AUDIO[lang] || !AUDIO[lang].has(k)) return false;
+  stopVoice();
+  const n = clip.n, mine = () => clip.n === n;
+  clip.a = voiceEl; clip.held = false;
+  const fail = () => { if (!mine()) return; clip.a = null; speakDevice(text, lang, slow); };
+  voiceEl.onended = () => { if (!mine()) return; clip.a = null; if (onEnd) onEnd(); };
+  voiceEl.onerror = fail;
+  // loaded as a whole file (not streamed), so the offline copy works on iPhones too
+  const url = `audio/${lang}/${k}.mp3`;
+  if (!clipUrls.has(url)) clipUrls.set(url, fetch(url).then(r => { if (!r.ok) throw 0; return r.blob(); }).then(b => URL.createObjectURL(b)));
+  clipUrls.get(url).then(u => { if (!mine()) return; voiceEl.src = u; voiceEl.playbackRate = slow ? .75 : 1; voiceEl.play().catch(() => {}); })
+    .catch(() => { clipUrls.delete(url); fail(); });
+  return true;
+}
 function speak(text, lang, slow) {
+  if (!playRecorded(first(text).trim(), lang, slow)) speakDevice(text, lang, slow);
+}
+function speakDevice(text, lang, slow) {
   if (!canSpeak()) return;
   if (!voices.length) loadVoices();
   const v = voiceFor(lang);
@@ -975,7 +1010,7 @@ const PASS = 65, GREAT = 85;
 let rec = null;
 function listen(lang, onDone) {
   stopListening();
-  try { speechSynthesis.cancel(); } catch {}
+  stopVoice();
   let r, got = null;
   try { r = new (SRClass())(); } catch { onDone({ error: "start" }); return; }
   r.lang = LANGS[lang].voice; r.interimResults = false; r.maxAlternatives = 5; r.continuous = false;
@@ -1738,7 +1773,7 @@ function closeLesson() {
   stopListening();
   LS = null; $("#lesson").hidden = true; $("#lesson").innerHTML = "";
   document.body.classList.remove("locked");
-  try { speechSynthesis.cancel(); } catch {}
+  stopVoice();
   pop = null; render();
 }
 function quitAsk() {
@@ -1917,7 +1952,7 @@ let recStream = null;
 async function recordAndCompare() {
   const ln = TK.lines[TK.si], secs = Math.min(8, 1.5 + ln.t.split(" ").length * .5);
   try {
-    stopListening(); try { speechSynthesis.cancel(); } catch {}
+    stopListening(); stopVoice();
     recStream = await navigator.mediaDevices.getUserMedia({ audio: true });
     const mr = new MediaRecorder(recStream), chunks = [];
     mr.ondataavailable = e => e.data.size && chunks.push(e.data);
@@ -1939,6 +1974,7 @@ function playClip() { if (TK && TK.clip) try { new Audio(TK.clip).play(); } catc
 // native voice first, then yours
 function playCompare() {
   const ln = TK.lines[TK.si], v = voiceFor(TK.lang);
+  if (playRecorded(ln.t, TK.lang, false, () => setTimeout(playClip, 300))) return;
   if (!v) { playClip(); return; }
   try {
     speechSynthesis.cancel();
@@ -1954,7 +1990,7 @@ function closeTalk() {
   if (TK && TK.clip) URL.revokeObjectURL(TK.clip);
   TK = null; $("#lesson").hidden = true; $("#lesson").innerHTML = "";
   document.body.classList.remove("locked");
-  try { speechSynthesis.cancel(); } catch {}
+  stopVoice();
   render();
 }
 function viewTalk() {
@@ -2090,10 +2126,11 @@ function syFly() {
 }
 const syFace = who => { const b = HD && HD.bust(who); return b ? `<img class="pix mini face" src="${b.base}" alt="">` : pxPortrait(who, "pix mini"); };
 // the mouth moves while the voice speaks; the pause button shows while there is a voice to pause or resume
-setInterval(() => { const st = document.querySelector(".stage"); if (!st) return; const ss = window.speechSynthesis, busy = !!(ss && ss.speaking), paused = busy && ss.paused;
+setInterval(() => { const st = document.querySelector(".stage"); if (!st) return; const ss = window.speechSynthesis, busy = !!clip.a || !!(ss && ss.speaking), paused = busy && (clip.a ? clip.held : ss.paused);
   st.classList.toggle("talking", busy && !paused && !st.classList.contains("talking")); st.classList.toggle("voice", busy);
   const b = st.querySelector(".sy-pause"); if (b && b.dataset.p !== String(paused)) { b.dataset.p = paused; b.innerHTML = I(paused ? "play" : "pause"); b.setAttribute("aria-label", paused ? "Continuar a fala" : "Pausar a fala"); } }, 150);
 function syPause() {
+  if (clip.a) { clip.held = !clip.held; if (clip.held) voiceEl.pause(); else voiceEl.play().catch(() => {}); return; }
   const ss = window.speechSynthesis; if (!ss || !ss.speaking) return;
   if (ss.paused) { ss.resume(); return; }
   ss.pause();
@@ -2244,7 +2281,7 @@ function closeStory() {
   stopListening(); SY = null;
   $("#lesson").hidden = true; $("#lesson").innerHTML = "";
   document.body.classList.remove("locked");
-  try { speechSynthesis.cancel(); } catch {}
+  stopVoice();
   render();
 }
 function noteAppend(lang, text) {

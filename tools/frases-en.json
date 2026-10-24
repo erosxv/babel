@@ -1,0 +1,4592 @@
+[
+ {
+  "key": "4f9f2cab",
+  "text": "hello",
+  "voice": "af_heart"
+ },
+ {
+  "key": "46d72f50",
+  "text": "goodbye",
+  "voice": "af_heart"
+ },
+ {
+  "key": "f17ab010",
+  "text": "good morning",
+  "voice": "af_heart"
+ },
+ {
+  "key": "72131c0e",
+  "text": "good night",
+  "voice": "af_heart"
+ },
+ {
+  "key": "4dd58d63",
+  "text": "please",
+  "voice": "af_heart"
+ },
+ {
+  "key": "3c694558",
+  "text": "thank you",
+  "voice": "af_heart"
+ },
+ {
+  "key": "4e9f3590",
+  "text": "yes",
+  "voice": "af_heart"
+ },
+ {
+  "key": "62366ffa",
+  "text": "no",
+  "voice": "af_heart"
+ },
+ {
+  "key": "44f1708a",
+  "text": "sorry",
+  "voice": "af_heart"
+ },
+ {
+  "key": "dd94f8e4",
+  "text": "Good morning, how are you?",
+  "voice": "af_heart"
+ },
+ {
+  "key": "2c1e14c9",
+  "text": "I am fine, thank you",
+  "voice": "af_heart"
+ },
+ {
+  "key": "bb1fc4f8",
+  "text": "What is your name?",
+  "voice": "af_heart"
+ },
+ {
+  "key": "814afea8",
+  "text": "My name is Ana",
+  "voice": "af_heart"
+ },
+ {
+  "key": "eb4adb13",
+  "text": "Nice to meet you",
+  "voice": "af_heart"
+ },
+ {
+  "key": "23e3d71a",
+  "text": "mother",
+  "voice": "af_heart"
+ },
+ {
+  "key": "b0fee263",
+  "text": "father",
+  "voice": "af_heart"
+ },
+ {
+  "key": "35bc1205",
+  "text": "brother",
+  "voice": "af_heart"
+ },
+ {
+  "key": "fe691321",
+  "text": "sister",
+  "voice": "af_heart"
+ },
+ {
+  "key": "cba09f8d",
+  "text": "friend",
+  "voice": "af_heart"
+ },
+ {
+  "key": "e9a2ff6f",
+  "text": "man",
+  "voice": "af_heart"
+ },
+ {
+  "key": "e96898d5",
+  "text": "woman",
+  "voice": "af_heart"
+ },
+ {
+  "key": "e5a0205d",
+  "text": "child",
+  "voice": "af_heart"
+ },
+ {
+  "key": "521d0429",
+  "text": "family",
+  "voice": "af_heart"
+ },
+ {
+  "key": "dfb1f69e",
+  "text": "This is my mother",
+  "voice": "af_heart"
+ },
+ {
+  "key": "1c19d52b",
+  "text": "I have a brother",
+  "voice": "af_heart"
+ },
+ {
+  "key": "64366431",
+  "text": "She is my friend",
+  "voice": "af_heart"
+ },
+ {
+  "key": "e3ce3b18",
+  "text": "We are a family",
+  "voice": "af_heart"
+ },
+ {
+  "key": "49c69a10",
+  "text": "water",
+  "voice": "af_heart"
+ },
+ {
+  "key": "c8647fe5",
+  "text": "bread",
+  "voice": "af_heart"
+ },
+ {
+  "key": "8e2c7aa1",
+  "text": "coffee",
+  "voice": "af_heart"
+ },
+ {
+  "key": "888e7aa2",
+  "text": "milk",
+  "voice": "af_heart"
+ },
+ {
+  "key": "10bc2abf",
+  "text": "apple",
+  "voice": "af_heart"
+ },
+ {
+  "key": "a20c85a8",
+  "text": "cheese",
+  "voice": "af_heart"
+ },
+ {
+  "key": "0552c2b0",
+  "text": "rice",
+  "voice": "af_heart"
+ },
+ {
+  "key": "88de06b2",
+  "text": "meat",
+  "voice": "af_heart"
+ },
+ {
+  "key": "ebb76fff",
+  "text": "juice",
+  "voice": "af_heart"
+ },
+ {
+  "key": "e1f94c79",
+  "text": "I want water",
+  "voice": "af_heart"
+ },
+ {
+  "key": "16cda879",
+  "text": "I drink coffee with milk",
+  "voice": "af_heart"
+ },
+ {
+  "key": "5a991baf",
+  "text": "The bread is good",
+  "voice": "af_heart"
+ },
+ {
+  "key": "cffbb8d0",
+  "text": "Do you like cheese?",
+  "voice": "af_heart"
+ },
+ {
+  "key": "ba2719ef",
+  "text": "one",
+  "voice": "af_heart"
+ },
+ {
+  "key": "be248829",
+  "text": "two",
+  "voice": "af_heart"
+ },
+ {
+  "key": "888603c3",
+  "text": "three",
+  "voice": "af_heart"
+ },
+ {
+  "key": "2f69f5a5",
+  "text": "four",
+  "voice": "af_heart"
+ },
+ {
+  "key": "aeb44395",
+  "text": "five",
+  "voice": "af_heart"
+ },
+ {
+  "key": "ca3007ab",
+  "text": "six",
+  "voice": "af_heart"
+ },
+ {
+  "key": "3583acfe",
+  "text": "seven",
+  "voice": "af_heart"
+ },
+ {
+  "key": "d4fa8470",
+  "text": "eight",
+  "voice": "af_heart"
+ },
+ {
+  "key": "16266f55",
+  "text": "nine",
+  "voice": "af_heart"
+ },
+ {
+  "key": "bd01f454",
+  "text": "ten",
+  "voice": "af_heart"
+ },
+ {
+  "key": "490cea19",
+  "text": "I have two cats",
+  "voice": "af_heart"
+ },
+ {
+  "key": "86e7a27b",
+  "text": "She is ten years old",
+  "voice": "af_heart"
+ },
+ {
+  "key": "ebb71750",
+  "text": "Three coffees, please",
+  "voice": "af_heart"
+ },
+ {
+  "key": "40f480dc",
+  "text": "red",
+  "voice": "af_heart"
+ },
+ {
+  "key": "82fbf5cd",
+  "text": "blue",
+  "voice": "af_heart"
+ },
+ {
+  "key": "011decbc",
+  "text": "green",
+  "voice": "af_heart"
+ },
+ {
+  "key": "568f4ba4",
+  "text": "black",
+  "voice": "af_heart"
+ },
+ {
+  "key": "de020766",
+  "text": "white",
+  "voice": "af_heart"
+ },
+ {
+  "key": "c1948a38",
+  "text": "book",
+  "voice": "af_heart"
+ },
+ {
+  "key": "0cfb455b",
+  "text": "house",
+  "voice": "af_heart"
+ },
+ {
+  "key": "047458e1",
+  "text": "car",
+  "voice": "af_heart"
+ },
+ {
+  "key": "773611af",
+  "text": "phone",
+  "voice": "af_heart"
+ },
+ {
+  "key": "9818849d",
+  "text": "The car is red",
+  "voice": "af_heart"
+ },
+ {
+  "key": "68b5dd10",
+  "text": "My house is white",
+  "voice": "af_heart"
+ },
+ {
+  "key": "551f7824",
+  "text": "I have a blue book",
+  "voice": "af_heart"
+ },
+ {
+  "key": "7e8d42e3",
+  "text": "Where is my phone?",
+  "voice": "af_heart"
+ },
+ {
+  "key": "61635c1e",
+  "text": "to eat",
+  "voice": "af_heart"
+ },
+ {
+  "key": "f552d5de",
+  "text": "to drink",
+  "voice": "af_heart"
+ },
+ {
+  "key": "cded647a",
+  "text": "to go",
+  "voice": "af_heart"
+ },
+ {
+  "key": "c98e6807",
+  "text": "to see",
+  "voice": "af_heart"
+ },
+ {
+  "key": "974cfcea",
+  "text": "to speak",
+  "voice": "af_heart"
+ },
+ {
+  "key": "e30177cf",
+  "text": "to sleep",
+  "voice": "af_heart"
+ },
+ {
+  "key": "68034180",
+  "text": "to read",
+  "voice": "af_heart"
+ },
+ {
+  "key": "d21c6cfb",
+  "text": "to write",
+  "voice": "af_heart"
+ },
+ {
+  "key": "fcae9fb9",
+  "text": "to work",
+  "voice": "af_heart"
+ },
+ {
+  "key": "cf595486",
+  "text": "I speak English",
+  "voice": "af_heart"
+ },
+ {
+  "key": "9c3c0f08",
+  "text": "We eat rice",
+  "voice": "af_heart"
+ },
+ {
+  "key": "07ec66a5",
+  "text": "He reads a book",
+  "voice": "af_heart"
+ },
+ {
+  "key": "30a1e608",
+  "text": "I work every day",
+  "voice": "af_heart"
+ },
+ {
+  "key": "7665043e",
+  "text": "street",
+  "voice": "af_heart"
+ },
+ {
+  "key": "78556c69",
+  "text": "train",
+  "voice": "af_heart"
+ },
+ {
+  "key": "aed72c13",
+  "text": "station",
+  "voice": "af_heart"
+ },
+ {
+  "key": "96972cb0",
+  "text": "airport",
+  "voice": "af_heart"
+ },
+ {
+  "key": "6517b3e5",
+  "text": "ticket",
+  "voice": "af_heart"
+ },
+ {
+  "key": "124aec70",
+  "text": "left",
+  "voice": "af_heart"
+ },
+ {
+  "key": "78e32de5",
+  "text": "right",
+  "voice": "af_heart"
+ },
+ {
+  "key": "82138fe3",
+  "text": "bathroom",
+  "voice": "af_heart"
+ },
+ {
+  "key": "0dc48142",
+  "text": "city",
+  "voice": "af_heart"
+ },
+ {
+  "key": "19a29498",
+  "text": "Where is the station?",
+  "voice": "af_heart"
+ },
+ {
+  "key": "3dac1a9b",
+  "text": "Turn left",
+  "voice": "af_heart"
+ },
+ {
+  "key": "fd99a461",
+  "text": "I need a ticket",
+  "voice": "af_heart"
+ },
+ {
+  "key": "8952b0d0",
+  "text": "Where is the bathroom?",
+  "voice": "af_heart"
+ },
+ {
+  "key": "420372be",
+  "text": "today",
+  "voice": "af_heart"
+ },
+ {
+  "key": "ac3c2a26",
+  "text": "tomorrow",
+  "voice": "af_heart"
+ },
+ {
+  "key": "28b19af7",
+  "text": "now",
+  "voice": "af_heart"
+ },
+ {
+  "key": "213b65cb",
+  "text": "here",
+  "voice": "af_heart"
+ },
+ {
+  "key": "b8ebd55d",
+  "text": "there",
+  "voice": "af_heart"
+ },
+ {
+  "key": "6736afe4",
+  "text": "always",
+  "voice": "af_heart"
+ },
+ {
+  "key": "0ac95089",
+  "text": "never",
+  "voice": "af_heart"
+ },
+ {
+  "key": "63fe3327",
+  "text": "yesterday",
+  "voice": "af_heart"
+ },
+ {
+  "key": "1905cf90",
+  "text": "I don't understand",
+  "voice": "af_heart"
+ },
+ {
+  "key": "78a7d9c2",
+  "text": "Can you help me?",
+  "voice": "af_heart"
+ },
+ {
+  "key": "3d06cfac",
+  "text": "How much is it?",
+  "voice": "af_heart"
+ },
+ {
+  "key": "f0b14e6c",
+  "text": "I am learning English",
+  "voice": "af_heart"
+ },
+ {
+  "key": "94271132",
+  "text": "See you tomorrow",
+  "voice": "af_heart"
+ },
+ {
+  "key": "7cc7ca5b",
+  "text": "think",
+  "voice": "af_heart"
+ },
+ {
+  "key": "da2bd281",
+  "text": "this",
+  "voice": "af_heart"
+ },
+ {
+  "key": "11d259d2",
+  "text": "sink",
+  "voice": "af_heart"
+ },
+ {
+  "key": "6d8b34d5",
+  "text": "tree",
+  "voice": "af_heart"
+ },
+ {
+  "key": "165985e3",
+  "text": "thank",
+  "voice": "af_heart"
+ },
+ {
+  "key": "0c285a89",
+  "text": "tank",
+  "voice": "af_heart"
+ },
+ {
+  "key": "c630015f",
+  "text": "sit",
+  "voice": "af_heart"
+ },
+ {
+  "key": "53cacdb9",
+  "text": "big",
+  "voice": "af_heart"
+ },
+ {
+  "key": "89eabb08",
+  "text": "sleep",
+  "voice": "af_heart"
+ },
+ {
+  "key": "ac56f17f",
+  "text": "ship",
+  "voice": "af_heart"
+ },
+ {
+  "key": "07cc25f4",
+  "text": "sheep",
+  "voice": "af_heart"
+ },
+ {
+  "key": "07f017af",
+  "text": "live",
+  "voice": "af_heart"
+ },
+ {
+  "key": "5473c0c0",
+  "text": "leave",
+  "voice": "af_heart"
+ },
+ {
+  "key": "70507c68",
+  "text": "seat",
+  "voice": "af_heart"
+ },
+ {
+  "key": "f5ce03fb",
+  "text": "have",
+  "voice": "af_heart"
+ },
+ {
+  "key": "99863551",
+  "text": "happy",
+  "voice": "af_heart"
+ },
+ {
+  "key": "28693c05",
+  "text": "hear",
+  "voice": "af_heart"
+ },
+ {
+  "key": "666e1bb3",
+  "text": "ear",
+  "voice": "af_heart"
+ },
+ {
+  "key": "adc649b8",
+  "text": "hold",
+  "voice": "af_heart"
+ },
+ {
+  "key": "bd2b9bd6",
+  "text": "old",
+  "voice": "af_heart"
+ },
+ {
+  "key": "f2bf17c2",
+  "text": "hat",
+  "voice": "af_heart"
+ },
+ {
+  "key": "57251588",
+  "text": "at",
+  "voice": "af_heart"
+ },
+ {
+  "key": "fa6031d8",
+  "text": "good",
+  "voice": "af_heart"
+ },
+ {
+  "key": "5bb421a2",
+  "text": "back",
+  "voice": "af_heart"
+ },
+ {
+  "key": "63b75f31",
+  "text": "bag",
+  "voice": "af_heart"
+ },
+ {
+  "key": "027455bb",
+  "text": "cap",
+  "voice": "af_heart"
+ },
+ {
+  "key": "f4743fb1",
+  "text": "cab",
+  "voice": "af_heart"
+ },
+ {
+  "key": "ed354321",
+  "text": "very",
+  "voice": "af_heart"
+ },
+ {
+  "key": "e29d1e2f",
+  "text": "light",
+  "voice": "af_heart"
+ },
+ {
+  "key": "cedfa3c5",
+  "text": "read",
+  "voice": "af_heart"
+ },
+ {
+  "key": "2448ca2f",
+  "text": "lead",
+  "voice": "af_heart"
+ },
+ {
+  "key": "b3d7b818",
+  "text": "fry",
+  "voice": "af_heart"
+ },
+ {
+  "key": "bff162e2",
+  "text": "fly",
+  "voice": "af_heart"
+ },
+ {
+  "key": "06745c07",
+  "text": "cat",
+  "voice": "af_heart"
+ },
+ {
+  "key": "c9ad5a6b",
+  "text": "men",
+  "voice": "af_heart"
+ },
+ {
+  "key": "60b75a78",
+  "text": "bad",
+  "voice": "af_heart"
+ },
+ {
+  "key": "50ae46ec",
+  "text": "bed",
+  "voice": "af_heart"
+ },
+ {
+  "key": "e2befe92",
+  "text": "had",
+  "voice": "af_heart"
+ },
+ {
+  "key": "32694bc3",
+  "text": "head",
+  "voice": "af_heart"
+ },
+ {
+  "key": "35c6cc14",
+  "text": "Hey! What can I get ya?",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "1501dc34",
+  "text": "Can I get a coffee?",
+  "voice": "am_michael"
+ },
+ {
+  "key": "1b887742",
+  "text": "Sure thing. What size?",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "0d595c86",
+  "text": "Medium, please.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "ca3b5c4d",
+  "text": "Anything else?",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "f55a6c1e",
+  "text": "Nah, that's it. Thanks!",
+  "voice": "am_michael"
+ },
+ {
+  "key": "96a8e24f",
+  "text": "For here or to go?",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "fdd9864a",
+  "text": "To go, please.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "8fc31a6b",
+  "text": "Cool. That's three fifty.",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "ab890950",
+  "text": "Here you go.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "00642330",
+  "text": "Thanks! Have a good one!",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "fdebefb5",
+  "text": "You too!",
+  "voice": "am_michael"
+ },
+ {
+  "key": "e273bb3a",
+  "text": "Hey, I'm Jake. What's your name?",
+  "voice": "am_adam"
+ },
+ {
+  "key": "817250cc",
+  "text": "Hey, I'm Ana.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "83062cd5",
+  "text": "Nice to meet you! Where are you from?",
+  "voice": "am_adam"
+ },
+ {
+  "key": "b674d080",
+  "text": "I'm from Brazil.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "c36c1599",
+  "text": "Oh, cool! What brings you here?",
+  "voice": "am_adam"
+ },
+ {
+  "key": "1604efb4",
+  "text": "I'm here on vacation.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "cbd05600",
+  "text": "Awesome. So how do you like it so far?",
+  "voice": "am_adam"
+ },
+ {
+  "key": "ee940bb8",
+  "text": "I love it!",
+  "voice": "am_michael"
+ },
+ {
+  "key": "228a291e",
+  "text": "Nice! Well, it was good meeting you.",
+  "voice": "am_adam"
+ },
+ {
+  "key": "3cf4b4ce",
+  "text": "You too! See ya.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "f02e3c60",
+  "text": "Hey, you okay? You look kinda lost.",
+  "voice": "af_bella"
+ },
+ {
+  "key": "7efc0a16",
+  "text": "Yeah, where's the subway?",
+  "voice": "am_michael"
+ },
+ {
+  "key": "ac680b5e",
+  "text": "Oh, it's just two blocks down that way, on the left.",
+  "voice": "af_bella"
+ },
+ {
+  "key": "537f90cd",
+  "text": "Two blocks, on the left?",
+  "voice": "am_michael"
+ },
+ {
+  "key": "1be97216",
+  "text": "Yep, you can't miss it.",
+  "voice": "af_bella"
+ },
+ {
+  "key": "cef6b098",
+  "text": "Awesome, thanks a lot!",
+  "voice": "am_michael"
+ },
+ {
+  "key": "c85959aa",
+  "text": "No problem. Have a good one!",
+  "voice": "af_bella"
+ },
+ {
+  "key": "56d831f9",
+  "text": "Hi there! You ready to order?",
+  "voice": "am_eric"
+ },
+ {
+  "key": "757da8ba",
+  "text": "Yeah, can I get a burger?",
+  "voice": "am_michael"
+ },
+ {
+  "key": "fc7a1817",
+  "text": "Sure. Fries or salad on the side?",
+  "voice": "am_eric"
+ },
+ {
+  "key": "2c982670",
+  "text": "Fries, please.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "45d6884a",
+  "text": "And to drink?",
+  "voice": "am_eric"
+ },
+ {
+  "key": "31146169",
+  "text": "Just water, thanks.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "44683a33",
+  "text": "Got it. I'll be right back with that.",
+  "voice": "am_eric"
+ },
+ {
+  "key": "d3a24563",
+  "text": "Thanks!",
+  "voice": "am_michael"
+ },
+ {
+  "key": "452fbc7a",
+  "text": "Here you go. Enjoy!",
+  "voice": "am_eric"
+ },
+ {
+  "key": "028286b8",
+  "text": "Thanks, looks great!",
+  "voice": "am_michael"
+ },
+ {
+  "key": "75ebdcbd",
+  "text": "How's everything?",
+  "voice": "am_eric"
+ },
+ {
+  "key": "35019f9d",
+  "text": "Really good, thanks!",
+  "voice": "am_michael"
+ },
+ {
+  "key": "003b84d7",
+  "text": "Can I get you anything else?",
+  "voice": "am_eric"
+ },
+ {
+  "key": "87c8f508",
+  "text": "Just the check, please.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "60c9d902",
+  "text": "Hey, welcome! Checking in?",
+  "voice": "af_nova"
+ },
+ {
+  "key": "5e523486",
+  "text": "Yeah, I have a reservation.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "1878c1f4",
+  "text": "Great. Can I get your last name?",
+  "voice": "af_nova"
+ },
+ {
+  "key": "7eb624e4",
+  "text": "Sure, it's Silva.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "302fddbc",
+  "text": "Perfect. Okay, you're all set. You're in room five twelve.",
+  "voice": "af_nova"
+ },
+ {
+  "key": "edc18386",
+  "text": "Cool. What time's checkout?",
+  "voice": "am_michael"
+ },
+ {
+  "key": "41c68a45",
+  "text": "Checkout's at eleven.",
+  "voice": "af_nova"
+ },
+ {
+  "key": "458271b8",
+  "text": "Got it. Is there wifi?",
+  "voice": "am_michael"
+ },
+ {
+  "key": "319c6ab8",
+  "text": "Yep, the password's on your key card.",
+  "voice": "af_nova"
+ },
+ {
+  "key": "8e59de88",
+  "text": "Awesome, thanks!",
+  "voice": "am_michael"
+ },
+ {
+  "key": "e8698cad",
+  "text": "Hey! Can I help you find anything?",
+  "voice": "am_liam"
+ },
+ {
+  "key": "0cb799c8",
+  "text": "I'm just looking, thanks.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "b77f81e2",
+  "text": "Okay, just let me know!",
+  "voice": "am_liam"
+ },
+ {
+  "key": "8ef245ac",
+  "text": "Actually, do you have this in a medium?",
+  "voice": "am_michael"
+ },
+ {
+  "key": "8e480655",
+  "text": "Let me check... Yep, here you go.",
+  "voice": "am_liam"
+ },
+ {
+  "key": "b7931883",
+  "text": "Thanks! Where can I try it on?",
+  "voice": "am_michael"
+ },
+ {
+  "key": "a027428e",
+  "text": "Fitting rooms are right over there.",
+  "voice": "am_liam"
+ },
+ {
+  "key": "23665375",
+  "text": "Cool, thanks.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "54e3589f",
+  "text": "So, how'd it fit?",
+  "voice": "am_liam"
+ },
+ {
+  "key": "e91aad6a",
+  "text": "It fits great. I'll take it!",
+  "voice": "am_michael"
+ },
+ {
+  "key": "8995ae38",
+  "text": "Awesome! That'll be twenty-five bucks.",
+  "voice": "am_liam"
+ },
+ {
+  "key": "7373695b",
+  "text": "Can I pay with card?",
+  "voice": "am_michael"
+ },
+ {
+  "key": "36aea9e3",
+  "text": "Of course. Just tap it right here.",
+  "voice": "am_liam"
+ },
+ {
+  "key": "d346eebd",
+  "text": "Done. Thanks!",
+  "voice": "am_michael"
+ },
+ {
+  "key": "0f94f68b",
+  "text": "Hey! What are you up to this weekend?",
+  "voice": "af_kore"
+ },
+ {
+  "key": "29c4e85a",
+  "text": "Not much. What about you?",
+  "voice": "am_michael"
+ },
+ {
+  "key": "2e5f78c3",
+  "text": "Wanna go see a movie on Saturday?",
+  "voice": "af_kore"
+ },
+ {
+  "key": "42d8686c",
+  "text": "Sure, sounds good!",
+  "voice": "am_michael"
+ },
+ {
+  "key": "3377efd7",
+  "text": "Cool! What time works for you?",
+  "voice": "af_kore"
+ },
+ {
+  "key": "9e5cb462",
+  "text": "How about seven?",
+  "voice": "am_michael"
+ },
+ {
+  "key": "39363413",
+  "text": "Perfect. Meet you there?",
+  "voice": "af_kore"
+ },
+ {
+  "key": "e7559ecb",
+  "text": "Yeah, see you there!",
+  "voice": "am_michael"
+ },
+ {
+  "key": "e7e895f6",
+  "text": "Awesome, see ya!",
+  "voice": "af_kore"
+ },
+ {
+  "key": "aa33ba9d",
+  "text": "See ya!",
+  "voice": "am_michael"
+ },
+ {
+  "key": "cf70db78",
+  "text": "Hi, how can I help you?",
+  "voice": "am_echo"
+ },
+ {
+  "key": "014aa317",
+  "text": "Hi, I have a headache.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "51fc7e5d",
+  "text": "Oh, sorry. How long have you had it?",
+  "voice": "am_echo"
+ },
+ {
+  "key": "466a39b3",
+  "text": "Since this morning.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "2a10f69a",
+  "text": "Okay. Try these. Take two every six hours.",
+  "voice": "am_echo"
+ },
+ {
+  "key": "6b01a1b2",
+  "text": "Two every six hours. Got it.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "db559049",
+  "text": "And drink lots of water!",
+  "voice": "am_echo"
+ },
+ {
+  "key": "92188fe7",
+  "text": "Will do. How much is it?",
+  "voice": "am_michael"
+ },
+ {
+  "key": "4ed50cb9",
+  "text": "That's eight bucks.",
+  "voice": "am_echo"
+ },
+ {
+  "key": "586f42a8",
+  "text": "Here you go. Thanks!",
+  "voice": "am_michael"
+ },
+ {
+  "key": "6075effe",
+  "text": "Morning! How was your weekend?",
+  "voice": "af_aoede"
+ },
+ {
+  "key": "c03cc2f3",
+  "text": "Pretty good! How about yours?",
+  "voice": "am_michael"
+ },
+ {
+  "key": "bc5ad579",
+  "text": "Not bad. I just stayed home and chilled.",
+  "voice": "af_aoede"
+ },
+ {
+  "key": "4c36286c",
+  "text": "Nice. I went to the beach.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "7b755440",
+  "text": "Oh, fun! Hey, you want some coffee?",
+  "voice": "af_aoede"
+ },
+ {
+  "key": "9ecb097e",
+  "text": "Yeah, that'd be great.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "41580ab7",
+  "text": "Cool. Talk to you later!",
+  "voice": "af_aoede"
+ },
+ {
+  "key": "c08654b8",
+  "text": "Later!",
+  "voice": "am_michael"
+ },
+ {
+  "key": "ddfa9f7b",
+  "text": "Hey, how's it going?",
+  "voice": "am_onyx"
+ },
+ {
+  "key": "36e7d0cc",
+  "text": "Good, how are you?",
+  "voice": "am_michael"
+ },
+ {
+  "key": "a0b4b831",
+  "text": "Doing good, thanks. Did you find everything okay?",
+  "voice": "am_onyx"
+ },
+ {
+  "key": "1bec2033",
+  "text": "Yeah, I did. Thanks.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "7bbc98d5",
+  "text": "Do you need a bag?",
+  "voice": "am_onyx"
+ },
+ {
+  "key": "bf29030c",
+  "text": "No, I'm good.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "f2cab4c5",
+  "text": "Okay, your total is twelve forty.",
+  "voice": "am_onyx"
+ },
+ {
+  "key": "18c7c6cf",
+  "text": "Sure. You're all set. Have a good one!",
+  "voice": "am_onyx"
+ },
+ {
+  "key": "3e2e5058",
+  "text": "Thanks, you too!",
+  "voice": "am_michael"
+ },
+ {
+  "key": "4b6180ef",
+  "text": "Hey! You okay in there?",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "a1328253",
+  "text": "Yeah, I'm okay.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "7047bb82",
+  "text": "Oh, good! You were out cold.",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "4b3e4f7e",
+  "text": "I okay.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "f251dcd5",
+  "text": "You… okay? Did you hit your head or something?",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "7c610e7f",
+  "text": "Me is okay.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "0845abfe",
+  "text": "“Me is”? Wow. Okay, take it easy, buddy.",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "a172b7dd",
+  "text": "window",
+  "voice": "af_heart"
+ },
+ {
+  "key": "21f5b729",
+  "text": "door",
+  "voice": "af_heart"
+ },
+ {
+  "key": "5cb49d8a",
+  "text": "chair",
+  "voice": "af_heart"
+ },
+ {
+  "key": "7d7eabcb",
+  "text": "backpack",
+  "voice": "af_heart"
+ },
+ {
+  "key": "0b2d980e",
+  "text": "a bottle of water",
+  "voice": "af_heart"
+ },
+ {
+  "key": "3bfb22a8",
+  "text": "So… what's your name?",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "4b3f475d",
+  "text": "I don't know.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "1e49ec77",
+  "text": "You don't know? Wow. Okay…",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "b8516454",
+  "text": "I'm not sure.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "a6c582fc",
+  "text": "Not sure? Okay, that's weird…",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "e23b4530",
+  "text": "I no know.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "bc5cf371",
+  "text": "You… no know? Hmm, you must be really tired.",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "604357c3",
+  "text": "Well, I'll call you Newbie. Nice to meet you, Newbie!",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "80b8c141",
+  "text": "Nice to meet you too.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "198a9c32",
+  "text": "Aw, you're sweet.",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "fd10b40e",
+  "text": "Me too meet.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "84c89817",
+  "text": "Me too… what? Haha, you're funny.",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "c495d2a5",
+  "text": "And where are you from?",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "d266e1e9",
+  "text": "Huh. A real mystery, aren't you?",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "1de4832f",
+  "text": "I from no.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "1c17417d",
+  "text": "From… no? Is that a place?",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "411b7a9d",
+  "text": "Oh, the door's locked. My bad!",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "c3441501",
+  "text": "Can I get the key, please?",
+  "voice": "am_michael"
+ },
+ {
+  "key": "54830c70",
+  "text": "Sure thing! Here you go.",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "5f83cc28",
+  "text": "Give me the key.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "99f40f42",
+  "text": "Whoa. Okay… “please” is free, you know. That's two coins for the attitude.",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "65fe4103",
+  "text": "Key me give.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "19fe9c71",
+  "text": "Key… me… give? I don't get it. Hmm, there's a spare key in there somewhere.",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "99c0cf57",
+  "text": "Try under the bed!",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "40aa275a",
+  "text": "Not the window!",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "ddabd57a",
+  "text": "Nope, not the chair.",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "9288aa81",
+  "text": "It's not by the door.",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "edee14b1",
+  "text": "You found it? Nice! Come on down.",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "9d37716b",
+  "text": "Okay, Newbie. That's five coins for the room.",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "0715b856",
+  "text": "That's five coins.",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "1915c5b6",
+  "text": "Thanks! You hungry? Coffee? Bread?",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "4563d432",
+  "text": "Can I get some coffee and bread?",
+  "voice": "am_michael"
+ },
+ {
+  "key": "22ff9108",
+  "text": "Coming right up!",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "1f49312e",
+  "text": "I don't like coffee. Can I get some water?",
+  "voice": "am_michael"
+ },
+ {
+  "key": "51440047",
+  "text": "No coffee? Okay, water it is.",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "71d157cc",
+  "text": "I like no coffee.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "6ef11992",
+  "text": "You… like no coffee? Like, you don't like it?",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "c2e3f68b",
+  "text": "Coffee. Bread. Now.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "67459724",
+  "text": "Wow. Somebody's grumpy in the morning. Fine. That's one extra coin.",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "1c78850d",
+  "text": "And since you asked so nicely, breakfast is on the house!",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "0908feb2",
+  "text": "That's two coins for breakfast.",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "fa82b602",
+  "text": "Tower",
+  "voice": "af_nicole"
+ },
+ {
+  "key": "8d147820",
+  "text": "Whoa, your bracelet! I've seen that symbol before… Here, take this. Go to the Guild and ask for Marcus.",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "279b1e6b",
+  "text": "Thanks for everything!",
+  "voice": "am_michael"
+ },
+ {
+  "key": "b99944d8",
+  "text": "Anytime, Newbie.",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "22d1b6f8",
+  "text": "Bye! See ya!",
+  "voice": "am_michael"
+ },
+ {
+  "key": "061a446e",
+  "text": "Me go now thanks.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "7d2c68f4",
+  "text": "“Me go”? Haha, okay, caveman.",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "58002257",
+  "text": "Be careful out there. Shinar's a big city.",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "7d15a936",
+  "text": "I'm okay.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "6513566f",
+  "text": "I don't like coffee.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "a26fbc74",
+  "text": "Fresh apples! Apples here! Hey, you! You hungry?",
+  "voice": "am_eric"
+ },
+ {
+  "key": "8914325f",
+  "text": "Yeah, a little.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "efbabdde",
+  "text": "Ha! I knew it.",
+  "voice": "am_eric"
+ },
+ {
+  "key": "765b6145",
+  "text": "No, thanks. I'm good.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "473fb61e",
+  "text": "Come on! Just look at these apples!",
+  "voice": "am_eric"
+ },
+ {
+  "key": "64ebcc87",
+  "text": "I have hungry.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "d5f01f3a",
+  "text": "You… have hungry? Like a pet? Haha.",
+  "voice": "am_eric"
+ },
+ {
+  "key": "46f344ea",
+  "text": "They're two coins each. How many do you want?",
+  "voice": "am_eric"
+ },
+ {
+  "key": "48f166d8",
+  "text": "Can I get two apples, please?",
+  "voice": "am_michael"
+ },
+ {
+  "key": "11998958",
+  "text": "Two apples! That's four coins.",
+  "voice": "am_eric"
+ },
+ {
+  "key": "583e02e9",
+  "text": "Just one, please.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "db3c607b",
+  "text": "Just one? Okay, that's two coins.",
+  "voice": "am_eric"
+ },
+ {
+  "key": "2b9856f6",
+  "text": "I want two apple.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "70c9395c",
+  "text": "Two… apple? You mean apples, right?",
+  "voice": "am_eric"
+ },
+ {
+  "key": "6d376d9e",
+  "text": "That's four coins.",
+  "voice": "am_eric"
+ },
+ {
+  "key": "dd91268c",
+  "text": "That's two coins.",
+  "voice": "am_eric"
+ },
+ {
+  "key": "e82ebb51",
+  "text": "Thanks, buddy! Hey, you look cold. Go see Mei over there. She sells cloaks.",
+  "voice": "am_eric"
+ },
+ {
+  "key": "39ce64b7",
+  "text": "Hi there! Looking for a cloak?",
+  "voice": "af_nova"
+ },
+ {
+  "key": "e4e936cf",
+  "text": "Yeah. How much is it?",
+  "voice": "am_michael"
+ },
+ {
+  "key": "3c932614",
+  "text": "Depends on the color!",
+  "voice": "af_nova"
+ },
+ {
+  "key": "1acf13c8",
+  "text": "Yes, please. How much?",
+  "voice": "am_michael"
+ },
+ {
+  "key": "dc046422",
+  "text": "How much it is?",
+  "voice": "am_michael"
+ },
+ {
+  "key": "4b8b6086",
+  "text": "How much… it is? Oh, you mean the price?",
+  "voice": "af_nova"
+ },
+ {
+  "key": "200447b0",
+  "text": "I've got red, blue and green. Which one do you like?",
+  "voice": "af_nova"
+ },
+ {
+  "key": "b10d537e",
+  "text": "I like the blue one.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "856bc338",
+  "text": "Good choice! Blue's my favorite.",
+  "voice": "af_nova"
+ },
+ {
+  "key": "54867d0f",
+  "text": "I like the red one.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "62f3a31c",
+  "text": "Ooh, bold! I like it.",
+  "voice": "af_nova"
+ },
+ {
+  "key": "140cd1a9",
+  "text": "The green one, please.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "50557143",
+  "text": "Green! Like the sea today.",
+  "voice": "af_nova"
+ },
+ {
+  "key": "a9052226",
+  "text": "I like the one blue.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "53e1f103",
+  "text": "The one… blue? You mean the blue one?",
+  "voice": "af_nova"
+ },
+ {
+  "key": "5d0b66af",
+  "text": "Oh wait, I've got a yellow one too. Can you grab the yellow one for me? It's on the left.",
+  "voice": "af_nova"
+ },
+ {
+  "key": "237c0ac9",
+  "text": "The yellow one, please!",
+  "voice": "af_nova"
+ },
+ {
+  "key": "0f09c095",
+  "text": "That's red, not yellow!",
+  "voice": "af_nova"
+ },
+ {
+  "key": "05bf6449",
+  "text": "yellow",
+  "voice": "af_heart"
+ },
+ {
+  "key": "4daa0100",
+  "text": "No, that's the blue one.",
+  "voice": "af_nova"
+ },
+ {
+  "key": "45d12e51",
+  "text": "Nope, that's green.",
+  "voice": "af_nova"
+ },
+ {
+  "key": "f278444e",
+  "text": "Thanks! Anyway, your cloak is twelve coins.",
+  "voice": "af_nova"
+ },
+ {
+  "key": "5cd66128",
+  "text": "Okay, here you go.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "fd18b61b",
+  "text": "Thank you!",
+  "voice": "af_nova"
+ },
+ {
+  "key": "242f335a",
+  "text": "Hmm… can I get it for ten?",
+  "voice": "am_michael"
+ },
+ {
+  "key": "2b492873",
+  "text": "Ha! You're good. Okay, ten. Deal!",
+  "voice": "af_nova"
+ },
+ {
+  "key": "a943550e",
+  "text": "Twelve? That's crazy! No way.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "e646eb40",
+  "text": "Crazy? Fine. Then it's thirteen for you.",
+  "voice": "af_nova"
+ },
+ {
+  "key": "a1ced911",
+  "text": "That's twelve coins.",
+  "voice": "af_nova"
+ },
+ {
+  "key": "bd9e0873",
+  "text": "That's ten coins.",
+  "voice": "af_nova"
+ },
+ {
+  "key": "c356df63",
+  "text": "That's thirteen coins.",
+  "voice": "af_nova"
+ },
+ {
+  "key": "a5235ac0",
+  "text": "Looks great on you! Have a good one!",
+  "voice": "af_nova"
+ },
+ {
+  "key": "3002c74c",
+  "text": "Thanks! You too.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "26287636",
+  "text": "Aw, bye!",
+  "voice": "af_nova"
+ },
+ {
+  "key": "7ab7521b",
+  "text": "Thanks! You also.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "e1610fa1",
+  "text": "Me… also? Haha, you mean “you too”.",
+  "voice": "af_nova"
+ },
+ {
+  "key": "70bb9e41",
+  "text": "Sister",
+  "voice": "af_nicole"
+ },
+ {
+  "key": "b889eaa9",
+  "text": "I'm hungry.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "608040fc",
+  "text": "Can I get it for ten?",
+  "voice": "am_michael"
+ },
+ {
+  "key": "4c2cd6d6",
+  "text": "Stop right there. What do you want?",
+  "voice": "am_onyx"
+ },
+ {
+  "key": "1e5ad3b5",
+  "text": "Hi! I'm looking for Marcus.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "3ec77e96",
+  "text": "Marcus, huh?",
+  "voice": "am_onyx"
+ },
+ {
+  "key": "b5c29b61",
+  "text": "I look for Marcus.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "9bbfd4d2",
+  "text": "You… look for Marcus? Right now? Like, with your eyes?",
+  "voice": "am_onyx"
+ },
+ {
+  "key": "00b23ffe",
+  "text": "Move. I need Marcus.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "e96156cd",
+  "text": "Excuse me? Nobody talks to me like that. Wait over there.",
+  "voice": "am_onyx"
+ },
+ {
+  "key": "94691369",
+  "text": "Okay. Let's try that again. Be nice this time.",
+  "voice": "am_onyx"
+ },
+ {
+  "key": "ce2f3cba",
+  "text": "Sorry. Can I see Marcus, please?",
+  "voice": "am_michael"
+ },
+ {
+  "key": "64e375b3",
+  "text": "See? Not so hard.",
+  "voice": "am_onyx"
+ },
+ {
+  "key": "06cd3c91",
+  "text": "Me see Marcus.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "1edccf2b",
+  "text": "Still no. Try again.",
+  "voice": "am_onyx"
+ },
+ {
+  "key": "b47631bf",
+  "text": "Marcus is busy. He doesn't see just anybody. Name?",
+  "voice": "am_onyx"
+ },
+ {
+  "key": "a64f5d78",
+  "text": "People call me Newbie.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "c21d8fa8",
+  "text": "Newbie? Seriously? Ha!",
+  "voice": "am_onyx"
+ },
+ {
+  "key": "916b3012",
+  "text": "I don't remember my name.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "ef9aa734",
+  "text": "You don't remember? Great. Just great.",
+  "voice": "am_onyx"
+ },
+ {
+  "key": "f518bde8",
+  "text": "My name are Newbie.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "da68b702",
+  "text": "Your name… are? How many names do you have?",
+  "voice": "am_onyx"
+ },
+ {
+  "key": "4d62bdfa",
+  "text": "How old are you?",
+  "voice": "am_onyx"
+ },
+ {
+  "key": "a147d0ee",
+  "text": "I'm not sure. Maybe twenty?",
+  "voice": "am_michael"
+ },
+ {
+  "key": "bfe5d084",
+  "text": "Twenty? You look younger.",
+  "voice": "am_onyx"
+ },
+ {
+  "key": "46bd0d59",
+  "text": "You don't know much, do you?",
+  "voice": "am_onyx"
+ },
+ {
+  "key": "18ee6d85",
+  "text": "I have twenty years.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "2570d6eb",
+  "text": "You have… twenty years? Where do you keep them?",
+  "voice": "am_onyx"
+ },
+ {
+  "key": "b34142a9",
+  "text": "And what do you do? Do you have a job?",
+  "voice": "am_onyx"
+ },
+ {
+  "key": "256bd4d7",
+  "text": "No, I don't have a job.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "4a3adcae",
+  "text": "No job, no name… perfect.",
+  "voice": "am_onyx"
+ },
+ {
+  "key": "608e1636",
+  "text": "Not yet. I'm looking for work.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "d6d7fe70",
+  "text": "Looking for work, huh?",
+  "voice": "am_onyx"
+ },
+ {
+  "key": "4d5eda29",
+  "text": "No, I not have job.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "541577f9",
+  "text": "You… not have job? Okay, okay. I get it.",
+  "voice": "am_onyx"
+ },
+ {
+  "key": "ac3d2a4e",
+  "text": "Wait… that bracelet. Show me your hand.",
+  "voice": "am_onyx"
+ },
+ {
+  "key": "0607ff9a",
+  "text": "Sure. Here.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "b2c36e9b",
+  "text": "By the gods… Come in. Now.",
+  "voice": "am_onyx"
+ },
+ {
+  "key": "e03292a0",
+  "text": "Why? What's wrong?",
+  "voice": "am_michael"
+ },
+ {
+  "key": "7fd087a6",
+  "text": "Nothing's wrong. Just… come in. Now.",
+  "voice": "am_onyx"
+ },
+ {
+  "key": "d9f5b5e4",
+  "text": "No. Don't touch me!",
+  "voice": "am_michael"
+ },
+ {
+  "key": "0356053f",
+  "text": "Fine, fine. Calm down. Just come in.",
+  "voice": "am_onyx"
+ },
+ {
+  "key": "7a4b8869",
+  "text": "So you're the one Rosie told me about. I'm Marcus. I run the Guild.",
+  "voice": "am_fenrir"
+ },
+ {
+  "key": "2ffe9bb3",
+  "text": "Here, people work. They carry boxes, they deliver letters, they help the city. Every day.",
+  "voice": "am_fenrir"
+ },
+ {
+  "key": "a6704439",
+  "text": "Tell me. What does Rosie do?",
+  "voice": "am_fenrir"
+ },
+ {
+  "key": "bde059d1",
+  "text": "She runs the Sleepy Fox.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "e3fa813a",
+  "text": "That's right. Best bread in Shinar.",
+  "voice": "am_fenrir"
+ },
+ {
+  "key": "80a45b12",
+  "text": "She works at an inn.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "cf934794",
+  "text": "She run the Sleepy Fox.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "9dd92a2d",
+  "text": "She… run? Is she running away?",
+  "voice": "am_fenrir"
+ },
+ {
+  "key": "dd8d169f",
+  "text": "She working at the inn.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "f44e5e8e",
+  "text": "Hmm. Almost. Try again.",
+  "voice": "am_fenrir"
+ },
+ {
+  "key": "b5eba49f",
+  "text": "Good. And Tobias? The apple guy?",
+  "voice": "am_fenrir"
+ },
+ {
+  "key": "4663ccf2",
+  "text": "He sells apples.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "bb8810e0",
+  "text": "Ha! Yes. Too many apples.",
+  "voice": "am_fenrir"
+ },
+ {
+  "key": "01049857",
+  "text": "He sell apples.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "7fa53c1b",
+  "text": "He… sell? Remember the -s, Newbie.",
+  "voice": "am_fenrir"
+ },
+ {
+  "key": "c888745b",
+  "text": "You learn fast. Okay, Newbie, you want a job? Be here at eight. Don't be late. And always say please.",
+  "voice": "am_fenrir"
+ },
+ {
+  "key": "555e5415",
+  "text": "Got it. I'll be here at eight.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "c12a17e2",
+  "text": "Good.",
+  "voice": "am_fenrir"
+ },
+ {
+  "key": "61d0420b",
+  "text": "Thanks, Marcus! Got it.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "24f15955",
+  "text": "Okay, I am here at eight tomorrow.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "770332ee",
+  "text": "You are here… tomorrow? Today? Now? Ha.",
+  "voice": "am_fenrir"
+ },
+ {
+  "key": "ab9ec401",
+  "text": "One more thing. That bracelet… I saw one just like it, years ago. On the wrist of the Queen's advisor.",
+  "voice": "am_fenrir"
+ },
+ {
+  "key": "b572b269",
+  "text": "Queen",
+  "voice": "af_nicole"
+ },
+ {
+  "key": "1e0ca600",
+  "text": "Get some rest. Tomorrow, your first job.",
+  "voice": "am_fenrir"
+ },
+ {
+  "key": "5753c62f",
+  "text": "I'm looking for Marcus.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "dcb96ba5",
+  "text": "I'm twenty.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "0338ae7a",
+  "text": "I don't have a job.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "4361261c",
+  "text": "I'll be here at eight.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "6df710c7",
+  "text": "Good morning, Newbie! Time to get up!",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "0b7a7a2e",
+  "text": "Good morning! What time is it?",
+  "voice": "am_michael"
+ },
+ {
+  "key": "40cc4c07",
+  "text": "It's seven o'clock.",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "4052f0db",
+  "text": "Good morning! What hour is it?",
+  "voice": "am_michael"
+ },
+ {
+  "key": "09d65546",
+  "text": "What… hour? Oh, you mean the time?",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "4b339fbe",
+  "text": "It's seven o'clock. You start work at eight, right?",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "c67d9baf",
+  "text": "Yes, I start at eight.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "b9ce49f7",
+  "text": "Good. Breakfast is at half past seven!",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "bbdf6929",
+  "text": "Yes, I start in eight.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "b193fc34",
+  "text": "In eight? In eight days? Haha.",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "aba91ea2",
+  "text": "Newbie, this is my daughter, Lena. She's the cook here.",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "19b0fac8",
+  "text": "Hi! Nice to meet you. Do you usually eat breakfast?",
+  "voice": "af_bella"
+ },
+ {
+  "key": "dedeca97",
+  "text": "Yes, I always eat breakfast.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "bd90cf17",
+  "text": "Great! Me too.",
+  "voice": "af_bella"
+ },
+ {
+  "key": "d860a056",
+  "text": "No, I never eat breakfast.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "f9a6a1dc",
+  "text": "Never? Well, today you do!",
+  "voice": "af_bella"
+ },
+ {
+  "key": "a131f047",
+  "text": "Yes, I eat always breakfast.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "e637d891",
+  "text": "You eat… always? Hmm, almost!",
+  "voice": "af_bella"
+ },
+ {
+  "key": "eef47f6e",
+  "text": "And what time do you usually get up?",
+  "voice": "af_bella"
+ },
+ {
+  "key": "f74d2e9c",
+  "text": "I usually get up at seven.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "023e60dc",
+  "text": "Same as me!",
+  "voice": "af_bella"
+ },
+ {
+  "key": "e2d17aac",
+  "text": "I usually getting up at seven.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "e20f8e53",
+  "text": "Getting up? Like, right now?",
+  "voice": "af_bella"
+ },
+ {
+  "key": "b76d58e1",
+  "text": "Here, look at the calendar. Today is Monday. The Guild is closed on Sundays.",
+  "voice": "af_bella"
+ },
+ {
+  "key": "3a56e759",
+  "text": "Monday",
+  "voice": "af_heart"
+ },
+ {
+  "key": "fe18fbb0",
+  "text": "Tuesday",
+  "voice": "af_heart"
+ },
+ {
+  "key": "e8239b77",
+  "text": "Wednesday",
+  "voice": "af_heart"
+ },
+ {
+  "key": "99eb4fd7",
+  "text": "Thursday",
+  "voice": "af_heart"
+ },
+ {
+  "key": "bc09cf52",
+  "text": "Friday",
+  "voice": "af_heart"
+ },
+ {
+  "key": "0e68b936",
+  "text": "Saturday",
+  "voice": "af_heart"
+ },
+ {
+  "key": "d0f065f9",
+  "text": "Sunday",
+  "voice": "af_heart"
+ },
+ {
+  "key": "699f86a9",
+  "text": "Newbie! It's quarter to eight! Hurry!",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "d48030f8",
+  "text": "Oh no! Thanks, see you later!",
+  "voice": "am_michael"
+ },
+ {
+  "key": "d8d42dc2",
+  "text": "Go, go, go!",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "930146f4",
+  "text": "Oh no! Bye, see you tonight!",
+  "voice": "am_michael"
+ },
+ {
+  "key": "bb938a16",
+  "text": "Good morning. I'm Iris. I write everybody's details in the Guild book. What's your name?",
+  "voice": "af_kore"
+ },
+ {
+  "key": "a9f324f1",
+  "text": "Newbie. Okay.",
+  "voice": "af_kore"
+ },
+ {
+  "key": "f35d9009",
+  "text": "How do you spell that?",
+  "voice": "af_kore"
+ },
+ {
+  "key": "664812e6",
+  "text": "N-E-W-B-I-E.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "090b8152",
+  "text": "N-E-W-B-I-E. Got it, thanks.",
+  "voice": "af_kore"
+ },
+ {
+  "key": "b34122a4",
+  "text": "N-U-B-I.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "0d452390",
+  "text": "N-U-B-I? That's “Nubi”. Try again, slowly.",
+  "voice": "af_kore"
+ },
+ {
+  "key": "e9a6cc36",
+  "text": "And where do you live?",
+  "voice": "af_kore"
+ },
+ {
+  "key": "ef3845da",
+  "text": "I live at the Sleepy Fox, on King Street.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "c1dd8276",
+  "text": "Rosie's place! Nice.",
+  "voice": "af_kore"
+ },
+ {
+  "key": "d00ed261",
+  "text": "I am live at the Sleepy Fox.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "2fc2403a",
+  "text": "You am live? Hmm, no.",
+  "voice": "af_kore"
+ },
+ {
+  "key": "6780ec0e",
+  "text": "Which days can you work?",
+  "voice": "af_kore"
+ },
+ {
+  "key": "0e3aad3b",
+  "text": "From Monday to Friday.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "d442ade2",
+  "text": "Perfect. Weekends free.",
+  "voice": "af_kore"
+ },
+ {
+  "key": "2570e074",
+  "text": "Every day, from Monday to Saturday.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "a0362024",
+  "text": "Wow, hard worker!",
+  "voice": "af_kore"
+ },
+ {
+  "key": "0a954ef5",
+  "text": "In Monday and in Friday.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "226d9120",
+  "text": "In Monday? Like, inside it?",
+  "voice": "af_kore"
+ },
+ {
+  "key": "119a5b9f",
+  "text": "Great. Work starts at eight and finishes at five. Lunch is at twelve.",
+  "voice": "af_kore"
+ },
+ {
+  "key": "3b2e4d71",
+  "text": "Newbie! You're on time. Good. Tell me about your day. What do you do in the morning?",
+  "voice": "am_fenrir"
+ },
+ {
+  "key": "dac146e1",
+  "text": "I get up at seven, I have breakfast and I go to work.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "00837bfb",
+  "text": "A good routine. Keep it.",
+  "voice": "am_fenrir"
+ },
+ {
+  "key": "6da82612",
+  "text": "I gets up at seven and I goes to work.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "5961026f",
+  "text": "I gets? I goes? Only he and she get the -s, Newbie.",
+  "voice": "am_fenrir"
+ },
+ {
+  "key": "632de23e",
+  "text": "From tomorrow, you deliver letters. Every morning. Don't be late!",
+  "voice": "am_fenrir"
+ },
+ {
+  "key": "1f73ce42",
+  "text": "What time is it?",
+  "voice": "am_michael"
+ },
+ {
+  "key": "6ddcc920",
+  "text": "I always eat breakfast.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "ad160c6b",
+  "text": "I live at the Sleepy Fox.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "1c798e2d",
+  "text": "I work from Monday to Friday.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "edc2aa02",
+  "text": "Three letters today. One for the bakery, one for the bank, and one for number forty-two, Fish Street.",
+  "voice": "am_fenrir"
+ },
+ {
+  "key": "c4a91c9a",
+  "text": "Hey! You look lost. Need some help?",
+  "voice": "am_puck"
+ },
+ {
+  "key": "796188af",
+  "text": "Yes, please. Where's the bakery?",
+  "voice": "am_michael"
+ },
+ {
+  "key": "b2c870ac",
+  "text": "Easy! I know every street.",
+  "voice": "am_puck"
+ },
+ {
+  "key": "b03138e2",
+  "text": "Yes. Bakery where?",
+  "voice": "am_michael"
+ },
+ {
+  "key": "741d7ee8",
+  "text": "Bakery… where? Haha, ask me properly!",
+  "voice": "am_puck"
+ },
+ {
+  "key": "f89a8c24",
+  "text": "I'm Pip. Go straight and turn left. The bakery is next to the bank.",
+  "voice": "am_puck"
+ },
+ {
+  "key": "46b24e1d",
+  "text": "bakery",
+  "voice": "af_heart"
+ },
+ {
+  "key": "3b952e97",
+  "text": "bank",
+  "voice": "af_heart"
+ },
+ {
+  "key": "9f519cc9",
+  "text": "school",
+  "voice": "af_heart"
+ },
+ {
+  "key": "63780eb9",
+  "text": "park",
+  "voice": "af_heart"
+ },
+ {
+  "key": "4f9cd7b3",
+  "text": "hospital",
+  "voice": "af_heart"
+ },
+ {
+  "key": "90f6fbd0",
+  "text": "library",
+  "voice": "af_heart"
+ },
+ {
+  "key": "94c99950",
+  "text": "So, which one is the bakery? Remember: it's next to the bank!",
+  "voice": "am_puck"
+ },
+ {
+  "key": "bac8ceb0",
+  "text": "The bakery is next to the bank!",
+  "voice": "am_puck"
+ },
+ {
+  "key": "e4239bf5",
+  "text": "That's the library!",
+  "voice": "am_puck"
+ },
+ {
+  "key": "ff9ede9b",
+  "text": "That's the bank. Next to it!",
+  "voice": "am_puck"
+ },
+ {
+  "key": "e3516aab",
+  "text": "Nope, that's the school.",
+  "voice": "am_puck"
+ },
+ {
+  "key": "8d9def0a",
+  "text": "Now, Fish Street. What number?",
+  "voice": "am_puck"
+ },
+ {
+  "key": "1eaf79cb",
+  "text": "Number forty-two.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "b0ed6aea",
+  "text": "Forty-two! I know that house.",
+  "voice": "am_puck"
+ },
+ {
+  "key": "d09fece6",
+  "text": "Number twenty-four.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "d531db84",
+  "text": "Twenty-four? Check your letter again!",
+  "voice": "am_puck"
+ },
+ {
+  "key": "9d5242ab",
+  "text": "Look, here's Fish Street. Find number forty-two!",
+  "voice": "am_puck"
+ },
+ {
+  "key": "064f56b4",
+  "text": "Number forty-two, please!",
+  "voice": "am_puck"
+ },
+ {
+  "key": "7a930b5b",
+  "text": "twenty-four",
+  "voice": "af_heart"
+ },
+ {
+  "key": "067395dd",
+  "text": "That's twenty-four!",
+  "voice": "am_puck"
+ },
+ {
+  "key": "01a53a61",
+  "text": "fourteen",
+  "voice": "af_heart"
+ },
+ {
+  "key": "dff5779c",
+  "text": "That's fourteen.",
+  "voice": "am_puck"
+ },
+ {
+  "key": "eb71e6b4",
+  "text": "forty-two",
+  "voice": "af_heart"
+ },
+ {
+  "key": "8583378f",
+  "text": "forty",
+  "voice": "af_heart"
+ },
+ {
+  "key": "2110e044",
+  "text": "That's just forty. Two more!",
+  "voice": "am_puck"
+ },
+ {
+  "key": "e828812c",
+  "text": "Wait, nobody's home. But look, there's a note on the door: “Gone to the harbour.”",
+  "voice": "am_puck"
+ },
+ {
+  "key": "0cf405b9",
+  "text": "Is there a harbour near here? Yes, there is! Are there many ships? Yes, there are! Your turn. Are there any shops on Fish Street?",
+  "voice": "am_puck"
+ },
+ {
+  "key": "31d1b003",
+  "text": "Yes, there are two shops.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "fea3a9d0",
+  "text": "Right! A fish shop and a shoe shop.",
+  "voice": "am_puck"
+ },
+ {
+  "key": "fc0e15f9",
+  "text": "Yes, there is two shops.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "0bce5367",
+  "text": "There is two? Two is more than one, buddy!",
+  "voice": "am_puck"
+ },
+ {
+  "key": "155bbf54",
+  "text": "Yes, it has two shops.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "2cc10ad4",
+  "text": "It has? Who has? Haha. Try “there are”.",
+  "voice": "am_puck"
+ },
+ {
+  "key": "6d69fc4d",
+  "text": "To the harbour: go back to the well and turn right. Then go straight. Don't go left, it's a dead end!",
+  "voice": "am_puck"
+ },
+ {
+  "key": "7993d705",
+  "text": "Got it! Turn right at the well and go straight.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "8a92b50d",
+  "text": "You're a fast learner!",
+  "voice": "am_puck"
+ },
+ {
+  "key": "f7c1ff07",
+  "text": "Got it! Turn left at the well.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "50b71287",
+  "text": "Left? No! Left is the dead end. Listen again.",
+  "voice": "am_puck"
+ },
+ {
+  "key": "4a14d71b",
+  "text": "Hey… can I have a coin? For the help?",
+  "voice": "am_puck"
+ },
+ {
+  "key": "cde661e9",
+  "text": "Sure! Here you go. Thanks, Pip!",
+  "voice": "am_michael"
+ },
+ {
+  "key": "bf17f52e",
+  "text": "Yes! Thanks! Bye!",
+  "voice": "am_puck"
+ },
+ {
+  "key": "e699c5cb",
+  "text": "Sorry, I don't have any coins.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "5ba5e21f",
+  "text": "Aw, okay. Bye then!",
+  "voice": "am_puck"
+ },
+ {
+  "key": "dd9013f4",
+  "text": "Where's the bakery?",
+  "voice": "am_michael"
+ },
+ {
+  "key": "7b27faa8",
+  "text": "Go straight and turn left.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "e02e3c3f",
+  "text": "It's next to the bank.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "13d187eb",
+  "text": "Is there a bank near here?",
+  "voice": "am_michael"
+ },
+ {
+  "key": "56d2f72e",
+  "text": "There are two shops.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "c1f753f8",
+  "text": "Turn right at the well.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "c1aa7f20",
+  "text": "Ahoy! You've got a letter? For me? I'm Captain Ola!",
+  "voice": "af_aoede"
+ },
+ {
+  "key": "014252d2",
+  "text": "Yes, here you go. It's for you.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "aa10b278",
+  "text": "Thank you! Oh, it's from my brother!",
+  "voice": "af_aoede"
+ },
+ {
+  "key": "d3f636c0",
+  "text": "Yes. Is for you.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "a2bebd32",
+  "text": "Is for me? What is? Haha.",
+  "voice": "af_aoede"
+ },
+ {
+  "key": "e4db0a61",
+  "text": "Look! That ship is my brother's ship. Her name is the Gull.",
+  "voice": "af_aoede"
+ },
+ {
+  "key": "74422c98",
+  "text": "Quick question, sailor! Whose ship is that? Mine or my brother's?",
+  "voice": "af_aoede"
+ },
+ {
+  "key": "c3e7d26d",
+  "text": "It's your brother's.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "0db9f83c",
+  "text": "Right! I've got a small boat. He's got a big ship. Haha!",
+  "voice": "af_aoede"
+ },
+ {
+  "key": "9fa56c3a",
+  "text": "It's of your brother.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "dfd36dee",
+  "text": "Of my brother? Hmm, say it like a sailor!",
+  "voice": "af_aoede"
+ },
+ {
+  "key": "4f5ed751",
+  "text": "I love my family. Look, I've got a picture.",
+  "voice": "af_aoede"
+ },
+ {
+  "key": "a6ad93e2",
+  "text": "grandmother",
+  "voice": "af_heart"
+ },
+ {
+  "key": "9d2ee900",
+  "text": "husband",
+  "voice": "af_heart"
+ },
+ {
+  "key": "0ba81191",
+  "text": "daughter",
+  "voice": "af_heart"
+ },
+ {
+  "key": "e0363a7b",
+  "text": "son",
+  "voice": "af_heart"
+ },
+ {
+  "key": "8541561f",
+  "text": "Can you find my daughter? She's got red hair.",
+  "voice": "af_aoede"
+ },
+ {
+  "key": "27c2a989",
+  "text": "My daughter's got red hair!",
+  "voice": "af_aoede"
+ },
+ {
+  "key": "7eb2840b",
+  "text": "That's my son, Tom!",
+  "voice": "af_aoede"
+ },
+ {
+  "key": "f3580f24",
+  "text": "That's my husband, Sam.",
+  "voice": "af_aoede"
+ },
+ {
+  "key": "7d69d257",
+  "text": "That's my mother. She's old, not red!",
+  "voice": "af_aoede"
+ },
+ {
+  "key": "eb7673ef",
+  "text": "And you? Have you got any brothers or sisters?",
+  "voice": "af_aoede"
+ },
+ {
+  "key": "e21dfdfc",
+  "text": "I've got a sister, I think.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "b04e39f8",
+  "text": "You think? You don't know?",
+  "voice": "af_aoede"
+ },
+ {
+  "key": "789366b4",
+  "text": "I've got sister.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "66d341b6",
+  "text": "Got sister? A sister? Two sisters?",
+  "voice": "af_aoede"
+ },
+ {
+  "key": "73dc5856",
+  "text": "Okay, tell me. What does she look like?",
+  "voice": "af_aoede"
+ },
+ {
+  "key": "f701b3c5",
+  "text": "She's tall. She's got long black hair.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "8b3b3f66",
+  "text": "Long black hair… Hmm.",
+  "voice": "af_aoede"
+ },
+ {
+  "key": "2f68e9c1",
+  "text": "She's got brown eyes and a big smile.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "63cd9134",
+  "text": "A big smile… Hmm.",
+  "voice": "af_aoede"
+ },
+ {
+  "key": "7c34b676",
+  "text": "She's got hair long black.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "90566151",
+  "text": "Hair long black? Like a long black rope? Haha.",
+  "voice": "af_aoede"
+ },
+ {
+  "key": "ff274bce",
+  "text": "He's tall. His hair is black.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "c4c3ad26",
+  "text": "He? His? I thought it was your sister!",
+  "voice": "af_aoede"
+ },
+ {
+  "key": "b256ec7f",
+  "text": "Wait… I know a girl like that! Long black hair, a big smile… and a bracelet like yours! She was on my brother's ship. Last year.",
+  "voice": "af_aoede"
+ },
+ {
+  "key": "f169fc77",
+  "text": "Really? Where is she now?",
+  "voice": "am_michael"
+ },
+ {
+  "key": "1cdaaba2",
+  "text": "I don't know. To the capital, I think.",
+  "voice": "af_aoede"
+ },
+ {
+  "key": "d6d4884b",
+  "text": "Where she is now?",
+  "voice": "am_michael"
+ },
+ {
+  "key": "3d9c58c3",
+  "text": "Where she is? Ask me again, sailor!",
+  "voice": "af_aoede"
+ },
+ {
+  "key": "2c833d9f",
+  "text": "Ship",
+  "voice": "af_nicole"
+ },
+ {
+  "key": "47cdb261",
+  "text": "Here, take this. It's my old compass. Your sister's got the same eyes as you, you know.",
+  "voice": "af_aoede"
+ },
+ {
+  "key": "15d09cce",
+  "text": "Thank you so much, Ola!",
+  "voice": "am_michael"
+ },
+ {
+  "key": "aaa2028b",
+  "text": "Fair winds, sailor!",
+  "voice": "af_aoede"
+ },
+ {
+  "key": "4fc5f556",
+  "text": "Have you got any brothers or sisters?",
+  "voice": "am_michael"
+ },
+ {
+  "key": "1c88114f",
+  "text": "I've got a sister.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "9770afa4",
+  "text": "She's tall.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "55b2c234",
+  "text": "She's got long black hair.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "05133f2f",
+  "text": "This is my brother's ship.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "42ee3a2a",
+  "text": "Her eyes are brown.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "af7a37e1",
+  "text": "Welcome back! Dinner time! Here's the menu.",
+  "voice": "af_bella"
+ },
+ {
+  "key": "ba02fd36",
+  "text": "fish soup",
+  "voice": "af_heart"
+ },
+ {
+  "key": "f161ff1c",
+  "text": "chicken",
+  "voice": "af_heart"
+ },
+ {
+  "key": "73a6862a",
+  "text": "salad",
+  "voice": "af_heart"
+ },
+ {
+  "key": "8aea8859",
+  "text": "cake",
+  "voice": "af_heart"
+ },
+ {
+  "key": "b401e629",
+  "text": "tea",
+  "voice": "af_heart"
+ },
+ {
+  "key": "37e95373",
+  "text": "orange juice",
+  "voice": "af_heart"
+ },
+ {
+  "key": "a99727db",
+  "text": "So, what would you like?",
+  "voice": "af_bella"
+ },
+ {
+  "key": "e9ffe76c",
+  "text": "I'd like the fish soup, please.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "f1df2d2d",
+  "text": "Good choice! My mom's recipe.",
+  "voice": "af_bella"
+ },
+ {
+  "key": "b25616d0",
+  "text": "I'd like the chicken and rice, please.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "c53791e1",
+  "text": "I would like of the soup.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "24dd280b",
+  "text": "Like of the soup? Hmm. Just “the soup”.",
+  "voice": "af_bella"
+ },
+ {
+  "key": "913afdeb",
+  "text": "Can I have some orange juice?",
+  "voice": "am_michael"
+ },
+ {
+  "key": "0f43fa13",
+  "text": "Sure!",
+  "voice": "af_bella"
+ },
+ {
+  "key": "b3bd609a",
+  "text": "A glass of water, please.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "05532461",
+  "text": "Can I have a water?",
+  "voice": "am_michael"
+ },
+ {
+  "key": "29976955",
+  "text": "A water? One water? Like, one drop? Haha.",
+  "voice": "af_bella"
+ },
+ {
+  "key": "4013b3dd",
+  "text": "Oh, Lena! There isn't any bread today. Sorry, Newbie!",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "20ab4c05",
+  "text": "That's okay. Are there any eggs?",
+  "voice": "am_michael"
+ },
+ {
+  "key": "1175e5f1",
+  "text": "Yes, there are! Two eggs for you.",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "63bdb085",
+  "text": "No problem. Is there any cheese?",
+  "voice": "am_michael"
+ },
+ {
+  "key": "7c6e3d45",
+  "text": "Yes, there is! Here.",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "3923e2e3",
+  "text": "That's okay. Is there any eggs?",
+  "voice": "am_michael"
+ },
+ {
+  "key": "f2415ada",
+  "text": "Is there eggs? One egg or many eggs?",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "eb0cf5ef",
+  "text": "Do you eat meat? I've got some good sausages.",
+  "voice": "af_bella"
+ },
+ {
+  "key": "8566348b",
+  "text": "No, thanks. I don't eat meat.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "23efc17a",
+  "text": "No problem! More soup for you.",
+  "voice": "af_bella"
+ },
+ {
+  "key": "ce82ff81",
+  "text": "Yes, I eat everything!",
+  "voice": "am_michael"
+ },
+ {
+  "key": "e4bc1c3a",
+  "text": "Ha! Here you go.",
+  "voice": "af_bella"
+ },
+ {
+  "key": "5f356c69",
+  "text": "No, I no eat meat.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "9dd50e6a",
+  "text": "You no eat? Try again!",
+  "voice": "af_bella"
+ },
+ {
+  "key": "c83d207f",
+  "text": "I love cooking, but I hate washing the dishes! What do you like doing in your free time?",
+  "voice": "af_bella"
+ },
+ {
+  "key": "7f62886f",
+  "text": "I like reading and swimming.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "c36dcf05",
+  "text": "Swimming! In the sea? Brrr.",
+  "voice": "af_bella"
+ },
+ {
+  "key": "eb90c969",
+  "text": "I love cooking too!",
+  "voice": "am_michael"
+ },
+ {
+  "key": "9d698d5a",
+  "text": "Really? Then you wash the dishes! Haha.",
+  "voice": "af_bella"
+ },
+ {
+  "key": "0ee28be6",
+  "text": "I like read and swim.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "f498d38c",
+  "text": "Like read? Almost! Add -ing.",
+  "voice": "af_bella"
+ },
+ {
+  "key": "ff5ed4e3",
+  "text": "Tonight's dinner is eight coins, Newbie.",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "bd6f6b58",
+  "text": "Sure. Can I have the bill, please?",
+  "voice": "am_michael"
+ },
+ {
+  "key": "ba8920ed",
+  "text": "Here you go!",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "3bd80ff8",
+  "text": "Sure. Can I have the account?",
+  "voice": "am_michael"
+ },
+ {
+  "key": "9ce9082e",
+  "text": "The account? Like at the bank? Haha.",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "371f1677",
+  "text": "That's eight coins.",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "0fbc72c0",
+  "text": "Birthday cake",
+  "voice": "af_nicole"
+ },
+ {
+  "key": "1f5210a6",
+  "text": "Are you okay? You look happy… and sad.",
+  "voice": "af_bella"
+ },
+ {
+  "key": "ccf50a2c",
+  "text": "I'm okay. Thanks for the cake!",
+  "voice": "am_michael"
+ },
+ {
+  "key": "a7e69a2e",
+  "text": "Anytime! Good night, Newbie.",
+  "voice": "af_bella"
+ },
+ {
+  "key": "f35d757e",
+  "text": "Are there any eggs?",
+  "voice": "am_michael"
+ },
+ {
+  "key": "7459af7b",
+  "text": "I don't eat meat.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "268f33df",
+  "text": "Can I have the bill, please?",
+  "voice": "am_michael"
+ },
+ {
+  "key": "c2d25d35",
+  "text": "Hi again! The Festival of the Tower is on the fifteenth of May. You need nice clothes!",
+  "voice": "af_nova"
+ },
+ {
+  "key": "8b67f151",
+  "text": "Quick! When is the festival?",
+  "voice": "af_nova"
+ },
+ {
+  "key": "6dff400b",
+  "text": "It's on the fifteenth of May.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "75d6d49a",
+  "text": "Right! Two weeks from today.",
+  "voice": "af_nova"
+ },
+ {
+  "key": "57d6ed91",
+  "text": "It's in the fifteen of May.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "65872955",
+  "text": "In the fifteen? Almost! Try again.",
+  "voice": "af_nova"
+ },
+ {
+  "key": "43e36503",
+  "text": "shirt",
+  "voice": "af_heart"
+ },
+ {
+  "key": "25ec829c",
+  "text": "trousers",
+  "voice": "af_heart"
+ },
+ {
+  "key": "68e41ef0",
+  "text": "dress",
+  "voice": "af_heart"
+ },
+ {
+  "key": "100e165b",
+  "text": "jacket",
+  "voice": "af_heart"
+ },
+ {
+  "key": "fffa7852",
+  "text": "boots",
+  "voice": "af_heart"
+ },
+ {
+  "key": "9e725352",
+  "text": "socks",
+  "voice": "af_heart"
+ },
+ {
+  "key": "419058f6",
+  "text": "Look at these boots! Do you like them?",
+  "voice": "af_nova"
+ },
+ {
+  "key": "30f6ef49",
+  "text": "Yes, I like them! Can I try them on?",
+  "voice": "am_michael"
+ },
+ {
+  "key": "e4a1eb3c",
+  "text": "Sure! Here you go.",
+  "voice": "af_nova"
+ },
+ {
+  "key": "9b28a89f",
+  "text": "Yes, I like this boots.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "a6148253",
+  "text": "This boots? One boot or two?",
+  "voice": "af_nova"
+ },
+ {
+  "key": "5a253477",
+  "text": "So? How are they?",
+  "voice": "af_nova"
+ },
+ {
+  "key": "76ad5c0d",
+  "text": "They're too big. Have you got a smaller size?",
+  "voice": "am_michael"
+ },
+ {
+  "key": "8a902080",
+  "text": "Sure! Try these. Size forty.",
+  "voice": "af_nova"
+ },
+ {
+  "key": "4548d488",
+  "text": "They're too small. Have you got a bigger size?",
+  "voice": "am_michael"
+ },
+ {
+  "key": "deee57a9",
+  "text": "Sure! Try these. Size forty-two.",
+  "voice": "af_nova"
+ },
+ {
+  "key": "c68b8bf0",
+  "text": "They are very much big.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "93df1b3c",
+  "text": "Very much big? Haha, say “too big”!",
+  "voice": "af_nova"
+ },
+ {
+  "key": "92ab588f",
+  "text": "Perfect! Can you pass me that hat, please? The one with the flower.",
+  "voice": "af_nova"
+ },
+ {
+  "key": "f0c1c2c6",
+  "text": "That hat, please!",
+  "voice": "af_nova"
+ },
+ {
+  "key": "7ca073d8",
+  "text": "Those are socks!",
+  "voice": "af_nova"
+ },
+ {
+  "key": "43bb43e9",
+  "text": "That's a shirt.",
+  "voice": "af_nova"
+ },
+ {
+  "key": "d0f9e195",
+  "text": "That's a dress!",
+  "voice": "af_nova"
+ },
+ {
+  "key": "34d744bf",
+  "text": "The boots are nine coins and the shirt is six. That's fifteen.",
+  "voice": "af_nova"
+ },
+ {
+  "key": "c86b6b7d",
+  "text": "That's fifteen coins.",
+  "voice": "af_nova"
+ },
+ {
+  "key": "d2d8a4d5",
+  "text": "So, when's your birthday? Maybe I can give you a gift!",
+  "voice": "af_nova"
+ },
+ {
+  "key": "9737569c",
+  "text": "I don't remember. But my sister's birthday is in May!",
+  "voice": "am_michael"
+ },
+ {
+  "key": "936c7d3b",
+  "text": "In May? Like the festival!",
+  "voice": "af_nova"
+ },
+ {
+  "key": "3a3bea6e",
+  "text": "My sister's birthday is on May.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "de0730fb",
+  "text": "On May? Hmm. In May!",
+  "voice": "af_nova"
+ },
+ {
+  "key": "58968410",
+  "text": "I love May. Spring is my favourite season. What's your favourite season?",
+  "voice": "af_nova"
+ },
+ {
+  "key": "23a21303",
+  "text": "I love spring. It's warm and sunny.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "eee08ef0",
+  "text": "Me too!",
+  "voice": "af_nova"
+ },
+ {
+  "key": "382bbe15",
+  "text": "I like winter. I love the cold!",
+  "voice": "am_michael"
+ },
+ {
+  "key": "c0d717fe",
+  "text": "The cold? Brrr. You're crazy!",
+  "voice": "af_nova"
+ },
+ {
+  "key": "37f7f74f",
+  "text": "I like summer. I love the sea.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "fae216e8",
+  "text": "Oh, the sea! Nice.",
+  "voice": "af_nova"
+ },
+ {
+  "key": "3ba7e226",
+  "text": "May",
+  "voice": "af_nicole"
+ },
+ {
+  "key": "cdf45549",
+  "text": "Is this your bag? Over here, by my stall?",
+  "voice": "af_nova"
+ },
+ {
+  "key": "fabd2b5b",
+  "text": "No, that's my bag, over there.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "3b70a0b0",
+  "text": "Oh! Okay. See you at the festival!",
+  "voice": "af_nova"
+ },
+ {
+  "key": "096ce5c8",
+  "text": "No, this is my bag, over there.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "903b7da5",
+  "text": "This… over there? Far away is “that”.",
+  "voice": "af_nova"
+ },
+ {
+  "key": "d7d99891",
+  "text": "The festival is on the fifteenth of May.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "677a11a9",
+  "text": "Can I try them on?",
+  "voice": "am_michael"
+ },
+ {
+  "key": "2a085669",
+  "text": "They're too big.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "df320c9b",
+  "text": "Have you got a smaller size?",
+  "voice": "am_michael"
+ },
+ {
+  "key": "f9db3ac4",
+  "text": "These boots are great.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "6848941c",
+  "text": "My sister's birthday is in May.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "79f9198d",
+  "text": "I love spring.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "1217533c",
+  "text": "Newbie! Newbie! What's the weather like? Look at me! Haha!",
+  "voice": "am_puck"
+ },
+ {
+  "key": "494372ec",
+  "text": "sunny",
+  "voice": "af_heart"
+ },
+ {
+  "key": "eeb0c085",
+  "text": "raining",
+  "voice": "af_heart"
+ },
+ {
+  "key": "2dbc1605",
+  "text": "cloudy",
+  "voice": "af_heart"
+ },
+ {
+  "key": "1af8295a",
+  "text": "windy",
+  "voice": "af_heart"
+ },
+ {
+  "key": "ad3c122e",
+  "text": "snowing",
+  "voice": "af_heart"
+ },
+ {
+  "key": "ea44dd0f",
+  "text": "cold",
+  "voice": "af_heart"
+ },
+ {
+  "key": "00700fd9",
+  "text": "It's cold and it's raining!",
+  "voice": "am_michael"
+ },
+ {
+  "key": "0f8233ad",
+  "text": "Yeah! And I'm all wet! Haha.",
+  "voice": "am_puck"
+ },
+ {
+  "key": "dec915b2",
+  "text": "Is raining and is cold.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "e8c9227d",
+  "text": "Is raining? What is? Haha.",
+  "voice": "am_puck"
+ },
+ {
+  "key": "46b1ff83",
+  "text": "Listen! Marcus is looking for you. He's waiting at the old temple. Come on, I know the way!",
+  "voice": "am_puck"
+ },
+ {
+  "key": "b7aa742a",
+  "text": "Shh. Quiet. Ana is reading the old stones.",
+  "voice": "am_onyx"
+ },
+ {
+  "key": "3008c275",
+  "text": "Welcome. I'm Ana. I look after the temple. What are you doing here?",
+  "voice": "af_jessica"
+ },
+ {
+  "key": "cedaf4d2",
+  "text": "I'm looking for my sister.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "ccc3bd46",
+  "text": "Your sister… I see.",
+  "voice": "af_jessica"
+ },
+ {
+  "key": "f0eda6e0",
+  "text": "I look for my sister.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "27361076",
+  "text": "You look for… every day? Or now?",
+  "voice": "af_jessica"
+ },
+ {
+  "key": "ea195070",
+  "text": "Marcus says your bracelet is special. Look at these letters on the altar. Can you read them?",
+  "voice": "af_jessica"
+ },
+ {
+  "key": "eee91a1c",
+  "text": "Yes, I can. It says “Tower”.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "fd416bdb",
+  "text": "You can read it? Nobody can read it!",
+  "voice": "af_jessica"
+ },
+ {
+  "key": "5272a83a",
+  "text": "No, I can't read it. Sorry.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "ea19ff72",
+  "text": "Look again. Your bracelet is glowing…",
+  "voice": "af_jessica"
+ },
+ {
+  "key": "728311ee",
+  "text": "No, I can to read.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "c8c2960e",
+  "text": "Can to read? Just “can read”.",
+  "voice": "af_jessica"
+ },
+ {
+  "key": "8d2aba26",
+  "text": "Tell me about you, Newbie. Can you swim? Can you ride a horse?",
+  "voice": "af_jessica"
+ },
+ {
+  "key": "9af15709",
+  "text": "I can swim, but I can't ride a horse.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "1f4dd5d7",
+  "text": "Swimming is useful in Shinar!",
+  "voice": "af_jessica"
+ },
+ {
+  "key": "dee14fe1",
+  "text": "I can ride a horse, but I can't swim.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "d2fa3aa8",
+  "text": "Can't swim? Stay away from the harbour, then!",
+  "voice": "af_jessica"
+ },
+ {
+  "key": "97b4ce31",
+  "text": "I can to swim.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "5a59057c",
+  "text": "Can to swim? Hmm, no “to”.",
+  "voice": "af_jessica"
+ },
+ {
+  "key": "50cb0055",
+  "text": "Do you trust Marcus? Do you like him?",
+  "voice": "af_jessica"
+ },
+ {
+  "key": "b10dc35f",
+  "text": "Yes, I like him. He's kind.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "61e5a0d1",
+  "text": "Good. He's a good man.",
+  "voice": "af_jessica"
+ },
+ {
+  "key": "62d57225",
+  "text": "Yes, I like he.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "b757b838",
+  "text": "Like he? Like… him?",
+  "voice": "af_jessica"
+ },
+ {
+  "key": "e7018b07",
+  "text": "Stop! Don't touch the crystal!",
+  "voice": "af_jessica"
+ },
+ {
+  "key": "1c477cf4",
+  "text": "Newbie! What's he doing? Where's he going?",
+  "voice": "am_onyx"
+ },
+ {
+  "key": "8b46113b",
+  "text": "He's running to the harbour!",
+  "voice": "am_michael"
+ },
+ {
+  "key": "01ee0f95",
+  "text": "After him! Go, go!",
+  "voice": "am_onyx"
+ },
+ {
+  "key": "21124e3f",
+  "text": "He run to the harbour!",
+  "voice": "am_michael"
+ },
+ {
+  "key": "a43a27a5",
+  "text": "He run? Now! Quick, say it right!",
+  "voice": "am_onyx"
+ },
+ {
+  "key": "06b35069",
+  "text": "Crystal",
+  "voice": "af_nicole"
+ },
+ {
+  "key": "01866f40",
+  "text": "Don't worry. We can find him. Come to the Fox tomorrow. Marcus wants to talk to you.",
+  "voice": "af_jessica"
+ },
+ {
+  "key": "82688f44",
+  "text": "Okay. See you tomorrow, Ana.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "8a52a659",
+  "text": "Good night. Be careful.",
+  "voice": "af_jessica"
+ },
+ {
+  "key": "09701e04",
+  "text": "It's cold and it's raining.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "39b81daa",
+  "text": "Yes, I like him.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "7441b392",
+  "text": "Don't touch it!",
+  "voice": "am_michael"
+ },
+ {
+  "key": "bf90e71a",
+  "text": "Newbie! Where were you last night? You were out all night!",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "45dfaf65",
+  "text": "I was at the temple with Ana and Bram.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "13241254",
+  "text": "The old temple? At night? Are you crazy?",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "26c22938",
+  "text": "I were at the temple.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "d9afc177",
+  "text": "I were? Hmm. I was!",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "f6a48595",
+  "text": "Bram told me about the thief. Was he tall or short?",
+  "voice": "am_fenrir"
+ },
+ {
+  "key": "eb93c224",
+  "text": "He was tall. His cloak was black.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "9b536cf9",
+  "text": "Tall, black cloak…",
+  "voice": "am_fenrir"
+ },
+ {
+  "key": "5be6638d",
+  "text": "He was short. His hair was grey.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "55276068",
+  "text": "Short, grey hair…",
+  "voice": "am_fenrir"
+ },
+ {
+  "key": "b75e8504",
+  "text": "He were tall.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "6d4095c3",
+  "text": "He were? Remember: he was.",
+  "voice": "am_fenrir"
+ },
+ {
+  "key": "57d9f0f6",
+  "text": "Were you scared?",
+  "voice": "af_bella"
+ },
+ {
+  "key": "452e86e7",
+  "text": "Yes, I was. Very scared!",
+  "voice": "am_michael"
+ },
+ {
+  "key": "d8caa0b8",
+  "text": "Me too, and I wasn't even there!",
+  "voice": "af_bella"
+ },
+ {
+  "key": "ca5d1105",
+  "text": "No, I wasn't. I was angry!",
+  "voice": "am_michael"
+ },
+ {
+  "key": "ff12c110",
+  "text": "Brave Newbie!",
+  "voice": "af_bella"
+ },
+ {
+  "key": "f38aee5e",
+  "text": "Yes, I were.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "76a32387",
+  "text": "I were? Try again.",
+  "voice": "af_bella"
+ },
+ {
+  "key": "b2bb8192",
+  "text": "And where were Ana and Bram?",
+  "voice": "am_fenrir"
+ },
+ {
+  "key": "331be89f",
+  "text": "They were at the harbour with me.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "1103b87a",
+  "text": "Good. Everybody's safe.",
+  "voice": "am_fenrir"
+ },
+ {
+  "key": "63f4917f",
+  "text": "They was at the harbour.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "bf727507",
+  "text": "They was? They were!",
+  "voice": "am_fenrir"
+ },
+ {
+  "key": "987d4512",
+  "text": "Newbie… I know that bracelet now. It was your mother's. Your mother was the Queen's advisor.",
+  "voice": "am_fenrir"
+ },
+ {
+  "key": "a185db63",
+  "text": "My mother? Really? Where is she now?",
+  "voice": "am_michael"
+ },
+ {
+  "key": "40ef1392",
+  "text": "I'm sorry. Nobody knows.",
+  "voice": "am_fenrir"
+ },
+ {
+  "key": "76376e1e",
+  "text": "My mother? Was she a good person?",
+  "voice": "am_michael"
+ },
+ {
+  "key": "b91fc023",
+  "text": "She was the best. Kind and very smart.",
+  "voice": "am_fenrir"
+ },
+ {
+  "key": "55e2a268",
+  "text": "Your family was very important. And your sister… she wasn't on a ship by chance. She was looking for the Tower crystals.",
+  "voice": "am_fenrir"
+ },
+ {
+  "key": "96fb4c09",
+  "text": "Ari",
+  "voice": "af_nicole"
+ },
+ {
+  "key": "dd2029eb",
+  "text": "Newbie? You're crying. What is it?",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "8e852f96",
+  "text": "I remember now. My name is Ari.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "08d1c4a4",
+  "text": "Ari! What a beautiful name!",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "efc47950",
+  "text": "My name are Ari.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "6bdbc100",
+  "text": "Are? Just one name, right?",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "25e2070c",
+  "text": "Ari! How do you spell that?",
+  "voice": "af_bella"
+ },
+ {
+  "key": "0cf084e5",
+  "text": "A-R-I.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "d58733dd",
+  "text": "A-R-I. Ari! Nice to meet you, Ari!",
+  "voice": "af_bella"
+ },
+ {
+  "key": "901ddb39",
+  "text": "E-R-I.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "2402cbd7",
+  "text": "E-R-I? That's “Eri”. A is “ei”!",
+  "voice": "af_bella"
+ },
+ {
+  "key": "b0b3b715",
+  "text": "Ari, your sister went to the capital. The Guild has a job there, a long trip. Are you ready?",
+  "voice": "am_fenrir"
+ },
+ {
+  "key": "5316f88c",
+  "text": "Yes, I'm ready. Let's go!",
+  "voice": "am_michael"
+ },
+ {
+  "key": "33285296",
+  "text": "Good. We leave after the festival.",
+  "voice": "am_fenrir"
+ },
+ {
+  "key": "d915e703",
+  "text": "I'm scared, but I'm ready.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "455e8b94",
+  "text": "That's what brave means, Ari.",
+  "voice": "am_fenrir"
+ },
+ {
+  "key": "84a79a1d",
+  "text": "We were strangers a week ago. Now you're family, Ari. Come back soon!",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "36eaa67b",
+  "text": "Thanks for everything, Rosie. I'll be back!",
+  "voice": "am_michael"
+ },
+ {
+  "key": "b19dd9c0",
+  "text": "You'd better! Haha.",
+  "voice": "af_sarah"
+ },
+ {
+  "key": "09ad12d4",
+  "text": "I was at the temple.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "c9b2c41c",
+  "text": "He was tall.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "218d289c",
+  "text": "Yes, I was.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "20c477e5",
+  "text": "They were at the harbour.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "779833c6",
+  "text": "My name is Ari.",
+  "voice": "am_michael"
+ },
+ {
+  "key": "258baeea",
+  "text": "Perfect, thanks!",
+  "voice": "af_heart"
+ },
+ {
+  "key": "b2886573",
+  "text": "Oh, one coin? Thanks for the tip!",
+  "voice": "af_heart"
+ },
+ {
+  "key": "1227eaf4",
+  "text": "Oh, two coins? Thanks for the tip!",
+  "voice": "af_heart"
+ },
+ {
+  "key": "9466d2fe",
+  "text": "Oh, three coins? Thanks for the tip!",
+  "voice": "af_heart"
+ },
+ {
+  "key": "1e4e83f6",
+  "text": "Oh, four coins? Thanks for the tip!",
+  "voice": "af_heart"
+ },
+ {
+  "key": "a122b14e",
+  "text": "Oh, five coins? Thanks for the tip!",
+  "voice": "af_heart"
+ },
+ {
+  "key": "998fccf6",
+  "text": "Oh, six coins? Thanks for the tip!",
+  "voice": "af_heart"
+ },
+ {
+  "key": "430e53b1",
+  "text": "Oh, seven coins? Thanks for the tip!",
+  "voice": "af_heart"
+ },
+ {
+  "key": "81d419ef",
+  "text": "Oh, eight coins? Thanks for the tip!",
+  "voice": "af_heart"
+ },
+ {
+  "key": "cf48d21e",
+  "text": "Oh, nine coins? Thanks for the tip!",
+  "voice": "af_heart"
+ },
+ {
+  "key": "5349e113",
+  "text": "Oh, ten coins? Thanks for the tip!",
+  "voice": "af_heart"
+ },
+ {
+  "key": "3b88d811",
+  "text": "Oh, eleven coins? Thanks for the tip!",
+  "voice": "af_heart"
+ },
+ {
+  "key": "457bafa9",
+  "text": "Oh, twelve coins? Thanks for the tip!",
+  "voice": "af_heart"
+ },
+ {
+  "key": "1a32ac8b",
+  "text": "Oh, thirteen coins? Thanks for the tip!",
+  "voice": "af_heart"
+ },
+ {
+  "key": "1920007e",
+  "text": "Oh, fourteen coins? Thanks for the tip!",
+  "voice": "af_heart"
+ },
+ {
+  "key": "b72da475",
+  "text": "Oh, fifteen coins? Thanks for the tip!",
+  "voice": "af_heart"
+ },
+ {
+  "key": "e56cd97e",
+  "text": "Oh, sixteen coins? Thanks for the tip!",
+  "voice": "af_heart"
+ },
+ {
+  "key": "47d13ce1",
+  "text": "Oh, seventeen coins? Thanks for the tip!",
+  "voice": "af_heart"
+ },
+ {
+  "key": "34d84f25",
+  "text": "Oh, eighteen coins? Thanks for the tip!",
+  "voice": "af_heart"
+ },
+ {
+  "key": "aec36d76",
+  "text": "Oh, nineteen coins? Thanks for the tip!",
+  "voice": "af_heart"
+ },
+ {
+  "key": "24d54731",
+  "text": "Oh, twenty coins? Thanks for the tip!",
+  "voice": "af_heart"
+ },
+ {
+  "key": "50d9d665",
+  "text": "Oh, 21 coins? Thanks for the tip!",
+  "voice": "af_heart"
+ },
+ {
+  "key": "7db2b0aa",
+  "text": "Oh, 22 coins? Thanks for the tip!",
+  "voice": "af_heart"
+ },
+ {
+  "key": "f54486db",
+  "text": "Oh, 23 coins? Thanks for the tip!",
+  "voice": "af_heart"
+ },
+ {
+  "key": "6db01470",
+  "text": "Oh, 24 coins? Thanks for the tip!",
+  "voice": "af_heart"
+ },
+ {
+  "key": "c91c5811",
+  "text": "Oh, 25 coins? Thanks for the tip!",
+  "voice": "af_heart"
+ },
+ {
+  "key": "a0b08c06",
+  "text": "Oh, 26 coins? Thanks for the tip!",
+  "voice": "af_heart"
+ },
+ {
+  "key": "ff8a57b7",
+  "text": "Oh, 27 coins? Thanks for the tip!",
+  "voice": "af_heart"
+ },
+ {
+  "key": "43ebabac",
+  "text": "Oh, 28 coins? Thanks for the tip!",
+  "voice": "af_heart"
+ },
+ {
+  "key": "114bb02d",
+  "text": "Oh, 29 coins? Thanks for the tip!",
+  "voice": "af_heart"
+ },
+ {
+  "key": "ba16930b",
+  "text": "Oh, 30 coins? Thanks for the tip!",
+  "voice": "af_heart"
+ },
+ {
+  "key": "f70f89e2",
+  "text": "Hmm, that's only zero. I said five.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "d7a651a0",
+  "text": "Hmm, that's only one. I said five.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "f7e4bb8a",
+  "text": "Hmm, that's only two. I said five.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "4a2b0fe4",
+  "text": "Hmm, that's only three. I said five.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "dc2fbea0",
+  "text": "Hmm, that's only four. I said five.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "ebf122ee",
+  "text": "Hmm, that's only zero. I said four.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "d7bf4f58",
+  "text": "Hmm, that's only one. I said four.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "0a4c1df6",
+  "text": "Hmm, that's only two. I said four.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "859cf89c",
+  "text": "Hmm, that's only three. I said four.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "18d07a94",
+  "text": "Hmm, that's only zero. I said two.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "c8973346",
+  "text": "Hmm, that's only one. I said two.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "16f892c9",
+  "text": "Hmm, that's only zero. I said twelve.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "7d9bdf5f",
+  "text": "Hmm, that's only one. I said twelve.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "a804cc51",
+  "text": "Hmm, that's only two. I said twelve.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "cd99c17b",
+  "text": "Hmm, that's only three. I said twelve.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "b1eb945f",
+  "text": "Hmm, that's only four. I said twelve.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "40b6213b",
+  "text": "Hmm, that's only five. I said twelve.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "bbecb493",
+  "text": "Hmm, that's only six. I said twelve.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "bca47516",
+  "text": "Hmm, that's only seven. I said twelve.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "4bbd91e0",
+  "text": "Hmm, that's only eight. I said twelve.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "b44a04ab",
+  "text": "Hmm, that's only nine. I said twelve.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "b388f794",
+  "text": "Hmm, that's only ten. I said twelve.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "bac399ce",
+  "text": "Hmm, that's only eleven. I said twelve.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "5219d48b",
+  "text": "Hmm, that's only zero. I said ten.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "93a20ea9",
+  "text": "Hmm, that's only one. I said ten.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "b2d601e3",
+  "text": "Hmm, that's only two. I said ten.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "d895f635",
+  "text": "Hmm, that's only three. I said ten.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "3fcb0da9",
+  "text": "Hmm, that's only four. I said ten.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "8eb6cef5",
+  "text": "Hmm, that's only five. I said ten.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "95eb5dfd",
+  "text": "Hmm, that's only six. I said ten.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "a1cf61e6",
+  "text": "Hmm, that's only seven. I said ten.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "b6b25b30",
+  "text": "Hmm, that's only eight. I said ten.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "e3ef0005",
+  "text": "Hmm, that's only nine. I said ten.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "3dc6a653",
+  "text": "Hmm, that's only zero. I said thirteen.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "41f43f31",
+  "text": "Hmm, that's only one. I said thirteen.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "743189db",
+  "text": "Hmm, that's only two. I said thirteen.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "2cefce75",
+  "text": "Hmm, that's only three. I said thirteen.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "1ce77c31",
+  "text": "Hmm, that's only four. I said thirteen.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "1ca72c35",
+  "text": "Hmm, that's only five. I said thirteen.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "146c618d",
+  "text": "Hmm, that's only six. I said thirteen.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "98d388d0",
+  "text": "Hmm, that's only seven. I said thirteen.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "cab3672a",
+  "text": "Hmm, that's only eight. I said thirteen.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "da5257e5",
+  "text": "Hmm, that's only nine. I said thirteen.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "4d767c26",
+  "text": "Hmm, that's only ten. I said thirteen.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "52387f28",
+  "text": "Hmm, that's only eleven. I said thirteen.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "51dfdaa8",
+  "text": "Hmm, that's only twelve. I said thirteen.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "30c1a2af",
+  "text": "Hmm, that's only zero. I said eight.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "e9b8aaed",
+  "text": "Hmm, that's only one. I said eight.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "89a965d7",
+  "text": "Hmm, that's only two. I said eight.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "3b68d639",
+  "text": "Hmm, that's only three. I said eight.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "0e0f41ed",
+  "text": "Hmm, that's only four. I said eight.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "fcd88ef9",
+  "text": "Hmm, that's only five. I said eight.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "4db30df1",
+  "text": "Hmm, that's only six. I said eight.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "62376a42",
+  "text": "Hmm, that's only seven. I said eight.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "5e2a66e5",
+  "text": "Hmm, that's only zero. I said fifteen.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "b30ccd43",
+  "text": "Hmm, that's only one. I said fifteen.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "a25d44ad",
+  "text": "Hmm, that's only two. I said fifteen.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "8eef8ae7",
+  "text": "Hmm, that's only three. I said fifteen.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "0c86bc43",
+  "text": "Hmm, that's only four. I said fifteen.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "a33160a7",
+  "text": "Hmm, that's only five. I said fifteen.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "280b023f",
+  "text": "Hmm, that's only six. I said fifteen.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "7af82034",
+  "text": "Hmm, that's only seven. I said fifteen.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "ae85fa1e",
+  "text": "Hmm, that's only eight. I said fifteen.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "8ec16e37",
+  "text": "Hmm, that's only nine. I said fifteen.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "6f2f212a",
+  "text": "Hmm, that's only ten. I said fifteen.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "cc64dc2c",
+  "text": "Hmm, that's only eleven. I said fifteen.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "4d0742ac",
+  "text": "Hmm, that's only twelve. I said fifteen.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "24c1451a",
+  "text": "Hmm, that's only thirteen. I said fifteen.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "1df2595f",
+  "text": "Hmm, that's only fourteen. I said fifteen.",
+  "voice": "af_heart"
+ },
+ {
+  "key": "b3dc6675",
+  "text": "Hey! Can I get a coffee, please?",
+  "voice": "af_heart"
+ }
+]
