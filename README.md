@@ -10,8 +10,18 @@ Aprenda idiomas jogando e falando em voz alta. É um jogo no navegador, sem inst
 - **Vidas:** cada erro numa lição custa 1 vida. Uma vida volta a cada 30 minutos, e um treino completo devolve 1. Exercícios de fala e de ouvido nunca custam vida.
 - **Sequência de dias, meta diária e missões do dia.** Uma das missões é sempre de fala.
 - **Moedas e loja:** recarga de vidas, protetor de sequência e XP em dobro.
-- **27 conquistas.**
+- **28 conquistas.**
 - **Treino com repetição espaçada:** as palavras que você mais erra voltam com mais frequência.
+
+## História (por enquanto só em inglês)
+
+Um RPG no estilo visual novel, em 4 arcos que acompanham os degraus do zigurate: A1 "O Despertar Sem Memória", A2 "A Jornada pela Guilda", B1 "O Mistério da Cidade Grande" e B2 "A Conspiração do Trono". Você acorda sem memória em Shinar e conversa com os personagens respondendo em voz alta ou tocando nas opções.
+
+- **Mochila:** os itens que você pega ficam guardados, cada um com a palavra em inglês, pronúncia e frase de exemplo.
+- **Erros têm consequência:** o personagem estranha o que você disse, um balão explica a regra em português, e o erro pode custar moedas ou levar a um caminho mais longo. Falar bem e com educação rende desconto e recompensas.
+- **A pulseira brilha** quando você fala com boa pronúncia.
+- As frases de cada capítulo podem ir direto para o caderno.
+- A história fica em `historia.js`. Pronto: Arco 1, Capítulo 1 ("Wake Up").
 
 ## Conversas
 
