@@ -4,6 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Xibolete</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="theme-color" content="#141a26">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Xibolete">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="description" content="Aprenda inglês, espanhol, francês, italiano e russo jogando e falando em voz alta: pronúncia corrigida por reconhecimento de voz, XP, níveis, sequência e conquistas.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -432,13 +440,22 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 
 /* story mode */
 .vn{gap:14px}
-.stage{position:relative;height:190px;border-radius:20px;overflow:hidden;display:flex;align-items:flex-end;justify-content:center;box-shadow:inset 0 -6px 0 rgba(0,0,0,.18)}
+.stage{position:relative;aspect-ratio:160/70;max-height:300px;width:100%;border-radius:20px;overflow:hidden;display:flex;align-items:flex-end;justify-content:center;box-shadow:inset 0 -6px 0 rgba(0,0,0,.18);background:#3a2a1f}
+.scene-px{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;image-rendering:pixelated}
+img.pix{image-rendering:pixelated;display:block}
+.actor{position:absolute!important;z-index:1;bottom:0;left:0;right:0;margin:0 auto;width:max-content;height:80%}
+.actor img.pix{height:100%;width:auto;filter:drop-shadow(0 3px 0 rgba(0,0,0,.35))}
+.vn-name{display:flex;align-items:center;gap:6px}
+img.pix.mini{width:22px;height:auto;border-radius:6px;background:rgba(0,0,0,.08)}
+.obj .sw{display:block;width:34px;height:34px;border-radius:10px;box-shadow:inset 0 -4px 0 rgba(0,0,0,.2)}
+.locked-row{opacity:.6}
+.thought.lesson b{color:var(--lang)}
 .stage.bg-room{background:radial-gradient(circle at 78% 22%,#ffd98a 0 9%,transparent 10%),linear-gradient(180deg,#6b4a35 0 62%,#4a3122 62% 100%)}
 .stage.bg-counter{background:radial-gradient(circle at 20% 25%,#ffcf7a 0 7%,transparent 8%),radial-gradient(circle at 60% 25%,#ffcf7a 0 7%,transparent 8%),linear-gradient(180deg,#7a5238 0 58%,#3c2619 58% 100%)}
 .stage-label{position:absolute;left:12px;top:10px;background:rgba(0,0,0,.45);color:#fff;font-weight:800;font-size:13px;border-radius:10px;padding:4px 10px}
-.actor{display:grid;justify-items:center;gap:4px;margin-bottom:14px;animation:slidein .35s both}
+.actor{display:grid;justify-items:center;gap:0;animation:slidein .35s both}
 .actor span{width:92px;height:92px;border-radius:50%;background:var(--ac);color:#fff;display:grid;place-items:center;font-family:var(--display);font-size:44px;box-shadow:0 6px 0 rgba(0,0,0,.25),inset 0 -6px 0 rgba(0,0,0,.15);border:4px solid rgba(255,255,255,.85)}
-.actor small{background:#fff;color:#2b2b2b;font-weight:800;border-radius:8px;padding:2px 8px;font-size:12px}
+.actor small{position:absolute;bottom:8px;left:50%;transform:translateX(-50%);background:#fff;color:#2b2b2b;font-weight:800;border-radius:8px;padding:2px 8px;font-size:12px;white-space:nowrap}
 .bracelet{position:absolute;right:10px;top:10px;display:flex;align-items:center;gap:4px;background:rgba(0,0,0,.45);color:#ffe08a;border-radius:12px;padding:4px 10px;font-family:var(--display)}
 .bracelet svg{width:22px;height:22px}
 .bracelet.glow{animation:glow 1.2s ease-out}
@@ -494,7 +511,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .ph-row small{display:block;color:var(--muted);font-weight:700}
 .phrases .btn{justify-self:start}
 .only-phone{display:none}
-@media (max-width:760px){ .nav button[data-v="ach"]{display:none} .only-phone{display:flex} .stage{height:160px} .actor span{width:76px;height:76px;font-size:36px} }
+@media (max-width:760px){ .nav button[data-v="ach"]{display:none} .only-phone{display:flex} .actor span{width:76px;height:76px;font-size:36px} }
 
 /* notebook */
 .nav .ns{display:none}
@@ -578,6 +595,7 @@ textarea.lines::placeholder{color:#a3acbb}
 
 <script src="data.js"></script>
 <script src="conversas.js"></script>
+<script src="arte.js"></script>
 <script src="historia.js"></script>
 <script>
 (() => {
@@ -1184,6 +1202,7 @@ function viewProfile() {
           ${list.length ? `<select data-voice="${k}" aria-label="Voz em ${esc(LANGS[k].learning)}">${list.map(v => `<option value="${esc(v.name)}" ${cur && v.name === cur.name ? "selected" : ""}>${esc(v.name.replace(/^(Microsoft|Google)\s+/, "").replace(/\s*Online \(Natural\)/, ""))}${fluentVoice(v) ? " · fluida" : ""}</option>`).join("")}</select>` : `<span class="muted">Sem voz neste aparelho</span>`}
           <button class="say" data-act="say" data-t="${esc(SAMPLE[k])}" data-l="${k}" aria-label="Testar voz">${I("speaker")}</button></div>`; }).join("")}</div>
       <div class="set-row"><div><b>Ouvir sua voz</b><p>${canListen() ? "Disponível. Na primeira vez, o navegador pede permissão para usar o microfone." : "Indisponível neste navegador. Os exercícios de fala usam autoavaliação."}</p></div></div>
+      ${installRow()}
       <div class="set-row"><div><b>Apagar progresso</b><p>Zera XP, moedas, lições e conquistas de todos os idiomas. Seu caderno de anotações não é apagado.</p></div><button class="btn small bad" data-act="reset">Apagar tudo</button></div>
     </div></div>`;
 }
@@ -1914,6 +1933,7 @@ function viewTalk() {
 const STORY = window.XIB_STORY || {};
 const storyOf = lang => STORY[lang];
 const STORY_SPEAK = 60;
+const NUMW = "zero one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen twenty".split(" ");
 let SY = null;
 function startStory(id) {
   const st = storyOf("en"), ch = st && st.chapters.find(c => c.id === id); if (!ch) return;
@@ -1942,7 +1962,7 @@ function syAdvance(to) {
     if (n.give) bagAdd(n.give);
     if (n.coins) syCoins(n.coins);
     if (n.go && !n.choice) { SY.i = syJump(n.go); continue; }
-    if (n.nar || n.say || n.choice || n.explore || n.find || n.pay || n.memory) break;
+    if (n.nar || n.say || n.choice || n.explore || n.find || n.pay || n.memory || n.lesson) break;
     SY.i++;
   }
   Object.assign(SY, { pick: null, wrongs: new Set(), seen: new Set(), found: false, miss: null, hand: 0, payFb: null, listening: false, err: "", heard: "", trOn: false });
@@ -1951,7 +1971,7 @@ function syAdvance(to) {
   renderStory();
   const line = n.say ? n.t : n.find ? n.line : n.memory ? n.memory[0] : null;
   if (line) setTimeout(() => SY && syNode() === n && speak(line, "en"), 300);
-  if (n.pay) setTimeout(() => SY && syNode() === n && speak(`That's ${["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"][n.pay]} coins.`, "en"), 300);
+  if (n.pay) setTimeout(() => SY && syNode() === n && speak(`That's ${NUMW[n.pay]} coins.`, "en"), 300);
 }
 function syNext() {
   const n = syNode();
@@ -1994,10 +2014,14 @@ function syHeard(res) {
   if (bestR.score < STORY_SPEAK) { SY.err = ""; SY.heard = bestR.heard || res[0] || ""; renderStory(); return; }
   SY.heard = ""; syChoose(best, bestR.score);
 }
-const syActor = who => { const c = SY.st.cast[who]; return c ? `<div class="actor" style="--ac:${c.color}"><span>${esc(c.name[0])}</span><small>${esc(c.name)}</small></div>` : ""; };
+const ART = window.XIB_ART;
+const pxPortrait = (who, cls = "pix") => { const u = ART && ART.portrait(who); return u ? `<img class="${cls}" src="${u}" alt="">` : ""; };
+const syActor = who => { const c = SY.st.cast[who]; if (!c) return ""; const img = pxPortrait(who);
+  return `<div class="actor" style="--ac:${c.color}">${img || `<span>${esc(c.name[0])}</span>`}<small>${esc(c.name)}</small></div>`; };
+const objIc = o => o.sw ? `<span class="oi"><i class="sw" style="background:${o.sw}"></i></span>` : `<span class="oi">${o.ic}</span>`;
 function syLine(who, t, pt, cls = "") {
   const c = SY.st.cast[who] || { name: "", color: "var(--lang)" };
-  return `<div class="vn-line ${cls}" style="--ac:${c.color}"><div class="vn-name">${esc(c.name)}</div><p class="vn-en">${esc(t)}</p>
+  return `<div class="vn-line ${cls}" style="--ac:${c.color}"><div class="vn-name">${pxPortrait(who, "pix mini")}${esc(c.name)}</div><p class="vn-en">${esc(t)}</p>
     <div class="bub-acts"><button class="say" data-act="say" data-t="${esc(t)}" data-l="en" aria-label="Ouvir">${I("speaker")}</button><button class="say" data-act="saySlow" data-t="${esc(t)}" aria-label="Ouvir devagar">${I("slow")}</button>
     ${pt ? `<button class="linkish" data-act="syTr">${SY.trOn ? esc(pt) : "Traduzir"}</button>` : ""}</div></div>`;
 }
@@ -2007,6 +2031,7 @@ function renderStory() {
   let box = "", foot = "";
   const cont = (label = "Continuar", cls = "") => `<button class="btn ${cls}" data-act="syNext">${label}</button>`;
   if (n.nar) { box = `<p class="vn-nar">${esc(n.nar)}</p>`; foot = cont(); }
+  else if (n.lesson) { box = `<div class="thought lesson"><b>Aprenda</b> ${esc(n.lesson)}</div>`; foot = cont(); }
   else if (n.say) { box = syLine(n.say, n.t, n.pt); foot = cont(); }
   else if (n.memory) {
     box = `<div class="memory"><div class="mem-glow">${I("zig")}</div><span class="l-tag">Uma memória voltou</span><b class="mem-word">${esc(n.memory[0])}</b><span class="muted">${esc(n.memory[1])}</span>${speakBtn(n.memory[0], "en")}</div>`;
@@ -2029,16 +2054,16 @@ function renderStory() {
     }
   } else if (n.explore) {
     const all = n.explore.length, seen = SY.seen.size, last = SY.lastObj != null ? n.explore[SY.lastObj] : null;
-    box = `<p class="vn-q">Toque nos objetos (${seen} de ${all})</p><div class="objs">${n.explore.map((o, k) => `<button class="obj ${SY.seen.has(k) ? "seen" : ""}" data-act="syObj" data-i="${k}"><span class="oi">${o.ic}</span><span>${SY.seen.has(k) ? esc(o.w) : "?"}</span></button>`).join("")}</div>
+    box = `<p class="vn-q">Toque nos objetos (${seen} de ${all})</p><div class="objs">${n.explore.map((o, k) => `<button class="obj ${SY.seen.has(k) ? "seen" : ""}" data-act="syObj" data-i="${k}">${objIc(o)}<span>${SY.seen.has(k) ? esc(o.w) : "?"}</span></button>`).join("")}</div>
       ${last ? `<div class="obj-card"><b>${esc(last.w)}</b> <span class="muted">· ${esc(last.pt)}</span>${speakBtn(last.w, "en")}${last.ex ? `<p>${esc(last.ex)} <span class="muted">${esc(last.exPt)}</span></p>` : last.take ? `<p class="muted">Foi para a sua mochila.</p>` : ""}</div>` : ""}`;
     foot = seen >= all ? cont() : `<p class="muted" style="font-weight:700;margin:0">Toque em todos para continuar.</p>`;
   } else if (n.find) {
-    box = syLine(SY.who || "rosie", n.line, n.pt) + `<div class="objs">${n.objs.map((o, k) => `<button class="obj ${SY.miss === k ? "wrong" : ""} ${SY.found && o.w === n.find ? "seen" : ""}" data-act="syFind" data-i="${k}" ${SY.found ? "disabled" : ""}><span class="oi">${o.ic}</span><span>${esc(o.w)}</span></button>`).join("")}</div>
-      ${SY.miss != null && !SY.found ? `<p class="miss">${esc(n.objs[SY.miss].no || "Not there!")} Ouça de novo: onde ela disse?</p>` : ""}${SY.found ? `<p class="ok-note">Achou! A chave estava embaixo da cama (under the bed).</p>` : ""}`;
+    box = syLine(SY.who || "rosie", n.line, n.pt) + `<div class="objs">${n.objs.map((o, k) => `<button class="obj ${SY.miss === k ? "wrong" : ""} ${SY.found && o.w === n.find ? "seen" : ""}" data-act="syFind" data-i="${k}" ${SY.found ? "disabled" : ""}>${objIc(o)}<span>${esc(o.w)}</span></button>`).join("")}</div>
+      ${SY.miss != null && !SY.found ? `<p class="miss">${esc(n.objs[SY.miss].no || "Not there!")} ${esc(n.missPt || "Ouça de novo.")}</p>` : ""}${SY.found ? `<p class="ok-note">${esc(n.okNote || "Achou!")}</p>` : ""}`;
     foot = SY.found ? cont("Continuar", "ok") : "";
   } else if (n.pay) {
     const fb = SY.payFb;
-    box = syLine(SY.who || "rosie", `That's ${["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"][n.pay]} coins.`, "") +
+    box = syLine(SY.who || "rosie", `That's ${NUMW[n.pay]} coins.`, "") +
       `<p class="vn-q">Toque nas moedas para colocar no balcão</p>
       <div class="purse">${Array.from({ length: SY.purse }, (_, k) => `<button class="coin ${k < SY.hand ? "on" : ""}" data-act="syCoin" data-i="${k}" aria-label="Moeda ${k + 1}" ${fb && fb.ok ? "disabled" : ""}>${I("gem")}</button>`).join("")}</div>
       <p class="hand">No balcão: <b>${SY.hand}</b></p>
@@ -2049,7 +2074,7 @@ function renderStory() {
   $("#lesson").innerHTML = `<div class="l-top"><button class="x" data-act="syQuit" aria-label="Sair da história">${I("x")}</button><div class="bar"><i style="width:${SY.i / N * 100}%"></i></div>
       <span class="purse-n" title="Moedas na história">${I("gem")}${SY.purse}</span><button class="bag-btn" data-act="syBag" aria-label="Mochila">${I("bag")}<b>${bagN}</b></button></div>
     <div class="l-body"><div class="l-in vn">
-      <div class="stage bg-${SY.scene}"><span class="stage-label">${esc(SY.label)}</span>${SY.who && !n.nar ? syActor(SY.who) : ""}<div class="bracelet ${SY.glow ? "glow" : ""}" title="Brilhos da pulseira: ${SY.shards}">${I("zig")}<b>${SY.shards}</b></div></div>
+      <div class="stage bg-${SY.scene}">${ART && ART.scene(SY.scene) ? `<img class="scene-px" src="${ART.scene(SY.scene)}" alt="">` : ""}<span class="stage-label">${esc(SY.label)}</span>${SY.who && !n.nar ? syActor(SY.who) : ""}<div class="bracelet ${SY.glow ? "glow" : ""}" title="Brilhos da pulseira: ${SY.shards}">${I("zig")}<b>${SY.shards}</b></div></div>
       <div class="vn-box">${box}</div>
     </div></div>
     <div class="l-foot"><div class="l-foot-in vn-foot">${foot}</div></div>`;
@@ -2119,7 +2144,8 @@ function viewStory() {
     <button class="card bag-card" data-act="syBag"><span class="talk-ic">${I("bag")}</span><span class="grow"><b>Mochila</b><small>${bag ? `${bag} ${bag === 1 ? "item" : "itens"} com o nome em inglês` : "Os itens que você pegar aparecem aqui"}</small></span>${I("right")}</button>
     ${st.arcs.map((a, ai) => {
       const chs = st.chapters.filter(c => c.arc === ai);
-      const body = chs.length ? chs.map(c => { const r = (S.story || {})[c.id];
+      const body = chs.length ? chs.map(c => { const r = (S.story || {})[c.id], k = st.chapters.indexOf(c), lock = k > 0 && !(S.story || {})[st.chapters[k - 1].id];
+        if (lock) return `<div class="talk-row locked-row"><span class="talk-ic">${I("lock")}</span><span class="grow"><b>${esc(c.t)} <span class="muted">· ${esc(c.tPt)}</span></b><small>Termine o capítulo ${c.n - 1} para abrir.</small></span></div>`;
         return `<button class="talk-row" data-act="syStart" data-id="${c.id}"><span class="talk-ic">${c.n}</span><span class="grow"><b>${esc(c.t)} <span class="muted">· ${esc(c.tPt)}</span></b><small>${esc(c.blurb)}</small></span>
           <span class="mini-stars" title="${r ? `Melhor: ${r.stars} de 3 estrelas` : "Ainda não jogado"}">${[1, 2, 3].map(i => `<i class="${r && i <= r.stars ? "on" : ""}">${I("star")}</i>`).join("")}</span></button>`; }).join("")
         + (ai === 0 ? `<p class="muted soon">Próximos capítulos do arco em breve.</p>` : "")
@@ -2361,7 +2387,7 @@ const A = {
   },
   syCoin: d => { const k = +d.i; SY.hand = k < SY.hand ? k : k + 1; SY.payFb = null; if (S.sound) tone(880, 0, .06, "sine", .06); renderStory(); },
   syPay: () => {
-    const n = syNode(), h = SY.hand, words = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"];
+    const n = syNode(), h = SY.hand, words = NUMW;
     if (h === n.pay) { syCoins(-h); SY.hand = 0; SY.xp += 10; sfx("ok"); SY.payFb = { ok: true, react: "Perfect, thanks!" }; }
     else if (h > n.pay) { syCoins(-h); SY.hand = 0; SY.mistakes++; SY.payFb = { over: true, react: `Oh, ${words[h]} coins? Thanks for the tip!`, tip: `Você deu ${h} moedas (${words[h]}), mas eram só ${n.pay} (${words[n.pay]}). A Rosie ficou com o troco. ${SY.st.tips.numbers}` }; }
     else { SY.hand = 0; SY.mistakes++; SY.payFb = { react: `Hmm, that's only ${words[h]}. I said ${words[n.pay]}.`, tip: `Ela pediu ${words[n.pay]} = ${n.pay}. ${SY.st.tips.numbers}` }; }
@@ -2543,6 +2569,28 @@ document.addEventListener("keydown", e => {
     if (e.key === "Backspace" && it.picked.length) { it.picked.pop(); renderLesson(); }
   }
 });
+
+// ---------- install as an app ----------
+// Android/PC browsers offer an install prompt; on iPhone it's done by hand from Safari's share menu.
+let installEvt = null;
+const standalone = () => matchMedia("(display-mode: standalone)").matches || navigator.standalone === true;
+const isIOS = () => /iphone|ipad|ipod/i.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+window.addEventListener("beforeinstallprompt", e => { e.preventDefault(); installEvt = e; if (S.view === "profile" && !LS && !TK && !SY) render(); });
+window.addEventListener("appinstalled", () => { installEvt = null; toast("Xibolete instalado! Ele já está na sua tela inicial.", "star"); if (S.view === "profile") render(); });
+function installRow() {
+  const how = standalone() ? "Você já está usando o app instalado."
+    : installEvt ? "Coloque o Xibolete na tela inicial e abra como um app, até sem internet."
+    : isIOS() ? "No iPhone, abra este site no Safari, toque em Compartilhar (o quadrado com a seta para cima) e depois em “Adicionar à Tela de Início”."
+    : "No Chrome ou no Edge, abra o menu do navegador e escolha “Instalar app” ou “Adicionar à tela inicial”.";
+  return `<div class="set-row"><div><b>Instalar o app</b><p>${how}</p></div>${installEvt && !standalone() ? `<button class="btn small" data-act="install">Instalar</button>` : standalone() ? `<span class="chip">${I("check")}Instalado</span>` : ""}</div>`;
+}
+A.install = async () => { if (!installEvt) return; installEvt.prompt(); try { await installEvt.userChoice; } catch {} installEvt = null; render(); };
+if ("serviceWorker" in navigator && location.protocol !== "file:") navigator.serviceWorker.register("sw.js").catch(() => {});
+// one gentle hint on phones that haven't installed it yet
+if (S.onboarded && !standalone() && !S.installHint && matchMedia("(max-width:760px)").matches) {
+  S.installHint = true; save();
+  setTimeout(() => toast(`Dica: dá para instalar o Xibolete como app no celular. Veja como em <b>Perfil › Instalar o app</b>.`, "star"), 4000);
+}
 
 // ---------- boot ----------
 checkStreak();

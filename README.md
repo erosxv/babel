@@ -21,7 +21,15 @@ Um RPG no estilo visual novel, em 4 arcos que acompanham os degraus do zigurate:
 - **Erros têm consequência:** o personagem estranha o que você disse, um balão explica a regra em português, e o erro pode custar moedas ou levar a um caminho mais longo. Falar bem e com educação rende desconto e recompensas.
 - **A pulseira brilha** quando você fala com boa pronúncia.
 - As frases de cada capítulo podem ir direto para o caderno.
-- A história fica em `historia.js`. Pronto: Arco 1, Capítulo 1 ("Wake Up").
+- Cada personagem e cenário tem pixel art própria, desenhada em `arte.js`.
+- A história fica em `historia.js`. Prontos: Arco 1, Capítulos 1 a 3 ("Wake Up", "The Market", "The Guild").
+
+## Instalar como app
+
+O Xibolete pode ser instalado como app e abre até sem internet.
+
+- **Android e PC (Chrome ou Edge):** Perfil › Instalar o app, ou menu do navegador › Instalar app.
+- **iPhone:** abra o site no Safari, toque em Compartilhar e em "Adicionar à Tela de Início".
 
 ## Conversas
 
@@ -66,3 +74,5 @@ Seu progresso fica salvo no `localStorage` do navegador. O Xibolete não tem ser
 ## Adicionar conteúdo
 
 Todo o vocabulário está em `data.js`. Os sons de cada idioma ficam em `BABEL_SOUNDS`, no fim do mesmo arquivo. Para incluir uma unidade, palavras, sons ou um idioma novo, siga o formato descrito nos comentários do arquivo.
+
+Para mudar textos, histórias e personagens, veja o [guia de edição](COMO-EDITAR.md).
