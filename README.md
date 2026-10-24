@@ -10,11 +10,20 @@ Aprenda idiomas jogando e falando em voz alta. É um jogo no navegador, sem inst
 - **Vidas:** cada erro numa lição custa 1 vida. Uma vida volta a cada 30 minutos, e um treino completo devolve 1. Exercícios de fala e de ouvido nunca custam vida.
 - **Sequência de dias, meta diária e missões do dia.** Uma das missões é sempre de fala.
 - **Moedas e loja:** recarga de vidas, protetor de sequência e XP em dobro.
-- **25 conquistas.**
+- **27 conquistas.**
 - **Treino com repetição espaçada:** as palavras que você mais erra voltam com mais frequência.
+
+## Conversas
+
+Situações reais do dia a dia (pedir um café, fazer check-in, pedir comida…). O personagem fala, e você responde em voz alta. Valem várias respostas, do jeito que se fala na rua: "Can I get a coffee?" vale tanto quanto "I'd like a coffee". Quando você usa a forma mais formal, o jogo mostra a versão do dia a dia. Se travar, peça uma dica ou veja opções. Conversa não gasta vidas.
+
+- **Repetir colado:** no fim da conversa, você ouve cada fala e repete logo em seguida, imitando o ritmo.
+- **Grave e compare:** grava sua voz e toca logo depois da voz nativa, para você comparar de ouvido.
+- Por enquanto há 10 conversas A1 em inglês americano, em `conversas.js`. Os outros idiomas e os níveis A2 a B2 vêm a seguir.
 
 ## Pronúncia
 
+- **Ditado:** você ouve uma palavra ou frase e escreve o que escutou.
 - **Toda lição tem fala:** o jogo mostra uma palavra ou frase, você fala, e ele dá uma nota de 0 a 100%, marcando em verde, amarelo ou vermelho cada palavra que entendeu.
 - **Treino de ouvido:** pares de palavras que só mudam num som (ship × sheep, tu × tout, был × бил). Você ouve uma delas e escolhe qual foi.
 - **Prova de fala:** fecha cada unidade. Ela começa com o som em foco da unidade e depois pede para você falar as palavras e frases que aprendeu.

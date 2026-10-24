@@ -387,6 +387,49 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .toast svg{width:24px;height:24px;flex:none}
 #confetti{position:fixed;inset:0;pointer-events:none;z-index:90;width:100%;height:100%}
 
+/* conversations */
+.talk-row{display:flex;align-items:center;gap:12px;width:100%;border:0;border-top:2px solid var(--line);background:none;padding:12px 4px;text-align:left;border-radius:0}
+.talk-row:hover{background:var(--surface-2)}
+.talk-row b{display:block;font-size:17px}.talk-row small{display:block;color:var(--muted);font-weight:700}
+.talk-row .grow{flex:1;min-width:0}
+.talk-ic{width:42px;height:42px;border-radius:12px;background:var(--lang);color:#fff;display:grid;place-items:center;flex:none;box-shadow:inset 0 -4px 0 rgba(0,0,0,.15)}
+.mini-stars{display:flex;gap:2px;color:var(--line-2)}.mini-stars i{display:grid}.mini-stars svg{width:18px;height:18px}.mini-stars .on{color:var(--gold)}
+.lvl-head{display:flex;align-items:center;gap:10px;margin-bottom:6px}.lvl-head h3{margin:0}
+.lvl-badge{background:var(--lang);color:#fff;font-family:var(--display);font-weight:600;border-radius:8px;padding:3px 8px;font-size:14px}
+.lvl-block.locked .lvl-badge{background:var(--line-2)}
+.soon{margin:6px 0 0;font-weight:700}
+.l-in.talk{gap:14px}
+.scene h2{margin:4px 0 0;font-family:var(--display);font-weight:600}.scene p{margin:2px 0 0;font-weight:700}
+.chat{display:flex;flex-direction:column;gap:10px}
+.bub{max-width:85%;border-radius:18px;padding:10px 14px;font-weight:700;animation:slidein .3s both}
+.bub p{margin:0;font-size:19px;line-height:1.3}
+.bub .who{font-size:12px;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:2px}
+.bub.npc{align-self:flex-start;background:var(--surface);border:2px solid var(--line);border-bottom-left-radius:6px}
+.bub.me{align-self:flex-end;background:var(--lang);color:#fff;border-bottom-right-radius:6px;display:grid;gap:6px;justify-items:end}
+.bub.me small{font-weight:700;opacity:.9;font-size:13px}
+.bub.me .chip{padding:2px 8px;font-size:13px;display:inline-flex;gap:4px;align-items:center;color:var(--ink)}
+.bub.me .chip svg{width:14px;height:14px}
+.bub-acts{display:flex;align-items:center;gap:6px;margin-top:8px;flex-wrap:wrap}
+.bub-acts .say{width:34px;height:34px}
+.your-turn{display:grid;gap:10px}
+.your-turn p{margin:0;font-weight:700}
+.miss{color:var(--bad-ink);background:var(--bad-soft);border-radius:12px;padding:10px 12px}
+.hint{background:var(--surface-2);border-radius:12px;padding:10px 12px}
+.talk-opts{display:grid;gap:8px}.talk-opts .opt{font-size:16px;min-height:52px;padding:10px 14px}
+.opt.wrong{border-color:var(--bad);color:var(--bad-ink);background:var(--bad-soft);animation:shake .35s}
+.talk-foot{justify-content:center;flex-wrap:nowrap}
+.talk-foot .mic{width:84px;height:78px;border-radius:26px}
+.talk-help{display:flex;flex-direction:column;gap:4px;position:absolute;left:max(16px,env(safe-area-inset-left,0px))}
+.talk-foot{position:relative;min-height:84px}
+.talk-foot .mic-label{position:absolute;right:max(16px,env(safe-area-inset-right,0px))}
+.stars{display:flex;justify-content:center;gap:10px;color:var(--line-2)}
+.stars svg{width:54px;height:54px}.stars .on{color:var(--gold);animation:pop .4s both}
+.stars .on:nth-child(2){animation-delay:.15s}.stars .on:nth-child(3){animation-delay:.3s}
+.who-s{display:block;font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;font-weight:800}
+.rec-box{display:flex;flex-wrap:wrap;gap:8px;align-items:center;border:2px dashed var(--line-2);border-radius:16px;padding:12px}
+.rec-box p{flex-basis:100%;margin:0;font-size:14px}
+@media (max-width:760px){ .nav button[data-v="shop"]{display:none} .talk-foot .mic-label{display:none} }
+
 /* responsive */
 @media (max-width:1100px){
   .shell{grid-template-columns:200px minmax(0,1fr)}
@@ -440,6 +483,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 <canvas id="confetti" aria-hidden="true"></canvas>
 
 <script src="data.js"></script>
+<script src="conversas.js"></script>
 <script>
 (() => {
 "use strict";
@@ -479,6 +523,7 @@ const P = {
   medal: '<path fill="currentColor" opacity=".75" d="M7 2h4l2 5-3 2zM17 2h-4l-2 5 3 2z"/><circle cx="12" cy="15" r="6.5" fill="currentColor"/><path fill="#fff" opacity=".85" d="M12 11.3l1.1 2.3 2.5.3-1.8 1.7.5 2.5-2.3-1.2-2.3 1.2.5-2.5-1.8-1.7 2.5-.3z"/>',
   zig: '<path fill="currentColor" d="M9 3h6v4H9z"/><path fill="currentColor" opacity=".88" d="M7 7.6h10v3.9H7z"/><path fill="currentColor" opacity=".76" d="M5 12.1h14v3.9H5z"/><path fill="currentColor" opacity=".64" d="M3 16.6h18V21H3z"/><path fill="#fff" opacity=".55" d="M11 7.6h2V21h-2z"/>',
   mic: '<rect x="8.3" y="2.5" width="7.4" height="12" rx="3.7" fill="currentColor"/><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M5.3 11.2a6.7 6.7 0 0 0 13.4 0M12 18v3.2M8.6 21.3h6.8"/>',
+  chat: '<path fill="currentColor" d="M4 4.5h11a2 2 0 0 1 2 2V12a2 2 0 0 1-2 2H9l-4 3.3V14H4a2 2 0 0 1-2-2V6.5a2 2 0 0 1 2-2z"/><path fill="currentColor" opacity=".6" d="M19 8.5h1a2 2 0 0 1 2 2V16a2 2 0 0 1-2 2h-1v3l-3.6-3H11a2 2 0 0 1-1.8-1.1H15a4 4 0 0 0 4-4z"/>',
   slow: '<path fill="currentColor" d="M4 15.5c0-3.6 3-6.5 6.6-6.5 3.2 0 5.8 2.2 6.4 5.2h1.4a1.6 1.6 0 1 1 0 3.3H5.6A1.6 1.6 0 0 1 4 15.5z"/><circle cx="18.5" cy="9" r="2.3" fill="currentColor"/>',
 };
 const I = (n, cls = "i") => `<svg class="${cls}" viewBox="0 0 24 24" aria-hidden="true">${P[n]}</svg>`;
@@ -488,8 +533,8 @@ const KEY = "babel-save-v1"; // name from before the app was renamed; kept so sa
 const fresh = () => ({
   v: 1, onboarded: false, lang: "en", view: "learn", xp: 0, coins: 50, hearts: 5, heartsAt: Date.now(),
   streak: 0, bestStreak: 0, lastDay: null, freezes: 0, goal: 30, day: {}, boostUntil: 0,
-  sound: true, translit: true, progress: {}, chests: {}, srs: {}, ach: {}, quests: {}, speech: {}, noMicUntil: 0,
-  stats: { lessons: 0, perfect: 0, maxCombo: 0, reviews: 0, langs: {}, correct: 0, answered: 0, owl: false, early: false, chests: 0, spoken: 0, spokenGreat: 0, speechTests: 0 },
+  sound: true, translit: true, progress: {}, chests: {}, srs: {}, ach: {}, quests: {}, speech: {}, talks: {}, noMicUntil: 0,
+  stats: { lessons: 0, perfect: 0, maxCombo: 0, reviews: 0, langs: {}, correct: 0, answered: 0, owl: false, early: false, chests: 0, spoken: 0, spokenGreat: 0, speechTests: 0, talks: 0 },
 });
 let S = fresh();
 try {
@@ -651,6 +696,8 @@ const ACH = [
   { id: "voice1", name: "Primeira palavra", desc: "Pronuncie bem pela primeira vez", p: () => [S.stats.spoken, 1] },
   { id: "voice50", name: "Boca solta", desc: "Pronuncie bem 50 vezes", p: () => [S.stats.spoken, 50] },
   { id: "voice90", name: "Sotaque afiado", desc: "Tire 90% ou mais em 20 pronúncias", p: () => [S.stats.spokenGreat, 20] },
+  { id: "talk1", name: "Primeira conversa", desc: "Complete uma conversa falando", p: () => [S.stats.talks, 1] },
+  { id: "talk10", name: "Papo solto", desc: "Complete 10 conversas", p: () => [S.stats.talks, 10] },
   { id: "speechTest", name: "Prova de fala", desc: "Termine a prova de fala de uma unidade", p: () => [S.stats.speechTests, 1] },
 ];
 const ACH_REWARD = 25;
@@ -695,21 +742,31 @@ const sfx = n => { if (S.sound) SFX[n](); };
 
 let voices = [];
 function loadVoices() { try { voices = speechSynthesis.getVoices() || []; } catch { voices = []; } }
-if ("speechSynthesis" in window) { loadVoices(); speechSynthesis.onvoiceschanged = () => { loadVoices(); if (S.view === "train") render(); }; }
+if ("speechSynthesis" in window) { loadVoices(); speechSynthesis.onvoiceschanged = () => { loadVoices(); if (!LS && !TK && S.view === "train") render(); }; }
 function voiceFor(lang) {
   const code = LANGS[lang].voice.toLowerCase(), base = code.slice(0, 2);
   const norm = v => v.lang.replace("_", "-").toLowerCase();
   return voices.find(v => norm(v) === code && /google|natural|online/i.test(v.name)) || voices.find(v => norm(v) === code) || voices.find(v => norm(v).startsWith(base));
 }
-const canSpeak = lang => !!voiceFor(lang);
+// The play button always shows: voices often load a moment after the page, and some systems
+// can still speak a language by its code even when it is not listed.
+const canSpeak = () => "speechSynthesis" in window;
+let noVoiceWarned = {};
 function speak(text, lang, slow) {
-  const v = voiceFor(lang); if (!v) return;
+  if (!canSpeak()) return;
+  if (!voices.length) loadVoices();
+  const v = voiceFor(lang);
   try {
     speechSynthesis.cancel();
     const u = new SpeechSynthesisUtterance(first(text));
-    u.voice = v; u.lang = v.lang; u.rate = slow ? .55 : .9;
+    if (v) { u.voice = v; u.lang = v.lang; } else u.lang = LANGS[lang].voice;
+    u.rate = slow ? .55 : .9;
     speechSynthesis.speak(u);
   } catch {}
+  if (!v && voices.length && !noVoiceWarned[lang]) {
+    noVoiceWarned[lang] = true;
+    toast(`Seu aparelho não tem voz em ${esc(LANGS[lang].learning)}. No Windows: Configurações › Hora e idioma › Fala › Adicionar vozes. No Chrome ou Edge, as vozes já vêm prontas.`, "speaker");
+  }
 }
 
 // ---------- pronunciation: speech recognition + scoring ----------
@@ -779,13 +836,15 @@ function scoreSpeech(text, heard, lang) {
       const hw = spWords(h, lang);
       let j = 0;
       const marks = tw.map(w => {
+        if (w === "*") { if (j < hw.length) { j++; return 1; } return 0; }  // wildcard: any one word (a name)
         let bi = -1, bs = 0;
         for (let k = j; k < hw.length; k++) { const s = sim(w, hw[k]); if (s > bs) { bs = s; bi = k; } if (s === 1) break; }
         if (bs >= .75) j = bi + 1;
         return bs;
       });
       // a word that clearly wasn't recognized counts half, so one wrong word shows in the score
-      const words = marks.reduce((a, m) => a + (m >= .75 ? m : m / 2), 0) / tw.length, whole = sim(tw.join(" "), hw.join(" "));
+      const words = marks.reduce((a, m) => a + (m >= .75 ? m : m / 2), 0) / tw.length;
+      const whole = tw.includes("*") ? words : sim(tw.join(" "), hw.join(" "));
       const score = Math.round(100 * (.7 * words + .3 * whole));
       if (!best || score > best.score) best = { score, heard: h, target, marks };
     }
@@ -860,7 +919,7 @@ function renderChrome() {
     <button class="stat heart" data-act="heartsInfo" title="Vidas">${I("heart")}${S.hearts}</button>
     <button class="stat xp" data-act="go" data-v="profile" title="Nível ${lv.L}">${I("bolt")}${lv.L}${boosted() ? '<span class="boost-tag">2x</span>' : ""}</button>`;
   const due = dueWords(S.lang).length;
-  const navs = [["learn", "home", "Aprender"], ["speak", "mic", "Pronúncia"], ["train", "target", "Treino"], ["ach", "trophy", "Conquistas"], ["shop", "bag", "Loja"], ["profile", "user", "Perfil"]];
+  const navs = [["learn", "home", "Aprender"], ["talk", "chat", "Conversas"], ["speak", "mic", "Pronúncia"], ["train", "target", "Treino"], ["ach", "trophy", "Conquistas"], ["shop", "bag", "Loja"], ["profile", "user", "Perfil"]];
   $("#nav").innerHTML = navs.map(([v, ic, label]) =>
     `<button data-act="go" data-v="${v}" ${S.view === v ? 'aria-current="page"' : ""}>${I(ic)}<span>${label}</span>${v === "train" && due >= 4 ? '<i class="dot" title="Palavras para revisar"></i>' : ""}</button>`).join("");
   $("#side").innerHTML = sideHtml();
@@ -993,7 +1052,7 @@ function viewProfile() {
       <div class="set-row"><div><b>Meta diária</b><p>Quanto XP você quer ganhar por dia.</p></div><div class="chips">${[[10, "Leve"], [30, "Regular"], [50, "Sério"], [100, "Intenso"]].map(([g, n]) => `<button class="chip" data-act="goal" data-g="${g}" aria-pressed="${S.goal === g}">${n} · ${g} XP</button>`).join("")}</div></div>
       <div class="set-row"><div><b>Efeitos sonoros</b><p>Sons de acerto, erro e recompensas.</p></div><button class="switch" role="switch" aria-checked="${S.sound}" data-act="toggle" data-k="sound" aria-label="Efeitos sonoros"></button></div>
       <div class="set-row"><div><b>Transliteração do russo</b><p>Mostra como ler as palavras em cirílico.</p></div><button class="switch" role="switch" aria-checked="${S.translit}" data-act="toggle" data-k="translit" aria-label="Transliteração"></button></div>
-      <div class="set-row"><div><b>Vozes</b><p>${LKEYS.map(k => `${LANGS[k].name}: ${canSpeak(k) ? "disponível" : "sem voz neste aparelho"}`).join(" · ")}</p></div></div>
+      <div class="set-row"><div><b>Vozes</b><p>${LKEYS.map(k => `${LANGS[k].name}: ${voiceFor(k) ? "disponível" : "sem voz neste aparelho"}`).join(" · ")}</p></div></div>
       <div class="set-row"><div><b>Ouvir sua voz</b><p>${canListen() ? "Disponível. Na primeira vez, o navegador pede permissão para usar o microfone." : "Indisponível neste navegador. Os exercícios de fala usam autoavaliação."}</p></div></div>
       <div class="set-row"><div><b>Apagar progresso</b><p>Zera XP, moedas, lições e conquistas de todos os idiomas.</p></div><button class="btn small bad" data-act="reset">Apagar tudo</button></div>
     </div></div>`;
@@ -1002,7 +1061,7 @@ function render() {
   if (!S.onboarded) { renderOnboarding(); return; }
   $("#app").querySelector(".top").hidden = false; $("#shell").hidden = false; $("#onb").hidden = true;
   regen(); renderChrome();
-  const v = { learn: viewLearn, speak: viewSpeak, train: viewTrain, ach: viewAch, shop: viewShop, profile: viewProfile }[S.view] || viewLearn;
+  const v = { learn: viewLearn, talk: viewTalk, speak: viewSpeak, train: viewTrain, ach: viewAch, shop: viewShop, profile: viewProfile }[S.view] || viewLearn;
   $("#view").innerHTML = v();
 }
 
@@ -1060,6 +1119,11 @@ function makeQueue(lang, words, sents, o) {
   const wq = shuffle(words).sort((a, b) => srs(lang, a).s - srs(lang, b).s);
   let i = 0;
   while (graded() < o.size) rest.push({ k: pick(kinds), w: wq[i++ % wq.length] });
+  // dictation: hear it, write it (needs a voice; skipped for Cyrillic, which most keyboards can't type)
+  if (voice && !o.alpha && lang !== "ru") {
+    const src = sents.length && Math.random() < .5 ? { s: pick(sents) } : { w: pick(words) };
+    rest.splice(rest.length - 1, 1, Object.assign({ k: "dictation" }, src));
+  }
   return q.concat(shuffle(rest));
 }
 // A speaking item: text may hold "|" variants; tr = transliteration; self = no recognizer, self-assessed.
@@ -1122,7 +1186,7 @@ const ungraded = it => it.k === "intro" || it.k === "tip";
 const curItem = () => LS.queue[LS.pos];
 function autoPlay(it, delay) {
   if (!S.sound || !it) return;
-  const t = ["listen", "intro", "choose"].includes(it.k) ? it.w[0] : it.k === "minimal" ? it.p[it.ans] : it.k === "speak" ? it.text : null;
+  const t = ["listen", "intro", "choose"].includes(it.k) ? it.w[0] : it.k === "minimal" ? it.p[it.ans] : it.k === "speak" ? it.text : it.k === "dictation" ? (it.s ? it.s[0] : it.w[0]) : null;
   if (t) setTimeout(() => { if (LS && curItem() === it && !it.listening) speak(t, LS.lang); }, delay);
 }
 function prepare(it) {
@@ -1217,6 +1281,14 @@ function renderLesson() {
         <div class="listen-row">${speakBtn(it.w[0], lang, "speak huge")}</div>
         <div class="opts">${it.opts.map((w, i) => optBtn(i, first(w[0]), LS.state !== "answer" ? ptFirst(w[1]) : "")).join("")}</div>`;
       break;
+    case "dictation": {
+      const t = it.s ? it.s[0] : it.w[0];
+      body = `<div style="display:flex;align-items:center;gap:10px">${tag || `<span class="l-tag">${I("speaker")}Ditado</span>`}${combo}</div><h2 class="l-q">Escreva o que você ouvir</h2>
+        <div class="listen-row">${speakBtn(t, lang, "speak huge")}</div>
+        <label class="sr" for="typeIn">O que você ouviu</label>
+        <textarea id="typeIn" class="type-in" rows="2" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Escreva em ${esc(Ln.learning)}" ${LS.state !== "answer" ? "disabled" : ""}>${esc(it.typed || "")}</textarea>`;
+      break;
+    }
     case "type": {
       const ru = lang === "ru";
       body = `<div style="display:flex;align-items:center;gap:10px">${tag}${combo}</div><h2 class="l-q">${ru ? "Escreva em português" : `Escreva em ${esc(Ln.learning)}`}</h2>
@@ -1254,7 +1326,7 @@ function optClass(it, i) {
   return "";
 }
 function canCheck(it) {
-  if (it.k === "type") return !!(it.typed || "").trim();
+  if (it.k === "type" || it.k === "dictation") return !!(it.typed || "").trim();
   if (it.k === "build" || it.k === "buildRev") return it.picked.length > 0;
   return LS.sel !== null;
 }
@@ -1297,6 +1369,15 @@ function check(skip) {
       speakText = it.w[0];
       break;
     }
+    case "dictation": {
+      const t = it.s ? it.s[0] : it.w[0], v = spWords(it.typed || "", lang).join(" ");
+      const best = Math.max(...t.split("|").map(a => sim(spWords(a, lang).join(" "), v)));
+      answer = first(t);
+      if (!skip && best === 1) ok = true;
+      else if (!skip && best >= .85) { ok = true; note = `Quase! Confira a escrita: ${answer}`; }
+      if (it.s) note = note || it.s[1];
+      break;
+    }
     case "build": case "buildRev": {
       const target = it.k === "build" ? it.s[0] : it.s[1];
       const got = it.picked.map(i => it.bank[i].t).join(" ");
@@ -1321,7 +1402,7 @@ function check(skip) {
     if (it.w) srsHit(lang, it.w, false);
     const copy = Object.assign({}, it, { retry: true, ready: false, typed: "", sel: null, hint: false });
     LS.queue.push(copy);
-    LS.state = "bad"; LS.fb = { answer, note: it.k === "build" || it.k === "buildRev" ? (it.k === "build" ? it.s[1] : it.s[0]) : it.k === "minimal" ? `Ouça de novo os dois: ${it.p[0]} × ${it.p[1]}. Essa dupla volta daqui a pouco.` : "" };
+    LS.state = "bad"; LS.fb = { answer, note: it.k === "build" || it.k === "buildRev" ? (it.k === "build" ? it.s[1] : it.s[0]) : it.k === "minimal" ? `Ouça de novo os dois: ${it.p[0]} × ${it.p[1]}. Essa dupla volta daqui a pouco.` : it.k === "dictation" && it.s ? it.s[1] : "" };
     sfx("bad");
   }
   save();
@@ -1482,6 +1563,221 @@ function outOfHeartsModal() {
     <div class="acts"><button class="btn" data-act="review" ${seenWords(S.lang).length >= 4 ? "" : "disabled"}>${I("target")}Treinar</button><button class="btn ghost" data-act="buyRefill" ${S.coins >= 60 ? "" : "disabled"}>${I("gem")}60 · Recarregar</button></div>`);
 }
 
+// ---------- conversations ----------
+// A guided dialogue: the character speaks, the learner answers aloud. An answer counts when it is close
+// to one of the accepted replies; the same score doubles as the pronunciation grade.
+const TALKS = window.XIB_TALKS || {};
+const talksOf = lang => TALKS[lang] || [];
+const LEVELS = ["A1", "A2", "B1", "B2"];
+const TALK_OK = 70;
+const talkRec = (lang, id) => (S.talks ||= {})[lang + ":" + id];
+const starsOf = avg => avg >= 90 ? 3 : avg >= 80 ? 2 : 1;
+let TK = null;
+function startTalk(id) {
+  const lang = S.lang, talk = talksOf(lang).find(t => t.id === id); if (!talk) return;
+  closeModal();
+  TK = { lang, talk, i: 0, log: [], tries: 0, hint: false, opts: null, chosen: null, listening: false, err: "", fb: null, xp: 0, scores: [], mode: "talk", t0: Date.now() };
+  TK.log.push({ who: "npc", step: 0 });
+  document.body.classList.add("locked"); $("#lesson").hidden = false;
+  renderTalk();
+  setTimeout(() => sayNpc(), 350);
+}
+const tkStep = () => TK.talk.steps[TK.i];
+function sayNpc() { if (TK && TK.mode === "talk" && tkStep()) speak(tkStep().npc, TK.lang); }
+function talkOptions() {
+  const st = tkStep(), others = shuffle(talksOf(TK.lang).flatMap(t => t.steps.map(s => s.say)).filter(s => s !== st.say)).slice(0, 2);
+  return shuffle([st.say, ...others]);
+}
+function bubbleHtml(e) {
+  const st = TK.talk.steps[e.step];
+  if (e.who === "npc") return `<div class="bub npc"><div class="who">${esc(TK.talk.who)}</div><p>${esc(st.npc)}</p>
+    <div class="bub-acts"><button class="say" data-act="say" data-t="${esc(st.npc)}" aria-label="Ouvir de novo">${I("speaker")}</button><button class="say" data-act="saySlow" data-t="${esc(st.npc)}" aria-label="Ouvir devagar">${I("slow")}</button>
+    <button class="linkish" data-act="talkPt" data-s="${e.step}">${e.pt ? esc(st.pt) : "Traduzir"}</button></div></div>`;
+  const cls = e.score == null ? "" : e.score >= GREAT ? "g" : e.score >= PASS ? "m" : "b";
+  return `<div class="bub me"><p>${esc(e.text)}</p>${e.score != null ? `<span class="chip ${cls}">${I("mic")}${e.score}%</span>` : e.given ? `<span class="chip">resposta sugerida</span>` : ""}
+    ${e.note ? `<small>${esc(e.note)}</small>` : ""}</div>`;
+}
+function renderTalk() {
+  if (TK.mode === "end") return renderTalkEnd();
+  if (TK.mode === "shadow") return renderShadow();
+  const st = tkStep(), total = TK.talk.steps.length, self = !canListen();
+  const pct = TK.i / total * 100;
+  if (self && !TK.opts) TK.opts = talkOptions();
+  const optsHtml = TK.opts ? `<div class="talk-opts">${TK.opts.map((o, i) => `<button class="opt ${TK.wrong === i ? "wrong" : ""}" data-act="talkOpt" data-i="${i}" ${TK.fb ? "disabled" : ""}><span class="k">${i + 1}</span><span>${esc(o)}</span></button>`).join("")}</div>` : "";
+  const turn = TK.fb ? "" : `<div class="your-turn">
+    ${TK.err ? `<div class="mic-err">${esc(TK.err)}</div>` : ""}
+    ${TK.miss ? `<p class="miss">Não entendi direito${TK.miss.heard ? `: “${esc(TK.miss.heard)}”` : ""}. Tente de novo${TK.tries >= 2 ? " ou veja a dica" : ""}.</p>` : ""}
+    ${TK.hint ? `<p class="hint">Dica: <b>${esc(st.say)}</b> <span class="muted">· ${esc(st.sayPt)}</span></p>` : ""}
+    ${TK.chosen != null && !self ? `<p class="hint">Agora diga em voz alta: <b>${esc(TK.opts[TK.chosen])}</b></p>` : ""}
+    ${optsHtml}</div>`;
+  $("#lesson").innerHTML = `<div class="l-top"><button class="x" data-act="talkQuit" aria-label="Sair da conversa">${I("x")}</button><div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="${total}" aria-valuenow="${TK.i}"><i style="width:${pct}%"></i></div><span class="l-hearts inf" title="Conversa não gasta vidas">${I("chat")}</span></div>
+    <div class="l-body" id="talkBody"><div class="l-in talk"><div class="scene"><span class="l-tag">${I("chat")}${esc(TK.talk.lvl)} · Conversa</span><h2>${esc(TK.talk.t)}</h2><p class="muted">${esc(TK.talk.place)}</p></div>
+      <div class="chat">${TK.log.map(bubbleHtml).join("")}</div>${turn}</div></div>
+    <div class="l-foot ${TK.fb ? (TK.fb.ok ? "ok" : "soft") : ""}">${talkFoot(self)}</div>`;
+  const b = $("#talkBody"); b.scrollTop = b.scrollHeight;
+}
+function talkFoot(self) {
+  if (TK.fb) {
+    const f = TK.fb;
+    return `<div class="l-foot-in"><div class="fb"><span class="mark">${I(f.ok ? "check" : "mic")}</span><div><h3>${esc(f.title)}${f.gain ? `<span class="gain">+${f.gain} XP</span>` : ""}</h3>${f.note ? `<p>${esc(f.note)}</p>` : ""}</div></div><button class="btn ${f.ok ? "ok" : ""}" data-act="talkNext">Continuar</button></div>`;
+  }
+  if (self) return `<div class="l-foot-in"><div class="fb"><p class="muted">Escolha a resposta, ouça e repita em voz alta.</p></div></div>`;
+  return `<div class="l-foot-in talk-foot"><div class="talk-help"><button class="skip" data-act="talkHint" ${TK.hint ? "disabled" : ""}>Dica</button><button class="skip" data-act="talkOpts" ${TK.opts ? "disabled" : ""}>Ver opções</button></div>
+    <button class="mic ${TK.listening ? "on" : ""}" data-act="talkMic" aria-label="${TK.listening ? "Parar de ouvir" : "Responder falando"}">${I("mic")}</button>
+    <span class="mic-label">${TK.listening ? "Ouvindo…" : "Toque e responda"}</span></div>`;
+}
+function talkAnswer(heard) {
+  const st = tkStep(), lang = TK.lang;
+  const ok = scoreSpeech(st.ok.join("|"), heard, lang), fm = st.formal ? scoreSpeech(st.formal.join("|"), heard, lang) : { score: -1 };
+  const r = fm.score > ok.score ? fm : ok, formal = fm.score > ok.score;
+  if (r.score < TALK_OK) {
+    TK.tries++; TK.miss = { heard: r.heard || heard[0] || "" };
+    if (TK.tries >= 2) TK.hint = true;
+    if (TK.tries >= 3) { talkGive(); return; }
+    if (S.sound) tone(330, 0, .18, "triangle", .08);
+    renderTalk(); return;
+  }
+  const note = formal ? `Tá certo, mas no dia a dia o mais comum é: “${st.say}”` : st.tip || "";
+  TK.log.push({ who: "me", text: r.heard, score: r.score, note: formal ? note : "" });
+  const gain = 10 + (r.score >= 90 ? 5 : 0);
+  TK.xp += gain; TK.scores.push(r.score); countSpoken(r.score);
+  S.speech[speechKey(lang, st.say)] = Math.max(S.speech[speechKey(lang, st.say)] ?? 0, r.score);
+  TK.fb = { ok: true, title: r.score >= 90 ? "Falou como nativo!" : r.score >= GREAT ? "Mandou bem!" : "Deu pra entender!", gain, note: formal ? "" : st.tip || "" };
+  sfx("ok"); save(); renderTalk();
+}
+function talkGive() {
+  const st = tkStep();
+  TK.log.push({ who: "me", text: st.say, given: true });
+  TK.fb = { ok: false, title: "Sem problema, segue o papo", note: `Uma resposta natural seria: “${st.say}”, que quer dizer “${st.sayPt.replace(/[.!]$/, "")}”. Ela volta no Repetir colado.` };
+  save(); renderTalk();
+}
+function talkNext() {
+  TK.i++; TK.tries = 0; TK.hint = false; TK.opts = null; TK.chosen = null; TK.miss = null; TK.err = ""; TK.fb = null; TK.wrong = null;
+  if (TK.i >= TK.talk.steps.length) { finishTalk(); return; }
+  TK.log.push({ who: "npc", step: TK.i });
+  renderTalk(); setTimeout(sayNpc, 250);
+}
+function finishTalk() {
+  const lang = TK.lang, key = lang + ":" + TK.talk.id, prev = talkRec(lang, TK.talk.id);
+  const avg = TK.scores.length ? Math.round(TK.scores.reduce((a, b) => a + b, 0) / TK.scores.length) : null;
+  const lvBefore = lvl(S.xp).L, d = today();
+  const xpGot = addXp(TK.xp + 15), coins = 10;
+  S.coins += coins;
+  S.talks[key] = { best: Math.max(prev ? prev.best || 0 : 0, avg || 0), times: (prev ? prev.times : 0) + 1 };
+  S.stats.talks = (S.stats.talks || 0) + 1; d.lessons++;
+  S.stats.langs[lang] = (S.stats.langs[lang] || 0) + 1;
+  const hr = new Date().getHours(); if (hr >= 23) S.stats.owl = true; if (hr < 7) S.stats.early = true;
+  const streakUp = bumpStreak(), quests = claimQuests(), lvAfter = lvl(S.xp).L;
+  if (lvAfter > lvBefore) S.coins += 25 * (lvAfter - lvBefore);
+  const achs = checkAch();
+  save();
+  TK.mode = "end";
+  TK.end = { avg, xpGot, coins, streakUp, quests, achs, lvAfter, lvUp: lvAfter > lvBefore };
+  sfx(TK.end.lvUp ? "level" : "done"); confetti(120);
+  renderTalk();
+}
+function renderTalkEnd() {
+  const e = TK.end, secs = Math.round((Date.now() - TK.t0) / 1000);
+  const rewards = [`<div class="rw" style="color:var(--coin)">${I("gem")}<div>+${e.coins} moedas<small>por completar a conversa</small></div></div>`];
+  if (e.lvUp) rewards.push(`<div class="rw lvlup">${I("bolt")}<div>Nível ${e.lvAfter}: ${titleOf(e.lvAfter)}!<small>+25 moedas de bônus</small></div></div>`);
+  if (e.streakUp) rewards.push(`<div class="rw" style="color:var(--flame)">${I("flame")}<div>Sequência de ${S.streak} ${S.streak === 1 ? "dia" : "dias"}!<small>Volte amanhã para manter o fogo aceso</small></div></div>`);
+  for (const q of e.quests) rewards.push(`<div class="rw" style="color:var(--xp)">${I("target")}<div>Missão cumprida: ${esc(q.text)}<small>+${q.reward} moedas</small></div></div>`);
+  for (const a of e.achs) rewards.push(`<div class="rw" style="color:var(--gold-dark)">${I("medal")}<div>Conquista: ${esc(a.name)}<small>${esc(a.desc)} · +${ACH_REWARD} moedas</small></div></div>`);
+  const stars = e.avg == null ? 0 : starsOf(e.avg);
+  $("#lesson").innerHTML = `<div class="l-body"><div class="end">
+    <div class="stars">${[1, 2, 3].map(i => `<span class="${i <= stars ? "on" : ""}">${I("star")}</span>`).join("")}</div>
+    <h1>Conversa concluída!</h1><p class="sub">${esc(TK.talk.t)} · ${e.avg == null ? "Agora repita as falas em voz alta para fixar." : e.avg >= GREAT ? "Você falou com muita clareza." : "Repita as falas para deixar a pronúncia mais redonda."}</p>
+    <div class="end-stats">
+      <div class="es" style="--c:var(--xp)"><span>XP ganho</span><b>${I("bolt")}${e.xpGot}</b></div>
+      <div class="es" style="--c:var(--lang)"><span>Pronúncia</span><b>${I("mic")}${e.avg == null ? "–" : e.avg + "%"}</b></div>
+      <div class="es" style="--c:var(--coin)"><span>Tempo</span><b>${Math.floor(secs / 60)}:${pad(secs % 60)}</b></div>
+    </div>
+    <div class="rewards">${rewards.join("")}</div>
+  </div></div><div class="l-foot"><div class="l-foot-in"><button class="btn ghost" data-act="shadowGo">${I("mic")}Repetir colado</button><button class="btn" data-act="talkClose">Concluir</button></div></div>`;
+}
+
+// ---------- shadowing + record & compare ----------
+// Every line of the conversation, one by one: hear the native voice, then say it right after.
+// "Gravar e comparar" records your voice and plays it right after the native one.
+function startShadow() {
+  const lines = TK.talk.steps.flatMap(s => [{ t: s.npc, pt: s.pt, who: TK.talk.who }, { t: s.say, pt: s.sayPt, who: "Você" }]);
+  Object.assign(TK, { mode: "shadow", lines, si: 0, sres: null, listening: false, err: "", clip: null, recState: "" });
+  renderTalk(); setTimeout(() => speak(lines[0].t, TK.lang), 300);
+}
+function renderShadow() {
+  const ln = TK.lines[TK.si], n = TK.lines.length, r = TK.sres, canRec = !!(navigator.mediaDevices && window.MediaRecorder);
+  $("#lesson").innerHTML = `<div class="l-top"><button class="x" data-act="talkClose" aria-label="Sair">${I("x")}</button><div class="bar"><i style="width:${TK.si / n * 100}%"></i></div><span class="l-hearts inf">${I("mic")}</span></div>
+    <div class="l-body"><div class="l-in"><span class="l-tag">${I("mic")}Repetir colado · ${TK.si + 1} de ${n}</span>
+      <h2 class="l-q">Ouça e repita logo em seguida, imitando o ritmo</h2>
+      <div class="prompt"><div class="sent"><small class="who-s">${esc(ln.who)}</small>${esc(ln.t)}</div>${speakBtn(ln.t, TK.lang)}</div>
+      <p class="muted" style="margin:-8px 0 0;font-weight:700">${esc(ln.pt)}</p>
+      ${TK.err ? `<div class="mic-err">${esc(TK.err)}</div>` : ""}
+      ${canListen() ? `<div class="mic-wrap"><button class="mic ${TK.listening ? "on" : ""}" data-act="shadowMic" aria-label="Repetir">${I("mic")}</button><span class="mic-label">${TK.listening ? "Ouvindo…" : r ? "Toque para repetir de novo" : "Toque e repita"}</span>${r ? resultHtml(r) : ""}</div>` : `<div class="tipbox">Ouça e repita em voz alta, colado na voz do nativo.</div>`}
+      ${canRec ? `<div class="rec-box"><button class="btn small ghost" data-act="recGo" ${TK.recState === "rec" ? "disabled" : ""}>${I("mic")}${TK.recState === "rec" ? "Gravando…" : "Gravar e comparar"}</button>
+        ${TK.clip ? `<button class="btn small ghost" data-act="say" data-t="${esc(ln.t)}">${I("speaker")}Nativo</button><button class="btn small ghost" data-act="recPlay">${I("play")}Você</button>` : ""}
+        <p class="muted">Grave sua voz e ouça logo depois do nativo. Comparar com o ouvido é um ótimo jeito de pegar o sotaque.</p></div>` : ""}
+    </div></div>
+    <div class="l-foot"><div class="l-foot-in"><button class="skip" data-act="shadowPrev" ${TK.si ? "" : "disabled"}>Voltar</button><button class="btn" data-act="shadowNext">${TK.si + 1 >= n ? "Terminar" : "Próxima"}</button></div></div>`;
+}
+let recStream = null;
+async function recordAndCompare() {
+  const ln = TK.lines[TK.si], secs = Math.min(8, 1.5 + ln.t.split(" ").length * .5);
+  try {
+    stopListening(); try { speechSynthesis.cancel(); } catch {}
+    recStream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    const mr = new MediaRecorder(recStream), chunks = [];
+    mr.ondataavailable = e => e.data.size && chunks.push(e.data);
+    mr.onstop = () => {
+      recStream.getTracks().forEach(t => t.stop()); recStream = null;
+      if (!TK || TK.mode !== "shadow") return;
+      if (TK.clip) URL.revokeObjectURL(TK.clip);
+      TK.clip = URL.createObjectURL(new Blob(chunks, { type: mr.mimeType || "audio/webm" }));
+      TK.recState = ""; renderShadow(); playCompare();
+    };
+    TK.recState = "rec"; TK.err = ""; renderShadow();
+    mr.start(); setTimeout(() => mr.state !== "inactive" && mr.stop(), secs * 1000);
+  } catch (e) {
+    if (recStream) { recStream.getTracks().forEach(t => t.stop()); recStream = null; }
+    TK.recState = ""; TK.err = "Não consegui usar o microfone para gravar. Confira se o navegador tem permissão para usar o microfone neste site."; renderShadow();
+  }
+}
+function playClip() { if (TK && TK.clip) try { new Audio(TK.clip).play(); } catch {} }
+// native voice first, then yours
+function playCompare() {
+  const ln = TK.lines[TK.si], v = voiceFor(TK.lang);
+  if (!v) { playClip(); return; }
+  try {
+    speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(ln.t); u.voice = v; u.lang = v.lang; u.rate = .9;
+    let done = false; const go = () => { if (!done) { done = true; setTimeout(playClip, 300); } };
+    u.onend = go; setTimeout(go, 1500 + ln.t.length * 90);
+    speechSynthesis.speak(u);
+  } catch { playClip(); }
+}
+function closeTalk() {
+  stopListening();
+  if (recStream) { recStream.getTracks().forEach(t => t.stop()); recStream = null; }
+  if (TK && TK.clip) URL.revokeObjectURL(TK.clip);
+  TK = null; $("#lesson").hidden = true; $("#lesson").innerHTML = "";
+  document.body.classList.remove("locked");
+  try { speechSynthesis.cancel(); } catch {}
+  render();
+}
+function viewTalk() {
+  const lang = S.lang, L = LANGS[lang], talks = talksOf(lang);
+  const head = `<div class="page-head"><h1>Conversas</h1><p>Situações reais, faladas. O personagem fala com você e você responde em voz alta, do jeito que se fala na rua.</p></div>`;
+  if (!talks.length) return head + `<div class="stack">${micStatusHtml()}<div class="empty">As conversas em ${esc(L.learning)} estão sendo preparadas. Por enquanto, elas estão prontas em inglês.<br><br><button class="btn" data-act="setLang" data-k="en">Praticar em inglês</button></div></div>`;
+  return head + `<div class="stack">${micStatusHtml()}` + LEVELS.map((lv, li) => {
+    const list = talks.filter(t => t.lvl === lv);
+    const body = list.length ? list.map(t => {
+      const r = talkRec(lang, t.id), st = r && r.best ? starsOf(r.best) : 0;
+      return `<button class="talk-row" data-act="talkStart" data-id="${t.id}"><span class="talk-ic">${I("chat")}</span><span class="grow"><b>${esc(t.t)}</b><small>${esc(t.place)} · ${t.steps.length} falas</small></span>
+        <span class="mini-stars" title="${r ? `Melhor pronúncia: ${r.best}%` : "Ainda não feita"}">${[1, 2, 3].map(i => `<i class="${i <= st ? "on" : ""}">${I("star")}</i>`).join("")}</span></button>`;
+    }).join("") : `<p class="muted soon">Em breve: este degrau do zigurate ainda está sendo construído.</p>`;
+    return `<div class="card lvl-block ${list.length ? "" : "locked"}"><div class="lvl-head"><span class="lvl-badge">${lv}</span><h3>${["Primeiros passos", "Dia a dia", "Se virando sozinho", "Papo solto"][li]}</h3></div>${body}</div>`;
+  }).join("") + `</div>`;
+}
+
 // ---------- actions ----------
 const A = {
   go: d => { closeModal(); S.view = d.v; pop = null; save(); render(); scrollTo(0, 0); },
@@ -1564,7 +1860,60 @@ const A = {
   closeModal: () => closeModal(),
   onbLang: d => { onbLang = d.k; renderOnboarding(); },
   onbGoal: d => { onbGoal = +d.g; renderOnboarding(); },
-  onbGo: () => { S.onboarded = true; S.lang = onbLang; S.goal = onbGoal; S.view = "learn"; save(); ac(); render(); const c = currentOf(S.lang); if (c) { pop = `${c.u}-${c.l}`; render(); } },
+  onbGo: () => { S.onboarded = true; S.lang = onbLang; S.goal = onbGoal; S.view = talksOf(onbLang).length ? "talk" : "learn"; save(); ac(); render(); const c = S.view === "learn" && currentOf(S.lang); if (c) { pop = `${c.u}-${c.l}`; render(); } },
+  // conversations
+  talkStart: d => startTalk(d.id),
+  talkPt: d => { const e = TK.log.find(x => x.who === "npc" && x.step === +d.s); if (e) e.pt = !e.pt; renderTalk(); },
+  talkMic: () => {
+    if (!TK || TK.fb || !canListen()) return;
+    if (TK.listening) { if (rec) try { rec.stop(); } catch {} return; }
+    TK.listening = true; TK.err = ""; renderTalk();
+    listen(TK.lang, res => {
+      if (!TK || TK.mode !== "talk") return;
+      TK.listening = false;
+      if (res.error) {
+        if (res.error === "no-speech" || res.error === "aborted") TK.err = "Não ouvi nada. Toque no microfone e fale perto do aparelho.";
+        else { micBroken = true; micMsg = micErrorText(res.error); TK.err = micMsg; TK.opts ||= talkOptions(); }
+        renderTalk(); return;
+      }
+      talkAnswer(res);
+    });
+  },
+  talkHint: () => { TK.hint = true; renderTalk(); },
+  talkOpts: () => { TK.opts = talkOptions(); renderTalk(); },
+  talkOpt: d => {
+    if (!TK || TK.fb) return;
+    const i = +d.i, o = TK.opts[i]; speak(o, TK.lang);
+    if (canListen()) { TK.chosen = i; renderTalk(); return; }
+    // without a recognizer: picking the right reply moves on, it is spoken aloud to repeat
+    if (o !== tkStep().say) { TK.wrong = i; if (S.sound) tone(330, 0, .18, "triangle", .08); renderTalk(); return; }
+    TK.log.push({ who: "me", text: o });
+    TK.xp += 10; TK.fb = { ok: true, title: "Isso! Agora repita em voz alta", gain: 10, note: tkStep().sayPt };
+    sfx("ok"); renderTalk();
+  },
+  talkNext: () => talkNext(),
+  talkQuit: () => modal(`<h2>Sair da conversa?</h2><p class="muted" style="font-weight:700">O que você falou até aqui não será salvo.</p>
+    <div class="acts"><button class="btn" data-act="closeModal">Continuar conversando</button><button class="btn bad" data-act="talkQuitYes">Sair</button></div>`),
+  talkQuitYes: () => { closeModal(); closeTalk(); },
+  talkClose: () => closeTalk(),
+  shadowGo: () => startShadow(),
+  shadowMic: () => {
+    if (!TK || !canListen()) return;
+    if (TK.listening) { if (rec) try { rec.stop(); } catch {} return; }
+    TK.listening = true; TK.err = ""; renderShadow();
+    const ln = TK.lines[TK.si];
+    listen(TK.lang, res => {
+      if (!TK || TK.mode !== "shadow") return;
+      TK.listening = false;
+      if (res.error) TK.err = res.error === "no-speech" || res.error === "aborted" ? "Não ouvi nada. Toque no microfone e repita." : micErrorText(res.error);
+      else { TK.sres = scoreSpeech(ln.t, res, TK.lang); countSpoken(TK.sres.score); save(); }
+      renderShadow();
+    });
+  },
+  shadowNext: () => { stopListening(); if (TK.si + 1 >= TK.lines.length) { closeTalk(); toast("Falas repetidas. Boa!", "mic"); return; } TK.si++; TK.sres = null; TK.err = ""; TK.listening = false; renderShadow(); setTimeout(() => speak(TK.lines[TK.si].t, TK.lang), 250); },
+  shadowPrev: () => { stopListening(); TK.si = Math.max(0, TK.si - 1); TK.sres = null; TK.err = ""; TK.listening = false; renderShadow(); setTimeout(() => speak(TK.lines[TK.si].t, TK.lang), 250); },
+  recGo: () => recordAndCompare(),
+  recPlay: () => playClip(),
   // lesson
   opt: d => {
     if (LS.state !== "answer") return; LS.sel = +d.i; sfx("tap"); const it = curItem();
@@ -1598,6 +1947,16 @@ document.addEventListener("click", e => {
 });
 document.addEventListener("keydown", e => {
   if (!$("#modal").hidden) { if (e.key === "Escape") closeModal(); return; }
+  if (TK) {
+    if (e.key === "Escape") { TK.mode === "talk" ? A.talkQuit() : closeTalk(); return; }
+    if (e.key !== "Enter" || e.target.closest("button")) return;
+    e.preventDefault();
+    if (TK.mode === "end") closeTalk();
+    else if (TK.mode === "shadow") A.shadowNext();
+    else if (TK.fb) talkNext();
+    else A.talkMic();
+    return;
+  }
   if (!LS) { if (e.key === "Escape") { $("#langMenu").hidden = true; if (pop) { pop = null; render(); } } return; }
   if (LS.finished) { if (e.key === "Enter") { e.preventDefault(); closeLesson(); } return; }
   const it = curItem(), typing = e.target.id === "typeIn";
