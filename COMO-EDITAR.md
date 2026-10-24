@@ -42,7 +42,12 @@ Cuidado com aspas e vírgulas: cada frase fica entre aspas `"…"`, e os itens d
 
 **Criar uma escolha errada com dica:** use `tip` (o nome de uma dica da lista `tips`) e `retry: true` para a pessoa tentar de novo.
 
-**Criar um personagem:** em `historia.js`, acrescente o nome em `cast`; em `arte.js`, acrescente o visual em `CHARS` (cores da pele, do cabelo e da roupa e um dos estilos listados no topo do arquivo).
+**Padrão visual (vale para tudo o que for criado nos jogos):**
+1. Todo lugar é um cenário HD-2D em 3D, em `hd2d.js` (`STORY`), realista e sem nada flutuando.
+2. Todo personagem que fala num lugar aparece pequeno, de pé dentro dele (`person`), num ponto em que a câmera o veja. O herói e alguns moradores completam a cena.
+3. Quando alguém fala, o retrato grande (`BUSTS`) sai de onde ele está e vem para a frente, piscando e mexendo a boca.
+
+**Criar um personagem:** em `historia.js`, acrescente o nome em `cast`. Em `hd2d.js`, crie o boneco pequeno em `FOLK` e o retrato grande em `BUSTS`, com as mesmas cores, e coloque-o nos cenários em que ele aparece com `person`. Em `arte.js`, acrescente o visual simples em `CHARS` (é o que aparece enquanto o HD-2D é desenhado).
 
 **Retrato grande de um personagem** (`hd2d.js`, em `BUSTS`): cada um tem cabelo (`side`, `long`, `short`, `cap`, `helmet`), roupa (`apron`, `vest`, `kimono`, `armor`, `robe`, `tunic`), detalhes como `bun` (coque), `beard` (barba), `freckles` (sardas), `scar` (cicatriz), e as cores em `pal`. Um personagem novo sem retrato usa o desenho de `arte.js`.
 
