@@ -430,6 +430,34 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .rec-box p{flex-basis:100%;margin:0;font-size:14px}
 @media (max-width:760px){ .nav button[data-v="shop"]{display:none} .talk-foot .mic-label{display:none} }
 
+/* notebook */
+.nav .ns{display:none}
+.nb-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.nb-tab{display:flex;align-items:center;gap:8px;border:2px solid var(--line-2);border-bottom-width:4px;background:var(--surface);border-radius:12px;padding:6px 10px 6px 6px;font-weight:800;color:var(--ink)}
+.nb-tab.on{border-color:var(--bc);color:var(--bc)}
+.book{background:var(--surface);border:2px solid var(--line);border-left:10px solid var(--bc);border-radius:18px;padding:16px;display:grid;gap:12px;margin-bottom:16px}
+.book-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px;font-family:var(--display);font-size:18px}
+.book-head .muted{font-size:14px;font-weight:700}
+.leaf{--paper:#fffdf6;--rule:#d9e3f0;--margin:#f2a7a7;--pen:#1f2a44;background:var(--paper);border-radius:6px 14px 14px 6px;box-shadow:0 2px 0 rgba(0,0,0,.06),0 10px 24px -14px rgba(0,0,0,.35);padding:12px 14px 10px 46px;position:relative;transform-origin:left center}
+.leaf::before{content:"";position:absolute;top:0;bottom:0;left:34px;width:2px;background:var(--margin)}
+.leaf.turn{animation:leafturn .45s ease-out}
+@keyframes leafturn{from{transform:perspective(1200px) rotateY(-28deg);opacity:.4}to{transform:none;opacity:1}}
+.leaf-top,.leaf-foot{display:flex;justify-content:space-between;font-size:13px;font-weight:800;color:#8a94a6}
+.leaf-foot{justify-content:center;margin-top:4px}
+textarea.lines{display:block;width:100%;height:512px;resize:none;overflow:hidden;border:0;outline:0;background-color:transparent;
+  font-family:inherit;font-weight:600;font-size:18px;line-height:32px;color:var(--pen);padding:0;margin:0;box-sizing:border-box;
+  background-image:repeating-linear-gradient(to bottom,transparent 0,transparent 31px,var(--rule) 31px,var(--rule) 32px);background-attachment:local;overflow-wrap:break-word;white-space:pre-wrap}
+textarea.lines::placeholder{color:#a3acbb}
+#noteMeasure{position:absolute;left:-9999px;top:0;visibility:hidden}
+.book-nav{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.book-nav .say:disabled{opacity:.35}
+.leaf-acts{display:flex;flex-wrap:wrap;gap:8px}
+.nb-more p{margin:4px 0 12px}
+.set-row.voices{display:grid;gap:10px}
+.voice-row{display:flex;align-items:center;gap:10px}
+.voice-row select{flex:1;min-width:0;border:2px solid var(--line-2);border-radius:10px;background:var(--surface);color:var(--ink);padding:8px;font:inherit;font-weight:700}
+@media (max-width:760px){ .nav .nl{display:none} .nav .ns{display:inline} .leaf{padding-left:34px} .leaf::before{left:24px} textarea.lines{font-size:17px} }
+
 /* responsive */
 @media (max-width:1100px){
   .shell{grid-template-columns:200px minmax(0,1fr)}
@@ -524,6 +552,13 @@ const P = {
   zig: '<path fill="currentColor" d="M9 3h6v4H9z"/><path fill="currentColor" opacity=".88" d="M7 7.6h10v3.9H7z"/><path fill="currentColor" opacity=".76" d="M5 12.1h14v3.9H5z"/><path fill="currentColor" opacity=".64" d="M3 16.6h18V21H3z"/><path fill="#fff" opacity=".55" d="M11 7.6h2V21h-2z"/>',
   mic: '<rect x="8.3" y="2.5" width="7.4" height="12" rx="3.7" fill="currentColor"/><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M5.3 11.2a6.7 6.7 0 0 0 13.4 0M12 18v3.2M8.6 21.3h6.8"/>',
   chat: '<path fill="currentColor" d="M4 4.5h11a2 2 0 0 1 2 2V12a2 2 0 0 1-2 2H9l-4 3.3V14H4a2 2 0 0 1-2-2V6.5a2 2 0 0 1 2-2z"/><path fill="currentColor" opacity=".6" d="M19 8.5h1a2 2 0 0 1 2 2V16a2 2 0 0 1-2 2h-1v3l-3.6-3H11a2 2 0 0 1-1.8-1.1H15a4 4 0 0 0 4-4z"/>',
+  pen: '<path fill="currentColor" d="M15.6 3.6a2 2 0 0 1 2.8 0l2 2a2 2 0 0 1 0 2.8L9.2 19.6 4 21l1.4-5.2z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M13.5 21H20"/>',
+  copy: '<rect x="8" y="8" width="12" height="13" rx="2.5" fill="currentColor"/><path fill="none" stroke="currentColor" stroke-width="2" d="M15.5 5.5V5A2 2 0 0 0 13.5 3H6a2 2 0 0 0-2 2v9.5a2 2 0 0 0 2 2h.5"/>',
+  share: '<circle cx="18" cy="5.5" r="3" fill="currentColor"/><circle cx="6" cy="12" r="3" fill="currentColor"/><circle cx="18" cy="18.5" r="3" fill="currentColor"/><path fill="none" stroke="currentColor" stroke-width="2" d="M8.6 10.6l6.8-3.6M8.6 13.4l6.8 3.6"/>',
+  trash: '<path fill="currentColor" d="M9 3h6l1 2h4v2H4V5h4zM5.5 8.5h13l-1 11a2 2 0 0 1-2 1.8h-7a2 2 0 0 1-2-1.8z"/>',
+  down: '<path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M12 3.5v12M7 11l5 5 5-5M4.5 20.5h15"/>',
+  left: '<path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M15 5l-7 7 7 7"/>',
+  right: '<path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>',
   slow: '<path fill="currentColor" d="M4 15.5c0-3.6 3-6.5 6.6-6.5 3.2 0 5.8 2.2 6.4 5.2h1.4a1.6 1.6 0 1 1 0 3.3H5.6A1.6 1.6 0 0 1 4 15.5z"/><circle cx="18.5" cy="9" r="2.3" fill="currentColor"/>',
 };
 const I = (n, cls = "i") => `<svg class="${cls}" viewBox="0 0 24 24" aria-hidden="true">${P[n]}</svg>`;
@@ -533,7 +568,7 @@ const KEY = "babel-save-v1"; // name from before the app was renamed; kept so sa
 const fresh = () => ({
   v: 1, onboarded: false, lang: "en", view: "learn", xp: 0, coins: 50, hearts: 5, heartsAt: Date.now(),
   streak: 0, bestStreak: 0, lastDay: null, freezes: 0, goal: 30, day: {}, boostUntil: 0,
-  sound: true, translit: true, progress: {}, chests: {}, srs: {}, ach: {}, quests: {}, speech: {}, talks: {}, noMicUntil: 0,
+  sound: true, translit: true, progress: {}, chests: {}, srs: {}, ach: {}, quests: {}, speech: {}, talks: {}, voicePick: {}, noMicUntil: 0,
   stats: { lessons: 0, perfect: 0, maxCombo: 0, reviews: 0, langs: {}, correct: 0, answered: 0, owl: false, early: false, chests: 0, spoken: 0, spokenGreat: 0, speechTests: 0, talks: 0 },
 });
 let S = fresh();
@@ -543,6 +578,14 @@ try {
 } catch {}
 if (!LANGS[S.lang]) S.lang = "en";
 function save() { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch {} }
+// Notes live under their own key, so "Apagar progresso" never touches them. They go only when the learner
+// deletes a page or the whole notebook of a language.
+const NOTES_KEY = "xibolete-notes-v1";
+let NOTES = {};
+try { const raw = JSON.parse(localStorage.getItem(NOTES_KEY)); if (raw && typeof raw === "object") NOTES = raw; } catch {}
+function saveNotes() { try { localStorage.setItem(NOTES_KEY, JSON.stringify(NOTES)); return true; } catch { return false; } }
+// ask the browser not to clear this site's storage when the disk gets full
+try { navigator.storage && navigator.storage.persist && navigator.storage.persist(); } catch {}
 function today() {
   const k = dkey();
   if (!S.day[k]) {
@@ -742,12 +785,25 @@ const sfx = n => { if (S.sound) SFX[n](); };
 
 let voices = [];
 function loadVoices() { try { voices = speechSynthesis.getVoices() || []; } catch { voices = []; } }
-if ("speechSynthesis" in window) { loadVoices(); speechSynthesis.onvoiceschanged = () => { loadVoices(); if (!LS && !TK && S.view === "train") render(); }; }
-function voiceFor(lang) {
-  const code = LANGS[lang].voice.toLowerCase(), base = code.slice(0, 2);
-  const norm = v => v.lang.replace("_", "-").toLowerCase();
-  return voices.find(v => norm(v) === code && /google|natural|online/i.test(v.name)) || voices.find(v => norm(v) === code) || voices.find(v => norm(v).startsWith(base));
+if ("speechSynthesis" in window) { loadVoices(); speechSynthesis.onvoiceschanged = () => { loadVoices(); if (!LS && !TK && (S.view === "train" || S.view === "profile")) render(); }; }
+// Neural voices (Edge's "Natural", Google's, Apple's enhanced ones) speak in flowing phrases; the old
+// desktop voices sound choppy, so they come last.
+function voiceRank(v, code) {
+  const n = v.name, exact = v.lang.replace("_", "-").toLowerCase() === code ? 1 : 0;
+  const q = /natural|neural/i.test(n) ? 5 : /google/i.test(n) ? 4 : /premium|enhanced|siri/i.test(n) ? 4 : /online/i.test(n) ? 3 : !v.localService ? 2
+    : /microsoft (david|zira|mark|hazel|george|susan|helena|laura|pablo|hortense|julie|paul|elsa|cosimo|irina|pavel|maria|daniel)/i.test(n) ? 0 : 1;
+  return q * 2 + exact;
 }
+function voicesFor(lang) {
+  const code = LANGS[lang].voice.toLowerCase(), base = code.slice(0, 2);
+  return voices.filter(v => v.lang.replace("_", "-").toLowerCase().startsWith(base)).sort((a, b) => voiceRank(b, code) - voiceRank(a, code));
+}
+function voiceFor(lang) {
+  const list = voicesFor(lang), pick = (S.voicePick || {})[lang];
+  return (pick && list.find(v => v.name === pick)) || list[0];
+}
+const fluentVoice = v => !!v && voiceRank(v, "") >= 6;
+const SAMPLE = { en: "Hey! Can I get a coffee, please?", es: "¡Hola! ¿Me pones un café, por favor?", fr: "Salut ! Je peux avoir un café, s'il te plaît ?", it: "Ciao! Mi fai un caffè, per favore?", ru: "Привет! Можно мне кофе, пожалуйста?" };
 // The play button always shows: voices often load a moment after the page, and some systems
 // can still speak a language by its code even when it is not listed.
 const canSpeak = () => "speechSynthesis" in window;
@@ -757,11 +813,13 @@ function speak(text, lang, slow) {
   if (!voices.length) loadVoices();
   const v = voiceFor(lang);
   try {
+    // speaking right after cancel() makes Chrome clip the first syllable, so give it a beat
+    const busy = speechSynthesis.speaking || speechSynthesis.pending;
     speechSynthesis.cancel();
     const u = new SpeechSynthesisUtterance(first(text));
     if (v) { u.voice = v; u.lang = v.lang; } else u.lang = LANGS[lang].voice;
-    u.rate = slow ? .55 : .9;
-    speechSynthesis.speak(u);
+    u.rate = slow ? .7 : 1; u.pitch = 1;
+    if (busy) setTimeout(() => speechSynthesis.speak(u), 80); else speechSynthesis.speak(u);
   } catch {}
   if (!v && voices.length && !noVoiceWarned[lang]) {
     noVoiceWarned[lang] = true;
@@ -919,9 +977,9 @@ function renderChrome() {
     <button class="stat heart" data-act="heartsInfo" title="Vidas">${I("heart")}${S.hearts}</button>
     <button class="stat xp" data-act="go" data-v="profile" title="Nível ${lv.L}">${I("bolt")}${lv.L}${boosted() ? '<span class="boost-tag">2x</span>' : ""}</button>`;
   const due = dueWords(S.lang).length;
-  const navs = [["learn", "home", "Aprender"], ["talk", "chat", "Conversas"], ["speak", "mic", "Pronúncia"], ["train", "target", "Treino"], ["ach", "trophy", "Conquistas"], ["shop", "bag", "Loja"], ["profile", "user", "Perfil"]];
-  $("#nav").innerHTML = navs.map(([v, ic, label]) =>
-    `<button data-act="go" data-v="${v}" ${S.view === v ? 'aria-current="page"' : ""}>${I(ic)}<span>${label}</span>${v === "train" && due >= 4 ? '<i class="dot" title="Palavras para revisar"></i>' : ""}</button>`).join("");
+  const navs = [["learn", "home", "Aprender", "Aprender"], ["talk", "chat", "Conversas", "Papo"], ["speak", "mic", "Pronúncia", "Fala"], ["train", "target", "Treino", "Treino"], ["notes", "pen", "Caderno", "Caderno"], ["ach", "trophy", "Conquistas", "Troféus"], ["shop", "bag", "Loja", "Loja"], ["profile", "user", "Perfil", "Perfil"]];
+  $("#nav").innerHTML = navs.map(([v, ic, label, short]) =>
+    `<button data-act="go" data-v="${v}" ${S.view === v ? 'aria-current="page"' : ""} aria-label="${label}">${I(ic)}<span class="nl">${label}</span><span class="ns">${short}</span>${v === "train" && due >= 4 ? '<i class="dot" title="Palavras para revisar"></i>' : ""}</button>`).join("");
   $("#side").innerHTML = sideHtml();
 }
 function goalHtml() {
@@ -1052,16 +1110,19 @@ function viewProfile() {
       <div class="set-row"><div><b>Meta diária</b><p>Quanto XP você quer ganhar por dia.</p></div><div class="chips">${[[10, "Leve"], [30, "Regular"], [50, "Sério"], [100, "Intenso"]].map(([g, n]) => `<button class="chip" data-act="goal" data-g="${g}" aria-pressed="${S.goal === g}">${n} · ${g} XP</button>`).join("")}</div></div>
       <div class="set-row"><div><b>Efeitos sonoros</b><p>Sons de acerto, erro e recompensas.</p></div><button class="switch" role="switch" aria-checked="${S.sound}" data-act="toggle" data-k="sound" aria-label="Efeitos sonoros"></button></div>
       <div class="set-row"><div><b>Transliteração do russo</b><p>Mostra como ler as palavras em cirílico.</p></div><button class="switch" role="switch" aria-checked="${S.translit}" data-act="toggle" data-k="translit" aria-label="Transliteração"></button></div>
-      <div class="set-row"><div><b>Vozes</b><p>${LKEYS.map(k => `${LANGS[k].name}: ${voiceFor(k) ? "disponível" : "sem voz neste aparelho"}`).join(" · ")}</p></div></div>
+      <div class="set-row voices"><div><b>Vozes</b><p>Escolha a voz de cada idioma. As marcadas como fluida falam de um jeito mais natural.${voices.some(fluentVoice) ? "" : " Para vozes mais naturais, use o Microsoft Edge (vozes “Natural”) ou o Google Chrome."}</p></div>
+        ${LKEYS.map(k => { const list = voicesFor(k), cur = voiceFor(k); return `<div class="voice-row"><span class="badge" style="--bc:${LANGS[k].color}">${LANGS[k].code}</span>
+          ${list.length ? `<select data-voice="${k}" aria-label="Voz em ${esc(LANGS[k].learning)}">${list.map(v => `<option value="${esc(v.name)}" ${cur && v.name === cur.name ? "selected" : ""}>${esc(v.name.replace(/^(Microsoft|Google)\s+/, "").replace(/\s*Online \(Natural\)/, ""))}${fluentVoice(v) ? " · fluida" : ""}</option>`).join("")}</select>` : `<span class="muted">Sem voz neste aparelho</span>`}
+          <button class="say" data-act="say" data-t="${esc(SAMPLE[k])}" data-l="${k}" aria-label="Testar voz">${I("speaker")}</button></div>`; }).join("")}</div>
       <div class="set-row"><div><b>Ouvir sua voz</b><p>${canListen() ? "Disponível. Na primeira vez, o navegador pede permissão para usar o microfone." : "Indisponível neste navegador. Os exercícios de fala usam autoavaliação."}</p></div></div>
-      <div class="set-row"><div><b>Apagar progresso</b><p>Zera XP, moedas, lições e conquistas de todos os idiomas.</p></div><button class="btn small bad" data-act="reset">Apagar tudo</button></div>
+      <div class="set-row"><div><b>Apagar progresso</b><p>Zera XP, moedas, lições e conquistas de todos os idiomas. Seu caderno de anotações não é apagado.</p></div><button class="btn small bad" data-act="reset">Apagar tudo</button></div>
     </div></div>`;
 }
 function render() {
   if (!S.onboarded) { renderOnboarding(); return; }
   $("#app").querySelector(".top").hidden = false; $("#shell").hidden = false; $("#onb").hidden = true;
   regen(); renderChrome();
-  const v = { learn: viewLearn, talk: viewTalk, speak: viewSpeak, train: viewTrain, ach: viewAch, shop: viewShop, profile: viewProfile }[S.view] || viewLearn;
+  const v = { learn: viewLearn, talk: viewTalk, notes: viewNotes, speak: viewSpeak, train: viewTrain, ach: viewAch, shop: viewShop, profile: viewProfile }[S.view] || viewLearn;
   $("#view").innerHTML = v();
 }
 
@@ -1748,7 +1809,7 @@ function playCompare() {
   if (!v) { playClip(); return; }
   try {
     speechSynthesis.cancel();
-    const u = new SpeechSynthesisUtterance(ln.t); u.voice = v; u.lang = v.lang; u.rate = .9;
+    const u = new SpeechSynthesisUtterance(ln.t); u.voice = v; u.lang = v.lang; u.rate = 1;
     let done = false; const go = () => { if (!done) { done = true; setTimeout(playClip, 300); } };
     u.onend = go; setTimeout(go, 1500 + ln.t.length * 90);
     speechSynthesis.speak(u);
@@ -1776,6 +1837,133 @@ function viewTalk() {
     }).join("") : `<p class="muted soon">Em breve: este degrau do zigurate ainda está sendo construído.</p>`;
     return `<div class="card lvl-block ${list.length ? "" : "locked"}"><div class="lvl-head"><span class="lvl-badge">${lv}</span><h3>${["Primeiros passos", "Dia a dia", "Se virando sozinho", "Papo solto"][li]}</h3></div>${body}</div>`;
   }).join("") + `</div>`;
+}
+
+// ---------- notebook ----------
+// One notebook per language, kept as one continuous text. It is shown page by page: a page holds a fixed
+// number of lines, and whatever doesn't fit flows onto the next leaf. "Nova folha" inserts a page break (\f).
+const PB = "\f", MARK = "⁣"; // page break; invisible caret marker used while re-paginating
+let noteLang = null, notePage = {}, noteTimer = 0, notePages = [];
+const nLang = () => noteLang || S.lang;
+function viewNotes() {
+  const lang = nLang(), L = LANGS[lang];
+  const tabs = LKEYS.map(k => `<button class="nb-tab ${k === lang ? "on" : ""}" data-act="noteLang" data-k="${k}" style="--bc:${LANGS[k].color}" aria-pressed="${k === lang}"><span class="badge" style="--bc:${LANGS[k].color}">${LANGS[k].code}</span><span>${esc(LANGS[k].name)}</span></button>`).join("");
+  queueMicrotask(noteMount);
+  return `<div class="page-head"><h1>Caderno</h1><p>Anote o que você está aprendendo. Cada idioma tem o seu caderno, e nada se apaga sozinho.</p></div>
+    <div class="nb-tabs" aria-label="Cadernos">${tabs}</div>
+    <div class="book" style="--bc:${L.color}">
+      <div class="book-head"><b>${esc(L.name)}</b><span class="muted" id="noteCount"></span></div>
+      <div class="leaf" id="leaf">
+        <div class="leaf-top"><span id="noteNum"></span><span id="noteSaved">Salvo</span></div>
+        <textarea id="noteText" class="lines" spellcheck="false" aria-label="Caderno de ${esc(L.name)}"></textarea>
+        <div class="leaf-foot" id="noteFoot"></div>
+      </div>
+      <div class="book-nav">
+        <button class="say" data-act="notePrev" id="notePrev" aria-label="Folha anterior">${I("left")}</button>
+        <span class="muted" id="notePos"></span>
+        <button class="say" data-act="noteNext" id="noteNextBtn" aria-label="Próxima folha">${I("right")}</button>
+        <button class="btn small ghost" data-act="noteNew" id="noteNewBtn">Nova folha</button>
+      </div>
+      <div class="leaf-acts">
+        <button class="btn small ghost" data-act="noteCopy">${I("copy")}Copiar</button>
+        <button class="btn small ghost" data-act="noteZap">${I("chat")}WhatsApp</button>
+        <button class="btn small ghost" data-act="noteShare">${I("share")}Enviar</button>
+        <button class="btn small ghost" data-act="noteDel" id="noteDelBtn">${I("trash")}Apagar folha</button>
+      </div>
+    </div>
+    <div class="card nb-more"><h3>Caderno inteiro</h3><p class="muted">Leve todas as folhas de ${esc(L.learning)} para outro lugar.</p>
+      <div class="chips"><button class="btn small ghost" data-act="noteCopyAll">${I("copy")}Copiar tudo</button><button class="btn small ghost" data-act="noteFile">${I("down")}Baixar arquivo .txt</button><button class="btn small bad" data-act="noteWipe" id="noteWipeBtn">${I("trash")}Apagar caderno</button></div></div>
+    <textarea id="noteMeasure" class="lines" tabindex="-1" aria-hidden="true"></textarea>`;
+}
+// does this text fit on one page?
+function noteFits(text) {
+  const m = $("#noteMeasure"); m.value = text;
+  return m.scrollHeight <= m.clientHeight + 1;
+}
+// Split the notebook into pages: [{ s, e, n }] where s..e is the text shown and n is where the next page starts.
+function paginate(full) {
+  $("#noteMeasure").style.width = $("#noteText").offsetWidth + "px";
+  const pages = []; let s = 0;
+  for (;;) {
+    const brk = full.indexOf(PB, s), end = brk < 0 ? full.length : brk, chunk = full.slice(s, end);
+    if (noteFits(chunk)) {
+      pages.push({ s, e: end, n: end + 1 });
+      if (brk < 0) break; s = end + 1; continue;
+    }
+    let lo = 0, hi = chunk.length;
+    while (lo < hi) { const mid = (lo + hi + 1) >> 1; if (noteFits(chunk.slice(0, mid))) lo = mid; else hi = mid - 1; }
+    // break at a line end if there's one near, else at a space, else mid-word
+    const nl = chunk.lastIndexOf("\n", lo - 1), sp = chunk.lastIndexOf(" ", lo - 1);
+    const cut = nl > lo * .5 ? nl : sp > lo * .6 ? sp : -1;
+    if (cut >= 0) pages.push({ s, e: s + cut, n: s + cut + 1 });
+    else { const c = Math.max(1, lo); pages.push({ s, e: s + c, n: s + c }); }
+    s = pages[pages.length - 1].n;
+  }
+  return pages;
+}
+const noteFull = lang => typeof NOTES[lang] === "string" ? NOTES[lang] : (NOTES[lang] = "");
+function noteMount() {
+  if (!$("#noteText")) return;
+  const lang = nLang(), full = noteFull(lang);
+  notePages = paginate(full);
+  const i = notePage[lang] = Math.min(notePage[lang] ?? notePages.length - 1, notePages.length - 1);
+  const ta = $("#noteText"), pg = notePages[i];
+  ta.value = full.slice(pg.s, pg.e);
+  ta.placeholder = i ? "Continue escrevendo…" : "Escreva aqui. Ex.: Can I get…? = Me vê…?";
+  noteChrome();
+}
+function noteChrome() {
+  const lang = nLang(), i = notePage[lang], n = notePages.length, full = noteFull(lang);
+  const filled = notePages.filter(p => full.slice(p.s, p.e).trim()).length;
+  $("#noteCount").textContent = `${filled} ${filled === 1 ? "folha escrita" : "folhas escritas"}`;
+  $("#noteNum").textContent = `Folha ${i + 1}`; $("#noteFoot").textContent = `${i + 1} / ${n}`; $("#notePos").textContent = `Folha ${i + 1} de ${n}`;
+  $("#notePrev").disabled = !i;
+  $("#noteNextBtn").hidden = i + 1 >= n; $("#noteNewBtn").hidden = i + 1 < n;
+  $("#noteDelBtn").disabled = !full; $("#noteWipeBtn").disabled = !full.trim();
+}
+function noteInput() {
+  const lang = nLang(), ta = $("#noteText"), i = notePage[lang], pg = notePages[i], full = noteFull(lang);
+  const caret = ta.selectionStart, typed = ta.value.split(PB).join("");
+  // splice this page back into the whole text with a marker at the caret, re-paginate, then find the marker
+  const marked = full.slice(0, pg.s) + typed.slice(0, caret) + MARK + typed.slice(caret) + full.slice(pg.e);
+  const pages = paginate(marked), at = marked.indexOf(MARK);
+  let j = pages.findIndex(p => at >= p.s && at <= p.e); if (j < 0) j = pages.findIndex(p => at < p.n); if (j < 0) j = pages.length - 1;
+  const clean = marked.replace(MARK, "");
+  NOTES[lang] = clean;
+  notePages = pages.map(p => ({ s: p.s - (p.s > at ? 1 : 0), e: p.e - (p.e > at ? 1 : 0), n: p.n - (p.n > at ? 1 : 0) }));
+  const np = notePages[j], shown = clean.slice(np.s, np.e), pos = Math.min(Math.max(0, at - np.s), shown.length);
+  const turned = j !== i;
+  notePage[lang] = j;
+  if (ta.value !== shown) { ta.value = shown; ta.setSelectionRange(pos, pos); }
+  if (turned) { const leaf = $("#leaf"); leaf.classList.remove("turn"); void leaf.offsetWidth; leaf.classList.add("turn"); }
+  noteChrome();
+  $("#noteSaved").textContent = "Salvando…";
+  clearTimeout(noteTimer);
+  noteTimer = setTimeout(() => { const ok = saveNotes(), s2 = $("#noteSaved"); if (s2) s2.textContent = ok ? "Salvo" : "Não deu para salvar"; }, 300);
+}
+document.addEventListener("input", e => { if (e.target.id === "noteText") noteInput(); });
+window.addEventListener("pagehide", () => { clearTimeout(noteTimer); saveNotes(); });
+let noteResize = 0;
+window.addEventListener("resize", () => { clearTimeout(noteResize); noteResize = setTimeout(() => { if (S.view === "notes" && !LS && !TK) noteMount(); }, 200); });
+const notePageText = () => { const lang = nLang(), p = notePages[notePage[lang]]; return p ? noteFull(lang).slice(p.s, p.e).trim() : ""; };
+const noteAllText = lang => {
+  const full = noteFull(lang); if (!full.trim()) return "";
+  const pages = $("#noteText") && lang === nLang() ? notePages : [{ s: 0, e: full.length }];
+  return pages.map((p, i) => { const t = full.slice(p.s, p.e).replace(/\f/g, "\n\n").trim(); return t ? (pages.length > 1 ? `— Folha ${i + 1} —\n` : "") + t : ""; }).filter(Boolean).join("\n\n");
+};
+async function copyText(text, what) {
+  if (!text) { toast("Não há nada escrito para copiar.", "pen"); return; }
+  try { await navigator.clipboard.writeText(text); }
+  catch {
+    const t = document.createElement("textarea"); t.value = text; t.style.position = "fixed"; t.style.opacity = "0";
+    document.body.appendChild(t); t.select(); try { document.execCommand("copy"); } catch {} t.remove();
+  }
+  toast(`${what}. Agora é só colar onde quiser.`, "copy");
+}
+function noteTurn(to, focus) {
+  saveNotes(); notePage[nLang()] = to; noteMount();
+  const leaf = $("#leaf"); leaf.classList.remove("turn"); void leaf.offsetWidth; leaf.classList.add("turn");
+  if (focus) { const t = $("#noteText"); t.focus(); t.setSelectionRange(t.value.length, t.value.length); }
 }
 
 // ---------- actions ----------
@@ -1813,7 +2001,7 @@ const A = {
       ${unit.s.length ? `<h3 style="margin-top:14px;font-size:17px">Frases</h3><div class="wlist">${unit.s.map(s => row(s[0], s[1], s[2])).join("")}</div>` : ""}
       <div class="acts"><button class="btn" data-act="closeModal">Entendi</button></div>`);
   },
-  say: d => speak(d.t, LS ? LS.lang : S.lang),
+  say: d => speak(d.t, d.l || (LS ? LS.lang : S.lang)),
   saySlow: d => speak(d.t, LS ? LS.lang : S.lang, true),
   review: () => { closeModal(); startReview(); },
   speakTrain: () => { closeModal(); startSpeakTrain(); },
@@ -1854,13 +2042,52 @@ const A = {
     <div class="acts"><button class="btn" data-act="closeModal">Ok</button></div>`),
   goal: d => { S.goal = +d.g; save(); render(); },
   toggle: d => { S[d.k] = !S[d.k]; save(); render(); },
-  reset: () => modal(`<h2>Apagar todo o progresso?</h2><p class="muted" style="font-weight:700">XP, moedas, lições, sequência e conquistas de todos os idiomas serão apagados. Não dá para desfazer.</p>
+  reset: () => modal(`<h2>Apagar todo o progresso?</h2><p class="muted" style="font-weight:700">XP, moedas, lições, sequência e conquistas de todos os idiomas serão apagados. Não dá para desfazer. Suas anotações do caderno continuam guardadas.</p>
     <div class="acts"><button class="btn" data-act="closeModal">Cancelar</button><button class="btn bad" data-act="resetYes">Apagar tudo</button></div>`),
   resetYes: () => { S = fresh(); save(); closeModal(); render(); },
   closeModal: () => closeModal(),
   onbLang: d => { onbLang = d.k; renderOnboarding(); },
   onbGoal: d => { onbGoal = +d.g; renderOnboarding(); },
   onbGo: () => { S.onboarded = true; S.lang = onbLang; S.goal = onbGoal; S.view = talksOf(onbLang).length ? "talk" : "learn"; save(); ac(); render(); const c = S.view === "learn" && currentOf(S.lang); if (c) { pop = `${c.u}-${c.l}`; render(); } },
+  // notebook
+  noteLang: d => { saveNotes(); noteLang = d.k; render(); },
+  notePrev: () => noteTurn(Math.max(0, notePage[nLang()] - 1)),
+  noteNext: () => noteTurn(Math.min(notePages.length - 1, notePage[nLang()] + 1)),
+  noteNew: () => {
+    const l = nLang(), full = noteFull(l), last = notePages[notePages.length - 1];
+    if (!full.slice(last.s, last.e).trim()) { toast("Escreva algo nesta folha antes de abrir outra.", "pen"); $("#noteText").focus(); return; }
+    NOTES[l] = full + PB; notePage[l] = Infinity; noteTurn(notePages.length, true);
+  },
+  noteCopy: () => copyText(notePageText(), "Folha copiada"),
+  noteCopyAll: () => copyText(noteAllText(nLang()), "Caderno copiado"),
+  noteShare: async () => {
+    const text = notePageText(); if (!text) { toast("Esta folha está vazia.", "pen"); return; }
+    if (navigator.share) { try { await navigator.share({ text }); } catch {} return; }
+    copyText(text, "Folha copiada");
+  },
+  noteZap: () => {
+    const text = notePageText(); if (!text) { toast("Esta folha está vazia.", "pen"); return; }
+    window.open("https://wa.me/?text=" + encodeURIComponent(text), "_blank", "noopener");
+  },
+  noteFile: () => {
+    const l = nLang(), text = noteAllText(l); if (!text) { toast("O caderno está vazio.", "pen"); return; }
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(new Blob([`Caderno de ${LANGS[l].learning} · Xibolete\n\n${text}\n`], { type: "text/plain;charset=utf-8" }));
+    a.download = `caderno-${LANGS[l].learning.normalize("NFD").replace(/[̀-ͯ]/g, "")}.txt`; document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+  },
+  noteDel: () => modal(`<h2>Apagar a folha ${notePage[nLang()] + 1}?</h2><p class="muted" style="font-weight:700">O que está escrito nesta folha some de vez. O resto do caderno continua.</p>
+    <div class="acts"><button class="btn" data-act="closeModal">Cancelar</button><button class="btn bad" data-act="noteDelYes">Apagar folha</button></div>`),
+  noteDelYes: () => {
+    const l = nLang(), full = noteFull(l), i = notePage[l], p = notePages[i];
+    // drop the page and the break or space that joined it to its neighbours
+    NOTES[l] = full.slice(0, p.s) + full.slice(Math.min(full.length, p.n));
+    if (NOTES[l].endsWith(PB) && i >= notePages.length - 1) NOTES[l] = NOTES[l].slice(0, -1);
+    closeModal(); noteTurn(Math.max(0, i - (i >= notePages.length - 1 ? 1 : 0))); toast("Folha apagada.", "trash");
+  },
+  noteWipe: () => modal(`<h2>Apagar o caderno de ${esc(LANGS[nLang()].learning)}?</h2><p class="muted" style="font-weight:700">Todas as folhas deste idioma somem de vez. Os cadernos dos outros idiomas continuam. Se quiser guardar uma cópia, baixe o arquivo .txt antes.</p>
+    <div class="acts"><button class="btn" data-act="closeModal">Cancelar</button><button class="btn bad" data-act="noteWipeYes">Apagar caderno</button></div>`),
+  noteWipeYes: () => { NOTES[nLang()] = ""; closeModal(); noteTurn(0); toast("Caderno apagado.", "trash"); },
   // conversations
   talkStart: d => startTalk(d.id),
   talkPt: d => { const e = TK.log.find(x => x.who === "npc" && x.step === +d.s); if (e) e.pt = !e.pt; renderTalk(); },

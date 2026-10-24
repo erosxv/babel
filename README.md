@@ -21,6 +21,10 @@ Situações reais do dia a dia (pedir um café, fazer check-in, pedir comida…)
 - **Grave e compare:** grava sua voz e toca logo depois da voz nativa, para você comparar de ouvido.
 - Por enquanto há 10 conversas A1 em inglês americano, em `conversas.js`. Os outros idiomas e os níveis A2 a B2 vêm a seguir.
 
+## Caderno
+
+Um caderno de anotações para cada idioma, com folhas pautadas. Quando uma folha enche, o texto passa sozinho para a próxima. Cada folha pode ser copiada, enviada pelo WhatsApp ou compartilhada, e o caderno inteiro pode ser copiado ou baixado como arquivo .txt. As anotações ficam guardadas à parte: "Apagar progresso" não apaga o caderno. Elas só somem se você apagar uma folha ou o caderno.
+
 ## Pronúncia
 
 - **Ditado:** você ouve uma palavra ou frase e escreve o que escutou.
@@ -32,7 +36,7 @@ Situações reais do dia a dia (pedir um café, fazer check-in, pedir comida…)
 
 O jogo ouve sua voz com o reconhecimento de fala do próprio navegador. Funciona no Chrome e no Edge (no celular, no Chrome do Android e no Safari do iPhone). Na primeira vez, o navegador pede permissão para usar o microfone. Nos navegadores sem esse recurso, como o Firefox, a fala vira autoavaliação: você ouve, repete e diz se ficou parecido.
 
-As vozes que leem as palavras também são do navegador. Chrome e Edge costumam ter vozes para todos os idiomas.
+As vozes que leem as palavras também são do navegador. O jogo escolhe sozinho a voz mais natural que encontrar (as vozes "Natural" do Edge e as do Google no Chrome são as mais fluidas), e no Perfil dá para trocar a voz de cada idioma.
 
 ## Por que Xibolete
 
