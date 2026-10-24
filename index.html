@@ -455,6 +455,9 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .fx-dust{position:absolute;inset:0;pointer-events:none;z-index:3}
 .fx-dust b{position:absolute;width:2px;height:2px;border-radius:50%;background:#fff3d0;opacity:0;animation:dust 7s linear infinite;box-shadow:0 0 3px #fff3d0}
 @keyframes dust{0%{opacity:0;transform:translate(0,0)}25%{opacity:.85}100%{opacity:0;transform:translate(16px,-34px)}}
+.fx-dust.snow b{width:3px;height:3px;background:#fff;box-shadow:0 0 2px #fff;animation-name:snowfall}
+.fx-dust.snow b:nth-child(odd){width:2px;height:2px}
+@keyframes snowfall{0%{opacity:0;transform:translate(0,-60px)}15%{opacity:.9}100%{opacity:0;transform:translate(-18px,70px)}}
 .stage-label,.bracelet{z-index:4}
 .sy-pause{position:absolute;right:10px;bottom:10px;z-index:4;width:42px;height:42px;border-radius:50%;border:0;background:rgba(0,0,0,.55);color:#fff;display:none;place-items:center;cursor:pointer;box-shadow:0 3px 0 rgba(0,0,0,.3)}
 .sy-pause svg{width:22px;height:22px}
@@ -1988,10 +1991,10 @@ let SY = null;
 function startStory(id) {
   const l = storyLang(), st = storyOf(l), ch = st && st.chapters.find(c => c.id === id); if (!ch) return;
   closeModal();
-  SY = { l, st, ch, i: 0, purse: ch.purse, flags: new Set(), mistakes: 0, shards: 0, xp: 0, who: null, scene: "room", label: "", t0: Date.now(),
+  SY = { l, st, ch, i: 0, purse: ch.purse, flags: new Set(), mistakes: 0, shards: 0, xp: 0, who: null, scene: (ch.nodes.find(n => n.scene) || { scene: "room" }).scene, label: "", t0: Date.now(),
     pick: null, wrongs: new Set(), seen: new Set(), found: false, miss: null, hand: 0, payFb: null, listening: false, err: "", heard: "", trOn: false, scores: [], drill: null, drilled: false };
   document.body.classList.add("locked"); $("#lesson").hidden = false;
-  if (HD) HD.prefetch([...new Set(["room", ...ch.nodes.filter(n => n.scene).map(n => n.scene)])]);
+  if (HD) HD.prefetch([...new Set(ch.nodes.filter(n => n.scene).map(n => n.scene))]);
   syAdvance(0);
 }
 const syNode = () => SY.ch.nodes[SY.i];
@@ -2100,7 +2103,7 @@ function syPause() {
 // The stage in layers, "HD-2D" style: soft-focus back, sharp middle with the character, blurred front,
 // then glows, sunbeams, dust and a vignette on top.
 function stageLayers(scene, actor) {
-  const dust = `<i class="fx-dust">${Array.from({ length: 14 }, (_, k) => `<b style="left:${(k * 37) % 100}%;top:${20 + (k * 53) % 70}%;animation-delay:${(k * .7) % 7}s;animation-duration:${6 + (k % 4)}s"></b>`).join("")}</i>`;
+  const dust = `<i class="fx-dust${HD && HD.snowy && HD.snowy(scene) ? " snow" : ""}">${Array.from({ length: 14 }, (_, k) => `<b style="left:${(k * 37) % 100}%;top:${20 + (k * 53) % 70}%;animation-delay:${(k * .7) % 7}s;animation-duration:${6 + (k % 4)}s"></b>`).join("")}</i>`;
   // the HD-2D picture of the place, once it is drawn (the first time takes a few seconds; then it is kept)
   const hd = HD && HD.scene(scene);
   if (hd) return `<img class="lay hd" src="${hd}" alt="">` + actor + dust + `<i class="fx-vig"></i>`;
@@ -2148,7 +2151,7 @@ function renderStory() {
   else if (n.lesson) { box = `<div class="thought lesson"><b>Aprenda</b> ${esc(n.lesson)}</div>`; foot = cont(); }
   else if (n.say) { box = syLine(n.say, n.t, n.pt); foot = cont(); }
   else if (n.memory) {
-    box = `<div class="memory"><div class="mem-glow">${I("zig")}</div><span class="l-tag">Uma memória voltou</span><b class="mem-word">${esc(n.memory[0])}</b><span class="muted">${esc(n.memory[1])}</span>${speakBtn(n.memory[0], SY.l)}</div>`;
+    box = `<div class="memory"><div class="mem-glow">${I("zig")}</div><span class="l-tag">${esc(n.tag || "Uma memória voltou")}</span><b class="mem-word">${esc(n.memory[0])}</b><span class="muted">${esc(n.memory[1])}</span>${speakBtn(n.memory[0], SY.l)}</div>`;
     foot = cont();
   } else if (n.choice) {
     const prev = SY.ch.nodes.slice(0, SY.i).reverse().find(x => x.say && !(x.when && !SY.flags.has(x.when)) && !(x.unless && SY.flags.has(x.unless)));

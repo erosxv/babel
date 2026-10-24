@@ -19,6 +19,17 @@
     ola: { skin: "#b97c55", hair: "#d6d0c8", hairLight: "#f0ece6", style: "cap", cap: "#1f3557", outfit: "vest", cloth: "#f0ece0", vest: "#24406b", face: "grin" },
     lena: { skin: "#f2c4a0", hair: "#e09a3a", hairLight: "#f2bf6a", style: "long", outfit: "apron", cloth: "#8a4e7a", accent: "#f4efe6", face: "smile", blush: true },
     ana: { skin: "#a8724e", hair: "#1d1410", hairLight: "#3a2a22", style: "long", outfit: "robe", cloth: "#e8e2d4", accent: "#d4a840", face: "calm" },
+    // the people of Белоречье, in the Russian story
+    vera: { skin: "#eec3a4", hair: "#c23b32", hairLight: "#e0605a", style: "bun", outfit: "apron", cloth: "#5a6e9c", face: "smile", blush: true },
+    ivan: { skin: "#dba882", hair: "#6b5a4a", hairLight: "#8a7866", style: "cap", cap: "#1f2f52", outfit: "robe", cloth: "#2a3c66", accent: "#e2be5a", face: "grin", beard: true },
+    katya: { skin: "#f5d0b4", hair: "#e3c27a", hairLight: "#f4dc9e", style: "long", outfit: "apron", cloth: "#b8323a", accent: "#f4efe6", face: "smile", blush: true },
+    dmitri: { skin: "#e2b08a", hair: "#4a3424", hairLight: "#6a5040", style: "cap", cap: "#7c7872", outfit: "vest", cloth: "#3e5a3c", vest: "#344c32", face: "stern" },
+    olga: { skin: "#f0cfb4", hair: "#7a4a34", hairLight: "#9a6a50", style: "bun", outfit: "robe", cloth: "#6b2f4a", accent: "#f0e8d6", face: "calm", blush: true },
+    misha: { skin: "#f0c8a4", hair: "#c88a3a", hairLight: "#e0a85a", style: "cap", cap: "#8c603c", outfit: "vest", cloth: "#3a6fb0", vest: "#2c548c", face: "grin" },
+    fyodor: { skin: "#d49a74", hair: "#8a4a2a", hairLight: "#a86a44", style: "cap", cap: "#48444a", outfit: "vest", cloth: "#34465e", vest: "#604a34", face: "grin", beard: true },
+    sonya: { skin: "#f2cdb0", hair: "#2c2230", hairLight: "#4a3e50", style: "short", outfit: "vest", cloth: "#ece4d4", vest: "#7a4a2a", face: "smile", blush: true },
+    lev: { skin: "#e8bc9c", hair: "#ecebe6", hairLight: "#ffffff", style: "short", outfit: "apron", cloth: "#8a3a30", face: "calm", beard: true },
+    ruhero: { skin: "#b07a52", hair: "#2a1c16", hairLight: "#4a3428", style: "short", outfit: "vest", cloth: "#c0703a", vest: "#408060", face: "smile" },
   };
   const shade = (hex, f) => {
     const n = parseInt(hex.slice(1), 16), c = [n >> 16, (n >> 8) & 255, n & 255].map(v => Math.max(0, Math.min(255, Math.round(f < 0 ? v * (1 + f) : v + (255 - v) * f))));

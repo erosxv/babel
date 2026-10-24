@@ -471,6 +471,8 @@ function makeChar(o) {
   if (o.bun) ell(12, 2.6, 2.4, 2, "bun");
   if (o.fringe) for (let x = 8; x <= 16; x++) if ((x + o.fringe) % 3) put(x, 8, "hair");
   if (o.beard) { ell(12, 14.2, 3.6, 2, "hair", (x, y) => y >= 13); put(12, 13, "skin"); }
+  if (o.mustache) for (let x = 10; x <= 14; x++) put(x, 13, "hair");
+  if (o.flaps) { poly([[5.2, 7], [8, 7], [8, 13.5], [5.6, 13]], "cap"); poly([[16, 7], [18.8, 7], [18.4, 13], [16, 13.5]], "cap"); }  // a fur hat's ear flaps
 
   // shade every part as a rounded form lit from the upper left
   const span = {}; for (let y = 0; y < CH; y++) for (let x = 0; x < CW; x++) { const k = R[y * CW + x]; if (!k) continue; const s = span[k + y] || (span[k + y] = [x, x]); s[0] = Math.min(s[0], x); s[1] = Math.max(s[1], x); }
@@ -528,7 +530,7 @@ const FOLK = {
 };
 const sprites = {};
 // puts someone standing on the floor at (x, z); remembers where, so the portrait can come out of them
-function person(S, who, x, z, k = who === "pip" ? .74 : 1) {  // k: size (Pip is a kid)
+function person(S, who, x, z, k = who === "pip" || who === "misha" ? .74 : 1) {  // k: size (Pip and Misha are kids)
   const img = sprites[who] || (sprites[who] = FOLK[who]());
   S.sprites.push({ x, y: 0, z, w: CW / CT * k, h: CH / CT * k, img, blob: true });
   (S.people ||= {})[who] = [x, z, k];
@@ -927,6 +929,522 @@ STORY.square = () => {
   return S;
 };
 
+// ---------- Белоречье: the snowy riverside town of the Russian story ----------
+// the people of Белоречье (portraits further down, in BUSTS)
+Object.assign(FOLK, {
+  ruhero: () => makeChar({ hair: "curly", skirt: 36, longSleeve: true, pal: { ...SK, skin: hex("#b07a52"), hair: hex("#2a1c16"), top: hex("#c0703a"), skirt: [168, 98, 52], belt: [70, 46, 30], buckle: [210, 190, 120], strap: [64, 128, 96], pants: [60, 58, 70], eye: [60, 44, 36] } }),
+  vera: () => makeChar({ hair: "hood", skirt: 38, longSleeve: true, pal: { ...SK, skin: hex("#eec3a4"), hair: [214, 210, 204], hood: hex("#c23b32"), top: hex("#5a6e9c"), skirt: [72, 62, 112], apron: [240, 232, 214], belt: [150, 60, 50], buckle: [230, 200, 110], eye: [80, 100, 130] } }),
+  ivan: () => makeChar({ hair: "cap", beard: true, skirt: 37, longSleeve: true, pal: { ...SK, skin: hex("#dba882"), hair: hex("#6b5a4a"), cap: hex("#1f2f52"), brim: [22, 26, 34], top: hex("#2a3c66"), skirt: [36, 52, 92], belt: [40, 30, 26], buckle: [236, 200, 90], eye: [70, 80, 100] } }),
+  katya: () => makeChar({ hair: "long", fringe: 2, skirt: 37, longSleeve: true, pal: { ...SK, skin: hex("#f5d0b4"), hair: hex("#e3c27a"), top: hex("#b8323a"), skirt: [150, 36, 44], apron: [244, 236, 220], belt: [210, 170, 70], buckle: [250, 230, 150], eye: [70, 110, 160] } }),
+  dmitri: () => makeChar({ hair: "cap", flaps: true, mustache: true, skirt: 37, longSleeve: true, pal: { ...SK, skin: hex("#e2b08a"), hair: hex("#4a3424"), cap: [124, 120, 114], brim: [98, 94, 90], top: hex("#3e5a3c"), skirt: [52, 74, 50], belt: [60, 40, 28], buckle: [220, 200, 120], strap: [60, 40, 28], eye: [70, 70, 60] } }),
+  olga: () => makeChar({ hair: "side", bun: true, skirt: 38, longSleeve: true, pal: { ...SK, skin: hex("#f0cfb4"), hair: hex("#7a4a34"), top: hex("#6b2f4a"), skirt: [70, 40, 60], belt: [200, 170, 110], buckle: [240, 220, 150], eye: [80, 90, 70] } }),
+  misha: () => makeChar({ hair: "cap", flaps: true, longSleeve: true, pal: { ...SK, skin: hex("#f0c8a4"), hair: hex("#c88a3a"), cap: [140, 96, 60], brim: [112, 76, 48], top: hex("#3a6fb0"), pants: [60, 60, 80], belt: [80, 54, 38], buckle: [200, 180, 110], eye: [70, 110, 150] } }),
+  fyodor: () => makeChar({ hair: "cap", flaps: true, beard: true, longSleeve: true, pal: { ...SK, skin: hex("#d49a74"), hair: hex("#8a4a2a"), cap: [72, 68, 74], brim: [58, 54, 60], top: hex("#34465e"), vest: [96, 74, 52], pants: [56, 52, 50], boots: [44, 40, 38], belt: [60, 40, 28], buckle: [180, 170, 150], eye: [70, 90, 110] } }),
+  sonya: () => makeChar({ hair: "side", fringe: 0, longSleeve: true, pal: { ...SK, skin: hex("#f2cdb0"), hair: hex("#2c2230"), top: [236, 228, 212], vest: hex("#7a4a2a"), pants: [70, 60, 72], belt: [60, 40, 28], buckle: [230, 200, 110], strap: [200, 170, 90], eye: [90, 70, 50] } }),
+  lev: () => makeChar({ hair: "short", beard: true, longSleeve: true, pal: { ...SK, skin: hex("#e8bc9c"), hair: [236, 234, 230], top: hex("#8a3a30"), apron: [124, 92, 60], pants: [70, 60, 60], belt: [60, 40, 28], buckle: [220, 190, 110], eye: [80, 110, 140] } }),
+  rufolkA: () => makeChar({ hair: "cap", flaps: true, beard: true, skirt: 36, longSleeve: true, pal: { ...SK, skin: [220, 168, 128], hair: [96, 70, 50], cap: [150, 110, 72], brim: [120, 88, 58], top: [176, 130, 86], skirt: [150, 108, 70], belt: [80, 54, 38], buckle: [200, 180, 110], eye: [60, 50, 40] } }),
+  rufolkB: () => makeChar({ hair: "hood", skirt: 38, longSleeve: true, pal: { ...SK, skin: [238, 200, 170], hair: [120, 80, 50], hood: [58, 96, 160], top: [96, 60, 90], skirt: [80, 50, 76], belt: [200, 170, 110], buckle: [240, 220, 150], eye: [60, 90, 60] } }),
+});
+
+// skies of a winter day and of a winter night
+const winterSky = seed => d => { const y = clamp(d[1] * 2); let c = mix([232, 230, 236], [118, 148, 196], Math.pow(y, .6)); const cl = fbm(d[0] / (d[1] + .2) * 1.6, 1 / (d[1] + .2) * 2.4, seed); if (cl > .56) c = mix(c, [240, 240, 246], clamp((cl - .56) * 3) * .85); return c; };
+const nightSky = seed => d => { const y = clamp(d[1] * 2.4); let c = mix([46, 54, 94], [10, 14, 38], y); if (d[1] > .03 && hash(Math.floor(d[0] * 260), Math.floor(d[1] * 260), seed) > .994) c = [226, 232, 255]; return c; };
+// snow: soft blue-white drifts with a few glints; `path` (0..1) marks where feet have trodden it grey
+const snowMat = (seed, path) => (p, n) => {
+  const [u, v] = uvOf(p, n), ui = Math.floor(u * T), vi = Math.floor(v * T), r = hash(ui, vi, seed);
+  if (r > .993 && n[1] > .5) return { c: [255, 255, 255], e: [46, 48, 56] };
+  let c = mix([200, 212, 232], [246, 248, 252], clamp(fbm(u * .45, v * .45, seed) * 1.4 - .15));
+  if (n[1] < .5) c = mul(c, .92);
+  if (path) { const k = clamp(path(p) * (.6 + .6 * fbm(u * 1.4, v * 1.4, seed + 1))); if (k > 0) c = mix(c, [150, 146, 148], k * .5); }
+  return { c: jit(c, r, .025) };
+};
+// a roof under snow: white on top, dark boards along the edges and underneath
+const snowRoof = (seed, under = [96, 64, 44]) => { const s = snowMat(seed); return (p, n) => n[1] > .25 ? s(p, n) : { c: jit(under, hash(Math.floor(p[0] * T), Math.floor((p[1] + p[2]) * T), seed), .08) }; };
+// walls of round logs laid one on top of another, with dark seams
+const logs = (seed, base = [128, 84, 52]) => (p, n) => {
+  if (Math.abs(n[1]) > .7) return { c: jit(mul(base, .85), hash(Math.floor(p[0] * T), Math.floor(p[2] * T), seed)) };
+  const u = Math.abs(n[2]) > .5 ? p[0] : p[2], li = Math.floor(p[1] / .32), ly = p[1] / .32 - li;
+  let c = mul(jit(base, hash(Math.floor(u * T / 5), li, seed), .07), .7 + .42 * Math.sin(ly * Math.PI));
+  if (hash(Math.floor(u * T), li * 7 + Math.floor(ly * 5), seed + 1) > .9) c = mul(c, .86);
+  if (ly < .07) c = mul(c, .45);
+  return { c };
+};
+// an izba: log walls, a plank door and windows in carved white frames (наличники)
+function izbaWall(seed, x0, x1, z0, z1, o = {}) {
+  const lg = logs(seed, o.log), trim = o.trim || [238, 234, 222], trim2 = o.trim2 || [66, 108, 168], door = o.door !== false;
+  return (p, n) => {
+    if (Math.abs(n[1]) > .7) return lg(p, n);
+    const facingZ = Math.abs(n[2]) > .7, u = facingZ ? p[0] - x0 : p[2] - z0, wdt = facingZ ? x1 - x0 : z1 - z0, y = p[1], mid = wdt / 2;
+    const front = facingZ && n[2] < 0, ri = hash(Math.floor(u * T), Math.floor(y * T), seed);
+    if (front && door && Math.abs(u - mid) < .5 && y < 1.95) {
+      if (Math.abs(u - mid) > .42 || y > 1.87) return { c: jit(trim, ri, .04) };
+      let c = jit([112, 72, 44], hash(Math.floor((u - mid + .5) * T / 3), 1, seed), .1);
+      if (Math.floor((u - mid + .5) * T) % 3 === 0) c = mul(c, .7);
+      if (Math.abs(u - mid - .26) < .05 && Math.abs(y - .95) < .05) c = [220, 180, 90];
+      return { c };
+    }
+    const bay = 1.7, k = Math.floor(u / bay), lx = u - k * bay - .5, ly = y - .85;
+    if (lx >= 0 && lx <= .7 && ly >= 0 && ly <= 1.5 && k * bay + 1.3 < wdt && !(front && door && Math.abs(k * bay + .85 - mid) < 1)) {
+      if (ly > 1.08) { if (Math.abs(lx - .35) < (1.5 - ly) * .95) return { c: (Math.floor(lx * T) + Math.floor(ly * T)) % 3 ? trim : trim2 }; }
+      else if (lx < .08 || lx > .62 || ly < .1 || ly > 1) return { c: ly < .1 && Math.floor(lx * T) % 2 ? trim2 : trim };
+      else if (Math.abs(lx - .35) < .03 || Math.abs(ly - .58) < .03) return { c: trim };
+      else if (o.lit) { const g = [255, 196, 116]; return { c: g, e: mul(g, .8) }; }
+      else { const fr = clamp(1 - Math.min(lx - .08, .62 - lx, ly - .1, 1 - ly) * 9); return { c: mix(mix([44, 56, 86], [140, 168, 200], clamp(ly)), [226, 236, 248], fr * .8), spec: true }; }
+    }
+    if (u < .14 || u > wdt - .14) return { c: mul(lg(p, n).c, .8) };
+    return lg(p, n);
+  };
+}
+// an izba with a snowy roof, a chimney and drifts along the front
+function izba(S, x0, x1, z0, z1, h, ridge, seed, o = {}) {
+  house(S, x0, x1, z0, z1, h, o.R || 1.9, ridge, izbaWall(seed, x0, x1, z0, z1, o), snowRoof(seed + 1));
+  const cx = ridge === "x" ? x0 + (x1 - x0) * .7 : (x0 + x1) / 2 + .2, cz = ridge === "x" ? (z0 + z1) / 2 + .2 : z0 + (z1 - z0) * .3;
+  S.prims.push(B([cx - .3, h, cz - .3], [cx + .3, h + (o.R || 1.9) + .7, cz + .3], bricks(seed + 2, [[150, 70, 56], [130, 60, 50]], 8, 4, [200, 196, 190])));
+  drift(S, x0, x1, z0, seed + 3, o.door !== false);
+}
+// low snowdrifts along the foot of a wall (with a gap at the door)
+function drift(S, x0, x1, z, seed, door = true) {
+  const mid = (x0 + x1) / 2, m = snowMat(seed);
+  for (let x = x0 - .2; x < x1 + .2;) {
+    const w = .5 + hash(x * 10 | 0, 1, seed) * .9, h = .1 + hash(x * 10 | 0, 2, seed) * .2, xe = Math.min(x + w, x1 + .2);
+    if (!(door && xe > mid - .6 && x < mid + .6)) S.prims.push(B([x, 0, z - .25 - h], [xe, h, z + .05], m, { clean: true }));
+    x = xe;
+  }
+}
+// a fir with snow on each tier, and a bare winter birch (white bark, black marks)
+function fir(seed, snowy = true) {
+  const tiers = [0, 1, 2, 3].map(t => ({ yt: 1 + t * 11, yb: 22 + t * 11, w: 6 + t * 3.8 }));
+  const inT = (x, y, Ti) => { if (y < Ti.yt || y > Ti.yb) return false; return Math.abs(x - 17.5) <= (y - Ti.yt + .5) / (Ti.yb - Ti.yt) * Ti.w + (hash(x, y, seed) - .5) * 1.2; };
+  return procSprite(36, 64, (x, y) => {
+    if (y >= 54) return Math.abs(x - 17.5) < 2.2 ? (x < 18 ? [104, 72, 48] : [76, 52, 34]) : null;
+    for (let t = 3; t >= 0; t--) {
+      const Ti = tiers[t]; if (!inT(x, y, Ti)) continue;
+      if (snowy && (!inT(x, y - 1, Ti) || !inT(x, y - 2, Ti)) && hash(x, y, seed + 3) > .15) return x < 18 ? [246, 248, 252] : [206, 216, 234];
+      const lv = (17.5 - x) / Ti.w * .35 + (hash(x, y, seed + 1) - .5) * .5 - (y - Ti.yt) / (Ti.yb - Ti.yt) * .3, g = [40, 82, 62];
+      return lv > .25 ? mul(g, 1.3) : lv > -.1 ? g : lv > -.4 ? mul(g, .75) : mul(g, .55);
+    }
+    return null;
+  });
+}
+function birch(seed) {
+  return procSprite(30, 64, (x, y) => {
+    const cx = 15 + Math.sin(y * .08 + seed) * 1.2, tw = y > 20 ? 1.6 : 1.1;
+    if (Math.abs(x - cx) <= tw) return hash(x, y >> 1, seed) > .82 ? [40, 38, 40] : x < cx ? [244, 240, 232] : [196, 192, 188];
+    for (let k = 0; k < 7; k++) {
+      const by = 6 + k * 6 + hash(k, 1, seed) * 3, dir = k % 2 ? 1 : -1, len = 6 + hash(k, 2, seed) * 7, dx = (x - cx) * dir;
+      if (dx > 0 && dx < len && Math.abs(by - y - dx * .8) < .7) return [92, 78, 72];
+    }
+    return null;
+  });
+}
+const FIRS = [fir(1), fir(2), fir(3)], BIRCH = [birch(1), birch(2)];
+// a tiny 3×5 pixel font for the signs (Cyrillic capitals)
+const FONT = { А: "010101111101101", Б: "111100111101111", В: "110101110101110", Е: "111100111100111", Ж: "101111010111101", И: "101101111111101", К: "101110100110101",
+  Л: "011101101101101", М: "101111111101101", О: "111101101101111", П: "111101101101101", Р: "111101111100100", С: "111100100100111", Т: "111010010010010",
+  У: "101101111001111", Ч: "101101111001001", Ш: "101101101101111", Ь: "100100111101111", Я: "111101111011101" };
+// a board with letters on its front face (x0..x1, y0..y1 are the board's front edges)
+function signMat(text, x0, x1, y0, y1, bg, fg, seed = 1) {
+  const cols = text.length * 4 + 3, k = Math.max(1, Math.floor(Math.min((x1 - x0) * T / cols, (y1 - y0) * T / 7)));
+  const ox = Math.floor(((x1 - x0) * T - cols * k) / 2), oy = Math.floor(((y1 - y0) * T - 7 * k) / 2);
+  return (p, n) => {
+    if (n[2] > -.5) return { c: mul(bg, .8) };
+    const tx = Math.floor((p[0] - x0) * T) - ox, ty = Math.floor((y1 - p[1]) * T) - oy, fx = Math.floor(tx / k) - 2, fy = Math.floor(ty / k) - 1;
+    let on = false;
+    if (fy >= 0 && fy < 5 && fx >= 0) { const g = FONT[text[Math.floor(fx / 4)]]; if (g && fx % 4 < 3) on = g[fy * 3 + fx % 4] === "1"; }
+    return { c: jit(on ? fg : bg, hash(tx, ty, seed), .05) };
+  };
+}
+// a round clock face on the front of a box, hands at h:m; `glow` lights it from behind
+const clockFace = (cx, cy, r, h, m, rim = [60, 56, 60], glow = 0) => (p, n) => {
+  if (n[2] > -.5) return { c: rim };
+  const dx = p[0] - cx, dy = p[1] - cy, d = Math.hypot(dx, dy) / r;
+  if (d > 1) return { c: rim };
+  if (d > .9) return { c: mul(rim, 1.35) };
+  const a = Math.atan2(dx, dy), hand = (ang, len, w) => { const ux = Math.sin(ang), uy = Math.cos(ang), al = dx * ux + dy * uy; return al > -.05 * r && al < len * r && Math.abs(-dx * uy + dy * ux) < w * r; };
+  if (hand((h % 12 + m / 60) / 12 * Math.PI * 2, .5, .08) || hand(m / 60 * Math.PI * 2, .78, .05)) return { c: [30, 28, 30] };
+  const tick = d > .72 && d < .86 && Math.abs(((a / (Math.PI / 6)) % 1 + 1) % 1 - .5) > .4, c = tick ? [40, 38, 40] : [246, 238, 216];
+  return glow ? { c, e: mul(c, glow) } : { c };
+};
+const brass = seed => (p, n) => ({ c: jit(n[0] < -.3 ? [246, 200, 110] : n[0] > .5 ? [168, 116, 52] : [214, 160, 72], hash(Math.floor(p[1] * T), 1, seed), .05), spec: true });
+// a window seen from inside on a winter day: frost creeping in from the frame, daylight coming through
+const frost = (x0, x1, y0, y1, seed) => (p, n) => {
+  const u = (p[0] - x0) / (x1 - x0), v = (p[1] - y0) / (y1 - y0), ui = Math.floor(p[0] * T), vi = Math.floor(p[1] * T);
+  if (u < .06 || u > .94 || v < .06 || v > .94 || Math.abs(u - .5) < .03 || Math.abs(v - .55) < .025) return { c: jit([226, 220, 206], hash(ui, vi, seed), .04) };
+  const fr = clamp(1 - Math.min(u, 1 - u, v, 1 - v) * 5 + (fbm(u * 6, v * 6, seed) - .5) * .9), c = mix(mix([176, 200, 230], [226, 236, 248], v), [250, 252, 255], fr);
+  return { c, e: mul(c, .55) };
+};
+// an onion dome: stacked rings that swell and narrow to a point, with a gold cross on top
+function onion(S, x, y0, z, r, mat, gold) {
+  const prof = [1, 1.16, 1.27, 1.3, 1.24, 1.08, .86, .6, .36, .16], h = r * .32;
+  prof.forEach((k, i) => S.prims.push(CYL(x, z, r * k, y0 + i * h, y0 + (i + 1) * h, mat)));
+  const top = y0 + prof.length * h, w = Math.max(.04, r * .06);
+  S.prims.push(B([x - w, top, z - w], [x + w, top + r * 1.1, z + w], gold), B([x - r * .32, top + r * .66, z - w], [x + r * .32, top + r * .66 + 2 * w, z + w], gold));
+}
+const dome = (base, seed, stars) => (p, n) => { const ui = Math.floor(p[0] * T * 1.5), vi = Math.floor(p[1] * T * 1.5); return { c: stars && hash(ui, vi, seed) > .95 ? [246, 206, 96] : jit(base, hash(ui, vi, seed + 1), .05), spec: true }; };
+// a white church with a big gold dome on a drum and four small blue ones with gold stars
+function church(S, x, z, s, seed) {
+  const wall = (p, n) => {
+    if (Math.abs(n[1]) < .7 && !CUR.cyl) { const u = (Math.abs(n[2]) > .7 ? p[0] - x : p[2] - z) / s, y = p[1] / s, wu = ((u + .75) % 1.5 + 1.5) % 1.5 - .75;
+      if (Math.abs(wu) < .2 && y > 1.6 && y < 3 + Math.sqrt(Math.max(0, .04 - wu * wu))) return { c: [54, 58, 80] }; }
+    return { c: jit([240, 236, 226], hash(Math.floor(p[0] * T), Math.floor(p[1] * T), seed), .03) };
+  };
+  const gold = dome([226, 176, 66], seed + 1), blue = dome([52, 84, 160], seed + 2, true);
+  S.prims.push(B([x - 3 * s, 0, z - 3 * s], [x + 3 * s, 4.6 * s, z + 3 * s], wall), B([x - 3.2 * s, 4.6 * s, z - 3.2 * s], [x + 3.2 * s, 5 * s, z + 3.2 * s], snowRoof(seed + 3, [70, 120, 96])));
+  S.prims.push(CYL(x, z, 1.3 * s, 5 * s, 7.2 * s, wall)); onion(S, x, 7.2 * s, z, 1.3 * s, gold, gold);
+  for (const [dx, dz] of [[-2.1, -2.1], [2.1, -2.1], [-2.1, 2.1], [2.1, 2.1]]) { S.prims.push(CYL(x + dx * s, z + dz * s, .55 * s, 5 * s, 6.2 * s, wall)); onion(S, x + dx * s, 6.2 * s, z + dz * s, .55 * s, blue, gold); }
+}
+// a nesting doll: painted body and head, a face on the front
+function matryoshka(S, x, y, z, s, col) {
+  const body = (p, n) => ({ c: n[2] < -.5 && Math.abs(p[0] - x) < .05 * s && p[1] < y + .16 * s ? [246, 226, 120] : jit(col, hash(Math.floor(p[0] * T * 4), Math.floor(p[1] * T * 4), 3), .05) });
+  const head = (p, n) => ({ c: n[2] < -.4 && Math.abs(p[0] - x) < .045 * s && p[1] < y + .3 * s ? [244, 214, 186] : col });
+  S.prims.push(CYL(x, z, .1 * s, y, y + .2 * s, body, { clean: true }), CYL(x, z, .072 * s, y + .2 * s, y + .33 * s, head, { clean: true }));
+}
+// a snowman: three balls of snow, a carrot nose, coal eyes and a bucket for a hat
+function snowman(S, x, z, seed) {
+  const m = snowMat(seed);
+  S.prims.push(CYL(x, z, .48, 0, .78, m, { clean: true }), CYL(x, z, .35, .78, 1.32, m, { clean: true }), CYL(x, z, .24, 1.32, 1.72, m, { clean: true }));
+  S.prims.push(B([x - .03, 1.5, z - .42], [x + .03, 1.56, z - .2], flat([236, 120, 40])), CYL(x, z, .2, 1.72, 1.92, flat([90, 96, 110])));
+  for (const dx of [-.08, .08]) S.prims.push(B([x + dx - .025, 1.6, z - .245], [x + dx + .025, 1.65, z - .2], flat([30, 30, 34])));
+}
+// a pine sled loaded with firewood
+function sled(S, x, z, seed) {
+  const wood = planks(seed, [150, 108, 66], 3, [60, 40, 28], true);
+  S.prims.push(B([x - .8, 0, z - .35], [x + .8, .08, z - .27], wood), B([x - .8, 0, z + .27], [x + .8, .08, z + .35], wood), B([x - .05, 0, z - .3], [x + .05, .09, z + .3], wood), B([x - .7, .08, z - .35], [x + .7, .24, z + .35], wood));
+  for (let i = 0; i < 4; i++) S.prims.push(B([x - .62, .24 + (i > 2 ? .2 : 0), z - .3 + (i % 3) * .2], [x + .62, .44 + (i > 2 ? .2 : 0), z - .12 + (i % 3) * .2], (p, n) => ({ c: Math.abs(n[0]) > .5 ? [214, 176, 120] : jit([110, 78, 52], hash(Math.floor(p[0] * T), i, seed), .1) })));
+}
+// a winter crowd of trees: firs and birches scattered behind the scene
+function forest(S, x0, x1, z0, z1, n, seed) {
+  for (let i = 0; i < n; i++) {
+    const x = x0 + hash(i, 1, seed) * (x1 - x0), z = z0 + hash(i, 2, seed) * (z1 - z0), b = hash(i, 3, seed) > .75, k = .8 + hash(i, 4, seed) * .6;
+    S.sprites.push(b ? { x, y: 0, z, w: 2.6 * k, h: 5.6 * k, img: BIRCH[i % 2] } : { x, y: 0, z, w: 3.4 * k, h: 6 * k, img: FIRS[i % 3] });
+  }
+}
+
+// the railway station at night: platform, a lit carriage, the station house with its sign, falling snow
+STORY.station = () => {
+  const S = base({ cam: { p: [0, 3.9, -10.5], pitch: .12, fr: 1.05 }, ao: .85, amb: [.2, .23, .36],
+    sun: { dir: norm([-.45, .8, -.4]), c: [.36, .42, .62], soft: .06 },
+    fog: { c: [40, 48, 78], start: 16, k: .035, max: .75 }, grade: [1, 1, 1.04], bloom: { t: 170, a: .65 },
+    dof: { near: 9.5, nearRamp: 3, far: 20, farRamp: 18, blur: 4 }, sky: nightSky(601) });
+  const snow = snowMat(602, p => clamp(1 - Math.abs(p[2] - 2) / 2.4) * clamp(1.2 - Math.abs(p[0]) / 8)), wood = planks(603, [104, 74, 52], 5, [40, 28, 20], true), iron = flat([46, 46, 52]);
+  S.prims.push(B([-30, -1, -8], [30, 0, 4.2], snow), B([-30, 0, 3.9], [30, .02, 4.2], flat([196, 176, 96]), { noShadow: true }));
+  // the tracks below the platform, then snowy fields
+  S.prims.push(B([-30, -1.7, 4.2], [30, -.7, 7.6], snowMat(604)), B([-30, -1, 7.6], [30, 0, 80], snowMat(605)));
+  for (let x = -29; x < 30; x += .9) S.prims.push(B([x, -.7, 4.9], [x + .25, -.62, 6.9], wood));
+  for (const z of [5.15, 6.55]) S.prims.push(B([-30, -.7, z], [30, -.55, z + .1], iron));
+  // a green carriage with warm windows, on its wheels
+  const wagon = (p, n) => {
+    const r = hash(Math.floor(p[0] * T), Math.floor(p[1] * T), 606);
+    if (Math.abs(n[2]) > .5) { const wu = ((p[0] + 15) % 1.6 + 1.6) % 1.6, y = p[1];
+      if (wu > .35 && wu < 1.25 && y > 1.05 && y < 1.95) { if (wu < .41 || wu > 1.19 || y < 1.11 || y > 1.89) return { c: [196, 190, 170] }; const g = [255, 204, 126]; return { c: g, e: mul(g, .9) }; }
+      if (Math.abs(y - .62) < .07) return { c: [214, 176, 80] }; }
+    return { c: jit([44, 86, 70], r, .05) };
+  };
+  S.prims.push(B([-15, -.25, 5], [1.5, 2.7, 6.8], wagon), B([-14.6, -.4, 5.4], [1.1, -.2, 6.4], iron), B([-15.1, 2.7, 4.95], [1.6, 2.86, 6.85], snowRoof(607, [50, 52, 58])));
+  for (const x of [-13.4, -11.8, -2.6, -1]) for (const z of [5.1, 6.5]) S.prims.push(B([x, -.55, z], [x + .7, -.15, z + .2], iron));
+  for (const x of [-12, -8.8, -5.6, -2.4, .4]) S.lights.push({ p: [x, 1.5, 4.4], c: [.9, .62, .3], r: 3.4, soft: .3 });
+  // the station house beyond the tracks, with its name on a board
+  izba(S, 3.5, 13, 9, 14, 3.2, "x", 608, { lit: true, trim2: [150, 60, 50], R: 2.2 });
+  S.prims.push(B([6.4, 2.35, 8.86], [10.1, 2.95, 9.02], signMat("БЕЛОРЕЧЬЕ", 6.4, 10.1, 2.35, 2.95, [36, 52, 96], [246, 236, 200])));
+  // lamps, a bench under snow, the station clock (almost midnight) and the hero's suitcase
+  lantern(S, -4.6, 2.4, 2.3, true, iron); lantern(S, 5.2, 2.8, 2.3, true, iron);
+  S.prims.push(B([-8.4, .42, 2.8], [-6.6, .5, 3.25], wood, { ok: true }), B([-8.4, .5, 2.8], [-6.6, .57, 3.25], snowMat(609), { clean: true }), B([-8.3, 0, 2.85], [-8.15, .42, 3.2], wood), B([-6.85, 0, 2.85], [-6.7, .42, 3.2], wood));
+  S.prims.push(CYL(2.9, 3.6, .06, 0, 2.6, iron), B([2.6, 2.6, 3.5], [3.2, 3.2, 3.7], clockFace(2.9, 2.9, .28, 11, 50, [46, 46, 52], .5)));
+  S.prims.push(B([-1.6, 0, 2.1], [-1.05, .42, 2.36], flat([124, 70, 44])), B([-1.4, .42, 2.2], [-1.25, .5, 2.26], flat([60, 40, 30])), B([-1.62, .2, 2.08], [-1.03, .24, 2.38], flat([200, 170, 90])));
+  // firs and birches all around, a snowy forest far away
+  forest(S, -26, 26, 18, 40, 22, 610);
+  S.sprites.push({ x: -10.5, y: 0, z: 1.2, w: 3.4, h: 6.2, img: FIRS[0] }, { x: 9.8, y: 0, z: 1.8, w: 2.4, h: 5.2, img: BIRCH[0] }, { x: 15.6, y: 0, z: 10.6, w: 3.4, h: 6, img: FIRS[1] });
+  person(S, "ivan", 2.3, 3.0); person(S, "ruhero", -.5, 2.2);
+  return S;
+};
+// the tea house «Самовар»: log walls, a big white stove, the samovar on the table, frosty windows
+STORY.chainaya = () => {
+  const S = base({ cam: { p: [0, 3.7, -7.4], pitch: .2, fr: 1 }, ao: .8, amb: [.34, .3, .3],
+    fog: { c: [30, 22, 18], start: 30, k: .01, max: 0 }, grade: [1.05, 1, .95], bloom: { t: 180, a: .6 },
+    dof: { near: 9.5, nearRamp: 3, far: 17, farRamp: 10, blur: 4 }, sky: () => [210, 220, 236] });
+  const wall = logs(611, [146, 98, 60]), floor = planks(612, [152, 106, 66], 6), wood = planks(613, [118, 78, 48], 4), iron = flat([52, 50, 56]);
+  S.prims.push(B([-8, -1, -4], [8, 0, 7.2], floor), B([-8, 0, 6.9], [8, 4, 7.2], wall), B([-8, 0, -4], [-7.4, 4, 6.9], wall), B([7.4, 0, -4], [8, 4, 6.9], wall));
+  // two frosty windows, daylight coming in
+  for (const [x0, x1] of [[1.2, 2.8], [4.3, 5.9]]) { S.prims.push(B([x0, 1.2, 6.84], [x1, 2.7, 6.9], frost(x0, x1, 1.2, 2.7, 614)), B([x0 - .12, 1.08, 6.7], [x1 + .12, 1.2, 6.9], wood)); S.lights.push({ p: [(x0 + x1) / 2, 2, 6.2], c: [.5, .58, .78], r: 7, soft: .6 }); }
+  // the Russian stove: white tiles with a blue band, the fire glowing in its mouth
+  const stove = (p, n) => {
+    const [u, v] = uvOf(p, n), ui = Math.floor(u * T), vi = Math.floor(v * T);
+    if (n[2] < -.5 && Math.abs(p[0] + 6) < .45 && p[1] > .5 && p[1] < 1.15 + Math.sqrt(Math.max(0, .2 - (p[0] + 6) ** 2)) * .4) { const g = mix([255, 150, 60], [90, 30, 16], clamp((p[1] - .5) * 1.6)); return { c: g, e: mul(g, .8) }; }
+    if (((ui % 8) + 8) % 8 === 0 || ((vi % 8) + 8) % 8 === 0) return { c: [196, 190, 180] };
+    const band = p[1] > 1.32 && p[1] < 1.58, dm = Math.abs(((ui % 8) + 8) % 8 - 4) + Math.abs(((vi % 8) + 8) % 8 - 4);
+    return { c: band && dm < 3 ? [56, 92, 170] : jit([240, 236, 228], hash(ui, vi, 615), .03) };
+  };
+  S.prims.push(B([-7.4, 0, 4.6], [-4.6, 1.7, 6.9], stove, { clean: true }), B([-7.4, 1.7, 5.4], [-5.2, 2.7, 6.9], stove, { clean: true }), B([-6.7, 2.7, 6.1], [-5.8, 4, 6.9], stove, { clean: true }));
+  S.sprites.push({ x: -6, y: .5, z: 4.62, w: .6, h: .55, img: FLAME, emit: 1.2, noShadow: true });
+  S.lights.push({ p: [-6, .9, 4.2], c: [1.9, 1, .42], r: 8, soft: .25 }, { p: [0, 3.2, 1.5], c: [.42, .32, .24], r: 10, soft: .5 });
+  // the table with an embroidered cloth, the samovar, cups and a plate of pirozhki
+  roundTable(S, 2.2, 4.2, .75, wood);
+  S.prims.push(CYL(2.2, 4.2, .8, .8, .83, (p, n) => { const d = Math.hypot(p[0] - 2.2, p[2] - 4.2); return { c: d > .68 || (Math.abs(n[1]) < .5 && Math.floor(Math.atan2(p[2] - 4.2, p[0] - 2.2) * 8) % 2) ? [190, 40, 46] : [246, 242, 232] }; }, { clean: true }));
+  const br = brass(616), china = (p, n) => ({ c: Math.floor(p[1] * T * 2) % 3 === 0 ? [60, 90, 170] : [246, 246, 240] });
+  S.prims.push(CYL(2.2, 4.4, .16, .83, .95, br), CYL(2.2, 4.4, .28, .95, 1.45, br), CYL(2.2, 4.4, .2, 1.45, 1.55, br), CYL(2.2, 4.4, .12, 1.55, 1.62, br), CYL(2.2, 4.4, .13, 1.62, 1.82, china, { clean: true }), CYL(2.2, 4.4, .07, 1.82, 1.87, china, { clean: true }));
+  S.prims.push(B([1.86, 1.28, 4.37], [1.94, 1.4, 4.43], flat([60, 40, 30])), B([2.46, 1.28, 4.37], [2.54, 1.4, 4.43], flat([60, 40, 30])), B([2.17, 1, 4.05], [2.23, 1.06, 4.16], br));
+  for (const [x, z] of [[1.66, 3.86], [2.7, 3.82]]) S.prims.push(CYL(x, z, .12, .83, .85, china, { clean: true }), CYL(x, z, .07, .85, .95, china, { clean: true }));
+  S.prims.push(CYL(1.6, 4.5, .2, .83, .85, flat([240, 236, 226]), { clean: true }));
+  for (const [x, z] of [[1.52, 4.44], [1.66, 4.54], [1.56, 4.6]]) S.prims.push(B([x - .07, .85, z - .04], [x + .07, .91, z + .04], flat([206, 140, 64])));
+  // a corner table with stools near the camera, a lamp on the beam, an embroidered towel, shelf of cups
+  roundTable(S, -3.4, 1.6, .7, wood); stool(S, -4.4, 1.3, wood); stool(S, -2.5, .9, wood); candle(S, -3.3, .8, 1.6);
+  S.prims.push(B([-7.4, 3.4, 3.2], [7.4, 3.6, 3.4], wood)); hangLamp(S, .4, 3.3, 2.5, 3.4, iron);
+  S.prims.push(B([-.4, 1.6, 6.84], [.2, 2.9, 6.9], (p, n) => ({ c: (Math.floor(p[1] * T) % 6 < 2 && p[1] < 2) ? [196, 40, 46] : [246, 242, 232] }), { clean: true }));
+  S.prims.push(B([6.2, 2.2, 3.2], [7.4, 2.28, 5.6], wood)); for (const z of [3.5, 4, 4.5, 5]) S.prims.push(CYL(6.8, z, .1, 2.28, 2.42, china, { clean: true }));
+  matryoshka(S, 6.8, 2.28, 5.35, 1.4, [196, 40, 46]);
+  S.prims.push(B([-2, 0, 1.2], [2, .02, 3.6], rugMat([150, 40, 46], [236, 196, 96], 617), { noShadow: true }));
+  person(S, "vera", 1.0, 4.9); person(S, "katya", -3.4, 4.7); person(S, "ruhero", -.5, 2.4);
+  return S;
+};
+// the winter fair on the town square: stalls under snow, a church with onion domes far away
+STORY.snowmarket = () => {
+  const S = base({ cam: { p: [0, 3.8, -11.5], pitch: .1, fr: 1.05 }, ao: .8, amb: [.46, .5, .62],
+    sun: { dir: norm([-.5, .55, -.3]), c: [1.12, 1, .86] },
+    fog: { c: [214, 222, 236], start: 26, k: .014, max: .6 }, grade: [1.02, 1, 1.02], bloom: { t: 235, a: .4 },
+    dof: { near: 10.5, nearRamp: 3, far: 26, farRamp: 30, blur: 4 }, sky: winterSky(621) });
+  S.prims.push(B([-30, -1, -6], [30, 0, 160], snowMat(622, p => Math.max(clamp(1 - Math.abs(p[2] - 3.4) / 2.6), clamp(1 - Math.abs(p[0] - .4) / 1.6) * clamp((p[2] - 3) / 3)))));
+  izba(S, -14, -7.6, 10, 15, 2.8, "x", 623, { trim2: [70, 120, 80] });
+  izba(S, -6.6, -1.8, 12, 17, 3, "z", 625, { R: 2.2 });
+  izba(S, 2.6, 8.8, 10, 15, 2.7, "x", 627, { trim2: [160, 70, 56] });
+  izba(S, 9.8, 15.5, 11, 16, 3, "z", 629, { R: 2.2, trim2: [70, 120, 80] });
+  church(S, .4, 60, .8, 631);
+  // the fair's sign over the path
+  for (const x of [-1.75, 2.35]) S.prims.push(B([x, 0, 8.4], [x + .2, 3.6, 8.6], planks(632, [120, 82, 52], 4)));
+  S.prims.push(B([-1.65, 2.8, 8.38], [2.45, 3.4, 8.6], signMat("ЯРМАРКА", -1.65, 2.45, 2.8, 3.4, [176, 40, 46], [250, 226, 140])));
+  // stall builder: counter, four posts, a sloped roof under snow, goods on top
+  const stall = (x0, x1, z0, col, seed, goods) => {
+    const z1 = z0 + .8, wood = planks(seed, [126, 86, 54], 4);
+    S.prims.push(B([x0, 0, z0 + .1], [x1, .95, z1], wood), B([x0, .95, z0], [x1, 1.05, z1 + .1], planks(seed + 1, [160, 116, 72], 4)));
+    S.prims.push(B([x0 + .05, 0, z1 + 1.5], [x0 + .2, 2.2, z1 + 1.65], wood), B([x1 - .2, 0, z1 + 1.5], [x1 - .05, 2.2, z1 + 1.65], wood), B([x0 + .05, 0, z0 + .15], [x0 + .2, 1.9, z0 + .3], wood), B([x1 - .2, 0, z0 + .15], [x1 - .05, 1.9, z0 + .3], wood));
+    S.prims.push({ ok: true, lo: [x0 - .2, 1.7, z0 - .4], hi: [x1 + .2, 2.4, z1 + 1.8], mat: snowRoof(seed + 2, col), planes: [{ n: [1, 0, 0], d: x1 + .2 }, { n: [-1, 0, 0], d: -(x0 - .2) }, { n: [0, 0, 1], d: z1 + 1.8 }, { n: [0, 0, -1], d: -(z0 - .4) },
+      planeFrom("z", z0 - .4, 1.84, z1 + 1.8, 2.36, [z0 + .5, 1.93]), planeFrom("z", z0 - .4, 1.72, z1 + 1.8, 2.24, [z0 + .5, 1.93])] });
+    goods(x0, x1, z0);
+  };
+  // Katya's pirozhki, with a samovar on the counter
+  stall(-4.4, -.6, 5.2, [150, 40, 46], 633, (x0, x1, z0) => {
+    for (let i = 0; i < 14; i++) { const x = x0 + .2 + (i % 7) * .32, z = z0 + .2 + Math.floor(i / 7) * .3; S.prims.push(B([x, 1.05, z], [x + .24, 1.15, z + .16], flat([206, 142, 66]))); }
+    const br = brass(634); S.prims.push(CYL(x1 - .5, z0 + .4, .12, 1.05, 1.15, br), CYL(x1 - .5, z0 + .4, .2, 1.15, 1.5, br), CYL(x1 - .5, z0 + .4, .1, 1.5, 1.62, br));
+  });
+  // knitted hats and scarves, valenki and nesting dolls
+  stall(1.8, 5.6, 5.6, [52, 84, 160], 635, (x0, x1, z0) => {
+    const cols = [[196, 40, 46], [52, 84, 160], [236, 196, 70], [60, 130, 80], [240, 236, 226]];
+    for (let i = 0; i < 6; i++) matryoshka(S, x0 + .3 + i * .22, 1.05, z0 + .25, 1.6 - i * .14, cols[i % 4]);
+    for (let i = 0; i < 3; i++) S.prims.push(B([x0 + 1.8 + i * .55, 1.05, z0 + .15], [x0 + 2.25 + i * .55, 1.18, z0 + .65], cloth(cols[(i + 1) % 5], i, [240, 236, 226])));
+    S.prims.push(B([x0 + .2, 1.75, z0 + 1.1], [x1 - .2, 1.8, z0 + 1.15], flat([50, 50, 56]), { ok: true }));
+    S.prims.push(B([x0 + .6, .95, z0 + 1.08], [x0 + 1, 1.75, z0 + 1.12], cloth([196, 40, 46], 7, [240, 236, 226])), B([x0 + 2.4, 1.1, z0 + 1.08], [x0 + 2.8, 1.75, z0 + 1.12], cloth([60, 130, 80], 8, [236, 196, 70])));
+    S.prims.push(B([x1 + .1, 0, z0 + .1], [x1 + .32, .38, z0 + .44], flat([110, 106, 104])), B([x1 + .36, 0, z0 + .1], [x1 + .58, .38, z0 + .44], flat([110, 106, 104])));
+  });
+  snowman(S, -7.2, 7.2, 636); sled(S, 7.4, 6.4, 637);
+  lantern(S, -6.4, 4.2, 2.3, false, flat([50, 50, 56])); lantern(S, 7.6, 4.4, 2.3, false, flat([50, 50, 56]));
+  S.sprites.push({ x: -10.4, y: 0, z: 7.2, w: 3.6, h: 6.4, img: FIRS[2] }, { x: 12.6, y: 0, z: 8, w: 2.6, h: 5.6, img: BIRCH[1] }, { x: -16.5, y: 0, z: 9, w: 3.4, h: 6, img: FIRS[0] });
+  forest(S, -30, 30, 26, 46, 16, 638);
+  person(S, "katya", -4.9, 4.7); person(S, "misha", 1.6, 4.1); person(S, "ruhero", .3, 3.2); person(S, "rufolkA", -8.6, 4.4); person(S, "rufolkB", 6.6, 4.6);
+  return S;
+};
+// the town hall: red brick with white window frames, a porch, and the guard's striped booth
+STORY.ratusha = () => {
+  const S = base({ cam: { p: [0, 3.5, -12.5], pitch: .06, fr: 1.05 }, ao: .85, amb: [.44, .48, .6],
+    sun: { dir: norm([.55, .5, -.45]), c: [1.15, 1, .84] },
+    fog: { c: [214, 222, 236], start: 28, k: .012, max: .55 }, grade: [1.03, 1, 1], bloom: { t: 235, a: .45 },
+    dof: { near: 11.5, nearRamp: 3, far: 24, farRamp: 26, blur: 4 }, sky: winterSky(641) });
+  S.prims.push(B([-30, -1, -6], [30, 0, 160], snowMat(642, p => clamp(1 - Math.abs(p[0] - .2) / 1.8) * clamp(p[2] / 6))));
+  const brick = bricks(643, [[168, 72, 58], [150, 62, 50], [180, 84, 66], [140, 58, 48]], 8, 4, [214, 204, 194]), white = [236, 232, 222];
+  const hallWall = (p, n) => {
+    if (Math.abs(n[2]) > .7 && n[2] < 0) {
+      for (const wx of [-5.6, -3.6, 3.6, 5.6]) for (const [y0, y1] of [[.9, 1.9], [2.6, 3.6]]) {
+        const dx = Math.abs(p[0] - wx), y = p[1];
+        if (dx < .6 && y > y0 - .14 && y < y1 + .3) {
+          if (dx < .44 && y > y0 && y < y1 + Math.sqrt(Math.max(0, .19 - dx * dx)) * .4) { if (dx < .03 || Math.abs(y - (y0 + y1) / 2) < .03) return { c: white }; return { c: mix([44, 56, 86], [150, 176, 206], clamp((y - y0) / (y1 - y0))), spec: true }; }
+          return { c: jit(white, hash(Math.floor(p[0] * T), Math.floor(y * T), 644), .03) };
+        }
+      }
+      if (Math.abs(p[1] - 2.25) < .08 || p[1] > 4) return { c: white };
+    }
+    if (Math.abs(p[0]) > 7.25 || p[1] < .35) return { c: jit(white, hash(Math.floor(p[0] * T), Math.floor(p[1] * T), 645), .03) };
+    return brick(p, n);
+  };
+  house(S, -7.5, 7.5, 8, 13, 4.2, 2, "x", hallWall, snowRoof(646, [70, 110, 90]));
+  // double door, porch roof on two posts, steps and the name board
+  S.prims.push(B([-.9, .3, 7.9], [.9, 2.5, 8], (p, n) => { const ui = Math.floor((p[0] + .9) * T); let c = jit([110, 66, 40], hash(Math.floor(ui / 4), 1, 647), .1); if (ui % 4 === 0) c = mul(c, .65); if (Math.abs(p[0]) < .02) c = [50, 34, 24]; if (Math.abs(Math.abs(p[0]) - .14) < .04 && Math.abs(p[1] - 1.3) < .05) c = [230, 196, 100]; return { c }; }));
+  S.prims.push(B([-2, 0, 6.8], [2, .15, 8], stoneBlocks(648, [170, 164, 156])), B([-1.7, .15, 7.2], [1.7, .3, 8], stoneBlocks(648, [170, 164, 156])));
+  for (const x of [-1.6, 1.4]) S.prims.push(B([x, .15, 6.9], [x + .2, 2.9, 7.1], flat(white)));
+  S.prims.push(B([-1.9, 2.9, 6.7], [1.9, 3.1, 8.05], snowRoof(649, [236, 232, 222])));
+  S.prims.push(B([-1.4, 3.3, 7.92], [1.4, 3.85, 8.02], signMat("РАТУША", -1.4, 1.4, 3.3, 3.85, [36, 52, 96], [246, 226, 150])));
+  // the guard's booth with black and white stripes
+  const stripes = (p, n) => {
+    if (n[2] < -.5 && Math.abs(p[0] - 3.7) < .3 && p[1] > .2 && p[1] < 2) return { c: [40, 34, 32] };
+    const s = Math.floor((p[1] + (Math.abs(n[2]) > .5 ? p[0] : p[2]) * .7) * 3.2); return { c: s % 2 ? [236, 232, 224] : [38, 36, 40] };
+  };
+  house(S, 3.2, 4.2, 5.6, 6.5, 2.3, .5, "z", stripes, snowRoof(650, [38, 36, 40]));
+  // neighbours, lamps, a bench, trees
+  izba(S, -17, -9.5, 7, 12, 2.8, "z", 651, { R: 2 }); izba(S, 9.5, 17, 7, 12, 2.9, "z", 653, { R: 2, trim2: [160, 70, 56] });
+  const iron = flat([50, 50, 56]); lantern(S, -3, 5.6, 2.3, false, iron); lantern(S, 6.2, 5.8, 2.3, false, iron);
+  const bench = planks(655, [130, 88, 54], 4, [40, 28, 20], true);
+  S.prims.push(B([-6.4, .42, 5.6], [-4.6, .5, 6.05], bench, { ok: true }), B([-6.4, .5, 5.6], [-4.6, .57, 6.05], snowMat(656), { clean: true }), B([-6.3, 0, 5.65], [-6.15, .42, 6], bench), B([-4.85, 0, 5.65], [-4.7, .42, 6], bench));
+  S.sprites.push({ x: -8.4, y: 0, z: 5.4, w: 3.2, h: 5.8, img: FIRS[1] }, { x: 8.4, y: 0, z: 5.6, w: 2.6, h: 5.6, img: BIRCH[0] }, { x: -11.6, y: 0, z: 1.4, w: 3.8, h: 6.8, img: FIRS[2] });
+  forest(S, -30, 30, 20, 40, 14, 657);
+  person(S, "dmitri", 2.6, 5.5); person(S, "ruhero", -.6, 4); person(S, "rufolkB", -5.6, 5.1);
+  return S;
+};
+// the town library: tall bookcases, a frosty arched window, a green reading lamp, a tiled stove
+STORY.library = () => {
+  const S = base({ cam: { p: [0, 3.9, -7.4], pitch: .2, fr: 1 }, ao: .85, amb: [.34, .32, .32],
+    fog: { c: [30, 26, 30], start: 30, k: .01, max: 0 }, grade: [1.03, 1, .97], bloom: { t: 185, a: .6 },
+    dof: { near: 9.5, nearRamp: 3, far: 17, farRamp: 10, blur: 4 }, sky: () => [210, 220, 236] });
+  const wall = woodWall(661), floor = planks(662, [130, 86, 56], 3), wood = planks(663, [96, 60, 38], 4), top = planks(664, [120, 80, 50], 6, [60, 40, 28], true), iron = flat([52, 50, 56]);
+  S.prims.push(B([-8, -1, -4], [8, 0, 8.3], floor), B([-8, 0, 8], [8, 5.2, 8.3], wall), B([-8, 0, -4], [-7.4, 5.2, 8], wall), B([7.4, 0, -4], [8, 5.2, 8], wall));
+  S.prims.push(B([-1.3, 1.1, 7.94], [1.3, 3.9, 8], frost(-1.3, 1.3, 1.1, 3.9, 665)), B([-1.45, .98, 7.8], [1.45, 1.1, 8], wood));
+  S.lights.push({ p: [0, 2.5, 7.2], c: [.6, .66, .86], r: 9, soft: .6 });
+  // bookcases full of books on both sides of the window
+  for (const x0 of [-7.2, -4.4, 1.9, 4.7]) {
+    S.prims.push(B([x0, 0, 7.4], [x0 + 2.5, 4.2, 8], wood));
+    for (const y of [.35, 1.25, 2.15, 3.05]) { S.prims.push(B([x0, y - .06, 7.2], [x0 + 2.5, y, 7.4], wood)); bookRow(S, x0 + .06, x0 + 2.44, y, 7.25, 7.4, 666 + y * 10 + x0); }
+  }
+  // the reading table: green lamp, an open book, a pile of old newspapers, a globe
+  S.prims.push(B([-2.2, .74, 3.8], [2.2, .84, 4.9], top));
+  for (const [x, z] of [[-2.1, 3.9], [1.98, 3.9], [-2.1, 4.68], [1.98, 4.68]]) S.prims.push(B([x, 0, z], [x + .12, .74, z + .12], wood));
+  S.prims.push(CYL(-1.2, 4.4, .12, .84, .88, brass(667)), CYL(-1.2, 4.4, .025, .88, 1.2, brass(667)), B([-1.5, 1.2, 4.25], [-.9, 1.34, 4.55], (p, n) => n[1] < -.5 ? { c: [255, 236, 170], e: [200, 180, 110] } : { c: [40, 120, 70], spec: true }));
+  S.lights.push({ p: [-1.2, 1.1, 4.1], c: [1.3, 1.05, .6], r: 4, soft: .1 });
+  S.prims.push(B([-.4, .84, 4.1], [.4, .87, 4.6], (p, n) => ({ c: Math.abs(p[0]) < .02 ? [150, 140, 120] : Math.floor(p[2] * T) % 2 && Math.abs(p[0]) > .08 ? [150, 146, 136] : [244, 238, 220] })));
+  for (let i = 0; i < 4; i++) S.prims.push(B([.9, .84 + i * .05, 4.05 + (i % 2) * .04], [1.6, .89 + i * .05, 4.65], flat(i % 2 ? [226, 220, 200] : [236, 230, 212])));
+  S.prims.push(CYL(5.4, 3.4, .25, 0, .06, wood), CYL(5.4, 3.4, .04, .06, .9, wood), CYL(5.4, 3.4, .36, .9, 1.5, (p, n) => ({ c: fbm(Math.atan2(n[2], n[0]) * 2, p[1] * 4, 668) > .55 ? [120, 150, 80] : [70, 110, 170], spec: true })));
+  // a round tiled stove in the corner, a chair, a hanging lamp
+  S.prims.push(CYL(-6.5, 6.4, .75, 0, 3.6, (p, n) => { const [u, v] = uvOf(p, n), ui = Math.floor(u * T), vi = Math.floor(v * T); if (((ui % 7) + 7) % 7 === 0 || ((vi % 7) + 7) % 7 === 0) return { c: [190, 184, 176] }; return { c: Math.abs(((ui % 7) + 7) % 7 - 3.5) + Math.abs(((vi % 7) + 7) % 7 - 3.5) < 2 ? [60, 96, 170] : [240, 236, 228] }; }, { clean: true }));
+  S.prims.push(B([.7, .45, 5.25], [1.3, .52, 5.75], wood, { ok: true }), B([.7, .52, 5.68], [1.3, 1.3, 5.75], wood), B([.72, 0, 5.3], [.8, .45, 5.38], wood), B([1.2, 0, 5.3], [1.28, .45, 5.38], wood), B([.72, 0, 5.62], [.8, .45, 5.7], wood), B([1.2, 0, 5.62], [1.28, .45, 5.7], wood));
+  S.prims.push(B([-7.4, 4.6, 3.2], [7.4, 4.8, 3.4], wood)); hangLamp(S, 3.2, 3.3, 3.4, 4.6, iron);
+  S.prims.push(B([-2.4, 0, 1], [2.4, .02, 3.4], rugMat([60, 80, 120], [214, 190, 120], 669), { noShadow: true }));
+  person(S, "olga", 2.7, 5); person(S, "ruhero", -1, 2.6);
+  return S;
+};
+// Grandpa Lev's toy workshop: clocks stopped at twelve, shelves of dolls and horses, the workbench
+STORY.workshop = () => {
+  const S = base({ cam: { p: [0, 3.7, -7.4], pitch: .2, fr: 1 }, ao: .85, amb: [.3, .27, .26],
+    fog: { c: [30, 22, 18], start: 30, k: .01, max: 0 }, grade: [1.05, 1, .94], bloom: { t: 175, a: .6 },
+    dof: { near: 9.5, nearRamp: 3, far: 17, farRamp: 10, blur: 4 }, sky: () => [210, 220, 236] });
+  const wall = logs(671, [152, 108, 70]), floor = planks(672, [160, 118, 76], 6), wood = planks(673, [110, 72, 46], 4), top = planks(674, [150, 104, 64], 6, [60, 40, 28], true), iron = flat([52, 50, 56]);
+  S.prims.push(B([-8, -1, -4], [8, 0, 7.2], floor), B([-8, 0, 6.9], [8, 4, 7.2], wall), B([-8, 0, -4], [-7.4, 4, 6.9], wall), B([7.4, 0, -4], [8, 4, 6.9], wall));
+  // clocks of every size on the back wall, all stopped at twelve
+  for (const [x, y, r] of [[-3.6, 2.9, .34], [-2.6, 2.4, .24], [-1.8, 3.1, .3], [-.9, 2.5, .2], [-.1, 3.05, .36], [.9, 2.45, .26], [1.8, 3.1, .22]]) {
+    const w = r + .07; S.prims.push(B([x - w, y - w, 6.82], [x + w, y + w, 6.9], clockFace(x, y, r, 12, 0, [120, 76, 46])));
+  }
+  // a tall grandfather clock with its weights still
+  S.prims.push(B([3.0, 0, 6.3], [3.9, 2.9, 6.9], (p, n) => n[2] < -.5 && Math.abs(p[0] - 3.45) < .25 && p[1] > .5 && p[1] < 1.8 ? { c: [60, 40, 30] } : { c: jit([96, 56, 34], hash(Math.floor(p[0] * T), Math.floor(p[1] * T), 675), .06) }));
+  S.prims.push(B([3.05, 2.1, 6.24], [3.85, 2.9, 6.3], clockFace(3.45, 2.5, .34, 12, 0, [96, 56, 34])));
+  // the window with snow outside
+  S.prims.push(B([4.6, 1.3, 6.84], [6.4, 2.8, 6.9], frost(4.6, 6.4, 1.3, 2.8, 676)), B([4.48, 1.18, 6.7], [6.52, 1.3, 6.9], wood)); S.lights.push({ p: [5.5, 2.1, 6.1], c: [.5, .58, .78], r: 7, soft: .6 });
+  // shelves of matryoshkas, wooden horses and soldiers along the left wall
+  S.prims.push(B([-7.4, 0, 4], [-6.6, 3.2, 6.9], wood));
+  const cols = [[196, 40, 46], [52, 84, 160], [236, 196, 70], [60, 130, 80]];
+  for (const [k, y] of [[0, .9], [1, 1.75], [2, 2.6]]) {
+    S.prims.push(B([-6.6, y - .06, 4], [-5.9, y, 6.9], wood));
+    for (let i = 0; i < 5; i++) {
+      const z = 4.3 + i * .5;
+      if (k === 1) { S.prims.push(B([-6.4, y, z - .14], [-6.2, y + .14, z + .14], flat([200, 150, 90])), B([-6.4, y + .14, z - .16], [-6.2, y + .26, z - .02], flat([200, 150, 90]))); }
+      else matryoshka(S, -6.25, y, z, 2.2 - (i % 3) * .4, cols[(i + k) % 4]);
+    }
+  }
+  // the workbench: a vice, tools, a half-painted doll, wood shavings
+  S.prims.push(B([-4.6, .9, 4.2], [-.8, 1.02, 5.2], top, { ok: true }));
+  for (const [x, z] of [[-4.5, 4.3], [-1, 4.3], [-4.5, 5], [-1, 5]]) S.prims.push(B([x, 0, z], [x + .12, .9, z + .12], wood));
+  S.prims.push(B([-4.4, 1.02, 4.3], [-4, 1.22, 4.6], iron), B([-3.4, 1.02, 4.4], [-2.6, 1.05, 4.48], iron), B([-3.2, 1.02, 4.7], [-3.1, 1.12, 5], flat([150, 100, 60])));
+  matryoshka(S, -1.7, 1.02, 4.6, 3, [236, 210, 170]);
+  for (let i = 0; i < 9; i++) S.sprites.push({ x: -4.4 + hash(i, 1, 677) * 3.4, y: 0, z: 3.8 + hash(i, 2, 677) * .8, w: .3, h: .1, img: procSprite(6, 2, (x, y) => [226, 196, 140]), noShadow: true });
+  // a rocking horse near the camera, a hanging lamp, a candle on the bench
+  const horse = flat([214, 172, 120]);
+  S.prims.push(B([2.6, 0, 1.4], [3.9, .08, 1.5], wood), B([2.6, 0, 2.1], [3.9, .08, 2.2], wood), B([2.8, 0, 1.55], [3.7, .5, 2.05], wood));
+  S.prims.push(B([2.75, .5, 1.6], [3.75, .85, 2], horse), B([3.55, .85, 1.65], [3.8, 1.35, 1.95], horse), B([3.55, 1.1, 1.62], [3.62, 1.4, 1.98], flat([90, 56, 34])));
+  S.prims.push(B([-7.4, 3.4, 3.2], [7.4, 3.6, 3.4], wood)); hangLamp(S, -2.4, 3.3, 2.5, 3.4, iron); candle(S, -1.2, 1.02, 4.4);
+  person(S, "sonya", 1.4, 4.7); person(S, "ruhero", -.6, 2.6);
+  return S;
+};
+// the frozen river at sunset: ice with a fishing hole, Fyodor's hut, the town on the far bank
+STORY.river = () => {
+  const sunDir = norm([-.75, .3, .5]);
+  const S = base({ cam: { p: [0, 3.9, -11], pitch: .1, fr: 1.05 }, far: 300, ao: .75, amb: [.4, .42, .58],
+    sun: { dir: sunDir, c: [1.45, 1, .7] },
+    fog: { c: [236, 206, 196], start: 24, k: .014, max: .6 }, grade: [1.04, 1, .98], bloom: { t: 225, a: .5 },
+    dof: { near: 10, nearRamp: 3, far: 22, farRamp: 26, blur: 4 },
+    sky: d => { const y = clamp(d[1] * 2.2), sd = dot(d, sunDir); let c = mix([250, 200, 160], [110, 130, 190], Math.pow(y, .5)); c = [c[0] + 160 * Math.pow(Math.max(sd, 0), 40), c[1] + 110 * Math.pow(Math.max(sd, 0), 40), c[2] + 60 * Math.pow(Math.max(sd, 0), 40)]; return c; } });
+  const ice = (p, n) => {
+    const ui = Math.floor(p[0] * T), vi = Math.floor(p[2] * T), r = hash(ui, vi, 681), hole = Math.hypot(p[0] - 1.9, p[2] - 4.3);
+    if (hole < .28) return { c: hole > .22 ? [180, 206, 226] : [16, 30, 44], spec: true };
+    if (fbm(p[0] * .35, p[2] * .5, 682) > .58) return snowMat(683)(p, n);
+    let c = mix([120, 158, 190], [196, 216, 232], fbm(p[0] * .8, p[2] * 1.6, 684));
+    if (Math.abs(vnoise(p[0] * 1.2, p[2] * 1.2, 685) - .5) < .02) c = mix(c, [240, 248, 255], .7);
+    return { c: jit(c, r, .03), spec: true };
+  };
+  S.prims.push(B([-40, -1, -8], [40, 0, 16], ice, { clean: true }), B([-40, -1, 16], [40, 1.1, 120], snowMat(686), { clean: true }));
+  // the town on the far bank, with the clock tower and the church
+  izba(S, -16, -10, 20, 24, 2.8, "x", 687, { lit: true }); izba(S, -4, 2, 21, 25, 3, "x", 689, { lit: true, trim2: [160, 70, 56] }); izba(S, 12, 18, 20, 24, 2.7, "x", 691, { lit: true });
+  church(S, 7, 34, .75, 693);
+  const stone = stoneBlocks(694, [176, 170, 160]);
+  house(S, -8.4, -6, 26, 28.4, 9, 2.4, "z", stone, snowRoof(695, [52, 84, 160]));
+  S.prims.push(B([-8.15, 6.6, 25.88], [-6.25, 8.5, 26.02], clockFace(-7.2, 7.55, .85, 12, 0, [80, 76, 72])));
+  // Fyodor's fishing hut, a stool and a bucket by the hole, his rod stuck in the snow
+  house(S, 3.6, 5.8, 6, 7.6, 1.8, .7, "x", planks(696, [120, 84, 54], 5), snowRoof(697));
+  stool(S, 2.5, 4.9, planks(698, [130, 90, 56], 4));
+  S.prims.push(CYL(1.2, 4.9, .16, 0, .32, flat([120, 130, 140])), B([2.12, 0, 4.42], [2.16, 1, 4.46], flat([110, 80, 50]), { ok: true }));
+  // banks lined with trees
+  forest(S, -34, 34, 17, 30, 18, 699);
+  S.sprites.push({ x: -11, y: 0, z: 2.5, w: 3.6, h: 6.4, img: FIRS[1] }, { x: 10.6, y: 0, z: 3, w: 2.8, h: 5.8, img: BIRCH[1] }, { x: -14.6, y: 0, z: 6.5, w: 2.6, h: 5.4, img: BIRCH[0] });
+  person(S, "fyodor", 1.2, 4.7); person(S, "misha", -2.4, 4.2); person(S, "ruhero", -.6, 3.3);
+  return S;
+};
+// the clock tower on a stormy winter night; its stopped face glows over the square
+STORY.tower = () => {
+  const S = base({ cam: { p: [0, 3.2, -14], pitch: 0, fr: 1 }, ao: .85, amb: [.18, .21, .34],
+    sun: { dir: norm([.3, .8, -.5]), c: [.3, .36, .56], soft: .08 },
+    fog: { c: [60, 70, 104], start: 12, k: .05, max: .72 }, grade: [1, 1, 1.05], bloom: { t: 160, a: .7 },
+    dof: { near: 13, nearRamp: 3, far: 26, farRamp: 16, blur: 4 }, sky: nightSky(701) });
+  S.prims.push(B([-30, -1, -16], [30, 0, 120], snowMat(702, p => clamp(1 - Math.abs(p[0]) / 2.2) * clamp(1 - Math.abs(p[2] - 6) / 6))));
+  const stone = stoneBlocks(703, [150, 146, 140]);
+  const towerWall = (p, n) => {
+    if (n[2] < -.5) { const dx = p[0], y = p[1];
+      if (Math.abs(dx) < .7 && y < 2.2 + Math.sqrt(Math.max(0, .49 - dx * dx)) * .6) return Math.abs(dx) < .02 ? { c: [40, 28, 20] } : { c: jit([96, 60, 38], hash(Math.floor((dx + 1) * T / 3), 1, 704), .1) };
+      if (Math.abs(dx) < .22 && Math.abs(y - 4.6) < .5) { const g = [255, 196, 116]; return { c: g, e: mul(g, .8) }; } }
+    return stone(p, n);
+  };
+  S.prims.push(B([-2.2, 0, 10], [2.2, 11, 14.4], towerWall), B([-1.25, 6.35, 9.9], [1.25, 8.85, 10.02], clockFace(0, 7.6, 1.15, 12, 0, [70, 66, 64], .45)));
+  for (const y of [3.5, 6, 9.2]) S.prims.push(B([-2.35, y, 9.85], [2.35, y + .12, 14.55], stone), B([-2.35, y + .12, 9.85], [2.35, y + .2, 10.3], snowMat(705), { clean: true }));
+  S.lights.push({ p: [0, 7.6, 9.2], c: [.8, .7, .45], r: 7, soft: .5 });
+  lantern(S, -1.3, 9.4, 2.4, true, flat([46, 44, 48]));
+  // dark houses with warm windows, lamps along the street
+  izba(S, -13, -5.2, 9, 14, 3, "x", 706, { lit: true }); izba(S, 5.2, 13, 9, 14, 2.9, "x", 708, { lit: true, trim2: [160, 70, 56] });
+  const iron = flat([46, 44, 48]); lantern(S, -3.4, 5.8, 2.3, true, iron); lantern(S, 3.6, 6.4, 2.3, true, iron);
+  S.sprites.push({ x: -8.6, y: 0, z: 4.4, w: 3.6, h: 6.4, img: FIRS[0] }, { x: 9, y: 0, z: 4.8, w: 3.2, h: 6, img: FIRS[2] }, { x: 15.6, y: 0, z: 8, w: 2.6, h: 5.6, img: BIRCH[1] });
+  forest(S, -30, 30, 18, 34, 12, 710);
+  person(S, "sonya", 1.8, 6.2); person(S, "dmitri", -2.6, 5.9); person(S, "ruhero", -.4, 4.6);
+  return S;
+};
+// inside the clock: brass gears, hanging weights and the back of the great dial lit by dawn
+STORY.clockroom = () => {
+  const S = base({ cam: { p: [0, 3.8, -7.4], pitch: .18, fr: 1 }, ao: .85, amb: [.26, .26, .34],
+    fog: { c: [30, 26, 34], start: 30, k: .01, max: 0 }, grade: [1.03, 1, .98], bloom: { t: 170, a: .7 },
+    dof: { near: 9.5, nearRamp: 3, far: 17, farRamp: 10, blur: 4 }, sky: () => [250, 214, 170] });
+  const wall = stoneBlocks(721, [150, 144, 136]), floor = planks(722, [120, 86, 58], 6), wood = planks(723, [100, 66, 42], 4), iron = flat([56, 54, 60]);
+  S.prims.push(B([-8, -1, -4], [8, 0, 7.2], floor), B([-8, 0, 6.9], [8, 5.4, 7.2], wall), B([-8, 0, -4], [-7.4, 5.4, 6.9], wall), B([7.4, 0, -4], [8, 5.4, 6.9], wall));
+  // the great dial seen from inside, glowing with the dawn behind it (the hands read backwards)
+  S.prims.push(B([-1.85, .9, 6.8], [1.85, 4.6, 6.9], (p, n) => { const m = clockFace(0, 2.75, 1.75, 12, 0, [70, 64, 60])(p, n); return m.c[0] > 200 ? { c: [236, 200, 150], e: [120, 84, 46] } : m; }));
+  S.lights.push({ p: [0, 2.75, 6.2], c: [1.2, .86, .5], r: 10, soft: .8 });
+  // the mechanism: an iron frame with brass gears on shafts
+  const gear = (p, n) => {
+    const c0 = CUR.cyl, dx = p[0] - c0.x, dz = p[2] - c0.z, a = Math.atan2(dz, dx);
+    if (Math.abs(n[1]) < .5) return { c: Math.floor((a / Math.PI + 1) * c0.r * 14) % 2 ? [204, 152, 64] : [86, 64, 38], spec: true };
+    const rr = Math.hypot(dx, dz) / c0.r, spoke = Math.abs(((a / (Math.PI / 3)) % 1 + 1) % 1 - .5) > .38;
+    return { c: rr < .22 || rr > .76 || spoke ? jit([216, 162, 74], hash(Math.floor(p[0] * T), Math.floor(p[2] * T), 724), .05) : [62, 48, 36], spec: true };
+  };
+  S.prims.push(B([-4.4, 0, 4.4], [-4.2, 1.3, 4.6], iron), B([-1.4, 0, 4.4], [-1.2, 1.3, 4.6], iron), B([-4.4, 0, 5.8], [-4.2, 1.3, 6], iron), B([-1.4, 0, 5.8], [-1.2, 1.3, 6], iron), B([-4.4, 1.3, 4.4], [-1.2, 1.4, 6], iron, { ok: true }));
+  S.prims.push(CYL(-3.4, 5, .62, 1.4, 1.52, gear), CYL(-2.1, 5.3, .42, 1.4, 1.5, gear), CYL(-2.7, 4.9, .05, 1.4, 2.4, iron), CYL(-2.7, 4.9, .5, 2.4, 2.5, gear), CYL(-1.9, 5.4, .05, 1.4, 2.9, iron), CYL(-1.9, 5.4, .32, 2.9, 2.98, gear));
+  // a beam across the room with the weights hanging on chains
+  S.prims.push(B([-7.4, 4.2, 5.5], [7.4, 4.4, 5.8], wood));
+  for (const [x, y0] of [[2.6, 1.3], [3.4, 2]]) S.prims.push(CYL(x, 5.65, .02, y0 + .7, 4.2, iron, { noShadow: true }), CYL(x, 5.65, .2, y0, y0 + .7, iron));
+  // stairs up the left wall, a lantern on the floor, a toolbox
+  for (let i = 0; i < 7; i++) S.prims.push(B([-7.4, 0, 1 + i * .5], [-6.2, .3 + i * .4, 1.5 + i * .5], wood));
+  lantern(S, -2.6, 3.4, .45, true, iron);
+  S.prims.push(B([4.4, 0, 3.6], [5.2, .36, 4.1], wood), B([4.5, .36, 3.8], [5.1, .42, 3.9], iron));
+  person(S, "lev", 1.6, 4.3); person(S, "sonya", -.6, 4.9); person(S, "ruhero", .3, 2.7);
+  return S;
+};
 
 // ---------- portraits: big busts in the same style (4-tone shading, coloured outline), with blink and talk frames ----------
 const BW = 48, BH = 56;
@@ -1014,6 +1532,8 @@ function makeBust(o) {
     }
     for (let x = 20; x <= 28; x++) put(x, 30, "beard");
   }
+  if (o.mustache) for (let x = 19; x <= 29; x++) { if (R[30 * BW + x] === "skin") put(x, 30, "beard"); if (x >= 20 && x <= 28 && R[31 * BW + x] === "skin") put(x, 31, "beard"); }
+  if (o.flaps) { const f = [[9.4, 15], [13.8, 15], [14, 31], [12, 33], [9.6, 30]]; poly(f, "cap"); poly(mirror(f), "cap"); }  // a fur hat's ear flaps
 
   // shading: rounded forms lit from the upper left, warm light and cool shadow
   const span = {}; for (let y = 0; y < BH; y++) for (let x = 0; x < BW; x++) { const k = R[y * BW + x]; if (!k) continue; const s = span[k + y] || (span[k + y] = [x, x]); s[0] = Math.min(s[0], x); s[1] = Math.max(s[1], x); }
@@ -1100,10 +1620,21 @@ const BUSTS = {
   lena: { female: true, hair: "long", freckles: true, outfit: "apron", pal: { skin: hex("#f2c4a0"), hair: hex("#e09a3a"), top: hex("#8a4e7a"), collar: [246, 242, 232], apron: [242, 234, 216], eye: [90, 130, 70] } },
   ana: { female: true, hood: true, hair: "hood", outfit: "robe", pal: { skin: hex("#a8724e"), hair: hex("#1d1410"), hood: hex("#e8e2d4"), top: [236, 230, 218], accent: hex("#d4a840"), medal: [240, 220, 140], eye: [70, 50, 40] } },
   hero: { hood: true, hair: "hood", outfit: "tunic", pal: { skin: [238, 196, 158], hair: [120, 84, 54], hood: [72, 96, 136], top: [146, 108, 70], strap: [104, 70, 44], eye: [60, 80, 120] } },
+  // the people of Белоречье, in the Russian story
+  vera: { female: true, hood: true, hair: "hood", outfit: "apron", pal: { skin: hex("#eec3a4"), hair: [214, 210, 204], hood: hex("#c23b32"), top: hex("#5a6e9c"), collar: [246, 242, 232], apron: [240, 232, 214], brow: [170, 166, 160], eye: [80, 100, 130] } },
+  ivan: { hair: "cap", beard: true, mouth: "grin", outfit: "robe", pal: { skin: hex("#dba882"), hair: hex("#6b5a4a"), beard: hex("#7a6a5a"), cap: hex("#1f2f52"), brim: [22, 26, 34], top: hex("#2a3c66"), accent: [226, 190, 90], medal: [236, 200, 90], eye: [70, 80, 100] } },
+  katya: { female: true, hair: "long", freckles: true, mouth: "grin", outfit: "apron", pal: { skin: hex("#f5d0b4"), hair: hex("#e3c27a"), top: hex("#b8323a"), collar: [246, 242, 232], apron: [244, 236, 220], eye: [70, 110, 160] } },
+  dmitri: { hair: "cap", flaps: true, mustache: true, stern: true, outfit: "tunic", pal: { skin: hex("#e2b08a"), hair: hex("#4a3424"), beard: hex("#4a3424"), cap: [124, 120, 114], brim: [98, 94, 90], top: hex("#3e5a3c"), hood: [52, 74, 50], strap: [70, 46, 30], eye: [70, 70, 60] } },
+  olga: { female: true, hair: "side", bun: true, outfit: "robe", pal: { skin: hex("#f0cfb4"), hair: hex("#7a4a34"), bun: hex("#7a4a34"), tie: [236, 220, 180], top: hex("#6b2f4a"), accent: [240, 232, 214], medal: [220, 190, 110], eye: [80, 90, 70] } },
+  misha: { hair: "cap", flaps: true, freckles: true, mouth: "grin", outfit: "vest", pal: { skin: hex("#f0c8a4"), hair: hex("#c88a3a"), cap: [140, 96, 60], brim: [112, 76, 48], top: hex("#3a6fb0"), vest: [44, 84, 140], button: [220, 190, 110], eye: [70, 110, 150] } },
+  fyodor: { hair: "cap", flaps: true, beard: true, mouth: "grin", outfit: "vest", pal: { skin: hex("#d49a74"), hair: hex("#8a4a2a"), beard: hex("#8a4a2a"), cap: [72, 68, 74], brim: [58, 54, 60], top: hex("#34465e"), vest: [96, 74, 52], button: [180, 170, 150], eye: [70, 90, 110] } },
+  sonya: { female: true, hair: "side", outfit: "vest", pal: { skin: hex("#f2cdb0"), hair: hex("#2c2230"), top: [236, 228, 212], vest: hex("#7a4a2a"), button: [230, 200, 110], eye: [90, 70, 50] } },
+  lev: { hair: "short", beard: true, outfit: "apron", pal: { skin: hex("#e8bc9c"), hair: [236, 234, 230], beard: [240, 238, 234], brow: [210, 208, 204], top: hex("#8a3a30"), collar: [240, 232, 214], apron: [124, 92, 60], eye: [80, 110, 140] } },
+  ruhero: { hair: "short", outfit: "tunic", pal: { skin: hex("#b07a52"), hair: hex("#2a1c16"), top: hex("#c0703a"), hood: [64, 128, 96], strap: [104, 70, 44], eye: [60, 44, 36] } },
 };
 
 // ---------- public API ----------
-const HD_VER = "6", RW = 448, RH = 196, mem = {}, busy = {};
+const HD_VER = "7", RW = 448, RH = 196, mem = {}, busy = {};
 let worker = null, workerDead = false, chain = Promise.resolve();
 function toURL(img, scale = 1) {
   const c = document.createElement("canvas"); c.width = img.w; c.height = img.h; const x = c.getContext("2d"), d = x.createImageData(img.w, img.h);
@@ -1152,6 +1683,8 @@ const API = {
     return mem["p:" + name];
   },
   ratio: RW / RH,
+  // places where snow falls in front of the picture
+  snowy: name => ["station", "snowmarket", "ratusha", "tower"].includes(name),
   prefetch(names) { names.forEach(n => API.load(n)); },
   bust(who) {
     if (!BUSTS[who]) return null;
