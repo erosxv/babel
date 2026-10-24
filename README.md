@@ -24,7 +24,7 @@ Um RPG no estilo visual novel, em 4 arcos que acompanham os degraus do zigurate:
 - **A pulseira brilha** quando você fala com boa pronúncia.
 - As frases de cada capítulo podem ir direto para o caderno.
 - Os lugares da história são desenhados em estilo HD-2D (como Octopath Traveler e Dragon Quest III HD-2D) por `hd2d.js`: cenários em 3D com texturas de pixel art, sombras suaves, desfoque de profundidade e brilho. A primeira vez leva alguns segundos (o desenho roda em segundo plano, em `hd2d-worker.js`) e depois fica guardado no aparelho. Enquanto isso aparece a versão simples de `arte.js`.
-- Os personagens ficam pequenos, de pé dentro de cada cenário. Quando um deles fala, o retrato grande sai de onde ele está e vem para a frente da cena; o retrato pisca e mexe a boca enquanto a voz fala.
+- Os personagens ficam pequenos, de pé dentro de cada cenário. Quando um deles fala, o retrato grande sai de onde ele está e vem para a frente da cena; o retrato pisca e mexe a boca enquanto a voz fala. Enquanto a voz fala, aparece no canto da cena um botão para pausar e continuar a fala.
 - A história fica em `historia.js`. Prontos: Arco 1, Capítulos 1 a 3 ("Wake Up", "The Market", "The Guild").
 
 ## Instalar como app

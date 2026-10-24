@@ -456,6 +456,9 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .fx-dust b{position:absolute;width:2px;height:2px;border-radius:50%;background:#fff3d0;opacity:0;animation:dust 7s linear infinite;box-shadow:0 0 3px #fff3d0}
 @keyframes dust{0%{opacity:0;transform:translate(0,0)}25%{opacity:.85}100%{opacity:0;transform:translate(16px,-34px)}}
 .stage-label,.bracelet{z-index:4}
+.sy-pause{position:absolute;right:10px;bottom:10px;z-index:4;width:42px;height:42px;border-radius:50%;border:0;background:rgba(0,0,0,.55);color:#fff;display:none;place-items:center;cursor:pointer;box-shadow:0 3px 0 rgba(0,0,0,.3)}
+.sy-pause svg{width:22px;height:22px}
+.stage.voice .sy-pause{display:grid}
 .say-res{display:grid;gap:6px;justify-items:center;background:var(--surface);border:2px solid var(--line);border-radius:16px;padding:10px}
 .say-back{display:grid;gap:8px;justify-items:center;text-align:center;background:var(--surface-2);border-radius:16px;padding:12px;font-weight:800}
 .say-back b{display:flex;align-items:center;gap:6px;color:var(--lang)}
@@ -660,6 +663,7 @@ const P = {
   x: '<path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/>',
   lock: '<rect x="5" y="10.5" width="14" height="10" rx="2.5" fill="currentColor"/><path d="M8.3 10.5V8a3.7 3.7 0 0 1 7.4 0v2.5" fill="none" stroke="currentColor" stroke-width="2.4"/>',
   star: '<path fill="currentColor" d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5-4.7-4.6 6.5-.9z"/>',
+  pause: '<rect x="6.5" y="5" width="4" height="14" rx="1.2" fill="currentColor"/><rect x="13.5" y="5" width="4" height="14" rx="1.2" fill="currentColor"/>',
   play: '<path fill="currentColor" d="M8 5.5v13a1 1 0 0 0 1.5.9l10.2-6.5a1 1 0 0 0 0-1.7L9.5 4.6A1 1 0 0 0 8 5.5z"/>',
   speaker: '<path fill="currentColor" d="M3.5 9.2v5.6h3.7l4.8 4.2V5l-4.8 4.2z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M15.5 9a4.2 4.2 0 0 1 0 6M18.3 6.4a8 8 0 0 1 0 11.2"/>',
   chest: '<path fill="currentColor" d="M3 10h18v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path fill="currentColor" opacity=".8" d="M4.5 4h15A1.5 1.5 0 0 1 21 5.5V10H3V5.5A1.5 1.5 0 0 1 4.5 4z"/><rect x="10" y="8.5" width="4" height="5" rx="1" fill="#fff" opacity=".85"/>',
@@ -938,7 +942,7 @@ function speak(text, lang, slow) {
   try {
     // speaking right after cancel() makes Chrome clip the first syllable, so give it a beat
     const busy = speechSynthesis.speaking || speechSynthesis.pending;
-    speechSynthesis.cancel();
+    speechSynthesis.cancel(); speechSynthesis.resume(); // a paused voice would keep the next one paused too
     const u = new SpeechSynthesisUtterance(first(text));
     if (v) { u.voice = v; u.lang = v.lang; } else u.lang = LANGS[lang].voice;
     u.rate = slow ? .7 : 1; u.pitch = 1;
@@ -2073,9 +2077,17 @@ function syFly() {
   a.style.setProperty("--s", (sp.h * k / a.clientHeight).toFixed(3)); a.classList.add("fly");
 }
 const syFace = who => { const b = HD && HD.bust(who); return b ? `<img class="pix mini face" src="${b.base}" alt="">` : pxPortrait(who, "pix mini"); };
-// the mouth moves while the voice speaks
-setInterval(() => { const st = document.querySelector(".stage"); if (!st) return; const on = !!(window.speechSynthesis && speechSynthesis.speaking);
-  st.classList.toggle("talking", on && !st.classList.contains("talking")); }, 150);
+// the mouth moves while the voice speaks; the pause button shows while there is a voice to pause or resume
+setInterval(() => { const st = document.querySelector(".stage"); if (!st) return; const ss = window.speechSynthesis, busy = !!(ss && ss.speaking), paused = busy && ss.paused;
+  st.classList.toggle("talking", busy && !paused && !st.classList.contains("talking")); st.classList.toggle("voice", busy);
+  const b = st.querySelector(".sy-pause"); if (b && b.dataset.p !== String(paused)) { b.dataset.p = paused; b.innerHTML = I(paused ? "play" : "pause"); b.setAttribute("aria-label", paused ? "Continuar a fala" : "Pausar a fala"); } }, 150);
+function syPause() {
+  const ss = window.speechSynthesis; if (!ss || !ss.speaking) return;
+  if (ss.paused) { ss.resume(); return; }
+  ss.pause();
+  // some phones can't pause a voice; there it simply stops
+  setTimeout(() => { if (ss.speaking && !ss.paused) ss.cancel(); }, 400);
+}
 // The stage in layers, "HD-2D" style: soft-focus back, sharp middle with the character, blurred front,
 // then glows, sunbeams, dust and a vignette on top.
 function stageLayers(scene, actor) {
@@ -2171,7 +2183,7 @@ function renderStory() {
   $("#lesson").innerHTML = `<div class="l-top"><button class="x" data-act="syQuit" aria-label="Sair da história">${I("x")}</button><div class="bar"><i style="width:${SY.i / N * 100}%"></i></div>
       <span class="purse-n" title="Moedas na história">${I("gem")}${SY.purse}</span><button class="bag-btn" data-act="syBag" aria-label="Mochila">${I("bag")}<b>${bagN}</b></button></div>
     <div class="l-body"><div class="l-in vn">
-      <div class="stage bg-${SY.scene}">${stageLayers(SY.scene, SY.who && !n.nar ? syActor(SY.who) : "")}<span class="stage-label">${esc(SY.label)}</span><div class="bracelet ${SY.glow ? "glow" : ""}" title="Brilhos da pulseira: ${SY.shards}">${I("zig")}<b>${SY.shards}</b></div></div>
+      <div class="stage bg-${SY.scene}">${stageLayers(SY.scene, SY.who && !n.nar ? syActor(SY.who) : "")}<span class="stage-label">${esc(SY.label)}</span><button class="sy-pause" data-act="syPause" data-p="false" aria-label="Pausar a fala">${I("pause")}</button><div class="bracelet ${SY.glow ? "glow" : ""}" title="Brilhos da pulseira: ${SY.shards}">${I("zig")}<b>${SY.shards}</b></div></div>
       <div class="vn-box">${box}</div>
     </div></div>
     <div class="l-foot"><div class="l-foot-in vn-foot">${foot}</div></div>`;
@@ -2418,6 +2430,7 @@ const A = {
   },
   say: d => speak(d.t, d.l || (LS ? LS.lang : S.lang)),
   saySlow: d => speak(d.t, LS ? LS.lang : S.lang, true),
+  syPause: () => syPause(),
   review: () => { closeModal(); startReview(); },
   speakTrain: () => { closeModal(); startSpeakTrain(); },
   soundPractice: d => startSoundPractice(+d.i),
