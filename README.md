@@ -25,7 +25,18 @@ Um RPG no estilo visual novel, em 4 arcos que acompanham os degraus do zigurate:
 - As frases de cada capítulo podem ir direto para o caderno.
 - Os lugares da história são desenhados em estilo HD-2D (como Octopath Traveler e Dragon Quest III HD-2D) por `hd2d.js`: cenários em 3D com texturas de pixel art, sombras suaves, desfoque de profundidade e brilho. A primeira vez leva alguns segundos (o desenho roda em segundo plano, em `hd2d-worker.js`) e depois fica guardado no aparelho. Enquanto isso aparece a versão simples de `arte.js`.
 - Os personagens ficam pequenos, de pé dentro de cada cenário. Quando um deles fala, o retrato grande sai de onde ele está e vem para a frente da cena; o retrato pisca e mexe a boca enquanto a voz fala. Enquanto a voz fala, aparece no canto da cena um botão para pausar e continuar a fala.
-- A história fica em `historia.js`. Prontos: Arco 1, Capítulos 1 a 3 ("Wake Up", "The Market", "The Guild").
+- A história fica em `historia.js`. O Arco 1 (A1) está completo, com 10 capítulos que cobrem o que o nível A1 do Quadro Europeu pede:
+  1. "Wake Up": cumprimentos, nome, de onde você é.
+  2. "The Market": números, preços, cores, pedir com educação.
+  3. "The Guild": verbo *to be*, profissões, perguntas simples.
+  4. "First Day": horas, dias da semana, rotina, com que frequência (*always, never*), soletrar e dar endereço.
+  5. "The Letters": direções, lugares da cidade, *there is / there are*, números até 100.
+  6. "The Harbour": família, *have got*, o *'s* de posse, descrever pessoas.
+  7. "Dinner at the Fox": comida, *I would like*, *some / any*, *like + -ing*, pedir a conta.
+  8. "Festival Clothes": roupas, *this / these*, *too big*, datas, meses e estações.
+  9. "The Old Temple": clima, presente contínuo, *can / can't*, pronomes (*me, him, her*), ordens.
+  10. "Who Was She?": revisão de *was / were* e o fim do arco, que leva ao A2.
+- Personagens: Rosie (dona da pousada), Tobias e Mei (mercado), Bram (guarda), Marcus (chefe da Guilda), Iris (secretária da Guilda), Lena (cozinheira, filha da Rosie), Pip (menino que conhece as ruas), Ola (capitã do porto) e Ana (guardiã do templo). Lugares: quarto, pousada, mercado, guilda, salão, praça, porto e templo.
 
 ## Instalar como app
 

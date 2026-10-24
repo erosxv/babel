@@ -518,15 +518,20 @@ const FOLK = {
   bram: () => makeChar({ hair: "helmet", longSleeve: true, pal: { ...SK, skin: hex("#d6a27e"), hair: hex("#3b2f2a"), metal: hex("#9aa3ad"), metal2: [120, 128, 140], armor: [168, 176, 188], top: [120, 40, 46], pants: [62, 56, 62], belt: [80, 54, 38], buckle: [220, 200, 120], eye: [80, 70, 60] } }),
   marcus: () => makeChar({ hair: "short", beard: true, skirt: 38, longSleeve: true, pal: { ...SK, skin: hex("#e0b08c"), hair: hex("#b9b9b9"), top: hex("#7a2f2a"), skirt: [110, 42, 38], belt: hex("#e0b440"), buckle: [236, 200, 90], eye: [70, 80, 100] } }),
   hero: () => makeChar({ hair: "hood", cape: true, longSleeve: true, pal: { ...SK, hood: [72, 96, 136], cape: [62, 84, 122], top: [146, 108, 70], pants: [66, 58, 56], belt: [96, 62, 40], buckle: [210, 190, 120], strap: [110, 74, 46], eye: [60, 80, 120] } }),
+  iris: () => makeChar({ hair: "side", bun: true, skirt: 38, longSleeve: true, pal: { ...SK, skin: hex("#e9c3a3"), hair: hex("#3a2a20"), top: hex("#2f5a6b"), skirt: [36, 70, 84], belt: hex("#d8c070"), buckle: [240, 220, 140], eye: [70, 90, 60] } }),
+  pip: () => makeChar({ hair: "short", fringe: 1, pal: { ...SK, skin: hex("#e3b48c"), hair: hex("#d9a441"), top: hex("#e7dcc4"), vest: hex("#6a8f3a"), pants: [104, 78, 56], belt: [80, 54, 38], buckle: [200, 180, 110], eye: [70, 100, 140] } }),
+  ola: () => makeChar({ hair: "cap", longSleeve: true, pal: { ...SK, skin: hex("#b97c55"), hair: hex("#d6d0c8"), cap: hex("#1f3557"), brim: [20, 34, 56], top: [240, 236, 224], vest: hex("#24406b"), pants: [52, 52, 66], belt: [70, 46, 30], buckle: [220, 190, 90], eye: [60, 90, 110] } }),
+  lena: () => makeChar({ hair: "long", fringe: 1, skirt: 36, pal: { ...SK, skin: hex("#f2c4a0"), hair: hex("#e09a3a"), top: hex("#8a4e7a"), skirt: [110, 60, 96], apron: [242, 234, 216], belt: [120, 80, 50], buckle: [220, 190, 90], eye: [90, 120, 70] } }),
+  ana: () => makeChar({ hair: "hood", cape: true, skirt: 38, longSleeve: true, pal: { ...SK, skin: hex("#a8724e"), hood: hex("#e8e2d4"), cape: [214, 206, 190], top: [236, 230, 218], skirt: [226, 220, 206], belt: hex("#d4a840"), buckle: [240, 220, 140], strap: [200, 160, 70], eye: [60, 44, 36] } }),
   folkA: () => makeChar({ hair: "short", fringe: 2, pal: { ...SK, skin: [214, 160, 120], hair: [70, 48, 34], top: [90, 130, 90], pants: [80, 70, 60], belt: [80, 54, 38], buckle: [200, 180, 110], eye: [60, 50, 40] } }),
   folkB: () => makeChar({ hair: "long", bun: true, skirt: 37, pal: { ...SK, skin: [236, 196, 160], hair: [150, 110, 60], top: [190, 120, 60], skirt: [130, 80, 50], apron: [236, 226, 206], belt: [100, 70, 44], buckle: [200, 180, 110], eye: [60, 90, 60] } }),
 };
 const sprites = {};
 // puts someone standing on the floor at (x, z); remembers where, so the portrait can come out of them
-function person(S, who, x, z) {
+function person(S, who, x, z, k = who === "pip" ? .74 : 1) {  // k: size (Pip is a kid)
   const img = sprites[who] || (sprites[who] = FOLK[who]());
-  S.sprites.push({ x, y: 0, z, w: CW / CT, h: CH / CT, img, blob: true });
-  (S.people ||= {})[who] = [x, z];
+  S.sprites.push({ x, y: 0, z, w: CW / CT * k, h: CH / CT * k, img, blob: true });
+  (S.people ||= {})[who] = [x, z, k];
 }
 
 // ---------- materials for interiors ----------
@@ -652,7 +657,7 @@ STORY.counter = () => {
   S.prims.push(CYL(6.4, 4.8, .36, 0, 1, barrelMat(209)), CYL(6.5, 5.7, .36, 0, 1, barrelMat(210)), CYL(5.8, 2.6, .34, 0, .95, barrelMat(211)));
   roundTable(S, -3.4, 1.6, .7, wood); stool(S, -4.4, 1.3, wood); stool(S, -2.5, .9, wood); candle(S, -3.3, .8, 1.6);
   S.prims.push(CYL(-3.6, 1.8, .1, .8, 1.0, wood));
-  person(S, "rosie", 1.6, 4.95); person(S, "hero", -.6, 2.4);
+  person(S, "rosie", 1.6, 4.95); person(S, "lena", -1.2, 5.0); person(S, "hero", -.6, 2.4);
   return S;
 };
 // the port market at noon: fruit stall, cloak stall, houses, the ziggurat far away
@@ -780,9 +785,148 @@ STORY.hall = () => {
     for (const y of [.4, 1.2, 2.0]) bookRow(S, x0 + .05, x0 + 1.65, y, 6.4, 6.5, 508 + y * 10 + x0);
   }
   S.sprites.push({ x: -4.9, y: 0, z: 7.4, w: .7, h: .84, img: POT, blob: true }, { x: 4.9, y: 0, z: 7.4, w: .7, h: .84, img: POT, blob: true });
-  person(S, "marcus", 0, 5.12); person(S, "bram", -4.2, 6.6); person(S, "hero", 1.5, 2.6);
+  person(S, "marcus", 0, 5.12); person(S, "bram", -4.2, 6.6); person(S, "iris", 3.7, 4.3); person(S, "hero", 1.5, 2.6);
   return S;
 };
+
+// ---------- the places from the samples page, now part of the story ----------
+// a temple hall at night: stone ruins open to the sky, torches, a crystal on the altar
+STORY.temple = () => {
+  const S = { prims: [], sprites: [], lights: [], far: 200,
+    cam: { p: [0, 5.6, -13.5], pitch: .2, fr: 1.25 },
+    ao: .9, amb: [.13, .12, .19], sun: { dir: norm([-.35, 1, -.25]), c: [.24, .3, .5] },
+    fog: { c: [18, 14, 26], start: 14, k: .05, max: .8 }, grade: [1.04, 1, .96],
+    bloom: { t: 150, a: .75 }, dof: { near: 15.5, nearRamp: 4, far: 27, farRamp: 8, blur: 5 },
+    sky: d => { const y = clamp(d[1] * 2.5); let c = mix([34, 36, 74], [8, 10, 28], y); if (hash(Math.floor(d[0] * 300), Math.floor(d[1] * 300), 4) > .996) c = [230, 230, 255]; return c; } };
+  const floor = bricks(11, [[124, 82, 54], [140, 94, 60], [110, 70, 46], [132, 90, 62]], 8, 4, [62, 42, 32]);
+  const wall = bricks(12, [[150, 112, 82], [138, 100, 72], [160, 122, 90], [126, 92, 68]], 8, 4, [70, 52, 40]);
+  const stone = stoneBlocks(13, [146, 136, 120]), pillar = stoneBlocks(14, [168, 150, 126]), iron = flat([52, 50, 56]);
+  S.prims.push(B([-16, -1, -4], [16, 0, 40], floor));
+  S.prims.push(B([-7, 0, 11.5], [7, .4, 40], stone), B([-5, .4, 12.4], [5, .8, 40], stone), B([-1.1, .8, 13.6], [1.1, 1.5, 15], pillar));
+  // back wall with two arched openings to the night sky
+  S.prims.push(B([-16, 0, 18], [-8.5, 12, 19], wall), B([-5.5, 0, 18], [5.5, 12, 19], wall), B([8.5, 0, 18], [16, 12, 19], wall),
+    B([-8.5, 4.6, 18], [-5.5, 12, 19], wall), B([5.5, 4.6, 18], [8.5, 12, 19], wall),
+    B([-8.5, 3.9, 18], [-7.9, 4.6, 19], wall), B([-6.1, 3.9, 18], [-5.5, 4.6, 19], wall), B([5.5, 3.9, 18], [6.1, 4.6, 19], wall), B([7.9, 3.9, 18], [8.5, 4.6, 19], wall));
+  S.prims.push(B([-16, 0, -4], [-12.5, 9, 19], wall), B([12.5, 0, -4], [16, 9, 19], wall));
+  for (const [x, z] of [[-4.6, 4], [4.6, 4], [-4.6, 10], [4.6, 10]]) {
+    S.prims.push(B([x - .55, 0, z - .55], [x + .55, .35, z + .55], stone), B([x - .42, .35, z - .42], [x + .42, 5.4, z + .42], pillar), B([x - .6, 5.4, z - .6], [x + .6, 5.8, z + .6], stone));
+  }
+  // broken pillar and rubble near the camera, plus a low wall (out of focus)
+  S.prims.push(B([-12.5, 0, -1.5], [-6, 1.1, -.3], wall), B([6.5, 0, -.8], [10, .7, .1], pillar));
+  for (const [x, z] of [[-2.7, 6.8], [2.7, 6.8], [-6.8, 13], [6.8, 13]]) {
+    S.prims.push(CYL(x, z, .07, 0, 1.3, iron), CYL(x, z, .17, 0, .1, iron), CYL(x, z, .24, 1.3, 1.44, iron));
+    S.sprites.push({ x, y: 1.44, z, w: .45, h: .75, img: FLAME, emit: 1.1, noShadow: true });
+    S.lights.push({ p: [x, 1.95, z - .05], c: [1.7, .9, .38], r: 7 });
+  }
+  S.sprites.push({ x: 0, y: 1.5, z: 14.3, w: .62, h: 1.15, img: CRYSTAL, emit: .9, noShadow: true });
+  // fallen stones along the walls and grass growing between the bricks
+  for (let i = 0; i < 30; i++) { const side = i % 2 ? 1 : -1, x = side * (6.2 + hash(i, 1, 90) * 6), z = 1 + hash(i, 2, 90) * 16.5, sz = .12 + hash(i, 3, 90) * .24; S.prims.push(B([x, 0, z], [x + sz * 1.3, sz, z + sz], stone)); }
+  for (let i = 0; i < 46; i++) { const x = (hash(i, 4, 91) - .5) * 25, z = hash(i, 5, 91) * 17.5; if (Math.abs(x) < 1.4) continue; S.sprites.push({ x, y: 0, z, w: .7, h: .42, img: GRASS, noShadow: true }); }
+  // red carpet to the altar and banners on the back wall
+  const carpet = (p) => { const e = Math.abs(p[0]); const ui = Math.floor(p[0] * T), vi = Math.floor(p[2] * T); if (e > .95) return { c: [200, 160, 70] }; if (e > .85) return { c: [110, 30, 34] }; const r = (Math.floor(p[2] * 2) + Math.floor(Math.abs(p[0]) * 3)) % 2; return { c: jit(r ? [150, 38, 44] : [136, 32, 40], hash(ui, vi, 71), .05) }; };
+  S.prims.push(B([-1.05, 0, 1], [1.05, .03, 11.5], carpet, { noShadow: true }));
+  const banner = (p) => { const u = Math.abs(p[0] - Math.round(p[0] / 3.4) * 3.4), y = p[1]; if (u > .55) return { c: [200, 160, 70] }; const zig = Math.abs(y - 6.4) < 1 && u < .45 - Math.abs(y - 6.4) * .35 - (Math.floor((y - 5.4) * 4) % 2 ? 0 : .08); return { c: zig ? [236, 196, 96] : jit([140, 30, 40], hash(Math.floor(p[0] * T), Math.floor(y * T), 72), .06) }; };
+  for (const x of [-10.2, -3.4, 3.4, 10.2]) S.prims.push(B([x - .62, 4.8, 17.9], [x + .62, 8.6, 18], banner));
+  for (const x of [-11.3, -2.2, 2.2, 11.3]) {
+    S.prims.push(B([x - .12, 3.4, 17.6], [x + .12, 3.6, 18], iron));
+    S.sprites.push({ x, y: 3.6, z: 17.7, w: .4, h: .66, img: FLAME, emit: 1.1, noShadow: true });
+    S.lights.push({ p: [x, 4.1, 17.3], c: [1.5, .8, .34], r: 6 });
+  }
+  S.lights.push({ p: [0, 2.3, 13.7], c: [.35, 1.05, 1.6], r: 10 });
+  person(S, "ana", 0, 10.4); person(S, "hero", -.9, 6); person(S, "bram", -2.4, 6.6);
+  return S;
+};
+// the harbour at sunset (wooden pier, sea, a ship in the haze)
+STORY.harbor = () => {
+  const sunDir = norm([-.32, .11, 1]);
+  const S = { prims: [], sprites: [], lights: [], far: 400,
+    cam: { p: [0, 5, -11], pitch: .2, fr: 1.12 },
+    ao: .7, amb: [.34, .3, .44], sun: { dir: sunDir, c: [1.45, .92, .55] },
+    fog: { c: [232, 164, 140], start: 26, k: .012, max: .75 }, grade: [1.05, 1, .95],
+    bloom: { t: 190, a: .55 }, dof: { near: 9.5, nearRamp: 3, far: 20, farRamp: 22, blur: 5 },
+    sky: d => {
+      const y = clamp(d[1] * 2.2), sd = dot(d, sunDir);
+      let c = mix([252, 184, 132], [84, 96, 160], Math.pow(y, .55));
+      const cl = fbm(d[0] / (d[1] + .15) * 1.6, 1 / (d[1] + .15) * 2.2, 5);
+      if (d[1] > .02 && cl > .55) c = mix(c, mix([255, 196, 160], [150, 100, 130], clamp((d[1] - .02) * 4)), clamp((cl - .55) * 3) * .8);
+      c = [c[0] + 255 * Math.pow(Math.max(sd, 0), 60) * .8, c[1] + 180 * Math.pow(Math.max(sd, 0), 60) * .8, c[2] + 110 * Math.pow(Math.max(sd, 0), 60) * .6];
+      if (sd > .9994) c = [420, 380, 300];
+      return c;
+    } };
+  const deck = planks(21, [138, 96, 62], 5), post = planks(22, [96, 66, 44], 4), crate = planks(23, [164, 118, 70], 4), hull = planks(24, [104, 64, 42], 4, [40, 26, 20], true), sail = flat([236, 226, 204], .03), rope = flat([176, 150, 104]);
+  S.prims.push(B([-14, -.3, -10], [14, 0, 3.6], deck));
+  for (let x = -12; x <= 12; x += 2.4) S.prims.push(CYL(x, 3.5, .17, -1.4, .85, post));
+  S.prims.push(B([-12.5, .55, 3.45], [12.5, .62, 3.55], rope, { noShadow: true }));
+  S.prims.push(B([-8.2, 0, .4], [-7, 1.1, 1.6], crate), B([-7, 0, .6], [-6.1, .8, 1.5], crate), B([-8, 1.1, .6], [-7.2, 1.8, 1.4], crate), B([6, 0, -.6], [7.2, .9, .5], crate));
+  S.prims.push(B([-80, -3, 3.6], [80, -.62, 400], water(25, [18, 54, 76], [46, 108, 120])));
+  // moored rowing boat
+  S.prims.push(B([2.6, -.95, 5.2], [6.6, -.35, 6.5], hull), B([3, -.62, 5.4], [6.2, -.4, 6.3], flat([70, 44, 30])), B([4.2, -.5, 5.3], [4.6, -.35, 6.4], hull));
+  // distant ship
+  S.prims.push(B([-9, -.9, 52], [-1, .7, 54.4], hull), B([-8.6, .7, 52.3], [-6.4, 1.8, 54.1], hull), B([-2.4, .7, 52.5], [-1.2, 1.4, 54], hull));
+  S.prims.push(B([-5.2, .7, 53.1], [-4.95, 9, 53.3], post), B([-3, .7, 53.1], [-2.8, 7.5, 53.3], post));
+  S.prims.push(B([-6.6, 3, 53.15], [-3.6, 7.8, 53.25], sail), B([-4.2, 2.6, 53.15], [-1.6, 6.6, 53.25], sail), B([-7.4, 2.2, 53.15], [-5.15, 5.2, 53.25], sail));
+  // far coast and the ziggurat of Babel in the haze
+  const rock = stoneBlocks(26, [120, 110, 112]);
+  S.prims.push(B([18, -1, 90], [70, 7, 110], rock), B([24, 7, 95], [50, 11, 110], rock));
+  for (let t = 0; t < 7; t++) { const w = 34 - t * 4.6; S.prims.push(B([-62 - w / 2, -1 + t * 3.2, 140 + t * 2], [-62 + w / 2, -1 + (t + 1) * 3.2, 170 - t * 2], stone2)); }
+  function stone2(p, n) { return stoneBlocks(27, [168, 150, 132])(p, n); }
+  lantern(S, 1.2, 3.0, 1.75, true, flat([46, 42, 44]));
+  S.prims.push(CYL(-4.6, .3, .32, 0, .9, barrelMat(1)), CYL(-3.95, .75, .3, 0, .85, barrelMat(2)), CYL(8.4, 1.4, .32, 0, .9, barrelMat(3)), CYL(9.9, 2.9, .17, 0, .42, flat([62, 58, 58])), CYL(-10.5, 2.9, .17, 0, .42, flat([62, 58, 58])));
+  for (let i = 0; i < 6; i++) S.sprites.push({ x: -12 + i * 4.7, y: 0, z: 3.25, w: .8, h: .45, img: GRASS, noShadow: true });
+  person(S, "ola", -1.4, 1.9); person(S, "hero", .4, 1.5); person(S, "folkA", -5.4, 1.6);
+  return S;
+};
+// Shinar square on a spring morning
+STORY.square = () => {
+  const S = { prims: [], sprites: [], lights: [], far: 300,
+    cam: { p: [0, 6.6, -15], pitch: .17, fr: 1.17 },
+    ao: .9, amb: [.42, .43, .52], sun: { dir: norm([-.55, .85, -.2]), c: [1.25, 1.06, .8] },
+    fog: { c: [200, 218, 236], start: 30, k: .012, max: .55 }, grade: [1.02, 1, .98],
+    bloom: { t: 210, a: .5 }, dof: { near: 16.5, nearRamp: 2, far: 31, farRamp: 40, blur: 5 },
+    sky: d => { const y = clamp(d[1] * 2); let c = mix([214, 230, 242], [80, 140, 214], Math.pow(y, .5)); const cl = fbm(d[0] / (d[1] + .2) * 2, 1 / (d[1] + .2) * 3, 8); if (cl > .64) c = mix(c, [250, 250, 252], clamp((cl - .64) * 5)); return c; } };
+  S.prims.push(B([-30, -1, -6], [30, 0, 160], cobble(31, [[156, 146, 132], [142, 134, 122], [166, 154, 138], [134, 124, 114]])));
+  const roof = roofTiles(32, [170, 76, 54]), roofB = roofTiles(33, [86, 104, 140]);
+  house(S, -15, -7, 13, 18, 3.3, 2.2, "x", plaster(41, -15, -7, 13, 18, 3.3), roof);
+  house(S, -6, .5, 15, 20, 4, 2.6, "z", plaster(42, -6, .5, 15, 20, 4, { wall: [236, 222, 196] }), roofB);
+  house(S, 1.6, 8.6, 13.5, 18.5, 3.1, 2, "x", plaster(43, 1.6, 8.6, 13.5, 18.5, 3.1, { wall: [222, 200, 168] }), roof);
+  house(S, 9.8, 15.5, 14, 19, 3.8, 2.4, "z", plaster(44, 9.8, 15.5, 14, 19, 3.8), roofB);
+  house(S, -18, -12, 2, 9.5, 3.2, 2.2, "z", plaster(45, -18, -12, 2, 9.5, 3.2, { door: false }), roof);
+  S.prims.push(B([-4.6, 3.8, 17], [-3.9, 7.1, 17.7], bricks(46, [[150, 100, 80], [130, 86, 70]])), B([-4.72, 7.1, 16.88], [-3.78, 7.25, 17.82], stoneBlocks(46, [120, 116, 110])));
+  // the ziggurat beyond the rooftops
+  const zig = stoneBlocks(47, [210, 186, 150]);
+  for (let t = 0; t < 6; t++) { const w = 40 - t * 6.4; S.prims.push(B([5 - w / 2, t * 2.6, 85 + t * 3], [5 + w / 2, (t + 1) * 2.6, 120 - t * 3], zig)); }
+  // well
+  const stone = stoneBlocks(48, [150, 144, 136]), wood = planks(49, [120, 82, 52], 4);
+  S.prims.push(CYL(0, 7, .95, 0, .75, stone), CYL(0, 7, .78, 0, .77, water(50, [30, 70, 90], [60, 110, 130])), CYL(.66, 6.5, .14, .75, .98, barrelMat(9)));
+  S.prims.push(B([-.95, .75, 6.9], [-.8, 2.1, 7.1], wood), B([.8, .75, 6.9], [.95, 2.1, 7.1], wood), B([-1.2, 2.1, 6.6], [1.2, 2.3, 7.4], roofTilesBox, { ok: true }));
+  function roofTilesBox(p, n) { return { c: jit([170, 76, 54], hash(Math.floor(p[0] * T), Math.floor(p[2] * T), 5)) }; }
+  // market stall with a striped awning
+  const awn = p => { const s = Math.floor((p[0] - 3.4) * T / 5); return { c: s % 2 ? [244, 236, 220] : [64, 118, 176] }; };
+  S.prims.push(B([3.4, 0, 6.8], [7, .95, 7.6], wood), B([3.4, .95, 6.7], [7, 1.05, 7.7], planks(51, [156, 112, 70], 4)));
+  S.prims.push(B([3.45, 0, 8.3], [3.6, 2.2, 8.45], wood), B([6.8, 0, 8.3], [6.95, 2.2, 8.45], wood), B([3.45, 0, 6.85], [3.6, 1.9, 7], wood), B([6.8, 0, 6.85], [6.95, 1.9, 7], wood));
+  S.prims.push({ ok: true, lo: [3.2, 1.7, 6.4], hi: [7.2, 2.35, 8.6], mat: awn, planes: [{ n: [1, 0, 0], d: 7.2 }, { n: [-1, 0, 0], d: -3.2 }, { n: [0, 0, 1], d: 8.6 }, { n: [0, 0, -1], d: -6.4 },
+    planeFrom("z", 6.4, 1.8, 8.6, 2.3, [7.5, 2.0]), planeFrom("z", 6.4, 1.72, 8.6, 2.22, [7.5, 2.0])].map(P => P.n ? P : P) });
+  // fruit on the counter
+  for (let i = 0; i < 18; i++) { const x = 3.6 + (i % 9) * .38, z = 6.85 + Math.floor(i / 9) * .35, c = [[206, 46, 44], [244, 200, 60], [120, 176, 64]][Math.floor(i / 3) % 3];
+    S.prims.push(B([x, 1.05, z], [x + .26, 1.27, z + .26], () => ({ c }))); }
+  S.prims.push(B([7.3, 0, 6.6], [8.1, .8, 7.4], wood), B([7.4, .8, 6.7], [8, 1.3, 7.3], wood), CYL(2.8, 7.3, .32, 0, .9, barrelMat(7)), CYL(2.5, 6.6, .28, 0, .8, barrelMat(8)));
+  // trees and flowers (billboards); one tree very close to the camera, out of focus
+  S.sprites.push({ x: -9.5, y: 0, z: 10.5, w: 5, h: 6.8, img: tree(61, [84, 140, 70]) }, { x: 12.6, y: 0, z: 10.8, w: 4.4, h: 6, img: tree(62, [96, 150, 74]) },
+    { x: -8.6, y: 0, z: -2.5, w: 6, h: 8.2, img: tree(63, [70, 124, 62]) });
+  for (const [x, z] of [[-2.2, 12.6], [-1.2, 12.6], [9.2, 12.4], [-6.6, 12], [2.2, 4.4]]) S.sprites.push({ x, y: 0, z, w: .62, h: .75, img: POT, blob: true });
+  // real windows, lamps, a bench and grass along the walls
+  frontDetails(S, -15, -7, 13, 3.3, true, [70, 112, 90]); frontDetails(S, -6, .5, 15, 4, true, [64, 92, 136]);
+  frontDetails(S, 1.6, 8.6, 13.5, 3.1, true, [136, 64, 54]); frontDetails(S, 9.8, 15.5, 14, 3.8, true, [70, 112, 90]); frontDetails(S, -18, -12, 2, 3.2, false, [64, 92, 136]);
+  const iron3 = flat([50, 50, 56]); lantern(S, -3.6, 3.4, 2.3, false, iron3); lantern(S, 8.9, 5.4, 2.3, false, iron3);
+  const bench = planks(52, [130, 88, 54], 4, [40, 28, 20], true);
+  S.prims.push(B([-7.4, .42, 5.6], [-5.6, .5, 6.05], bench, { ok: true }), B([-7.3, 0, 5.65], [-7.15, .42, 6], bench), B([-5.85, 0, 5.65], [-5.7, .42, 6], bench));
+  for (const [x0, x1, zf] of [[-15, -7, 13], [-6, .5, 15], [1.6, 8.6, 13.5], [9.8, 15.5, 14], [-18, -12, 2]])
+    for (let x = x0 + .3; x < x1; x += .9 + hash(x * 10 | 0, 2, 93) * .8) S.sprites.push({ x, y: 0, z: zf - .12, w: .7, h: .4, img: GRASS, noShadow: true });
+  for (let i = 0; i < 24; i++) { const x = (hash(i, 6, 94) - .5) * 26, z = 1 + hash(i, 7, 94) * 11; S.sprites.push({ x, y: 0, z, w: .55, h: .3, img: GRASS, noShadow: true }); }
+  person(S, "pip", -1.6, 5); person(S, "hero", .4, 4.4); person(S, "folkB", 2, 6.2); person(S, "folkA", -6.5, 5);
+  return S;
+};
+
 
 // ---------- portraits: big busts in the same style (4-tone shading, coloured outline), with blink and talk frames ----------
 const BW = 48, BH = 56;
@@ -950,11 +1094,16 @@ const BUSTS = {
   mei: { female: true, hair: "long", outfit: "kimono", pal: { skin: hex("#f4d2b4"), hair: hex("#1f1b2e"), brow: [60, 50, 80], top: hex("#7a4fd1"), accent: hex("#f2c230"), under: [246, 240, 230], sash: hex("#f2c230"), eye: [86, 60, 120] } },
   bram: { hair: "helmet", stern: true, scar: true, outfit: "armor", pal: { skin: hex("#d6a27e"), hair: hex("#3b2f2a"), metal: hex("#9aa3ad"), metal2: [120, 128, 140], armor: [168, 176, 188], rivet: [230, 230, 236], accent: [150, 40, 46], top: [120, 40, 46], eye: [80, 70, 60] } },
   marcus: { hair: "short", beard: true, outfit: "robe", pal: { skin: hex("#e0b08c"), hair: hex("#b9b9b9"), beard: hex("#c8c8c8"), brow: [150, 150, 150], top: hex("#7a2f2a"), accent: hex("#e0b440"), medal: [236, 200, 90], eye: [70, 80, 100] } },
+  iris: { female: true, hair: "side", bun: true, outfit: "robe", pal: { skin: hex("#e9c3a3"), hair: hex("#3a2a20"), bun: hex("#3a2a20"), tie: [216, 192, 112], top: hex("#2f5a6b"), accent: hex("#d8c070"), medal: [240, 220, 140], eye: [70, 100, 60] } },
+  pip: { hair: "short", freckles: true, mouth: "grin", outfit: "vest", pal: { skin: hex("#e3b48c"), hair: hex("#d9a441"), top: hex("#e7dcc4"), vest: hex("#6a8f3a"), button: [220, 190, 110], eye: [70, 110, 160] } },
+  ola: { female: true, hair: "cap", mouth: "grin", outfit: "vest", pal: { skin: hex("#b97c55"), hair: hex("#d6d0c8"), cap: hex("#1f3557"), brim: [24, 40, 66], top: [240, 236, 224], vest: hex("#24406b"), button: [226, 196, 96], eye: [60, 100, 120] } },
+  lena: { female: true, hair: "long", freckles: true, outfit: "apron", pal: { skin: hex("#f2c4a0"), hair: hex("#e09a3a"), top: hex("#8a4e7a"), collar: [246, 242, 232], apron: [242, 234, 216], eye: [90, 130, 70] } },
+  ana: { female: true, hood: true, hair: "hood", outfit: "robe", pal: { skin: hex("#a8724e"), hair: hex("#1d1410"), hood: hex("#e8e2d4"), top: [236, 230, 218], accent: hex("#d4a840"), medal: [240, 220, 140], eye: [70, 50, 40] } },
   hero: { hood: true, hair: "hood", outfit: "tunic", pal: { skin: [238, 196, 158], hair: [120, 84, 54], hood: [72, 96, 136], top: [146, 108, 70], strap: [104, 70, 44], eye: [60, 80, 120] } },
 };
 
 // ---------- public API ----------
-const HD_VER = "4", RW = 448, RH = 196, mem = {}, busy = {};
+const HD_VER = "6", RW = 448, RH = 196, mem = {}, busy = {};
 let worker = null, workerDead = false, chain = Promise.resolve();
 function toURL(img, scale = 1) {
   const c = document.createElement("canvas"); c.width = img.w; c.height = img.h; const x = c.getContext("2d"), d = x.createImageData(img.w, img.h);
@@ -998,7 +1147,7 @@ const API = {
   spots(name) {
     if (!STORY[name]) return {};
     if (!mem["p:" + name]) { const S = STORY[name](), out = {};
-      for (const [who, [x, z]] of Object.entries(S.people || {})) { const a = project(S, [x, 0, z]), b = project(S, [x, CH / CT, z]); out[who] = { x: a[0], y: a[1], h: a[1] - b[1] }; }
+      for (const [who, [x, z, k]] of Object.entries(S.people || {})) { const a = project(S, [x, 0, z]), b = project(S, [x, CH / CT * k, z]); out[who] = { x: a[0], y: a[1], h: a[1] - b[1] }; }
       mem["p:" + name] = out; }
     return mem["p:" + name];
   },

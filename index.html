@@ -2071,7 +2071,7 @@ const syActor = who => { const c = SY.st.cast[who]; if (!c) return ""; const b =
 // starts the new portrait on the spot where that person stands in the picture
 function syFly() {
   const a = document.querySelector(".actor.bust.enter"), st = a && a.closest(".stage"), sp = HD && SY.who && HD.spots(SY.scene)[SY.who];
-  if (!sp || !st.querySelector(".lay.hd")) return;
+  if (!a || !sp || !st.querySelector(".lay.hd")) return;
   const W = st.clientWidth, H = st.clientHeight, k = Math.max(W / HD.ratio, H), iw = k * HD.ratio, ox = (W - iw) / 2, oy = (H - k) / 2;
   a.style.setProperty("--dx", (ox + sp.x * iw - W / 2).toFixed(1) + "px"); a.style.setProperty("--dy", (oy + sp.y * k - H).toFixed(1) + "px");
   a.style.setProperty("--s", (sp.h * k / a.clientHeight).toFixed(3)); a.classList.add("fly");
@@ -2260,7 +2260,7 @@ function viewStory() {
         if (lock) return `<div class="talk-row locked-row"><span class="talk-ic">${I("lock")}</span><span class="grow"><b>${esc(c.t)} <span class="muted">· ${esc(c.tPt)}</span></b><small>Termine o capítulo ${c.n - 1} para abrir.</small></span></div>`;
         return `<button class="talk-row" data-act="syStart" data-id="${c.id}"><span class="talk-ic">${c.n}</span><span class="grow"><b>${esc(c.t)} <span class="muted">· ${esc(c.tPt)}</span></b><small>${esc(c.blurb)}</small></span>
           <span class="mini-stars" title="${r ? `Melhor: ${r.stars} de 3 estrelas` : "Ainda não jogado"}">${[1, 2, 3].map(i => `<i class="${r && i <= r.stars ? "on" : ""}">${I("star")}</i>`).join("")}</span></button>`; }).join("")
-        + (ai === 0 ? `<p class="muted soon">Próximos capítulos do arco em breve.</p>` : "")
+        + (a.done ? "" : `<p class="muted soon">Próximos capítulos do arco em breve.</p>`)
         : `<p class="muted soon">Em breve: este degrau do zigurate ainda está sendo construído.</p>`;
       return `<div class="card lvl-block ${chs.length ? "" : "locked"}"><div class="lvl-head"><span class="lvl-badge">${a.lvl}</span><div><h3>Arco ${ai + 1}: ${esc(a.t)}</h3><small class="muted">${esc(a.sub)}</small></div></div>${body}</div>`;
     }).join("")}</div>`;

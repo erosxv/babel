@@ -57,7 +57,7 @@ Cuidado com aspas e vírgulas: cada frase fica entre aspas `"…"`, e os itens d
 
 **As frases do capítulo** (`phrases`, no fim de cada capítulo em `historia.js`) são usadas no treino de fala do final e podem ir para o caderno. Escolha frases curtas do dia a dia.
 
-**Criar um capítulo:** copie um capítulo inteiro em `historia.js` (de `{ id: "a1c3"` até o `},` que fecha ele), mude o `id` (por exemplo `a1c4`), o número `n`, o título e as falas. O comentário no topo do arquivo explica cada tipo de cena: narração, fala, escolha, explorar objetos, procurar algo, pagar e memória.
+**Criar um capítulo:** copie um capítulo inteiro em `historia.js` (de `{ id: "a1c3"` até o `},` que fecha ele), mude o `id` (por exemplo `a2c1` para o primeiro capítulo do Arco 2), o número `n`, o título e as falas. Quando um arco tiver todos os capítulos, marque `done: true` nele para sumir o aviso "Próximos capítulos em breve". O comentário no topo do arquivo explica cada tipo de cena: narração, fala, escolha, explorar objetos, procurar algo, pagar e memória.
 
 ## Testar antes de publicar (opcional)
 

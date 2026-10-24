@@ -14,6 +14,11 @@
     mei: { skin: "#f4d2b4", hair: "#1f1b2e", hairLight: "#4a4370", style: "long", outfit: "kimono", cloth: "#7a4fd1", accent: "#f2c230", face: "smile", blush: true },
     bram: { skin: "#d6a27e", hair: "#3b2f2a", hairLight: "#5a4a40", style: "helmet", metal: "#9aa3ad", outfit: "armor", cloth: "#9aa3ad", face: "stern", scar: true },
     marcus: { skin: "#e0b08c", hair: "#b9b9b9", hairLight: "#e2e2e2", style: "short", outfit: "robe", cloth: "#7a2f2a", accent: "#e0b440", face: "calm", beard: true },
+    iris: { skin: "#e9c3a3", hair: "#3a2a20", hairLight: "#5e4636", style: "bun", outfit: "robe", cloth: "#2f5a6b", accent: "#d8c070", face: "smile", blush: true },
+    pip: { skin: "#e3b48c", hair: "#d9a441", hairLight: "#f0c766", style: "short", outfit: "vest", cloth: "#e7dcc4", vest: "#6a8f3a", face: "grin" },
+    ola: { skin: "#b97c55", hair: "#d6d0c8", hairLight: "#f0ece6", style: "cap", cap: "#1f3557", outfit: "vest", cloth: "#f0ece0", vest: "#24406b", face: "grin" },
+    lena: { skin: "#f2c4a0", hair: "#e09a3a", hairLight: "#f2bf6a", style: "long", outfit: "apron", cloth: "#8a4e7a", accent: "#f4efe6", face: "smile", blush: true },
+    ana: { skin: "#a8724e", hair: "#1d1410", hairLight: "#3a2a22", style: "long", outfit: "robe", cloth: "#e8e2d4", accent: "#d4a840", face: "calm" },
   };
   const shade = (hex, f) => {
     const n = parseInt(hex.slice(1), 16), c = [n >> 16, (n >> 8) & 255, n & 255].map(v => Math.max(0, Math.min(255, Math.round(f < 0 ? v * (1 + f) : v + (255 - v) * f))));
