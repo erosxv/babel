@@ -1,4 +1,4 @@
-# Babel
+# Xibolete
 
 Aprenda idiomas jogando e falando em voz alta. É um jogo no navegador, sem instalação, para estudar **inglês, espanhol, francês, italiano e russo** a partir do português.
 
@@ -6,7 +6,7 @@ Aprenda idiomas jogando e falando em voz alta. É um jogo no navegador, sem inst
 
 - **Mapa de fases:** cada idioma tem 8 unidades (o russo tem 9, começando pelo alfabeto cirílico). Cada unidade tem 3 lições, uma prova de fala e um baú de recompensa.
 - **Exercícios variados:** palavra nova, escolher a tradução, ouvir e escolher, formar pares, montar frases com peças, escrever a resposta, falar em voz alta e treino de ouvido.
-- **XP e níveis:** cada acerto vale XP, com bônus de combo para acertos seguidos. Os níveis vão de Turista a Lenda de Babel.
+- **XP e níveis:** cada acerto vale XP, com bônus de combo para acertos seguidos. Os níveis vão de Turista a Mestre do Xibolete.
 - **Vidas:** cada erro numa lição custa 1 vida. Uma vida volta a cada 30 minutos, e um treino completo devolve 1. Exercícios de fala e de ouvido nunca custam vida.
 - **Sequência de dias, meta diária e missões do dia.** Uma das missões é sempre de fala.
 - **Moedas e loja:** recarga de vidas, protetor de sequência e XP em dobro.
@@ -25,6 +25,10 @@ O jogo ouve sua voz com o reconhecimento de fala do próprio navegador. Funciona
 
 As vozes que leem as palavras também são do navegador. Chrome e Edge costumam ter vozes para todos os idiomas.
 
+## Por que Xibolete
+
+No livro de Juízes, na Bíblia, os homens de Galaade descobriam quem era da tribo inimiga de Efraim pedindo que a pessoa dissesse *shibbólet* (“espiga”, em hebraico). Quem não conseguia fazer o som de “sh” e dizia “sibbólet” era descoberto. Foi a primeira prova de pronúncia de que se tem notícia. O logo é um zigurate, a torre em degraus da antiga Mesopotâmia: cada degrau é um nível a subir.
+
 ## Atalhos
 
 - `1` a `4`: escolhem uma opção
@@ -34,7 +38,7 @@ As vozes que leem as palavras também são do navegador. Chrome e Edge costumam 
 
 ## Onde ficam os dados
 
-Seu progresso fica salvo no `localStorage` do navegador. O Babel não tem servidor próprio. Quando você usa o microfone, o navegador pode enviar o áudio para o serviço de reconhecimento de voz dele (o do Google, no Chrome) para transformar a fala em texto.
+Seu progresso fica salvo no `localStorage` do navegador. O Xibolete não tem servidor próprio. Quando você usa o microfone, o navegador pode enviar o áudio para o serviço de reconhecimento de voz dele (o do Google, no Chrome) para transformar a fala em texto.
 
 ## Adicionar conteúdo
 

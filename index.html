@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Babel</title>
+<title>Xibolete</title>
 <meta name="description" content="Aprenda inglês, espanhol, francês, italiano e russo jogando e falando em voz alta: pronúncia corrigida por reconhecimento de voz, XP, níveis, sequência e conquistas.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -227,7 +227,11 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 /* onboarding */
 .onb{max-width:760px;margin:0 auto;padding:32px max(16px,env(safe-area-inset-right,0px)) 48px max(16px,env(safe-area-inset-left,0px));text-align:center}
 .onb h1{font-size:clamp(32px,6vw,48px);margin:10px 0 6px}
-.onb .lead{color:var(--muted);font-weight:700;font-size:18px;margin:0 auto 26px;max-width:46ch}
+.onb .lead{color:var(--muted);font-weight:700;font-size:18px;margin:0 auto 10px;max-width:46ch}
+.onb .onb-note{color:var(--muted);font-weight:700;font-size:14px;margin:0 auto 26px;max-width:52ch}
+.story p{margin:0 0 10px;font-weight:700;line-height:1.55}
+.story p:last-child{margin:0}
+.story b{color:var(--lang)}
 .onb-langs{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin-bottom:26px}
 .onb-lang{border:2px solid var(--line);border-bottom-width:5px;background:var(--surface);border-radius:18px;padding:18px 10px;display:grid;justify-items:center;gap:10px;font-family:var(--display);font-weight:600;font-size:18px}
 .onb-lang .badge{width:56px;height:40px;font-size:18px;border-radius:10px}
@@ -473,14 +477,14 @@ const P = {
   user: '<circle cx="12" cy="8" r="4.2" fill="currentColor"/><path fill="currentColor" d="M3.8 20.5c.6-4.2 4-6.6 8.2-6.6s7.6 2.4 8.2 6.6a.9.9 0 0 1-.9 1H4.7a.9.9 0 0 1-.9-1z"/>',
   shield: '<path fill="currentColor" d="M12 2.5l8 3v6.2c0 4.8-3.3 8.4-8 9.8-4.7-1.4-8-5-8-9.8V5.5z"/><path fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M8.4 12l2.6 2.6 4.8-5"/>',
   medal: '<path fill="currentColor" opacity=".75" d="M7 2h4l2 5-3 2zM17 2h-4l-2 5 3 2z"/><circle cx="12" cy="15" r="6.5" fill="currentColor"/><path fill="#fff" opacity=".85" d="M12 11.3l1.1 2.3 2.5.3-1.8 1.7.5 2.5-2.3-1.2-2.3 1.2.5-2.5-1.8-1.7 2.5-.3z"/>',
-  tower: '<path fill="currentColor" d="M9 2h6l1 4H8z"/><path fill="currentColor" opacity=".85" d="M7.5 7h9l1 5h-11z"/><path fill="currentColor" opacity=".7" d="M6 13h12l1.2 8H4.8z"/><rect x="10.5" y="16.5" width="3" height="4.5" rx="1.5" fill="#fff" opacity=".85"/>',
+  zig: '<path fill="currentColor" d="M9 3h6v4H9z"/><path fill="currentColor" opacity=".88" d="M7 7.6h10v3.9H7z"/><path fill="currentColor" opacity=".76" d="M5 12.1h14v3.9H5z"/><path fill="currentColor" opacity=".64" d="M3 16.6h18V21H3z"/><path fill="#fff" opacity=".55" d="M11 7.6h2V21h-2z"/>',
   mic: '<rect x="8.3" y="2.5" width="7.4" height="12" rx="3.7" fill="currentColor"/><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M5.3 11.2a6.7 6.7 0 0 0 13.4 0M12 18v3.2M8.6 21.3h6.8"/>',
   slow: '<path fill="currentColor" d="M4 15.5c0-3.6 3-6.5 6.6-6.5 3.2 0 5.8 2.2 6.4 5.2h1.4a1.6 1.6 0 1 1 0 3.3H5.6A1.6 1.6 0 0 1 4 15.5z"/><circle cx="18.5" cy="9" r="2.3" fill="currentColor"/>',
 };
 const I = (n, cls = "i") => `<svg class="${cls}" viewBox="0 0 24 24" aria-hidden="true">${P[n]}</svg>`;
 
 // ---------- state ----------
-const KEY = "babel-save-v1";
+const KEY = "babel-save-v1"; // name from before the app was renamed; kept so saved progress survives
 const fresh = () => ({
   v: 1, onboarded: false, lang: "en", view: "learn", xp: 0, coins: 50, hearts: 5, heartsAt: Date.now(),
   streak: 0, bestStreak: 0, lastDay: null, freezes: 0, goal: 30, day: {}, boostUntil: 0,
@@ -558,7 +562,7 @@ const dueWords = lang => seenWords(lang).filter(w => srs(lang, w).due <= Date.no
 
 // ---------- xp, levels, hearts, streak ----------
 function lvl(xp) { let L = 1, acc = 0, need = 100; while (xp >= acc + need) { acc += need; L++; need = 100 + 40 * (L - 1); } return { L, into: xp - acc, need }; }
-const TITLES = [[1, "Turista"], [3, "Viajante"], [5, "Explorador"], [8, "Intérprete"], [12, "Embaixador"], [16, "Poliglota"], [20, "Lenda de Babel"]];
+const TITLES = [[1, "Turista"], [3, "Viajante"], [5, "Explorador"], [8, "Intérprete"], [12, "Embaixador"], [16, "Poliglota"], [20, "Mestre do Xibolete"]];
 const titleOf = L => TITLES.filter(t => L >= t[0]).pop()[1];
 const boosted = () => S.boostUntil > Date.now();
 function addXp(n) { const g = n * (boosted() ? 2 : 1); S.xp += g; today().xp += g; return g; }
@@ -847,7 +851,7 @@ function applyLangColor() {
 function renderChrome() {
   applyLangColor();
   const L = LANGS[S.lang];
-  $("#logo").innerHTML = I("tower") + "<span>Babel</span>";
+  $("#logo").innerHTML = I("zig") + "<span>Xibolete</span>";
   $("#langBtn").innerHTML = `<span class="badge">${L.code}</span><span class="lname">${esc(L.name)}</span>`;
   const lv = lvl(S.xp);
   $("#stats").innerHTML = `
@@ -949,7 +953,7 @@ function viewSpeak() {
     ["Fale desde o primeiro dia", "Toda lição tem fala, e errar na fala não custa vida. Benny Lewis, em Fluent in 3 Months, defende falar desde o começo e encarar o erro como parte do caminho."],
     ["Constância", "Uma prova de fala fecha cada unidade, e há uma missão de fala todo dia. Pouco por dia, sempre, vale mais que muito de vez em quando."],
   ];
-  return `<div class="page-head"><h1>Pronúncia</h1><p>Fale em voz alta todos os dias. O Babel escuta você e mostra o quanto da sua fala ele entendeu.</p></div><div class="stack">
+  return `<div class="page-head"><h1>Pronúncia</h1><p>Fale em voz alta todos os dias. O Xibolete escuta você e mostra o quanto da sua fala ele entendeu.</p></div><div class="stack">
     ${micStatusHtml()}
     <div class="card hero-card"><div class="big">${st.n ? st.avg + "%" : "—"}</div><div class="grow"><strong style="font-family:var(--display);font-size:20px">${st.n ? "sua pronúncia média" : "Ainda sem notas"}</strong>
       <p class="muted" style="margin:2px 0 0;font-weight:700">${st.n} ${st.n === 1 ? "palavra ou frase falada" : "palavras e frases faladas"} em ${esc(L.name)} · ${S.stats.spoken} pronúncias boas no total</p></div>
@@ -958,7 +962,9 @@ function viewSpeak() {
       ${snds.map((s, i) => `<div class="snd"><div class="snd-head"><h4>${esc(s.t)}</h4><button class="btn small ghost" data-act="soundPractice" data-i="${i}">${I("mic")}Praticar</button></div>
         <p>${esc(s.tip)}</p><div class="ex-row">${s.ex.map(e => exChip(e[0], e[1])).join("")}</div>
         ${s.pairs.length ? `<p class="lbl">Pares parecidos</p><div class="ex-row">${s.pairs.map(p => `<span class="pair">${exChip(p[0], p[2])}<span class="vs">×</span>${exChip(p[1], p[3])}</span>`).join("")}</div>` : ""}</div>`).join("")}</div>
-    <div class="card"><h3>Como o Babel treina sua pronúncia</h3><div class="wlist">${method.map(([t, d], i) => `<div class="wrow" style="grid-template-columns:auto minmax(0,1fr)"><span class="mnum">${i + 1}</span><div class="w">${t}<small>${d}</small></div></div>`).join("")}</div></div>
+    <div class="card story"><h3>Por que Xibolete?</h3><p>No livro de Juízes, na Bíblia, os homens de Galaade guardavam as passagens do rio Jordão depois de uma guerra contra a tribo de Efraim. Para saber quem era inimigo, pediam a cada pessoa que dissesse <b>shibbólet</b>, que em hebraico quer dizer “espiga”. Os efraimitas não tinham o som de “sh” e diziam “sibbólet”. Era assim que eles eram descobertos.</p>
+      <p>Foi a primeira prova de pronúncia de que se tem notícia. Até hoje, “xibolete” é o nome de uma palavra ou de um jeito de falar que mostra de onde a pessoa vem. Aqui, o objetivo é o contrário: treinar até que sua pronúncia passe em qualquer prova.</p></div>
+    <div class="card"><h3>Como o Xibolete treina sua pronúncia</h3><div class="wlist">${method.map(([t, d], i) => `<div class="wrow" style="grid-template-columns:auto minmax(0,1fr)"><span class="mnum">${i + 1}</span><div class="w">${t}<small>${d}</small></div></div>`).join("")}</div></div>
   </div>`;
 }
 function viewAch() {
@@ -1007,8 +1013,9 @@ function renderOnboarding() {
   const o = $("#onb"); o.hidden = false;
   document.documentElement.style.setProperty("--lang", LANGS[onbLang].color);
   document.documentElement.style.setProperty("--lang-dark", LANGS[onbLang].dark);
-  o.innerHTML = `<div class="onb"><div style="color:var(--lang)">${I("tower", "i tower")}</div><h1>Bem-vindo ao Babel</h1>
-    <p class="lead">Aprenda idiomas jogando e falando em voz alta. O Babel escuta sua pronúncia, e você ganha XP, sobe de nível e desbloqueia conquistas.</p>
+  o.innerHTML = `<div class="onb"><div style="color:var(--lang)">${I("zig", "i tower")}</div><h1>Bem-vindo ao Xibolete</h1>
+    <p class="lead">Aprenda idiomas jogando e falando em voz alta. O Xibolete escuta sua pronúncia, e você ganha XP, sobe de nível e desbloqueia conquistas.</p>
+    <p class="onb-note">O nome vem da Bíblia: <i>shibbólet</i> era a palavra que, pela pronúncia, revelava de onde a pessoa vinha.</p>
     <h2>Qual idioma você quer aprender?</h2>
     <div class="onb-langs">${LKEYS.map(k => `<button class="onb-lang" style="--bc:${LANGS[k].color}" data-act="onbLang" data-k="${k}" aria-pressed="${onbLang === k}"><span class="badge" style="--bc:${LANGS[k].color}">${LANGS[k].code}</span>${esc(LANGS[k].name)}</button>`).join("")}</div>
     <h2>Quanto tempo por dia?</h2>
