@@ -10,6 +10,8 @@ Todo o conteúdo do app fica em arquivos de texto separados do código. Para mud
 | `conversas.js` | As situações da aba Conversas |
 | `historia.js` | O modo História: personagens, itens da mochila, dicas e capítulos |
 | `arte.js` | A pixel art: o visual dos personagens e dos cenários |
+| `hd2d.js` | A arte HD-2D da história: os cenários em 3D (`STORY`) e os retratos grandes de quem fala (`BUSTS`) |
+| `hd2d-worker.js` | Desenha os cenários em segundo plano (não precisa mexer) |
 | `index.html` | O app em si (telas, regras do jogo). Normalmente não precisa mexer |
 | `manifest.webmanifest`, `sw.js`, `icons/` | O que faz o site virar app instalável |
 
@@ -42,7 +44,11 @@ Cuidado com aspas e vírgulas: cada frase fica entre aspas `"…"`, e os itens d
 
 **Criar um personagem:** em `historia.js`, acrescente o nome em `cast`; em `arte.js`, acrescente o visual em `CHARS` (cores da pele, do cabelo e da roupa e um dos estilos listados no topo do arquivo).
 
-**Mexer num cenário** (`arte.js`): cada cenário em `SCENES` tem três camadas, `back` (o fundo, que aparece levemente desfocado), `mid` (o meio, nítido, onde fica o personagem) e `front` (coisas bem na frente, desfocadas). Em `lights` ficam os pontos de luz: `[posição horizontal %, posição vertical %, cor, tamanho]`. Em `rays`, os raios de sol que entram pela janela.
+**Retrato grande de um personagem** (`hd2d.js`, em `BUSTS`): cada um tem cabelo (`side`, `long`, `short`, `cap`, `helmet`), roupa (`apron`, `vest`, `kimono`, `armor`, `robe`, `tunic`), detalhes como `bun` (coque), `beard` (barba), `freckles` (sardas), `scar` (cicatriz), e as cores em `pal`. Um personagem novo sem retrato usa o desenho de `arte.js`.
+
+**Mexer num cenário HD-2D** (`hd2d.js`, em `STORY`): cada lugar é montado com blocos (`B`), cilindros (`CYL`), casas (`house`) e objetos prontos (`lantern`, `candle`, `hangLamp`, `stool`). Depois de mudar um cenário, aumente `HD_VER` para os aparelhos desenharem de novo. Peças soltas no ar são apontadas pela checagem `checkFloating`.
+
+**Mexer na versão simples do cenário** (`arte.js`, usada enquanto o HD-2D é desenhado): cada cenário em `SCENES` tem três camadas, `back` (o fundo, que aparece levemente desfocado), `mid` (o meio, nítido, onde fica o personagem) e `front` (coisas bem na frente, desfocadas). Em `lights` ficam os pontos de luz: `[posição horizontal %, posição vertical %, cor, tamanho]`. Em `rays`, os raios de sol que entram pela janela.
 
 **As frases do capítulo** (`phrases`, no fim de cada capítulo em `historia.js`) são usadas no treino de fala do final e podem ir para o caderno. Escolha frases curtas do dia a dia.
 

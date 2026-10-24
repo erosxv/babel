@@ -465,6 +465,21 @@ img.pix{image-rendering:pixelated;display:block}
 .actor img.pix{height:100%;width:auto;filter:drop-shadow(0 0 1px rgba(255,226,170,.7)) drop-shadow(0 4px 2px rgba(0,0,0,.45))}
 .vn-name{display:flex;align-items:center;gap:6px}
 img.pix.mini{width:22px;height:auto;border-radius:6px;background:rgba(0,0,0,.08)}
+img.pix.mini.face{width:26px;height:26px;object-fit:cover;object-position:50% 22%}
+/* HD-2D place (drawn by hd2d.js) and the big portrait in front of it */
+.stage .lay.hd{image-rendering:auto;animation:fadein .5s both}
+@keyframes fadein{from{opacity:0}}
+.actor.bust{height:96%}
+.actor.bust.enter{animation:bustin .4s cubic-bezier(.2,.8,.3,1) both}
+@keyframes bustin{from{opacity:0;transform:translateY(14%)}}
+.actor.bust .fr{position:relative;height:100%;aspect-ratio:48/56}
+.actor.bust .fr img{position:absolute;inset:0;width:100%;height:100%;image-rendering:pixelated;filter:drop-shadow(0 0 1px rgba(255,226,170,.6)) drop-shadow(0 6px 4px rgba(0,0,0,.4))}
+.actor.bust .b1{opacity:0;animation:blink 4.2s steps(1) infinite}
+.actor.bust .b2{opacity:0}
+.stage.talking .actor.bust .b2{opacity:1}
+@keyframes blink{0%{opacity:0}94%{opacity:1}97%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.actor.bust .b1{animation:none}}
+@media (max-width:600px){.stage{aspect-ratio:16/11}}
 .obj .sw{display:block;width:34px;height:34px;border-radius:10px;box-shadow:inset 0 -4px 0 rgba(0,0,0,.2)}
 .locked-row{opacity:.6}
 .thought.lesson b{color:var(--lang)}
@@ -614,6 +629,7 @@ textarea.lines::placeholder{color:#a3acbb}
 <script src="data.js"></script>
 <script src="conversas.js"></script>
 <script src="arte.js"></script>
+<script src="hd2d.js"></script>
 <script src="historia.js"></script>
 <script>
 (() => {
@@ -1959,6 +1975,7 @@ function startStory(id) {
   SY = { st, ch, i: 0, purse: ch.purse, flags: new Set(), mistakes: 0, shards: 0, xp: 0, who: null, scene: "room", label: "", t0: Date.now(),
     pick: null, wrongs: new Set(), seen: new Set(), found: false, miss: null, hand: 0, payFb: null, listening: false, err: "", heard: "", trOn: false, scores: [], drill: null, drilled: false };
   document.body.classList.add("locked"); $("#lesson").hidden = false;
+  if (HD) HD.prefetch([...new Set(["room", ...ch.nodes.filter(n => n.scene).map(n => n.scene)])]);
   syAdvance(0);
 }
 const syNode = () => SY.ch.nodes[SY.i];
@@ -2037,22 +2054,36 @@ function syHeard(res) {
 }
 const ART = window.XIB_ART;
 const pxPortrait = (who, cls = "pix") => { const u = ART && ART.portrait(who); return u ? `<img class="${cls}" src="${u}" alt="">` : ""; };
-const syActor = who => { const c = SY.st.cast[who]; if (!c) return ""; const img = pxPortrait(who);
+const HD = window.XIB_HD;
+// the speaker comes to the front as a big HD-2D bust: base, blink and talking frames stacked
+const syActor = who => { const c = SY.st.cast[who]; if (!c) return ""; const b = HD && HD.bust(who);
+  if (b) { const enter = SY.onStage !== who ? " enter" : ""; SY.onStage = who;
+    return `<div class="actor bust${enter}" style="--ac:${c.color}"><div class="fr"><img class="b0" src="${b.base}" alt=""><img class="b1" src="${b.blink}" alt=""><img class="b2" src="${b.talk}" alt=""></div><small>${esc(c.name)}</small></div>`; }
+  const img = pxPortrait(who);
   return `<div class="actor" style="--ac:${c.color}">${img || `<span>${esc(c.name[0])}</span>`}<small>${esc(c.name)}</small></div>`; };
+const syFace = who => { const b = HD && HD.bust(who); return b ? `<img class="pix mini face" src="${b.base}" alt="">` : pxPortrait(who, "pix mini"); };
+// the mouth moves while the voice speaks
+setInterval(() => { const st = document.querySelector(".stage"); if (!st) return; const on = !!(window.speechSynthesis && speechSynthesis.speaking);
+  st.classList.toggle("talking", on && !st.classList.contains("talking")); }, 150);
 // The stage in layers, "HD-2D" style: soft-focus back, sharp middle with the character, blurred front,
 // then glows, sunbeams, dust and a vignette on top.
 function stageLayers(scene, actor) {
+  const dust = `<i class="fx-dust">${Array.from({ length: 14 }, (_, k) => `<b style="left:${(k * 37) % 100}%;top:${20 + (k * 53) % 70}%;animation-delay:${(k * .7) % 7}s;animation-duration:${6 + (k % 4)}s"></b>`).join("")}</i>`;
+  // the HD-2D picture of the place, once it is drawn (the first time takes a few seconds; then it is kept)
+  const hd = HD && HD.scene(scene);
+  if (hd) return `<img class="lay hd" src="${hd}" alt="">` + actor + dust + `<i class="fx-vig"></i>`;
+  if (HD) HD.load(scene).then(u => { const st = u && document.querySelector(".stage.bg-" + scene); if (!st) return;
+    st.querySelectorAll(".lay,.fx-light,.fx-rays").forEach(e => e.remove()); st.insertAdjacentHTML("afterbegin", `<img class="lay hd" src="${u}" alt="">`); });
   const sc = ART && ART.scene(scene); if (!sc) return actor;
   const img = k => sc[k] ? `<img class="lay ${k}" src="${sc[k]}" alt="">` : "";
   const lights = sc.lights.map(([x, y, c, r]) => `<i class="fx-light" style="left:${x}%;top:${y}%;width:${(r / 2.4).toFixed(1)}%;--c:${c}"></i>`).join("");
   const rays = sc.rays ? `<i class="fx-rays" style="left:${sc.rays.x}%;top:${sc.rays.y}%;--a:${sc.rays.angle}deg;--rc:${sc.rays.color}"></i>` : "";
-  const dust = `<i class="fx-dust">${Array.from({ length: 14 }, (_, k) => `<b style="left:${(k * 37) % 100}%;top:${20 + (k * 53) % 70}%;animation-delay:${(k * .7) % 7}s;animation-duration:${6 + (k % 4)}s"></b>`).join("")}</i>`;
   return img("back") + img("mid") + actor + img("front") + rays + lights + dust + `<i class="fx-vig"></i>`;
 }
 const objIc = o => o.sw ? `<span class="oi"><i class="sw" style="background:${o.sw}"></i></span>` : `<span class="oi">${o.ic}</span>`;
 function syLine(who, t, pt, cls = "") {
   const c = SY.st.cast[who] || { name: "", color: "var(--lang)" };
-  return `<div class="vn-line ${cls}" style="--ac:${c.color}"><div class="vn-name">${pxPortrait(who, "pix mini")}${esc(c.name)}</div><p class="vn-en">${esc(t)}</p>
+  return `<div class="vn-line ${cls}" style="--ac:${c.color}"><div class="vn-name">${syFace(who)}${esc(c.name)}</div><p class="vn-en">${esc(t)}</p>
     <div class="bub-acts"><button class="say" data-act="say" data-t="${esc(t)}" data-l="en" aria-label="Ouvir">${I("speaker")}</button><button class="say" data-act="saySlow" data-t="${esc(t)}" aria-label="Ouvir devagar">${I("slow")}</button>
     ${pt ? `<button class="linkish" data-act="syTr">${SY.trOn ? esc(pt) : "Traduzir"}</button>` : ""}</div></div>`;
 }
