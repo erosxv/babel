@@ -1,0 +1,5608 @@
+{
+ "11998958": {
+  "text": "Two apples! That's four coins.",
+  "heard": "Two apples. That's four coins.",
+  "score": 1,
+  "kept": true
+ },
+ "13241254": {
+  "text": "The old temple? At night? Are you crazy?",
+  "heard": "The old temple, at night, are you crazy?",
+  "score": 1,
+  "kept": true
+ },
+ "23665375": {
+  "text": "Cool, thanks.",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "26287636": {
+  "text": "Aw, bye!",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "27361076": {
+  "text": "You look for… every day? Or now?",
+  "heard": "You look for every day or now.",
+  "score": 1,
+  "kept": true
+ },
+ "29976955": {
+  "text": "A water? One water? Like, one drop? Haha.",
+  "heard": "a water, one water like one drop?  Ha ha.",
+  "score": 0.82,
+  "kept": true
+ },
+ "31146169": {
+  "text": "Just water, thanks.",
+  "heard": "Just water, thanks.",
+  "score": 1,
+  "kept": true
+ },
+ "33285296": {
+  "text": "Good. We leave after the festival.",
+  "heard": "Good, we leave after the festival.",
+  "score": 1,
+  "kept": true
+ },
+ "39363413": {
+  "text": "Perfect. Meet you there?",
+  "heard": "Perfect meet you there",
+  "score": 1,
+  "kept": true
+ },
+ "50557143": {
+  "text": "Green! Like the sea today.",
+  "heard": "Green like the sea today.",
+  "score": 1,
+  "kept": true
+ },
+ "51440047": {
+  "text": "No coffee? Okay, water it is.",
+  "heard": "No coffee? Okay, water it is.",
+  "score": 1,
+  "kept": true
+ },
+ "57251588": {
+  "text": "at",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "58002257": {
+  "text": "Be careful out there. Shinar's a big city.",
+  "heard": "Be careful out there, Shinaar's a big city.",
+  "score": 0.89,
+  "kept": true
+ },
+ "58968410": {
+  "text": "I love May. Spring is my favourite season. What's your favourite season?",
+  "heard": "I love May. Spring is my favorite season. What's your favorite season?",
+  "score": 0.85,
+  "kept": true
+ },
+ "64366431": {
+  "text": "She is my friend",
+  "heard": "She is my friend.",
+  "score": 1,
+  "kept": true
+ },
+ "65872955": {
+  "text": "In the fifteen? Almost! Try again.",
+  "heard": "In the 15, almost, try again.",
+  "score": 1,
+  "kept": true
+ },
+ "67459724": {
+  "text": "Wow. Somebody's grumpy in the morning. Fine. That's one extra coin.",
+  "heard": "Wow, somebody's grumpy in the morning. Fine, that's one extra coin.  //",
+  "score": 1,
+  "kept": true
+ },
+ "68034180": {
+  "text": "to read",
+  "heard": "They're really here all like us.",
+  "score": 0,
+  "kept": false
+ },
+ "90566151": {
+  "text": "Hair long black? Like a long black rope? Haha.",
+  "heard": "Sure, hair long black? Like a long black rope? Haha!",
+  "score": 0.95,
+  "kept": true
+ },
+ "94271132": {
+  "text": "See you tomorrow",
+  "heard": "See you tomorrow.",
+  "score": 1,
+  "kept": true
+ },
+ "94691369": {
+  "text": "Okay. Let's try that again. Be nice this time.",
+  "heard": "Okay, let's try that again. Be nice this time.",
+  "score": 1,
+  "kept": true
+ },
+ "99863551": {
+  "text": "happy",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "4f9f2cab": {
+  "text": "hello",
+  "heard": "Hello.",
+  "score": 1,
+  "kept": true
+ },
+ "46d72f50": {
+  "text": "goodbye",
+  "heard": "Or can you apply?",
+  "score": 0,
+  "kept": false
+ },
+ "f17ab010": {
+  "text": "good morning",
+  "heard": "for your morning.",
+  "score": 0.4,
+  "kept": false
+ },
+ "72131c0e": {
+  "text": "good night",
+  "heard": "tonight.",
+  "score": 0,
+  "kept": false
+ },
+ "4dd58d63": {
+  "text": "please",
+  "heard": "I'm going to leave.",
+  "score": 0,
+  "kept": false
+ },
+ "3c694558": {
+  "text": "thank you",
+  "heard": "Thank you.",
+  "score": 1,
+  "kept": true
+ },
+ "4e9f3590": {
+  "text": "yes",
+  "heard": "PYONOMO!  PYONOMO!  There you go!",
+  "score": 0,
+  "kept": false
+ },
+ "62366ffa": {
+  "text": "no",
+  "heard": "Oh!",
+  "score": 0,
+  "kept": false
+ },
+ "44f1708a": {
+  "text": "sorry",
+  "heard": "You're sorry.",
+  "score": 0.67,
+  "kept": false
+ },
+ "dd94f8e4": {
+  "text": "Good morning, how are you?",
+  "heard": "Good morning. How are you?",
+  "score": 1,
+  "kept": true
+ },
+ "2c1e14c9": {
+  "text": "I am fine, thank you",
+  "heard": "I am fine. Thank you.",
+  "score": 1,
+  "kept": true
+ },
+ "bb1fc4f8": {
+  "text": "What is your name?",
+  "heard": "But is your name?",
+  "score": 0.75,
+  "kept": true
+ },
+ "814afea8": {
+  "text": "My name is Ana",
+  "heard": "My name is Anna.",
+  "score": 0.75,
+  "kept": true
+ },
+ "eb4adb13": {
+  "text": "Nice to meet you",
+  "heard": "Nice to meet you.",
+  "score": 1,
+  "kept": true
+ },
+ "23e3d71a": {
+  "text": "mother",
+  "heard": "Mother, I...",
+  "score": 0.67,
+  "kept": false
+ },
+ "b0fee263": {
+  "text": "father",
+  "heard": "Thank you, God.",
+  "score": 0,
+  "kept": false
+ },
+ "35bc1205": {
+  "text": "brother",
+  "heard": "Carriker Cloud.",
+  "score": 0,
+  "kept": false
+ },
+ "fe691321": {
+  "text": "sister",
+  "heard": "Barthen Eweich, sister.",
+  "score": 0.5,
+  "kept": false
+ },
+ "cba09f8d": {
+  "text": "friend",
+  "heard": "My name is Shua, friend.",
+  "score": 0.33,
+  "kept": false
+ },
+ "e9a2ff6f": {
+  "text": "man",
+  "heard": "It's a very man.",
+  "score": 0.4,
+  "kept": false
+ },
+ "e96898d5": {
+  "text": "woman",
+  "heard": "For a minute, right?",
+  "score": 0,
+  "kept": false
+ },
+ "e5a0205d": {
+  "text": "child",
+  "heard": "Carrying the world.",
+  "score": 0,
+  "kept": false
+ },
+ "521d0429": {
+  "text": "family",
+  "heard": "Periods wrongly.",
+  "score": 0,
+  "kept": false
+ },
+ "dfb1f69e": {
+  "text": "This is my mother",
+  "heard": "This is my mother.",
+  "score": 1,
+  "kept": true
+ },
+ "1c19d52b": {
+  "text": "I have a brother",
+  "heard": "Or I have a brother.",
+  "score": 0.89,
+  "kept": true
+ },
+ "e3ce3b18": {
+  "text": "We are a family",
+  "heard": "We are a family.",
+  "score": 1,
+  "kept": true
+ },
+ "49c69a10": {
+  "text": "water",
+  "heard": "Keep in mind the magic of that letter, he is.",
+  "score": 0,
+  "kept": false
+ },
+ "c8647fe5": {
+  "text": "bread",
+  "heard": "part of them. Yeah.",
+  "score": 0,
+  "kept": false
+ },
+ "8e2c7aa1": {
+  "text": "coffee",
+  "heard": "Come on, Slowerin'! Coffee!",
+  "score": 0.4,
+  "kept": false
+ },
+ "888e7aa2": {
+  "text": "milk",
+  "heard": "milk.",
+  "score": 1,
+  "kept": true
+ },
+ "10bc2abf": {
+  "text": "apple",
+  "heard": "So get a heek.",
+  "score": 0,
+  "kept": false
+ },
+ "a20c85a8": {
+  "text": "cheese",
+  "heard": "The answer should be because I wake",
+  "score": 0,
+  "kept": false
+ },
+ "0552c2b0": {
+  "text": "rice",
+  "heard": "Well, I meant the high-poo.",
+  "score": 0,
+  "kept": false
+ },
+ "88de06b2": {
+  "text": "meat",
+  "heard": "or eat meat.",
+  "score": 0.5,
+  "kept": false
+ },
+ "ebb76fff": {
+  "text": "juice",
+  "heard": "juice",
+  "score": 1,
+  "kept": true
+ },
+ "e1f94c79": {
+  "text": "I want water",
+  "heard": "I want water.",
+  "score": 1,
+  "kept": true
+ },
+ "16cda879": {
+  "text": "I drink coffee with milk",
+  "heard": "I drink coffee with milk.",
+  "score": 1,
+  "kept": true
+ },
+ "5a991baf": {
+  "text": "The bread is good",
+  "heard": "The bread is good.",
+  "score": 1,
+  "kept": true
+ },
+ "cffbb8d0": {
+  "text": "Do you like cheese?",
+  "heard": "Do you like cheese?",
+  "score": 1,
+  "kept": true
+ },
+ "ba2719ef": {
+  "text": "one",
+  "heard": "I'm going to watch a cut.",
+  "score": 0,
+  "kept": false
+ },
+ "be248829": {
+  "text": "two",
+  "heard": "We'll have to laugh at that.",
+  "score": 0,
+  "kept": false
+ },
+ "888603c3": {
+  "text": "three",
+  "heard": "I can't wait with.",
+  "score": 0,
+  "kept": false
+ },
+ "2f69f5a5": {
+  "text": "four",
+  "heard": "Hold it there again.",
+  "score": 0,
+  "kept": false
+ },
+ "aeb44395": {
+  "text": "five",
+  "heard": "That was five.",
+  "score": 0.5,
+  "kept": false
+ },
+ "ca3007ab": {
+  "text": "six",
+  "heard": "Party goes really go.",
+  "score": 0,
+  "kept": false
+ },
+ "3583acfe": {
+  "text": "seven",
+  "heard": "Mm hmm seven.",
+  "score": 0.5,
+  "kept": false
+ },
+ "d4fa8470": {
+  "text": "eight",
+  "heard": "We can't shut up!  Let's go!",
+  "score": 0,
+  "kept": false
+ },
+ "16266f55": {
+  "text": "nine",
+  "heard": "9.",
+  "score": 1,
+  "kept": true
+ },
+ "bd01f454": {
+  "text": "ten",
+  "heard": "Where'd your dad?",
+  "score": 0,
+  "kept": false
+ },
+ "490cea19": {
+  "text": "I have two cats",
+  "heard": "I have two cats.",
+  "score": 1,
+  "kept": true
+ },
+ "86e7a27b": {
+  "text": "She is ten years old",
+  "heard": "She is 10 years old.",
+  "score": 1,
+  "kept": true
+ },
+ "ebb71750": {
+  "text": "Three coffees, please",
+  "heard": "Three coffees please.",
+  "score": 1,
+  "kept": true
+ },
+ "40f480dc": {
+  "text": "red",
+  "heard": "Okay, I'm yours, ladies.",
+  "score": 0,
+  "kept": false
+ },
+ "82fbf5cd": {
+  "text": "blue",
+  "heard": "or hit or ooh",
+  "score": 0,
+  "kept": false
+ },
+ "011decbc": {
+  "text": "green",
+  "heard": "Green or E? Like...",
+  "score": 0.4,
+  "kept": false
+ },
+ "568f4ba4": {
+  "text": "black",
+  "heard": "Black.",
+  "score": 1,
+  "kept": true
+ },
+ "de020766": {
+  "text": "white",
+  "heard": "Bartle and Lydie.",
+  "score": 0,
+  "kept": false
+ },
+ "c1948a38": {
+  "text": "book",
+  "heard": "That hit now.",
+  "score": 0,
+  "kept": false
+ },
+ "0cfb455b": {
+  "text": "house",
+  "heard": "Mmm, house.",
+  "score": 0.67,
+  "kept": false
+ },
+ "047458e1": {
+  "text": "car",
+  "heard": "Here at your webinar, do you have a little bit of a...",
+  "score": 0,
+  "kept": false
+ },
+ "773611af": {
+  "text": "phone",
+  "heard": "That's cool.  Cool.",
+  "score": 0,
+  "kept": false
+ },
+ "9818849d": {
+  "text": "The car is red",
+  "heard": "The car is red.",
+  "score": 1,
+  "kept": true
+ },
+ "68b5dd10": {
+  "text": "My house is white",
+  "heard": "My house is white",
+  "score": 1,
+  "kept": true
+ },
+ "551f7824": {
+  "text": "I have a blue book",
+  "heard": "Well, I have a blue book.",
+  "score": 0.91,
+  "kept": true
+ },
+ "61635c1e": {
+  "text": "to eat",
+  "heard": "Who eats?",
+  "score": 0,
+  "kept": false
+ },
+ "f552d5de": {
+  "text": "to drink",
+  "heard": "Play drink.",
+  "score": 0.5,
+  "kept": false
+ },
+ "cded647a": {
+  "text": "to go",
+  "heard": "We have to go.",
+  "score": 0.67,
+  "kept": false
+ },
+ "c98e6807": {
+  "text": "to see",
+  "heard": "Book to see.",
+  "score": 0.8,
+  "kept": true
+ },
+ "974cfcea": {
+  "text": "to speak",
+  "heard": "who speak.",
+  "score": 0.5,
+  "kept": false
+ },
+ "e30177cf": {
+  "text": "to sleep",
+  "heard": "Just to leave you.",
+  "score": 0.33,
+  "kept": false
+ },
+ "d21c6cfb": {
+  "text": "to write",
+  "heard": "to write.",
+  "score": 1,
+  "kept": true
+ },
+ "fcae9fb9": {
+  "text": "to work",
+  "heard": "to work.",
+  "score": 1,
+  "kept": true
+ },
+ "9c3c0f08": {
+  "text": "We eat rice",
+  "heard": "We eat rice.",
+  "score": 1,
+  "kept": true
+ },
+ "07ec66a5": {
+  "text": "He reads a book",
+  "heard": "He reads a book.",
+  "score": 1,
+  "kept": true
+ },
+ "30a1e608": {
+  "text": "I work every day",
+  "heard": "I work every day.",
+  "score": 1,
+  "kept": true
+ },
+ "7665043e": {
+  "text": "street",
+  "heard": "I feel like...",
+  "score": 0,
+  "kept": false
+ },
+ "78556c69": {
+  "text": "train",
+  "heard": "Mmm train",
+  "score": 0.67,
+  "kept": false
+ },
+ "aed72c13": {
+  "text": "station",
+  "heard": "For goodness.",
+  "score": 0,
+  "kept": false
+ },
+ "96972cb0": {
+  "text": "airport",
+  "heard": "the port.",
+  "score": 0,
+  "kept": false
+ },
+ "6517b3e5": {
+  "text": "ticket",
+  "heard": "Lately.",
+  "score": 0,
+  "kept": false
+ },
+ "124aec70": {
+  "text": "left",
+  "heard": "left.",
+  "score": 1,
+  "kept": true
+ },
+ "78e32de5": {
+  "text": "right",
+  "heard": "Right, right, right, right.",
+  "score": 0.4,
+  "kept": false
+ },
+ "82138fe3": {
+  "text": "bathroom",
+  "heard": "Get your own bathroom.",
+  "score": 0.4,
+  "kept": false
+ },
+ "0dc48142": {
+  "text": "city",
+  "heard": "He was just in anyway.",
+  "score": 0,
+  "kept": false
+ },
+ "19a29498": {
+  "text": "Where is the station?",
+  "heard": "Where is the station?",
+  "score": 1,
+  "kept": true
+ },
+ "3dac1a9b": {
+  "text": "Turn left",
+  "heard": "left",
+  "score": 0.67,
+  "kept": false
+ },
+ "fd99a461": {
+  "text": "I need a ticket",
+  "heard": "I need a ticket.",
+  "score": 1,
+  "kept": true
+ },
+ "8952b0d0": {
+  "text": "Where is the bathroom?",
+  "heard": "Where is the bathroom?",
+  "score": 1,
+  "kept": true
+ },
+ "420372be": {
+  "text": "today",
+  "heard": "What's up, what's up? Today.",
+  "score": 0.33,
+  "kept": false
+ },
+ "ac3c2a26": {
+  "text": "tomorrow",
+  "heard": "Careful, or not?",
+  "score": 0,
+  "kept": false
+ },
+ "28b19af7": {
+  "text": "now",
+  "heard": "Go to get now.",
+  "score": 0.4,
+  "kept": false
+ },
+ "213b65cb": {
+  "text": "here",
+  "heard": "I'll be right back with you in a minute.",
+  "score": 0,
+  "kept": false
+ },
+ "b8ebd55d": {
+  "text": "there",
+  "heard": "Our source of energy are too good, with the matter is...",
+  "score": 0,
+  "kept": false
+ },
+ "6736afe4": {
+  "text": "always",
+  "heard": "who exists.",
+  "score": 0,
+  "kept": false
+ },
+ "0ac95089": {
+  "text": "never",
+  "heard": "You earned it, never.",
+  "score": 0.4,
+  "kept": false
+ },
+ "63fe3327": {
+  "text": "yesterday",
+  "heard": "yesterday.",
+  "score": 1,
+  "kept": true
+ },
+ "1905cf90": {
+  "text": "I don't understand",
+  "heard": "I don't understand.",
+  "score": 1,
+  "kept": true
+ },
+ "78a7d9c2": {
+  "text": "Can you help me?",
+  "heard": "Can you help me?",
+  "score": 1,
+  "kept": true
+ },
+ "3d06cfac": {
+  "text": "How much is it?",
+  "heard": "But, how much is it?",
+  "score": 0.89,
+  "kept": true
+ },
+ "f0b14e6c": {
+  "text": "I am learning English",
+  "heard": "I am learning English.",
+  "score": 1,
+  "kept": true
+ },
+ "7cc7ca5b": {
+  "text": "think",
+  "heard": "Thank God.",
+  "score": 0,
+  "kept": false
+ },
+ "da2bd281": {
+  "text": "this",
+  "heard": "What have I found a eagle?",
+  "score": 0,
+  "kept": false
+ },
+ "11d259d2": {
+  "text": "sink",
+  "heard": "I'm not excited.",
+  "score": 0,
+  "kept": false
+ },
+ "6d8b34d5": {
+  "text": "tree",
+  "heard": "I think it's okay.",
+  "score": 0,
+  "kept": false
+ },
+ "165985e3": {
+  "text": "thank",
+  "heard": "Can apply.",
+  "score": 0,
+  "kept": false
+ },
+ "0c285a89": {
+  "text": "tank",
+  "heard": "Everything tank.",
+  "score": 0.67,
+  "kept": false
+ },
+ "c630015f": {
+  "text": "sit",
+  "heard": "It's a little hard to hold on.",
+  "score": 0,
+  "kept": false
+ },
+ "53cacdb9": {
+  "text": "big",
+  "heard": "Big.",
+  "score": 1,
+  "kept": true
+ },
+ "89eabb08": {
+  "text": "sleep",
+  "heard": "Boom, sleep.",
+  "score": 0.67,
+  "kept": false
+ },
+ "ac56f17f": {
+  "text": "ship",
+  "heard": "and ship.",
+  "score": 0.67,
+  "kept": false
+ },
+ "07cc25f4": {
+  "text": "sheep",
+  "heard": "She...",
+  "score": 0,
+  "kept": false
+ },
+ "07f017af": {
+  "text": "live",
+  "heard": "I'm live.",
+  "score": 0.67,
+  "kept": false
+ },
+ "5473c0c0": {
+  "text": "leave",
+  "heard": "486.",
+  "score": 0,
+  "kept": false
+ },
+ "70507c68": {
+  "text": "seat",
+  "heard": "I can't even go.",
+  "score": 0,
+  "kept": false
+ },
+ "f5ce03fb": {
+  "text": "have",
+  "heard": "and also",
+  "score": 0,
+  "kept": false
+ },
+ "7e8d42e3": {
+  "text": "Where is my phone?",
+  "heard": "Where's my phone?",
+  "score": 1,
+  "kept": true
+ },
+ "28693c05": {
+  "text": "hear",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "666e1bb3": {
+  "text": "ear",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "adc649b8": {
+  "text": "hold",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "bd2b9bd6": {
+  "text": "old",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "f2bf17c2": {
+  "text": "hat",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "fa6031d8": {
+  "text": "good",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "5bb421a2": {
+  "text": "back",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "63b75f31": {
+  "text": "bag",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "027455bb": {
+  "text": "cap",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "f4743fb1": {
+  "text": "cab",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "ed354321": {
+  "text": "very",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "e29d1e2f": {
+  "text": "light",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "cedfa3c5": {
+  "text": "read",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "2448ca2f": {
+  "text": "lead",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "b3d7b818": {
+  "text": "fry",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "bff162e2": {
+  "text": "fly",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "06745c07": {
+  "text": "cat",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "c9ad5a6b": {
+  "text": "men",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "60b75a78": {
+  "text": "bad",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "50ae46ec": {
+  "text": "bed",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "e2befe92": {
+  "text": "had",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "32694bc3": {
+  "text": "head",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "a172b7dd": {
+  "text": "window",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "21f5b729": {
+  "text": "door",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "5cb49d8a": {
+  "text": "chair",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "7d7eabcb": {
+  "text": "backpack",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "0b2d980e": {
+  "text": "a bottle of water",
+  "heard": "a bottle of water.",
+  "score": 1,
+  "kept": true
+ },
+ "05bf6449": {
+  "text": "yellow",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "3a56e759": {
+  "text": "Monday",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "fe18fbb0": {
+  "text": "Tuesday",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "e8239b77": {
+  "text": "Wednesday",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "99eb4fd7": {
+  "text": "Thursday",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "bc09cf52": {
+  "text": "Friday",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "0e68b936": {
+  "text": "Saturday",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "d0f065f9": {
+  "text": "Sunday",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "46b24e1d": {
+  "text": "bakery",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "3b952e97": {
+  "text": "bank",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "9f519cc9": {
+  "text": "school",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "63780eb9": {
+  "text": "park",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "4f9cd7b3": {
+  "text": "hospital",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "90f6fbd0": {
+  "text": "library",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "7a930b5b": {
+  "text": "twenty-four",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "01a53a61": {
+  "text": "fourteen",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "eb71e6b4": {
+  "text": "forty-two",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "8583378f": {
+  "text": "forty",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "a6ad93e2": {
+  "text": "grandmother",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "9d2ee900": {
+  "text": "husband",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "0ba81191": {
+  "text": "daughter",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "e0363a7b": {
+  "text": "son",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "ba02fd36": {
+  "text": "fish soup",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "f161ff1c": {
+  "text": "chicken",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "73a6862a": {
+  "text": "salad",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "8aea8859": {
+  "text": "cake",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "b401e629": {
+  "text": "tea",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "37e95373": {
+  "text": "orange juice",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "43e36503": {
+  "text": "shirt",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "25ec829c": {
+  "text": "trousers",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "68e41ef0": {
+  "text": "dress",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "100e165b": {
+  "text": "jacket",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "fffa7852": {
+  "text": "boots",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "9e725352": {
+  "text": "socks",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "494372ec": {
+  "text": "sunny",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "eeb0c085": {
+  "text": "raining",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "2dbc1605": {
+  "text": "cloudy",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "1af8295a": {
+  "text": "windy",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "ad3c122e": {
+  "text": "snowing",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "ea44dd0f": {
+  "text": "cold",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "258baeea": {
+  "text": "Perfect, thanks!",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "b2886573": {
+  "text": "Oh, one coin? Thanks for the tip!",
+  "heard": "Oh, one coin.  Thanks for the tip.",
+  "score": 1,
+  "kept": true
+ },
+ "1227eaf4": {
+  "text": "Oh, two coins? Thanks for the tip!",
+  "heard": "Oh, two coins? Thanks for the tip.",
+  "score": 1,
+  "kept": true
+ },
+ "9466d2fe": {
+  "text": "Oh, three coins? Thanks for the tip!",
+  "heard": "Oh, three coins? Thanks for the tip.",
+  "score": 1,
+  "kept": true
+ },
+ "1e4e83f6": {
+  "text": "Oh, four coins? Thanks for the tip!",
+  "heard": "Oh, four coins.  Thanks for the tip.",
+  "score": 1,
+  "kept": true
+ },
+ "a122b14e": {
+  "text": "Oh, five coins? Thanks for the tip!",
+  "heard": "Oh, five coins? Thanks for the tip!",
+  "score": 1,
+  "kept": true
+ },
+ "998fccf6": {
+  "text": "Oh, six coins? Thanks for the tip!",
+  "heard": "Oh, six coins? Thanks for the tip.",
+  "score": 1,
+  "kept": true
+ },
+ "430e53b1": {
+  "text": "Oh, seven coins? Thanks for the tip!",
+  "heard": "Oh, seven coins. Thanks for the tip.",
+  "score": 1,
+  "kept": true
+ },
+ "81d419ef": {
+  "text": "Oh, eight coins? Thanks for the tip!",
+  "heard": "Oh, eight coins? Thanks for the tip.",
+  "score": 1,
+  "kept": true
+ },
+ "cf48d21e": {
+  "text": "Oh, nine coins? Thanks for the tip!",
+  "heard": "Oh, nine coins. Thanks for the tip.",
+  "score": 1,
+  "kept": true
+ },
+ "5349e113": {
+  "text": "Oh, ten coins? Thanks for the tip!",
+  "heard": "Oh, 10 coins? Thanks for the tip.",
+  "score": 1,
+  "kept": true
+ },
+ "3b88d811": {
+  "text": "Oh, eleven coins? Thanks for the tip!",
+  "heard": "Oh, 11 coins? Thanks for the tip.",
+  "score": 1,
+  "kept": true
+ },
+ "457bafa9": {
+  "text": "Oh, twelve coins? Thanks for the tip!",
+  "heard": "Oh, 12 coins. Thanks for the tip.",
+  "score": 1,
+  "kept": true
+ },
+ "1a32ac8b": {
+  "text": "Oh, thirteen coins? Thanks for the tip!",
+  "heard": "Oh, 13 coins.  Thanks for the tip.",
+  "score": 1,
+  "kept": true
+ },
+ "1920007e": {
+  "text": "Oh, fourteen coins? Thanks for the tip!",
+  "heard": "Oh, 14 coins? Thanks for the tip.",
+  "score": 1,
+  "kept": true
+ },
+ "b72da475": {
+  "text": "Oh, fifteen coins? Thanks for the tip!",
+  "heard": "Oh, 15 coins? Thanks for the tip.",
+  "score": 1,
+  "kept": true
+ },
+ "e56cd97e": {
+  "text": "Oh, sixteen coins? Thanks for the tip!",
+  "heard": "Oh, 16 coins? Thanks for the tip.",
+  "score": 1,
+  "kept": true
+ },
+ "47d13ce1": {
+  "text": "Oh, seventeen coins? Thanks for the tip!",
+  "heard": "Oh, 17 coins. Thanks for the tip.",
+  "score": 1,
+  "kept": true
+ },
+ "34d84f25": {
+  "text": "Oh, eighteen coins? Thanks for the tip!",
+  "heard": "18 coins. Thanks for the tip.",
+  "score": 0.92,
+  "kept": true
+ },
+ "aec36d76": {
+  "text": "Oh, nineteen coins? Thanks for the tip!",
+  "heard": "Oh, 19 coins? Thanks for the tip.",
+  "score": 1,
+  "kept": true
+ },
+ "24d54731": {
+  "text": "Oh, twenty coins? Thanks for the tip!",
+  "heard": "Oh, 20 coins? Thanks for the tip.",
+  "score": 1,
+  "kept": true
+ },
+ "50d9d665": {
+  "text": "Oh, 21 coins? Thanks for the tip!",
+  "heard": "Huts. Oh, 21 coins? Thanks for the tip.",
+  "score": 0.93,
+  "kept": true
+ },
+ "7db2b0aa": {
+  "text": "Oh, 22 coins? Thanks for the tip!",
+  "heard": "Oh, 22 coins. Thanks for the tip.",
+  "score": 1,
+  "kept": true
+ },
+ "f54486db": {
+  "text": "Oh, 23 coins? Thanks for the tip!",
+  "heard": "Oh, 23 coins.  Thanks for the tip.",
+  "score": 1,
+  "kept": true
+ },
+ "6db01470": {
+  "text": "Oh, 24 coins? Thanks for the tip!",
+  "heard": "Oh, 24 coins.  Thanks for the tip.",
+  "score": 1,
+  "kept": true
+ },
+ "c91c5811": {
+  "text": "Oh, 25 coins? Thanks for the tip!",
+  "heard": "Oh, 25 coins? Thanks for the tip.",
+  "score": 1,
+  "kept": true
+ },
+ "a0b08c06": {
+  "text": "Oh, 26 coins? Thanks for the tip!",
+  "heard": "Oh, 26 coins.  Thanks for the tip.",
+  "score": 1,
+  "kept": true
+ },
+ "ff8a57b7": {
+  "text": "Oh, 27 coins? Thanks for the tip!",
+  "heard": "Oh, 27 coins.  Thanks for the tip.",
+  "score": 1,
+  "kept": true
+ },
+ "43ebabac": {
+  "text": "Oh, 28 coins? Thanks for the tip!",
+  "heard": "Oh, 28 coins. Thanks for the tip.",
+  "score": 1,
+  "kept": true
+ },
+ "114bb02d": {
+  "text": "Oh, 29 coins? Thanks for the tip!",
+  "heard": "Oh, 29 coins. Thanks for the tip.",
+  "score": 1,
+  "kept": true
+ },
+ "ba16930b": {
+  "text": "Oh, 30 coins? Thanks for the tip!",
+  "heard": "30 coins. Thanks for the tip.",
+  "score": 0.92,
+  "kept": true
+ },
+ "f70f89e2": {
+  "text": "Hmm, that's only zero. I said five.",
+  "heard": "Hmm, that's only zero. I said five.",
+  "score": 1,
+  "kept": true
+ },
+ "d7a651a0": {
+  "text": "Hmm, that's only one. I said five.",
+  "heard": "Hmm, that's only one. I said five.",
+  "score": 1,
+  "kept": true
+ },
+ "f7e4bb8a": {
+  "text": "Hmm, that's only two. I said five.",
+  "heard": "Hmm, that's only two. I said five.",
+  "score": 1,
+  "kept": true
+ },
+ "4a2b0fe4": {
+  "text": "Hmm, that's only three. I said five.",
+  "heard": "Hmm, that's only three. I said five.",
+  "score": 1,
+  "kept": true
+ },
+ "dc2fbea0": {
+  "text": "Hmm, that's only four. I said five.",
+  "heard": "Hmm, that's only four. I said five.",
+  "score": 1,
+  "kept": true
+ },
+ "ebf122ee": {
+  "text": "Hmm, that's only zero. I said four.",
+  "heard": "Hmm, that's only zero. I said four.",
+  "score": 1,
+  "kept": true
+ },
+ "d7bf4f58": {
+  "text": "Hmm, that's only one. I said four.",
+  "heard": "Hmm, that's only one. I said four.",
+  "score": 1,
+  "kept": true
+ },
+ "0a4c1df6": {
+  "text": "Hmm, that's only two. I said four.",
+  "heard": "Hmm, that's only two. I said four.",
+  "score": 1,
+  "kept": true
+ },
+ "859cf89c": {
+  "text": "Hmm, that's only three. I said four.",
+  "heard": "Hmm, that's only three. I said four.",
+  "score": 1,
+  "kept": true
+ },
+ "18d07a94": {
+  "text": "Hmm, that's only zero. I said two.",
+  "heard": "Hmm, that's only zero. I said two.",
+  "score": 1,
+  "kept": true
+ },
+ "c8973346": {
+  "text": "Hmm, that's only one. I said two.",
+  "heard": "Hmm, that's only one. I said two.",
+  "score": 1,
+  "kept": true
+ },
+ "16f892c9": {
+  "text": "Hmm, that's only zero. I said twelve.",
+  "heard": "That's only zero. I said 12.",
+  "score": 0.93,
+  "kept": true
+ },
+ "7d9bdf5f": {
+  "text": "Hmm, that's only one. I said twelve.",
+  "heard": "Hmm, that's only one. I said 12.",
+  "score": 1,
+  "kept": true
+ },
+ "a804cc51": {
+  "text": "Hmm, that's only two. I said twelve.",
+  "heard": "Hmm, that's only two. I said 12.",
+  "score": 1,
+  "kept": true
+ },
+ "cd99c17b": {
+  "text": "Hmm, that's only three. I said twelve.",
+  "heard": "Hmm, that's only three. I said 12.",
+  "score": 1,
+  "kept": true
+ },
+ "b1eb945f": {
+  "text": "Hmm, that's only four. I said twelve.",
+  "heard": "Hmm, that's only four. I said 12.",
+  "score": 1,
+  "kept": true
+ },
+ "40b6213b": {
+  "text": "Hmm, that's only five. I said twelve.",
+  "heard": "Hmm, that's only five. I said 12.",
+  "score": 1,
+  "kept": true
+ },
+ "bbecb493": {
+  "text": "Hmm, that's only six. I said twelve.",
+  "heard": "Hmm, that's only 6. I said 12.",
+  "score": 1,
+  "kept": true
+ },
+ "bca47516": {
+  "text": "Hmm, that's only seven. I said twelve.",
+  "heard": "Hmm, that's only 7. I said 12.",
+  "score": 1,
+  "kept": true
+ },
+ "4bbd91e0": {
+  "text": "Hmm, that's only eight. I said twelve.",
+  "heard": "Hmm, that's only 8. I said 12.",
+  "score": 1,
+  "kept": true
+ },
+ "b44a04ab": {
+  "text": "Hmm, that's only nine. I said twelve.",
+  "heard": "Hmm, that's only 9. I said 12.",
+  "score": 1,
+  "kept": true
+ },
+ "b388f794": {
+  "text": "Hmm, that's only ten. I said twelve.",
+  "heard": "Hmm, that's only 10. I said 12.",
+  "score": 1,
+  "kept": true
+ },
+ "bac399ce": {
+  "text": "Hmm, that's only eleven. I said twelve.",
+  "heard": "Hmm, that's only 11. I said 12.",
+  "score": 1,
+  "kept": true
+ },
+ "5219d48b": {
+  "text": "Hmm, that's only zero. I said ten.",
+  "heard": "Hmm, that's only zero. I said 10.",
+  "score": 1,
+  "kept": true
+ },
+ "93a20ea9": {
+  "text": "Hmm, that's only one. I said ten.",
+  "heard": "Hmm, that's only one. I said 10.",
+  "score": 1,
+  "kept": true
+ },
+ "b2d601e3": {
+  "text": "Hmm, that's only two. I said ten.",
+  "heard": "Hmm, that's only two. I said ten.",
+  "score": 1,
+  "kept": true
+ },
+ "d895f635": {
+  "text": "Hmm, that's only three. I said ten.",
+  "heard": "Hmm, that's only three. I said ten.",
+  "score": 1,
+  "kept": true
+ },
+ "3fcb0da9": {
+  "text": "Hmm, that's only four. I said ten.",
+  "heard": "Hmm, that's only four. I said ten.",
+  "score": 1,
+  "kept": true
+ },
+ "8eb6cef5": {
+  "text": "Hmm, that's only five. I said ten.",
+  "heard": "Hmm, that's only five. I said 10.",
+  "score": 1,
+  "kept": true
+ },
+ "95eb5dfd": {
+  "text": "Hmm, that's only six. I said ten.",
+  "heard": "Hmm, that's only 6. I said 10.",
+  "score": 1,
+  "kept": true
+ },
+ "a1cf61e6": {
+  "text": "Hmm, that's only seven. I said ten.",
+  "heard": "Hmm, that's only 7. I said 10.",
+  "score": 1,
+  "kept": true
+ },
+ "b6b25b30": {
+  "text": "Hmm, that's only eight. I said ten.",
+  "heard": "Hmm, that's only 8. I said 10.",
+  "score": 1,
+  "kept": true
+ },
+ "e3ef0005": {
+  "text": "Hmm, that's only nine. I said ten.",
+  "heard": "Hmm, that's only 9. I said 10.",
+  "score": 1,
+  "kept": true
+ },
+ "3dc6a653": {
+  "text": "Hmm, that's only zero. I said thirteen.",
+  "heard": "Hmm, that's only zero. I said 13.",
+  "score": 1,
+  "kept": true
+ },
+ "41f43f31": {
+  "text": "Hmm, that's only one. I said thirteen.",
+  "heard": "Hmm, that's only one. I said 13.",
+  "score": 1,
+  "kept": true
+ },
+ "743189db": {
+  "text": "Hmm, that's only two. I said thirteen.",
+  "heard": "Hmm, that's only two. I said 13.",
+  "score": 1,
+  "kept": true
+ },
+ "2cefce75": {
+  "text": "Hmm, that's only three. I said thirteen.",
+  "heard": "Hmm, that's only three. I said 13.",
+  "score": 1,
+  "kept": true
+ },
+ "1ce77c31": {
+  "text": "Hmm, that's only four. I said thirteen.",
+  "heard": "Hmm, that's only four. I said thirteen.",
+  "score": 1,
+  "kept": true
+ },
+ "1ca72c35": {
+  "text": "Hmm, that's only five. I said thirteen.",
+  "heard": "Hmm, that's only 5. I said 13.",
+  "score": 1,
+  "kept": true
+ },
+ "146c618d": {
+  "text": "Hmm, that's only six. I said thirteen.",
+  "heard": "Hmm, that's only 6. I said 13.",
+  "score": 1,
+  "kept": true
+ },
+ "98d388d0": {
+  "text": "Hmm, that's only seven. I said thirteen.",
+  "heard": "Hmm, that's only 7. I said 13.",
+  "score": 1,
+  "kept": true
+ },
+ "cab3672a": {
+  "text": "Hmm, that's only eight. I said thirteen.",
+  "heard": "Hmm, that's only 8. I said 13.",
+  "score": 1,
+  "kept": true
+ },
+ "da5257e5": {
+  "text": "Hmm, that's only nine. I said thirteen.",
+  "heard": "Hmm, that's only 9. I said 13.",
+  "score": 1,
+  "kept": true
+ },
+ "4d767c26": {
+  "text": "Hmm, that's only ten. I said thirteen.",
+  "heard": "Hmm, that's only 10. I said 13.",
+  "score": 1,
+  "kept": true
+ },
+ "52387f28": {
+  "text": "Hmm, that's only eleven. I said thirteen.",
+  "heard": "Hmm, that's only 11. I said 13.",
+  "score": 1,
+  "kept": true
+ },
+ "51dfdaa8": {
+  "text": "Hmm, that's only twelve. I said thirteen.",
+  "heard": "Hmm, that's only 12. I said 13.",
+  "score": 1,
+  "kept": true
+ },
+ "30c1a2af": {
+  "text": "Hmm, that's only zero. I said eight.",
+  "heard": "Hmm, that's only zero. I said eight.",
+  "score": 1,
+  "kept": true
+ },
+ "e9b8aaed": {
+  "text": "Hmm, that's only one. I said eight.",
+  "heard": "That's only one. I said eight.",
+  "score": 0.93,
+  "kept": true
+ },
+ "89a965d7": {
+  "text": "Hmm, that's only two. I said eight.",
+  "heard": "That's only two. I said eight.",
+  "score": 0.93,
+  "kept": true
+ },
+ "3b68d639": {
+  "text": "Hmm, that's only three. I said eight.",
+  "heard": "That's only three. I said eight.",
+  "score": 0.93,
+  "kept": true
+ },
+ "0e0f41ed": {
+  "text": "Hmm, that's only four. I said eight.",
+  "heard": "That's only four. I said eight",
+  "score": 0.93,
+  "kept": true
+ },
+ "fcd88ef9": {
+  "text": "Hmm, that's only five. I said eight.",
+  "heard": "Hmm, that's only five. I said eight.",
+  "score": 1,
+  "kept": true
+ },
+ "4db30df1": {
+  "text": "Hmm, that's only six. I said eight.",
+  "heard": "Hmm, that's only six. I said eight.",
+  "score": 1,
+  "kept": true
+ },
+ "62376a42": {
+  "text": "Hmm, that's only seven. I said eight.",
+  "heard": "Hmm, that's only seven. I said eight.",
+  "score": 1,
+  "kept": true
+ },
+ "5e2a66e5": {
+  "text": "Hmm, that's only zero. I said fifteen.",
+  "heard": "Hmm, that's only zero. I said 15.",
+  "score": 1,
+  "kept": true
+ },
+ "b30ccd43": {
+  "text": "Hmm, that's only one. I said fifteen.",
+  "heard": "Hmm, that's only one. I said 15.",
+  "score": 1,
+  "kept": true
+ },
+ "a25d44ad": {
+  "text": "Hmm, that's only two. I said fifteen.",
+  "heard": "Hmm, that's only two. I said 15.",
+  "score": 1,
+  "kept": true
+ },
+ "8eef8ae7": {
+  "text": "Hmm, that's only three. I said fifteen.",
+  "heard": "Hmm, that's only three. I said 15.",
+  "score": 1,
+  "kept": true
+ },
+ "0c86bc43": {
+  "text": "Hmm, that's only four. I said fifteen.",
+  "heard": "Hmm, that's only four. I said 15.",
+  "score": 1,
+  "kept": true
+ },
+ "a33160a7": {
+  "text": "Hmm, that's only five. I said fifteen.",
+  "heard": "Hmm, that's only 5. I said 15.",
+  "score": 1,
+  "kept": true
+ },
+ "280b023f": {
+  "text": "Hmm, that's only six. I said fifteen.",
+  "heard": "Hmm, that's only six. I said 15.",
+  "score": 1,
+  "kept": true
+ },
+ "7af82034": {
+  "text": "Hmm, that's only seven. I said fifteen.",
+  "heard": "Hmm, that's only 7. I said 15.",
+  "score": 1,
+  "kept": true
+ },
+ "ae85fa1e": {
+  "text": "Hmm, that's only eight. I said fifteen.",
+  "heard": "Hmm, that's only 8. I said 15.",
+  "score": 1,
+  "kept": true
+ },
+ "8ec16e37": {
+  "text": "Hmm, that's only nine. I said fifteen.",
+  "heard": "Hmm, that's only 9. I said 15.",
+  "score": 1,
+  "kept": true
+ },
+ "6f2f212a": {
+  "text": "Hmm, that's only ten. I said fifteen.",
+  "heard": "Hmm, that's only 10. I said 15.",
+  "score": 1,
+  "kept": true
+ },
+ "cc64dc2c": {
+  "text": "Hmm, that's only eleven. I said fifteen.",
+  "heard": "Hmm, that's only 11. I said 15.",
+  "score": 1,
+  "kept": true
+ },
+ "4d0742ac": {
+  "text": "Hmm, that's only twelve. I said fifteen.",
+  "heard": "Hmm, that's only 12. I said 15.",
+  "score": 1,
+  "kept": true
+ },
+ "24c1451a": {
+  "text": "Hmm, that's only thirteen. I said fifteen.",
+  "heard": "Hmm, that's only 13. I said 15.",
+  "score": 1,
+  "kept": true
+ },
+ "1df2595f": {
+  "text": "Hmm, that's only fourteen. I said fifteen.",
+  "heard": "Hmm, that's only 14. I said 15.",
+  "score": 1,
+  "kept": true
+ },
+ "b3dc6675": {
+  "text": "Hey! Can I get a coffee, please?",
+  "heard": "Hey, can I get a coffee please?",
+  "score": 1,
+  "kept": true
+ },
+ "35c6cc14": {
+  "text": "Hey! What can I get ya?",
+  "heard": "Hey, what can I get ya?",
+  "score": 1,
+  "kept": true
+ },
+ "1b887742": {
+  "text": "Sure thing. What size?",
+  "heard": "Sure thing, what size?",
+  "score": 1,
+  "kept": true
+ },
+ "ca3b5c4d": {
+  "text": "Anything else?",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "96a8e24f": {
+  "text": "For here or to go?",
+  "heard": "for here or to go.",
+  "score": 1,
+  "kept": true
+ },
+ "00642330": {
+  "text": "Thanks! Have a good one!",
+  "heard": "Thanks, have a good one.",
+  "score": 1,
+  "kept": true
+ },
+ "4b6180ef": {
+  "text": "Hey! You okay in there?",
+  "heard": "Hey, you okay in there?",
+  "score": 1,
+  "kept": true
+ },
+ "7047bb82": {
+  "text": "Oh, good! You were out cold.",
+  "heard": "Oh good, you were out cold.",
+  "score": 1,
+  "kept": true
+ },
+ "f251dcd5": {
+  "text": "You… okay? Did you hit your head or something?",
+  "heard": "You. Okay? Did you hit your head or something?",
+  "score": 1,
+  "kept": true
+ },
+ "0845abfe": {
+  "text": "“Me is”? Wow. Okay, take it easy, buddy.",
+  "heard": "Me is? Wow. Okay, take it easy, buddy.",
+  "score": 1,
+  "kept": true
+ },
+ "3bfb22a8": {
+  "text": "So… what's your name?",
+  "heard": "So, what's your name?",
+  "score": 1,
+  "kept": true
+ },
+ "1e49ec77": {
+  "text": "You don't know? Wow. Okay…",
+  "heard": "You don't know? Wow! Okay!",
+  "score": 1,
+  "kept": true
+ },
+ "a6c582fc": {
+  "text": "Not sure? Okay, that's weird…",
+  "heard": "Not sure?  Okay, that's weird.",
+  "score": 1,
+  "kept": true
+ },
+ "bc5cf371": {
+  "text": "You… no know? Hmm, you must be really tired.",
+  "heard": "You, no, no?  Hmm, you must be really tired.",
+  "score": 0.89,
+  "kept": true
+ },
+ "604357c3": {
+  "text": "Well, I'll call you Newbie. Nice to meet you, Newbie!",
+  "heard": "Well, I'll call you newbie. Nice to meet you newbie.",
+  "score": 1,
+  "kept": true
+ },
+ "198a9c32": {
+  "text": "Aw, you're sweet.",
+  "heard": "Ah, you're sweet.",
+  "score": 0.75,
+  "kept": true
+ },
+ "84c89817": {
+  "text": "Me too… what? Haha, you're funny.",
+  "heard": "Me too, what? Haha, you're funny.",
+  "score": 1,
+  "kept": true
+ },
+ "c495d2a5": {
+  "text": "And where are you from?",
+  "heard": "And where are you from?",
+  "score": 1,
+  "kept": true
+ },
+ "d266e1e9": {
+  "text": "Huh. A real mystery, aren't you?",
+  "heard": "Huh, a real mystery, aren't you?",
+  "score": 1,
+  "kept": true
+ },
+ "1c17417d": {
+  "text": "From… no? Is that a place?",
+  "heard": "from no is that a place.",
+  "score": 1,
+  "kept": true
+ },
+ "411b7a9d": {
+  "text": "Oh, the door's locked. My bad!",
+  "heard": "Oh, the door's locked. My bad.",
+  "score": 1,
+  "kept": true
+ },
+ "54830c70": {
+  "text": "Sure thing! Here you go.",
+  "heard": "Sure thing, here you go.",
+  "score": 1,
+  "kept": true
+ },
+ "99f40f42": {
+  "text": "Whoa. Okay… “please” is free, you know. That's two coins for the attitude.",
+  "heard": "Whoa, okay, please, is free, you know. That's two coins for the attitude.",
+  "score": 1,
+  "kept": true
+ },
+ "19fe9c71": {
+  "text": "Key… me… give? I don't get it. Hmm, there's a spare key in there somewhere.",
+  "heard": "Key, me, give. I don't get it.  Hmm, there's a spare key in there somewhere.",
+  "score": 1,
+  "kept": true
+ },
+ "99c0cf57": {
+  "text": "Try under the bed!",
+  "heard": "Try under the bed.",
+  "score": 1,
+  "kept": true
+ },
+ "40aa275a": {
+  "text": "Not the window!",
+  "heard": "Not the window.",
+  "score": 1,
+  "kept": true
+ },
+ "ddabd57a": {
+  "text": "Nope, not the chair.",
+  "heard": "Nope, not the chair.",
+  "score": 1,
+  "kept": true
+ },
+ "9288aa81": {
+  "text": "It's not by the door.",
+  "heard": "It's not by the door.",
+  "score": 1,
+  "kept": true
+ },
+ "edee14b1": {
+  "text": "You found it? Nice! Come on down.",
+  "heard": "You found it? Nice! Come on down.",
+  "score": 1,
+  "kept": true
+ },
+ "9d37716b": {
+  "text": "Okay, Newbie. That's five coins for the room.",
+  "heard": "Okay, newbie, that's five coins for the room.",
+  "score": 1,
+  "kept": true
+ },
+ "0715b856": {
+  "text": "That's five coins.",
+  "heard": "That's five coins.",
+  "score": 1,
+  "kept": true
+ },
+ "1915c5b6": {
+  "text": "Thanks! You hungry? Coffee? Bread?",
+  "heard": "Thanks, you hungry? Coffee? Bread?",
+  "score": 1,
+  "kept": true
+ },
+ "22ff9108": {
+  "text": "Coming right up!",
+  "heard": "Coming right up.",
+  "score": 1,
+  "kept": true
+ },
+ "6ef11992": {
+  "text": "You… like no coffee? Like, you don't like it?",
+  "heard": "You, like no coffee? Like, you don't like it?",
+  "score": 1,
+  "kept": true
+ },
+ "1c78850d": {
+  "text": "And since you asked so nicely, breakfast is on the house!",
+  "heard": "And since you asked so nicely, breakfast is on the house.",
+  "score": 1,
+  "kept": true
+ },
+ "0908feb2": {
+  "text": "That's two coins for breakfast.",
+  "heard": "That's two coins for breakfast.",
+  "score": 1,
+  "kept": true
+ },
+ "8d147820": {
+  "text": "Whoa, your bracelet! I've seen that symbol before… Here, take this. Go to the Guild and ask for Marcus.",
+  "heard": "Whoa, your bracelet! I've seen that symbol before. Here, take this. Go to the guild and ask for Marcus.",
+  "score": 1,
+  "kept": true
+ },
+ "b99944d8": {
+  "text": "Anytime, Newbie.",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "6df710c7": {
+  "text": "Good morning, Newbie! Time to get up!",
+  "heard": "Good morning newbie. Time to get up.",
+  "score": 1,
+  "kept": true
+ },
+ "40cc4c07": {
+  "text": "It's seven o'clock.",
+  "heard": "It's seven o'clock.",
+  "score": 1,
+  "kept": true
+ },
+ "09d65546": {
+  "text": "What… hour? Oh, you mean the time?",
+  "heard": "What?  Hour?  Oh, you mean the time?",
+  "score": 1,
+  "kept": true
+ },
+ "4b339fbe": {
+  "text": "It's seven o'clock. You start work at eight, right?",
+  "heard": "It's 7 o'clock. You start work at 8, right?",
+  "score": 1,
+  "kept": true
+ },
+ "b9ce49f7": {
+  "text": "Good. Breakfast is at half past seven!",
+  "heard": "Good, breakfast is at half past seven.",
+  "score": 1,
+  "kept": true
+ },
+ "b193fc34": {
+  "text": "In eight? In eight days? Haha.",
+  "heard": "in 8 in 8 days.  Ha ha.",
+  "score": 0.77,
+  "kept": true
+ },
+ "aba91ea2": {
+  "text": "Newbie, this is my daughter, Lena. She's the cook here.",
+  "heard": "Newbie, this is my daughter Lena. She's the cook here.",
+  "score": 1,
+  "kept": true
+ },
+ "699f86a9": {
+  "text": "Newbie! It's quarter to eight! Hurry!",
+  "heard": "Newbie, it's quarter to eight.  Hurry.",
+  "score": 1,
+  "kept": true
+ },
+ "d8d42dc2": {
+  "text": "Go, go, go!",
+  "heard": "Go go go.",
+  "score": 1,
+  "kept": true
+ },
+ "4013b3dd": {
+  "text": "Oh, Lena! There isn't any bread today. Sorry, Newbie!",
+  "heard": "Oh, Lena, there isn't any bread today. Sorry, Newbie.",
+  "score": 1,
+  "kept": true
+ },
+ "1175e5f1": {
+  "text": "Yes, there are! Two eggs for you.",
+  "heard": "Yes there are, two eggs for you.",
+  "score": 1,
+  "kept": true
+ },
+ "7c6e3d45": {
+  "text": "Yes, there is! Here.",
+  "heard": "Yes there is, here.",
+  "score": 1,
+  "kept": true
+ },
+ "f2415ada": {
+  "text": "Is there eggs? One egg or many eggs?",
+  "heard": "Is there eggs, one egg, or many eggs?",
+  "score": 1,
+  "kept": true
+ },
+ "ff5ed4e3": {
+  "text": "Tonight's dinner is eight coins, Newbie.",
+  "heard": "Tonight's dinner is 8 coins.  Newbie.",
+  "score": 1,
+  "kept": true
+ },
+ "ba8920ed": {
+  "text": "Here you go!",
+  "heard": "Here you go.",
+  "score": 1,
+  "kept": true
+ },
+ "9ce9082e": {
+  "text": "The account? Like at the bank? Haha.",
+  "heard": "The account? Like at the bank? Haha!",
+  "score": 1,
+  "kept": true
+ },
+ "371f1677": {
+  "text": "That's eight coins.",
+  "heard": "That's 8 coins.",
+  "score": 1,
+  "kept": true
+ },
+ "bf90e71a": {
+  "text": "Newbie! Where were you last night? You were out all night!",
+  "heard": "Nooby, where were you last night?  You were out all night.",
+  "score": 0.91,
+  "kept": true
+ },
+ "d9afc177": {
+  "text": "I were? Hmm. I was!",
+  "heard": "I were. Hmm, I was.",
+  "score": 1,
+  "kept": true
+ },
+ "dd2029eb": {
+  "text": "Newbie? You're crying. What is it?",
+  "heard": "Newbie, you're crying. What is it?",
+  "score": 1,
+  "kept": true
+ },
+ "08d1c4a4": {
+  "text": "Ari! What a beautiful name!",
+  "heard": "Ari, what a beautiful name.",
+  "score": 1,
+  "kept": true
+ },
+ "6bdbc100": {
+  "text": "Are? Just one name, right?",
+  "heard": "are just one name, right?",
+  "score": 1,
+  "kept": true
+ },
+ "84a79a1d": {
+  "text": "We were strangers a week ago. Now you're family, Ari. Come back soon!",
+  "heard": "We were strangers a week ago.  Now your family, Ari.  Come back soon.",
+  "score": 0.89,
+  "kept": true
+ },
+ "1501dc34": {
+  "text": "Can I get a coffee?",
+  "heard": "Can I get a coffee?",
+  "score": 1,
+  "kept": true
+ },
+ "0d595c86": {
+  "text": "Medium, please.",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "f55a6c1e": {
+  "text": "Nah, that's it. Thanks!",
+  "heard": "Nah, that's it.  Thanks.",
+  "score": 1,
+  "kept": true
+ },
+ "fdd9864a": {
+  "text": "To go, please.",
+  "heard": "To go please.",
+  "score": 1,
+  "kept": true
+ },
+ "ab890950": {
+  "text": "Here you go.",
+  "heard": "Here you go.",
+  "score": 1,
+  "kept": true
+ },
+ "fdebefb5": {
+  "text": "You too!",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "817250cc": {
+  "text": "Hey, I'm Ana.",
+  "heard": "Hey, I'm Anna.",
+  "score": 0.75,
+  "kept": true
+ },
+ "b674d080": {
+  "text": "I'm from Brazil.",
+  "heard": "I'm from Brazil.",
+  "score": 1,
+  "kept": true
+ },
+ "1604efb4": {
+  "text": "I'm here on vacation.",
+  "heard": "I'm here on vacation.",
+  "score": 1,
+  "kept": true
+ },
+ "ee940bb8": {
+  "text": "I love it!",
+  "heard": "I love it.",
+  "score": 1,
+  "kept": true
+ },
+ "3cf4b4ce": {
+  "text": "You too! See ya.",
+  "heard": "You too. See ya.",
+  "score": 1,
+  "kept": true
+ },
+ "7efc0a16": {
+  "text": "Yeah, where's the subway?",
+  "heard": "Yeah, where's the subway?",
+  "score": 1,
+  "kept": true
+ },
+ "537f90cd": {
+  "text": "Two blocks, on the left?",
+  "heard": "two blocks on the left.",
+  "score": 1,
+  "kept": true
+ },
+ "cef6b098": {
+  "text": "Awesome, thanks a lot!",
+  "heard": "Awesome, thanks a lot.",
+  "score": 1,
+  "kept": true
+ },
+ "757da8ba": {
+  "text": "Yeah, can I get a burger?",
+  "heard": "Yeah, can I get a burger?",
+  "score": 1,
+  "kept": true
+ },
+ "2c982670": {
+  "text": "Fries, please.",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "d3a24563": {
+  "text": "Thanks!",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "028286b8": {
+  "text": "Thanks, looks great!",
+  "heard": "Thanks, looks great.",
+  "score": 1,
+  "kept": true
+ },
+ "35019f9d": {
+  "text": "Really good, thanks!",
+  "heard": "Really good. Thanks.",
+  "score": 1,
+  "kept": true
+ },
+ "87c8f508": {
+  "text": "Just the check, please.",
+  "heard": "Just the check please.",
+  "score": 1,
+  "kept": true
+ },
+ "5e523486": {
+  "text": "Yeah, I have a reservation.",
+  "heard": "Yeah, I have a reservation.",
+  "score": 1,
+  "kept": true
+ },
+ "7eb624e4": {
+  "text": "Sure, it's Silva.",
+  "heard": "Sure, it's silver.",
+  "score": 0.75,
+  "kept": true
+ },
+ "edc18386": {
+  "text": "Cool. What time's checkout?",
+  "heard": "Cool. What time's checkout?",
+  "score": 1,
+  "kept": true
+ },
+ "8e59de88": {
+  "text": "Awesome, thanks!",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "0cb799c8": {
+  "text": "I'm just looking, thanks.",
+  "heard": "I'm just looking, thanks.",
+  "score": 1,
+  "kept": true
+ },
+ "8ef245ac": {
+  "text": "Actually, do you have this in a medium?",
+  "heard": "Actually, do you have this in a medium?",
+  "score": 1,
+  "kept": true
+ },
+ "b7931883": {
+  "text": "Thanks! Where can I try it on?",
+  "heard": "Thanks, where can I try it on?",
+  "score": 1,
+  "kept": true
+ },
+ "e91aad6a": {
+  "text": "It fits great. I'll take it!",
+  "heard": "It fits great, I'll take it.",
+  "score": 1,
+  "kept": true
+ },
+ "7373695b": {
+  "text": "Can I pay with card?",
+  "heard": "Can I pay with card?",
+  "score": 1,
+  "kept": true
+ },
+ "d346eebd": {
+  "text": "Done. Thanks!",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "29c4e85a": {
+  "text": "Not much. What about you?",
+  "heard": "Not much.  What about you?",
+  "score": 1,
+  "kept": true
+ },
+ "42d8686c": {
+  "text": "Sure, sounds good!",
+  "heard": "Sure, sounds good.",
+  "score": 1,
+  "kept": true
+ },
+ "9e5cb462": {
+  "text": "How about seven?",
+  "heard": "How about 7?",
+  "score": 1,
+  "kept": true
+ },
+ "e7559ecb": {
+  "text": "Yeah, see you there!",
+  "heard": "Yeah, see you there.",
+  "score": 1,
+  "kept": true
+ },
+ "aa33ba9d": {
+  "text": "See ya!",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "014aa317": {
+  "text": "Hi, I have a headache.",
+  "heard": "Hi, I have a headache.",
+  "score": 1,
+  "kept": true
+ },
+ "466a39b3": {
+  "text": "Since this morning.",
+  "heard": "Since this morning.",
+  "score": 1,
+  "kept": true
+ },
+ "6b01a1b2": {
+  "text": "Two every six hours. Got it.",
+  "heard": "two every six hours. Got it.",
+  "score": 1,
+  "kept": true
+ },
+ "92188fe7": {
+  "text": "Will do. How much is it?",
+  "heard": "We'll do how much is it.",
+  "score": 0.92,
+  "kept": true
+ },
+ "586f42a8": {
+  "text": "Here you go. Thanks!",
+  "heard": "Here you go. Thanks.",
+  "score": 1,
+  "kept": true
+ },
+ "c03cc2f3": {
+  "text": "Pretty good! How about yours?",
+  "heard": "Pretty good. How about yours?",
+  "score": 1,
+  "kept": true
+ },
+ "4c36286c": {
+  "text": "Nice. I went to the beach.",
+  "heard": "Nice, I went to the beach.",
+  "score": 1,
+  "kept": true
+ },
+ "9ecb097e": {
+  "text": "Yeah, that'd be great.",
+  "heard": "Yeah, that'd be great.",
+  "score": 1,
+  "kept": true
+ },
+ "c08654b8": {
+  "text": "Later!",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "36e7d0cc": {
+  "text": "Good, how are you?",
+  "heard": "Good, how are you?",
+  "score": 1,
+  "kept": true
+ },
+ "1bec2033": {
+  "text": "Yeah, I did. Thanks.",
+  "heard": "Yeah, I did. Thanks.",
+  "score": 1,
+  "kept": true
+ },
+ "bf29030c": {
+  "text": "No, I'm good.",
+  "heard": "No, I'm good.",
+  "score": 1,
+  "kept": true
+ },
+ "3e2e5058": {
+  "text": "Thanks, you too!",
+  "heard": "Thanks you too.",
+  "score": 1,
+  "kept": true
+ },
+ "a1328253": {
+  "text": "Yeah, I'm okay.",
+  "heard": "Yeah, I'm okay.",
+  "score": 1,
+  "kept": true
+ },
+ "4b3e4f7e": {
+  "text": "I okay.",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "7c610e7f": {
+  "text": "Me is okay.",
+  "heard": "Me is okay.",
+  "score": 1,
+  "kept": true
+ },
+ "4b3f475d": {
+  "text": "I don't know.",
+  "heard": "I don't know.",
+  "score": 1,
+  "kept": true
+ },
+ "b8516454": {
+  "text": "I'm not sure.",
+  "heard": "I'm not sure.",
+  "score": 1,
+  "kept": true
+ },
+ "80b8c141": {
+  "text": "Nice to meet you too.",
+  "heard": "Nice to meet you too.",
+  "score": 1,
+  "kept": true
+ },
+ "1de4832f": {
+  "text": "I from no.",
+  "heard": "I from no...",
+  "score": 1,
+  "kept": true
+ },
+ "c3441501": {
+  "text": "Can I get the key, please?",
+  "heard": "Can I get the key please?",
+  "score": 1,
+  "kept": true
+ },
+ "5f83cc28": {
+  "text": "Give me the key.",
+  "heard": "Give me the key",
+  "score": 1,
+  "kept": true
+ },
+ "65fe4103": {
+  "text": "Key me give.",
+  "heard": "Key me, give.",
+  "score": 1,
+  "kept": true
+ },
+ "4563d432": {
+  "text": "Can I get some coffee and bread?",
+  "heard": "Can I get some coffee and bread?",
+  "score": 1,
+  "kept": true
+ },
+ "1f49312e": {
+  "text": "I don't like coffee. Can I get some water?",
+  "heard": "I don't like coffee. Can I get some water?",
+  "score": 1,
+  "kept": true
+ },
+ "71d157cc": {
+  "text": "I like no coffee.",
+  "heard": "I like no coffee.",
+  "score": 1,
+  "kept": true
+ },
+ "c2e3f68b": {
+  "text": "Coffee. Bread. Now.",
+  "heard": "Coffee. Bread. Now.",
+  "score": 1,
+  "kept": true
+ },
+ "279b1e6b": {
+  "text": "Thanks for everything!",
+  "heard": "Thanks for everything.",
+  "score": 1,
+  "kept": true
+ },
+ "22d1b6f8": {
+  "text": "Bye! See ya!",
+  "heard": "Bye. See ya.",
+  "score": 1,
+  "kept": true
+ },
+ "061a446e": {
+  "text": "Me go now thanks.",
+  "heard": "Me go now, thanks.",
+  "score": 1,
+  "kept": true
+ },
+ "7d15a936": {
+  "text": "I'm okay.",
+  "heard": "I'm okay.",
+  "score": 1,
+  "kept": true
+ },
+ "6513566f": {
+  "text": "I don't like coffee.",
+  "heard": "I don't like coffee.",
+  "score": 1,
+  "kept": true
+ },
+ "8914325f": {
+  "text": "Yeah, a little.",
+  "heard": "Yeah, a little.",
+  "score": 1,
+  "kept": true
+ },
+ "765b6145": {
+  "text": "No, thanks. I'm good.",
+  "heard": "No, thanks, I'm good.",
+  "score": 1,
+  "kept": true
+ },
+ "64ebcc87": {
+  "text": "I have hungry.",
+  "heard": "I have hungry.",
+  "score": 1,
+  "kept": true
+ },
+ "48f166d8": {
+  "text": "Can I get two apples, please?",
+  "heard": "Can I get two apples please?",
+  "score": 1,
+  "kept": true
+ },
+ "583e02e9": {
+  "text": "Just one, please.",
+  "heard": "Just one please.",
+  "score": 1,
+  "kept": true
+ },
+ "2b9856f6": {
+  "text": "I want two apple.",
+  "heard": "I want to Apple.",
+  "score": 0.75,
+  "kept": true
+ },
+ "e4e936cf": {
+  "text": "Yeah. How much is it?",
+  "heard": "Yeah, how much is it?",
+  "score": 1,
+  "kept": true
+ },
+ "1acf13c8": {
+  "text": "Yes, please. How much?",
+  "heard": "Yes, please. How much?",
+  "score": 1,
+  "kept": true
+ },
+ "dc046422": {
+  "text": "How much it is?",
+  "heard": "How much it is.",
+  "score": 1,
+  "kept": true
+ },
+ "b10d537e": {
+  "text": "I like the blue one.",
+  "heard": "I like the blue one.",
+  "score": 1,
+  "kept": true
+ },
+ "54867d0f": {
+  "text": "I like the red one.",
+  "heard": "I like the red one.",
+  "score": 1,
+  "kept": true
+ },
+ "140cd1a9": {
+  "text": "The green one, please.",
+  "heard": "The green one please.",
+  "score": 1,
+  "kept": true
+ },
+ "a9052226": {
+  "text": "I like the one blue.",
+  "heard": "I like the one blue.",
+  "score": 1,
+  "kept": true
+ },
+ "5cd66128": {
+  "text": "Okay, here you go.",
+  "heard": "Okay, here you go.",
+  "score": 1,
+  "kept": true
+ },
+ "242f335a": {
+  "text": "Hmm… can I get it for ten?",
+  "heard": "Hmm, can I get it for 10?",
+  "score": 1,
+  "kept": true
+ },
+ "a943550e": {
+  "text": "Twelve? That's crazy! No way.",
+  "heard": "12? That's crazy, no way.",
+  "score": 1,
+  "kept": true
+ },
+ "3002c74c": {
+  "text": "Thanks! You too.",
+  "heard": "Thanks, you too.",
+  "score": 1,
+  "kept": true
+ },
+ "7ab7521b": {
+  "text": "Thanks! You also.",
+  "heard": "Thanks, you also.",
+  "score": 1,
+  "kept": true
+ },
+ "b889eaa9": {
+  "text": "I'm hungry.",
+  "heard": "I'm hungry.",
+  "score": 1,
+  "kept": true
+ },
+ "608040fc": {
+  "text": "Can I get it for ten?",
+  "heard": "Can I get it for 10?",
+  "score": 1,
+  "kept": true
+ },
+ "1e5ad3b5": {
+  "text": "Hi! I'm looking for Marcus.",
+  "heard": "Hi, I'm looking for Marcus.",
+  "score": 1,
+  "kept": true
+ },
+ "b5c29b61": {
+  "text": "I look for Marcus.",
+  "heard": "I look for Marcus.",
+  "score": 1,
+  "kept": true
+ },
+ "00b23ffe": {
+  "text": "Move. I need Marcus.",
+  "heard": "MOVE. I need Marcus.",
+  "score": 1,
+  "kept": true
+ },
+ "ce2f3cba": {
+  "text": "Sorry. Can I see Marcus, please?",
+  "heard": "Sorry, can I see Marcus please?",
+  "score": 1,
+  "kept": true
+ },
+ "a64f5d78": {
+  "text": "People call me Newbie.",
+  "heard": "People call me newbie.",
+  "score": 1,
+  "kept": true
+ },
+ "916b3012": {
+  "text": "I don't remember my name.",
+  "heard": "I don't remember my name.",
+  "score": 1,
+  "kept": true
+ },
+ "f518bde8": {
+  "text": "My name are Newbie.",
+  "heard": "My name are newbie.",
+  "score": 1,
+  "kept": true
+ },
+ "a147d0ee": {
+  "text": "I'm not sure. Maybe twenty?",
+  "heard": "I'm not sure. Maybe 20?",
+  "score": 1,
+  "kept": true
+ },
+ "18ee6d85": {
+  "text": "I have twenty years.",
+  "heard": "I have 20 years.",
+  "score": 1,
+  "kept": true
+ },
+ "256bd4d7": {
+  "text": "No, I don't have a job.",
+  "heard": "No, I don't have a job.",
+  "score": 1,
+  "kept": true
+ },
+ "608e1636": {
+  "text": "Not yet. I'm looking for work.",
+  "heard": "Not yet. I'm looking for work.",
+  "score": 1,
+  "kept": true
+ },
+ "4d5eda29": {
+  "text": "No, I not have job.",
+  "heard": "No, I not have job.",
+  "score": 1,
+  "kept": true
+ },
+ "0607ff9a": {
+  "text": "Sure. Here.",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "e03292a0": {
+  "text": "Why? What's wrong?",
+  "heard": "Why? What's wrong?",
+  "score": 1,
+  "kept": true
+ },
+ "d9f5b5e4": {
+  "text": "No. Don't touch me!",
+  "heard": "No, don't touch me.",
+  "score": 1,
+  "kept": true
+ },
+ "bde059d1": {
+  "text": "She runs the Sleepy Fox.",
+  "heard": "She runs the sleepy fox.",
+  "score": 1,
+  "kept": true
+ },
+ "80a45b12": {
+  "text": "She works at an inn.",
+  "heard": "She works at an inn.",
+  "score": 1,
+  "kept": true
+ },
+ "cf934794": {
+  "text": "She run the Sleepy Fox.",
+  "heard": "She run the sleepy fox.",
+  "score": 1,
+  "kept": true
+ },
+ "dd8d169f": {
+  "text": "She working at the inn.",
+  "heard": "She working at the end.",
+  "score": 0.8,
+  "kept": true
+ },
+ "4663ccf2": {
+  "text": "He sells apples.",
+  "heard": "He sells apples.",
+  "score": 1,
+  "kept": true
+ },
+ "01049857": {
+  "text": "He sell apples.",
+  "heard": "He sell apples.",
+  "score": 1,
+  "kept": true
+ },
+ "555e5415": {
+  "text": "Got it. I'll be here at eight.",
+  "heard": "Got it. I'll be here at eight.",
+  "score": 1,
+  "kept": true
+ },
+ "61d0420b": {
+  "text": "Thanks, Marcus! Got it.",
+  "heard": "Thanks Marcus, got it.",
+  "score": 1,
+  "kept": true
+ },
+ "24f15955": {
+  "text": "Okay, I am here at eight tomorrow.",
+  "heard": "Okay, I am here at eight tomorrow.",
+  "score": 1,
+  "kept": true
+ },
+ "5753c62f": {
+  "text": "I'm looking for Marcus.",
+  "heard": "I'm looking for Marcus.",
+  "score": 1,
+  "kept": true
+ },
+ "dcb96ba5": {
+  "text": "I'm twenty.",
+  "heard": "I'm 20.",
+  "score": 1,
+  "kept": true
+ },
+ "0338ae7a": {
+  "text": "I don't have a job.",
+  "heard": "I don't have a job.",
+  "score": 1,
+  "kept": true
+ },
+ "4361261c": {
+  "text": "I'll be here at eight.",
+  "heard": "I'll be here at 8.",
+  "score": 1,
+  "kept": true
+ },
+ "0b7a7a2e": {
+  "text": "Good morning! What time is it?",
+  "heard": "Good morning. What time is it?",
+  "score": 1,
+  "kept": true
+ },
+ "4052f0db": {
+  "text": "Good morning! What hour is it?",
+  "heard": "Good morning. What hour is it?",
+  "score": 1,
+  "kept": true
+ },
+ "bbdf6929": {
+  "text": "Yes, I start in eight.",
+  "heard": "Yes, I start in 8.",
+  "score": 1,
+  "kept": true
+ },
+ "dedeca97": {
+  "text": "Yes, I always eat breakfast.",
+  "heard": "Yes, I always eat breakfast.",
+  "score": 1,
+  "kept": true
+ },
+ "d860a056": {
+  "text": "No, I never eat breakfast.",
+  "heard": "No, I never eat breakfast.",
+  "score": 1,
+  "kept": true
+ },
+ "a131f047": {
+  "text": "Yes, I eat always breakfast.",
+  "heard": "Yes, I eat always breakfast.",
+  "score": 1,
+  "kept": true
+ },
+ "f74d2e9c": {
+  "text": "I usually get up at seven.",
+  "heard": "I usually get up at 7.",
+  "score": 1,
+  "kept": true
+ },
+ "e2d17aac": {
+  "text": "I usually getting up at seven.",
+  "heard": "I usually getting up at 7.",
+  "score": 1,
+  "kept": true
+ },
+ "d48030f8": {
+  "text": "Oh no! Thanks, see you later!",
+  "heard": "Oh no, thanks, see you later.",
+  "score": 1,
+  "kept": true
+ },
+ "930146f4": {
+  "text": "Oh no! Bye, see you tonight!",
+  "heard": "Oh no, bye see you tonight.",
+  "score": 1,
+  "kept": true
+ },
+ "664812e6": {
+  "text": "N-E-W-B-I-E.",
+  "heard": "in an E. W. B. I. E.",
+  "score": 0.77,
+  "kept": true
+ },
+ "b34122a4": {
+  "text": "N-U-B-I.",
+  "heard": "and you be I.",
+  "score": 0.25,
+  "kept": false
+ },
+ "ef3845da": {
+  "text": "I live at the Sleepy Fox, on King Street.",
+  "heard": "I live at the Sleepy Fox on King Street.",
+  "score": 1,
+  "kept": true
+ },
+ "d00ed261": {
+  "text": "I am live at the Sleepy Fox.",
+  "heard": "I am live at the sleepy fox.",
+  "score": 1,
+  "kept": true
+ },
+ "0e3aad3b": {
+  "text": "From Monday to Friday.",
+  "heard": "from Monday to Friday.",
+  "score": 1,
+  "kept": true
+ },
+ "2570e074": {
+  "text": "Every day, from Monday to Saturday.",
+  "heard": "every day from Monday to Saturday.",
+  "score": 1,
+  "kept": true
+ },
+ "0a954ef5": {
+  "text": "In Monday and in Friday.",
+  "heard": "in Monday and in Friday.",
+  "score": 1,
+  "kept": true
+ },
+ "dac146e1": {
+  "text": "I get up at seven, I have breakfast and I go to work.",
+  "heard": "I get up at 7, I have breakfast and I go to work.",
+  "score": 1,
+  "kept": true
+ },
+ "6da82612": {
+  "text": "I gets up at seven and I goes to work.",
+  "heard": "I gets up at 7 and I goes to work.",
+  "score": 1,
+  "kept": true
+ },
+ "1f73ce42": {
+  "text": "What time is it?",
+  "heard": "What time is it?",
+  "score": 1,
+  "kept": true
+ },
+ "6ddcc920": {
+  "text": "I always eat breakfast.",
+  "heard": "I always eat breakfast.",
+  "score": 1,
+  "kept": true
+ },
+ "ad160c6b": {
+  "text": "I live at the Sleepy Fox.",
+  "heard": "I live at the sleepy fox.",
+  "score": 1,
+  "kept": true
+ },
+ "1c798e2d": {
+  "text": "I work from Monday to Friday.",
+  "heard": "I work from Monday to Friday.",
+  "score": 1,
+  "kept": true
+ },
+ "796188af": {
+  "text": "Yes, please. Where's the bakery?",
+  "heard": "Yes, please.  Where's the bakery?",
+  "score": 1,
+  "kept": true
+ },
+ "b03138e2": {
+  "text": "Yes. Bakery where?",
+  "heard": "Yes, bakery where?",
+  "score": 1,
+  "kept": true
+ },
+ "1eaf79cb": {
+  "text": "Number forty-two.",
+  "heard": "Number 42.",
+  "score": 0.4,
+  "kept": false
+ },
+ "d09fece6": {
+  "text": "Number twenty-four.",
+  "heard": "Number 24.",
+  "score": 0.4,
+  "kept": false
+ },
+ "31d1b003": {
+  "text": "Yes, there are two shops.",
+  "heard": "Yes, there are two shops.",
+  "score": 1,
+  "kept": true
+ },
+ "fc0e15f9": {
+  "text": "Yes, there is two shops.",
+  "heard": "Yes, there is two shops.",
+  "score": 1,
+  "kept": true
+ },
+ "155bbf54": {
+  "text": "Yes, it has two shops.",
+  "heard": "Yes, it has two shops.",
+  "score": 1,
+  "kept": true
+ },
+ "7993d705": {
+  "text": "Got it! Turn right at the well and go straight.",
+  "heard": "Got it.  Turn right at the well and go straight.",
+  "score": 1,
+  "kept": true
+ },
+ "f7c1ff07": {
+  "text": "Got it! Turn left at the well.",
+  "heard": "Got it.  Turn left at the well.",
+  "score": 1,
+  "kept": true
+ },
+ "cde661e9": {
+  "text": "Sure! Here you go. Thanks, Pip!",
+  "heard": "Sure, here you go, thanks PIP.",
+  "score": 1,
+  "kept": true
+ },
+ "e699c5cb": {
+  "text": "Sorry, I don't have any coins.",
+  "heard": "Sorry, I don't have any coins.",
+  "score": 1,
+  "kept": true
+ },
+ "dd9013f4": {
+  "text": "Where's the bakery?",
+  "heard": "Where's the bakery?",
+  "score": 1,
+  "kept": true
+ },
+ "7b27faa8": {
+  "text": "Go straight and turn left.",
+  "heard": "Go straight and turn left.",
+  "score": 1,
+  "kept": true
+ },
+ "e02e3c3f": {
+  "text": "It's next to the bank.",
+  "heard": "is next to the bank.",
+  "score": 0.91,
+  "kept": true
+ },
+ "13d187eb": {
+  "text": "Is there a bank near here?",
+  "heard": "Is there a bank near here?",
+  "score": 1,
+  "kept": true
+ },
+ "56d2f72e": {
+  "text": "There are two shops.",
+  "heard": "There are two shops.",
+  "score": 1,
+  "kept": true
+ },
+ "c1f753f8": {
+  "text": "Turn right at the well.",
+  "heard": "Turn right at the well.",
+  "score": 1,
+  "kept": true
+ },
+ "014252d2": {
+  "text": "Yes, here you go. It's for you.",
+  "heard": "Yes, here you go. It's for you.",
+  "score": 1,
+  "kept": true
+ },
+ "d3f636c0": {
+  "text": "Yes. Is for you.",
+  "heard": "Yes, is for you.",
+  "score": 1,
+  "kept": true
+ },
+ "c3e7d26d": {
+  "text": "It's your brother's.",
+  "heard": "It's your brother's.",
+  "score": 1,
+  "kept": true
+ },
+ "9fa56c3a": {
+  "text": "It's of your brother.",
+  "heard": "It's of your brother.",
+  "score": 1,
+  "kept": true
+ },
+ "e21dfdfc": {
+  "text": "I've got a sister, I think.",
+  "heard": "I've got a sister, I think.",
+  "score": 1,
+  "kept": true
+ },
+ "789366b4": {
+  "text": "I've got sister.",
+  "heard": "I've got sister.",
+  "score": 1,
+  "kept": true
+ },
+ "f701b3c5": {
+  "text": "She's tall. She's got long black hair.",
+  "heard": "She's tall. She's got long black hair.",
+  "score": 1,
+  "kept": true
+ },
+ "2f68e9c1": {
+  "text": "She's got brown eyes and a big smile.",
+  "heard": "She's got brown eyes and a big smile.",
+  "score": 1,
+  "kept": true
+ },
+ "7c34b676": {
+  "text": "She's got hair long black.",
+  "heard": "She's got hair long black.",
+  "score": 1,
+  "kept": true
+ },
+ "ff274bce": {
+  "text": "He's tall. His hair is black.",
+  "heard": "He's tall, his hair is black.",
+  "score": 1,
+  "kept": true
+ },
+ "f169fc77": {
+  "text": "Really? Where is she now?",
+  "heard": "Really? Where is she now?",
+  "score": 1,
+  "kept": true
+ },
+ "d6d4884b": {
+  "text": "Where she is now?",
+  "heard": "where she is now.",
+  "score": 1,
+  "kept": true
+ },
+ "15d09cce": {
+  "text": "Thank you so much, Ola!",
+  "heard": "Thank you so much, Ola.",
+  "score": 1,
+  "kept": true
+ },
+ "4fc5f556": {
+  "text": "Have you got any brothers or sisters?",
+  "heard": "Have you got any brothers or sisters?",
+  "score": 1,
+  "kept": true
+ },
+ "1c88114f": {
+  "text": "I've got a sister.",
+  "heard": "I've got a sister.",
+  "score": 1,
+  "kept": true
+ },
+ "9770afa4": {
+  "text": "She's tall.",
+  "heard": "She's tall.",
+  "score": 1,
+  "kept": true
+ },
+ "55b2c234": {
+  "text": "She's got long black hair.",
+  "heard": "She's got long black hair.",
+  "score": 1,
+  "kept": true
+ },
+ "05133f2f": {
+  "text": "This is my brother's ship.",
+  "heard": "This is my brother's shit.",
+  "score": 0.83,
+  "kept": true
+ },
+ "42ee3a2a": {
+  "text": "Her eyes are brown.",
+  "heard": "Her eyes are brown.",
+  "score": 1,
+  "kept": true
+ },
+ "e9ffe76c": {
+  "text": "I'd like the fish soup, please.",
+  "heard": "I'd like the fish soup please.",
+  "score": 1,
+  "kept": true
+ },
+ "b25616d0": {
+  "text": "I'd like the chicken and rice, please.",
+  "heard": "I'd like the chicken and rice please.",
+  "score": 1,
+  "kept": true
+ },
+ "c53791e1": {
+  "text": "I would like of the soup.",
+  "heard": "I would like of the soup.",
+  "score": 1,
+  "kept": true
+ },
+ "913afdeb": {
+  "text": "Can I have some orange juice?",
+  "heard": "Can I have some orange juice?",
+  "score": 1,
+  "kept": true
+ },
+ "b3bd609a": {
+  "text": "A glass of water, please.",
+  "heard": "A glass of water, please.",
+  "score": 1,
+  "kept": true
+ },
+ "05532461": {
+  "text": "Can I have a water?",
+  "heard": "Can I have a water?",
+  "score": 1,
+  "kept": true
+ },
+ "20ab4c05": {
+  "text": "That's okay. Are there any eggs?",
+  "heard": "That's okay. Are there any eggs?",
+  "score": 1,
+  "kept": true
+ },
+ "63bdb085": {
+  "text": "No problem. Is there any cheese?",
+  "heard": "No problem. Is there any cheese?",
+  "score": 1,
+  "kept": true
+ },
+ "3923e2e3": {
+  "text": "That's okay. Is there any eggs?",
+  "heard": "That's okay. Is there any eggs?",
+  "score": 1,
+  "kept": true
+ },
+ "8566348b": {
+  "text": "No, thanks. I don't eat meat.",
+  "heard": "No thanks, I don't eat meat.",
+  "score": 1,
+  "kept": true
+ },
+ "ce82ff81": {
+  "text": "Yes, I eat everything!",
+  "heard": "Yes, I eat everything.",
+  "score": 1,
+  "kept": true
+ },
+ "5f356c69": {
+  "text": "No, I no eat meat.",
+  "heard": "No, I know, eat meat.",
+  "score": 0.8,
+  "kept": true
+ },
+ "7f62886f": {
+  "text": "I like reading and swimming.",
+  "heard": "I like reading and swimming.",
+  "score": 1,
+  "kept": true
+ },
+ "eb90c969": {
+  "text": "I love cooking too!",
+  "heard": "I love cooking too.",
+  "score": 1,
+  "kept": true
+ },
+ "0ee28be6": {
+  "text": "I like read and swim.",
+  "heard": "I like read and swim.",
+  "score": 1,
+  "kept": true
+ },
+ "bd6f6b58": {
+  "text": "Sure. Can I have the bill, please?",
+  "heard": "Sure, can I have the bill please?",
+  "score": 1,
+  "kept": true
+ },
+ "3bd80ff8": {
+  "text": "Sure. Can I have the account?",
+  "heard": "Sure. Can I have the account?",
+  "score": 1,
+  "kept": true
+ },
+ "ccf50a2c": {
+  "text": "I'm okay. Thanks for the cake!",
+  "heard": "I'm okay. Thanks for the cake.",
+  "score": 1,
+  "kept": true
+ },
+ "f35d757e": {
+  "text": "Are there any eggs?",
+  "heard": "Are there any eggs?",
+  "score": 1,
+  "kept": true
+ },
+ "7459af7b": {
+  "text": "I don't eat meat.",
+  "heard": "I don't eat meat.",
+  "score": 1,
+  "kept": true
+ },
+ "268f33df": {
+  "text": "Can I have the bill, please?",
+  "heard": "Can I have the bill please?",
+  "score": 1,
+  "kept": true
+ },
+ "6dff400b": {
+  "text": "It's on the fifteenth of May.",
+  "heard": "It's on the 15th of May.",
+  "score": 1,
+  "kept": true
+ },
+ "57d6ed91": {
+  "text": "It's in the fifteen of May.",
+  "heard": "It's in the 15 of May.",
+  "score": 1,
+  "kept": true
+ },
+ "30f6ef49": {
+  "text": "Yes, I like them! Can I try them on?",
+  "heard": "Yes, I like them. Can I try them on?",
+  "score": 1,
+  "kept": true
+ },
+ "9b28a89f": {
+  "text": "Yes, I like this boots.",
+  "heard": "Yes, I like this boat.",
+  "score": 0.8,
+  "kept": true
+ },
+ "76ad5c0d": {
+  "text": "They're too big. Have you got a smaller size?",
+  "heard": "They're too big. Have you got a smaller size?",
+  "score": 1,
+  "kept": true
+ },
+ "4548d488": {
+  "text": "They're too small. Have you got a bigger size?",
+  "heard": "They're too small.  Have you got a bigger size?",
+  "score": 1,
+  "kept": true
+ },
+ "c68b8bf0": {
+  "text": "They are very much big.",
+  "heard": "They are very much big.",
+  "score": 1,
+  "kept": true
+ },
+ "9737569c": {
+  "text": "I don't remember. But my sister's birthday is in May!",
+  "heard": "I don't remember, but my sister's birthday is in May.",
+  "score": 1,
+  "kept": true
+ },
+ "3a3bea6e": {
+  "text": "My sister's birthday is on May.",
+  "heard": "My sister's birthday is on May.",
+  "score": 1,
+  "kept": true
+ },
+ "23a21303": {
+  "text": "I love spring. It's warm and sunny.",
+  "heard": "I love spring. It's warm and sunny.",
+  "score": 1,
+  "kept": true
+ },
+ "382bbe15": {
+  "text": "I like winter. I love the cold!",
+  "heard": "I like winter. I love the cold.",
+  "score": 1,
+  "kept": true
+ },
+ "37f7f74f": {
+  "text": "I like summer. I love the sea.",
+  "heard": "I like summer. I love the sea.",
+  "score": 1,
+  "kept": true
+ },
+ "fabd2b5b": {
+  "text": "No, that's my bag, over there.",
+  "heard": "No, that's my bag over there.",
+  "score": 1,
+  "kept": true
+ },
+ "096ce5c8": {
+  "text": "No, this is my bag, over there.",
+  "heard": "No, this is my bag over there.",
+  "score": 1,
+  "kept": true
+ },
+ "d7d99891": {
+  "text": "The festival is on the fifteenth of May.",
+  "heard": "The festival is on the 15th of May.",
+  "score": 1,
+  "kept": true
+ },
+ "677a11a9": {
+  "text": "Can I try them on?",
+  "heard": "Can I try them all?",
+  "score": 0.8,
+  "kept": true
+ },
+ "2a085669": {
+  "text": "They're too big.",
+  "heard": "They're too big.",
+  "score": 1,
+  "kept": true
+ },
+ "df320c9b": {
+  "text": "Have you got a smaller size?",
+  "heard": "Have you got a smaller size?",
+  "score": 1,
+  "kept": true
+ },
+ "f9db3ac4": {
+  "text": "These boots are great.",
+  "heard": "These boots are great.",
+  "score": 1,
+  "kept": true
+ },
+ "6848941c": {
+  "text": "My sister's birthday is in May.",
+  "heard": "My sister's birthday is in May.",
+  "score": 1,
+  "kept": true
+ },
+ "79f9198d": {
+  "text": "I love spring.",
+  "heard": "I love spring.",
+  "score": 1,
+  "kept": true
+ },
+ "00700fd9": {
+  "text": "It's cold and it's raining!",
+  "heard": "It's cold and it's raining.",
+  "score": 1,
+  "kept": true
+ },
+ "dec915b2": {
+  "text": "Is raining and is cold.",
+  "heard": "is raining and is cold.  Cold!",
+  "score": 0.91,
+  "kept": true
+ },
+ "cedaf4d2": {
+  "text": "I'm looking for my sister.",
+  "heard": "I'm looking for my sister.",
+  "score": 1,
+  "kept": true
+ },
+ "f0eda6e0": {
+  "text": "I look for my sister.",
+  "heard": "I look for my sister.",
+  "score": 1,
+  "kept": true
+ },
+ "eee91a1c": {
+  "text": "Yes, I can. It says “Tower”.",
+  "heard": "Yes I can, it says Tower.",
+  "score": 1,
+  "kept": true
+ },
+ "5272a83a": {
+  "text": "No, I can't read it. Sorry.",
+  "heard": "No, I can't read it, sorry.",
+  "score": 1,
+  "kept": true
+ },
+ "9af15709": {
+  "text": "I can swim, but I can't ride a horse.",
+  "heard": "I can swim, but I can't ride a horse.",
+  "score": 1,
+  "kept": true
+ },
+ "dee14fe1": {
+  "text": "I can ride a horse, but I can't swim.",
+  "heard": "I can ride a horse but I can't swim.",
+  "score": 1,
+  "kept": true
+ },
+ "97b4ce31": {
+  "text": "I can to swim.",
+  "heard": "I can swim.",
+  "score": 0.86,
+  "kept": true
+ },
+ "b10dc35f": {
+  "text": "Yes, I like him. He's kind.",
+  "heard": "Yes, I like him, he's kind.",
+  "score": 1,
+  "kept": true
+ },
+ "62d57225": {
+  "text": "Yes, I like he.",
+  "heard": "Yes, I like it.",
+  "score": 0.75,
+  "kept": true
+ },
+ "8b46113b": {
+  "text": "He's running to the harbour!",
+  "heard": "He's running to the harbor.",
+  "score": 0.83,
+  "kept": true
+ },
+ "21124e3f": {
+  "text": "He run to the harbour!",
+  "heard": "He run to the harbor.",
+  "score": 0.8,
+  "kept": true
+ },
+ "82688f44": {
+  "text": "Okay. See you tomorrow, Ana.",
+  "heard": "Okay, see you tomorrow, Anna.",
+  "score": 0.8,
+  "kept": true
+ },
+ "09701e04": {
+  "text": "It's cold and it's raining.",
+  "heard": "It's cold and it's raining.",
+  "score": 1,
+  "kept": true
+ },
+ "39b81daa": {
+  "text": "Yes, I like him.",
+  "heard": "Yes, I like him.",
+  "score": 1,
+  "kept": true
+ },
+ "7441b392": {
+  "text": "Don't touch it!",
+  "heard": "Don't touch it.",
+  "score": 1,
+  "kept": true
+ },
+ "45dfaf65": {
+  "text": "I was at the temple with Ana and Bram.",
+  "heard": "I was at the temple with Ana and Brent.",
+  "score": 0.89,
+  "kept": true
+ },
+ "26c22938": {
+  "text": "I were at the temple.",
+  "heard": "I were at the temple.",
+  "score": 1,
+  "kept": true
+ },
+ "eb93c224": {
+  "text": "He was tall. His cloak was black.",
+  "heard": "He was tall, his cloak was black.",
+  "score": 1,
+  "kept": true
+ },
+ "5be6638d": {
+  "text": "He was short. His hair was grey.",
+  "heard": "He was short, his hair was grey.",
+  "score": 1,
+  "kept": true
+ },
+ "b75e8504": {
+  "text": "He were tall.",
+  "heard": "He were tall.",
+  "score": 1,
+  "kept": true
+ },
+ "452e86e7": {
+  "text": "Yes, I was. Very scared!",
+  "heard": "Yes I was.  Very scared.",
+  "score": 1,
+  "kept": true
+ },
+ "ca5d1105": {
+  "text": "No, I wasn't. I was angry!",
+  "heard": "No, I wasn't. I was angry.",
+  "score": 1,
+  "kept": true
+ },
+ "331be89f": {
+  "text": "They were at the harbour with me.",
+  "heard": "They were at the harbor with me.",
+  "score": 0.86,
+  "kept": true
+ },
+ "63f4917f": {
+  "text": "They was at the harbour.",
+  "heard": "They was at the harbor.",
+  "score": 0.8,
+  "kept": true
+ },
+ "a185db63": {
+  "text": "My mother? Really? Where is she now?",
+  "heard": "My mother, really? Where is she now?",
+  "score": 1,
+  "kept": true
+ },
+ "76376e1e": {
+  "text": "My mother? Was she a good person?",
+  "heard": "My mother, was she a good person?",
+  "score": 1,
+  "kept": true
+ },
+ "8e852f96": {
+  "text": "I remember now. My name is Ari.",
+  "heard": "I remember now.  My name is Ari.",
+  "score": 1,
+  "kept": true
+ },
+ "efc47950": {
+  "text": "My name are Ari.",
+  "heard": "My name are Ari.",
+  "score": 1,
+  "kept": true
+ },
+ "0cf084e5": {
+  "text": "A-R-I.",
+  "heard": "A.R.I.",
+  "score": 1,
+  "kept": true
+ },
+ "901ddb39": {
+  "text": "E-R-I.",
+  "heard": "B or I.",
+  "score": 0.33,
+  "kept": false
+ },
+ "5316f88c": {
+  "text": "Yes, I'm ready. Let's go!",
+  "heard": "Yes, I'm ready, let's go.",
+  "score": 1,
+  "kept": true
+ },
+ "d915e703": {
+  "text": "I'm scared, but I'm ready.",
+  "heard": "I'm scared, but I'm ready.",
+  "score": 1,
+  "kept": true
+ },
+ "36eaa67b": {
+  "text": "Thanks for everything, Rosie. I'll be back!",
+  "heard": "Thanks for everything Rosie. I'll be back.",
+  "score": 1,
+  "kept": true
+ },
+ "09ad12d4": {
+  "text": "I was at the temple.",
+  "heard": "I was at the temple.",
+  "score": 1,
+  "kept": true
+ },
+ "c9b2c41c": {
+  "text": "He was tall.",
+  "heard": "He was tall.",
+  "score": 1,
+  "kept": true
+ },
+ "218d289c": {
+  "text": "Yes, I was.",
+  "heard": "Yes, I was.",
+  "score": 1,
+  "kept": true
+ },
+ "20c477e5": {
+  "text": "They were at the harbour.",
+  "heard": "They were at the harbor.",
+  "score": 0.8,
+  "kept": true
+ },
+ "779833c6": {
+  "text": "My name is Ari.",
+  "heard": "My name is Ari.",
+  "score": 1,
+  "kept": true
+ },
+ "e273bb3a": {
+  "text": "Hey, I'm Jake. What's your name?",
+  "heard": "Hey, I'm Jake. What's your name?",
+  "score": 1,
+  "kept": true
+ },
+ "83062cd5": {
+  "text": "Nice to meet you! Where are you from?",
+  "heard": "Nice to meet you.  Where are you from?  //",
+  "score": 1,
+  "kept": true
+ },
+ "c36c1599": {
+  "text": "Oh, cool! What brings you here?",
+  "heard": "Oh cool, what brings you here?",
+  "score": 1,
+  "kept": true
+ },
+ "cbd05600": {
+  "text": "Awesome. So how do you like it so far?",
+  "heard": "Awesome. So how do you like it so far?",
+  "score": 1,
+  "kept": true
+ },
+ "228a291e": {
+  "text": "Nice! Well, it was good meeting you.",
+  "heard": "Nice. Well, it was good meeting you.",
+  "score": 1,
+  "kept": true
+ },
+ "f02e3c60": {
+  "text": "Hey, you okay? You look kinda lost.",
+  "heard": "Hey, you okay? You look kinda lost.",
+  "score": 1,
+  "kept": true
+ },
+ "ac680b5e": {
+  "text": "Oh, it's just two blocks down that way, on the left.",
+  "heard": "It's just two blocks down that way on the left.",
+  "score": 0.96,
+  "kept": true
+ },
+ "1be97216": {
+  "text": "Yep, you can't miss it.",
+  "heard": "Yup, you can't miss it.",
+  "score": 0.83,
+  "kept": true
+ },
+ "c85959aa": {
+  "text": "No problem. Have a good one!",
+  "heard": "No problem. Have a good one.",
+  "score": 1,
+  "kept": true
+ },
+ "19b0fac8": {
+  "text": "Hi! Nice to meet you. Do you usually eat breakfast?",
+  "heard": "Hi, nice to meet you. Do you usually eat breakfast?",
+  "score": 1,
+  "kept": true
+ },
+ "bd90cf17": {
+  "text": "Great! Me too.",
+  "heard": "Great, me too.",
+  "score": 1,
+  "kept": true
+ },
+ "f9a6a1dc": {
+  "text": "Never? Well, today you do!",
+  "heard": "Never? Well today you do.",
+  "score": 1,
+  "kept": true
+ },
+ "e637d891": {
+  "text": "You eat… always? Hmm, almost!",
+  "heard": "You eat, always, hmm, almost.",
+  "score": 1,
+  "kept": true
+ },
+ "eef47f6e": {
+  "text": "And what time do you usually get up?",
+  "heard": "And what time do you usually get up?",
+  "score": 1,
+  "kept": true
+ },
+ "023e60dc": {
+  "text": "Same as me!",
+  "heard": "Same as me.",
+  "score": 1,
+  "kept": true
+ },
+ "e20f8e53": {
+  "text": "Getting up? Like, right now?",
+  "heard": "Getting up, like right now.",
+  "score": 1,
+  "kept": true
+ },
+ "b76d58e1": {
+  "text": "Here, look at the calendar. Today is Monday. The Guild is closed on Sundays.",
+  "heard": "Here, look at the calendar.  Today is Monday.  The guild is closed on Sundays.",
+  "score": 1,
+  "kept": true
+ },
+ "af7a37e1": {
+  "text": "Welcome back! Dinner time! Here's the menu.",
+  "heard": "Welcome back dinner time. Here's the menu",
+  "score": 1,
+  "kept": true
+ },
+ "a99727db": {
+  "text": "So, what would you like?",
+  "heard": "So, what would you like?",
+  "score": 1,
+  "kept": true
+ },
+ "f1df2d2d": {
+  "text": "Good choice! My mom's recipe.",
+  "heard": "Good choice, my mom's recipe.",
+  "score": 1,
+  "kept": true
+ },
+ "24dd280b": {
+  "text": "Like of the soup? Hmm. Just “the soup”.",
+  "heard": "like of the soup?  Hmm, just the soup.",
+  "score": 1,
+  "kept": true
+ },
+ "0f43fa13": {
+  "text": "Sure!",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "eb0cf5ef": {
+  "text": "Do you eat meat? I've got some good sausages.",
+  "heard": "Do you eat meat? I've got some good sausages.",
+  "score": 1,
+  "kept": true
+ },
+ "23efc17a": {
+  "text": "No problem! More soup for you.",
+  "heard": "No problem.  More soup for you.",
+  "score": 1,
+  "kept": true
+ },
+ "e4bc1c3a": {
+  "text": "Ha! Here you go.",
+  "heard": "Here you go.",
+  "score": 0.86,
+  "kept": true
+ },
+ "9dd50e6a": {
+  "text": "You no eat? Try again!",
+  "heard": "You know eat, try again.",
+  "score": 0.8,
+  "kept": true
+ },
+ "c83d207f": {
+  "text": "I love cooking, but I hate washing the dishes! What do you like doing in your free time?",
+  "heard": "I love cooking, but I hate washing the dishes.  What do you like doing in your free time?",
+  "score": 1,
+  "kept": true
+ },
+ "c36dcf05": {
+  "text": "Swimming! In the sea? Brrr.",
+  "heard": "Swimming in the sea, burr.",
+  "score": 0.8,
+  "kept": true
+ },
+ "9d698d5a": {
+  "text": "Really? Then you wash the dishes! Haha.",
+  "heard": "Really? Then you wash the dishes.  Haha!",
+  "score": 1,
+  "kept": true
+ },
+ "f498d38c": {
+  "text": "Like read? Almost! Add -ing.",
+  "heard": "like read almost add in.",
+  "score": 0.8,
+  "kept": true
+ },
+ "1f5210a6": {
+  "text": "Are you okay? You look happy… and sad.",
+  "heard": "Are you okay? You look happy and sad.",
+  "score": 1,
+  "kept": true
+ },
+ "a7e69a2e": {
+  "text": "Anytime! Good night, Newbie.",
+  "heard": "Anytime. Good night, newbie.",
+  "score": 1,
+  "kept": true
+ },
+ "57d9f0f6": {
+  "text": "Were you scared?",
+  "heard": "Were you scared?",
+  "score": 1,
+  "kept": true
+ },
+ "d8caa0b8": {
+  "text": "Me too, and I wasn't even there!",
+  "heard": "Me too, and I wasn't even there.",
+  "score": 1,
+  "kept": true
+ },
+ "ff12c110": {
+  "text": "Brave Newbie!",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "76a32387": {
+  "text": "I were? Try again.",
+  "heard": "I were. Try again.",
+  "score": 1,
+  "kept": true
+ },
+ "25e2070c": {
+  "text": "Ari! How do you spell that?",
+  "heard": "Ari, how do you spell that?",
+  "score": 1,
+  "kept": true
+ },
+ "d58733dd": {
+  "text": "A-R-I. Ari! Nice to meet you, Ari!",
+  "heard": "ARI.  ARI, nice to meet you, ARI.",
+  "score": 0.75,
+  "kept": true
+ },
+ "2402cbd7": {
+  "text": "E-R-I? That's “Eri”. A is “ei”!",
+  "heard": "E-R-I. That's Arie. A is A.",
+  "score": 0.78,
+  "kept": true
+ },
+ "56d831f9": {
+  "text": "Hi there! You ready to order?",
+  "heard": "Hi there, you ready to order?",
+  "score": 1,
+  "kept": true
+ },
+ "fc7a1817": {
+  "text": "Sure. Fries or salad on the side?",
+  "heard": "Sure, fries or salad on the side.",
+  "score": 1,
+  "kept": true
+ },
+ "45d6884a": {
+  "text": "And to drink?",
+  "heard": "and to drink.",
+  "score": 1,
+  "kept": true
+ },
+ "44683a33": {
+  "text": "Got it. I'll be right back with that.",
+  "heard": "Got it. I'll be right back with that.",
+  "score": 1,
+  "kept": true
+ },
+ "452fbc7a": {
+  "text": "Here you go. Enjoy!",
+  "heard": "Here you go, enjoy.",
+  "score": 1,
+  "kept": true
+ },
+ "75ebdcbd": {
+  "text": "How's everything?",
+  "heard": "How's everything?",
+  "score": 1,
+  "kept": true
+ },
+ "003b84d7": {
+  "text": "Can I get you anything else?",
+  "heard": "Can I get you anything else?",
+  "score": 1,
+  "kept": true
+ },
+ "a26fbc74": {
+  "text": "Fresh apples! Apples here! Hey, you! You hungry?",
+  "heard": "Fresh apples. Apples here. Hey, you, you hungry?",
+  "score": 1,
+  "kept": true
+ },
+ "efbabdde": {
+  "text": "Ha! I knew it.",
+  "heard": "Ha, I knew it.",
+  "score": 1,
+  "kept": true
+ },
+ "473fb61e": {
+  "text": "Come on! Just look at these apples!",
+  "heard": "Come on, just look at these apples.",
+  "score": 1,
+  "kept": true
+ },
+ "d5f01f3a": {
+  "text": "You… have hungry? Like a pet? Haha.",
+  "heard": "You, have hungry like a pet? Haha!",
+  "score": 1,
+  "kept": true
+ },
+ "46f344ea": {
+  "text": "They're two coins each. How many do you want?",
+  "heard": "There are two coins each. How many do you want?",
+  "score": 0.9,
+  "kept": true
+ },
+ "db3c607b": {
+  "text": "Just one? Okay, that's two coins.",
+  "heard": "Just one? Okay, that's two coins.",
+  "score": 1,
+  "kept": true
+ },
+ "70c9395c": {
+  "text": "Two… apple? You mean apples, right?",
+  "heard": "2. Apple? You mean apples, right?",
+  "score": 1,
+  "kept": true
+ },
+ "6d376d9e": {
+  "text": "That's four coins.",
+  "heard": "That's four coins.",
+  "score": 1,
+  "kept": true
+ },
+ "dd91268c": {
+  "text": "That's two coins.",
+  "heard": "That's two coins.",
+  "score": 1,
+  "kept": true
+ },
+ "e82ebb51": {
+  "text": "Thanks, buddy! Hey, you look cold. Go see Mei over there. She sells cloaks.",
+  "heard": "Thanks buddy. Hey, you look cold. Go see Mae over there. She sells cloaks.",
+  "score": 0.93,
+  "kept": true
+ },
+ "60c9d902": {
+  "text": "Hey, welcome! Checking in?",
+  "heard": "Hey, welcome checking in.",
+  "score": 1,
+  "kept": true
+ },
+ "1878c1f4": {
+  "text": "Great. Can I get your last name?",
+  "heard": "Great. Can I get your last name?",
+  "score": 1,
+  "kept": true
+ },
+ "302fddbc": {
+  "text": "Perfect. Okay, you're all set. You're in room five twelve.",
+  "heard": "Perfect. Okay, you're all set. You're in room 512.",
+  "score": 0.87,
+  "kept": true
+ },
+ "319c6ab8": {
+  "text": "Yep, the password's on your key card.",
+  "heard": "Yep, the password's on your keycard.",
+  "score": 0.8,
+  "kept": true
+ },
+ "39ce64b7": {
+  "text": "Hi there! Looking for a cloak?",
+  "heard": "Hi there, looking for a cloak?",
+  "score": 1,
+  "kept": true
+ },
+ "3c932614": {
+  "text": "Depends on the color!",
+  "heard": "Depends on the color.",
+  "score": 1,
+  "kept": true
+ },
+ "4b8b6086": {
+  "text": "How much… it is? Oh, you mean the price?",
+  "heard": "How much it is. Oh, you mean the price?",
+  "score": 1,
+  "kept": true
+ },
+ "200447b0": {
+  "text": "I've got red, blue and green. Which one do you like?",
+  "heard": "I've got red, blue, and green.  Which one do you like?",
+  "score": 1,
+  "kept": true
+ },
+ "856bc338": {
+  "text": "Good choice! Blue's my favorite.",
+  "heard": "Good choice. Blue is my favorite.",
+  "score": 1,
+  "kept": true
+ },
+ "62f3a31c": {
+  "text": "Ooh, bold! I like it.",
+  "heard": "Ooh, bold! I like it!",
+  "score": 1,
+  "kept": true
+ },
+ "53e1f103": {
+  "text": "The one… blue? You mean the blue one?",
+  "heard": "The one blue, you mean the blue one?",
+  "score": 1,
+  "kept": true
+ },
+ "5d0b66af": {
+  "text": "Oh wait, I've got a yellow one too. Can you grab the yellow one for me? It's on the left.",
+  "heard": "Oh wait, I've got a yellow one too. Can you grab the yellow one for me? It's on the left.",
+  "score": 1,
+  "kept": true
+ },
+ "237c0ac9": {
+  "text": "The yellow one, please!",
+  "heard": "The yellow one, please.",
+  "score": 1,
+  "kept": true
+ },
+ "0f09c095": {
+  "text": "That's red, not yellow!",
+  "heard": "That's red, not yellow.",
+  "score": 1,
+  "kept": true
+ },
+ "4daa0100": {
+  "text": "No, that's the blue one.",
+  "heard": "No, that's the blue one.",
+  "score": 1,
+  "kept": true
+ },
+ "45d12e51": {
+  "text": "Nope, that's green.",
+  "heard": "Nope, that's green.",
+  "score": 1,
+  "kept": true
+ },
+ "f278444e": {
+  "text": "Thanks! Anyway, your cloak is twelve coins.",
+  "heard": "Thanks! Anyway, your cloak is 12 coins.",
+  "score": 1,
+  "kept": true
+ },
+ "fd18b61b": {
+  "text": "Thank you!",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "2b492873": {
+  "text": "Ha! You're good. Okay, ten. Deal!",
+  "heard": "Ha, you're good. Okay, 10 deal.",
+  "score": 1,
+  "kept": true
+ },
+ "e646eb40": {
+  "text": "Crazy? Fine. Then it's thirteen for you.",
+  "heard": "Crazy? Fine. Then it's 13 for you.",
+  "score": 1,
+  "kept": true
+ },
+ "a1ced911": {
+  "text": "That's twelve coins.",
+  "heard": "That's 12 coins.",
+  "score": 1,
+  "kept": true
+ },
+ "bd9e0873": {
+  "text": "That's ten coins.",
+  "heard": "Oh, that's 10 coins.",
+  "score": 0.89,
+  "kept": true
+ },
+ "c356df63": {
+  "text": "That's thirteen coins.",
+  "heard": "That's 13 coins.",
+  "score": 1,
+  "kept": true
+ },
+ "a5235ac0": {
+  "text": "Looks great on you! Have a good one!",
+  "heard": "Looks great on you. Have a good one.",
+  "score": 1,
+  "kept": true
+ },
+ "e1610fa1": {
+  "text": "Me… also? Haha, you mean “you too”.",
+  "heard": "Me, also, ha ha, you mean you too.",
+  "score": 0.8,
+  "kept": true
+ },
+ "c2d25d35": {
+  "text": "Hi again! The Festival of the Tower is on the fifteenth of May. You need nice clothes!",
+  "heard": "Ching, hi again.  The festival of the tower is on the 15th of May.  You need nice clothes.",
+  "score": 0.97,
+  "kept": true
+ },
+ "8b67f151": {
+  "text": "Quick! When is the festival?",
+  "heard": "Quick, when is the festival?",
+  "score": 1,
+  "kept": true
+ },
+ "75d6d49a": {
+  "text": "Right! Two weeks from today.",
+  "heard": "Right. Two weeks from today.",
+  "score": 1,
+  "kept": true
+ },
+ "419058f6": {
+  "text": "Look at these boots! Do you like them?",
+  "heard": "Shint, look at these boots. Do you like them?",
+  "score": 0.94,
+  "kept": true
+ },
+ "e4a1eb3c": {
+  "text": "Sure! Here you go.",
+  "heard": "Sure, here you go.",
+  "score": 1,
+  "kept": true
+ },
+ "a6148253": {
+  "text": "This boots? One boot or two?",
+  "heard": "This boots one boot or two.",
+  "score": 1,
+  "kept": true
+ },
+ "5a253477": {
+  "text": "So? How are they?",
+  "heard": "So, how are they?",
+  "score": 1,
+  "kept": true
+ },
+ "8a902080": {
+  "text": "Sure! Try these. Size forty.",
+  "heard": "Sure, try these, size 40.",
+  "score": 0.8,
+  "kept": true
+ },
+ "93df1b3c": {
+  "text": "Very much big? Haha, say “too big”!",
+  "heard": "Very much big, haha say too big.",
+  "score": 1,
+  "kept": true
+ },
+ "92ab588f": {
+  "text": "Perfect! Can you pass me that hat, please? The one with the flower.",
+  "heard": "Perfect. Can you pass me that hat, please? The one with the flower.",
+  "score": 1,
+  "kept": true
+ },
+ "f0c1c2c6": {
+  "text": "That hat, please!",
+  "heard": "That hat, please.",
+  "score": 1,
+  "kept": true
+ },
+ "7ca073d8": {
+  "text": "Those are socks!",
+  "heard": "Those are socks.",
+  "score": 1,
+  "kept": true
+ },
+ "43bb43e9": {
+  "text": "That's a shirt.",
+  "heard": "That's a shirt.",
+  "score": 1,
+  "kept": true
+ },
+ "d0f9e195": {
+  "text": "That's a dress!",
+  "heard": "That's a dress.",
+  "score": 1,
+  "kept": true
+ },
+ "34d744bf": {
+  "text": "The boots are nine coins and the shirt is six. That's fifteen.",
+  "heard": "The boots are 9 coins and the shirt is 6.  That's 15.",
+  "score": 1,
+  "kept": true
+ },
+ "c86b6b7d": {
+  "text": "That's fifteen coins.",
+  "heard": "That's 15 coins.",
+  "score": 1,
+  "kept": true
+ },
+ "d2d8a4d5": {
+  "text": "So, when's your birthday? Maybe I can give you a gift!",
+  "heard": "So, when's your birthday? Maybe I can give you a gift.",
+  "score": 1,
+  "kept": true
+ },
+ "936c7d3b": {
+  "text": "In May? Like the festival!",
+  "heard": "in May like the festival.",
+  "score": 1,
+  "kept": true
+ },
+ "de0730fb": {
+  "text": "On May? Hmm. In May!",
+  "heard": "on May? Hmm, in May.",
+  "score": 1,
+  "kept": true
+ },
+ "eee08ef0": {
+  "text": "Me too!",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "c0d717fe": {
+  "text": "The cold? Brrr. You're crazy!",
+  "heard": "The cold, bruh, you're crazy.",
+  "score": 0.83,
+  "kept": true
+ },
+ "fae216e8": {
+  "text": "Oh, the sea! Nice.",
+  "heard": "Oh, the sea. Nice.",
+  "score": 1,
+  "kept": true
+ },
+ "cdf45549": {
+  "text": "Is this your bag? Over here, by my stall?",
+  "heard": "Is this your bag over here by my stall?",
+  "score": 1,
+  "kept": true
+ },
+ "3b70a0b0": {
+  "text": "Oh! Okay. See you at the festival!",
+  "heard": "Oh, okay. See you at the festival.",
+  "score": 1,
+  "kept": true
+ },
+ "903b7da5": {
+  "text": "This… over there? Far away is “that”.",
+  "heard": "This, over there, far away is that.",
+  "score": 1,
+  "kept": true
+ },
+ "e8698cad": {
+  "text": "Hey! Can I help you find anything?",
+  "heard": "Hey, can I help you find anything?",
+  "score": 1,
+  "kept": true
+ },
+ "b77f81e2": {
+  "text": "Okay, just let me know!",
+  "heard": "Okay, just let me know.",
+  "score": 1,
+  "kept": true
+ },
+ "8e480655": {
+  "text": "Let me check... Yep, here you go.",
+  "heard": "Let me check. Yep, here you go. Here you go.",
+  "score": 0.82,
+  "kept": true
+ },
+ "a027428e": {
+  "text": "Fitting rooms are right over there.",
+  "heard": "Fitting rooms are right over there.",
+  "score": 1,
+  "kept": true
+ },
+ "54e3589f": {
+  "text": "So, how'd it fit?",
+  "heard": "So, how did it fit?",
+  "score": 0.8,
+  "kept": true
+ },
+ "8995ae38": {
+  "text": "Awesome! That'll be twenty-five bucks.",
+  "heard": "Awesome, that'll be 25 bucks.",
+  "score": 0.77,
+  "kept": true
+ },
+ "36aea9e3": {
+  "text": "Of course. Just tap it right here.",
+  "heard": "Of course, just tap it right here.",
+  "score": 1,
+  "kept": true
+ },
+ "0f94f68b": {
+  "text": "Hey! What are you up to this weekend?",
+  "heard": "Hey, what are you up to this weekend?",
+  "score": 1,
+  "kept": true
+ },
+ "2e5f78c3": {
+  "text": "Wanna go see a movie on Saturday?",
+  "heard": "Wanna go see a movie on Saturday?",
+  "score": 1,
+  "kept": true
+ },
+ "3377efd7": {
+  "text": "Cool! What time works for you?",
+  "heard": "Cool. What time works for you?",
+  "score": 1,
+  "kept": true
+ },
+ "e7e895f6": {
+  "text": "Awesome, see ya!",
+  "heard": "Awesome. See ya.",
+  "score": 1,
+  "kept": true
+ },
+ "bb938a16": {
+  "text": "Good morning. I'm Iris. I write everybody's details in the Guild book. What's your name?",
+  "heard": "Good morning. I'm Iris. I write everybody's details in the Guildbook. What's your name?",
+  "score": 0.91,
+  "kept": true
+ },
+ "a9f324f1": {
+  "text": "Newbie. Okay.",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "f35d9009": {
+  "text": "How do you spell that?",
+  "heard": "How do you spell that?",
+  "score": 1,
+  "kept": true
+ },
+ "090b8152": {
+  "text": "N-E-W-B-I-E. Got it, thanks.",
+  "heard": "N-E-W-B-I-E. Got it. Thanks.",
+  "score": 1,
+  "kept": true
+ },
+ "0d452390": {
+  "text": "N-U-B-I? That's “Nubi”. Try again, slowly.",
+  "heard": "N U B I. That's newbie. Try again slowly.",
+  "score": 0.9,
+  "kept": true
+ },
+ "e9a6cc36": {
+  "text": "And where do you live?",
+  "heard": "And where do you live?",
+  "score": 1,
+  "kept": true
+ },
+ "c1dd8276": {
+  "text": "Rosie's place! Nice.",
+  "heard": "Rosie's place. Nice.",
+  "score": 1,
+  "kept": true
+ },
+ "2fc2403a": {
+  "text": "You am live? Hmm, no.",
+  "heard": "You am live?  Hmm, no.",
+  "score": 1,
+  "kept": true
+ },
+ "6780ec0e": {
+  "text": "Which days can you work?",
+  "heard": "Which days can you work?",
+  "score": 1,
+  "kept": true
+ },
+ "d442ade2": {
+  "text": "Perfect. Weekends free.",
+  "heard": "Perfect.  Weekends free.",
+  "score": 1,
+  "kept": true
+ },
+ "a0362024": {
+  "text": "Wow, hard worker!",
+  "heard": "Wow, hard worker.",
+  "score": 1,
+  "kept": true
+ },
+ "226d9120": {
+  "text": "In Monday? Like, inside it?",
+  "heard": "in Monday like inside it.",
+  "score": 1,
+  "kept": true
+ },
+ "119a5b9f": {
+  "text": "Great. Work starts at eight and finishes at five. Lunch is at twelve.",
+  "heard": "Great, work starts at 8 and finishes at 5, lunch is at 12.",
+  "score": 1,
+  "kept": true
+ },
+ "cf70db78": {
+  "text": "Hi, how can I help you?",
+  "heard": "Hi, how can I help you?",
+  "score": 1,
+  "kept": true
+ },
+ "51fc7e5d": {
+  "text": "Oh, sorry. How long have you had it?",
+  "heard": "Oh, sorry, how long have you had it?",
+  "score": 1,
+  "kept": true
+ },
+ "2a10f69a": {
+  "text": "Okay. Try these. Take two every six hours.",
+  "heard": "Okay, try these. Take two every six hours.",
+  "score": 1,
+  "kept": true
+ },
+ "db559049": {
+  "text": "And drink lots of water!",
+  "heard": "and drink lots of water.",
+  "score": 1,
+  "kept": true
+ },
+ "4ed50cb9": {
+  "text": "That's eight bucks.",
+  "heard": "That's 8 bucks.",
+  "score": 1,
+  "kept": true
+ },
+ "6075effe": {
+  "text": "Morning! How was your weekend?",
+  "heard": "Morning, how was your weekend?",
+  "score": 1,
+  "kept": true
+ },
+ "bc5ad579": {
+  "text": "Not bad. I just stayed home and chilled.",
+  "heard": "Huh, not bad. I just stayed home and chilled.",
+  "score": 0.94,
+  "kept": true
+ },
+ "7b755440": {
+  "text": "Oh, fun! Hey, you want some coffee?",
+  "heard": "Oh, fun! Hey, you want some coffee?",
+  "score": 1,
+  "kept": true
+ },
+ "41580ab7": {
+  "text": "Cool. Talk to you later!",
+  "heard": "Cool, talk to you later.",
+  "score": 1,
+  "kept": true
+ },
+ "c1aa7f20": {
+  "text": "Ahoy! You've got a letter? For me? I'm Captain Ola!",
+  "heard": "Ahoy! You've got a letter? For me, I'm Captain Ola.",
+  "score": 1,
+  "kept": true
+ },
+ "aa10b278": {
+  "text": "Thank you! Oh, it's from my brother!",
+  "heard": "Oh, thank you. Oh, it's from my brother.",
+  "score": 0.94,
+  "kept": true
+ },
+ "a2bebd32": {
+  "text": "Is for me? What is? Haha.",
+  "heard": "is for me? What is hahaha?",
+  "score": 0.83,
+  "kept": true
+ },
+ "e4db0a61": {
+  "text": "Look! That ship is my brother's ship. Her name is the Gull.",
+  "heard": "Look, that ship is my brother's ship. Her name is the Gull.",
+  "score": 1,
+  "kept": true
+ },
+ "74422c98": {
+  "text": "Quick question, sailor! Whose ship is that? Mine or my brother's?",
+  "heard": "What question sailor, whose ship is that, mine or my brothers?",
+  "score": 0.78,
+  "kept": true
+ },
+ "0db9f83c": {
+  "text": "Right! I've got a small boat. He's got a big ship. Haha!",
+  "heard": "Right, I got a small boat, he's got a big ship.  Haha!",
+  "score": 0.96,
+  "kept": true
+ },
+ "dfd36dee": {
+  "text": "Of my brother? Hmm, say it like a sailor!",
+  "heard": "My brother?  Hmm, say it like a sailor!",
+  "score": 0.94,
+  "kept": true
+ },
+ "4f5ed751": {
+  "text": "I love my family. Look, I've got a picture.",
+  "heard": "I love my family. Look, I got a picture.",
+  "score": 0.95,
+  "kept": true
+ },
+ "8541561f": {
+  "text": "Can you find my daughter? She's got red hair.",
+  "heard": "Can you find my daughter? She's got red hair.",
+  "score": 1,
+  "kept": true
+ },
+ "7eb2840b": {
+  "text": "That's my son, Tom!",
+  "heard": "That's my son Tom.",
+  "score": 1,
+  "kept": true
+ },
+ "f3580f24": {
+  "text": "That's my husband, Sam.",
+  "heard": "That's my husband Sam.",
+  "score": 1,
+  "kept": true
+ },
+ "7d69d257": {
+  "text": "That's my mother. She's old, not red!",
+  "heard": "That's my mother. She's old not red",
+  "score": 1,
+  "kept": true
+ },
+ "eb7673ef": {
+  "text": "And you? Have you got any brothers or sisters?",
+  "heard": "And you? Have you got any brothers or sisters?",
+  "score": 1,
+  "kept": true
+ },
+ "b04e39f8": {
+  "text": "You think? You don't know?",
+  "heard": "You think you don't know?",
+  "score": 1,
+  "kept": true
+ },
+ "66d341b6": {
+  "text": "Got sister? A sister? Two sisters?",
+  "heard": "got sister, a sister, two sisters.",
+  "score": 1,
+  "kept": true
+ },
+ "73dc5856": {
+  "text": "Okay, tell me. What does she look like?",
+  "heard": "Huh, okay, tell me. What does she look like?",
+  "score": 0.94,
+  "kept": true
+ },
+ "8b3b3f66": {
+  "text": "Long black hair… Hmm.",
+  "heard": "Long black hair. Hmm.",
+  "score": 1,
+  "kept": true
+ },
+ "63cd9134": {
+  "text": "A big smile… Hmm.",
+  "heard": "A big smile.  Hmm.",
+  "score": 1,
+  "kept": true
+ },
+ "c4c3ad26": {
+  "text": "He? His? I thought it was your sister!",
+  "heard": "He, his, I thought it was your sister.",
+  "score": 1,
+  "kept": true
+ },
+ "b256ec7f": {
+  "text": "Wait… I know a girl like that! Long black hair, a big smile… and a bracelet like yours! She was on my brother's ship. Last year.",
+  "heard": "Wait, I know a girl like that.  Long black hair, a big smile, and a bracelet like yours.  She was on my brother's ship last year.",
+  "score": 1,
+  "kept": true
+ },
+ "1cdaaba2": {
+  "text": "I don't know. To the capital, I think.",
+  "heard": "I don't know to the capital, I think.",
+  "score": 1,
+  "kept": true
+ },
+ "3d9c58c3": {
+  "text": "Where she is? Ask me again, sailor!",
+  "heard": "where she is. Ask me again, sailor.",
+  "score": 1,
+  "kept": true
+ },
+ "47cdb261": {
+  "text": "Here, take this. It's my old compass. Your sister's got the same eyes as you, you know.",
+  "heard": "Here, take this. It's my old compass. Your sister's got the same eyes as you, you know.",
+  "score": 1,
+  "kept": true
+ },
+ "aaa2028b": {
+  "text": "Fair winds, sailor!",
+  "heard": "Fair winds sailor.",
+  "score": 1,
+  "kept": true
+ },
+ "ddfa9f7b": {
+  "text": "Hey, how's it going?",
+  "heard": "Hey, how's it going?",
+  "score": 1,
+  "kept": true
+ },
+ "a0b4b831": {
+  "text": "Doing good, thanks. Did you find everything okay?",
+  "heard": "Doing good, thanks. Did you find everything okay?",
+  "score": 1,
+  "kept": true
+ },
+ "7bbc98d5": {
+  "text": "Do you need a bag?",
+  "heard": "Do you need a bag?",
+  "score": 1,
+  "kept": true
+ },
+ "18c7c6cf": {
+  "text": "Sure. You're all set. Have a good one!",
+  "heard": "Sure, you're all set.  Have a good one.",
+  "score": 1,
+  "kept": true
+ },
+ "4c2cd6d6": {
+  "text": "Stop right there. What do you want?",
+  "heard": "Stop right there. What do you want?",
+  "score": 1,
+  "kept": true
+ },
+ "3ec77e96": {
+  "text": "Marcus, huh?",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "9bbfd4d2": {
+  "text": "You… look for Marcus? Right now? Like, with your eyes?",
+  "heard": "You look for Marcus right now, like with your eyes.",
+  "score": 1,
+  "kept": true
+ },
+ "e96156cd": {
+  "text": "Excuse me? Nobody talks to me like that. Wait over there.",
+  "heard": "Excuse me nobody talks to me like that wait over there",
+  "score": 1,
+  "kept": true
+ },
+ "64e375b3": {
+  "text": "See? Not so hard.",
+  "heard": "See, not so hard.",
+  "score": 1,
+  "kept": true
+ },
+ "1edccf2b": {
+  "text": "Still no. Try again.",
+  "heard": "Still no, try again.",
+  "score": 1,
+  "kept": true
+ },
+ "b47631bf": {
+  "text": "Marcus is busy. He doesn't see just anybody. Name?",
+  "heard": "Marcus is busy, he doesn't see just anybody.  Name...",
+  "score": 1,
+  "kept": true
+ },
+ "c21d8fa8": {
+  "text": "Newbie? Seriously? Ha!",
+  "heard": "Newbie seriously?  Ha ha.",
+  "score": 0.86,
+  "kept": true
+ },
+ "ef9aa734": {
+  "text": "You don't remember? Great. Just great.",
+  "heard": "You don't remember, great, just great.",
+  "score": 1,
+  "kept": true
+ },
+ "da68b702": {
+  "text": "Your name… are? How many names do you have?",
+  "heard": "Your name are, how many names do you have?",
+  "score": 1,
+  "kept": true
+ },
+ "4d62bdfa": {
+  "text": "How old are you?",
+  "heard": "How old are you?",
+  "score": 1,
+  "kept": true
+ },
+ "bfe5d084": {
+  "text": "Twenty? You look younger.",
+  "heard": "20. You look younger.",
+  "score": 1,
+  "kept": true
+ },
+ "46bd0d59": {
+  "text": "You don't know much, do you?",
+  "heard": "You don't know much do you?",
+  "score": 1,
+  "kept": true
+ },
+ "2570d6eb": {
+  "text": "You have… twenty years? Where do you keep them?",
+  "heard": "You have 20 years where do you keep them?",
+  "score": 1,
+  "kept": true
+ },
+ "b34142a9": {
+  "text": "And what do you do? Do you have a job?",
+  "heard": "And what do you do?  Do you have a job?",
+  "score": 1,
+  "kept": true
+ },
+ "4a3adcae": {
+  "text": "No job, no name… perfect.",
+  "heard": "No job, no name, perfect.",
+  "score": 1,
+  "kept": true
+ },
+ "d6d7fe70": {
+  "text": "Looking for work, huh?",
+  "heard": "Looking for work, huh?",
+  "score": 1,
+  "kept": true
+ },
+ "541577f9": {
+  "text": "You… not have job? Okay, okay. I get it.",
+  "heard": "You, not have job? Okay, okay, I get it.",
+  "score": 1,
+  "kept": true
+ },
+ "ac3d2a4e": {
+  "text": "Wait… that bracelet. Show me your hand.",
+  "heard": "Wait, that bracelet, show me your hand.",
+  "score": 1,
+  "kept": true
+ },
+ "b2c36e9b": {
+  "text": "By the gods… Come in. Now.",
+  "heard": "By the gods, come in now.",
+  "score": 1,
+  "kept": true
+ },
+ "7fd087a6": {
+  "text": "Nothing's wrong. Just… come in. Now.",
+  "heard": "Nothing's wrong, just come in now.",
+  "score": 1,
+  "kept": true
+ },
+ "0356053f": {
+  "text": "Fine, fine. Calm down. Just come in.",
+  "heard": "fine, fine calm down just come in.",
+  "score": 1,
+  "kept": true
+ },
+ "b7aa742a": {
+  "text": "Shh. Quiet. Ana is reading the old stones.",
+  "heard": "Quiet, Anna is reading the old stones.",
+  "score": 0.8,
+  "kept": true
+ },
+ "1c477cf4": {
+  "text": "Newbie! What's he doing? Where's he going?",
+  "heard": "Newbie, what's he doing? Where's he going?",
+  "score": 1,
+  "kept": true
+ },
+ "01ee0f95": {
+  "text": "After him! Go, go!",
+  "heard": "after him. Go go!",
+  "score": 1,
+  "kept": true
+ },
+ "a43a27a5": {
+  "text": "He run? Now! Quick, say it right!",
+  "heard": "He run, now.  Quick, say it right.",
+  "score": 1,
+  "kept": true
+ },
+ "fa82b602": {
+  "text": "Tower",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "70bb9e41": {
+  "text": "Sister",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "b572b269": {
+  "text": "Queen",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "2c833d9f": {
+  "text": "Ship",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "0fbc72c0": {
+  "text": "Birthday cake",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "3ba7e226": {
+  "text": "May",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "06b35069": {
+  "text": "Crystal",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "96fb4c09": {
+  "text": "Ari",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "7a4b8869": {
+  "text": "So you're the one Rosie told me about. I'm Marcus. I run the Guild.",
+  "heard": "So you're the one Rosie told me about.  I'm Marcus.  I run the guild.",
+  "score": 1,
+  "kept": true
+ },
+ "2ffe9bb3": {
+  "text": "Here, people work. They carry boxes, they deliver letters, they help the city. Every day.",
+  "heard": "Here, people work.  They carry boxes.  They deliver letters.  They help the city every day.",
+  "score": 1,
+  "kept": true
+ },
+ "a6704439": {
+  "text": "Tell me. What does Rosie do?",
+  "heard": "Tell me, what does Rosie do?",
+  "score": 1,
+  "kept": true
+ },
+ "e3fa813a": {
+  "text": "That's right. Best bread in Shinar.",
+  "heard": "That's right, best bread in Shinar.",
+  "score": 1,
+  "kept": true
+ },
+ "9dd92a2d": {
+  "text": "She… run? Is she running away?",
+  "heard": "She run? Is she running away?",
+  "score": 1,
+  "kept": true
+ },
+ "f44e5e8e": {
+  "text": "Hmm. Almost. Try again.",
+  "heard": "Almost, try again.",
+  "score": 0.86,
+  "kept": true
+ },
+ "b5eba49f": {
+  "text": "Good. And Tobias? The apple guy?",
+  "heard": "Good and Tobias the Apple guy",
+  "score": 1,
+  "kept": true
+ },
+ "bb8810e0": {
+  "text": "Ha! Yes. Too many apples.",
+  "heard": "Ha, yes, too many apples.",
+  "score": 1,
+  "kept": true
+ },
+ "7fa53c1b": {
+  "text": "He… sell? Remember the -s, Newbie.",
+  "heard": "He sell remember the S newbie",
+  "score": 1,
+  "kept": true
+ },
+ "c888745b": {
+  "text": "You learn fast. Okay, Newbie, you want a job? Be here at eight. Don't be late. And always say please.",
+  "heard": "You learn fast.  Okay, newbie.  You want a job?  Be here at 8.  Don't be late.  And always say please.",
+  "score": 1,
+  "kept": true
+ },
+ "c12a17e2": {
+  "text": "Good.",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "770332ee": {
+  "text": "You are here… tomorrow? Today? Now? Ha.",
+  "heard": "You are here tomorrow, today, now, ha.",
+  "score": 1,
+  "kept": true
+ },
+ "ab9ec401": {
+  "text": "One more thing. That bracelet… I saw one just like it, years ago. On the wrist of the Queen's advisor.",
+  "heard": "One more thing, that bracelet I saw one just like it years ago on the wrist of the Queen's  advisor.",
+  "score": 1,
+  "kept": true
+ },
+ "1e0ca600": {
+  "text": "Get some rest. Tomorrow, your first job.",
+  "heard": "Get some rest. Tomorrow, your first job.",
+  "score": 1,
+  "kept": true
+ },
+ "3b2e4d71": {
+  "text": "Newbie! You're on time. Good. Tell me about your day. What do you do in the morning?",
+  "heard": "Shnewbie, you're on time. Good. Tell me about your day. What do you do in the morning?  //  //  //  //  //  //  //  //  //  //  //  //  //  //  //  //  //  //  //  //  //  //  //  //  //",
+  "score": 0.94,
+  "kept": true
+ },
+ "00837bfb": {
+  "text": "A good routine. Keep it.",
+  "heard": "a good routine. Keep it.",
+  "score": 1,
+  "kept": true
+ },
+ "5961026f": {
+  "text": "I gets? I goes? Only he and she get the -s, Newbie.",
+  "heard": "I gets, I goes, only he and she get the S newbie.",
+  "score": 1,
+  "kept": true
+ },
+ "632de23e": {
+  "text": "From tomorrow, you deliver letters. Every morning. Don't be late!",
+  "heard": "From tomorrow, you deliver letters.  Every morning, don't be late.",
+  "score": 1,
+  "kept": true
+ },
+ "edc2aa02": {
+  "text": "Three letters today. One for the bakery, one for the bank, and one for number forty-two, Fish Street.",
+  "heard": "3 letters today, one for the bakery, one for the bank, and one for number 42, Fish Street.",
+  "score": 0.92,
+  "kept": true
+ },
+ "f6a48595": {
+  "text": "Bram told me about the thief. Was he tall or short?",
+  "heard": "Bram told me about the thief, was he tall or short?",
+  "score": 1,
+  "kept": true
+ },
+ "9b536cf9": {
+  "text": "Tall, black cloak…",
+  "heard": "Tall, black cloak.",
+  "score": 1,
+  "kept": true
+ },
+ "6d4095c3": {
+  "text": "He were? Remember: he was.",
+  "heard": "He were. Remember he was.",
+  "score": 1,
+  "kept": true
+ },
+ "b2bb8192": {
+  "text": "And where were Ana and Bram?",
+  "heard": "and where were Anna and Bram?",
+  "score": 0.83,
+  "kept": true
+ },
+ "1103b87a": {
+  "text": "Good. Everybody's safe.",
+  "heard": "Good. Everybody safe.",
+  "score": 0.86,
+  "kept": true
+ },
+ "bf727507": {
+  "text": "They was? They were!",
+  "heard": "They was, they were.",
+  "score": 1,
+  "kept": true
+ },
+ "987d4512": {
+  "text": "Newbie… I know that bracelet now. It was your mother's. Your mother was the Queen's advisor.",
+  "heard": "Shnewbie, I know that bracelet now. It was your mother's. Your mother was the Queen's advisor.",
+  "score": 0.94,
+  "kept": true
+ },
+ "40ef1392": {
+  "text": "I'm sorry. Nobody knows.",
+  "heard": "I'm sorry, nobody knows.",
+  "score": 1,
+  "kept": true
+ },
+ "b91fc023": {
+  "text": "She was the best. Kind and very smart.",
+  "heard": "She was the best, kind and very smart.",
+  "score": 1,
+  "kept": true
+ },
+ "55e2a268": {
+  "text": "Your family was very important. And your sister… she wasn't on a ship by chance. She was looking for the Tower crystals.",
+  "heard": "Your family was very important, and your sister, she wasn't on a ship by chance, she was looking for the tower crystals.  //  //  //  //  //  //  //  //  //  //  //  //  //  //  //  //  //  //  //  //  //  //  //  //",
+  "score": 1,
+  "kept": true
+ },
+ "b0b3b715": {
+  "text": "Ari, your sister went to the capital. The Guild has a job there, a long trip. Are you ready?",
+  "heard": "Ari, your sister went to the Capitol. The guild has a job there, a long trip. Are you ready?",
+  "score": 0.95,
+  "kept": true
+ },
+ "455e8b94": {
+  "text": "That's what brave means, Ari.",
+  "heard": "That's what Brave means, Ari.",
+  "score": 1,
+  "kept": true
+ },
+ "c4a91c9a": {
+  "text": "Hey! You look lost. Need some help?",
+  "heard": "Hey, you look lost, need some help?",
+  "score": 1,
+  "kept": true
+ },
+ "b2c870ac": {
+  "text": "Easy! I know every street.",
+  "heard": "Easy, I know every street.",
+  "score": 1,
+  "kept": true
+ },
+ "741d7ee8": {
+  "text": "Bakery… where? Haha, ask me properly!",
+  "heard": "Bakery where haha ask me properly",
+  "score": 1,
+  "kept": true
+ },
+ "f89a8c24": {
+  "text": "I'm Pip. Go straight and turn left. The bakery is next to the bank.",
+  "heard": "I'm Pip, go straight and turn left.  The bakery is next to the bank.",
+  "score": 1,
+  "kept": true
+ },
+ "94c99950": {
+  "text": "So, which one is the bakery? Remember: it's next to the bank!",
+  "heard": "So, which one is the bakery?  Remember, it's next to the bang!",
+  "score": 0.92,
+  "kept": true
+ },
+ "bac8ceb0": {
+  "text": "The bakery is next to the bank!",
+  "heard": "The bakery is next to the bank.",
+  "score": 1,
+  "kept": true
+ },
+ "e4239bf5": {
+  "text": "That's the library!",
+  "heard": "That's the library.",
+  "score": 1,
+  "kept": true
+ },
+ "ff9ede9b": {
+  "text": "That's the bank. Next to it!",
+  "heard": "That's the bank, next to it.",
+  "score": 1,
+  "kept": true
+ },
+ "e3516aab": {
+  "text": "Nope, that's the school.",
+  "heard": "Nope, that's the school.",
+  "score": 1,
+  "kept": true
+ },
+ "8d9def0a": {
+  "text": "Now, Fish Street. What number?",
+  "heard": "Now, fish street, what number?",
+  "score": 1,
+  "kept": true
+ },
+ "9d5242ab": {
+  "text": "Look, here's Fish Street. Find number forty-two!",
+  "heard": "Look, here's Fish Street, find number 42.",
+  "score": 0.82,
+  "kept": true
+ },
+ "067395dd": {
+  "text": "That's twenty-four!",
+  "heard": "That's 24.",
+  "score": 0.57,
+  "kept": false
+ },
+ "dff5779c": {
+  "text": "That's fourteen.",
+  "heard": "That's 14.",
+  "score": 1,
+  "kept": true
+ },
+ "2110e044": {
+  "text": "That's just forty. Two more!",
+  "heard": "That's just 40. Two more.",
+  "score": 0.83,
+  "kept": true
+ },
+ "e828812c": {
+  "text": "Wait, nobody's home. But look, there's a note on the door: “Gone to the harbour.”",
+  "heard": "Wait, wait, nobody's home, but look, there's a note on the door gone to the harbor.",
+  "score": 0.91,
+  "kept": true
+ },
+ "0cf405b9": {
+  "text": "Is there a harbour near here? Yes, there is! Are there many ships? Yes, there are! Your turn. Are there any shops on Fish Street?",
+  "heard": "Is there a harbor near here?  Yes there is.  Are there many ships?  Yes there are.  Your turn.  Are there any shops on Fish Street?",
+  "score": 0.96,
+  "kept": true
+ },
+ "fea3a9d0": {
+  "text": "Right! A fish shop and a shoe shop.",
+  "heard": "Right, a fish shop and a shoe shop.",
+  "score": 1,
+  "kept": true
+ },
+ "0bce5367": {
+  "text": "There is two? Two is more than one, buddy!",
+  "heard": "Gee, there is two.  Two is more than one, buddy.",
+  "score": 0.95,
+  "kept": true
+ },
+ "2cc10ad4": {
+  "text": "It has? Who has? Haha. Try “there are”.",
+  "heard": "It has who has ha ha try there are",
+  "score": 0.82,
+  "kept": true
+ },
+ "6d69fc4d": {
+  "text": "To the harbour: go back to the well and turn right. Then go straight. Don't go left, it's a dead end!",
+  "heard": "To the harbor, go back to the well and turn right.  Then, go straight.  Don't go left.  It's a dead end.",
+  "score": 0.96,
+  "kept": true
+ },
+ "8a92b50d": {
+  "text": "You're a fast learner!",
+  "heard": "You're a fast learner.",
+  "score": 1,
+  "kept": true
+ },
+ "50b71287": {
+  "text": "Left? No! Left is the dead end. Listen again.",
+  "heard": "Left? No. Left is the dead end. Listen again.",
+  "score": 1,
+  "kept": true
+ },
+ "4a14d71b": {
+  "text": "Hey… can I have a coin? For the help?",
+  "heard": "Hey, can I have a coin for the help?",
+  "score": 1,
+  "kept": true
+ },
+ "bf17f52e": {
+  "text": "Yes! Thanks! Bye!",
+  "heard": "Yes, thanks, bye.",
+  "score": 1,
+  "kept": true
+ },
+ "5ba5e21f": {
+  "text": "Aw, okay. Bye then!",
+  "heard": "Okay, bye then",
+  "score": 0.86,
+  "kept": true
+ },
+ "1217533c": {
+  "text": "Newbie! Newbie! What's the weather like? Look at me! Haha!",
+  "heard": "Newbie, Newbie, what's the weather like? Look at me. Ha ha.",
+  "score": 0.87,
+  "kept": true
+ },
+ "0f8233ad": {
+  "text": "Yeah! And I'm all wet! Haha.",
+  "heard": "Yeah, and I'm all wet. Ha ha.",
+  "score": 0.8,
+  "kept": true
+ },
+ "e8c9227d": {
+  "text": "Is raining? What is? Haha.",
+  "heard": "Is raining? What is? Haha!",
+  "score": 1,
+  "kept": true
+ },
+ "46b1ff83": {
+  "text": "Listen! Marcus is looking for you. He's waiting at the old temple. Come on, I know the way!",
+  "heard": "Marcus is looking for you, he's waiting at the old temple. Come on. I know the way.",
+  "score": 0.97,
+  "kept": true
+ },
+ "3008c275": {
+  "text": "Welcome. I'm Ana. I look after the temple. What are you doing here?",
+  "heard": "Welcome. I'm Anna. I look after the temple. What are you doing here?",
+  "score": 0.93,
+  "kept": true
+ },
+ "ccc3bd46": {
+  "text": "Your sister… I see.",
+  "heard": "Your sister, I see.",
+  "score": 1,
+  "kept": true
+ },
+ "ea195070": {
+  "text": "Marcus says your bracelet is special. Look at these letters on the altar. Can you read them?",
+  "heard": "Marcus says your bracelet is special. Look at these letters on the altar. Can you read them?",
+  "score": 1,
+  "kept": true
+ },
+ "fd416bdb": {
+  "text": "You can read it? Nobody can read it!",
+  "heard": "You can read it, nobody can read it.",
+  "score": 1,
+  "kept": true
+ },
+ "ea19ff72": {
+  "text": "Look again. Your bracelet is glowing…",
+  "heard": "Look again, your bracelet is glowing.",
+  "score": 1,
+  "kept": true
+ },
+ "8d2aba26": {
+  "text": "Tell me about you, Newbie. Can you swim? Can you ride a horse?",
+  "heard": "Tell me about you, Newby. Can you swim? Can you ride a horse?",
+  "score": 0.92,
+  "kept": true
+ },
+ "1f4dd5d7": {
+  "text": "Swimming is useful in Shinar!",
+  "heard": "Swimming is useful in Shunar.",
+  "score": 0.8,
+  "kept": true
+ },
+ "d2fa3aa8": {
+  "text": "Can't swim? Stay away from the harbour, then!",
+  "heard": "Can't swim? Stay away from the harbor then.",
+  "score": 0.89,
+  "kept": true
+ },
+ "50cb0055": {
+  "text": "Do you trust Marcus? Do you like him?",
+  "heard": "Do you trust Marcus? Do you like him?",
+  "score": 1,
+  "kept": true
+ },
+ "61e5a0d1": {
+  "text": "Good. He's a good man.",
+  "heard": "Good, he's a good man.",
+  "score": 1,
+  "kept": true
+ },
+ "b757b838": {
+  "text": "Like he? Like… him?",
+  "heard": "Like he? Like him?",
+  "score": 1,
+  "kept": true
+ },
+ "e7018b07": {
+  "text": "Stop! Don't touch the crystal!",
+  "heard": "Stop! Don't touch the crystal!",
+  "score": 1,
+  "kept": true
+ },
+ "01866f40": {
+  "text": "Don't worry. We can find him. Come to the Fox tomorrow. Marcus wants to talk to you.",
+  "heard": "Don't worry, we can find him come to the Fox tomorrow.  Marcus wants to talk to you.",
+  "score": 1,
+  "kept": true
+ },
+ "8a52a659": {
+  "text": "Good night. Be careful.",
+  "heard": "Good night. Be careful.",
+  "score": 1,
+  "kept": true
+ },
+ "cf595486": {
+  "text": "I speak English",
+  "heard": "by Speak English.",
+  "score": 0.67,
+  "kept": false
+ },
+ "8fc31a6b": {
+  "text": "Cool. That's three fifty.",
+  "heard": "Cool, that's 350.",
+  "score": 0.91,
+  "kept": true
+ },
+ "7d2c68f4": {
+  "text": "“Me go”? Haha, okay, caveman.",
+  "heard": "Migo? Haha, okay caveman.",
+  "score": 0.67,
+  "kept": false
+ },
+ "b19dd9c0": {
+  "text": "You'd better! Haha.",
+  "heard": "You'd better.  Ha ha.",
+  "score": 0.67,
+  "kept": false
+ },
+ "458271b8": {
+  "text": "Got it. Is there wifi?",
+  "heard": "Got it. Is there Wi-Fi?",
+  "score": 0.73,
+  "kept": false
+ },
+ "e23b4530": {
+  "text": "I no know.",
+  "heard": "I know no.",
+  "score": 1.0,
+  "kept": true
+ },
+ "fd10b40e": {
+  "text": "Me too meet.",
+  "heard": "Me too, me.",
+  "score": 0.67,
+  "kept": false
+ },
+ "06cd3c91": {
+  "text": "Me see Marcus.",
+  "heard": "May see Marcus.",
+  "score": 0.67,
+  "kept": false
+ },
+ "c67d9baf": {
+  "text": "Yes, I start at eight.",
+  "heard": "Yes, I started eight.",
+  "score": 0.67,
+  "kept": false
+ },
+ "728311ee": {
+  "text": "No, I can to read.",
+  "heard": "No, I can't to read.",
+  "score": 0.73,
+  "kept": false
+ },
+ "f38aee5e": {
+  "text": "Yes, I were.",
+  "heard": "Yes, I work.",
+  "score": 0.67,
+  "kept": false
+ },
+ "41c68a45": {
+  "text": "Checkout's at eleven.",
+  "heard": "Checkouts at 11.",
+  "score": 0.57,
+  "kept": false
+ },
+ "deee57a9": {
+  "text": "Sure! Try these. Size forty-two.",
+  "heard": "Sure, try these, size 42.",
+  "score": 1.0,
+  "kept": true
+ },
+ "27c2a989": {
+  "text": "My daughter's got red hair!",
+  "heard": "My daughters got red hair.",
+  "score": 0.73,
+  "kept": false
+ },
+ "f2cab4c5": {
+  "text": "Okay, your total is twelve forty.",
+  "heard": "Okay, your total is 1240.",
+  "score": 0.73,
+  "kept": false
+ },
+ "55276068": {
+  "text": "Short, grey hair…",
+  "heard": "Short gray hair.",
+  "score": 0.67,
+  "kept": false
+ },
+ "b0ed6aea": {
+  "text": "Forty-two! I know that house.",
+  "heard": "42.  I know that house.",
+  "score": 1.0,
+  "kept": true
+ },
+ "d531db84": {
+  "text": "Twenty-four? Check your letter again!",
+  "heard": "24. Check your letter again.",
+  "score": 1.0,
+  "kept": true
+ },
+ "064f56b4": {
+  "text": "Number forty-two, please!",
+  "heard": "Number 42, please.",
+  "score": 1.0,
+  "kept": true
+ },
+ "c8c2960e": {
+  "text": "Can to read? Just “can read”.",
+  "heard": "Can't read. Just can read.",
+  "score": 0.67,
+  "kept": false
+ },
+ "5a59057c": {
+  "text": "Can to swim? Hmm, no “to”.",
+  "heard": "Can to swim? No toe.",
+  "score": 0.73,
+  "kept": false
+ }
+}

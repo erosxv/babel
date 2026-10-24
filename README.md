@@ -70,7 +70,7 @@ Um caderno de anotações para cada idioma, com folhas pautadas. Quando uma folh
 
 O jogo ouve sua voz com o reconhecimento de fala do próprio navegador. Funciona no Chrome e no Edge (no celular, no Chrome do Android e no Safari do iPhone). Na primeira vez, o navegador pede permissão para usar o microfone. Nos navegadores sem esse recurso, como o Firefox, a fala vira autoavaliação: você ouve, repete e diz se ficou parecido.
 
-Em inglês, todas as palavras e falas (lições, sons, conversas e história) foram gravadas por uma voz de IA com sotaque americano nativo, o Kokoro. Cada personagem da história tem a sua voz, e as suas próprias falas têm uma voz masculina diferente. Os áudios ficam na pasta `audio/` e, depois de ouvidos uma vez, funcionam até sem internet. Nos outros idiomas, e em qualquer frase sem áudio gravado, a leitura é feita pela voz do navegador: o jogo escolhe sozinho a voz mais natural que encontrar, e no Perfil dá para trocar a voz de cada idioma.
+Em inglês, todas as palavras e falas (lições, sons, conversas e história) foram gravadas por vozes de IA com sotaque americano nativo e entonação natural (Chatterbox, com o Kokoro para as palavras soltas). Cada personagem da história tem a sua voz, e as suas próprias falas têm uma voz masculina diferente. Os áudios ficam na pasta `audio/` e, depois de ouvidos uma vez, funcionam até sem internet. Nos outros idiomas, e em qualquer frase sem áudio gravado, a leitura é feita pela voz do navegador: o jogo escolhe sozinho a voz mais natural que encontrar, e no Perfil dá para trocar a voz de cada idioma.
 
 ## Por que Xibolete
 

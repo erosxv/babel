@@ -15,7 +15,7 @@ Todo o conteúdo do app fica em arquivos de texto separados do código. Para mud
 | `hd2d-worker.js` | Desenha os cenários em segundo plano (não precisa mexer) |
 | `index.html` | O app em si (telas, regras do jogo). Normalmente não precisa mexer |
 | `audio/` | As vozes gravadas: um arquivo .mp3 por fala, por idioma. Não edite à mão: veja “Gerar as vozes” |
-| `tools/` | Os programas que geram as vozes (`frases-en.js` e `gerar-audio.py`) |
+| `tools/` | Os programas que geram as vozes (`frases-en.js`, `gerar-audio.py` e `gerar-audio-chatterbox.py`) e as vozes de referência de cada personagem (`tools/vozes/`) |
 | `manifest.webmanifest`, `sw.js`, `icons/` | O que faz o site virar app instalável |
 
 ## Editar pelo navegador (sem programa nenhum)
@@ -64,11 +64,13 @@ Cuidado com aspas e vírgulas: cada frase fica entre aspas `"…"`, e os itens d
 
 ## Gerar as vozes
 
-As falas em inglês são lidas por uma voz de IA gravada (Kokoro), que roda de graça no computador. Quando você muda ou acrescenta uma frase em inglês, ela é lida pela voz do navegador até que o áudio dela seja gerado. Para gerar, no computador:
+As falas em inglês são lidas por vozes de IA gravadas, que rodam de graça no computador: primeiro o Kokoro grava todas, e depois o Chatterbox, que tem entonação e emoção, grava de novo por cima com a mesma voz de cada personagem. Uma outra IA (Whisper) ouve cada áudio do Chatterbox: se a frase não saiu certa, ele tenta de novo, e depois de 3 tentativas fica a versão do Kokoro (isso acontece mais com palavras soltas, como “yes”). O resultado de cada frase fica em `tools/relatorio-chatterbox-en.json`. Quando você muda ou acrescenta uma frase em inglês, ela é lida pela voz do navegador até que o áudio dela seja gerado. Para gerar, no computador:
 
 1. Uma vez só: instale o Python e o ffmpeg, rode `pip install kokoro-onnx soundfile` e baixe os arquivos `kokoro-v1.0.onnx` e `voices-v1.0.bin` (em github.com/thewh1teagle/kokoro-onnx, na versão “model-files-v1.0”) para uma pasta chamada `xibolete-voz` dentro de `%LOCALAPPDATA%`.
 2. Na pasta do projeto, rode `node tools/frases-en.js` (lista as frases) e depois `python -X utf8 tools/gerar-audio.py en` (grava só as frases que ainda não têm áudio).
-3. Publique a pasta `audio/` junto com o resto.
+3. Para a voz com emoção (precisa de placa de vídeo NVIDIA): siga a instalação descrita no topo de `tools/gerar-audio-chatterbox.py` e rode `%LOCALAPPDATA%/xibolete-voz/cb/Scripts/python.exe -X utf8 tools/gerar-audio-chatterbox.py en`. Ele só regrava as frases novas.
+4. Se regravou frases que já existiam, mude o nome `AUDIO_CACHE` em `sw.js` (por exemplo de `xibolete-audio-2` para `xibolete-audio-3`), para que todos baixem os áudios novos.
+5. Publique a pasta `audio/` junto com o resto.
 
 A voz de cada personagem fica no começo de `tools/frases-en.js` (por exemplo `rosie: "af_sarah"`). Para trocar a voz de alguém, mude ali, apague os áudios das falas dele e gere de novo.
 
