@@ -637,6 +637,7 @@ textarea.lines::placeholder{color:#a3acbb}
 <script src="arte.js"></script>
 <script src="hd2d.js"></script>
 <script src="historia.js"></script>
+<script src="historia-ru.js"></script>
 <script>
 (() => {
 "use strict";
@@ -1973,13 +1974,21 @@ function viewTalk() {
 // spoken; a clear answer makes the bracelet glow. Mistakes have consequences inside the story.
 const STORY = window.XIB_STORY || {};
 const storyOf = lang => STORY[lang];
+// the story plays in the language being learned when it exists there, otherwise in English
+const storyLang = () => STORY[S.lang] ? S.lang : "en";
+const learnName = l => (LANGS[l] || LANGS.en).learning;
+// each language keeps its own backpack: the items carry that language's words
+const bagOf = l => l === "en" ? (S.bag ||= []) : ((S.bags ||= {})[l] ||= []);
+// "1 coin / 2 coins", and in Russian "1 монета / 2 монеты / 5 монет"
+const plural = (l, n, forms) => { const c = new Intl.PluralRules(LANGS[l] ? LANGS[l].voice : l).select(n); return forms[c === "one" ? 0 : c === "few" && forms.length > 2 ? 1 : forms.length - 1]; };
+const numWord = n => SY.st.pay.num[n] ?? String(n);
+const payText = (key, n, p = 0) => SY.st.pay[key].replace("{n}", numWord(n)).replace("{p}", numWord(p)).replace("{coins}", plural(SY.l, n, SY.st.pay.coins));
 const STORY_SPEAK = 60;
-const NUMW = "zero one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen twenty".split(" ");
 let SY = null;
 function startStory(id) {
-  const st = storyOf("en"), ch = st && st.chapters.find(c => c.id === id); if (!ch) return;
+  const l = storyLang(), st = storyOf(l), ch = st && st.chapters.find(c => c.id === id); if (!ch) return;
   closeModal();
-  SY = { st, ch, i: 0, purse: ch.purse, flags: new Set(), mistakes: 0, shards: 0, xp: 0, who: null, scene: "room", label: "", t0: Date.now(),
+  SY = { l, st, ch, i: 0, purse: ch.purse, flags: new Set(), mistakes: 0, shards: 0, xp: 0, who: null, scene: "room", label: "", t0: Date.now(),
     pick: null, wrongs: new Set(), seen: new Set(), found: false, miss: null, hand: 0, payFb: null, listening: false, err: "", heard: "", trOn: false, scores: [], drill: null, drilled: false };
   document.body.classList.add("locked"); $("#lesson").hidden = false;
   if (HD) HD.prefetch([...new Set(["room", ...ch.nodes.filter(n => n.scene).map(n => n.scene)])]);
@@ -1988,8 +1997,8 @@ function startStory(id) {
 const syNode = () => SY.ch.nodes[SY.i];
 const syJump = id => SY.ch.nodes.findIndex(n => n.id === id);
 function bagAdd(item) {
-  const it = SY.st.items[item]; if (!it) return;
-  S.bag ||= []; if (!S.bag.includes(item)) S.bag.push(item);
+  const it = SY.st.items[item], bag = bagOf(SY.l); if (!it) return;
+  if (!bag.includes(item)) bag.push(item);
   toast(`${it.ic} Na mochila: <b>${esc(it.w)}</b> · ${esc(it.pt)}`, "bag"); save();
 }
 function syCoins(n) { SY.purse = Math.max(0, SY.purse + n); if (n < 0 && S.sound) tone(220, 0, .2, "triangle", .08); }
@@ -2012,8 +2021,8 @@ function syAdvance(to) {
   if (n.say) SY.who = n.say;
   renderStory();
   const line = n.say ? n.t : n.find ? n.line : n.memory ? n.memory[0] : null;
-  if (line) setTimeout(() => SY && syNode() === n && speak(line, "en"), 300);
-  if (n.pay) setTimeout(() => SY && syNode() === n && speak(`That's ${NUMW[n.pay]} coins.`, "en"), 300);
+  if (line) setTimeout(() => SY && syNode() === n && speak(line, SY.l), 300);
+  if (n.pay) setTimeout(() => SY && syNode() === n && speak(payText("line", n.pay), SY.l), 300);
 }
 function syNext() {
   const n = syNode();
@@ -2041,7 +2050,7 @@ function syChoose(o, score, res) {
     if (S.sound) tone(300, 0, .2, "triangle", .08);
   }
   save(); renderStory();
-  if (o.react) setTimeout(() => SY && SY.pick === o && speak(o.react, "en"), 250);
+  if (o.react) setTimeout(() => SY && SY.pick === o && speak(o.react, SY.l), 250);
 }
 function syHeard(res) {
   const n = syNode(); if (!SY || !n.choice || SY.pick) return;
@@ -2053,7 +2062,7 @@ function syHeard(res) {
   }
   let best = null, bestR = null;
   for (const o of n.choice) {
-    const r = scoreSpeech([o.t, ...(o.alt || [])].join("|"), res, "en");
+    const r = scoreSpeech([o.t, ...(o.alt || [])].join("|"), res, SY.l);
     if (!bestR || r.score > bestR.score) { best = o; bestR = r; }
   }
   if (bestR.score < STORY_SPEAK) { SY.err = ""; SY.heard = bestR.heard || res[0] || ""; renderStory(); return; }
@@ -2107,22 +2116,22 @@ const objIc = o => o.sw ? `<span class="oi"><i class="sw" style="background:${o.
 function syLine(who, t, pt, cls = "") {
   const c = SY.st.cast[who] || { name: "", color: "var(--lang)" };
   return `<div class="vn-line ${cls}" style="--ac:${c.color}"><div class="vn-name">${syFace(who)}${esc(c.name)}</div><p class="vn-en">${esc(t)}</p>
-    <div class="bub-acts"><button class="say" data-act="say" data-t="${esc(t)}" data-l="en" aria-label="Ouvir">${I("speaker")}</button><button class="say" data-act="saySlow" data-t="${esc(t)}" aria-label="Ouvir devagar">${I("slow")}</button>
+    <div class="bub-acts"><button class="say" data-act="say" data-t="${esc(t)}" data-l="${SY.l}" aria-label="Ouvir">${I("speaker")}</button><button class="say" data-act="saySlow" data-t="${esc(t)}" aria-label="Ouvir devagar">${I("slow")}</button>
     ${pt ? `<button class="linkish" data-act="syTr">${SY.trOn ? esc(pt) : "Traduzir"}</button>` : ""}</div></div>`;
 }
 // ---- end-of-chapter speaking drill: every everyday phrase of the chapter, said aloud and graded ----
-function startDrill() { SY.drill = { i: 0, res: null }; SY.err = ""; SY.listening = false; renderStory(); setTimeout(() => SY && SY.drill && speak(SY.ch.phrases[0][0], "en"), 300); }
+function startDrill() { SY.drill = { i: 0, res: null }; SY.err = ""; SY.listening = false; renderStory(); setTimeout(() => SY && SY.drill && speak(SY.ch.phrases[0][0], SY.l), 300); }
 function drillNext() {
   stopListening(); const d = SY.drill;
   if (d.i + 1 >= SY.ch.phrases.length) { SY.drill = null; SY.drilled = true; finishStory(); return; }
-  d.i++; d.res = null; SY.err = ""; SY.listening = false; renderStory(); setTimeout(() => SY && SY.drill && speak(SY.ch.phrases[d.i][0], "en"), 250);
+  d.i++; d.res = null; SY.err = ""; SY.listening = false; renderStory(); setTimeout(() => SY && SY.drill && speak(SY.ch.phrases[d.i][0], SY.l), 250);
 }
 function renderDrill() {
   const d = SY.drill, [en, pt] = SY.ch.phrases[d.i], N = SY.ch.phrases.length, self = !canListen();
   $("#lesson").innerHTML = `<div class="l-top"><button class="x" data-act="syQuit" aria-label="Sair da história">${I("x")}</button><div class="bar"><i style="width:${d.i / N * 100}%"></i></div><span class="l-hearts inf">${I("mic")}</span></div>
     <div class="l-body"><div class="l-in"><span class="l-tag">${I("mic")}Treino de fala do capítulo · ${d.i + 1} de ${N}</span>
       <h2 class="l-q">Diga a frase do dia a dia em voz alta</h2>
-      <div class="prompt"><div class="sent">${esc(en)}</div>${speakBtn(en, "en")}</div>
+      <div class="prompt"><div class="sent">${esc(en)}</div>${speakBtn(en, SY.l)}</div>
       <p class="muted" style="margin:-8px 0 0;font-weight:700">${esc(pt)}</p>
       ${SY.err ? `<div class="mic-err">${esc(SY.err)}</div>` : ""}
       ${self ? `<div class="tipbox">Ouça, repita em voz alta duas vezes e tente imitar o ritmo.</div>` : `<div class="mic-wrap"><button class="mic ${SY.listening ? "on" : ""}" data-act="syDrillMic" aria-label="Falar">${I("mic")}</button><span class="mic-label">${SY.listening ? "Ouvindo…" : d.res ? (d.res.score >= PASS ? "Muito bem! Toque para tentar de novo" : "Toque e tente de novo") : "Toque e fale"}</span>${d.res ? resultHtml(d.res) : ""}</div>`}
@@ -2139,7 +2148,7 @@ function renderStory() {
   else if (n.lesson) { box = `<div class="thought lesson"><b>Aprenda</b> ${esc(n.lesson)}</div>`; foot = cont(); }
   else if (n.say) { box = syLine(n.say, n.t, n.pt); foot = cont(); }
   else if (n.memory) {
-    box = `<div class="memory"><div class="mem-glow">${I("zig")}</div><span class="l-tag">Uma memória voltou</span><b class="mem-word">${esc(n.memory[0])}</b><span class="muted">${esc(n.memory[1])}</span>${speakBtn(n.memory[0], "en")}</div>`;
+    box = `<div class="memory"><div class="mem-glow">${I("zig")}</div><span class="l-tag">Uma memória voltou</span><b class="mem-word">${esc(n.memory[0])}</b><span class="muted">${esc(n.memory[1])}</span>${speakBtn(n.memory[0], SY.l)}</div>`;
     foot = cont();
   } else if (n.choice) {
     const prev = SY.ch.nodes.slice(0, SY.i).reverse().find(x => x.say && !(x.when && !SY.flags.has(x.when)) && !(x.unless && SY.flags.has(x.unless)));
@@ -2164,7 +2173,7 @@ function renderStory() {
   } else if (n.explore) {
     const all = n.explore.length, seen = SY.seen.size, last = SY.lastObj != null ? n.explore[SY.lastObj] : null;
     box = `<p class="vn-q">Toque nos objetos (${seen} de ${all})</p><div class="objs">${n.explore.map((o, k) => `<button class="obj ${SY.seen.has(k) ? "seen" : ""}" data-act="syObj" data-i="${k}">${objIc(o)}<span>${SY.seen.has(k) ? esc(o.w) : "?"}</span></button>`).join("")}</div>
-      ${last ? `<div class="obj-card"><b>${esc(last.w)}</b> <span class="muted">· ${esc(last.pt)}</span>${speakBtn(last.w, "en")}${last.ex ? `<p>${esc(last.ex)} <span class="muted">${esc(last.exPt)}</span></p>` : last.take ? `<p class="muted">Foi para a sua mochila.</p>` : ""}</div>` : ""}`;
+      ${last ? `<div class="obj-card"><b>${esc(last.w)}</b> <span class="muted">· ${esc(last.pt)}</span>${speakBtn(last.w, SY.l)}${last.ex ? `<p>${esc(last.ex)} <span class="muted">${esc(last.exPt)}</span></p>` : last.take ? `<p class="muted">Foi para a sua mochila.</p>` : ""}</div>` : ""}`;
     foot = seen >= all ? cont() : `<p class="muted" style="font-weight:700;margin:0">Toque em todos para continuar.</p>`;
   } else if (n.find) {
     box = syLine(SY.who || "rosie", n.line, n.pt) + `<div class="objs">${n.objs.map((o, k) => `<button class="obj ${SY.miss === k ? "wrong" : ""} ${SY.found && o.w === n.find ? "seen" : ""}" data-act="syFind" data-i="${k}" ${SY.found ? "disabled" : ""}>${objIc(o)}<span>${esc(o.w)}</span></button>`).join("")}</div>
@@ -2172,14 +2181,14 @@ function renderStory() {
     foot = SY.found ? cont("Continuar", "ok") : "";
   } else if (n.pay) {
     const fb = SY.payFb;
-    box = syLine(SY.who || "rosie", `That's ${NUMW[n.pay]} coins.`, "") +
+    box = syLine(SY.who || "rosie", payText("line", n.pay), "") +
       `<p class="vn-q">Toque nas moedas para colocar no balcão</p>
       <div class="purse">${Array.from({ length: SY.purse }, (_, k) => `<button class="coin ${k < SY.hand ? "on" : ""}" data-act="syCoin" data-i="${k}" aria-label="Moeda ${k + 1}" ${fb && fb.ok ? "disabled" : ""}>${I("gem")}</button>`).join("")}</div>
       <p class="hand">No balcão: <b>${SY.hand}</b></p>
       ${fb ? (fb.react ? syLine(SY.who || "rosie", fb.react, "", fb.ok ? "" : "upset") : "") + (fb.tip ? `<div class="thought"><b>Dica</b> ${esc(fb.tip)}</div>` : "") : ""}`;
     foot = fb && (fb.ok || fb.over) ? cont("Continuar", fb.ok ? "ok" : "") : `<button class="btn" data-act="syPay" ${SY.hand ? "" : "disabled"}>Pagar ${SY.hand}</button>`;
   }
-  const bagN = (S.bag || []).length;
+  const bagN = bagOf(SY.l).length;
   $("#lesson").innerHTML = `<div class="l-top"><button class="x" data-act="syQuit" aria-label="Sair da história">${I("x")}</button><div class="bar"><i style="width:${SY.i / N * 100}%"></i></div>
       <span class="purse-n" title="Moedas na história">${I("gem")}${SY.purse}</span><button class="bag-btn" data-act="syBag" aria-label="Mochila">${I("bag")}<b>${bagN}</b></button></div>
     <div class="l-body"><div class="l-in vn">
@@ -2197,7 +2206,7 @@ function finishStory() {
   S.coins += coins;
   S.story[ch.id] = { stars: Math.max(prev ? prev.stars : 0, stars), times: (prev ? prev.times : 0) + 1, best: Math.max(prev ? prev.best || 0 : 0, coins) };
   S.stats.story = (S.stats.story || 0) + 1; d.lessons++;
-  S.stats.langs.en = (S.stats.langs.en || 0) + 1;
+  S.stats.langs[SY.l] = (S.stats.langs[SY.l] || 0) + 1;
   const streakUp = bumpStreak(), quests = claimQuests(), lvAfter = lvl(S.xp).L;
   if (lvAfter > lvBefore) S.coins += 25 * (lvAfter - lvBefore);
   const achs = checkAch();
@@ -2216,14 +2225,14 @@ function renderStoryEnd() {
   for (const a of e.achs) rewards.push(`<div class="rw" style="color:var(--gold-dark)">${I("medal")}<div>Conquista: ${esc(a.name)}<small>${esc(a.desc)} · +${ACH_REWARD} moedas</small></div></div>`);
   $("#lesson").innerHTML = `<div class="l-body"><div class="end">
     <div class="stars">${[1, 2, 3].map(i => `<span class="${i <= e.stars ? "on" : ""}">${I("star")}</span>`).join("")}</div>
-    <h1>Capítulo ${ch.n} concluído!</h1><p class="sub">${esc(ch.t)} · ${SY.mistakes ? `${SY.mistakes} ${SY.mistakes === 1 ? "tropeço" : "tropeços"} no inglês. Jogue de novo para tentar as 3 estrelas.` : "Sem nenhum erro de inglês. Impecável!"}</p>
+    <h1>Capítulo ${ch.n} concluído!</h1><p class="sub">${esc(ch.t)} · ${SY.mistakes ? `${SY.mistakes} ${SY.mistakes === 1 ? "tropeço" : "tropeços"} no ${learnName(SY.l)}. Jogue de novo para tentar as 3 estrelas.` : `Sem nenhum erro de ${learnName(SY.l)}. Impecável!`}</p>
     <div class="end-stats">
       <div class="es" style="--c:var(--xp)"><span>XP ganho</span><b>${I("bolt")}${e.xpGot}</b></div>
       <div class="es" style="--c:var(--ok)"><span>Pronúncia</span><b>${I("mic")}${e.avg == null ? "–" : e.avg + "%"}</b></div>
       <div class="es" style="--c:var(--lang)"><span>Brilhos</span><b>${I("zig")}${SY.shards}</b></div>
       <div class="es" style="--c:var(--coin)"><span>Tempo</span><b>${Math.floor(secs / 60)}:${pad(secs % 60)}</b></div>
     </div>
-    <div class="card phrases"><h3>Frases do capítulo</h3>${ch.phrases.map(([en, pt]) => `<div class="ph-row"><button class="say" data-act="say" data-t="${esc(en)}" data-l="en" aria-label="Ouvir">${I("speaker")}</button><div><b>${esc(en)}</b><small>${esc(pt)}</small></div></div>`).join("")}
+    <div class="card phrases"><h3>Frases do capítulo</h3>${ch.phrases.map(([en, pt]) => `<div class="ph-row"><button class="say" data-act="say" data-t="${esc(en)}" data-l="${SY.l}" aria-label="Ouvir">${I("speaker")}</button><div><b>${esc(en)}</b><small>${esc(pt)}</small></div></div>`).join("")}
       <button class="btn small ghost" data-act="syNotes">${I("pen")}Anotar no caderno</button></div>
     <div class="rewards">${rewards.join("")}</div>
   </div></div><div class="l-foot"><div class="l-foot-in"><button class="btn ghost" data-act="syAgain">Jogar de novo</button><button class="btn" data-act="syClose">Concluir</button></div></div>`;
@@ -2241,19 +2250,19 @@ function noteAppend(lang, text) {
   return saveNotes();
 }
 function bagModal() {
-  const st = storyOf("en"), bag = S.bag || [];
+  const l = storyLang(), st = storyOf(l), bag = bagOf(l);
   modal(`<h2>${I("bag")} Mochila</h2>${bag.length ? `<div class="bag-list">${bag.map(k => { const it = st.items[k]; return it ? `<div class="bag-item"><span class="oi">${it.ic}</span><div class="grow"><b>${esc(it.w)}</b> <span class="muted">· ${esc(it.pt)}</span><p>${esc(it.ex)}<br><span class="muted">${esc(it.exPt)}</span></p></div>
-    <div class="bag-acts"><button class="say" data-act="say" data-t="${esc(it.w)}" data-l="en" aria-label="Ouvir">${I("speaker")}</button><button class="say" data-act="bagNote" data-k="${k}" aria-label="Anotar no caderno">${I("pen")}</button></div></div>` : ""; }).join("")}</div>`
-    : `<p class="muted" style="font-weight:700">Vazia por enquanto. Os itens que você pegar na história aparecem aqui, cada um com a palavra em inglês.</p>`}
+    <div class="bag-acts"><button class="say" data-act="say" data-t="${esc(it.w)}" data-l="${l}" aria-label="Ouvir">${I("speaker")}</button><button class="say" data-act="bagNote" data-k="${k}" aria-label="Anotar no caderno">${I("pen")}</button></div></div>` : ""; }).join("")}</div>`
+    : `<p class="muted" style="font-weight:700">Vazia por enquanto. Os itens que você pegar na história aparecem aqui, cada um com a palavra em ${learnName(l)}.</p>`}
     <div class="acts"><button class="btn" data-act="closeModal">Fechar</button></div>`);
 }
 function viewStory() {
-  const st = storyOf("en"), head = `<div class="page-head"><h1>História</h1><p>Um RPG em capítulos. Você conversa com os personagens, escolhe o que dizer e a história muda conforme o seu inglês.</p></div>`;
+  const l = storyLang(), st = storyOf(l), head = `<div class="page-head"><h1>História</h1><p>Um RPG em capítulos. Você conversa com os personagens, escolhe o que dizer e a história muda conforme o seu ${learnName(l)}.</p></div>`;
   if (!st) return head;
-  const enNote = S.lang !== "en" ? `<div class="tipbox">Por enquanto a história existe só em inglês. Os outros idiomas vêm depois. Seu idioma atual continua igual nas outras abas.</div>` : "";
-  const bag = (S.bag || []).length;
+  const has = Object.keys(STORY).map(learnName), enNote = l !== S.lang ? `<div class="tipbox">Por enquanto a história existe em ${has.length > 1 ? has.slice(0, -1).join(", ") + " e " + has[has.length - 1] : has[0]}. Por isso ela aparece em ${learnName(l)}. Seu idioma atual continua igual nas outras abas.</div>` : "";
+  const bag = bagOf(l).length;
   return head + `<div class="stack">${enNote}
-    <button class="card bag-card" data-act="syBag"><span class="talk-ic">${I("bag")}</span><span class="grow"><b>Mochila</b><small>${bag ? `${bag} ${bag === 1 ? "item" : "itens"} com o nome em inglês` : "Os itens que você pegar aparecem aqui"}</small></span>${I("right")}</button>
+    <button class="card bag-card" data-act="syBag"><span class="talk-ic">${I("bag")}</span><span class="grow"><b>Mochila</b><small>${bag ? `${bag} ${bag === 1 ? "item" : "itens"} com o nome em ${learnName(l)}` : "Os itens que você pegar aparecem aqui"}</small></span>${I("right")}</button>
     ${st.arcs.map((a, ai) => {
       const chs = st.chapters.filter(c => c.arc === ai);
       const body = chs.length ? chs.map(c => { const r = (S.story || {})[c.id], k = st.chapters.indexOf(c), lock = k > 0 && !(S.story || {})[st.chapters[k - 1].id];
@@ -2481,40 +2490,40 @@ const A = {
   syStart: d => startStory(d.id),
   syNext: () => syNext(),
   syTr: () => { SY.trOn = !SY.trOn; renderStory(); },
-  syOpt: d => { const n = syNode(), o = n.choice[+d.i]; speak(o.t, "en"); syChoose(o); },
+  syOpt: d => { const n = syNode(), o = n.choice[+d.i]; speak(o.t, SY.l); syChoose(o); },
   syMic: () => {
     if (!SY || SY.pick || !canListen()) return;
     if (SY.listening) { if (rec) try { rec.stop(); } catch {} return; }
     SY.listening = true; SY.err = ""; SY.heard = ""; renderStory();
-    listen("en", res => SY && syHeard(res));
+    listen(SY.l, res => SY && syHeard(res));
   },
   syObj: d => {
     const n = syNode(), k = +d.i, o = n.explore[k];
     if (!SY.seen.has(k)) { SY.seen.add(k); SY.xp += 2; if (o.take) bagAdd(o.take); }
-    SY.lastObj = k; speak(o.w, "en"); renderStory();
+    SY.lastObj = k; speak(o.w, SY.l); renderStory();
   },
   syFind: d => {
     const n = syNode(), o = n.objs[+d.i];
     if (o.w === n.find) { SY.found = true; SY.xp += 5; sfx("ok"); renderStory(); return; }
-    SY.miss = +d.i; if (S.sound) tone(300, 0, .15, "triangle", .07); renderStory(); speak(n.line, "en");
+    SY.miss = +d.i; if (S.sound) tone(300, 0, .15, "triangle", .07); renderStory(); speak(n.line, SY.l);
   },
   syCoin: d => { const k = +d.i; SY.hand = k < SY.hand ? k : k + 1; SY.payFb = null; if (S.sound) tone(880, 0, .06, "sine", .06); renderStory(); },
   syPay: () => {
-    const n = syNode(), h = SY.hand, words = NUMW;
-    if (h === n.pay) { syCoins(-h); SY.hand = 0; SY.xp += 10; sfx("ok"); SY.payFb = { ok: true, react: "Perfect, thanks!" }; }
-    else if (h > n.pay) { syCoins(-h); SY.hand = 0; SY.mistakes++; SY.payFb = { over: true, react: `Oh, ${words[h]} coins? Thanks for the tip!`, tip: `Você deu ${h} moedas (${words[h]}), mas eram só ${n.pay} (${words[n.pay]}). A Rosie ficou com o troco. ${SY.st.tips.numbers}` }; }
-    else { SY.hand = 0; SY.mistakes++; SY.payFb = { react: `Hmm, that's only ${words[h]}. I said ${words[n.pay]}.`, tip: `Ela pediu ${words[n.pay]} = ${n.pay}. ${SY.st.tips.numbers}` }; }
-    renderStory(); speak(SY.payFb.react, "en");
+    const n = syNode(), h = SY.hand, who = (SY.st.cast[SY.who] || { name: "Quem cobrou" }).name;
+    if (h === n.pay) { syCoins(-h); SY.hand = 0; SY.xp += 10; sfx("ok"); SY.payFb = { ok: true, react: SY.st.pay.ok }; }
+    else if (h > n.pay) { syCoins(-h); SY.hand = 0; SY.mistakes++; SY.payFb = { over: true, react: payText("over", h), tip: `Você deu ${h} moedas (${numWord(h)}), mas eram só ${n.pay} (${numWord(n.pay)}). ${who} ficou com o troco. ${SY.st.tips.numbers}` }; }
+    else { SY.hand = 0; SY.mistakes++; SY.payFb = { react: payText("short", h, n.pay), tip: `O preço era ${numWord(n.pay)} = ${n.pay}. ${SY.st.tips.numbers}` }; }
+    renderStory(); speak(SY.payFb.react, SY.l);
   },
   syBag: () => bagModal(),
   syBack: () => {
     if (!SY || !SY.pick || !canListen()) return;
     if (SY.listening) { if (rec) try { rec.stop(); } catch {} return; }
     const o = SY.pick; SY.listening = true; SY.err = ""; renderStory();
-    listen("en", res => {
+    listen(SY.l, res => {
       if (!SY || SY.pick !== o) return; SY.listening = false;
       if (res.error) { SY.err = res.error === "no-speech" || res.error === "aborted" ? "Não ouvi nada. Toque no microfone e fale." : micErrorText(res.error); renderStory(); return; }
-      const r = scoreSpeech([o.t, ...(o.alt || [])].join("|"), res, "en"), first = !SY.back;
+      const r = scoreSpeech([o.t, ...(o.alt || [])].join("|"), res, SY.l), first = !SY.back;
       SY.back = r; syScore(r.score); if (first && r.score >= PASS) SY.xp += 5; save(); renderStory();
     });
   },
@@ -2522,15 +2531,15 @@ const A = {
     if (!SY || !SY.drill || !canListen()) return;
     if (SY.listening) { if (rec) try { rec.stop(); } catch {} return; }
     const d = SY.drill, en = SY.ch.phrases[d.i][0]; SY.listening = true; SY.err = ""; renderStory();
-    listen("en", res => {
+    listen(SY.l, res => {
       if (!SY || SY.drill !== d) return; SY.listening = false;
       if (res.error) { SY.err = res.error === "no-speech" || res.error === "aborted" ? "Não ouvi nada. Toque no microfone e fale." : micErrorText(res.error); renderStory(); return; }
-      const r = scoreSpeech(en, res, "en"); if (!d.res && r.score >= PASS) SY.xp += 5; d.res = r; syScore(r.score); save(); renderStory();
+      const r = scoreSpeech(en, res, SY.l); if (!d.res && r.score >= PASS) SY.xp += 5; d.res = r; syScore(r.score); save(); renderStory();
     });
   },
   syDrillNext: () => drillNext(),
-  bagNote: d => { const it = storyOf("en").items[d.k]; if (noteAppend("en", `${it.w} = ${it.pt} · ${it.ex}`)) toast("Anotado no caderno de inglês.", "pen"); },
-  syNotes: () => { if (noteAppend("en", `${SY.ch.t} (${SY.ch.tPt})\n` + SY.ch.phrases.map(([en, pt]) => `${en} = ${pt}`).join("\n"))) toast("Frases anotadas no caderno de inglês.", "pen"); },
+  bagNote: d => { const l = storyLang(), it = storyOf(l).items[d.k]; if (noteAppend(l, `${it.w} = ${it.pt} · ${it.ex}`)) toast(`Anotado no caderno de ${learnName(l)}.`, "pen"); },
+  syNotes: () => { if (noteAppend(SY.l, `${SY.ch.t} (${SY.ch.tPt})\n` + SY.ch.phrases.map(([en, pt]) => `${en} = ${pt}`).join("\n"))) toast(`Frases anotadas no caderno de ${learnName(SY.l)}.`, "pen"); },
   syQuit: () => modal(`<h2>Sair da história?</h2><p class="muted" style="font-weight:700">O capítulo recomeça do início na próxima vez. Os itens da mochila ficam com você.</p>
     <div class="acts"><button class="btn" data-act="closeModal">Continuar jogando</button><button class="btn bad" data-act="syQuitYes">Sair</button></div>`),
   syQuitYes: () => { closeModal(); closeStory(); },

@@ -1,7 +1,7 @@
 // Lets the installed app open without internet. Online, it always fetches the newest files first
 // (so updates show up right away) and keeps a copy; offline, it serves that copy.
-const CACHE = "xibolete-v4";
-const SHELL = ["./", "index.html", "data.js", "conversas.js", "historia.js", "arte.js", "hd2d.js", "hd2d-worker.js", "manifest.webmanifest", "icons/icon-192.png", "icons/apple-touch-icon.png"];
+const CACHE = "xibolete-v5";
+const SHELL = ["./", "index.html", "data.js", "conversas.js", "historia.js", "historia-ru.js", "arte.js", "hd2d.js", "hd2d-worker.js", "manifest.webmanifest", "icons/icon-192.png", "icons/apple-touch-icon.png"];
 
 self.addEventListener("install", e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(SHELL)).then(() => self.skipWaiting()));

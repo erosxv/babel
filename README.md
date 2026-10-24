@@ -13,7 +13,7 @@ Aprenda idiomas jogando e falando em voz alta. É um jogo no navegador, sem inst
 - **28 conquistas.**
 - **Treino com repetição espaçada:** as palavras que você mais erra voltam com mais frequência.
 
-## História (por enquanto só em inglês)
+## História (em inglês e russo)
 
 Um RPG no estilo visual novel, em 4 arcos que acompanham os degraus do zigurate: A1 "O Despertar Sem Memória", A2 "A Jornada pela Guilda", B1 "O Mistério da Cidade Grande" e B2 "A Conspiração do Trono". Você acorda sem memória em Shinar e conversa com os personagens respondendo em voz alta ou tocando nas opções.
 
@@ -25,7 +25,9 @@ Um RPG no estilo visual novel, em 4 arcos que acompanham os degraus do zigurate:
 - As frases de cada capítulo podem ir direto para o caderno.
 - Os lugares da história são desenhados em estilo HD-2D (como Octopath Traveler e Dragon Quest III HD-2D) por `hd2d.js`: cenários em 3D com texturas de pixel art, sombras suaves, desfoque de profundidade e brilho. A primeira vez leva alguns segundos (o desenho roda em segundo plano, em `hd2d-worker.js`) e depois fica guardado no aparelho. Enquanto isso aparece a versão simples de `arte.js`.
 - Os personagens ficam pequenos, de pé dentro de cada cenário. Quando um deles fala, o retrato grande sai de onde ele está e vem para a frente da cena; o retrato pisca e mexe a boca enquanto a voz fala. Enquanto a voz fala, aparece no canto da cena um botão para pausar e continuar a fala.
-- A história fica em `historia.js`. O Arco 1 (A1) está completo, com 10 capítulos que cobrem o que o nível A1 do Quadro Europeu pede:
+- A história aparece no idioma que você está estudando: inglês ou russo. Nos outros idiomas ela aparece em inglês, por enquanto. Cada idioma guarda o próprio progresso e a própria mochila.
+- A versão em russo (`historia-ru.js`) tem o mesmo enredo, os mesmos lugares e personagens, mas as dicas ensinam o que é difícil no russo: os casos (Маркус → ищу Маркуса), o gênero (синий плащ, синяя шапка), *у меня есть* para “ter”, *мне двадцать лет* para a idade, *умею* e *могу*, e o passado com *был* e *была*. O herói fala no masculino, mas as formas femininas também valem quando você responde falando.
+- A história em inglês fica em `historia.js`. O Arco 1 (A1) está completo, com 10 capítulos que cobrem o que o nível A1 do Quadro Europeu pede:
   1. "Wake Up": cumprimentos, nome, de onde você é.
   2. "The Market": números, preços, cores, pedir com educação.
   3. "The Guild": verbo *to be*, profissões, perguntas simples.

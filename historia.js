@@ -1,5 +1,5 @@
 // Story mode (Modo História): a visual-novel RPG that climbs A1 → B2, one arc per step of the ziggurat.
-// For now it exists in English only.
+// This file holds the English story; the Russian one is in historia-ru.js.
 //
 // A chapter is a list of nodes played in order; `id` marks a jump target and `go` jumps to one.
 //   { scene, label }                       change the backdrop
@@ -99,6 +99,12 @@ window.XIB_STORY = {
       was: "No passado, com I, he, she e it, use was: I was at the temple. He was tall.",
       were: "No passado, com you, we e they, use were: They were at the harbour.",
       bye: "Para se despedir: Bye!, See ya! (até mais) ou Thanks for everything! (obrigado por tudo).",
+    },
+    // paying with coins: number words, the word "coin" (one / many) and what the seller says
+    pay: {
+      num: "zero one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen twenty".split(" "),
+      coins: ["coin", "coins"],
+      line: "That's {n} {coins}.", ok: "Perfect, thanks!", over: "Oh, {n} {coins}? Thanks for the tip!", short: "Hmm, that's only {n}. I said {p}.",
     },
     arcs: [
       { lvl: "A1", t: "O Despertar Sem Memória", done: true, sub: "Saudações, números, horas, rotina, cidade, família, comida, roupas, clima, can e was/were" },

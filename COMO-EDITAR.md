@@ -8,7 +8,8 @@ Todo o conteúdo do app fica em arquivos de texto separados do código. Para mud
 |---|---|
 | `data.js` | Vocabulário e frases das lições de cada idioma, e os sons difíceis (aba Pronúncia) |
 | `conversas.js` | As situações da aba Conversas |
-| `historia.js` | O modo História: personagens, itens da mochila, dicas e capítulos |
+| `historia.js` | O modo História em inglês: personagens, itens da mochila, dicas e capítulos |
+| `historia-ru.js` | O modo História em russo, com o mesmo formato |
 | `arte.js` | A pixel art: o visual dos personagens e dos cenários |
 | `hd2d.js` | A arte HD-2D da história: os cenários em 3D (`STORY`) e os retratos grandes de quem fala (`BUSTS`) |
 | `hd2d-worker.js` | Desenha os cenários em segundo plano (não precisa mexer) |
@@ -57,7 +58,7 @@ Cuidado com aspas e vírgulas: cada frase fica entre aspas `"…"`, e os itens d
 
 **As frases do capítulo** (`phrases`, no fim de cada capítulo em `historia.js`) são usadas no treino de fala do final e podem ir para o caderno. Escolha frases curtas do dia a dia.
 
-**Criar um capítulo:** copie um capítulo inteiro em `historia.js` (de `{ id: "a1c3"` até o `},` que fecha ele), mude o `id` (por exemplo `a2c1` para o primeiro capítulo do Arco 2), o número `n`, o título e as falas. Quando um arco tiver todos os capítulos, marque `done: true` nele para sumir o aviso "Próximos capítulos em breve". O comentário no topo do arquivo explica cada tipo de cena: narração, fala, escolha, explorar objetos, procurar algo, pagar e memória.
+**Criar um capítulo:** copie um capítulo inteiro em `historia.js` (de `{ id: "a1c3"` até o `},` que fecha ele), mude o `id` (por exemplo `a2c1` para o primeiro capítulo do Arco 2), o número `n`, o título e as falas. Quando um arco tiver todos os capítulos, marque `done: true` nele para sumir o aviso "Próximos capítulos em breve". Para traduzir a história para outro idioma, copie `historia-ru.js` com outro nome (por exemplo `historia-es.js`), troque `ru` pela sigla do idioma, traduza as falas e as dicas, ajuste `pay` (os números e a palavra “moeda”) e acrescente o arquivo em `index.html` (logo depois de `historia-ru.js`) e na lista `SHELL` de `sw.js`. O comentário no topo de `historia.js` explica cada tipo de cena: narração, fala, escolha, explorar objetos, procurar algo, pagar e memória.
 
 ## Testar antes de publicar (opcional)
 
