@@ -19,9 +19,11 @@ Um RPG no estilo visual novel, em 4 arcos que acompanham os degraus do zigurate:
 
 - **Mochila:** os itens que você pega ficam guardados, cada um com a palavra em inglês, pronúncia e frase de exemplo.
 - **Erros têm consequência:** o personagem estranha o que você disse, um balão explica a regra em português, e o erro pode custar moedas ou levar a um caminho mais longo. Falar bem e com educação rende desconto e recompensas.
+- **Pronúncia em primeiro lugar:** quando você responde falando, o app mostra quais palavras saíram bem e quais precisam de treino. Se você tocar na resposta em vez de falar, o jogo pede "Agora diga você" e dá nota.
+- **Treino de fala no fim de cada capítulo:** você repete em voz alta as frases do dia a dia que apareceram, e a tela final mostra sua média de pronúncia.
 - **A pulseira brilha** quando você fala com boa pronúncia.
 - As frases de cada capítulo podem ir direto para o caderno.
-- Cada personagem e cenário tem pixel art própria, desenhada em `arte.js`.
+- Cada personagem e cenário tem pixel art própria, desenhada em `arte.js`. Os cenários são em camadas, no espírito "HD-2D": fundo levemente desfocado, personagem nítido no meio, objetos desfocados na frente, e por cima brilho de velas, raios de sol, poeira no ar e sombra nas bordas.
 - A história fica em `historia.js`. Prontos: Arco 1, Capítulos 1 a 3 ("Wake Up", "The Market", "The Guild").
 
 ## Instalar como app

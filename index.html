@@ -440,11 +440,29 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 
 /* story mode */
 .vn{gap:14px}
-.stage{position:relative;aspect-ratio:160/70;max-height:300px;width:100%;border-radius:20px;overflow:hidden;display:flex;align-items:flex-end;justify-content:center;box-shadow:inset 0 -6px 0 rgba(0,0,0,.18);background:#3a2a1f}
-.scene-px{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;image-rendering:pixelated}
+.stage{position:relative;aspect-ratio:240/105;max-height:300px;width:100%;border-radius:20px;overflow:hidden;display:flex;align-items:flex-end;justify-content:center;box-shadow:inset 0 -6px 0 rgba(0,0,0,.18);background:#3a2a1f}
+.stage .lay{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;image-rendering:pixelated;pointer-events:none}
+.lay.back{filter:blur(.7px) saturate(1.08) brightness(.96)}
+.lay.mid{filter:saturate(1.08)}
+.lay.front{filter:blur(2.4px) brightness(.8);z-index:2}
+.fx-light{position:absolute;transform:translate(-50%,-50%);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,var(--c) 0,transparent 66%);mix-blend-mode:screen;opacity:.5;pointer-events:none;z-index:2;animation:flick 3.2s ease-in-out infinite alternate}
+@keyframes flick{to{opacity:.38;transform:translate(-50%,-50%) scale(1.06)}}
+.fx-rays{position:absolute;width:150%;height:70%;transform-origin:0 0;transform:rotate(var(--a));pointer-events:none;z-index:2;mix-blend-mode:screen;
+  background:repeating-linear-gradient(to bottom,rgba(var(--rc),0) 0 7%,rgba(var(--rc),.2) 9% 13%,rgba(var(--rc),0) 16% 22%,rgba(var(--rc),.12) 24% 27%,rgba(var(--rc),0) 30% 36%);
+  -webkit-mask-image:linear-gradient(to right,#000,transparent 75%);mask-image:linear-gradient(to right,#000,transparent 75%);animation:sway 9s ease-in-out infinite alternate}
+@keyframes sway{to{transform:rotate(calc(var(--a) + 3deg));opacity:.75}}
+.fx-vig{position:absolute;inset:0;pointer-events:none;z-index:3;background:radial-gradient(ellipse at 50% 42%,transparent 52%,rgba(12,8,6,.55) 100%),linear-gradient(180deg,rgba(255,200,140,.08),transparent 40%)}
+.fx-dust{position:absolute;inset:0;pointer-events:none;z-index:3}
+.fx-dust b{position:absolute;width:2px;height:2px;border-radius:50%;background:#fff3d0;opacity:0;animation:dust 7s linear infinite;box-shadow:0 0 3px #fff3d0}
+@keyframes dust{0%{opacity:0;transform:translate(0,0)}25%{opacity:.85}100%{opacity:0;transform:translate(16px,-34px)}}
+.stage-label,.bracelet{z-index:4}
+.say-res{display:grid;gap:6px;justify-items:center;background:var(--surface);border:2px solid var(--line);border-radius:16px;padding:10px}
+.say-back{display:grid;gap:8px;justify-items:center;text-align:center;background:var(--surface-2);border-radius:16px;padding:12px;font-weight:800}
+.say-back b{display:flex;align-items:center;gap:6px;color:var(--lang)}
+.say-back b svg{width:20px;height:20px}
 img.pix{image-rendering:pixelated;display:block}
 .actor{position:absolute!important;z-index:1;bottom:0;left:0;right:0;margin:0 auto;width:max-content;height:80%}
-.actor img.pix{height:100%;width:auto;filter:drop-shadow(0 3px 0 rgba(0,0,0,.35))}
+.actor img.pix{height:100%;width:auto;filter:drop-shadow(0 0 1px rgba(255,226,170,.7)) drop-shadow(0 4px 2px rgba(0,0,0,.45))}
 .vn-name{display:flex;align-items:center;gap:6px}
 img.pix.mini{width:22px;height:auto;border-radius:6px;background:rgba(0,0,0,.08)}
 .obj .sw{display:block;width:34px;height:34px;border-radius:10px;box-shadow:inset 0 -4px 0 rgba(0,0,0,.2)}
@@ -1939,7 +1957,7 @@ function startStory(id) {
   const st = storyOf("en"), ch = st && st.chapters.find(c => c.id === id); if (!ch) return;
   closeModal();
   SY = { st, ch, i: 0, purse: ch.purse, flags: new Set(), mistakes: 0, shards: 0, xp: 0, who: null, scene: "room", label: "", t0: Date.now(),
-    pick: null, wrongs: new Set(), seen: new Set(), found: false, miss: null, hand: 0, payFb: null, listening: false, err: "", heard: "", trOn: false };
+    pick: null, wrongs: new Set(), seen: new Set(), found: false, miss: null, hand: 0, payFb: null, listening: false, err: "", heard: "", trOn: false, scores: [], drill: null, drilled: false };
   document.body.classList.add("locked"); $("#lesson").hidden = false;
   syAdvance(0);
 }
@@ -1956,7 +1974,7 @@ function syAdvance(to) {
   SY.i = to;
   for (let guard = 0; guard < 500; guard++) {
     const n = syNode();
-    if (!n) { finishStory(); return; }
+    if (!n) { if (!SY.drilled) startDrill(); else finishStory(); return; }
     if ((n.when && !SY.flags.has(n.when)) || (n.unless && SY.flags.has(n.unless))) { SY.i++; continue; }
     if (n.scene) { SY.scene = n.scene; SY.label = n.label || ""; }
     if (n.give) bagAdd(n.give);
@@ -1985,12 +2003,15 @@ function syNext() {
   }
   syAdvance(SY.i + 1);
 }
-function syChoose(o, score) {
+function syGlow() { SY.shards++; SY.glow = true; setTimeout(() => { if (SY) SY.glow = false; }, 1200); }
+// every spoken score counts toward the chapter's pronunciation grade
+function syScore(score) { SY.scores.push(score); countSpoken(score); if (score >= GREAT) syGlow(); }
+function syChoose(o, score, res) {
   const n = syNode(); if (!n.choice || SY.pick) return;
-  SY.pick = o; SY.pickScore = score ?? null;
+  SY.pick = o; SY.pickScore = score ?? null; SY.pickRes = res || null; SY.back = null;
   if (o.ok) {
-    SY.xp += 10; sfx("ok");
-    if (score != null) { countSpoken(score); if (score >= GREAT) { SY.shards++; SY.glow = true; setTimeout(() => { if (SY) SY.glow = false; }, 1200); } }
+    SY.xp += score != null ? 15 : 10; sfx("ok");
+    if (score != null) syScore(score);
   } else {
     SY.mistakes++; SY.wrongs.add(n.choice.indexOf(o));
     if (S.sound) tone(300, 0, .2, "triangle", .08);
@@ -2012,12 +2033,22 @@ function syHeard(res) {
     if (!bestR || r.score > bestR.score) { best = o; bestR = r; }
   }
   if (bestR.score < STORY_SPEAK) { SY.err = ""; SY.heard = bestR.heard || res[0] || ""; renderStory(); return; }
-  SY.heard = ""; syChoose(best, bestR.score);
+  SY.heard = ""; syChoose(best, bestR.score, bestR);
 }
 const ART = window.XIB_ART;
 const pxPortrait = (who, cls = "pix") => { const u = ART && ART.portrait(who); return u ? `<img class="${cls}" src="${u}" alt="">` : ""; };
 const syActor = who => { const c = SY.st.cast[who]; if (!c) return ""; const img = pxPortrait(who);
   return `<div class="actor" style="--ac:${c.color}">${img || `<span>${esc(c.name[0])}</span>`}<small>${esc(c.name)}</small></div>`; };
+// The stage in layers, "HD-2D" style: soft-focus back, sharp middle with the character, blurred front,
+// then glows, sunbeams, dust and a vignette on top.
+function stageLayers(scene, actor) {
+  const sc = ART && ART.scene(scene); if (!sc) return actor;
+  const img = k => sc[k] ? `<img class="lay ${k}" src="${sc[k]}" alt="">` : "";
+  const lights = sc.lights.map(([x, y, c, r]) => `<i class="fx-light" style="left:${x}%;top:${y}%;width:${(r / 2.4).toFixed(1)}%;--c:${c}"></i>`).join("");
+  const rays = sc.rays ? `<i class="fx-rays" style="left:${sc.rays.x}%;top:${sc.rays.y}%;--a:${sc.rays.angle}deg;--rc:${sc.rays.color}"></i>` : "";
+  const dust = `<i class="fx-dust">${Array.from({ length: 14 }, (_, k) => `<b style="left:${(k * 37) % 100}%;top:${20 + (k * 53) % 70}%;animation-delay:${(k * .7) % 7}s;animation-duration:${6 + (k % 4)}s"></b>`).join("")}</i>`;
+  return img("back") + img("mid") + actor + img("front") + rays + lights + dust + `<i class="fx-vig"></i>`;
+}
 const objIc = o => o.sw ? `<span class="oi"><i class="sw" style="background:${o.sw}"></i></span>` : `<span class="oi">${o.ic}</span>`;
 function syLine(who, t, pt, cls = "") {
   const c = SY.st.cast[who] || { name: "", color: "var(--lang)" };
@@ -2025,8 +2056,28 @@ function syLine(who, t, pt, cls = "") {
     <div class="bub-acts"><button class="say" data-act="say" data-t="${esc(t)}" data-l="en" aria-label="Ouvir">${I("speaker")}</button><button class="say" data-act="saySlow" data-t="${esc(t)}" aria-label="Ouvir devagar">${I("slow")}</button>
     ${pt ? `<button class="linkish" data-act="syTr">${SY.trOn ? esc(pt) : "Traduzir"}</button>` : ""}</div></div>`;
 }
+// ---- end-of-chapter speaking drill: every everyday phrase of the chapter, said aloud and graded ----
+function startDrill() { SY.drill = { i: 0, res: null }; SY.err = ""; SY.listening = false; renderStory(); setTimeout(() => SY && SY.drill && speak(SY.ch.phrases[0][0], "en"), 300); }
+function drillNext() {
+  stopListening(); const d = SY.drill;
+  if (d.i + 1 >= SY.ch.phrases.length) { SY.drill = null; SY.drilled = true; finishStory(); return; }
+  d.i++; d.res = null; SY.err = ""; SY.listening = false; renderStory(); setTimeout(() => SY && SY.drill && speak(SY.ch.phrases[d.i][0], "en"), 250);
+}
+function renderDrill() {
+  const d = SY.drill, [en, pt] = SY.ch.phrases[d.i], N = SY.ch.phrases.length, self = !canListen();
+  $("#lesson").innerHTML = `<div class="l-top"><button class="x" data-act="syQuit" aria-label="Sair da história">${I("x")}</button><div class="bar"><i style="width:${d.i / N * 100}%"></i></div><span class="l-hearts inf">${I("mic")}</span></div>
+    <div class="l-body"><div class="l-in"><span class="l-tag">${I("mic")}Treino de fala do capítulo · ${d.i + 1} de ${N}</span>
+      <h2 class="l-q">Diga a frase do dia a dia em voz alta</h2>
+      <div class="prompt"><div class="sent">${esc(en)}</div>${speakBtn(en, "en")}</div>
+      <p class="muted" style="margin:-8px 0 0;font-weight:700">${esc(pt)}</p>
+      ${SY.err ? `<div class="mic-err">${esc(SY.err)}</div>` : ""}
+      ${self ? `<div class="tipbox">Ouça, repita em voz alta duas vezes e tente imitar o ritmo.</div>` : `<div class="mic-wrap"><button class="mic ${SY.listening ? "on" : ""}" data-act="syDrillMic" aria-label="Falar">${I("mic")}</button><span class="mic-label">${SY.listening ? "Ouvindo…" : d.res ? (d.res.score >= PASS ? "Muito bem! Toque para tentar de novo" : "Toque e tente de novo") : "Toque e fale"}</span>${d.res ? resultHtml(d.res) : ""}</div>`}
+    </div></div>
+    <div class="l-foot"><div class="l-foot-in"><span></span><button class="btn ${d.res && d.res.score >= PASS ? "ok" : self ? "" : "ghost"}" data-act="syDrillNext">${d.i + 1 >= N ? "Terminar" : d.res || self ? "Próxima" : "Pular"}</button></div></div>`;
+}
 function renderStory() {
   if (SY.end) return renderStoryEnd();
+  if (SY.drill) return renderDrill();
   const n = syNode(), N = SY.ch.nodes.length, self = !canListen();
   let box = "", foot = "";
   const cont = (label = "Continuar", cls = "") => `<button class="btn ${cls}" data-act="syNext">${label}</button>`;
@@ -2045,12 +2096,16 @@ function renderStory() {
         ${SY.err ? `<div class="mic-err">${esc(SY.err)}</div>` : ""}${SY.heard ? `<p class="miss">Não entendi direito: “${esc(SY.heard)}”. Tente de novo ou toque numa resposta.</p>` : ""}`;
       foot = self ? `<p class="muted" style="font-weight:700;margin:0">Toque numa resposta e diga em voz alta.</p>` : `<div class="talk-foot"><button class="mic ${SY.listening ? "on" : ""}" data-act="syMic" aria-label="${SY.listening ? "Parar de ouvir" : "Responder falando"}">${I("mic")}</button><span class="mic-label">${SY.listening ? "Ouvindo…" : "Toque e fale"}</span></div>`;
     } else {
-      const sc = SY.pickScore;
+      const sc = SY.pickScore, sayBack = o.ok && sc == null && !self;
       box = `<div class="bub me vn-me"><p>${esc(o.t)}</p>${sc != null ? `<span class="chip ${sc >= GREAT ? "g" : sc >= PASS ? "m" : "b"}">${I("mic")}${sc}%</span>` : ""}</div>
+        ${o.ok && SY.pickRes && sc < GREAT ? `<div class="say-res"><span class="vn-q">Sua pronúncia, palavra por palavra:</span>${resultHtml(SY.pickRes)}</div>` : ""}
         ${o.react ? syLine(SY.who || "rosie", o.react, "", o.ok ? "" : "upset") : ""}
         ${o.tip ? `<div class="thought"><b>${o.rude ? "Funciona, mas…" : "Dica"}</b> ${esc(SY.st.tips[o.tip] || "")}</div>` : ""}
         ${o.cost ? `<p class="coin-loss">${I("gem")}−${o.cost} ${o.cost === 1 ? "moeda" : "moedas"}</p>` : ""}`;
-      foot = o.retry && !o.ok ? cont("Tentar de novo") : cont("Continuar", o.ok ? "ok" : "");
+      if (sayBack) box += `<div class="say-back"><b>${I("mic")}Agora diga você:</b> <span>${esc(o.t)}</span>${SY.err ? `<div class="mic-err">${esc(SY.err)}</div>` : ""}${SY.back ? resultHtml(SY.back) : ""}</div>`;
+      foot = o.retry && !o.ok ? cont("Tentar de novo")
+        : sayBack ? `<div class="talk-foot"><button class="mic small ${SY.listening ? "on" : ""}" data-act="syBack" aria-label="Dizer a frase">${I("mic")}</button></div>${cont(SY.back && SY.back.score >= PASS ? "Continuar" : "Pular", SY.back && SY.back.score >= PASS ? "ok" : "ghost")}`
+        : cont("Continuar", o.ok ? "ok" : "");
     }
   } else if (n.explore) {
     const all = n.explore.length, seen = SY.seen.size, last = SY.lastObj != null ? n.explore[SY.lastObj] : null;
@@ -2074,7 +2129,7 @@ function renderStory() {
   $("#lesson").innerHTML = `<div class="l-top"><button class="x" data-act="syQuit" aria-label="Sair da história">${I("x")}</button><div class="bar"><i style="width:${SY.i / N * 100}%"></i></div>
       <span class="purse-n" title="Moedas na história">${I("gem")}${SY.purse}</span><button class="bag-btn" data-act="syBag" aria-label="Mochila">${I("bag")}<b>${bagN}</b></button></div>
     <div class="l-body"><div class="l-in vn">
-      <div class="stage bg-${SY.scene}">${ART && ART.scene(SY.scene) ? `<img class="scene-px" src="${ART.scene(SY.scene)}" alt="">` : ""}<span class="stage-label">${esc(SY.label)}</span>${SY.who && !n.nar ? syActor(SY.who) : ""}<div class="bracelet ${SY.glow ? "glow" : ""}" title="Brilhos da pulseira: ${SY.shards}">${I("zig")}<b>${SY.shards}</b></div></div>
+      <div class="stage bg-${SY.scene}">${stageLayers(SY.scene, SY.who && !n.nar ? syActor(SY.who) : "")}<span class="stage-label">${esc(SY.label)}</span><div class="bracelet ${SY.glow ? "glow" : ""}" title="Brilhos da pulseira: ${SY.shards}">${I("zig")}<b>${SY.shards}</b></div></div>
       <div class="vn-box">${box}</div>
     </div></div>
     <div class="l-foot"><div class="l-foot-in vn-foot">${foot}</div></div>`;
@@ -2092,7 +2147,8 @@ function finishStory() {
   if (lvAfter > lvBefore) S.coins += 25 * (lvAfter - lvBefore);
   const achs = checkAch();
   save();
-  SY.end = { stars, xpGot, coins, streakUp, quests, achs, lvAfter, lvUp: lvAfter > lvBefore };
+  const avg = SY.scores.length ? Math.round(SY.scores.reduce((a, b) => a + b, 0) / SY.scores.length) : null;
+  SY.end = { stars, xpGot, coins, streakUp, quests, achs, lvAfter, lvUp: lvAfter > lvBefore, avg };
   sfx(SY.end.lvUp ? "level" : "done"); confetti(140);
   renderStory();
 }
@@ -2108,6 +2164,7 @@ function renderStoryEnd() {
     <h1>Capítulo ${ch.n} concluído!</h1><p class="sub">${esc(ch.t)} · ${SY.mistakes ? `${SY.mistakes} ${SY.mistakes === 1 ? "tropeço" : "tropeços"} no inglês. Jogue de novo para tentar as 3 estrelas.` : "Sem nenhum erro de inglês. Impecável!"}</p>
     <div class="end-stats">
       <div class="es" style="--c:var(--xp)"><span>XP ganho</span><b>${I("bolt")}${e.xpGot}</b></div>
+      <div class="es" style="--c:var(--ok)"><span>Pronúncia</span><b>${I("mic")}${e.avg == null ? "–" : e.avg + "%"}</b></div>
       <div class="es" style="--c:var(--lang)"><span>Brilhos</span><b>${I("zig")}${SY.shards}</b></div>
       <div class="es" style="--c:var(--coin)"><span>Tempo</span><b>${Math.floor(secs / 60)}:${pad(secs % 60)}</b></div>
     </div>
@@ -2394,6 +2451,28 @@ const A = {
     renderStory(); speak(SY.payFb.react, "en");
   },
   syBag: () => bagModal(),
+  syBack: () => {
+    if (!SY || !SY.pick || !canListen()) return;
+    if (SY.listening) { if (rec) try { rec.stop(); } catch {} return; }
+    const o = SY.pick; SY.listening = true; SY.err = ""; renderStory();
+    listen("en", res => {
+      if (!SY || SY.pick !== o) return; SY.listening = false;
+      if (res.error) { SY.err = res.error === "no-speech" || res.error === "aborted" ? "Não ouvi nada. Toque no microfone e fale." : micErrorText(res.error); renderStory(); return; }
+      const r = scoreSpeech([o.t, ...(o.alt || [])].join("|"), res, "en"), first = !SY.back;
+      SY.back = r; syScore(r.score); if (first && r.score >= PASS) SY.xp += 5; save(); renderStory();
+    });
+  },
+  syDrillMic: () => {
+    if (!SY || !SY.drill || !canListen()) return;
+    if (SY.listening) { if (rec) try { rec.stop(); } catch {} return; }
+    const d = SY.drill, en = SY.ch.phrases[d.i][0]; SY.listening = true; SY.err = ""; renderStory();
+    listen("en", res => {
+      if (!SY || SY.drill !== d) return; SY.listening = false;
+      if (res.error) { SY.err = res.error === "no-speech" || res.error === "aborted" ? "Não ouvi nada. Toque no microfone e fale." : micErrorText(res.error); renderStory(); return; }
+      const r = scoreSpeech(en, res, "en"); if (!d.res && r.score >= PASS) SY.xp += 5; d.res = r; syScore(r.score); save(); renderStory();
+    });
+  },
+  syDrillNext: () => drillNext(),
   bagNote: d => { const it = storyOf("en").items[d.k]; if (noteAppend("en", `${it.w} = ${it.pt} · ${it.ex}`)) toast("Anotado no caderno de inglês.", "pen"); },
   syNotes: () => { if (noteAppend("en", `${SY.ch.t} (${SY.ch.tPt})\n` + SY.ch.phrases.map(([en, pt]) => `${en} = ${pt}`).join("\n"))) toast("Frases anotadas no caderno de inglês.", "pen"); },
   syQuit: () => modal(`<h2>Sair da história?</h2><p class="muted" style="font-weight:700">O capítulo recomeça do início na próxima vez. Os itens da mochila ficam com você.</p>
@@ -2529,6 +2608,7 @@ document.addEventListener("keydown", e => {
   if (SY) {
     if (e.key === "Escape") { SY.end ? closeStory() : A.syQuit(); return; }
     if (e.target.closest("button") && e.key === "Enter") return;
+    if (SY.drill) { if (e.key === "Enter") { e.preventDefault(); canListen() ? A.syDrillMic() : drillNext(); } return; }
     const n = SY.end ? null : syNode();
     if (e.key === "Enter") {
       e.preventDefault();
