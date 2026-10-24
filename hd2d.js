@@ -425,6 +425,110 @@ function finish(P, W, H, col, dep, scale = 2) {
   return { fx: out, flat: sharp };
 }
 
+const hex = h => [parseInt(h.slice(1, 3), 16), parseInt(h.slice(3, 5), 16), parseInt(h.slice(5, 7), 16)];
+// ---------- characters: built from body parts, then shaded in 4 tones and outlined in colour ----------
+const CW = 24, CH = 40, CT = 25; // sprite size in texels; texels per world unit (40 texels = 1.6 units tall)
+function makeChar(o) {
+  const R = new Array(CW * CH).fill(null), put = (x, y, k) => { x = Math.round(x); y = Math.round(y); if (x >= 0 && y >= 0 && x < CW && y < CH) R[y * CW + x] = k; };
+  const ell = (cx, cy, rx, ry, k, clip = () => true) => { for (let y = 0; y < CH; y++) for (let x = 0; x < CW; x++) { const dx = (x + .5 - cx) / rx, dy = (y + .5 - cy) / ry; if (dx * dx + dy * dy <= 1 && clip(x, y)) put(x, y, k); } };
+  const poly = (pts, k) => { for (let y = 0; y < CH; y++) for (let x = 0; x < CW; x++) { let ins = false; const px = x + .5, py = y + .5;
+    for (let i = 0, j = pts.length - 1; i < pts.length; j = i++) { const [xi, yi] = pts[i], [xj, yj] = pts[j]; if ((yi > py) !== (yj > py) && px < (xj - xi) * (py - yi) / (yj - yi) + xi) ins = !ins; }
+    if (ins) put(x, y, k); } };
+  const line = (x0, y0, x1, y1, k) => { const n = Math.max(Math.abs(x1 - x0), Math.abs(y1 - y0)); for (let i = 0; i <= n; i++) put(x0 + (x1 - x0) * i / n, y0 + (y1 - y0) * i / n, k); };
+  const P = o.pal, has = k => !!P[k]; if (o.bun) P.bun = P.hair;
+  // behind the body
+  if (o.cape) poly([[6, 17], [18, 17], [21, 37], [3, 37]], "cape");
+  if (o.hair === "long") poly([[6, 6], [18, 6], [19, 25], [5, 25]], "hair");
+  if (o.hair === "hood") poly([[5, 6], [19, 6], [20, 20], [4, 20]], "hood");
+  // legs and boots
+  poly([[8, 28], [12, 28], [11.5, 36], [8.5, 36]], o.legs || "pants"); poly([[12.5, 28], [16, 28], [15.5, 36], [12.5, 36]], o.legs || "pants");
+  poly([[7.5, 34], [11.8, 34], [12, 39], [6.5, 39]], "boots"); poly([[12.4, 34], [16.5, 34], [17.5, 39], [12, 39]], "boots");
+  // torso
+  poly([[6.5, 17], [17.5, 17], [16.5, 25], [17, 29], [7, 29], [7.5, 25]], "top");
+  if (o.skirt) poly([[8, 24], [16, 24], [19, o.skirt], [5, o.skirt]], "skirt");
+  if (has("apron")) { poly([[9, 23], [15, 23], [16, 33], [8, 33]], "apron"); poly([[10, 18.5], [14, 18.5], [14, 23], [10, 23]], "apron"); }
+  if (has("armor")) { poly([[8, 17.5], [16, 17.5], [15.5, 24], [8.5, 24]], "armor"); ell(6.8, 18.5, 2.6, 2, "armor"); ell(17.2, 18.5, 2.6, 2, "armor"); }
+  if (has("vest")) { poly([[7, 17.5], [10.5, 17.5], [11, 28], [7.2, 28]], "vest"); poly([[13.5, 17.5], [17, 17.5], [16.8, 28], [13, 28]], "vest"); }
+  if (has("belt")) { for (let x = 7; x <= 16; x++) { put(x, 25, "belt"); if (o.sash) put(x, 24, "belt"); } put(12, 25, "buckle"); }
+  if (has("strap")) line(8, 17, 16, 27, "strap");
+  // arms: sleeve to the elbow, then forearm (skin or sleeve), then hand
+  const fore = o.longSleeve ? "top" : "skin";
+  poly([[4.5, 18], [7.5, 17.5], [7.6, 23], [4.8, 23]], "top"); poly([[4.8, 23], [7.6, 23], [7.2, 27.5], [4.6, 27.5]], fore);
+  poly([[16.5, 17.5], [19.5, 18], [19.2, 23], [16.4, 23]], "top"); poly([[16.4, 23], [19.2, 23], [19.4, 27.5], [16.8, 27.5]], fore);
+  ell(5.9, 28.6, 1.6, 1.5, "skin"); ell(18.1, 28.6, 1.6, 1.5, "skin");
+  if (has("armor")) { ell(5.8, 18.6, 1.9, 1.5, "armor"); ell(18.2, 18.6, 1.9, 1.5, "armor"); }
+  // neck and head
+  poly([[10.5, 14], [13.5, 14], [13.5, 17.5], [10.5, 17.5]], "skin");
+  ell(12, 9.8, 5.3, 5.9, "skin");
+  ell(6.6, 10.6, 1, 1.4, "skin"); ell(17.4, 10.6, 1, 1.4, "skin"); // ears
+  // hair on top
+  const cap = (k, lowY) => ell(12, 7.4, 6.2, 5.2, k, (x, y) => y <= lowY || x <= 7 || x >= 16);
+  if (o.hair === "hood") { ell(12, 7.6, 6.6, 6, "hood", (x, y) => y <= 6 || x <= 7 || x >= 16); poly([[10, 2.5], [14, 2.5], [12.5, .2]], "hood"); poly([[6, 12], [8, 12], [8, 17], [5, 18]], "hood"); poly([[16, 12], [18, 12], [19, 18], [16, 17]], "hood"); }
+  else if (o.hair === "cap") { cap("hair", 7); ell(12, 6, 6.4, 3.6, "cap", (x, y) => y <= 6); for (let x = 5; x <= 19; x++) put(x, 7, "brim"); }
+  else if (o.hair === "helmet") { ell(12, 7.2, 6.4, 5, "metal", (x, y) => y <= 7); for (let x = 5; x <= 18; x++) put(x, 7, "metal2"); put(12, 8, "metal2"); put(12, 9, "metal2"); }
+  else if (o.hair === "curly") { for (let k = 0; k < 9; k++) ell(6.5 + k * 1.4, 4.5 + (k % 2) * .8, 2, 1.9, "hair"); cap("hair", 6); }
+  else { cap("hair", o.hair === "short" ? 6 : 7); if (o.hair !== "short") { poly([[6, 7], [8, 7], [7.5, 15], [5.5, 14]], "hair"); poly([[16, 7], [18, 7], [18.5, 14], [16.5, 15]], "hair"); } }
+  if (o.bun) ell(12, 2.6, 2.4, 2, "bun");
+  if (o.fringe) for (let x = 8; x <= 16; x++) if ((x + o.fringe) % 3) put(x, 8, "hair");
+  if (o.beard) { ell(12, 14.2, 3.6, 2, "hair", (x, y) => y >= 13); put(12, 13, "skin"); }
+
+  // shade every part as a rounded form lit from the upper left
+  const span = {}; for (let y = 0; y < CH; y++) for (let x = 0; x < CW; x++) { const k = R[y * CW + x]; if (!k) continue; const s = span[k + y] || (span[k + y] = [x, x]); s[0] = Math.min(s[0], x); s[1] = Math.max(s[1], x); }
+  const px = new Array(CW * CH).fill(null);
+  for (let y = 0; y < CH; y++) for (let x = 0; x < CW; x++) {
+    const k = R[y * CW + x]; if (!k) continue;
+    const base = P[k]; const [a, b] = span[k + y], t = b > a ? (x - a) / (b - a) : .5;
+    const below = y + 1 < CH ? R[(y + 1) * CW + x] : null, above = y > 0 ? R[(y - 1) * CW + x] : null;
+    let tone = t < .22 ? 1.16 : t > .74 ? .74 : 1;
+    if (t > .9 && b - a > 2) tone = .6;
+    if (above !== k && above && k !== "hair") tone *= .82;                       // the part above casts a little shadow
+    if (below !== k && (k === "hair" || k === "hood")) tone *= .78;              // hair's lower edge
+    if ((k === "hair") && (x + (y >> 1)) % 3 === 0) tone *= .86;                 // locks of hair
+    if (k === "hood" && [[1, 0], [-1, 0], [0, 1], [0, -1]].some(([dx, dy]) => R[(y + dy) * CW + x + dx] === "skin")) tone = .5; // inside of the hood
+    if (k === "hood" && y < 12 && Math.abs(x - 12) < 1) tone *= .8;               // seam
+    if ((k === "skirt" || k === "cape" || k === "apron") && (x % 3 === 1) && y > 26) tone *= .86; // cloth folds
+    if ((k === "armor" || k === "metal") && t < .3 && (x + y) % 2 === 0) tone = 1.4; // shine
+    const warm = tone > 1 ? [1.04, 1, .94] : tone < 1 ? [.94, .97, 1.08] : [1, 1, 1];  // warm light, cool shadow
+    px[y * CW + x] = [Math.min(255, base[0] * tone * warm[0]), Math.min(255, base[1] * tone * warm[1]), Math.min(255, base[2] * tone * warm[2])];
+  }
+  // face
+  const at = (x, y, c) => { if (R[y * CW + x]) px[y * CW + x] = c; };
+  const eye = P.eye || [52, 36, 30], dk = mul(P.hair || P.hood || [60, 40, 30], .55);
+  for (const ex of [9, 14]) { at(ex, 10, mul(eye, .6)); at(ex + 1, 10, mul(eye, .6)); at(ex, 11, eye); at(ex + 1, 11, [250, 248, 240]); }
+  if (o.hair !== "helmet" && o.hair !== "hood") { at(9, 8, dk); at(10, 8, dk); at(14, 8, dk); at(15, 8, dk); }
+  at(12, 12, mul(P.skin, .84)); at(11, 14, mul(P.mouth || [200, 110, 100], 1)); at(12, 14, mul(P.mouth || [200, 110, 100], .85));
+  if (!o.beard) { at(8, 12, mix(P.skin, [240, 130, 130], .35)); at(16, 12, mix(P.skin, [240, 130, 130], .35)); }
+  if (o.hair === "helmet") { at(9, 8, dk); at(10, 8, dk); at(14, 8, dk); at(15, 8, dk); }
+  // coloured outline: each edge pixel takes a dark version of the part it borders
+  const out = px.slice();
+  for (let y = 0; y < CH; y++) for (let x = 0; x < CW; x++) {
+    if (px[y * CW + x]) continue;
+    const nb = [[1, 0], [-1, 0], [0, 1], [0, -1]].map(([dx, dy]) => { const X = x + dx, Y = y + dy; return X >= 0 && Y >= 0 && X < CW && Y < CH ? px[Y * CW + X] : null; }).filter(Boolean);
+    if (nb.length) { const c = nb[0]; out[y * CW + x] = [c[0] * .32, c[1] * .28, c[2] * .32]; }
+  }
+  return { w: CW, h: CH, px: out };
+}
+
+// the people of the story, small and standing in the places (same colours as their big portraits)
+const SK = { skin: [242, 200, 160], boots: [92, 60, 40], pants: [70, 62, 72], mouth: [206, 112, 104] };
+const FOLK = {
+  rosie: () => makeChar({ hair: "side", bun: true, fringe: 1, skirt: 36, pal: { ...SK, skin: hex("#f2c4a0"), hair: hex("#c4492c"), top: hex("#4d7a9c"), skirt: [64, 100, 130], apron: [242, 234, 216], belt: [120, 80, 50], buckle: [220, 190, 90], eye: [70, 120, 70] } }),
+  tobias: () => makeChar({ hair: "cap", beard: true, pal: { ...SK, skin: hex("#c98f62"), hair: hex("#5a3a24"), cap: hex("#3f8a3a"), brim: [46, 104, 44], top: hex("#e9dcc0"), vest: hex("#7a4e2a"), pants: [90, 70, 52], belt: [70, 46, 30], buckle: [210, 180, 100], eye: [80, 56, 36] } }),
+  mei: () => makeChar({ hair: "long", fringe: 0, skirt: 38, sash: true, longSleeve: true, pal: { ...SK, skin: hex("#f4d2b4"), hair: hex("#1f1b2e"), top: hex("#7a4fd1"), skirt: [100, 64, 170], belt: hex("#f2c230"), buckle: [246, 240, 230], eye: [86, 60, 120] } }),
+  bram: () => makeChar({ hair: "helmet", longSleeve: true, pal: { ...SK, skin: hex("#d6a27e"), hair: hex("#3b2f2a"), metal: hex("#9aa3ad"), metal2: [120, 128, 140], armor: [168, 176, 188], top: [120, 40, 46], pants: [62, 56, 62], belt: [80, 54, 38], buckle: [220, 200, 120], eye: [80, 70, 60] } }),
+  marcus: () => makeChar({ hair: "short", beard: true, skirt: 38, longSleeve: true, pal: { ...SK, skin: hex("#e0b08c"), hair: hex("#b9b9b9"), top: hex("#7a2f2a"), skirt: [110, 42, 38], belt: hex("#e0b440"), buckle: [236, 200, 90], eye: [70, 80, 100] } }),
+  hero: () => makeChar({ hair: "hood", cape: true, longSleeve: true, pal: { ...SK, hood: [72, 96, 136], cape: [62, 84, 122], top: [146, 108, 70], pants: [66, 58, 56], belt: [96, 62, 40], buckle: [210, 190, 120], strap: [110, 74, 46], eye: [60, 80, 120] } }),
+  folkA: () => makeChar({ hair: "short", fringe: 2, pal: { ...SK, skin: [214, 160, 120], hair: [70, 48, 34], top: [90, 130, 90], pants: [80, 70, 60], belt: [80, 54, 38], buckle: [200, 180, 110], eye: [60, 50, 40] } }),
+  folkB: () => makeChar({ hair: "long", bun: true, skirt: 37, pal: { ...SK, skin: [236, 196, 160], hair: [150, 110, 60], top: [190, 120, 60], skirt: [130, 80, 50], apron: [236, 226, 206], belt: [100, 70, 44], buckle: [200, 180, 110], eye: [60, 90, 60] } }),
+};
+const sprites = {};
+// puts someone standing on the floor at (x, z); remembers where, so the portrait can come out of them
+function person(S, who, x, z) {
+  const img = sprites[who] || (sprites[who] = FOLK[who]());
+  S.sprites.push({ x, y: 0, z, w: CW / CT, h: CH / CT, img, blob: true });
+  (S.people ||= {})[who] = [x, z];
+}
+
 // ---------- materials for interiors ----------
 // inn walls: wooden wainscot below a rail, cream plaster between timber posts above
 const woodWall = seed => {
@@ -513,6 +617,7 @@ STORY.room = () => {
   S.lights.push({ p: [-.5, 3.2, 2.5], c: [.5, .42, .32], r: 11, soft: .5 });
   S.prims.push(B([-1.6, 1.6, 5.95], [-.1, 2.5, 6], (p, n) => { const fx = p[0] + 1.6, fy = p[1] - 1.6; if (fx < .08 || fx > 1.42 || fy < .08 || fy > .82) return { c: [196, 152, 70] }; return { c: fy > .45 ? [130, 180, 220] : fy > .3 - Math.sin(fx * 4) * .08 ? [96, 150, 80] : [70, 120, 64] }; }));
   S.sprites.push({ x: 3.6, y: 0, z: 5.6, w: .7, h: .84, img: POT, blob: true });
+  person(S, "rosie", -1.5, 3.6); person(S, "hero", 1.5, 2.4);
   return S;
 };
 // the inn's ground floor: counter, shelves of bottles, fireplace, evening
@@ -547,6 +652,7 @@ STORY.counter = () => {
   S.prims.push(CYL(6.4, 4.8, .36, 0, 1, barrelMat(209)), CYL(6.5, 5.7, .36, 0, 1, barrelMat(210)), CYL(5.8, 2.6, .34, 0, .95, barrelMat(211)));
   roundTable(S, -3.4, 1.6, .7, wood); stool(S, -4.4, 1.3, wood); stool(S, -2.5, .9, wood); candle(S, -3.3, .8, 1.6);
   S.prims.push(CYL(-3.6, 1.8, .1, .8, 1.0, wood));
+  person(S, "rosie", 1.6, 4.95); person(S, "hero", -.6, 2.4);
   return S;
 };
 // the port market at noon: fruit stall, cloak stall, houses, the ziggurat far away
@@ -589,6 +695,8 @@ STORY.market = () => {
   S.sprites.push({ x: -9.8, y: 0, z: 7.6, w: 4.4, h: 6, img: tree(314, [84, 140, 70]) }, { x: 12.4, y: 0, z: 8, w: 4, h: 5.4, img: tree(315, [96, 150, 74]) });
   for (const [x, z] of [[-1.2, 9.6], [9.4, 9.4], [-7.8, 9.4]]) S.sprites.push({ x, y: 0, z, w: .62, h: .75, img: POT, blob: true });
   for (const [x0, x1, zf] of [[-13, -5.4, 10], [-4.6, 1.8, 11], [2.6, 9.6, 10], [10.4, 16, 11]]) for (let x = x0 + .3; x < x1; x += .9 + hash(x * 10 | 0, 2, 316) * .8) S.sprites.push({ x, y: 0, z: zf - .12, w: .7, h: .4, img: GRASS, noShadow: true });
+  // the sellers stand beside their stalls (behind the counter the awnings would hide them)
+  person(S, "tobias", -4.9, 4.7); person(S, "mei", 5.9, 4.9); person(S, "hero", .5, 3.2); person(S, "folkA", -7.2, 4.6); person(S, "folkB", .4, 8.6);
   return S;
 };
 // the Guild's gate: a big stone hall with an arched door, banners and lamps, afternoon
@@ -633,6 +741,7 @@ STORY.guild = () => {
   for (let i = 0; i < 18; i++) { const x = (hash(i, 6, 415) - .5) * 22, z = 1 + hash(i, 7, 415) * 6; if (Math.abs(x) < 2.6) continue; S.sprites.push({ x, y: 0, z, w: .55, h: .3, img: GRASS, noShadow: true }); }
   for (let x = -7.3; x < 7.4; x += .7 + hash(x * 10 | 0, 2, 416) * .6) if (Math.abs(x) > 2.6) S.sprites.push({ x, y: 0, z: 7.7, w: .7, h: .42, img: GRASS, noShadow: true });
   S.sprites.push({ x: -2.9, y: 0, z: 7.3, w: .66, h: .8, img: POT, blob: true }, { x: 2.9, y: 0, z: 7.3, w: .66, h: .8, img: POT, blob: true });
+  person(S, "bram", 2.0, 6.85); person(S, "hero", -.7, 4.2); person(S, "folkA", -6.2, 5.2);
   return S;
 };
 // inside the Guild hall: long table, notice board, banners, sun through tall windows, candles
@@ -671,6 +780,7 @@ STORY.hall = () => {
     for (const y of [.4, 1.2, 2.0]) bookRow(S, x0 + .05, x0 + 1.65, y, 6.4, 6.5, 508 + y * 10 + x0);
   }
   S.sprites.push({ x: -4.9, y: 0, z: 7.4, w: .7, h: .84, img: POT, blob: true }, { x: 4.9, y: 0, z: 7.4, w: .7, h: .84, img: POT, blob: true });
+  person(S, "marcus", 0, 5.12); person(S, "bram", -4.2, 6.6); person(S, "hero", 1.5, 2.6);
   return S;
 };
 
@@ -833,7 +943,6 @@ function makeBust(o) {
   const frame = mode => { const pix = px.slice(); face(pix, mode); return { w: BW, h: BH, px: outline(pix) }; };
   return { base: frame("base"), blink: frame("blink"), talk: frame("talk") };
 }
-const hex = h => [parseInt(h.slice(1, 3), 16), parseInt(h.slice(3, 5), 16), parseInt(h.slice(5, 7), 16)];
 // the cast, following the colours in arte.js
 const BUSTS = {
   rosie: { female: true, hair: "side", bun: true, freckles: true, outfit: "apron", pal: { skin: hex("#f2c4a0"), hair: hex("#c4492c"), bun: hex("#c4492c"), tie: [90, 120, 170], top: hex("#4d7a9c"), collar: [246, 242, 232], apron: [242, 234, 216], eye: [70, 120, 70] } },
@@ -845,7 +954,7 @@ const BUSTS = {
 };
 
 // ---------- public API ----------
-const HD_VER = "2", RW = 448, RH = 196, mem = {}, busy = {};
+const HD_VER = "4", RW = 448, RH = 196, mem = {}, busy = {};
 let worker = null, workerDead = false, chain = Promise.resolve();
 function toURL(img, scale = 1) {
   const c = document.createElement("canvas"); c.width = img.w; c.height = img.h; const x = c.getContext("2d"), d = x.createImageData(img.w, img.h);
@@ -870,6 +979,12 @@ async function produce(name) {
   try { localStorage.setItem(key, url); } catch {}
   return url;
 }
+// where a point of the world lands in the picture, as fractions of its width and height
+function project(S, p) {
+  const c = S.cam, f = (c.fr || 1.17), cp = Math.cos(c.pitch), sp = Math.sin(c.pitch), v = [p[0] - c.p[0], p[1] - c.p[1], p[2] - c.p[2]];
+  const fw = -sp * v[1] + cp * v[2], dx = v[0] / fw, dy = (cp * v[1] + sp * v[2]) / fw;
+  return [.5 + dx * f, .5 - dy * f * RW / RH];
+}
 const API = {
   STORY, BUSTS, makeBust, renderSync, renderAsync, finish, checkFloating,
   // finished picture of a place, or null while it is still being drawn
@@ -879,6 +994,15 @@ const API = {
     if (mem[name]) return Promise.resolve(mem[name]);
     return busy[name] || (busy[name] = chain = chain.then(() => produce(name)).then(u => { mem[name] = u; return u; }, () => null));
   },
+  // where each person stands in the picture: { who: { x, y (feet), h } } as fractions of the picture
+  spots(name) {
+    if (!STORY[name]) return {};
+    if (!mem["p:" + name]) { const S = STORY[name](), out = {};
+      for (const [who, [x, z]] of Object.entries(S.people || {})) { const a = project(S, [x, 0, z]), b = project(S, [x, CH / CT, z]); out[who] = { x: a[0], y: a[1], h: a[1] - b[1] }; }
+      mem["p:" + name] = out; }
+    return mem["p:" + name];
+  },
+  ratio: RW / RH,
   prefetch(names) { names.forEach(n => API.load(n)); },
   bust(who) {
     if (!BUSTS[who]) return null;

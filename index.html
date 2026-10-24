@@ -472,6 +472,9 @@ img.pix.mini.face{width:26px;height:26px;object-fit:cover;object-position:50% 22
 .actor.bust{height:96%}
 .actor.bust.enter{animation:bustin .4s cubic-bezier(.2,.8,.3,1) both}
 @keyframes bustin{from{opacity:0;transform:translateY(14%)}}
+/* the portrait grows out of the small figure standing in the place */
+.actor.bust.enter.fly{transform-origin:50% 100%;animation:bustfly .6s cubic-bezier(.3,.7,.25,1) both}
+@keyframes bustfly{0%{opacity:0;transform:translate(var(--dx),var(--dy)) scale(var(--s))}20%{opacity:1}100%{opacity:1;transform:none}}
 .actor.bust .fr{position:relative;height:100%;aspect-ratio:48/56}
 .actor.bust .fr img{position:absolute;inset:0;width:100%;height:100%;image-rendering:pixelated;filter:drop-shadow(0 0 1px rgba(255,226,170,.6)) drop-shadow(0 6px 4px rgba(0,0,0,.4))}
 .actor.bust .b1{opacity:0;animation:blink 4.2s steps(1) infinite}
@@ -2061,6 +2064,14 @@ const syActor = who => { const c = SY.st.cast[who]; if (!c) return ""; const b =
     return `<div class="actor bust${enter}" style="--ac:${c.color}"><div class="fr"><img class="b0" src="${b.base}" alt=""><img class="b1" src="${b.blink}" alt=""><img class="b2" src="${b.talk}" alt=""></div><small>${esc(c.name)}</small></div>`; }
   const img = pxPortrait(who);
   return `<div class="actor" style="--ac:${c.color}">${img || `<span>${esc(c.name[0])}</span>`}<small>${esc(c.name)}</small></div>`; };
+// starts the new portrait on the spot where that person stands in the picture
+function syFly() {
+  const a = document.querySelector(".actor.bust.enter"), st = a && a.closest(".stage"), sp = HD && SY.who && HD.spots(SY.scene)[SY.who];
+  if (!sp || !st.querySelector(".lay.hd")) return;
+  const W = st.clientWidth, H = st.clientHeight, k = Math.max(W / HD.ratio, H), iw = k * HD.ratio, ox = (W - iw) / 2, oy = (H - k) / 2;
+  a.style.setProperty("--dx", (ox + sp.x * iw - W / 2).toFixed(1) + "px"); a.style.setProperty("--dy", (oy + sp.y * k - H).toFixed(1) + "px");
+  a.style.setProperty("--s", (sp.h * k / a.clientHeight).toFixed(3)); a.classList.add("fly");
+}
 const syFace = who => { const b = HD && HD.bust(who); return b ? `<img class="pix mini face" src="${b.base}" alt="">` : pxPortrait(who, "pix mini"); };
 // the mouth moves while the voice speaks
 setInterval(() => { const st = document.querySelector(".stage"); if (!st) return; const on = !!(window.speechSynthesis && speechSynthesis.speaking);
@@ -2164,6 +2175,7 @@ function renderStory() {
       <div class="vn-box">${box}</div>
     </div></div>
     <div class="l-foot"><div class="l-foot-in vn-foot">${foot}</div></div>`;
+  syFly();
 }
 function finishStory() {
   const ch = SY.ch, prev = (S.story ||= {})[ch.id];

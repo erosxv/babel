@@ -46,7 +46,7 @@ Cuidado com aspas e vírgulas: cada frase fica entre aspas `"…"`, e os itens d
 
 **Retrato grande de um personagem** (`hd2d.js`, em `BUSTS`): cada um tem cabelo (`side`, `long`, `short`, `cap`, `helmet`), roupa (`apron`, `vest`, `kimono`, `armor`, `robe`, `tunic`), detalhes como `bun` (coque), `beard` (barba), `freckles` (sardas), `scar` (cicatriz), e as cores em `pal`. Um personagem novo sem retrato usa o desenho de `arte.js`.
 
-**Mexer num cenário HD-2D** (`hd2d.js`, em `STORY`): cada lugar é montado com blocos (`B`), cilindros (`CYL`), casas (`house`) e objetos prontos (`lantern`, `candle`, `hangLamp`, `stool`). Depois de mudar um cenário, aumente `HD_VER` para os aparelhos desenharem de novo. Peças soltas no ar são apontadas pela checagem `checkFloating`.
+**Mexer num cenário HD-2D** (`hd2d.js`, em `STORY`): cada lugar é montado com blocos (`B`), cilindros (`CYL`), casas (`house`) e objetos prontos (`lantern`, `candle`, `hangLamp`, `stool`). As pessoas entram com `person(S, "rosie", x, z)`: o visual pequeno de cada uma está em `FOLK`. Depois de mudar um cenário, aumente `HD_VER` para os aparelhos desenharem de novo. Peças soltas no ar são apontadas pela checagem `checkFloating`.
 
 **Mexer na versão simples do cenário** (`arte.js`, usada enquanto o HD-2D é desenhado): cada cenário em `SCENES` tem três camadas, `back` (o fundo, que aparece levemente desfocado), `mid` (o meio, nítido, onde fica o personagem) e `front` (coisas bem na frente, desfocadas). Em `lights` ficam os pontos de luz: `[posição horizontal %, posição vertical %, cor, tamanho]`. Em `rays`, os raios de sol que entram pela janela.
 
