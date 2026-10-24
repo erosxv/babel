@@ -1,0 +1,546 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Amostras HD-2D</title>
+<style>
+:root{--bg:#0f131b;--fg:#eef1f6;--mut:#9aa4b5;--card:#171d29;--acc:#e7b45a}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;padding:28px 16px 60px}
+main{max-width:1040px;margin:0 auto;display:grid;gap:40px}
+header h1{font-size:24px;margin:0 0 6px}
+header p{margin:0;color:var(--mut);line-height:1.5}
+.bar{display:flex;gap:10px;align-items:center;margin-top:14px;flex-wrap:wrap}
+button{font:inherit;font-weight:700;border:0;border-radius:10px;padding:9px 14px;background:var(--acc);color:#20160a;cursor:pointer}
+button.ghost{background:#263043;color:var(--fg)}
+figure{margin:0;display:grid;gap:12px}
+.scene{position:relative;aspect-ratio:16/9;overflow:hidden;border-radius:14px;background:#000;box-shadow:0 14px 50px #000a}
+.scene canvas{position:absolute;inset:0;width:100%;height:100%;image-rendering:pixelated}
+.scene canvas.fx{image-rendering:auto}
+.flat .scene canvas.fx,.flat .scene .ov{display:none}
+.ov{position:absolute;inset:0;pointer-events:none}
+.vig{background:radial-gradient(ellipse at 50% 46%,transparent 50%,rgba(6,4,10,.62) 100%)}
+.rays{mix-blend-mode:screen;opacity:.9}
+.rays i{position:absolute;transform-origin:0 0;height:2px;border-radius:2px;filter:blur(7px);animation:ray 7s ease-in-out infinite alternate}
+@keyframes ray{from{opacity:.35}to{opacity:.9}}
+.dust b{position:absolute;width:3px;height:3px;border-radius:50%;opacity:0;animation:dust 9s linear infinite}
+@keyframes dust{0%{opacity:0;transform:translate(0,0)}20%{opacity:.9}100%{opacity:0;transform:translate(26px,-60px)}}
+.flick{animation:flick .18s steps(2) infinite alternate}
+@keyframes flick{to{opacity:.82}}
+.load{position:absolute;inset:0;display:grid;place-items:center;color:var(--mut);font-weight:700}
+figcaption h2{font-size:18px;margin:0 0 4px}
+figcaption p{margin:0;color:var(--mut);line-height:1.5}
+footer{color:var(--mut);font-size:14px;line-height:1.6}
+</style>
+</head>
+<body>
+<main>
+<header>
+  <h1>Amostras de arte HD-2D para o Xibolete</h1>
+  <p>Cenários montados como uma maquete 3D com texturas em pixel, personagens em sprite, luz e sombra calculadas de verdade e, por cima, desfoque de profundidade, brilho e vinheta. Tudo desenhado por código, sem imagens prontas.</p>
+  <div class="bar"><button id="tog">Ver sem efeitos</button><span id="st" style="color:var(--mut)"></span></div>
+</header>
+<div id="list"></div>
+<footer>Inspirado nos princípios dos jogos HD-2D (Octopath Traveler, Triangle Strategy, Live A Live, Dragon Quest III HD-2D): maquete 3D, sprites em pixel, luz dinâmica, tilt-shift, bloom e vinheta. A arte é própria.</footer>
+</main>
+<script>
+"use strict";
+const W = 480, H = 270, T = 16; // render size; texels per world unit
+// ---------- math ----------
+const clamp = (v, a = 0, b = 1) => v < a ? a : v > b ? b : v;
+const mix = (a, b, t) => [a[0] + (b[0] - a[0]) * t, a[1] + (b[1] - a[1]) * t, a[2] + (b[2] - a[2]) * t];
+const mul = (a, k) => [a[0] * k, a[1] * k, a[2] * k];
+const dot = (a, b) => a[0] * b[0] + a[1] * b[1] + a[2] * b[2];
+const norm = a => { const l = Math.hypot(a[0], a[1], a[2]); return [a[0] / l, a[1] / l, a[2] / l]; };
+function hash(x, y, s = 0) { let h = (x * 374761393 + y * 668265263 + s * 982451653) | 0; h = Math.imul(h ^ (h >>> 13), 1274126177); h ^= h >>> 16; return (h >>> 0) / 4294967296; }
+function vnoise(x, y, s = 0) {
+  const xi = Math.floor(x), yi = Math.floor(y), xf = x - xi, yf = y - yi, u = xf * xf * (3 - 2 * xf), v = yf * yf * (3 - 2 * yf);
+  const a = hash(xi, yi, s), b = hash(xi + 1, yi, s), c = hash(xi, yi + 1, s), d = hash(xi + 1, yi + 1, s);
+  return a + (b - a) * u + (c - a) * v + (a - b - c + d) * u * v;
+}
+const fbm = (x, y, s) => vnoise(x, y, s) * .55 + vnoise(x * 2.1, y * 2.1, s + 7) * .3 + vnoise(x * 4.3, y * 4.3, s + 13) * .15;
+const pick = (arr, r) => arr[Math.min(arr.length - 1, (r * arr.length) | 0)];
+const jit = (c, r, k = .08) => mul(c, 1 - k + r * 2 * k);
+
+// ---------- primitives: convex solids given by planes (inside where n·p - d <= 0) ----------
+const B = (lo, hi, mat, o = {}) => ({ lo, hi, mat, planes: [
+  { n: [1, 0, 0], d: hi[0] }, { n: [-1, 0, 0], d: -lo[0] }, { n: [0, 1, 0], d: hi[1] },
+  { n: [0, -1, 0], d: -lo[1] }, { n: [0, 0, 1], d: hi[2] }, { n: [0, 0, -1], d: -lo[2] }], ...o });
+function hitAabb(o, d, lo, hi, tmax) {
+  let t0 = 0, t1 = tmax;
+  for (let a = 0; a < 3; a++) {
+    const inv = 1 / (d[a] || 1e-9); let ta = (lo[a] - o[a]) * inv, tb = (hi[a] - o[a]) * inv;
+    if (ta > tb) { const t = ta; ta = tb; tb = t; }
+    if (ta > t0) t0 = ta; if (tb < t1) t1 = tb; if (t0 > t1) return false;
+  }
+  return true;
+}
+function hitConvex(o, d, planes, tmax) {
+  let t0 = 1e-4, t1 = tmax, hn = null;
+  for (const P of planes) {
+    const dn = P.n[0] * d[0] + P.n[1] * d[1] + P.n[2] * d[2], dist = P.n[0] * o[0] + P.n[1] * o[1] + P.n[2] * o[2] - P.d;
+    if (Math.abs(dn) < 1e-9) { if (dist > 0) return null; continue; }
+    const t = -dist / dn;
+    if (dn < 0) { if (t > t0) { t0 = t; hn = P.n; } } else if (t < t1) t1 = t;
+    if (t0 > t1) return null;
+  }
+  return hn ? { t: t0, n: hn } : null;
+}
+// plane through a line in a vertical cross-section; s runs along world x (ax="x") or z (ax="z")
+function planeFrom(ax, s1, y1, s2, y2, inside) {
+  let ns = y2 - y1, ny = -(s2 - s1); const l = Math.hypot(ns, ny); ns /= l; ny /= l;
+  let n = ax === "x" ? [ns, ny, 0] : [0, ny, ns], d = ns * s1 + ny * y1;
+  if (ns * inside[0] + ny * inside[1] - d > 0) { n = n.map(v => -v); d = -d; }
+  return { n, d };
+}
+// house with a gable roof; ridge runs along x or z
+function house(S, x0, x1, z0, z1, h, R, ridge, wallMat, roofMat) {
+  S.prims.push(B([x0, 0, z0], [x1, h, z1], wallMat));
+  const ax = ridge === "z" ? "x" : "z", [a0, a1] = ridge === "z" ? [x0, x1] : [z0, z1], [b0, b1] = ridge === "z" ? [z0, z1] : [x0, x1];
+  const ac = (a0 + a1) / 2, k = R / (ac - a0), ov = .45, th = .2;
+  const along = (u0, u1) => ridge === "z" ? [{ n: [0, 0, 1], d: u1 }, { n: [0, 0, -1], d: -u0 }] : [{ n: [1, 0, 0], d: u1 }, { n: [-1, 0, 0], d: -u0 }];
+  const box3 = (s0, s1, y0, y1, u0, u1) => ridge === "z" ? [[s0, y0, u0], [s1, y1, u1]] : [[u0, y0, s0], [u1, y1, s1]];
+  const cut = (n, d) => ({ n: ax === "x" ? [n, 0, 0] : [0, 0, n], d });
+  // the triangular gable walls under the roof
+  const [glo, ghi] = box3(a0, a1, h, h + R, b0, b1);
+  S.prims.push({ lo: glo, hi: ghi, mat: wallMat, planes: [planeFrom(ax, a0, h, ac, h + R, [ac, h + .01]), planeFrom(ax, a1, h, ac, h + R, [ac, h + .01]), { n: [0, -1, 0], d: -h }, ...along(b0, b1)] });
+  // two sloped roof slabs
+  for (const side of [-1, 1]) {
+    const ae = side < 0 ? a0 - ov : a1 + ov, aw = side < 0 ? a0 : a1, mid = (aw + ac) / 2, my = h + k * Math.abs(mid - aw) + th / 2;
+    const outer = planeFrom(ax, aw, h + th, ac, h + R + th, [mid, my]), inner = planeFrom(ax, aw, h, ac, h + R, [mid, my]);
+    const [lo, hi] = box3(Math.min(ae, ac), Math.max(ae, ac), h - k * ov - .01, h + R + th + .01, b0 - ov, b1 + ov);
+    S.prims.push({ lo, hi, mat: roofMat, roof: { ax, ac }, planes: [outer, inner, cut(-side, -side * ae), cut(side, side * ac), ...along(b0 - ov, b1 + ov)] });
+  }
+}
+
+// ---------- sprites (billboards) ----------
+const BODY = [
+  "......oooo......", "....oohhhhoo....", "...ohhhhhhhho...", "..ohhhhhhhhhho..", "..ohhhhhhhhhHo..",
+  "..ohhssssshhHo..", "..ohsssssssshHo.", "..ohsesssesShHo.", "..ohsesssesShHo.", "..ohmsssssmShHo.",
+  "..ohsssmmsSShHo.", "...oSsssssSSo...", "....ooSSSSoo....", ".....osSSo......", "...ooccccccoo...",
+  "..occcaaaacccCo.", ".occcaaaaaacCCo.", ".occcaaaaaacCCo.", ".oscaaaaaaaaCSo.", ".oscaaaaaaaaCSo.",
+  ".oSsaaaaaaaaAsSo", "..ooaaaaaaaaAoo.", "...oaaaaaaaaAo..", "...oaaaaaaaaAo..", "...occcccCCCCo..",
+  "....occo.occo...", "....occo.oCCo...", "....obbo.obbo...", "...obbbo.obbbo..", "...oooo...oooo.."];
+const BUN = [".......oo.......", "......ohHo......", "......ohHo......"];
+function sprite(rows, pal) {
+  const h = rows.length, w = rows[0].length, px = new Array(w * h).fill(null);
+  rows.forEach((r, y) => { for (let x = 0; x < w; x++) { const c = pal[r[x]]; if (c) px[y * w + x] = c; } });
+  return { w, h, px };
+}
+const SKIN = { s: [238, 194, 154], S: [204, 148, 112], e: [42, 30, 44], m: [232, 140, 128], o: [44, 28, 34], b: [74, 48, 36] };
+const PEOPLE = {
+  rosie: sprite([...BUN, ...BODY], { ...SKIN, h: [206, 94, 50], H: [150, 62, 36], c: [86, 118, 168], C: [60, 84, 126], a: [238, 228, 208], A: [190, 178, 160] }),
+  mei: sprite(BODY, { ...SKIN, s: [240, 204, 168], h: [42, 38, 52], H: [26, 22, 34], c: [176, 58, 62], C: [126, 38, 46], a: [226, 176, 82], A: [176, 128, 52] }),
+  hero: sprite(BODY, { ...SKIN, h: [70, 92, 128], H: [48, 62, 90], c: [70, 92, 128], C: [48, 62, 90], a: [140, 104, 70], A: [104, 76, 50] }),
+  bram: sprite(BODY, { ...SKIN, s: [214, 164, 124], h: [156, 162, 172], H: [104, 108, 120], c: [146, 152, 164], C: [100, 104, 116], a: [128, 40, 44], A: [92, 28, 32] }),
+  marcus: sprite(BODY, { ...SKIN, s: [176, 120, 86], S: [140, 92, 64], h: [30, 24, 22], H: [18, 14, 14], c: [72, 112, 74], C: [50, 80, 52], a: [196, 168, 110], A: [150, 126, 80] }),
+};
+function procSprite(w, h, fn) { const px = new Array(w * h).fill(null); for (let y = 0; y < h; y++) for (let x = 0; x < w; x++) px[y * w + x] = fn(x, y); return { w, h, px }; }
+const FLAME = procSprite(6, 10, (x, y) => {
+  const cx = (x - 2.5) / 3, t = y / 9, wdt = Math.sin(t * Math.PI) * (1 - t * .3) + (t > .8 ? .4 : 0), r = Math.abs(cx) / (wdt + .01);
+  if (r > 1 || (y < 2 && hash(x, y, 3) > .5)) return null;
+  return r < .45 && t > .4 ? [255, 246, 196] : r < .75 && t > .2 ? [255, 186, 76] : [238, 102, 34];
+});
+const CRYSTAL = procSprite(9, 17, (x, y) => {
+  const cx = Math.abs(x - 4), lim = y < 8 ? y * .55 : (16 - y) * .5;
+  if (cx > lim) return null;
+  return cx > lim - 1 ? [70, 170, 230] : x < 4 ? [200, 250, 255] : [120, 220, 250];
+});
+function tree(seed, leaf) {
+  return procSprite(44, 60, (x, y) => {
+    const tx = Math.abs(x - 22);
+    if (y > 36) return tx < 3 - (y > 55 ? -1 : 0) ? (x < 22 ? [104, 70, 46] : [78, 50, 34]) : null;
+    let best = 0, shade = 0;
+    for (let k = 0; k < 9; k++) {
+      const bx = 8 + hash(k, 1, seed) * 28, by = 8 + hash(k, 2, seed) * 24, br = 7 + hash(k, 3, seed) * 6;
+      const dx = (x - bx) / br, dy = (y - by) / br, d = dx * dx + dy * dy;
+      if (d < 1 && 1 - d > best) { best = 1 - d; shade = -dx - dy; }
+    }
+    if (!best) return null;
+    if (best < .12 && hash(x, y, seed) > .5) return null;
+    const lv = shade + (hash(x, y, seed + 4) - .5) * .5;
+    return lv > .7 ? mul(leaf, 1.35) : lv > .1 ? leaf : lv > -.6 ? mul(leaf, .74) : mul(leaf, .52);
+  });
+}
+const POT = procSprite(10, 12, (x, y) => {
+  if (y >= 6) { const w = y < 7 ? 5 : 4; return Math.abs(x - 4.5) <= w ? (y === 6 ? [196, 110, 70] : x < 5 ? [176, 94, 58] : [140, 72, 44]) : null; }
+  const h = hash(x, y, 9); if (Math.hypot(x - 4.5, y - 3.5) > 4.6) return null;
+  return h > .78 ? [236, 92, 120] : h > .62 ? [250, 214, 90] : h > .3 ? [86, 140, 64] : [60, 104, 48];
+});
+
+// ---------- materials (texel-snapped, so surfaces read as pixel art) ----------
+function uvOf(p, n) { const ax = Math.abs(n[0]), ay = Math.abs(n[1]); return ay > .7 ? [p[0], p[2]] : ax > .7 ? [p[2], -p[1]] : [p[0], -p[1]]; }
+function bricks(seed, pal, bw = 8, bh = 4, mortar = [54, 40, 34]) {
+  return (p, n) => {
+    const [u, v] = uvOf(p, n), ui = Math.floor(u * T), vi = Math.floor(v * T), row = Math.floor(vi / bh), off = (((row % 2) + 2) % 2) * (bw / 2);
+    const bx = Math.floor((ui + off) / bw), lx = ((ui + off) % bw + bw) % bw, ly = ((vi % bh) + bh) % bh;
+    if (lx === 0 || ly === 0) return { c: jit(mortar, hash(ui, vi, seed), .1) };
+    const r = hash(bx, row, seed); let c = jit(pick(pal, r), hash(ui, vi, seed + 1), .05);
+    if (ly === 1) c = mul(c, 1.12); if (ly === bh - 1) c = mul(c, .86);
+    if (hash(bx, row, seed + 9) > .93 && lx > 1 && lx < bw - 1) c = mul(c, .7); // worn/cracked brick
+    return { c };
+  };
+}
+function cobble(seed, pal) {
+  return p => {
+    const ui = Math.floor(p[0] * T), vi = Math.floor(p[2] * T), row = Math.floor(vi / 5), off = (((row % 2) + 2) % 2) * 3;
+    const cx = Math.floor((ui + off) / 6), lx = ((ui + off) % 6 + 6) % 6, ly = ((vi % 5) + 5) % 5;
+    if (lx === 0 || ly === 0) return { c: jit([78, 72, 66], hash(ui, vi, seed), .1) };
+    let c = jit(pick(pal, hash(cx, row, seed)), hash(ui, vi, seed + 2), .04);
+    const patch = fbm(p[0] * .25, p[2] * .25, seed); c = mix(c, [176, 150, 112], clamp((patch - .55) * 2.5) * .5);
+    if (fbm(p[0] * .6, p[2] * .6, seed + 3) > .7 && hash(cx, row, seed + 7) > .5) c = mix(c, [96, 128, 70], .55); // grass between stones
+    if ((lx === 1 || lx === 5) && (ly === 1 || ly === 4)) c = mul(c, .82); else if (ly === 1 || lx === 1) c = mul(c, 1.1); else if (ly === 4) c = mul(c, .9);
+    return { c };
+  };
+}
+const planks = (seed, base, w = 5, gap = [24, 16, 12], alongX = false) => (p, n) => {
+  let [u, v] = uvOf(p, n); if (alongX) [u, v] = [v, u];
+  const ui = Math.floor(u * T), vi = Math.floor(v * T), pk = Math.floor(ui / w), lx = ((ui % w) + w) % w;
+  if (lx === 0) return { c: gap };
+  const seg = Math.floor((vi + hash(pk, 0, seed) * 40) / 40);
+  if ((((vi + Math.floor(hash(pk, 0, seed) * 40)) % 40) + 40) % 40 === 0) return { c: mul(base, .55) };
+  let c = jit(base, hash(pk, seg, seed), .12); c = mul(c, .93 + .1 * vnoise(lx * .7, vi * .25, seed + pk));
+  if (lx === 1) c = mul(c, 1.1); if (lx === w - 1) c = mul(c, .86);
+  return { c };
+};
+const stoneBlocks = (seed, base) => bricks(seed, [base, mul(base, .92), mul(base, 1.06), mul(base, .86)], 16, 8, mul(base, .55));
+const flat = (c, k = .06, seed = 1) => (p, n) => { const [u, v] = uvOf(p, n); return { c: jit(c, hash(Math.floor(u * T), Math.floor(v * T), seed), k) }; };
+const emit = c => () => ({ c, e: c });
+const roofTiles = (seed, base) => (p, n, pr) => {
+  const s = pr.roof.ax === "x" ? p[0] : p[2], along = pr.roof.ax === "x" ? p[2] : p[0];
+  const ui = Math.floor(along * T), vi = Math.floor(Math.abs(s - pr.roof.ac) * T * 1.25), row = Math.floor(vi / 4), off = (row % 2) * 3;
+  let c = jit(base, hash(Math.floor((ui + off) / 6), row, seed), .1);
+  const ly = vi % 4; if (ly === 3) c = mul(c, .6); else if (ly === 0) c = mul(c, 1.15);
+  if ((ui + off) % 6 === 0) c = mul(c, .8);
+  if (hash(Math.floor((ui + off) / 6), row, seed + 5) > .94) c = mix(c, [96, 120, 64], .55); // moss
+  return { c };
+};
+// half-timbered plaster wall with windows, a door and a stone base
+function plaster(seed, x0, x1, z0, z1, h, opts = {}) {
+  const wood = [92, 60, 40], cream = opts.wall || [226, 210, 180];
+  return (p, n) => {
+    const facingZ = Math.abs(n[2]) > .7, u = facingZ ? p[0] - x0 : p[2] - z0, wdt = facingZ ? x1 - x0 : z1 - z0, y = p[1];
+    const ui = Math.floor(u * T), vi = Math.floor(y * T), r = hash(ui, vi, seed);
+    if (Math.abs(n[1]) > .7) return { c: jit(wood, r) };
+    if (y < .4) return stoneBlocks(seed, [150, 142, 130])([u, y, 0], [0, 0, 1]);
+    const front = facingZ && n[2] < 0, mid = wdt / 2;
+    if (front && opts.door !== false && Math.abs(u - mid) < .45 && y < 1.55) {
+      if (Math.abs(u - mid) > .38 || y > 1.48) return { c: jit([70, 44, 30], r) };
+      const pk = Math.floor((u - mid + .45) * T / 3); let c = jit([120, 78, 46], hash(pk, 1, seed), .1);
+      if (Math.floor((u - mid + .45) * T) % 3 === 0) c = mul(c, .7);
+      if (Math.abs(u - mid - .22) < .05 && Math.abs(y - .8) < .05) c = [220, 180, 90];
+      return { c };
+    }
+    // timber frame
+    if (y > h - .14 || (y > 1.68 && y < 1.8) || u < .1 || u > wdt - .1) return { c: jit(wood, r) };
+    const bay = 1.4, bu = ((u % bay) + bay) % bay;
+    if (bu < .1) return { c: jit(wood, r) };
+    // windows on each floor
+    for (const [wy0, wy1] of [[.75, 1.4], [2.05, 2.7]]) {
+      if (wy1 > h - .2) continue;
+      if (bu > .4 && bu < 1.05 && y > wy0 - .06 && y < wy1 + .06) {
+        if (front && opts.door !== false && Math.abs(u - mid) < 1 && wy0 < 1) break;
+        const lx = bu - .4, ly = y - wy0;
+        if (y < wy0 || y > wy1 || lx < .06 || lx > .59) return { c: jit(wood, r) };
+        if (Math.abs(lx - .325) < .035 || Math.abs(ly - .32) < .035) return { c: jit(wood, r) };
+        let g = opts.lit ? [255, 206, 128] : mix([46, 58, 84], [110, 140, 170], clamp(1 - ly / .65));
+        if (!opts.lit && lx > .1 && lx < .2 && ly > .4) g = [190, 214, 230];
+        return opts.lit ? { c: g, e: mul(g, .9) } : { c: g, spec: true };
+      }
+      if (bu > .36 && bu < 1.09 && y > wy0 - .2 && y < wy0 - .06) { // flower box
+        if (y > wy0 - .12) { const f = hash(ui, vi, seed + 3); return { c: f > .6 ? [232, 84, 110] : f > .35 ? [250, 210, 90] : [80, 136, 62] }; }
+        return { c: jit([110, 72, 46], r) };
+      }
+    }
+    // diagonal braces in the upper half
+    const du = bu - .1, dv = y - 1.8;
+    if (dv > 0 && Math.abs(du - dv * .9) < .07 && du < 1.3) return { c: jit(wood, r) };
+    let c = jit(cream, r, .03); c = mul(c, .96 + .06 * vnoise(u * 6, y * 6, seed));
+    return { c };
+  };
+}
+function water(seed, deep, shallow) {
+  return (p, n, pr, d) => {
+    const ui = Math.floor(p[0] * 8), vi = Math.floor(p[2] * 8);
+    const w = vnoise(p[0] * 1.3, p[2] * 3.2, seed) * .6 + vnoise(p[0] * 3.1, p[2] * 7, seed + 2) * .4;
+    const c = mix(deep, shallow, clamp(w * 1.1 - .1));
+    return { c, water: true, wave: (w - .5) * .16, spark: hash(ui, vi, seed + 3) };
+  };
+}
+
+// ---------- the tracer ----------
+function trace(S, o, d, depth = 0, skip = null) {
+  let bt = S.far, best = null, sp = null;
+  for (const pr of S.prims) {
+    if (pr === skip || !hitAabb(o, d, pr.lo, pr.hi, bt)) continue;
+    const h = hitConvex(o, d, pr.planes, bt); if (h && h.t < bt) { bt = h.t; best = { pr, n: h.n }; }
+  }
+  for (const s of S.sprites) {
+    const t = (s.z - o[2]) / d[2]; if (!(t > 1e-4 && t < bt)) continue;
+    const x = o[0] + d[0] * t, y = o[1] + d[1] * t, u = (x - s.x) / s.w + .5, v = (s.y + s.h - y) / s.h;
+    if (u < 0 || u >= 1 || v < 0 || v >= 1) continue;
+    const tx = s.img.px[((v * s.img.h) | 0) * s.img.w + ((u * s.img.w) | 0)]; if (!tx) continue;
+    bt = t; sp = { s, tx }; best = null;
+  }
+  if (!best && !sp) return { c: S.sky(d), t: 1e9 };
+  const p = [o[0] + d[0] * bt, o[1] + d[1] * bt, o[2] + d[2] * bt];
+  let alb, em = null, n, m = null;
+  if (sp) { alb = sp.tx; n = [0, 0, -1]; if (sp.s.emit) em = mul(alb, sp.s.emit); }
+  else { n = best.n; m = best.pr.mat(p, n, best.pr, d); alb = m.c; em = m.e || null; }
+  const isSprite = !!sp, po = isSprite ? [p[0] - d[0] * .02, p[1] - d[1] * .02, p[2] - d[2] * .02] : [p[0] + n[0] * 1e-3, p[1] + n[1] * 1e-3, p[2] + n[2] * 1e-3];
+  let L = [...S.amb];
+  // soft contact shadows under every sprite that stands on the floor
+  let ao = 1;
+  if (n[1] > .9) for (const s of S.sprites) if (s.blob) {
+    const dx = (p[0] - s.x) / (s.w * .55), dz = (p[2] - s.z) / .28, r2 = dx * dx + dz * dz;
+    if (r2 < 1 && Math.abs(p[1] - s.y) < .05) ao *= .45 + .55 * r2;
+  }
+  if (S.sun) {
+    const nd = isSprite ? Math.max(.12, .35 - S.sun.dir[2] * .55) : dot(n, S.sun.dir);
+    if (nd > 0 && !occluded(S, po, S.sun.dir, 80, sp && sp.s)) L = [L[0] + S.sun.c[0] * nd, L[1] + S.sun.c[1] * nd, L[2] + S.sun.c[2] * nd];
+  }
+  for (const l of S.lights) {
+    const v = [l.p[0] - p[0], l.p[1] - p[1], l.p[2] - p[2]], dist = Math.hypot(v[0], v[1], v[2]); if (dist >= l.r) continue;
+    const ld = [v[0] / dist, v[1] / dist, v[2] / dist], nd = isSprite ? .45 - ld[2] * .5 : dot(n, ld); if (nd <= 0) continue;
+    const att = (1 - dist / l.r) ** 2;
+    if (occluded(S, po, ld, dist - .1, sp && sp.s)) continue;
+    L = [L[0] + l.c[0] * att * nd, L[1] + l.c[1] * att * nd, L[2] + l.c[2] * att * nd];
+  }
+  let c = [alb[0] * L[0] * ao, alb[1] * L[1] * ao, alb[2] * L[2] * ao];
+  if (m && m.water) {
+    const rn = norm([m.wave, 1, m.wave * .6]), rd = [d[0] - 2 * dot(d, rn) * rn[0], d[1] - 2 * dot(d, rn) * rn[1], d[2] - 2 * dot(d, rn) * rn[2]];
+    const fr = .25 + .65 * Math.pow(1 - Math.abs(d[1]), 4);
+    const rc = depth < 1 ? trace(S, p, rd, depth + 1, best.pr).c : S.sky(rd);
+    c = mix(c, rc, fr);
+    if (S.sun) { const sd = dot(rd, S.sun.dir); if (sd > .96 && m.spark > .82) c = mix(c, [255, 246, 220], clamp((sd - .96) * 30) * 1.4); }
+  }
+  if (m && m.spec && S.sun) { const r = d[1] < 0 ? .25 : .1; c = mix(c, S.sky([d[0], -d[1], d[2]]), r); }
+  if (em) c = [c[0] + em[0], c[1] + em[1], c[2] + em[2]];
+  // atmospheric haze: far things fade into the air colour
+  const f = 1 - Math.exp(-Math.max(0, bt - S.fog.start) * S.fog.k);
+  c = mix(c, S.fog.c, clamp(f) * S.fog.max);
+  return { c, t: bt };
+}
+function occluded(S, o, d, tmax, skipSprite) {
+  for (const pr of S.prims) { if (pr.noShadow || !hitAabb(o, d, pr.lo, pr.hi, tmax)) continue; if (hitConvex(o, d, pr.planes, tmax)) return true; }
+  for (const s of S.sprites) {
+    if (s.noShadow || s === skipSprite) continue;
+    const t = (s.z - o[2]) / d[2]; if (!(t > 1e-3 && t < tmax)) continue;
+    const x = o[0] + d[0] * t, y = o[1] + d[1] * t, u = (x - s.x) / s.w + .5, v = (s.y + s.h - y) / s.h;
+    if (u < 0 || u >= 1 || v < 0 || v >= 1) continue;
+    if (s.img.px[((v * s.img.h) | 0) * s.img.w + ((u * s.img.w) | 0)]) return true;
+  }
+  return false;
+}
+function camRay(S, x, y) {
+  const c = S.cam, dx = (x + .5 - W / 2) / c.f, dy = -(y + .5 - H / 2) / c.f, cp = Math.cos(c.pitch), sp = Math.sin(c.pitch);
+  return norm([dx, dy * cp - sp, dy * sp + cp]);
+}
+async function render(S, onRow) {
+  const col = new Float32Array(W * H * 3), dep = new Float32Array(W * H), o = S.cam.p;
+  for (let y = 0; y < H; y++) {
+    for (let x = 0; x < W; x++) {
+      const r = trace(S, o, camRay(S, x, y)), i = y * W + x;
+      col[i * 3] = r.c[0]; col[i * 3 + 1] = r.c[1]; col[i * 3 + 2] = r.c[2]; dep[i] = r.t;
+    }
+    if (y % 12 === 11) { onRow(y / H); await new Promise(requestAnimationFrame); }
+  }
+  return { col, dep };
+}
+
+// ---------- post: tone, depth of field (tilt-shift), bloom ----------
+function tone(v, g) { v *= g; return v > 205 ? 205 + (v - 205) / (1 + (v - 205) / 70) : v; }
+function post(S, fig, { col, dep }) {
+  const mk = (w, h) => { const c = document.createElement("canvas"); c.width = w; c.height = h; return c; };
+  const sharp = mk(W, H), sx = sharp.getContext("2d"), img = sx.createImageData(W, H);
+  const bloom = mk(W, H), bx = bloom.getContext("2d"), bimg = bx.createImageData(W, H);
+  const mask = mk(W, H), mx = mask.getContext("2d"), mimg = mx.createImageData(W, H);
+  const D = S.dof;
+  for (let i = 0; i < W * H; i++) {
+    const r = tone(col[i * 3], S.grade[0]), g = tone(col[i * 3 + 1], S.grade[1]), b = tone(col[i * 3 + 2], S.grade[2]);
+    img.data[i * 4] = r; img.data[i * 4 + 1] = g; img.data[i * 4 + 2] = b; img.data[i * 4 + 3] = 255;
+    const lum = .3 * col[i * 3] + .59 * col[i * 3 + 1] + .11 * col[i * 3 + 2], k = clamp((lum - S.bloom.t) / 120);
+    bimg.data[i * 4] = r * k; bimg.data[i * 4 + 1] = g * k; bimg.data[i * 4 + 2] = b * k; bimg.data[i * 4 + 3] = 255;
+    const t = dep[i], a = t < D.near ? (D.near - t) / D.nearRamp : t > D.far ? (t - D.far) / D.farRamp : 0;
+    mimg.data[i * 4 + 3] = clamp(a) * 255;
+  }
+  sx.putImageData(img, 0, 0); bx.putImageData(bimg, 0, 0); mx.putImageData(mimg, 0, 0);
+  const SW = W * 2, SH = H * 2;
+  const flatC = fig.querySelector("canvas.flat"); flatC.width = W; flatC.height = H; flatC.getContext("2d").drawImage(sharp, 0, 0);
+  const out = fig.querySelector("canvas.fx"); out.width = SW; out.height = SH;
+  const ox = out.getContext("2d"); ox.imageSmoothingEnabled = false; ox.drawImage(sharp, 0, 0, SW, SH);
+  // blurred copy kept only where the depth mask says "out of focus"
+  const bl = mk(SW, SH), blx = bl.getContext("2d");
+  blx.filter = `blur(${D.blur}px)`; blx.imageSmoothingEnabled = false; blx.drawImage(sharp, 0, 0, SW, SH);
+  blx.filter = "blur(3px)"; blx.globalCompositeOperation = "destination-in"; blx.imageSmoothingEnabled = true; blx.drawImage(mask, 0, 0, SW, SH);
+  ox.drawImage(bl, 0, 0);
+  // bloom: bright parts glow
+  ox.globalCompositeOperation = "lighter"; ox.imageSmoothingEnabled = true;
+  ox.globalAlpha = S.bloom.a; ox.filter = "blur(10px)"; ox.drawImage(bloom, 0, 0, SW, SH);
+  ox.globalAlpha = S.bloom.a * .7; ox.filter = "blur(28px)"; ox.drawImage(bloom, 0, 0, SW, SH);
+  ox.globalAlpha = 1; ox.filter = "none"; ox.globalCompositeOperation = "source-over";
+}
+
+// ---------- scenes ----------
+const SCENES = [];
+// 1 — temple hall at night (stone ruins open to the sky, torches, a crystal)
+SCENES.push(() => {
+  const S = { prims: [], sprites: [], lights: [], far: 200,
+    cam: { p: [0, 5.6, -13.5], pitch: .2, f: 600 },
+    amb: [.13, .12, .19], sun: { dir: norm([-.35, 1, -.25]), c: [.24, .3, .5] },
+    fog: { c: [18, 14, 26], start: 14, k: .05, max: .8 }, grade: [1.04, 1, .96],
+    bloom: { t: 150, a: .75 }, dof: { near: 15.5, nearRamp: 4, far: 27, farRamp: 8, blur: 5 },
+    sky: d => { const y = clamp(d[1] * 2.5); let c = mix([34, 36, 74], [8, 10, 28], y); if (hash(Math.floor(d[0] * 300), Math.floor(d[1] * 300), 4) > .996) c = [230, 230, 255]; return c; } };
+  const floor = bricks(11, [[124, 82, 54], [140, 94, 60], [110, 70, 46], [132, 90, 62]], 8, 4, [62, 42, 32]);
+  const wall = bricks(12, [[150, 112, 82], [138, 100, 72], [160, 122, 90], [126, 92, 68]], 8, 4, [70, 52, 40]);
+  const stone = stoneBlocks(13, [146, 136, 120]), pillar = stoneBlocks(14, [168, 150, 126]), iron = flat([52, 50, 56]);
+  S.prims.push(B([-16, -1, -4], [16, 0, 40], floor));
+  S.prims.push(B([-7, 0, 11.5], [7, .4, 40], stone), B([-5, .4, 12.4], [5, .8, 40], stone), B([-1.1, .8, 13.6], [1.1, 1.5, 15], pillar));
+  // back wall with two arched openings to the night sky
+  S.prims.push(B([-16, 0, 18], [-8.5, 12, 19], wall), B([-5.5, 0, 18], [5.5, 12, 19], wall), B([8.5, 0, 18], [16, 12, 19], wall),
+    B([-8.5, 4.6, 18], [-5.5, 12, 19], wall), B([5.5, 4.6, 18], [8.5, 12, 19], wall),
+    B([-8.5, 3.9, 18], [-7.9, 4.6, 19], wall), B([-6.1, 3.9, 18], [-5.5, 4.6, 19], wall), B([5.5, 3.9, 18], [6.1, 4.6, 19], wall), B([7.9, 3.9, 18], [8.5, 4.6, 19], wall));
+  S.prims.push(B([-16, 0, -4], [-12.5, 9, 19], wall), B([12.5, 0, -4], [16, 9, 19], wall));
+  for (const [x, z] of [[-4.6, 4], [4.6, 4], [-4.6, 10], [4.6, 10]]) {
+    S.prims.push(B([x - .55, 0, z - .55], [x + .55, .35, z + .55], stone), B([x - .42, .35, z - .42], [x + .42, 5.4, z + .42], pillar), B([x - .6, 5.4, z - .6], [x + .6, 5.8, z + .6], stone));
+  }
+  // broken pillar and rubble near the camera, plus a low wall (out of focus)
+  S.prims.push(B([-12.5, 0, -1.5], [-6, 1.1, -.3], wall), B([6.5, 0, -.8], [10, .7, .1], pillar));
+  for (const [x, z] of [[-2.7, 6.8], [2.7, 6.8], [-6.8, 13], [6.8, 13]]) {
+    S.prims.push(B([x - .07, 0, z - .07], [x + .07, 1.3, z + .07], iron, { noShadow: true }), B([x - .22, 1.3, z - .22], [x + .22, 1.44, z + .22], iron));
+    S.sprites.push({ x, y: 1.44, z, w: .45, h: .75, img: FLAME, emit: 1.1, noShadow: true });
+    S.lights.push({ p: [x, 1.95, z - .05], c: [1.7, .9, .38], r: 7 });
+  }
+  S.sprites.push({ x: 0, y: 1.5, z: 14.3, w: .62, h: 1.15, img: CRYSTAL, emit: .9, noShadow: true });
+  // red carpet to the altar and banners on the back wall
+  const carpet = (p) => { const e = Math.abs(p[0]); const ui = Math.floor(p[0] * T), vi = Math.floor(p[2] * T); if (e > .95) return { c: [200, 160, 70] }; if (e > .85) return { c: [110, 30, 34] }; const r = (Math.floor(p[2] * 2) + Math.floor(Math.abs(p[0]) * 3)) % 2; return { c: jit(r ? [150, 38, 44] : [136, 32, 40], hash(ui, vi, 71), .05) }; };
+  S.prims.push(B([-1.05, 0, 1], [1.05, .03, 11.5], carpet, { noShadow: true }));
+  const banner = (p) => { const u = Math.abs(p[0] - Math.round(p[0] / 3.4) * 3.4), y = p[1]; if (u > .55) return { c: [200, 160, 70] }; const zig = Math.abs(y - 6.4) < 1 && u < .45 - Math.abs(y - 6.4) * .35 - (Math.floor((y - 5.4) * 4) % 2 ? 0 : .08); return { c: zig ? [236, 196, 96] : jit([140, 30, 40], hash(Math.floor(p[0] * T), Math.floor(y * T), 72), .06) }; };
+  for (const x of [-10.2, -3.4, 3.4, 10.2]) S.prims.push(B([x - .62, 4.8, 17.9], [x + .62, 8.6, 18], banner));
+  for (const x of [-11.3, -2.2, 2.2, 11.3]) {
+    S.prims.push(B([x - .12, 3.4, 17.6], [x + .12, 3.6, 18], iron));
+    S.sprites.push({ x, y: 3.6, z: 17.7, w: .4, h: .66, img: FLAME, emit: 1.1, noShadow: true });
+    S.lights.push({ p: [x, 4.1, 17.3], c: [1.5, .8, .34], r: 6 });
+  }
+  S.lights.push({ p: [0, 2.3, 13.7], c: [.35, 1.05, 1.6], r: 10 });
+  [["bram", -1.7], ["hero", -.55], ["rosie", .6], ["mei", 1.75]].forEach(([k, x], i) => {
+    const img = PEOPLE[k]; S.sprites.push({ x, y: 0, z: 5.6 + (i % 2) * .35, w: img.w / T, h: img.h / T, img, blob: true });
+  });
+  return S;
+});
+// 2 — harbour at sunset (wooden pier, sea, a ship in the haze)
+SCENES.push(() => {
+  const sunDir = norm([-.32, .11, 1]);
+  const S = { prims: [], sprites: [], lights: [], far: 400,
+    cam: { p: [0, 6.4, -18], pitch: .16, f: 560 },
+    amb: [.34, .3, .44], sun: { dir: sunDir, c: [1.45, .92, .55] },
+    fog: { c: [232, 164, 140], start: 26, k: .012, max: .75 }, grade: [1.05, 1, .95],
+    bloom: { t: 190, a: .55 }, dof: { near: 16.5, nearRamp: 4, far: 27, farRamp: 22, blur: 5 },
+    sky: d => {
+      const y = clamp(d[1] * 2.2), sd = dot(d, sunDir);
+      let c = mix([252, 184, 132], [84, 96, 160], Math.pow(y, .55));
+      const cl = fbm(d[0] / (d[1] + .15) * 1.6, 1 / (d[1] + .15) * 2.2, 5);
+      if (d[1] > .02 && cl > .55) c = mix(c, mix([255, 196, 160], [150, 100, 130], clamp((d[1] - .02) * 4)), clamp((cl - .55) * 3) * .8);
+      c = [c[0] + 255 * Math.pow(Math.max(sd, 0), 60) * .8, c[1] + 180 * Math.pow(Math.max(sd, 0), 60) * .8, c[2] + 110 * Math.pow(Math.max(sd, 0), 60) * .6];
+      if (sd > .9994) c = [420, 380, 300];
+      return c;
+    } };
+  const deck = planks(21, [138, 96, 62], 5), post = planks(22, [96, 66, 44], 4), crate = planks(23, [164, 118, 70], 4), hull = planks(24, [104, 64, 42], 4, [40, 26, 20], true), sail = flat([236, 226, 204], .03), rope = flat([176, 150, 104]);
+  S.prims.push(B([-14, -.3, -10], [14, 0, 3.6], deck));
+  for (let x = -12; x <= 12; x += 2.4) S.prims.push(B([x - .16, -1.2, 3.35], [x + .16, .85, 3.65], post));
+  S.prims.push(B([-12.5, .55, 3.45], [12.5, .62, 3.55], rope, { noShadow: true }));
+  S.prims.push(B([-8.2, 0, .4], [-7, 1.1, 1.6], crate), B([-7, 0, .6], [-6.1, .8, 1.5], crate), B([-8, 1.1, .6], [-7.2, 1.8, 1.4], crate), B([6, 0, -.6], [7.2, .9, .5], crate));
+  S.prims.push(B([-80, -3, 3.6], [80, -.62, 400], water(25, [18, 54, 76], [46, 108, 120])));
+  // moored rowing boat
+  S.prims.push(B([2.6, -.95, 5.2], [6.6, -.35, 6.5], hull), B([3, -.62, 5.4], [6.2, -.4, 6.3], flat([70, 44, 30])), B([4.2, -.5, 5.3], [4.6, -.35, 6.4], hull));
+  // distant ship
+  S.prims.push(B([-9, -.9, 52], [-1, .7, 54.4], hull), B([-8.6, .7, 52.3], [-6.4, 1.8, 54.1], hull), B([-2.4, .7, 52.5], [-1.2, 1.4, 54], hull));
+  S.prims.push(B([-5.2, .7, 53.1], [-4.95, 9, 53.3], post), B([-3, .7, 53.1], [-2.8, 7.5, 53.3], post));
+  S.prims.push(B([-6.6, 3, 53.15], [-3.6, 7.8, 53.25], sail), B([-4.2, 2.6, 53.15], [-1.6, 6.6, 53.25], sail), B([-7.6, 2.2, 53.15], [-5.6, 5.2, 53.25], sail));
+  // far coast and the ziggurat of Babel in the haze
+  const rock = stoneBlocks(26, [120, 110, 112]);
+  S.prims.push(B([18, -1, 90], [70, 7, 110], rock), B([24, 7, 95], [50, 11, 110], rock));
+  for (let t = 0; t < 7; t++) { const w = 34 - t * 4.6; S.prims.push(B([-62 - w / 2, -1 + t * 3.2, 140 + t * 2], [-62 + w / 2, -1 + (t + 1) * 3.2, 170 - t * 2], stone2)); }
+  function stone2(p, n) { return stoneBlocks(27, [168, 150, 132])(p, n); }
+  S.lights.push({ p: [1.2, 1.55, 3.1], c: [1.3, .82, .4], r: 5 });
+  S.prims.push(B([1.1, .85, 3.35], [1.3, 1.35, 3.6], flat([60, 50, 46]), { noShadow: true }));
+  S.sprites.push({ x: 1.2, y: 1.3, z: 3.3, w: .32, h: .5, img: FLAME, emit: 1, noShadow: true });
+  [["hero", -1.9, 1.7], ["marcus", -.6, 2.1]].forEach(([k, x, z]) => { const img = PEOPLE[k]; S.sprites.push({ x, y: 0, z, w: img.w / T, h: img.h / T, img, blob: true }); });
+  return S;
+});
+// 3 — village square on a spring morning
+SCENES.push(() => {
+  const S = { prims: [], sprites: [], lights: [], far: 300,
+    cam: { p: [0, 6.6, -15], pitch: .17, f: 560 },
+    amb: [.42, .43, .52], sun: { dir: norm([-.55, .85, -.2]), c: [1.25, 1.06, .8] },
+    fog: { c: [200, 218, 236], start: 30, k: .012, max: .55 }, grade: [1.02, 1, .98],
+    bloom: { t: 210, a: .5 }, dof: { near: 16.5, nearRamp: 2, far: 31, farRamp: 40, blur: 5 },
+    sky: d => { const y = clamp(d[1] * 2); let c = mix([214, 230, 242], [80, 140, 214], Math.pow(y, .5)); const cl = fbm(d[0] / (d[1] + .2) * 2, 1 / (d[1] + .2) * 3, 8); if (cl > .64) c = mix(c, [250, 250, 252], clamp((cl - .64) * 5)); return c; } };
+  S.prims.push(B([-30, -1, -6], [30, 0, 160], cobble(31, [[156, 146, 132], [142, 134, 122], [166, 154, 138], [134, 124, 114]])));
+  const roof = roofTiles(32, [170, 76, 54]), roofB = roofTiles(33, [86, 104, 140]);
+  house(S, -15, -7, 13, 18, 3.3, 2.2, "x", plaster(41, -15, -7, 13, 18, 3.3), roof);
+  house(S, -6, .5, 15, 20, 4, 2.6, "z", plaster(42, -6, .5, 15, 20, 4, { wall: [236, 222, 196] }), roofB);
+  house(S, 1.6, 8.6, 13.5, 18.5, 3.1, 2, "x", plaster(43, 1.6, 8.6, 13.5, 18.5, 3.1, { wall: [222, 200, 168] }), roof);
+  house(S, 9.8, 15.5, 14, 19, 3.8, 2.4, "z", plaster(44, 9.8, 15.5, 14, 19, 3.8), roofB);
+  house(S, -18, -12, 2, 9.5, 3.2, 2.2, "z", plaster(45, -18, -12, 2, 9.5, 3.2, { door: false }), roof);
+  S.prims.push(B([-4.6, 6, 17], [-3.9, 8.5, 17.7], bricks(46, [[150, 100, 80], [130, 86, 70]])));
+  // the ziggurat beyond the rooftops
+  const zig = stoneBlocks(47, [210, 186, 150]);
+  for (let t = 0; t < 6; t++) { const w = 40 - t * 6.4; S.prims.push(B([5 - w / 2, t * 2.6, 85 + t * 3], [5 + w / 2, (t + 1) * 2.6, 120 - t * 3], zig)); }
+  // well
+  const stone = stoneBlocks(48, [150, 144, 136]), wood = planks(49, [120, 82, 52], 4);
+  S.prims.push(B([-1, 0, 6.2], [1, .75, 7.8], stone), B([-.8, .7, 6.4], [.8, .76, 7.6], water(50, [30, 70, 90], [60, 110, 130])));
+  S.prims.push(B([-.95, .75, 6.9], [-.8, 2.1, 7.1], wood), B([.8, .75, 6.9], [.95, 2.1, 7.1], wood), B([-1.2, 2.1, 6.6], [1.2, 2.3, 7.4], roofTilesBox));
+  function roofTilesBox(p, n) { return { c: jit([170, 76, 54], hash(Math.floor(p[0] * T), Math.floor(p[2] * T), 5)) }; }
+  // market stall with a striped awning
+  const awn = p => { const s = Math.floor((p[0] - 3.4) * T / 5); return { c: s % 2 ? [244, 236, 220] : [64, 118, 176] }; };
+  S.prims.push(B([3.4, 0, 6.8], [7, .95, 7.6], wood), B([3.4, .95, 6.7], [7, 1.05, 7.7], planks(51, [156, 112, 70], 4)));
+  S.prims.push(B([3.45, 0, 8.3], [3.6, 2.2, 8.45], wood), B([6.8, 0, 8.3], [6.95, 2.2, 8.45], wood), B([3.45, 0, 6.85], [3.6, 1.8, 7], wood), B([6.8, 0, 6.85], [6.95, 1.8, 7], wood));
+  S.prims.push({ lo: [3.2, 1.7, 6.4], hi: [7.2, 2.35, 8.6], mat: awn, planes: [{ n: [1, 0, 0], d: 7.2 }, { n: [-1, 0, 0], d: -3.2 }, { n: [0, 0, 1], d: 8.6 }, { n: [0, 0, -1], d: -6.4 },
+    planeFrom("z", 6.4, 1.8, 8.6, 2.3, [7.5, 2.0]), planeFrom("z", 6.4, 1.72, 8.6, 2.22, [7.5, 2.0])].map(P => P.n ? P : P) });
+  // fruit on the counter
+  for (let i = 0; i < 18; i++) { const x = 3.6 + (i % 9) * .38, z = 6.85 + Math.floor(i / 9) * .35, c = [[206, 46, 44], [244, 200, 60], [120, 176, 64]][Math.floor(i / 3) % 3];
+    S.prims.push(B([x, 1.05, z], [x + .26, 1.27, z + .26], () => ({ c }))); }
+  S.prims.push(B([7.3, 0, 6.6], [8.1, .8, 7.4], wood), B([7.4, .8, 6.7], [8, 1.3, 7.3], wood), B([2.4, 0, 7], [3.1, .6, 7.7], wood));
+  // trees and flowers (billboards); one tree very close to the camera, out of focus
+  S.sprites.push({ x: -9.5, y: 0, z: 10.5, w: 5, h: 6.8, img: tree(61, [84, 140, 70]) }, { x: 12.6, y: 0, z: 10.8, w: 4.4, h: 6, img: tree(62, [96, 150, 74]) },
+    { x: -8.6, y: 0, z: -2.5, w: 6, h: 8.2, img: tree(63, [70, 124, 62]) });
+  for (const [x, z] of [[-2.2, 12.6], [-1.2, 12.6], [9.2, 12.4], [-6.6, 12], [2.2, 4.4]]) S.sprites.push({ x, y: 0, z, w: .62, h: .75, img: POT, blob: true });
+  [["rosie", -2.6, 5.2], ["hero", .2, 4.4], ["mei", 5.2, 8.0], ["bram", -5.4, 9.2], ["marcus", 9, 8.6]].forEach(([k, x, z]) => { const img = PEOPLE[k]; S.sprites.push({ x, y: 0, z, w: img.w / T, h: img.h / T, img, blob: true }); });
+  return S;
+});
+
+// ---------- page ----------
+const INFO = [
+  { t: "Salão do Zigurate, à noite", p: "Ruína de tijolos aberta para o céu: as tochas criam poças de luz quente com sombras de verdade, o cristal joga uma luz azul e a lua deixa tudo frio nas bordas. Primeiro plano e fundo desfocados, como uma maquete fotografada.",
+    rays: [[22, -4, 70, "rgba(150,180,255,.3)", 420], [74, -4, 110, "rgba(150,180,255,.3)", 420]], dust: "#ffd9a0", flick: true },
+  { t: "Porto ao pôr do sol", p: "Píer de madeira em pixel, mar com reflexo e brilhos, um navio e o zigurate sumindo na névoa. A luz vem de trás, então os personagens ficam em contraluz, e a lanterna do píer dá o toque quente.",
+    rays: [[24, 6, 40, "rgba(255,200,150,.35)", 700], [30, 0, 60, "rgba(255,200,150,.25)", 640], [30, 0, 68, "rgba(255,200,150,.2)", 560]], dust: "#ffe2c0" },
+  { t: "Praça de Shinar, de manhã", p: "Casas enxaimel com telhado de telha, poço, barraca de frutas e o zigurate de Babel ao fundo. A árvore bem perto da câmera fica desfocada e emoldura a cena, como nos jogos HD-2D.",
+    rays: [[8, -4, 40, "rgba(255,246,210,.3)", 700], [14, -4, 44, "rgba(255,246,210,.22)", 640]], dust: "#fffbe8" },
+];
+const list = document.getElementById("list"); list.style.cssText = "display:grid;gap:40px";
+const figs = INFO.map((inf, i) => {
+  const f = document.createElement("figure");
+  const rays = inf.rays.map(([x, y, a, c, w]) => `<i style="left:${x}%;top:${y}%;width:${w}px;height:${w / 7}px;transform:rotate(${a}deg);background:linear-gradient(90deg,${c},transparent)"></i>`).join("");
+  const dust = Array.from({ length: 22 }, (_, k) => `<b style="left:${(k * 41) % 100}%;top:${15 + (k * 57) % 80}%;background:${inf.dust};box-shadow:0 0 6px ${inf.dust};animation-delay:${(k * .83) % 9}s;animation-duration:${7 + (k % 5)}s"></b>`).join("");
+  f.innerHTML = `<div class="scene"><canvas class="flat"></canvas><canvas class="fx${inf.flick ? " flick" : ""}"></canvas><div class="ov rays">${rays}</div><div class="ov dust">${dust}</div><div class="ov vig"></div><div class="load">Desenhando… 0%</div></div>
+    <figcaption><h2>${i + 1}. ${inf.t}</h2><p>${inf.p}</p></figcaption>`;
+  list.appendChild(f); return f;
+});
+document.getElementById("tog").onclick = e => { const on = document.body.classList.toggle("flat"); e.target.textContent = on ? "Ver com efeitos" : "Ver sem efeitos"; };
+(async () => {
+  const st = document.getElementById("st");
+  for (let i = 0; i < SCENES.length; i++) {
+    const S = SCENES[i](), load = figs[i].querySelector(".load"), t0 = performance.now();
+    const r = await render(S, p => load.textContent = `Desenhando… ${Math.round(p * 100)}%`);
+    post(S, figs[i], r); load.remove();
+    st.textContent = `Cena ${i + 1} pronta em ${((performance.now() - t0) / 1000).toFixed(1)} s`;
+  }
+  st.textContent = "";
+  window.__done = true;
+})();
+</script>
+</body>
+</html>
