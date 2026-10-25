@@ -961,7 +961,7 @@ function playRecorded(text, lang, slow, onEnd) {
   stopVoice();
   const n = clip.n, mine = () => clip.n === n;
   clip.a = voiceEl; clip.held = false;
-  const fail = () => { if (!mine()) return; clip.a = null; speakDevice(text, lang, slow); };
+  const fail = () => { if (!mine()) return; clip.a = null; speakDevice(text, lang, slow, onEnd); };
   voiceEl.onended = () => { if (!mine()) return; clip.a = null; if (onEnd) onEnd(); };
   voiceEl.onerror = fail;
   // loaded as a whole file (not streamed), so the offline copy works on iPhones too
@@ -971,11 +971,12 @@ function playRecorded(text, lang, slow, onEnd) {
     .catch(() => { clipUrls.delete(url); fail(); });
   return true;
 }
-function speak(text, lang, slow) {
-  if (!playRecorded(first(text).trim(), lang, slow)) speakDevice(text, lang, slow);
+function speak(text, lang, slow, onEnd) {
+  if (!playRecorded(first(text).trim(), lang, slow, onEnd)) speakDevice(text, lang, slow, onEnd);
 }
-function speakDevice(text, lang, slow) {
-  if (!canSpeak()) return;
+// onEnd runs when the line has been said in full (not when it is cut off by another line)
+function speakDevice(text, lang, slow, onEnd) {
+  if (!canSpeak()) { if (onEnd) onEnd(); return; }
   if (!voices.length) loadVoices();
   const v = voiceFor(lang);
   try {
@@ -985,6 +986,7 @@ function speakDevice(text, lang, slow) {
     const u = new SpeechSynthesisUtterance(first(text));
     if (v) { u.voice = v; u.lang = v.lang; } else u.lang = LANGS[lang].voice;
     u.rate = slow ? .7 : 1; u.pitch = 1;
+    if (onEnd) u.onend = onEnd;
     if (busy) setTimeout(() => speechSynthesis.speak(u), 80); else speechSynthesis.speak(u);
   } catch {}
   if (!v && voices.length && !noVoiceWarned[lang]) {
@@ -2078,7 +2080,8 @@ function syNext() {
 function syGlow() { SY.shards++; SY.glow = true; setTimeout(() => { if (SY) SY.glow = false; }, 1200); }
 // every spoken score counts toward the chapter's pronunciation grade
 function syScore(score) { SY.scores.push(score); countSpoken(score); if (score >= GREAT) syGlow(); }
-function syChoose(o, score, res) {
+// quiet: the learner's line is being read aloud, and the reaction waits for it (syOpt)
+function syChoose(o, score, res, quiet) {
   const n = syNode(); if (!n.choice || SY.pick) return;
   SY.pick = o; SY.pickScore = score ?? null; SY.pickRes = res || null; SY.back = null;
   if (o.ok) {
@@ -2089,7 +2092,7 @@ function syChoose(o, score, res) {
     if (S.sound) tone(300, 0, .2, "triangle", .08);
   }
   save(); renderStory();
-  if (o.react) setTimeout(() => SY && SY.pick === o && speak(o.react, SY.l), 250);
+  if (o.react && !quiet) setTimeout(() => SY && SY.pick === o && speak(o.react, SY.l), 250);
 }
 function syHeard(res) {
   const n = syNode(); if (!SY || !n.choice || SY.pick) return;
@@ -2530,7 +2533,8 @@ const A = {
   syStart: d => startStory(d.id),
   syNext: () => syNext(),
   syTr: () => { SY.trOn = !SY.trOn; renderStory(); },
-  syOpt: d => { const n = syNode(), o = n.choice[+d.i]; speak(o.t, SY.l); syChoose(o); },
+  syOpt: d => { const n = syNode(), o = n.choice[+d.i]; if (!n.choice || SY.pick) return;
+    syChoose(o, null, null, true); speak(o.t, SY.l, false, () => setTimeout(() => SY && SY.pick === o && o.react && speak(o.react, SY.l), 200)); },
   syMic: () => {
     if (!SY || SY.pick || !canListen()) return;
     if (SY.listening) { if (rec) try { rec.stop(); } catch {} return; }
