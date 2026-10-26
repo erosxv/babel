@@ -42,6 +42,9 @@ for (let n = 1; n <= 30; n++) add(pay("over", n), TEACHER);
 for (const p of prices) for (let n = 0; n < p; n++) add(pay("short", n, p), TEACHER);
 add("Hey! Can I get a coffee, please?", TEACHER);
 
+// every word of every line, alone: tapping a word in the app says it with this clip
+for (const t of [...out.keys()]) for (const w of t.match(/[\p{L}\p{M}\p{N}]+(?:['’-][\p{L}\p{M}]+)*/gu) || []) add(w, TEACHER);
+
 const list = [...out].map(([text, voice]) => ({ key: audioKey(text), text, voice }));
 fs.writeFileSync(path.join(__dirname, "frases-en.json"), JSON.stringify(list, null, 1));
 console.log(list.length, "frases,", list.reduce((a, x) => a + x.text.length, 0), "letras");
