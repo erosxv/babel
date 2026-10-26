@@ -4590,13 +4590,244 @@
   "voice": "af_heart"
  },
  {
-  "key": "7c3f812f",
-  "text": "morning",
+  "key": "c40bf6cc",
+  "text": "A",
+  "voice": "af_heart",
+  "tts": "ay"
+ },
+ {
+  "key": "c00bf080",
+  "text": "E",
+  "voice": "af_heart",
+  "tts": "ee"
+ },
+ {
+  "key": "597d11c6",
+  "text": "egg",
   "voice": "af_heart"
+ },
+ {
+  "key": "cc0c0364",
+  "text": "I",
+  "voice": "af_heart",
+  "tts": "eye"
+ },
+ {
+  "key": "72e0f880",
+  "text": "ice",
+  "voice": "af_heart"
+ },
+ {
+  "key": "ca0c003e",
+  "text": "O",
+  "voice": "af_heart",
+  "tts": "oh"
+ },
+ {
+  "key": "45b473eb",
+  "text": "orange",
+  "voice": "af_heart"
+ },
+ {
+  "key": "d00c09b0",
+  "text": "U",
+  "voice": "af_heart",
+  "tts": "you"
+ },
+ {
+  "key": "f590e1e5",
+  "text": "umbrella",
+  "voice": "af_heart"
+ },
+ {
+  "key": "dc0c1c94",
+  "text": "Y",
+  "voice": "af_heart",
+  "tts": "why"
+ },
+ {
+  "key": "c70bfb85",
+  "text": "B",
+  "voice": "af_heart",
+  "tts": "bee"
+ },
+ {
+  "key": "348f1364",
+  "text": "ball",
+  "voice": "af_heart"
+ },
+ {
+  "key": "c60bf9f2",
+  "text": "C",
+  "voice": "af_heart",
+  "tts": "see"
+ },
+ {
+  "key": "c10bf213",
+  "text": "D",
+  "voice": "af_heart",
+  "tts": "dee"
+ },
+ {
+  "key": "e668bd09",
+  "text": "dog",
+  "voice": "af_heart"
+ },
+ {
+  "key": "c30bf539",
+  "text": "F",
+  "voice": "af_heart",
+  "tts": "eff"
+ },
+ {
+  "key": "afad8963",
+  "text": "fish",
+  "voice": "af_heart"
+ },
+ {
+  "key": "c20bf3a6",
+  "text": "G",
+  "voice": "af_heart",
+  "tts": "jee"
+ },
+ {
+  "key": "4249d707",
+  "text": "game",
+  "voice": "af_heart"
+ },
+ {
+  "key": "cd0c04f7",
+  "text": "H",
+  "voice": "af_heart",
+  "tts": "aitch"
+ },
+ {
+  "key": "cf0c081d",
+  "text": "J",
+  "voice": "af_heart",
+  "tts": "jay"
+ },
+ {
+  "key": "ce0c068a",
+  "text": "K",
+  "voice": "af_heart",
+  "tts": "kay"
+ },
+ {
+  "key": "6815c86c",
+  "text": "key",
+  "voice": "af_heart"
+ },
+ {
+  "key": "c90bfeab",
+  "text": "L",
+  "voice": "af_heart",
+  "tts": "el"
+ },
+ {
+  "key": "d52792d1",
+  "text": "love",
+  "voice": "af_heart"
+ },
+ {
+  "key": "c80bfd18",
+  "text": "M",
+  "voice": "af_heart",
+  "tts": "em"
+ },
+ {
+  "key": "cb0c01d1",
+  "text": "N",
+  "voice": "af_heart",
+  "tts": "en"
  },
  {
   "key": "e6de9f61",
   "text": "night",
+  "voice": "af_heart"
+ },
+ {
+  "key": "d50c118f",
+  "text": "P",
+  "voice": "af_heart",
+  "tts": "pee"
+ },
+ {
+  "key": "d40c0ffc",
+  "text": "Q",
+  "voice": "af_heart",
+  "tts": "cue"
+ },
+ {
+  "key": "0fb740c9",
+  "text": "queen",
+  "voice": "af_heart"
+ },
+ {
+  "key": "d70c14b5",
+  "text": "R",
+  "voice": "af_heart",
+  "tts": "are"
+ },
+ {
+  "key": "d60c1322",
+  "text": "S",
+  "voice": "af_heart",
+  "tts": "ess"
+ },
+ {
+  "key": "e04e3f61",
+  "text": "sun",
+  "voice": "af_heart"
+ },
+ {
+  "key": "d10c0b43",
+  "text": "T",
+  "voice": "af_heart",
+  "tts": "tee"
+ },
+ {
+  "key": "d30c0e69",
+  "text": "V",
+  "voice": "af_heart",
+  "tts": "vee"
+ },
+ {
+  "key": "9625faa2",
+  "text": "van",
+  "voice": "af_heart"
+ },
+ {
+  "key": "d20c0cd6",
+  "text": "W",
+  "voice": "af_heart",
+  "tts": "double you"
+ },
+ {
+  "key": "dd0c1e27",
+  "text": "X",
+  "voice": "af_heart",
+  "tts": "ex"
+ },
+ {
+  "key": "70c67e32",
+  "text": "box",
+  "voice": "af_heart"
+ },
+ {
+  "key": "df0c214d",
+  "text": "Z",
+  "voice": "af_heart",
+  "tts": "zee"
+ },
+ {
+  "key": "927c3c2b",
+  "text": "zoo",
+  "voice": "af_heart"
+ },
+ {
+  "key": "7c3f812f",
+  "text": "morning",
   "voice": "af_heart"
  },
  {
@@ -4617,11 +4848,6 @@
  {
   "key": "406f344d",
   "text": "are",
-  "voice": "af_heart"
- },
- {
-  "key": "cc0c0364",
-  "text": "I",
   "voice": "af_heart"
  },
  {
@@ -5070,11 +5296,6 @@
   "voice": "af_heart"
  },
  {
-  "key": "d52792d1",
-  "text": "love",
-  "voice": "af_heart"
- },
- {
   "key": "74e1ca29",
   "text": "Well",
   "voice": "af_heart"
@@ -5397,11 +5618,6 @@
  {
   "key": "79cc63fa",
   "text": "password's",
-  "voice": "af_heart"
- },
- {
-  "key": "6815c86c",
-  "text": "key",
   "voice": "af_heart"
  },
  {
@@ -5867,11 +6083,6 @@
  {
   "key": "51180c4a",
   "text": "Huh",
-  "voice": "af_heart"
- },
- {
-  "key": "c40bf6cc",
-  "text": "A",
   "voice": "af_heart"
  },
  {
@@ -7215,11 +7426,6 @@
   "voice": "af_heart"
  },
  {
-  "key": "afad8963",
-  "text": "fish",
-  "voice": "af_heart"
- },
- {
   "key": "a847e0a9",
   "text": "shop",
   "voice": "af_heart"
@@ -7515,11 +7721,6 @@
   "voice": "af_heart"
  },
  {
-  "key": "45b473eb",
-  "text": "orange",
-  "voice": "af_heart"
- },
- {
   "key": "7ac4d962",
   "text": "would",
   "voice": "af_heart"
@@ -7557,11 +7758,6 @@
  {
   "key": "94e2dfef",
   "text": "eggs",
-  "voice": "af_heart"
- },
- {
-  "key": "597d11c6",
-  "text": "egg",
   "voice": "af_heart"
  },
  {

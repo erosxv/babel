@@ -20,7 +20,7 @@ for i, ln in enumerate(lines):
     mp3 = os.path.join(outdir, ln["key"] + ".mp3")
     if os.path.exists(mp3):
         continue
-    audio, sr = k.create(ln["text"], voice=ln["voice"], speed=1.0, lang="en-us")
+    audio, sr = k.create(ln.get("tts", ln["text"]), voice=ln["voice"], speed=1.0, lang="en-us")
     buf = io.BytesIO()
     sf.write(buf, audio, sr, format="WAV")
     subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-f", "wav", "-i", "-", "-ac", "1", "-b:a", "48k", mp3], input=buf.getvalue(), check=True)
