@@ -10,6 +10,7 @@ Todo o conteúdo do app fica em arquivos de texto separados do código. Para mud
 | `conversas.js` | As situações da aba Conversas |
 | `historia.js` | O modo História em inglês: personagens, itens da mochila, dicas e capítulos |
 | `historia-ru.js` | O modo História em russo: outra história (Белоречье e o relógio parado), com o mesmo formato |
+| `glossario.js` | O que cada palavra quer dizer: aparece no balão quando o aluno toca numa palavra. Para ver quais palavras ainda faltam, rode `node tools/glossario-faltam.js` |
 | `arte.js` | A pixel art: o visual dos personagens e dos cenários |
 | `hd2d.js` | A arte HD-2D da história: os cenários em 3D (`STORY`) e os retratos grandes de quem fala (`BUSTS`) |
 | `hd2d-worker.js` | Desenha os cenários em segundo plano (não precisa mexer) |
@@ -61,6 +62,11 @@ Cuidado com aspas e vírgulas: cada frase fica entre aspas `"…"`, e os itens d
 **As frases do capítulo** (`phrases`, no fim de cada capítulo em `historia.js`) são usadas no treino de fala do final e podem ir para o caderno. Escolha frases curtas do dia a dia.
 
 **Criar um capítulo:** copie um capítulo inteiro em `historia.js` (de `{ id: "a1c3"` até o `},` que fecha ele), mude o `id` (por exemplo `a2c1` para o primeiro capítulo do Arco 2), o número `n`, o título e as falas. Quando um arco tiver todos os capítulos, marque `done: true` nele para sumir o aviso "Próximos capítulos em breve". Cada idioma tem a sua própria história: não traduza uma para a outra. Para criar a de outro idioma, copie `historia-ru.js` com outro nome (por exemplo `historia-es.js`), troque `ru` pela sigla do idioma, escreva um enredo e personagens novos (os lugares e as pessoas são desenhados em `hd2d.js`, nas listas `STORY`, `FOLK` e `BUSTS`, e em `arte.js`, na lista `CHARS`), escreva as dicas, ajuste `pay` (os números e a palavra “moeda”) e acrescente o arquivo em `index.html` (logo depois de `historia-ru.js`) e na lista `SHELL` de `sw.js`. O comentário no topo de `historia.js` explica cada tipo de cena: narração, fala, escolha, explorar objetos, procurar algo, pagar e memória.
+
+## Palavras tocáveis e meta diária
+
+- Em histórias, conversas e lições, cada palavra do idioma estudado tem um tracejado embaixo. Ao tocar, ela é falada sozinha e aparece um balão com o significado, tirado de `glossario.js` (significados separados por ` / `). Se a palavra não estiver lá, o app procura no vocabulário das lições em `data.js`.
+- Ao escolher um idioma, o app faz algumas perguntas (por que estudar, quanto já sabe, quantos minutos por dia). A meta de minutos pode ser trocada depois em Perfil. O tempo só conta enquanto o aluno está numa lição, história ou conversa e mexeu no app no último minuto e meio.
 
 ## Gerar as vozes
 

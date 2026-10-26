@@ -248,6 +248,28 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .onb-lang .badge{width:56px;height:40px;font-size:18px;border-radius:10px}
 .onb-lang[aria-pressed="true"]{border-color:var(--bc);background:color-mix(in srgb,var(--bc) 10%,var(--surface))}
 .onb h2{font-size:20px;margin-bottom:12px}
+/* welcome questions: one per screen, progress on top, the answer button pinned at the bottom */
+.onb.plan{display:flex;flex-direction:column;min-height:100dvh;padding-top:calc(16px + env(safe-area-inset-top,0px));padding-bottom:0}
+.onb-top{display:flex;align-items:center;gap:12px;margin-bottom:22px}
+.onb-top .bar{flex:1}
+.onb-top .x{width:40px;height:40px;flex:none;border:0;background:none;color:var(--muted);border-radius:10px;display:grid;place-items:center}
+.onb-top .x svg{width:26px;height:26px}
+.plan-body{flex:1;display:grid;align-content:start;gap:4px}
+.plan-body h1{font-size:clamp(26px,5vw,36px)}
+.plan-opts{max-width:520px;width:100%;margin:10px auto 0;text-align:left}
+.plan-opts .opt{min-height:58px}
+.opt[aria-pressed="true"] .pm{color:var(--lang)}
+.pi{font-size:24px;width:32px;text-align:center;flex:none}
+.pm{margin-left:auto;color:var(--muted);font-weight:700}
+.lvbars{display:flex;align-items:flex-end;gap:3px;height:22px;width:32px;flex:none}
+.lvbars i{flex:1;border-radius:2px;background:var(--line-2)}
+.lvbars i:nth-child(1){height:30%}.lvbars i:nth-child(2){height:55%}.lvbars i:nth-child(3){height:80%}.lvbars i:nth-child(4){height:100%}
+.lvbars i.on{background:var(--lang)}
+.plan-card{max-width:520px;width:100%;margin:14px auto 0;display:grid;gap:10px;text-align:left}
+.plan-card p{margin:0;background:var(--paper);color:var(--paper-ink);border-radius:8px;box-shadow:0 4px 0 var(--paper-edge);padding:12px 14px}
+.plan-card b{display:block;font-size:18px}.plan-card span{color:#6d5f86;font-weight:700}
+.plan-foot{position:sticky;bottom:0;background:var(--bg);padding:16px 0 calc(16px + env(safe-area-inset-bottom,0px));margin-top:22px}
+.plan-foot .btn{width:100%;max-width:520px}
 .onb .chips{justify-content:center;margin-bottom:28px}
 .tower{width:120px;height:120px;margin:0 auto}
 
@@ -512,6 +534,18 @@ img.pix.mini.face{width:26px;height:26px;object-fit:cover;object-position:50% 22
 .vn-line.small .vn-en{font-size:17px}
 .vn-line.upset{border-left-color:var(--bad)}
 .vn-name{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;color:var(--ac)}
+/* tappable words: a dotted line under each, lit while it is said */
+.tw{border-bottom:2px dotted color-mix(in srgb,currentColor 35%,transparent);cursor:pointer;border-radius:3px;transition:background-color 120ms ease,color 120ms ease;-webkit-user-select:none;user-select:none;touch-action:manipulation}
+.gloss{position:fixed;z-index:80;max-width:min(260px,calc(100vw - 16px));padding:8px 0;background:#14111f;color:var(--ink);border:1px solid color-mix(in srgb,var(--lamp) 30%,transparent);border-radius:12px;box-shadow:0 10px 28px rgba(0,0,0,.45);font:600 15px/1.35 var(--body);animation:glossIn 140ms var(--ease-out,ease-out)}
+.gloss div{padding:5px 14px}
+.gloss div+div{border-top:1px solid rgba(243,234,216,.12)}
+.gloss::before{content:"";position:absolute;left:calc(var(--ax) - 7px);width:14px;height:14px;background:#14111f;border:inherit;transform:rotate(45deg)}
+.gloss.down::before{top:-8px;border-right:0;border-bottom:0}
+.gloss.up::before{bottom:-8px;border-left:0;border-top:0}
+@keyframes glossIn{from{opacity:0;transform:translateY(-4px)}}
+@media (prefers-reduced-motion: reduce){.gloss{animation:none}}
+.tw.on{background:color-mix(in srgb,var(--lamp) 55%,transparent);border-bottom-color:transparent}
+@media (hover: hover) and (pointer: fine){.tw:hover{background:color-mix(in srgb,var(--lamp) 25%,transparent)}}
 .vn-en{margin:2px 0 0;font-size:21px;font-weight:800;line-height:1.3}
 .vn-q{margin:0;font-weight:800;color:var(--muted)}
 .vn-opts .opt{font-size:17px;min-height:54px}
@@ -699,6 +733,7 @@ textarea.lines::placeholder{color:#a3acbb}
 <script src="hd2d.js"></script>
 <script src="historia.js"></script>
 <script src="historia-ru.js"></script>
+<script src="glossario.js"></script>
 <script>
 (() => {
 "use strict";
@@ -756,7 +791,7 @@ const KEY = "babel-save-v1"; // name from before the app was renamed; kept so sa
 const fresh = () => ({
   v: 1, onboarded: false, lang: "en", view: "learn", xp: 0, coins: 50, hearts: 5, heartsAt: Date.now(),
   streak: 0, bestStreak: 0, lastDay: null, freezes: 0, goal: 30, day: {}, boostUntil: 0,
-  sound: true, translit: true, progress: {}, chests: {}, srs: {}, ach: {}, quests: {}, speech: {}, talks: {}, voicePick: {}, story: {}, bag: [], noMicUntil: 0,
+  sound: true, translit: true, progress: {}, chests: {}, srs: {}, ach: {}, quests: {}, speech: {}, talks: {}, voicePick: {}, story: {}, bag: [], noMicUntil: 0, plan: {},
   stats: { lessons: 0, perfect: 0, maxCombo: 0, reviews: 0, langs: {}, correct: 0, answered: 0, owl: false, early: false, chests: 0, spoken: 0, spokenGreat: 0, speechTests: 0, talks: 0, story: 0 },
 });
 let S = fresh();
@@ -784,6 +819,28 @@ function today() {
   }
   return S.day[k];
 }
+
+// ---------- daily time goal ----------
+// Each language has its own plan: why the learner studies it, how much they already know and how many
+// minutes a day they want to give it. Study time counts while a lesson, talk, story, the speaking page or
+// the notebook is open, the app is on screen and the learner touched it in the last 90 seconds (an app
+// left open on the table does not count).
+const GOAL_MINS = [[5, "Leve"], [10, "Regular"], [15, "Sério"], [20, "Intenso"]];
+const GOAL_XP = { 5: 10, 10: 30, 15: 50, 20: 70 };  // the "earn X XP" quest grows with the time goal
+const goalMin = (k = S.lang) => (S.plan[k] && S.plan[k].min) || 10;
+const studySec = (k = S.lang, d = today()) => (d.sec && d.sec[k]) || 0;
+let lastTouch = Date.now();
+for (const e of ["pointerdown", "keydown"]) addEventListener(e, () => { lastTouch = Date.now(); }, { passive: true, capture: true });
+setInterval(() => {
+  if (!S.onboarded || document.hidden || Date.now() - lastTouch > 90e3) return;
+  const busy = !$("#lesson").hidden || ["speak", "notes"].includes(S.view) && $("#onb").hidden;
+  if (!busy) return;
+  const k = typeof SY !== "undefined" && SY ? SY.l : S.lang, d = today(), had = studySec(k, d), goal = goalMin(k) * 60;
+  (d.sec ||= {})[k] = had + 5;
+  save();
+  if (had < goal && had + 5 >= goal) { sfx("done"); toast(`Meta de hoje cumprida: ${goalMin(k)} min de ${LANGS[k].learning}!`, "flame"); }
+  document.querySelectorAll(".goal").forEach(g => { g.outerHTML = goalHtml(); });
+}, 5000);
 
 // ---------- course structure ----------
 // Every unit: 3 lessons, then a speaking test that closes it (NL nodes in all).
@@ -1210,9 +1267,9 @@ function renderChrome() {
   $("#side").innerHTML = sideHtml();
 }
 function goalHtml() {
-  const d = today(), pct = Math.min(1, d.xp / S.goal), C = 2 * Math.PI * 26;
+  const k = S.lang, g = goalMin(k), sec = studySec(k), m = Math.floor(sec / 60), pct = Math.min(1, sec / (g * 60)), C = 2 * Math.PI * 26;
   return `<div class="goal"><div class="ring"><svg viewBox="0 0 64 64"><circle class="tr" cx="32" cy="32" r="26"/><circle class="pr" cx="32" cy="32" r="26" stroke-dasharray="${C.toFixed(1)}" stroke-dashoffset="${(C * (1 - pct)).toFixed(1)}"/></svg><b>${Math.round(pct * 100)}%</b></div>
-    <div><strong>${pct >= 1 ? "Meta do dia batida!" : "Meta do dia"}</strong><p class="muted"><b>${d.xp}</b> de ${S.goal} XP hoje${S.streak ? ` · sequência de ${S.streak} ${S.streak === 1 ? "dia" : "dias"}` : ""}</p></div></div>`;
+    <div><strong>${pct >= 1 ? "Meta de hoje cumprida!" : "Meta de hoje"}</strong><p class="muted"><b>${m}</b> de ${g} min de ${esc(LANGS[k].learning)}${S.streak ? ` · sequência de ${S.streak} ${S.streak === 1 ? "dia" : "dias"}` : ""}</p></div></div>`;
 }
 function questsHtml() {
   const d = today(), claimed = S.quests[dkey()] || {};
@@ -1333,9 +1390,10 @@ function viewProfile() {
     <button class="btn ghost only-phone" data-act="go" data-v="ach">${I("trophy")}Ver conquistas</button>
     <div class="tiles">${tiles.map(([ic, c, v, l]) => `<div class="tile"><span style="color:${c}">${I(ic)}</span><div><b>${v}</b><span>${l}</span></div></div>`).join("")}</div>
     <div class="card"><h3>Seus idiomas</h3>${LKEYS.map(k => { const L = LANGS[k], p = coursePct(k); return `<button class="lang-row" data-act="setLang" data-k="${k}"><span class="badge" style="--bc:${L.color}">${L.code}</span>
-      <div><b>${esc(L.name)}</b> <small>· ${learnedCount(k)} palavras · ${p}% do curso</small><div class="bar"><i style="width:${p}%;background:${L.color}"></i></div></div>${k === S.lang ? `<small style="color:${L.color}">atual</small>` : "<small>trocar</small>"}</button>`; }).join("")}</div>
+      <div><b>${esc(L.name)}</b> <small>· ${learnedCount(k)} palavras · ${p}% do curso${S.plan[k] ? ` · meta ${goalMin(k)} min/dia` : ""}</small><div class="bar"><i style="width:${p}%;background:${L.color}"></i></div></div>${k === S.lang ? `<small style="color:${L.color}">atual</small>` : "<small>trocar</small>"}</button>`; }).join("")}</div>
     <div class="card"><h3>Ajustes</h3>
-      <div class="set-row"><div><b>Meta diária</b><p>Quanto XP você quer ganhar por dia.</p></div><div class="chips">${[[10, "Leve"], [30, "Regular"], [50, "Sério"], [100, "Intenso"]].map(([g, n]) => `<button class="chip" data-act="goal" data-g="${g}" aria-pressed="${S.goal === g}">${n} · ${g} XP</button>`).join("")}</div></div>
+      <div class="set-row"><div><b>Meta diária de ${esc(LANGS[S.lang].learning)}</b><p>Quantos minutos por dia você quer dedicar a este idioma. Cada idioma tem a sua meta.</p></div><div class="chips">${GOAL_MINS.map(([g, n]) => `<button class="chip" data-act="goalMin" data-g="${g}" aria-pressed="${goalMin() === g}">${n} · ${g} min</button>`).join("")}</div>
+        <button class="linkish" data-act="planEdit">Refazer as perguntas de ${esc(LANGS[S.lang].learning)}</button></div>
       <div class="set-row"><div><b>Efeitos sonoros</b><p>Sons de acerto, erro e recompensas.</p></div><button class="switch" role="switch" aria-checked="${S.sound}" data-act="toggle" data-k="sound" aria-label="Efeitos sonoros"></button></div>
       <div class="set-row"><div><b>Transliteração do russo</b><p>Mostra como ler as palavras em cirílico.</p></div><button class="switch" role="switch" aria-checked="${S.translit}" data-act="toggle" data-k="translit" aria-label="Transliteração"></button></div>
       <div class="set-row voices"><div><b>Vozes</b><p>Escolha a voz de cada idioma. As marcadas como fluida falam de um jeito mais natural.${voices.some(fluentVoice) ? "" : " Para vozes mais naturais, use o Microsoft Edge (vozes “Natural”) ou o Google Chrome."}</p></div>
@@ -1348,7 +1406,8 @@ function viewProfile() {
     </div></div>`;
 }
 function render() {
-  if (!S.onboarded) { renderOnboarding(); return; }
+  closeGloss();
+  if (!S.onboarded || PL) { renderOnboarding(); return; }
   $("#app").querySelector(".top").hidden = false; $("#shell").hidden = false; $("#onb").hidden = true;
   regen(); renderChrome();
   const v = { learn: viewLearn, story: viewStory, talk: viewTalk, notes: viewNotes, speak: viewSpeak, train: viewTrain, ach: viewAch, shop: viewShop, profile: viewProfile }[S.view] || viewLearn;
@@ -1356,20 +1415,56 @@ function render() {
 }
 
 // ---------- onboarding ----------
-let onbLang = "en", onbGoal = 30;
+// Like the first minutes of Duolingo: one question per screen. The very first time it starts by asking
+// which language; after that, picking a language that has no plan yet asks the other questions for it.
+const WHY = [["travel", "✈️", "Viajar"], ["work", "💼", "Trabalho"], ["study", "🎓", "Estudos e provas"], ["people", "💬", "Falar com família e amigos"],
+  ["media", "🎬", "Filmes, música e séries"], ["mind", "🧠", "Exercitar a mente"], ["other", "✨", "Outro motivo"]];
+const KNOW = [["zero", 1, "Estou começando do zero"], ["words", 2, "Sei algumas palavras"], ["basic", 3, "Consigo ter conversas simples"], ["good", 4, "Converso sobre vários assuntos"]];
+let PL = null;
+function startPlan(k) { PL = Object.assign({ steps: ["why", "level", "goal", "ready"], i: 0, lang: k }, S.plan[k] || {}); render(); scrollTo(0, 0); }
 function renderOnboarding() {
+  if (!PL) PL = { steps: ["lang", "why", "level", "goal", "ready"], i: 0, lang: "en", first: true };
   $("#app").querySelector(".top").hidden = true; $("#shell").hidden = true;
   const o = $("#onb"); o.hidden = false;
-  document.documentElement.style.setProperty("--lang", LANGS[onbLang].color);
-  document.documentElement.style.setProperty("--lang-dark", LANGS[onbLang].dark);
-  o.innerHTML = `<div class="onb"><div style="color:var(--lang)">${I("zig", "i tower")}</div><h1>Bem-vindo ao Xibolete</h1>
-    <p class="lead">Aprenda idiomas jogando e falando em voz alta. O Xibolete escuta sua pronúncia, e você ganha XP, sobe de nível e desbloqueia conquistas.</p>
-    <p class="onb-note">O nome vem da Bíblia: <i>shibbólet</i> era a palavra que, pela pronúncia, revelava de onde a pessoa vinha.</p>
-    <h2>Qual idioma você quer aprender?</h2>
-    <div class="onb-langs">${LKEYS.map(k => `<button class="onb-lang" style="--bc:${LANGS[k].color}" data-act="onbLang" data-k="${k}" aria-pressed="${onbLang === k}"><span class="badge" style="--bc:${LANGS[k].color}">${LANGS[k].code}</span>${esc(LANGS[k].name)}</button>`).join("")}</div>
-    <h2>Quanto tempo por dia?</h2>
-    <div class="chips">${[[10, "Leve · 5 min"], [30, "Regular · 10 min"], [50, "Sério · 15 min"], [100, "Intenso · 30 min"]].map(([g, n]) => `<button class="chip" data-act="onbGoal" data-g="${g}" aria-pressed="${onbGoal === g}">${n}</button>`).join("")}</div>
-    <button class="btn" data-act="onbGo">Começar a jogar</button></div>`;
+  const L = LANGS[PL.lang], step = PL.steps[PL.i], n = PL.steps.length, lw = esc(L.learning);
+  document.documentElement.style.setProperty("--lang", L.color);
+  document.documentElement.style.setProperty("--lang-dark", L.dark);
+  const opt = (f, v, inner) => `<button class="opt" data-act="plPick" data-f="${f}" data-val="${v}" aria-pressed="${String(PL[f]) === String(v)}">${inner}</button>`;
+  let body = "", ready = true;
+  if (step === "lang") {
+    body = `<div style="color:var(--lang)">${I("zig", "i tower")}</div><h1>Bem-vindo ao Xibolete</h1>
+      <p class="lead">Aprenda idiomas jogando e falando em voz alta. O Xibolete escuta sua pronúncia, e você ganha XP, sobe de nível e desbloqueia conquistas.</p>
+      <p class="onb-note">O nome vem da Bíblia: <i>shibbólet</i> era a palavra que, pela pronúncia, revelava de onde a pessoa vinha.</p>
+      <h2>Qual idioma você quer aprender?</h2>
+      <div class="onb-langs">${LKEYS.map(k => `<button class="onb-lang" style="--bc:${LANGS[k].color}" data-act="plLang" data-k="${k}" aria-pressed="${PL.lang === k}"><span class="badge" style="--bc:${LANGS[k].color}">${LANGS[k].code}</span>${esc(LANGS[k].name)}</button>`).join("")}</div>`;
+  } else if (step === "why") {
+    body = `<h1>Por que você quer aprender ${lw}?</h1><p class="lead">Isso ajuda a lembrar do seu objetivo nos dias difíceis.</p>
+      <div class="opts plan-opts">${WHY.map(([v, ic, t]) => opt("why", v, `<span class="pi" aria-hidden="true">${ic}</span><span>${t}</span>`)).join("")}</div>`;
+    ready = !!PL.why;
+  } else if (step === "level") {
+    body = `<h1>Quanto ${lw} você já sabe?</h1><p class="lead">Não tem resposta errada. Dá para mudar depois.</p>
+      <div class="opts plan-opts">${KNOW.map(([v, b, t]) => opt("level", v, `<span class="lvbars" aria-hidden="true">${[1, 2, 3, 4].map(x => `<i class="${x <= b ? "on" : ""}"></i>`).join("")}</span><span>${t}</span>`)).join("")}</div>`;
+    ready = !!PL.level;
+  } else if (step === "goal") {
+    body = `<h1>Qual vai ser a sua meta diária?</h1><p class="lead">Quanto tempo por dia você quer dedicar ao ${lw}. Pouco todo dia vale mais que muito de vez em quando.</p>
+      <div class="opts plan-opts">${GOAL_MINS.map(([g, t]) => opt("min", g, `<span>${t}</span><small class="pm">${g} min por dia</small>`)).join("")}</div>`;
+    ready = !!PL.min;
+  } else {
+    const why = (WHY.find(w => w[0] === PL.why) || [])[2] || "", lv = (KNOW.find(l => l[0] === PL.level) || [])[2] || "";
+    body = `<div style="color:var(--lamp)">${I("flame", "i tower")}</div><h1>Seu plano de ${lw} está pronto</h1>
+      <div class="plan-card">
+        <p><b>${PL.min} minutos por dia</b><span>A barra "Meta de hoje" enche enquanto você estuda.</span></p>
+        <p><b>Em um mês: ${Math.round(PL.min * 30 / 60 * 10) / 10} horas de ${lw}</b><span>Ouvindo, falando e jogando.</span></p>
+        <p><b>Objetivo: ${esc(why.toLowerCase())}</b><span>${esc(lv)}.</span></p>
+      </div>`;
+  }
+  const last = PL.i === n - 1;
+  o.innerHTML = `<div class="onb plan">
+    <div class="onb-top">${PL.i ? `<button class="x" data-act="plBack" aria-label="Voltar">${I("left")}</button>` : `<span class="x"></span>`}
+      <div class="bar"><i style="width:${(PL.i + 1) / n * 100}%"></i></div>
+      ${PL.first ? `<span class="x"></span>` : `<button class="x" data-act="plClose" aria-label="Fechar">${I("x")}</button>`}</div>
+    <div class="plan-body">${body}</div>
+    <div class="plan-foot"><button class="btn" data-act="${last ? "plDone" : "plNext"}" ${ready ? "" : "disabled"}>${last ? (PL.first ? "Começar a jogar" : "Continuar estudando") : "Continuar"}</button></div></div>`;
 }
 
 // ---------- lesson engine ----------
@@ -1502,6 +1597,38 @@ function prepare(it) {
   }
   it.ready = true;
 }
+// Every word of a line in the language being learned can be tapped to hear it alone (like Duolingo).
+// Punctuation stays outside the tap targets; what is said is the word as written.
+function tapWords(text, lang) {
+  return esc(text).replace(/[\p{L}\p{M}\p{N}]+(?:['’-][\p{L}\p{M}]+)*/gu, w => `<span class="tw" role="button" tabindex="0" data-act="sayWord" data-t="${w}" data-l="${lang}">${w}</span>`);
+}
+// What a tapped word means: glossario.js first, then the single words of the course units.
+function glossOf(word, lang) {
+  const w = word.toLowerCase().replace(/’/g, "'"), g = (window.XIB_GLOSS || {})[lang] || {};
+  if (g[w]) return g[w];
+  for (const u of (LANGS[lang] || {}).units || []) for (const x of u.w) if (x[0].split("/")[0].trim().toLowerCase() === w) return x[1];
+  return "";
+}
+// The dark balloon under a tapped word, listing its meanings (like Duolingo). One at a time;
+// any other tap, a scroll or a new screen closes it.
+function closeGloss() { const b = document.getElementById("gloss"); if (b) b.remove(); }
+function showGloss(el, word, lang) {
+  closeGloss();
+  const m = glossOf(word, lang); if (!m) return;
+  const b = document.createElement("div");
+  b.id = "gloss"; b.className = "gloss"; b.setAttribute("role", "tooltip");
+  b.innerHTML = m.split("/").map(x => `<div>${esc(x.trim())}</div>`).join("");
+  document.body.appendChild(b);
+  const r = el.getBoundingClientRect(), bw = b.offsetWidth, bh = b.offsetHeight, vw = innerWidth;
+  const x = Math.max(8, Math.min(vw - bw - 8, r.left + r.width / 2 - bw / 2));
+  const below = r.bottom + 10 + bh < innerHeight - 8;
+  b.style.left = x + "px";
+  b.style.top = (below ? r.bottom + 10 : r.top - bh - 10) + "px";
+  b.style.setProperty("--ax", (r.left + r.width / 2 - x) + "px");
+  b.classList.add(below ? "down" : "up");
+}
+addEventListener("scroll", closeGloss, true);
+addEventListener("resize", closeGloss);
 function speakBtn(text, lang, cls = "speak") {
   if (!canSpeak(lang)) return "";
   return `<button class="${cls}" data-act="say" data-t="${esc(text)}" aria-label="Ouvir">${I("speaker")}</button><button class="speak slow" data-act="saySlow" data-t="${esc(text)}" aria-label="Ouvir devagar" title="Devagar">${I("slow")}</button>`;
@@ -1564,7 +1691,7 @@ function renderLesson() {
       break;
     case "speak": {
       const self = selfMode(it), trS = it.tr && S.translit ? `<span class="translit">${esc(it.tr)}</span>` : "";
-      const shown = it.isSent ? `<div class="sent">${esc(first(it.text))}${trS}</div>` : `<div><div class="word">${esc(first(it.text))}</div>${trS}</div>`;
+      const shown = it.isSent ? `<div class="sent">${tapWords(first(it.text), lang)}${trS}</div>` : `<div><div class="word">${esc(first(it.text))}</div>${trS}</div>`;
       body = `<div style="display:flex;align-items:center;gap:10px"><span class="l-tag">${I("mic")}Fale em voz alta</span>${combo}</div>
         <h2 class="l-q">${self ? "Ouça e repita em voz alta" : it.isSent ? "Leia esta frase em voz alta" : "Diga esta palavra"}</h2>
         <div class="prompt">${shown}${speakBtn(it.text, lang)}</div>${it.pt ? `<p class="muted" style="margin:-8px 0 0;font-weight:700">${esc(it.pt.replace(/\//g, " / "))}</p>` : ""}
@@ -1612,7 +1739,7 @@ function renderLesson() {
       const rev = it.k === "buildRev", src = rev ? it.s[0] : it.s[1];
       const ruHint = !rev && lang === "ru" && S.translit && it.s[2] ? `<button class="linkish hint-btn" data-act="hint">Dica: ver transliteração</button>${it.hint ? `<span class="translit">${esc(it.s[2])}</span>` : ""}` : "";
       body = `<div style="display:flex;align-items:center;gap:10px">${tag}${combo}</div><h2 class="l-q">Traduza esta frase</h2>
-        <div class="prompt">${rev ? speakBtn(it.s[0], lang) : ""}<div class="sent">${esc(src)}${rev && lang === "ru" && S.translit && it.s[2] ? `<span class="translit">${esc(it.s[2])}</span>` : ""}</div></div>${ruHint}
+        <div class="prompt">${rev ? speakBtn(it.s[0], lang) : ""}<div class="sent">${rev ? tapWords(src, lang) : esc(src)}${rev && lang === "ru" && S.translit && it.s[2] ? `<span class="translit">${esc(it.s[2])}</span>` : ""}</div></div>${ruHint}
         <div class="answer-line" aria-label="Sua resposta">${it.picked.map(i => `<button class="wt" data-act="unpick" data-i="${i}" ${LS.state !== "answer" ? "disabled" : ""}>${esc(it.bank[i].t)}</button>`).join("")}</div>
         <div class="bank">${it.bank.map((b, i) => `<button class="wt ${it.picked.includes(i) ? "used" : ""}" data-act="pick" data-i="${i}" ${it.picked.includes(i) || LS.state !== "answer" ? "disabled" : ""}>${esc(b.t)}</button>`).join("")}</div>`;
       break;
@@ -1895,7 +2022,7 @@ function talkOptions() {
 }
 function bubbleHtml(e) {
   const st = TK.talk.steps[e.step];
-  if (e.who === "npc") return `<div class="bub npc"><div class="who">${esc(TK.talk.who)}</div><p>${esc(st.npc)}</p>
+  if (e.who === "npc") return `<div class="bub npc"><div class="who">${esc(TK.talk.who)}</div><p>${tapWords(st.npc, TK.lang)}</p>
     <div class="bub-acts"><button class="say" data-act="say" data-t="${esc(st.npc)}" aria-label="Ouvir de novo">${I("speaker")}</button><button class="say" data-act="saySlow" data-t="${esc(st.npc)}" aria-label="Ouvir devagar">${I("slow")}</button>
     <button class="linkish" data-act="talkPt" data-s="${e.step}">${e.pt ? esc(st.pt) : "Traduzir"}</button></div></div>`;
   const cls = e.score == null ? "" : e.score >= GREAT ? "g" : e.score >= PASS ? "m" : "b";
@@ -2014,7 +2141,7 @@ function renderShadow() {
   paintLesson(`<div class="l-top"><button class="x" data-act="talkClose" aria-label="Sair">${I("x")}</button><div class="bar"><i style="width:${TK.si / n * 100}%"></i></div><span class="l-hearts inf">${I("mic")}</span></div>
     <div class="l-body"><div class="l-in"><span class="l-tag">${I("mic")}Repetir colado · ${TK.si + 1} de ${n}</span>
       <h2 class="l-q">Ouça e repita logo em seguida, imitando o ritmo</h2>
-      <div class="prompt"><div class="sent"><small class="who-s">${esc(ln.who)}</small>${esc(ln.t)}</div>${speakBtn(ln.t, TK.lang)}</div>
+      <div class="prompt"><div class="sent"><small class="who-s">${esc(ln.who)}</small>${tapWords(ln.t, TK.lang)}</div>${speakBtn(ln.t, TK.lang)}</div>
       <p class="muted" style="margin:-8px 0 0;font-weight:700">${esc(ln.pt)}</p>
       ${TK.err ? `<div class="mic-err">${esc(TK.err)}</div>` : ""}
       ${canListen() ? `<div class="mic-wrap"><button class="mic ${TK.listening ? "on" : ""}" data-act="shadowMic" aria-label="Repetir">${I("mic")}</button><span class="mic-label">${TK.listening ? "Ouvindo…" : r ? "Toque para repetir de novo" : "Toque e repita"}</span>${r ? resultHtml(r) : ""}</div>` : `<div class="tipbox">Ouça e repita em voz alta, colado na voz do nativo.</div>`}
@@ -2232,7 +2359,7 @@ function stageLayers(scene, actor) {
 const objIc = o => o.sw ? `<span class="oi"><i class="sw" style="background:${o.sw}"></i></span>` : `<span class="oi">${o.ic}</span>`;
 function syLine(who, t, pt, cls = "") {
   const c = SY.st.cast[who] || { name: "", color: "var(--lang)" };
-  return `<div class="vn-line ${cls}" style="--ac:${c.color}"><div class="vn-name">${syFace(who)}${esc(c.name)}</div><p class="vn-en">${esc(t)}</p>
+  return `<div class="vn-line ${cls}" style="--ac:${c.color}"><div class="vn-name">${syFace(who)}${esc(c.name)}</div><p class="vn-en">${tapWords(t, SY.l)}</p>
     <div class="bub-acts"><button class="say" data-act="say" data-t="${esc(t)}" data-l="${SY.l}" aria-label="Ouvir">${I("speaker")}</button><button class="say" data-act="saySlow" data-t="${esc(t)}" aria-label="Ouvir devagar">${I("slow")}</button>
     ${pt ? `<button class="linkish" data-act="syTr">${SY.trOn ? esc(pt) : "Traduzir"}</button>` : ""}</div></div>`;
 }
@@ -2248,7 +2375,7 @@ function renderDrill() {
   paintLesson(`<div class="l-top"><button class="x" data-act="syQuit" aria-label="Sair da história">${I("x")}</button><div class="bar"><i style="width:${d.i / N * 100}%"></i></div><span class="l-hearts inf">${I("mic")}</span></div>
     <div class="l-body"><div class="l-in"><span class="l-tag">${I("mic")}Treino de fala do capítulo · ${d.i + 1} de ${N}</span>
       <h2 class="l-q">Diga a frase do dia a dia em voz alta</h2>
-      <div class="prompt"><div class="sent">${esc(en)}</div>${speakBtn(en, SY.l)}</div>
+      <div class="prompt"><div class="sent">${tapWords(en, SY.l)}</div>${speakBtn(en, SY.l)}</div>
       <p class="muted" style="margin:-8px 0 0;font-weight:700">${esc(pt)}</p>
       ${SY.err ? `<div class="mic-err">${esc(SY.err)}</div>` : ""}
       ${self ? `<div class="tipbox">Ouça, repita em voz alta duas vezes e tente imitar o ritmo.</div>` : `<div class="mic-wrap"><button class="mic ${SY.listening ? "on" : ""}" data-act="syDrillMic" aria-label="Falar">${I("mic")}</button><span class="mic-label">${SY.listening ? "Ouvindo…" : d.res ? (d.res.score >= PASS ? "Muito bem! Toque para tentar de novo" : "Toque e tente de novo") : "Toque e fale"}</span>${d.res ? resultHtml(d.res) : ""}</div>`}
@@ -2527,7 +2654,7 @@ const A = {
     m.innerHTML = LKEYS.map(k => `<button data-act="setLang" data-k="${k}" aria-current="${k === S.lang}"><span class="badge" style="--bc:${LANGS[k].color}">${LANGS[k].code}</span>${esc(LANGS[k].name)}<span class="pct">${coursePct(k)}%</span></button>`).join("");
     m.hidden = !open; $("#langBtn").setAttribute("aria-expanded", open);
   },
-  setLang: d => { S.lang = d.k; pop = null; $("#langMenu").hidden = true; save(); render(); scrollTo(0, 0); toast(`Agora você está aprendendo ${LANGS[d.k].learning}.`, "book"); },
+  setLang: d => { S.lang = d.k; pop = null; $("#langMenu").hidden = true; save(); if (!S.plan[d.k]) { ac(); startPlan(d.k); return; } render(); scrollTo(0, 0); toast(`Agora você está aprendendo ${LANGS[d.k].learning}.`, "book"); },
   node: d => {
     const key = `${d.u}-${d.l}`; pop = pop === key ? null : key; render();
     const el = document.querySelector(".pop"); el && el.scrollIntoView({ block: "nearest", behavior: reduceMotion ? "auto" : "smooth" });
@@ -2555,6 +2682,7 @@ const A = {
       <div class="acts"><button class="btn" data-act="closeModal">Entendi</button></div>`);
   },
   say: d => speak(d.t, d.l || (LS ? LS.lang : S.lang)),
+  sayWord: (d, el) => { document.querySelectorAll(".tw.on").forEach(x => x.classList.remove("on")); el.classList.add("on"); showGloss(el, d.t, d.l); speak(d.t, d.l, false, () => el.classList.remove("on")); setTimeout(() => el.classList.remove("on"), 1500); },
   saySlow: d => speak(d.t, LS ? LS.lang : S.lang, true),
   syPause: () => syPause(),
   review: () => { closeModal(); startReview(); },
@@ -2594,15 +2722,28 @@ const A = {
   streakInfo: () => modal(`<div style="color:var(--flame);font-size:56px;text-align:center">${I("flame")}</div><h2 style="text-align:center">Sequência de ${S.streak} ${S.streak === 1 ? "dia" : "dias"}</h2>
     <p class="muted" style="font-weight:700;text-align:center">${studiedToday() ? "Você já estudou hoje. Volte amanhã para continuar." : "Faça uma lição hoje para manter a sequência."} Seu recorde é ${S.bestStreak} ${S.bestStreak === 1 ? "dia" : "dias"}. Protetores guardados: ${S.freezes}.</p>
     <div class="acts"><button class="btn" data-act="closeModal">Ok</button></div>`),
-  goal: d => { S.goal = +d.g; save(); render(); },
+  goalMin: d => { const g = +d.g; S.plan[S.lang] = Object.assign(S.plan[S.lang] || {}, { min: g }); S.goal = GOAL_XP[g]; save(); render(); },
+  planEdit: () => startPlan(S.lang),
   toggle: d => { S[d.k] = !S[d.k]; save(); render(); },
   reset: () => modal(`<h2>Apagar todo o progresso?</h2><p class="muted" style="font-weight:700">XP, moedas, lições, sequência e conquistas de todos os idiomas serão apagados. Não dá para desfazer. Suas anotações do caderno continuam guardadas.</p>
     <div class="acts"><button class="btn" data-act="closeModal">Cancelar</button><button class="btn bad" data-act="resetYes">Apagar tudo</button></div>`),
   resetYes: () => { S = fresh(); save(); closeModal(); render(); },
   closeModal: () => closeModal(),
-  onbLang: d => { onbLang = d.k; renderOnboarding(); },
-  onbGoal: d => { onbGoal = +d.g; renderOnboarding(); },
-  onbGo: () => { S.onboarded = true; S.lang = onbLang; S.goal = onbGoal; S.view = talksOf(onbLang).length ? "talk" : "learn"; save(); ac(); render(); const c = S.view === "learn" && currentOf(S.lang); if (c) { pop = `${c.u}-${c.l}`; render(); } },
+  plLang: d => { PL.lang = d.k; Object.assign(PL, S.plan[d.k] || {}); renderOnboarding(); },
+  plPick: d => { PL[d.f] = d.f === "min" ? +d.val : d.val; renderOnboarding(); },
+  plNext: () => { PL.i++; renderOnboarding(); scrollTo(0, 0); },
+  plBack: () => { PL.i--; renderOnboarding(); scrollTo(0, 0); },
+  plClose: () => { PL = null; render(); },
+  plDone: () => {
+    const k = PL.lang, first = PL.first;
+    S.plan[k] = { why: PL.why, level: PL.level, min: PL.min };
+    if (k === S.lang || first) S.goal = GOAL_XP[PL.min];
+    PL = null;
+    if (first) { S.onboarded = true; S.lang = k; S.view = talksOf(k).length ? "talk" : "learn"; }
+    save(); ac(); render(); scrollTo(0, 0);
+    if (first) { const c = S.view === "learn" && currentOf(S.lang); if (c) { pop = `${c.u}-${c.l}`; render(); } }
+    else toast(`Meta de ${LANGS[k].learning}: ${S.plan[k].min} min por dia.`, "flame");
+  },
   // story
   syStart: d => startStory(d.id),
   syNext: () => syNext(),
@@ -2775,6 +2916,7 @@ const A = {
   endDone: () => closeLesson(),
 };
 document.addEventListener("click", e => {
+  if (!e.target.closest(".tw, .gloss")) closeGloss();
   const el = e.target.closest("[data-act]");
   if (!el) {
     if (!$("#langMenu").hidden && !e.target.closest(".lang-wrap")) $("#langMenu").hidden = true;
@@ -2784,9 +2926,10 @@ document.addEventListener("click", e => {
   if (el.disabled) return;
   if (el.dataset.act !== "langMenu" && el.dataset.act !== "setLang") $("#langMenu").hidden = true;
   const fn = A[el.dataset.act];
-  if (fn) fn(el.dataset);
+  if (fn) fn(el.dataset, el);
 });
 document.addEventListener("keydown", e => {
+  if ((e.key === "Enter" || e.key === " ") && e.target.classList && e.target.classList.contains("tw")) { e.preventDefault(); e.target.click(); return; }
   if (!$("#modal").hidden) { if (e.key === "Escape") closeModal(); return; }
   if (SY) {
     if (e.key === "Escape") { SY.end ? closeStory() : A.syQuit(); return; }
@@ -2859,6 +3002,7 @@ if (S.onboarded && !standalone() && !S.installHint && matchMedia("(max-width:760
 checkStreak();
 regen();
 if (S.onboarded) { const c = currentOf(S.lang); if (c && S.view === "learn" && !isDone(S.lang, 0, 0)) pop = `${c.u}-${c.l}`; }
+if (S.onboarded && !S.plan[S.lang]) PL = { steps: ["why", "level", "goal", "ready"], i: 0, lang: S.lang };  // people who started before the plan existed answer once
 render();
 if (streakNotice) toast(esc(streakNotice), "flame");
 if (S.onboarded && S.view === "learn") {
