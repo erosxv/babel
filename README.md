@@ -4,14 +4,16 @@ Aprenda idiomas jogando e falando em voz alta. É um jogo no navegador, sem inst
 
 ## Como funciona
 
-- **Mapa de fases:** cada idioma tem 8 unidades (o russo tem 9, começando pelo alfabeto cirílico). Cada unidade tem 3 lições, uma prova de fala e um baú de recompensa.
+- **Mapa de fases:** inglês e russo têm o nível A1 completo: 30 unidades no inglês e 31 no russo (o russo começa pelo alfabeto cirílico), com cerca de 380 palavras e 140 frases cada, de números, horas e rotina até compras, transporte, verbos de movimento e o passado. Espanhol, francês e italiano têm 8 unidades por enquanto. Cada unidade tem 3 lições, uma prova de fala e um baú de recompensa.
+- **Gramática em pílulas:** o Guia de cada unidade nova traz uma regra curta da unidade, explicada em português (por exemplo, por que o russo diz я был e я была).
+- **Teste de nível:** quem responde no plano que já sabe um pouco do idioma pode fazer um teste rápido, de 4 em 4 unidades. Acertando, as unidades são liberadas e as palavras delas vão para o Treino.
 - **Exercícios variados:** palavra nova, escolher a tradução, ouvir e escolher, formar pares, montar frases com peças, escrever a resposta, falar em voz alta e treino de ouvido.
 - **XP e níveis:** cada acerto vale XP, com bônus de combo para acertos seguidos. Os níveis vão de Turista a Mestre do Xibolete.
 - **Vidas:** cada erro numa lição custa 1 vida. Uma vida volta a cada 30 minutos, e um treino completo devolve 1. Exercícios de fala e de ouvido nunca custam vida.
 - **Sequência de dias, meta diária e missões do dia.** Uma das missões é sempre de fala.
 - **Moedas e loja:** recarga de vidas, protetor de sequência e XP em dobro.
 - **28 conquistas.**
-- **Treino com repetição espaçada:** as palavras que você mais erra voltam com mais frequência.
+- **Treino com repetição espaçada:** as palavras que você mais erra voltam com mais frequência. As frases úteis de cada capítulo da História também entram no Treino depois que você termina o capítulo.
 
 ## História (em inglês e russo)
 
@@ -53,7 +55,7 @@ Situações reais do dia a dia (pedir um café, fazer check-in, pedir comida…)
 
 - **Repetir colado:** no fim da conversa, você ouve cada fala e repete logo em seguida, imitando o ritmo.
 - **Grave e compare:** grava sua voz e toca logo depois da voz nativa, para você comparar de ouvido.
-- Por enquanto há 10 conversas A1 em inglês americano, em `conversas.js`. Os outros idiomas e os níveis A2 a B2 vêm a seguir.
+- Há 10 conversas A1 em inglês americano e 10 em russo (um chá em Moscou, uma festa em Petersburgo, a feira, o trem Sapsan, um jantar em Ecaterimburgo…), em `conversas.js`. No russo, cada fala mostra embaixo como se lê em letras latinas. Os outros idiomas e os níveis A2 a B2 vêm a seguir.
 
 ## Caderno
 
@@ -70,7 +72,7 @@ Um caderno de anotações para cada idioma, com folhas pautadas. Quando uma folh
 
 O jogo ouve sua voz com o reconhecimento de fala do próprio navegador. Funciona no Chrome e no Edge (no celular, no Chrome do Android e no Safari do iPhone). Na primeira vez, o navegador pede permissão para usar o microfone. Nos navegadores sem esse recurso, como o Firefox, a fala vira autoavaliação: você ouve, repete e diz se ficou parecido.
 
-Em inglês, todas as palavras e falas (lições, sons, conversas e história) foram gravadas por vozes de IA com sotaque americano nativo e entonação natural (Chatterbox, com o Kokoro para as palavras soltas). Cada personagem da história tem a sua voz, e as suas próprias falas têm uma voz masculina diferente. Os áudios ficam na pasta `audio/` e, depois de ouvidos uma vez, funcionam até sem internet. Nos outros idiomas, e em qualquer frase sem áudio gravado, a leitura é feita pela voz do navegador: o jogo escolhe sozinho a voz mais natural que encontrar, e no Perfil dá para trocar a voz de cada idioma.
+Em inglês, todas as palavras e falas (lições, sons, conversas e história) foram gravadas por vozes de IA com sotaque americano nativo e entonação natural (Chatterbox, com o Kokoro para as palavras soltas). Cada personagem da história tem a sua voz, e as suas próprias falas têm uma voz masculina diferente. Em russo, tudo (lições, conversas, história e alfabeto) foi gravado pelo Silero, uma voz de IA russa que roda no computador, com uma voz para cada personagem. Os áudios ficam na pasta `audio/` e, depois de ouvidos uma vez, funcionam até sem internet. Em espanhol, francês e italiano, e em qualquer frase sem áudio gravado, a leitura é feita pela voz do navegador: o jogo escolhe sozinho a voz mais natural que encontrar, e no Perfil dá para trocar a voz de cada idioma.
 
 ## Por que Xibolete
 

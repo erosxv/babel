@@ -6,7 +6,7 @@ Todo o conteúdo do app fica em arquivos de texto separados do código. Para mud
 
 | Arquivo | O que tem |
 |---|---|
-| `data.js` | Vocabulário e frases das lições de cada idioma, e os sons difíceis (aba Pronúncia) |
+| `data.js` | Vocabulário e frases das lições de cada idioma, a regra de gramática de cada unidade (campo `g`, aparece no Guia) e os sons difíceis (aba Pronúncia). Unidades novas entram sempre no fim da lista, para não bagunçar o progresso de quem já estuda |
 | `conversas.js` | As situações da aba Conversas |
 | `historia.js` | O modo História em inglês: personagens, itens da mochila, dicas e capítulos |
 | `historia-ru.js` | O modo História em russo: outra história (Белоречье e o relógio parado), com o mesmo formato |
@@ -18,7 +18,7 @@ Todo o conteúdo do app fica em arquivos de texto separados do código. Para mud
 | `hd2d-worker.js` | Desenha os cenários em segundo plano (não precisa mexer) |
 | `index.html` | O app em si (telas, regras do jogo). Normalmente não precisa mexer |
 | `audio/` | As vozes gravadas: um arquivo .mp3 por fala, por idioma. Não edite à mão: veja “Gerar as vozes” |
-| `tools/` | Os programas que geram as vozes (`frases-en.js`, `gerar-audio.py` e `gerar-audio-chatterbox.py`) e as vozes de referência de cada personagem (`tools/vozes/`) |
+| `tools/` | Os programas que geram as vozes (`frases-en.js`, `gerar-audio.py` e `gerar-audio-chatterbox.py` para o inglês; `frases-ru.js` e `gerar-audio-ru.py` para o russo) e as vozes de referência de cada personagem (`tools/vozes/`) |
 | `manifest.webmanifest`, `sw.js`, `icons/` | O que faz o site virar app instalável |
 
 ## Editar pelo navegador (sem programa nenhum)
@@ -88,6 +88,12 @@ As falas em inglês são lidas por vozes de IA gravadas, que rodam de graça no 
 5. Publique a pasta `audio/` junto com o resto.
 
 A voz de cada personagem fica no começo de `tools/frases-en.js` (por exemplo `rosie: "af_sarah"`). Para trocar a voz de alguém, mude ali, apague os áudios das falas dele e gere de novo.
+
+### Vozes em russo
+
+O russo é gravado pelo Silero (modelo `v5_ru`), que também roda de graça no computador e baixa sozinho na primeira vez. Ele tem 5 vozes (aidar e eugene, masculinas; baya, kseniya e xenia, femininas); com `:low`, `:high` etc. depois do nome, a mesma voz fica mais grave ou mais aguda, e assim cada personagem tem a sua. Elas ficam no começo de `tools/frases-ru.js`. Para gerar: `node tools/frases-ru.js` e depois `%LOCALAPPDATA%/xibolete-voz/cb/Scripts/python.exe -X utf8 tools/gerar-audio-ru.py` (precisa de `torch`, `soundfile` e `omegaconf`; com placa NVIDIA fica mais rápido). Ele só grava as frases que ainda não têm áudio.
+
+Atenção: a licença do Silero permite uso gratuito sem fins comerciais. Se um dia o Xibolete for pago, é preciso comprar a licença comercial deles ou gravar o russo com outra voz.
 
 ## Testar antes de publicar (opcional)
 

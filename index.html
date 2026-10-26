@@ -372,6 +372,10 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .said .b{background:var(--bad-soft);color:var(--bad-ink)}
 .heard{margin:0;color:var(--muted);font-weight:700;font-size:14px}
 .mic-err{background:var(--bad-soft);color:var(--bad-ink);border-radius:14px;padding:12px 14px;font-weight:700}
+.tipbox.gram{margin-bottom:10px}
+.place-card{display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px;margin-bottom:22px;border-color:color-mix(in srgb,var(--lang) 40%,var(--line-2))}
+.place-card h3{margin:0 0 4px}.place-card p{margin:0;font-weight:700}
+.place-acts{display:grid;gap:8px;justify-items:center}
 .tipbox{background:color-mix(in srgb,var(--lang) 9%,var(--surface));border:2px solid color-mix(in srgb,var(--lang) 28%,transparent);border-radius:16px;padding:12px 14px;font-weight:700}
 .tipbox b{color:var(--lang)}
 .tip-text{margin:0;font-weight:700;font-size:17px;max-width:46ch}
@@ -914,7 +918,7 @@ const KEY = "babel-save-v1"; // name from before the app was renamed; kept so sa
 const fresh = () => ({
   v: 1, onboarded: false, lang: "en", view: "learn", xp: 0, coins: 50, hearts: 5, heartsAt: Date.now(),
   streak: 0, bestStreak: 0, lastDay: null, freezes: 0, goal: 30, day: {}, boostUntil: 0,
-  sound: true, translit: true, progress: {}, chests: {}, srs: {}, ach: {}, quests: {}, speech: {}, talks: {}, voicePick: {}, story: {}, bag: [], noMicUntil: 0, plan: {}, coop: {}, abc: {},
+  sound: true, translit: true, progress: {}, chests: {}, srs: {}, ach: {}, quests: {}, speech: {}, talks: {}, voicePick: {}, story: {}, bag: [], noMicUntil: 0, plan: {}, coop: {}, abc: {}, placed: {},
   stats: { lessons: 0, perfect: 0, maxCombo: 0, reviews: 0, langs: {}, correct: 0, answered: 0, owl: false, early: false, chests: 0, spoken: 0, spokenGreat: 0, speechTests: 0, talks: 0, story: 0 },
 });
 let S = fresh();
@@ -999,6 +1003,34 @@ function coursePct(lang) {
   return Math.round(d / total * 100);
 }
 const allWords = lang => LANGS[lang].units.flatMap((u, i) => u.w.map(w => Object.assign([...w], { unit: i, alpha: !!u.alpha })));
+
+// Cyrillic → Latin letters, same style as the transliterations in data.js (yest, govoryu, kazhdy).
+const RU_LAT = { а: "a", б: "b", в: "v", г: "g", д: "d", е: "e", ё: "yo", ж: "zh", з: "z", и: "i", й: "y", к: "k", л: "l", м: "m", н: "n", о: "o", п: "p", р: "r", с: "s", т: "t", у: "u", ф: "f", х: "kh", ц: "ts", ч: "ch", ш: "sh", щ: "shch", ъ: "", ы: "y", ь: "", э: "e", ю: "yu", я: "ya" };
+function ruLat(t) {
+  return first(t).replace(/[А-Яа-яЁё]+/g, w => {
+    const l = w.toLowerCase().replace(/ый$/, "ы").replace(/ий$/, "и\u0001");
+    let o = "";
+    for (let i = 0; i < l.length; i++) o += l[i] === "\u0001" ? "y" : l[i] === "е" && (i === 0 || "аеёиоуыэюяьъ".includes(l[i - 1])) ? "ye" : RU_LAT[l[i]] ?? l[i];
+    return w[0] !== w[0].toLowerCase() ? o[0].toUpperCase() + o.slice(1) : o;
+  });
+}
+const latOf = (t, lang) => lang === "ru" && S.translit ? `<span class="translit">${esc(ruLat(t))}</span>` : "";
+
+// ---------- story phrases in the review ----------
+// Every phrase a finished story chapter taught goes into the same spaced repetition as the lesson words,
+// so the Treino brings them back. They are marked .story and graded as sentences.
+function storyPhrases(lang) {
+  const st = (window.XIB_STORY || {})[lang];
+  if (!st) return [];
+  return st.chapters.filter(c => (S.story || {})[c.id] && c.phrases).flatMap(c => c.phrases.map(p =>
+    Object.assign([p[0], p[1].replace(/\s*\([^)]*\)/g, "").trim(), lang === "ru" ? ruLat(p[0]) : undefined], { story: true })));
+}
+// phrases of finished chapters that are not in the review yet go in now (also for chapters finished before this existed)
+function syncPhrases(lang) { for (const p of storyPhrases(lang)) if (!srs(lang, p).seen) srsHit(lang, p, true); }
+const seenPhrases = lang => storyPhrases(lang).filter(p => srs(lang, p).seen);
+const duePhrases = lang => seenPhrases(lang).filter(p => srs(lang, p).due <= Date.now()).sort((a, b) => srs(lang, a).s - srs(lang, b).s);
+// the thing an exercise trains, for the spaced repetition: a word, or a story phrase
+const srsOf = it => it.w || [it.s, it.src].find(x => x && x.story) || null;
 
 // ---------- spaced repetition ----------
 const wkey = (lang, w) => lang + ":" + w[0];
@@ -1181,7 +1213,7 @@ let noVoiceWarned = {};
 // Recorded voices: lines read once by an AI voice with a native accent (tools/gerar-audio.py) and kept
 // in audio/<lang>/, one mp3 per line, named by audioKey. audio/<lang>/index.json lists the lines that
 // have a file; any other line is read by the device's own voice.
-const AUDIO_LANGS = ["en"];
+const AUDIO_LANGS = ["en", "ru"];
 // One audio element plays every line: phones only let a page play sound from an element it has
 // already used after a tap, so it is unlocked on the first tap.
 const AUDIO = {}, clip = { a: null, held: false, n: 0 }, clipUrls = new Map(), voiceEl = new Audio();
@@ -1429,6 +1461,8 @@ const ZIG = [0, 52, 78, 52, 0, -52, -78, -52];
 function viewLearn() {
   const lang = S.lang, L = LANGS[lang], cur = currentOf(lang);
   let idx = 0, html = `<div class="only-narrow card" style="margin-bottom:22px">${goalHtml()}</div>`;
+  if (placeOpen(lang)) html += `<div class="card place-card"><div class="grow"><h3>Já sabe um pouco de ${esc(L.name)}?</h3><p class="muted">Faça o teste de nível. Acertando, você pula as unidades que já domina.</p></div>
+    <div class="place-acts"><button class="btn" data-act="placeStart">${I("target")}Fazer o teste</button><button class="linkish" data-act="placeSkip">Prefiro começar do início</button></div></div>`;
   L.units.forEach((unit, u) => {
     const unlocked = u === 0 || unitDone(lang, u - 1);
     html += `<section class="unit" aria-label="Unidade ${u + 1}"><div class="unit-banner ${unlocked ? "" : "locked"}"><div><p class="eyebrow">Unidade ${u + 1}</p><h2>${esc(unit.t)}</h2><p>${esc(unit.d)}</p></div>
@@ -1460,12 +1494,12 @@ function popHtml(u, l, ls, state) {
     <button class="btn" data-act="start" data-u="${u}" data-l="${l}">${state === "done" ? "Praticar" : "Começar"} +${xp} XP</button></div>`;
 }
 function viewTrain() {
-  const lang = S.lang, seen = seenWords(lang), due = dueWords(lang);
+  const lang = S.lang, seen = seenWords(lang), due = dueWords(lang), dph = duePhrases(lang).length, sph = seenPhrases(lang).length;
   const head = `<div class="page-head"><h1>Treino</h1><p>Revise as palavras que você está começando a esquecer. Cada treino completo devolve 1 vida, e errar aqui não custa vidas.</p></div>`;
   if (seen.length < 4) return head + `<div class="empty">Faça a primeira lição de ${esc(LANGS[lang].name)} para liberar o treino.<br><br><button class="btn" data-act="go" data-v="learn">Ir para as lições</button></div>`;
   const list = seen.slice().sort((a, b) => srs(lang, a).s - srs(lang, b).s).slice(0, 40);
   const voice = canSpeak(lang);
-  return head + `<div class="stack"><div class="card hero-card"><div class="big">${due.length}</div><div class="grow"><strong style="font-family:var(--display);font-size:20px">${due.length ? (due.length === 1 ? "palavra para revisar" : "palavras para revisar") : "Tudo em dia"}</strong><p class="muted" style="margin:2px 0 0;font-weight:700">${learnedCount(lang)} de ${allWords(lang).length} palavras aprendidas em ${esc(LANGS[lang].name)}</p></div>
+  return head + `<div class="stack"><div class="card hero-card"><div class="big">${due.length + dph}</div><div class="grow"><strong style="font-family:var(--display);font-size:20px">${due.length + dph ? (due.length + dph === 1 ? "item para revisar" : dph ? "palavras e frases para revisar" : "palavras para revisar") : "Tudo em dia"}</strong><p class="muted" style="margin:2px 0 0;font-weight:700">${learnedCount(lang)} de ${allWords(lang).length} palavras aprendidas em ${esc(LANGS[lang].name)}${sph ? ` · ${sph} ${sph === 1 ? "frase" : "frases"} da história` : ""}</p></div>
     <button class="btn" data-act="review">${I("target")}Treinar</button></div>
     <div class="card"><h3>Força de cada palavra</h3><p class="muted" style="margin:-4px 0 6px;font-weight:700;font-size:14px">As mais fracas aparecem primeiro e voltam mais vezes nos treinos.</p><div class="wlist">
     ${list.map(w => { const s = srs(lang, w).s; return `<div class="wrow">${voice ? `<button class="say" data-act="say" data-t="${esc(w[0])}" aria-label="Ouvir">${I("speaker")}</button>` : "<span></span>"}
@@ -2013,7 +2047,7 @@ function makeQueue(lang, words, sents, o) {
   return q.concat(shuffle(rest));
 }
 // A speaking item: text may hold "|" variants; tr = transliteration; self = no recognizer, self-assessed.
-const speakItem = (x, isSent, self) => ({ k: "speak", text: x[0], pt: x[1], tr: x[2], w: isSent ? null : x, isSent, self: !!self });
+const speakItem = (x, isSent, self) => ({ k: "speak", text: x[0], pt: x[1], tr: x[2], w: isSent ? null : x, src: x, isSent, self: !!self });
 function makeSpeechTest(lang, u) {
   const unit = LANGS[lang].units[u], snd = focusSound(lang, u), ps = pairSound(lang, u), q = [];
   if (snd) {
@@ -2057,7 +2091,8 @@ function startReview() {
   if (seen.length < 4) return;
   const due = dueWords(lang);
   const pool = (due.length >= 6 ? due : due.concat(seen.filter(w => !due.includes(w)).sort((a, b) => srs(lang, a).s - srs(lang, b).s))).slice(0, 10);
-  begin({ mode: "review", lang, title: "Treino", unitWords: seen, queue: makeQueue(lang, pool, [], { teach: false, size: 10, review: true, alpha: pool.every(w => w.alpha) }) });
+  const ph = duePhrases(lang).slice(0, 3);
+  begin({ mode: "review", lang, title: "Treino", unitWords: seen, queue: makeQueue(lang, pool, ph, { teach: false, size: 10, review: true, alpha: pool.every(w => w.alpha) }) });
 }
 function begin(o) {
   closeModal();
@@ -2246,7 +2281,7 @@ function renderLesson() {
       break;
     }
   }
-  const hearts = LS.mode !== "lesson" || LS.speechTest ? `<span class="l-hearts inf" title="Não gasta vidas">${I(LS.mode === "review" ? "target" : "mic")}</span>` : `<span class="l-hearts" title="Vidas">${I("heart")}${S.hearts}</span>`;
+  const hearts = LS.mode !== "lesson" || LS.speechTest ? `<span class="l-hearts inf" title="Não gasta vidas">${I(LS.mode === "review" || LS.mode === "place" ? "target" : "mic")}</span>` : `<span class="l-hearts" title="Vidas">${I("heart")}${S.hearts}</span>`;
   paintLesson(`<div class="l-top"><button class="x" data-act="quit" aria-label="Sair da lição">${I("x")}</button><div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="${LS.total}" aria-valuenow="${LS.graded}"><i style="width:${pct}%"></i></div>${hearts}</div>
     <div class="l-body"><div class="l-in">${body}</div></div><div class="l-foot ${["ok", "bad", "soft"].includes(LS.state) ? LS.state : ""}" id="lfoot">${footHtml(it)}</div>`, it);
   const ta = $("#typeIn");
@@ -2325,16 +2360,16 @@ function check(skip) {
     LS.combo++; LS.maxCombo = Math.max(LS.maxCombo, LS.combo); LS.correct++; S.stats.correct++; LS.graded++;
     const gain = 10 + (LS.combo >= 3 ? Math.min(10, (LS.combo - 2) * 2) : 0);
     LS.xp += gain;
-    if (it.w) srsHit(lang, it.w, true);
+    if (srsOf(it) && LS.mode !== "place") srsHit(lang, srsOf(it), true);
     LS.state = "ok"; LS.fb = { title: LS.combo >= 5 ? `Combo de ${LS.combo}!` : pick(PRAISE), gain, note };
     sfx(LS.combo >= 3 && LS.combo % 5 === 0 ? "combo" : "ok");
     if (speakText && S.sound && ["chooseRev", "type", "build"].includes(it.k)) speak(speakText, lang);
   } else {
     LS.combo = 0; LS.mistakes++;
     if (LS.mode === "lesson" && it.k !== "minimal") loseHeart();
-    if (it.w) srsHit(lang, it.w, false);
+    if (srsOf(it) && LS.mode !== "place") srsHit(lang, srsOf(it), false);
     const copy = Object.assign({}, it, { retry: true, ready: false, typed: "", sel: null, hint: false });
-    LS.queue.push(copy);
+    if (LS.mode !== "place") LS.queue.push(copy);  // the level test asks each thing once
     LS.state = "bad"; LS.fb = { answer, note: it.k === "build" || it.k === "buildRev" ? (it.k === "build" ? it.s[1] : it.s[0]) : it.k === "minimal" ? `Ouça de novo os dois: ${it.p[0]} × ${it.p[1]}. Essa dupla volta daqui a pouco.` : it.k === "dictation" && it.s ? it.s[1] : "" };
     sfx("bad");
   }
@@ -2352,7 +2387,7 @@ function resolveSpeak(ok, score) {
     const gain = 10 + (score >= 90 ? 5 : 0) + (LS.combo >= 3 ? Math.min(10, (LS.combo - 2) * 2) : 0);
     LS.xp += gain;
     countSpoken(score || 0);
-    if (it.w) srsHit(lang, it.w, true);
+    if (srsOf(it)) srsHit(lang, srsOf(it), true);
     LS.state = "ok";
     LS.fb = { title: score == null ? pick(PRAISE) : score >= 90 ? "Pronúncia excelente!" : score >= GREAT ? "Muito bem falado!" : "Deu para entender!", gain, note: score == null ? "" : `Nota de pronúncia: ${score}%` };
     sfx(LS.combo >= 3 && LS.combo % 5 === 0 ? "combo" : "ok");
@@ -2419,7 +2454,52 @@ function pairTap(side, i) {
   }
   renderLesson();
 }
+// ---------- level test ----------
+// For people who told the plan they already know some of the language. It goes in blocks of PLACE_U units
+// from where they are, three questions per unit, each asked once. Up to PLACE_MISS mistakes passes the
+// block: its lessons count as done and its words go to the Treino, then the test offers the next block.
+const PLACE_U = 4, PLACE_MISS = 2;
+const placeOpen = lang => { const p = S.plan[lang]; return !!(p && p.level && p.level !== "zero" && !(S.placed || {})[lang] && currentOf(lang)); };
+function startPlace() {
+  const lang = S.lang, units = LANGS[lang].units, cur = currentOf(lang);
+  if (!cur) return;
+  const from = cur.u, to = Math.min(units.length, from + PLACE_U), q = [], words = [];
+  for (let u = from; u < to; u++) {
+    const un = units[u], ws = shuffle(un.w.slice()).slice(0, un.s.length ? 2 : 3);
+    ws.forEach((w, i) => q.push({ k: i % 2 ? "choose" : "chooseRev", w }));
+    if (un.s.length) q.push({ k: Math.random() < .5 ? "build" : "buildRev", s: pick(un.s) });
+    words.push(...un.w);
+  }
+  begin({ mode: "place", lang, from, to, title: "Teste de nível", unitWords: words, queue: shuffle(q) });
+}
+function placeFinish() {
+  const lang = LS.lang, units = LANGS[lang].units, pass = LS.mistakes <= PLACE_MISS;
+  S.placed ||= {};
+  if (pass) for (let u = LS.from; u < LS.to; u++) {
+    for (let l = 0; l < NL; l++) if (!isDone(lang, u, l)) prog(lang)[`${u}-${l}`] = 1;
+    for (const w of units[u].w) if (!srs(lang, w).seen) { srsHit(lang, w, true); srsHit(lang, w, true); }
+  }
+  const more = pass && LS.to < units.length;
+  if (!more) S.placed[lang] = true;
+  const xpGot = addXp(LS.xp + 10);
+  bumpStreak(); save();
+  const start = (currentOf(lang) || { u: units.length - 1 }).u + 1;
+  const title = pass ? `Unidades ${LS.from + 1} a ${LS.to} liberadas!` : `Seu ponto de partida: unidade ${start}`;
+  const sub = pass
+    ? `Você errou ${LS.mistakes} de ${LS.total}. As palavras dessas unidades vão aparecer no Treino para você não esquecer.${more ? " Quer testar as próximas?" : ""}`
+    : `Você acertou ${LS.total - LS.mistakes} de ${LS.total}, então vale começar daqui. ${LS.from > 0 ? "As unidades antes desta já estão liberadas." : "As lições vão passar rápido no que você já sabe."}`;
+  paintLesson(`<div class="l-body"><div class="end">
+    <div style="color:var(--gold)">${I(pass ? "trophy" : "target", "i tower-big")}</div>
+    <h1>${title}</h1><p class="sub">${sub}</p>
+    <div class="end-stats"><div class="es" style="--c:var(--xp)"><span>XP ganho</span><b>${I("bolt")}${xpGot}</b></div>
+      <div class="es" style="--c:var(--ok)"><span>Acertos</span><b>${I("target")}${LS.total - LS.mistakes} de ${LS.total}</b></div></div>
+  </div></div><div class="l-foot"><div class="l-foot-in" style="justify-content:flex-end;gap:10px">${more ? `<button class="btn ghost" data-act="placeStop">Parar aqui</button><button class="btn" data-act="placeNext">Testar as próximas</button>` : `<button class="btn" data-act="endDone">Continuar</button>`}</div></div>`, "end");
+  sfx(pass ? "level" : "done");
+  if (pass) confetti(160);
+  LS.finished = true;
+}
 function finish() {
+  if (LS.mode === "place") return placeFinish();
   const secs = Math.round((Date.now() - LS.t0) / 1000), perfect = LS.mistakes === 0, lang = LS.lang;
   const lvBefore = lvl(S.xp).L, d = today();
   const baseBonus = LS.mode === "lesson" ? 15 + (perfect ? 10 : 0) : 10;
@@ -2523,11 +2603,11 @@ function talkOptions() {
 }
 function bubbleHtml(e) {
   const st = TK.talk.steps[e.step];
-  if (e.who === "npc") return `<div class="bub npc"><div class="who">${esc(TK.talk.who)}</div><p>${tapWords(st.npc, TK.lang)}</p>
+  if (e.who === "npc") return `<div class="bub npc"><div class="who">${esc(TK.talk.who)}</div><p>${tapWords(st.npc, TK.lang)}</p>${latOf(st.npc, TK.lang)}
     <div class="bub-acts"><button class="say" data-act="say" data-t="${esc(st.npc)}" aria-label="Ouvir de novo">${I("speaker")}</button><button class="say" data-act="saySlow" data-t="${esc(st.npc)}" aria-label="Ouvir devagar">${I("slow")}</button>
     <button class="linkish" data-act="talkPt" data-s="${e.step}">${e.pt ? esc(st.pt) : "Traduzir"}</button></div></div>`;
   const cls = e.score == null ? "" : e.score >= GREAT ? "g" : e.score >= PASS ? "m" : "b";
-  return `<div class="bub me"><p>${esc(e.text)}</p>${e.score != null ? `<span class="chip ${cls}">${I("mic")}${e.score}%</span>` : e.given ? `<span class="chip">resposta sugerida</span>` : ""}
+  return `<div class="bub me"><p>${esc(e.text)}</p>${latOf(e.text, TK.lang)}${e.score != null ? `<span class="chip ${cls}">${I("mic")}${e.score}%</span>` : e.given ? `<span class="chip">resposta sugerida</span>` : ""}
     ${e.note ? `<small>${esc(e.note)}</small>` : ""}</div>`;
 }
 function renderTalk() {
@@ -2536,11 +2616,11 @@ function renderTalk() {
   const st = tkStep(), total = TK.talk.steps.length, self = !canListen();
   const pct = TK.i / total * 100;
   if (self && !TK.opts) TK.opts = talkOptions();
-  const optsHtml = TK.opts ? `<div class="talk-opts">${TK.opts.map((o, i) => `<button class="opt ${TK.wrong === i ? "wrong" : ""}" data-act="talkOpt" data-i="${i}" ${TK.fb ? "disabled" : ""}><span class="k">${i + 1}</span><span>${esc(o)}</span></button>`).join("")}</div>` : "";
+  const optsHtml = TK.opts ? `<div class="talk-opts">${TK.opts.map((o, i) => `<button class="opt ${TK.wrong === i ? "wrong" : ""}" data-act="talkOpt" data-i="${i}" ${TK.fb ? "disabled" : ""}><span class="k">${i + 1}</span><span>${esc(o)}${latOf(o, TK.lang)}</span></button>`).join("")}</div>` : "";
   const turn = TK.fb ? "" : `<div class="your-turn">
     ${TK.err ? `<div class="mic-err">${esc(TK.err)}</div>` : ""}
     ${TK.miss ? `<p class="miss">Não entendi direito${TK.miss.heard ? `: “${esc(TK.miss.heard)}”` : ""}. Tente de novo${TK.tries >= 2 ? " ou veja a dica" : ""}.</p>` : ""}
-    ${TK.hint ? `<p class="hint">Dica: <b>${esc(st.say)}</b> <span class="muted">· ${esc(st.sayPt)}</span></p>` : ""}
+    ${TK.hint ? `<p class="hint">Dica: <b>${esc(st.say)}</b> <span class="muted">· ${esc(st.sayPt)}</span>${latOf(st.say, TK.lang)}</p>` : ""}
     ${TK.chosen != null && !self ? `<p class="hint">Agora diga em voz alta: <b>${esc(TK.opts[TK.chosen])}</b></p>` : ""}
     ${optsHtml}</div>`;
   paintLesson(`<div class="l-top"><button class="x" data-act="talkQuit" aria-label="Sair da conversa">${I("x")}</button><div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="${total}" aria-valuenow="${TK.i}"><i style="width:${pct}%"></i></div><span class="l-hearts inf" title="Conversa não gasta vidas">${I("chat")}</span></div>
@@ -2950,6 +3030,7 @@ function finishStory() {
   const xpGot = addXp(SY.xp + 30), coins = SY.purse;
   S.coins += coins;
   S.story[ch.id] = { stars: Math.max(prev ? prev.stars : 0, stars), times: (prev ? prev.times : 0) + 1, best: Math.max(prev ? prev.best || 0 : 0, coins) };
+  syncPhrases(SY.l);
   S.stats.story = (S.stats.story || 0) + 1; d.lessons++;
   S.stats.langs[SY.l] = (S.stats.langs[SY.l] || 0) + 1;
   const streakUp = bumpStreak(), quests = claimQuests(), lvAfter = lvl(S.xp).L;
@@ -3177,6 +3258,7 @@ const A = {
     const row = (t, pt, tr) => `<div class="wrow">${voice ? `<button class="say" data-act="say" data-t="${esc(t)}" aria-label="Ouvir">${I("speaker")}</button>` : "<span></span>"}<div class="w">${esc(first(t))}${tr && S.translit ? ` <span class="muted">(${esc(tr)})</span>` : ""}<small>${esc(pt.replace(/\//g, ", "))}</small></div><span></span></div>`;
     const snd = focusSound(lang, +d.u);
     modal(`<h2>Guia: ${esc(unit.t)}</h2><p class="muted" style="font-weight:700;margin:0 0 8px">${esc(unit.d)}. ${voice ? "Toque no alto-falante para ouvir." : ""}</p>
+      ${unit.g ? `<div class="tipbox gram"><b>Gramática da unidade.</b> ${esc(unit.g)}</div>` : ""}
       ${snd ? `<div class="tipbox"><b>Som em foco: ${esc(snd.t)}.</b> ${esc(snd.tip)}</div>` : ""}
       <h3 style="margin-top:14px;font-size:17px">${unit.alpha ? "Letras" : "Palavras"}</h3><div class="wlist">${unit.w.map(w => row(w[0], w[1], w[2])).join("")}</div>
       ${unit.s.length ? `<h3 style="margin-top:14px;font-size:17px">Frases</h3><div class="wlist">${unit.s.map(s => row(s[0], s[1], s[2])).join("")}</div>` : ""}
@@ -3240,6 +3322,7 @@ const A = {
   plClose: () => { PL = null; render(); },
   plDone: () => {
     const k = PL.lang, first = PL.first;
+    if (S.plan[k] && S.plan[k].level !== PL.level && S.placed) delete S.placed[k];  // a new answer offers the test again
     S.plan[k] = { why: PL.why, level: PL.level, min: PL.min };
     if (k === S.lang || first) S.goal = GOAL_XP[PL.min];
     PL = null;
@@ -3418,6 +3501,10 @@ const A = {
   quit: () => quitAsk(),
   quitYes: () => { closeModal(); closeLesson(); },
   endDone: () => closeLesson(),
+  placeStart: () => startPlace(),
+  placeNext: () => { closeLesson(); startPlace(); },
+  placeStop: () => { (S.placed ||= {})[S.lang] = true; save(); closeLesson(); },
+  placeSkip: () => { (S.placed ||= {})[S.lang] = true; save(); render(); },
 };
 document.addEventListener("click", e => {
   if (!e.target.closest(".tw, .gloss")) closeGloss();
@@ -3508,6 +3595,7 @@ if (S.onboarded && !standalone() && !S.installHint && matchMedia("(max-width:760
 checkStreak();
 regen();
 if (S.onboarded) { const c = currentOf(S.lang); if (c && S.view === "learn" && !isDone(S.lang, 0, 0)) pop = `${c.u}-${c.l}`; }
+LKEYS.forEach(syncPhrases);
 if (S.onboarded && !S.plan[S.lang]) PL = { steps: ["why", "level", "goal", "ready"], i: 0, lang: S.lang };  // people who started before the plan existed answer once
 render();
 if (streakNotice) toast(esc(streakNotice), "flame");
