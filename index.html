@@ -112,6 +112,8 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .card{background:var(--surface);border:2px solid var(--line);border-radius:18px;padding:18px}
 .card h3{font-size:19px;margin-bottom:10px}
 .only-narrow{display:none}
+.pop .hard-btn{margin-top:8px;width:100%;white-space:normal}.pop .hard-btn svg{color:var(--heart)}
+.pop .hard-note{margin:6px 0 0;font-size:13px;color:var(--muted);font-weight:700}
 
 /* today strip & goal */
 .goal{display:flex;align-items:center;gap:14px}
@@ -1086,6 +1088,9 @@ function regen() {
   if (n > 0) { S.hearts = Math.min(MAX_HEARTS, S.hearts + n); S.heartsAt += n * HEART_MS; if (S.hearts >= MAX_HEARTS) S.heartsAt = Date.now(); save(); }
 }
 const nextHeartMin = () => Math.max(1, Math.ceil((HEART_MS - (Date.now() - S.heartsAt)) / 60e3));
+// Hearts are used only in the optional Desafio (replaying a finished lesson with hearts, for a bonus).
+// Ordinary lessons, reviews, speaking and the story never cost hearts: a mistake shows the explanation and
+// the item comes back later in the same lesson.
 function loseHeart() { if (S.hearts >= MAX_HEARTS) S.heartsAt = Date.now(); S.hearts = Math.max(0, S.hearts - 1); }
 
 let streakNotice = "";
@@ -1177,8 +1182,8 @@ function checkAch() {
 
 // ---------- shop ----------
 const SHOP = [
-  { id: "heart1", name: "Uma vida", desc: "Ganhe 1 vida agora.", price: 15, icon: "heart", color: "var(--heart)", can: () => S.hearts < MAX_HEARTS, why: "Vidas cheias", buy: () => { S.hearts++; if (S.hearts >= MAX_HEARTS) S.heartsAt = Date.now(); } },
-  { id: "refill", name: "Recarga completa", desc: "Volte para 5 vidas na hora.", price: 60, icon: "heart", color: "var(--heart)", can: () => S.hearts < MAX_HEARTS, why: "Vidas cheias", buy: () => { S.hearts = MAX_HEARTS; S.heartsAt = Date.now(); } },
+  { id: "heart1", name: "Uma vida", desc: "Ganhe 1 vida para o Desafio.", price: 15, icon: "heart", color: "var(--heart)", can: () => S.hearts < MAX_HEARTS, why: "Vidas cheias", buy: () => { S.hearts++; if (S.hearts >= MAX_HEARTS) S.heartsAt = Date.now(); } },
+  { id: "refill", name: "Recarga completa", desc: "Volte para 5 vidas na hora, para o Desafio.", price: 60, icon: "heart", color: "var(--heart)", can: () => S.hearts < MAX_HEARTS, why: "Vidas cheias", buy: () => { S.hearts = MAX_HEARTS; S.heartsAt = Date.now(); } },
   { id: "freeze", name: "Protetor de sequência", desc: "Se você passar um dia sem estudar, ele salva sua sequência. Guarde até 2.", price: 120, icon: "shield", color: "var(--coin)", can: () => S.freezes < 2, why: "Você já tem 2", buy: () => { S.freezes++; } },
   { id: "boost", name: "XP em dobro", desc: "Todo XP vale o dobro pelos próximos 15 minutos.", price: 100, icon: "bolt", color: "var(--xp)", can: () => !boosted(), why: "Já está ativo", buy: () => { S.boostUntil = Date.now() + 15 * 60e3; } },
 ];
@@ -1514,9 +1519,11 @@ function viewLearn() {
 function popHtml(u, l, ls, state) {
   if (state === "locked") return `<div class="pop locked"><h4>${esc(ls.name)}</h4><p class="muted">Complete as lições anteriores para liberar esta.</p></div>`;
   const xp = (ls.size || 10) * 10 + 15;
-  const what = ls.speech ? `Fale em voz alta as palavras e frases da unidade. Não gasta vidas.` : `Lição ${l + 1} de ${NL}`;
+  const what = ls.speech ? `Fale em voz alta as palavras e frases da unidade. Não gasta vidas.` : `Lição ${l + 1} de ${NL} · errar não gasta vidas`;
+  const hard = state === "done" && !ls.speech;
   return `<div class="pop"><h4>${esc(ls.name)}</h4><p>${what}${state === "done" ? " · já concluída, praticar de novo" : ""}</p>
-    <button class="btn" data-act="start" data-u="${u}" data-l="${l}">${state === "done" ? "Praticar" : "Começar"} +${xp} XP</button></div>`;
+    <button class="btn" data-act="start" data-u="${u}" data-l="${l}">${state === "done" ? "Praticar" : "Começar"} +${xp} XP</button>
+    ${hard ? `<button class="btn ghost hard-btn" data-act="startHard" data-u="${u}" data-l="${l}">${I("heart")}Desafio</button><p class="hard-note">Opcional: cada erro custa 1 vida (você tem ${S.hearts}). Vencer dá +10 moedas e +20 XP.</p>` : ""}</div>`;
 }
 function viewTrain() {
   const lang = S.lang, seen = seenWords(lang), due = dueWords(lang), dph = duePhrases(lang).length, sph = seenPhrases(lang).length;
@@ -2244,12 +2251,12 @@ function makeSpeechTest(lang, u) {
   for (let i = 0; q.filter(x => x.k !== "tip").length < 10 && i < ws.length; i++) q.push(speakItem(ws[i], false, unit.alpha));
   return q.slice(0, 1).concat(shuffle(q.slice(1)));
 }
-function startLesson(u, l) {
+function startLesson(u, l, hard) {
   regen();
   const lang = S.lang, unit = LANGS[lang].units[u], ls = lessonsOf(lang, u)[l];
   if (ls.speech) { begin({ mode: "lesson", speechTest: true, lang, u, l, title: ls.name, unitWords: unit.w, queue: makeSpeechTest(lang, u) }); return; }
-  if (S.hearts <= 0) { outOfHeartsModal(); return; }
-  begin({ mode: "lesson", lang, u, l, title: ls.name, unitWords: unit.w, queue: makeQueue(lang, ls.w, ls.s, { teach: true, size: ls.size, alpha: !!unit.alpha, u }) });
+  if (hard && S.hearts <= 0) { outOfHeartsModal(); return; }
+  begin({ mode: "lesson", hard: !!hard, lang, u, l, title: hard ? "Desafio: " + ls.name : ls.name, unitWords: unit.w, queue: makeQueue(lang, ls.w, ls.s, { teach: true, size: ls.size, alpha: !!unit.alpha, u }) });
 }
 function startSpeakTrain() {
   const lang = S.lang, units = LANGS[lang].units, cur = currentOf(lang) || { u: 0 };
@@ -2469,7 +2476,7 @@ function renderLesson() {
       break;
     }
   }
-  const hearts = LS.mode !== "lesson" || LS.speechTest ? `<span class="l-hearts inf" title="Não gasta vidas">${I(LS.mode === "review" || LS.mode === "place" ? "target" : "mic")}</span>` : `<span class="l-hearts" title="Vidas">${I("heart")}${S.hearts}</span>`;
+  const hearts = !LS.hard ? `<span class="l-hearts inf" title="Errar aqui não gasta vidas">${I(LS.mode === "review" || LS.mode === "place" ? "target" : LS.mode === "lesson" && !LS.speechTest ? "shield" : "mic")}</span>` : `<span class="l-hearts" title="Vidas do desafio">${I("heart")}${S.hearts}</span>`;
   paintLesson(`<div class="l-top"><button class="x" data-act="quit" aria-label="Sair da lição">${I("x")}</button><div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="${LS.total}" aria-valuenow="${LS.graded}"><i style="width:${pct}%"></i></div>${hearts}</div>
     <div class="l-body"><div class="l-in">${body}</div></div><div class="l-foot ${["ok", "bad", "soft"].includes(LS.state) ? LS.state : ""}" id="lfoot">${footHtml(it)}</div>`, it);
   const ta = $("#typeIn");
@@ -2554,7 +2561,7 @@ function check(skip) {
     if (speakText && S.sound && ["chooseRev", "type", "build"].includes(it.k)) speak(speakText, lang);
   } else {
     LS.combo = 0; LS.mistakes++;
-    if (LS.mode === "lesson" && it.k !== "minimal") loseHeart();
+    if (LS.hard && it.k !== "minimal") loseHeart();
     if (srsOf(it) && LS.mode !== "place") srsHit(lang, srsOf(it), false);
     const copy = Object.assign({}, it, { retry: true, ready: false, typed: "", sel: null, hint: false });
     if (LS.mode !== "place") LS.queue.push(copy);  // the level test asks each thing once
@@ -2610,7 +2617,7 @@ function onSpeech(it, res) {
 function next() {
   const it = curItem();
   if (it.k === "intro") { srsHit(LS.lang, it.w, false); S.srs[wkey(LS.lang, it.w)].due = Date.now(); }
-  if (LS.mode === "lesson" && S.hearts <= 0 && LS.state === "bad" && it.k !== "minimal") { outOfHeartsInLesson(); return; }
+  if (LS.hard && S.hearts <= 0 && LS.state === "bad" && it.k !== "minimal") { outOfHeartsInLesson(); return; }
   LS.pos++; LS.sel = null; LS.state = "answer"; LS.fb = null;
   stopListening();
   if (LS.pos >= LS.queue.length) { finish(); return; }
@@ -2690,9 +2697,9 @@ function finish() {
   if (LS.mode === "place") return placeFinish();
   const secs = Math.round((Date.now() - LS.t0) / 1000), perfect = LS.mistakes === 0, lang = LS.lang;
   const lvBefore = lvl(S.xp).L, d = today();
-  const baseBonus = LS.mode === "lesson" ? 15 + (perfect ? 10 : 0) : 10;
+  const baseBonus = LS.mode === "lesson" ? 15 + (perfect ? 10 : 0) + (LS.hard ? 20 : 0) : 10;
   const xpGot = addXp(LS.xp + baseBonus);
-  let coins = LS.mode === "lesson" ? 10 + (perfect ? 5 : 0) : 5;
+  let coins = LS.mode === "lesson" ? 10 + (perfect ? 5 : 0) + (LS.hard ? 10 : 0) : 5;
   S.coins += coins;
   if (LS.mode === "lesson") {
     prog(lang)[`${LS.u}-${LS.l}`] = doneCount(lang, LS.u, LS.l) + 1;
@@ -2716,14 +2723,14 @@ function finish() {
   const acc = LS.answered ? Math.round(LS.correct / LS.answered * 100) : 100;
   const spkAvg = LS.spk.length ? Math.round(LS.spk.reduce((a, b) => a + b, 0) / LS.spk.length) : null;
   const rewards = [];
-  rewards.push(`<div class="rw" style="color:var(--coin)">${I("gem")}<div>+${coins} moedas<small>${perfect && LS.mode === "lesson" ? "inclui 5 de bônus por zero erros" : LS.mode === "review" ? "e +1 vida recuperada" : LS.mode === "practice" ? "por treinar a fala" : "por completar a lição"}</small></div></div>`);
+  rewards.push(`<div class="rw" style="color:var(--coin)">${I("gem")}<div>+${coins} moedas<small>${LS.hard ? `inclui 10 de bônus do desafio${perfect ? " e 5 por zero erros" : ""}` : perfect && LS.mode === "lesson" ? "inclui 5 de bônus por zero erros" : LS.mode === "review" ? "e +1 vida recuperada" : LS.mode === "practice" ? "por treinar a fala" : "por completar a lição"}</small></div></div>`);
   if (lvAfter > lvBefore) rewards.push(`<div class="rw lvlup">${I("bolt")}<div>Nível ${lvAfter}: ${titleOf(lvAfter)}!<small>+${25 * (lvAfter - lvBefore)} moedas de bônus</small></div></div>`);
   if (streakUp) rewards.push(`<div class="rw" style="color:var(--flame)">${I("flame")}<div>Sequência de ${S.streak} ${S.streak === 1 ? "dia" : "dias"}!<small>Volte amanhã para manter o fogo aceso</small></div></div>`);
   if (unitFinished) rewards.push(`<div class="rw" style="color:var(--gold-dark)">${I("chest")}<div>Unidade concluída!<small>Abra o baú no mapa para ganhar 30 moedas</small></div></div>`);
   for (const q of quests) rewards.push(`<div class="rw" style="color:var(--xp)">${I("target")}<div>Missão cumprida: ${esc(q.text)}<small>+${q.reward} moedas</small></div></div>`);
   for (const a of achs) rewards.push(`<div class="rw" style="color:var(--gold-dark)">${I("medal")}<div>Conquista: ${esc(a.name)}<small>${esc(a.desc)} · +${ACH_REWARD} moedas</small></div></div>`);
   const spkSub = spkAvg == null ? "" : spkAvg >= GREAT ? " Sua pronúncia está ótima." : spkAvg >= PASS ? " Sua fala já dá para entender bem." : " Continue falando em voz alta: a pronúncia melhora com a repetição.";
-  const title = LS.mode === "review" ? "Treino concluído!" : LS.mode === "practice" ? "Treino de fala concluído!" : LS.speechTest ? "Prova de fala concluída!" : perfect ? "Lição perfeita!" : "Lição concluída!";
+  const title = LS.mode === "review" ? "Treino concluído!" : LS.mode === "practice" ? "Treino de fala concluído!" : LS.speechTest ? "Prova de fala concluída!" : LS.hard ? (perfect ? "Desafio perfeito!" : "Desafio vencido!") : perfect ? "Lição perfeita!" : "Lição concluída!";
   const sub = (LS.mode === "review" ? "Sua memória agradece." : LS.mode === "practice" || LS.speechTest ? "Falar em voz alta todo dia é o que treina o sotaque." : perfect ? "Nenhum erro. Impressionante." : `Você errou ${LS.mistakes} ${LS.mistakes === 1 ? "vez" : "vezes"} e corrigiu tudo.`) + spkSub;
   paintLesson(`<div class="l-body"><div class="end">
     <div style="color:var(--gold)">${I(perfect ? "trophy" : "star", "i tower-big")}</div>
@@ -2750,17 +2757,17 @@ function closeLesson() {
 }
 function quitAsk() {
   if (!LS || LS.finished) { closeLesson(); return; }
-  modal(`<h2>Sair da lição?</h2><p class="muted" style="font-weight:700">Você vai perder o XP desta lição. As vidas gastas não voltam.</p>
+  modal(`<h2>Sair da lição?</h2><p class="muted" style="font-weight:700">Você vai perder o XP desta lição.${LS && LS.hard ? " As vidas gastas no desafio não voltam." : ""}</p>
     <div class="acts"><button class="btn" data-act="closeModal">Continuar estudando</button><button class="btn ghost" data-act="quitYes">Sair</button></div>`);
 }
 function outOfHeartsInLesson() {
   modal(`<div style="color:var(--heart);font-size:56px;text-align:center">${I("heart")}</div><h2 style="text-align:center">Suas vidas acabaram</h2>
-    <p class="muted" style="font-weight:700;text-align:center">Recarregue para continuar esta lição, ou saia e faça um treino para ganhar 1 vida. Uma vida volta sozinha a cada 30 minutos.</p>
+    <p class="muted" style="font-weight:700;text-align:center">Recarregue para continuar o desafio, ou saia: as lições normais continuam liberadas e não gastam vidas. Uma vida volta sozinha a cada 30 minutos, e um treino devolve 1.</p>
     <div class="acts"><button class="btn" data-act="refillGo" ${S.coins >= 60 ? "" : "disabled"}>${I("gem")}60 · Recarregar</button><button class="btn ghost" data-act="quitYes">Sair da lição</button></div>`);
 }
 function outOfHeartsModal() {
-  modal(`<div style="color:var(--heart);font-size:56px;text-align:center">${I("heart")}</div><h2 style="text-align:center">Sem vidas no momento</h2>
-    <p class="muted" style="font-weight:700;text-align:center">A próxima vida chega em ${nextHeartMin()} min. Enquanto isso, faça um treino (ganha 1 vida) ou recarregue na loja.</p>
+  modal(`<div style="color:var(--heart);font-size:56px;text-align:center">${I("heart")}</div><h2 style="text-align:center">Sem vidas para o desafio</h2>
+    <p class="muted" style="font-weight:700;text-align:center">O desafio usa vidas; as lições normais não, e continuam liberadas. A próxima vida chega em ${nextHeartMin()} min, um treino devolve 1, e a loja tem recarga.</p>
     <div class="acts"><button class="btn" data-act="review" ${seenWords(S.lang).length >= 4 ? "" : "disabled"}>${I("target")}Treinar</button><button class="btn ghost" data-act="buyRefill" ${S.coins >= 60 ? "" : "disabled"}>${I("gem")}60 · Recarregar</button></div>`);
 }
 
@@ -3430,6 +3437,7 @@ const A = {
     const el = document.querySelector(".pop"); el && el.scrollIntoView({ block: "nearest", behavior: reduceMotion ? "auto" : "smooth" });
   },
   start: d => { pop = null; startLesson(+d.u, +d.l); },
+  startHard: d => { pop = null; startLesson(+d.u, +d.l, true); },
   chest: d => {
     const u = +d.u, ck = S.lang + u;
     if (unitDone(S.lang, u) && !S.chests[ck]) {
@@ -3488,7 +3496,7 @@ const A = {
   },
   buyRefill: () => { if (S.coins < 60) return; S.coins -= 60; S.hearts = MAX_HEARTS; S.heartsAt = Date.now(); save(); closeModal(); render(); sfx("coin"); toast("Vidas recarregadas.", "heart"); },
   refillGo: () => { if (S.coins < 60) return; S.coins -= 60; S.hearts = MAX_HEARTS; S.heartsAt = Date.now(); save(); closeModal(); sfx("coin"); LS.pos++; LS.state = "answer"; LS.sel = null; if (LS.pos >= LS.queue.length) finish(); else renderLesson(); },
-  heartsInfo: () => modal(`<h2>${S.hearts} de ${MAX_HEARTS} vidas</h2><p class="muted" style="font-weight:700">Cada erro numa lição custa 1 vida. ${S.hearts < MAX_HEARTS ? `A próxima vida volta em ${nextHeartMin()} min.` : "Suas vidas estão cheias."} Treinos não gastam vidas e devolvem 1 ao terminar.</p>
+  heartsInfo: () => modal(`<h2>${S.hearts} de ${MAX_HEARTS} vidas</h2><p class="muted" style="font-weight:700">As vidas só valem no <b>Desafio</b>: um modo opcional para refazer uma lição já concluída, em que cada erro custa 1 vida e terminar dá +10 moedas e +20 XP. Nas lições normais, no treino, na fala e na história, errar não custa nada: você vê a explicação e tenta de novo. ${S.hearts < MAX_HEARTS ? `A próxima vida volta em ${nextHeartMin()} min.` : "Suas vidas estão cheias."} Cada treino completo devolve 1.</p>
     <div class="acts"><button class="btn" data-act="closeModal">Ok</button>${S.hearts < MAX_HEARTS ? `<button class="btn ghost" data-act="go" data-v="shop">Ir à loja</button>` : ""}</div>`),
   streakInfo: () => modal(`<div style="color:var(--flame);font-size:56px;text-align:center">${I("flame")}</div><h2 style="text-align:center">Sequência de ${S.streak} ${S.streak === 1 ? "dia" : "dias"}</h2>
     <p class="muted" style="font-weight:700;text-align:center">${studiedToday() ? "Você já estudou hoje. Volte amanhã para continuar." : "Faça uma lição hoje para manter a sequência."} Seu recorde é ${S.bestStreak} ${S.bestStreak === 1 ? "dia" : "dias"}. Protetores guardados: ${S.freezes}.</p>

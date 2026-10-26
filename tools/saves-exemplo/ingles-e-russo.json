@@ -1,0 +1,8 @@
+{"v":1,"onboarded":true,"lang":"ru","view":"story","xp":2436,"coins":412,"hearts":0,"heartsAt":1761400000000,"streak":12,"bestStreak":15,"lastDay":"2026-10-25","freezes":1,"goal":30,"day":{"2026-10-25":{"xp":140,"lessons":3,"perfect":1,"combo":9,"reviews":1,"spoken":6}},"boostUntil":0,"sound":true,"translit":false,
+ "progress":{"en":{"0-0":3,"0-1":2,"0-2":1,"0-3":1,"1-0":1},"ru":{"0-0":1,"0-1":1,"0-2":1,"0-3":1}},"chests":{"en0":true,"ru0":true},
+ "srs":{"en:hello":{"s":5,"due":1762000000000,"seen":1},"ru:да":{"s":1,"due":1761500000000,"seen":1},"en:I'm okay.":{"s":3,"due":1761600000000,"seen":1}},
+ "ach":{"first":"2026-10-01","streak7":"2026-10-20","story1":"2026-10-10"},"quests":{"2026-10-25":{"xp":true,"speak":true}},"speech":{"en:hello":92,"ru:да":77},
+ "talks":{"en:coffee":{"best":88,"times":2},"ru:chai":{"best":70,"times":1}},"voicePick":{"en":"Microsoft Aria"},"story":{"a1c1":{"stars":3,"times":2,"best":6},"ru-a1c1":{"stars":2,"times":1,"best":4}},
+ "bag":["key","map"],"bags":{"ru":["letter"]},"noMicUntil":0,"plan":{"en":{"why":"travel","know":"words","min":15}},"coop":{},"abc":{"ru":{"а":5,"б":3}},"placed":{"en":true},
+ "savedAt":1761400000000,"notesAt":1761300000000,"user":"teste",
+ "stats":{"lessons":40,"perfect":12,"maxCombo":26,"reviews":8,"langs":{"en":30,"ru":10},"correct":800,"answered":900,"owl":true,"early":false,"chests":2,"spoken":120,"spokenGreat":30,"speechTests":2,"talks":3,"story":3}}
