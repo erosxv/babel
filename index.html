@@ -333,6 +333,21 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .hint-btn{align-self:flex-start}
 .l-foot{border-top:2px solid var(--line);background:var(--bg);padding:16px max(16px,env(safe-area-inset-right,0px)) calc(16px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
 .l-foot.ok{background:var(--ok-soft);border-color:transparent}
+@media (prefers-reduced-motion:no-preference){
+  .l-foot.ok.fresh{animation:footup .38s cubic-bezier(.2,1.35,.45,1)}
+  .l-foot.ok.fresh .mark{position:relative;animation:markpop .5s cubic-bezier(.2,1.7,.4,1) both}
+  .l-foot.ok.fresh .mark::after{content:"";position:absolute;inset:0;border-radius:50%;border:3px solid var(--ok);animation:ring .7s ease-out .12s both;pointer-events:none}
+  .l-foot.ok.fresh h3{animation:praise .45s cubic-bezier(.2,1.5,.4,1) .08s both}
+  .l-foot.ok.fresh .gain{display:inline-block;animation:gainup .8s ease-out .2s both}
+  .l-in.won .answer-line .wt{animation:hop .5s cubic-bezier(.3,1.7,.5,1) both;animation-delay:calc(var(--k,0) * 55ms);border-color:var(--ok);color:var(--ok-ink);background:var(--ok-soft)}
+  .l-in.won .opt.right{animation:hop .5s cubic-bezier(.3,1.7,.5,1) both}
+}
+@keyframes footup{from{transform:translateY(100%)}}
+@keyframes markpop{0%{transform:scale(0) rotate(-40deg)}100%{transform:none}}
+@keyframes ring{from{transform:scale(1);opacity:.9}to{transform:scale(2.1);opacity:0}}
+@keyframes praise{from{opacity:0;transform:translateX(-10px) scale(.9)}}
+@keyframes gainup{0%{opacity:0;transform:translateY(12px) scale(.5)}55%{opacity:1;transform:translateY(-6px) scale(1.25)}100%{transform:none}}
+@keyframes hop{0%{transform:none}40%{transform:translateY(-10px) scale(1.06)}100%{transform:none}}
 .l-foot.bad{background:var(--bad-soft);border-color:transparent}
 .l-foot-in{max-width:760px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .fb{display:flex;align-items:center;gap:14px;min-width:0;flex:1}
@@ -1380,16 +1395,17 @@ function modal(html) {
 function closeModal() { $("#modal").hidden = true; $("#modal").innerHTML = ""; }
 $("#modal").addEventListener("click", e => { if (e.target.id === "modal") closeModal(); });
 
-function confetti(n = 140) {
+function confetti(n = 140, at = null) {
   if (reduceMotion) return;
   const c = $("#confetti"), x = c.getContext("2d");
   const W = c.width = innerWidth * devicePixelRatio, H = c.height = innerHeight * devicePixelRatio;
+  const ox = at ? at.x * devicePixelRatio : W / 2, oy = at ? at.y * devicePixelRatio : H * .35, sp = at ? .5 : 1;
   const cols = [getComputedStyle(document.documentElement).getPropertyValue("--lang").trim() || "#3d6ee8", "#f5b800", "#3aa935", "#ef3f5a", "#0ea5bd", "#ff7a1a"];
-  const ps = Array.from({ length: n }, () => ({ x: W / 2 + (Math.random() - .5) * W * .3, y: H * .35, vx: (Math.random() - .5) * 18 * devicePixelRatio, vy: (-Math.random() * 16 - 6) * devicePixelRatio, r: Math.random() * Math.PI, vr: (Math.random() - .5) * .3, w: (6 + Math.random() * 6) * devicePixelRatio, h: (8 + Math.random() * 8) * devicePixelRatio, c: pick(cols) }));
+  const ps = Array.from({ length: n }, () => ({ x: ox + (at ? 0 : (Math.random() - .5) * W * .3), y: oy, vx: (Math.random() - .5) * 18 * sp * devicePixelRatio, vy: (-Math.random() * 16 * sp - 6 * sp) * devicePixelRatio, r: Math.random() * Math.PI, vr: (Math.random() - .5) * .3, w: (6 + Math.random() * 6) * devicePixelRatio, h: (8 + Math.random() * 8) * devicePixelRatio, c: pick(cols) }));
   const t0 = performance.now();
   (function f(now) {
     x.clearRect(0, 0, W, H);
-    const alive = now - t0 < 2800;
+    const alive = now - t0 < (at ? 1400 : 2800);
     for (const p of ps) {
       p.vy += .45 * devicePixelRatio; p.vx *= .99; p.x += p.vx; p.y += p.vy; p.r += p.vr;
       x.save(); x.translate(p.x, p.y); x.rotate(p.r); x.fillStyle = p.c; x.fillRect(-p.w / 2, -p.h / 2, p.w, p.h * Math.abs(Math.cos(p.r * 2))); x.restore();
@@ -2195,6 +2211,11 @@ function paintLesson(html, step) {
   const st = el.querySelector(".stage"), bg = c => (/bg-\S+/.exec(c || "") || [])[0];
   if (st && scene && bg(st.className) === bg(scene)) st.classList.add("same");
   const ft = el.querySelector(".l-foot"); if (ft && foot != null && ft.className !== foot) ft.classList.add("fresh");
+  if (ft && ft.classList.contains("fresh") && ft.classList.contains("ok") && !reduceMotion) {
+    if (inn) { inn.classList.add("won"); inn.querySelectorAll(".answer-line .wt").forEach((t, k) => t.style.setProperty("--k", k)); }
+    const m = ft.querySelector(".mark");
+    if (m) { const r = m.getBoundingClientRect(); requestAnimationFrame(() => confetti(LS && LS.combo >= 5 ? 60 : 28, { x: r.left + r.width / 2, y: r.top + r.height / 2 })); }
+  }
   const bar = el.querySelector(".l-top .bar i");
   if (bar && w && bar.style.width !== w && !reduceMotion) { const to = bar.style.width; bar.style.width = w; void bar.offsetWidth; bar.style.width = to; }
 }
@@ -3495,7 +3516,11 @@ const A = {
   next: () => next(),
   pairL: d => pairTap("L", +d.i),
   pairR: d => pairTap("R", +d.i),
-  pick: d => { const it = curItem(); if (LS.state !== "answer") return; it.picked.push(+d.i); sfx("tap"); renderLesson(); },
+  pick: d => {
+    const it = curItem(); if (LS.state !== "answer") return;
+    it.picked.push(+d.i); renderLesson();
+    if (it.k === "build" && S.sound) speak(it.bank[+d.i].t, LS.lang); else sfx("tap");  // pieces in the language: hear each word
+  },
   unpick: d => { const it = curItem(); if (LS.state !== "answer") return; it.picked = it.picked.filter(i => i !== +d.i); renderLesson(); },
   hint: () => { curItem().hint = !curItem().hint; renderLesson(); },
   quit: () => quitAsk(),
