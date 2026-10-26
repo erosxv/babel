@@ -1,0 +1,11191 @@
+[
+ {
+  "key": "15062a4f",
+  "text": "А",
+  "voice": "xenia"
+ },
+ {
+  "key": "140628bc",
+  "text": "Б",
+  "voice": "xenia"
+ },
+ {
+  "key": "17062d75",
+  "text": "В",
+  "voice": "xenia"
+ },
+ {
+  "key": "16062be2",
+  "text": "Г",
+  "voice": "xenia"
+ },
+ {
+  "key": "11062403",
+  "text": "Д",
+  "voice": "xenia"
+ },
+ {
+  "key": "10062270",
+  "text": "Е",
+  "voice": "xenia"
+ },
+ {
+  "key": "13062729",
+  "text": "Ж",
+  "voice": "xenia"
+ },
+ {
+  "key": "12062596",
+  "text": "З",
+  "voice": "xenia"
+ },
+ {
+  "key": "1d0636e7",
+  "text": "И",
+  "voice": "xenia"
+ },
+ {
+  "key": "1f063a0d",
+  "text": "К",
+  "voice": "xenia"
+ },
+ {
+  "key": "1e06387a",
+  "text": "Л",
+  "voice": "xenia"
+ },
+ {
+  "key": "1906309b",
+  "text": "М",
+  "voice": "xenia"
+ },
+ {
+  "key": "18062f08",
+  "text": "Н",
+  "voice": "xenia"
+ },
+ {
+  "key": "1b0633c1",
+  "text": "О",
+  "voice": "xenia"
+ },
+ {
+  "key": "1a06322e",
+  "text": "П",
+  "voice": "xenia"
+ },
+ {
+  "key": "2506437f",
+  "text": "Р",
+  "voice": "xenia"
+ },
+ {
+  "key": "240641ec",
+  "text": "С",
+  "voice": "xenia"
+ },
+ {
+  "key": "270646a5",
+  "text": "Т",
+  "voice": "xenia"
+ },
+ {
+  "key": "26064512",
+  "text": "У",
+  "voice": "xenia"
+ },
+ {
+  "key": "21063d33",
+  "text": "Ф",
+  "voice": "xenia"
+ },
+ {
+  "key": "20063ba0",
+  "text": "Х",
+  "voice": "xenia"
+ },
+ {
+  "key": "23064059",
+  "text": "Ц",
+  "voice": "xenia"
+ },
+ {
+  "key": "22063ec6",
+  "text": "Ч",
+  "voice": "xenia"
+ },
+ {
+  "key": "2d065017",
+  "text": "Ш",
+  "voice": "xenia"
+ },
+ {
+  "key": "2e0651aa",
+  "text": "Ы",
+  "voice": "xenia"
+ },
+ {
+  "key": "2a064b5e",
+  "text": "Я",
+  "voice": "xenia"
+ },
+ {
+  "key": "9015dafb",
+  "text": "привет",
+  "voice": "xenia"
+ },
+ {
+  "key": "7bf34c50",
+  "text": "до свидания",
+  "voice": "xenia"
+ },
+ {
+  "key": "5aea4a0a",
+  "text": "доброе утро",
+  "voice": "xenia"
+ },
+ {
+  "key": "41c320e6",
+  "text": "спокойной ночи",
+  "voice": "xenia"
+ },
+ {
+  "key": "0507fd18",
+  "text": "пожалуйста",
+  "voice": "xenia"
+ },
+ {
+  "key": "2fd5ef55",
+  "text": "спасибо",
+  "voice": "xenia"
+ },
+ {
+  "key": "7ff398a9",
+  "text": "да",
+  "voice": "xenia"
+ },
+ {
+  "key": "5dadc93f",
+  "text": "нет",
+  "voice": "xenia"
+ },
+ {
+  "key": "d995ea7e",
+  "text": "извините",
+  "voice": "xenia"
+ },
+ {
+  "key": "4850252a",
+  "text": "Как дела?",
+  "voice": "xenia"
+ },
+ {
+  "key": "f6190858",
+  "text": "Хорошо, спасибо",
+  "voice": "xenia"
+ },
+ {
+  "key": "696d2755",
+  "text": "Как тебя зовут?",
+  "voice": "xenia"
+ },
+ {
+  "key": "bbfce124",
+  "text": "Меня зовут Анна",
+  "voice": "xenia"
+ },
+ {
+  "key": "4395f4c3",
+  "text": "Очень приятно",
+  "voice": "xenia"
+ },
+ {
+  "key": "f54ae325",
+  "text": "мама",
+  "voice": "xenia"
+ },
+ {
+  "key": "e035809d",
+  "text": "папа",
+  "voice": "xenia"
+ },
+ {
+  "key": "bf7730ea",
+  "text": "брат",
+  "voice": "xenia"
+ },
+ {
+  "key": "50a22e94",
+  "text": "сестра",
+  "voice": "xenia"
+ },
+ {
+  "key": "99782b27",
+  "text": "друг",
+  "voice": "xenia"
+ },
+ {
+  "key": "d9a837c0",
+  "text": "мужчина",
+  "voice": "xenia"
+ },
+ {
+  "key": "4a0df8cf",
+  "text": "женщина",
+  "voice": "xenia"
+ },
+ {
+  "key": "0e6baeff",
+  "text": "ребёнок",
+  "voice": "xenia"
+ },
+ {
+  "key": "7b883f6c",
+  "text": "семья",
+  "voice": "xenia"
+ },
+ {
+  "key": "a6ca0769",
+  "text": "Это моя мама",
+  "voice": "xenia"
+ },
+ {
+  "key": "8a9f255a",
+  "text": "У меня есть брат",
+  "voice": "xenia"
+ },
+ {
+  "key": "c369ae06",
+  "text": "Она моя подруга",
+  "voice": "xenia"
+ },
+ {
+  "key": "522567f7",
+  "text": "Мы семья",
+  "voice": "xenia"
+ },
+ {
+  "key": "a1c73dfd",
+  "text": "вода",
+  "voice": "xenia"
+ },
+ {
+  "key": "bc06fe77",
+  "text": "хлеб",
+  "voice": "xenia"
+ },
+ {
+  "key": "f3f08686",
+  "text": "кофе",
+  "voice": "xenia"
+ },
+ {
+  "key": "d2c8f2ce",
+  "text": "молоко",
+  "voice": "xenia"
+ },
+ {
+  "key": "0398652c",
+  "text": "яблоко",
+  "voice": "xenia"
+ },
+ {
+  "key": "c289041f",
+  "text": "сыр",
+  "voice": "xenia"
+ },
+ {
+  "key": "5b67d76c",
+  "text": "рис",
+  "voice": "xenia"
+ },
+ {
+  "key": "99e864db",
+  "text": "мясо",
+  "voice": "xenia"
+ },
+ {
+  "key": "3b918724",
+  "text": "сок",
+  "voice": "xenia"
+ },
+ {
+  "key": "372e2a98",
+  "text": "Я хочу воды",
+  "voice": "xenia"
+ },
+ {
+  "key": "3c8fceda",
+  "text": "Я пью кофе с молоком",
+  "voice": "xenia"
+ },
+ {
+  "key": "49e8e2ec",
+  "text": "Хлеб вкусный",
+  "voice": "xenia"
+ },
+ {
+  "key": "5277bf3f",
+  "text": "Ты любишь сыр?",
+  "voice": "xenia"
+ },
+ {
+  "key": "efc4b978",
+  "text": "один",
+  "voice": "xenia"
+ },
+ {
+  "key": "f96e5cc9",
+  "text": "два",
+  "voice": "xenia"
+ },
+ {
+  "key": "f2b31665",
+  "text": "три",
+  "voice": "xenia"
+ },
+ {
+  "key": "9c5195ed",
+  "text": "четыре",
+  "voice": "xenia"
+ },
+ {
+  "key": "16577a9d",
+  "text": "пять",
+  "voice": "xenia"
+ },
+ {
+  "key": "9befe78b",
+  "text": "шесть",
+  "voice": "xenia"
+ },
+ {
+  "key": "fe27122b",
+  "text": "семь",
+  "voice": "xenia"
+ },
+ {
+  "key": "26de98af",
+  "text": "восемь",
+  "voice": "xenia"
+ },
+ {
+  "key": "99d3f1e3",
+  "text": "девять",
+  "voice": "xenia"
+ },
+ {
+  "key": "87f2bc44",
+  "text": "десять",
+  "voice": "xenia"
+ },
+ {
+  "key": "706ece6b",
+  "text": "У меня два кота",
+  "voice": "xenia"
+ },
+ {
+  "key": "9c1f71ba",
+  "text": "Ей десять лет",
+  "voice": "xenia"
+ },
+ {
+  "key": "d1fd1679",
+  "text": "Три кофе, пожалуйста",
+  "voice": "xenia"
+ },
+ {
+  "key": "988a97b3",
+  "text": "красный",
+  "voice": "xenia"
+ },
+ {
+  "key": "ae670278",
+  "text": "синий",
+  "voice": "xenia"
+ },
+ {
+  "key": "8f552050",
+  "text": "зелёный",
+  "voice": "xenia"
+ },
+ {
+  "key": "e937eeda",
+  "text": "чёрный",
+  "voice": "xenia"
+ },
+ {
+  "key": "111849e8",
+  "text": "белый",
+  "voice": "xenia"
+ },
+ {
+  "key": "da3e47d3",
+  "text": "книга",
+  "voice": "xenia"
+ },
+ {
+  "key": "85985341",
+  "text": "дом",
+  "voice": "xenia"
+ },
+ {
+  "key": "fca48a14",
+  "text": "машина",
+  "voice": "xenia"
+ },
+ {
+  "key": "95803d3d",
+  "text": "телефон",
+  "voice": "xenia"
+ },
+ {
+  "key": "40815b51",
+  "text": "Машина красная",
+  "voice": "xenia"
+ },
+ {
+  "key": "3bcbff5f",
+  "text": "Мой дом белый",
+  "voice": "xenia"
+ },
+ {
+  "key": "b144b657",
+  "text": "У меня синяя книга",
+  "voice": "xenia"
+ },
+ {
+  "key": "14fff663",
+  "text": "Где мой телефон?",
+  "voice": "xenia"
+ },
+ {
+  "key": "71ee8e0d",
+  "text": "есть",
+  "voice": "xenia"
+ },
+ {
+  "key": "63aafae4",
+  "text": "пить",
+  "voice": "xenia"
+ },
+ {
+  "key": "696f3e8b",
+  "text": "идти",
+  "voice": "xenia"
+ },
+ {
+  "key": "35a3f49a",
+  "text": "видеть",
+  "voice": "xenia"
+ },
+ {
+  "key": "a06e7b22",
+  "text": "говорить",
+  "voice": "xenia"
+ },
+ {
+  "key": "b8ea7f95",
+  "text": "спать",
+  "voice": "xenia"
+ },
+ {
+  "key": "53f95c36",
+  "text": "читать",
+  "voice": "xenia"
+ },
+ {
+  "key": "c5739945",
+  "text": "писать",
+  "voice": "xenia"
+ },
+ {
+  "key": "dfaa71c2",
+  "text": "работать",
+  "voice": "xenia"
+ },
+ {
+  "key": "8504a450",
+  "text": "Я говорю по-русски",
+  "voice": "xenia"
+ },
+ {
+  "key": "1634259a",
+  "text": "Мы едим рис",
+  "voice": "xenia"
+ },
+ {
+  "key": "d923e10f",
+  "text": "Он читает книгу",
+  "voice": "xenia"
+ },
+ {
+  "key": "d15bee2d",
+  "text": "Я работаю каждый день",
+  "voice": "xenia"
+ },
+ {
+  "key": "47d74777",
+  "text": "улица",
+  "voice": "xenia"
+ },
+ {
+  "key": "781f27c4",
+  "text": "поезд",
+  "voice": "xenia"
+ },
+ {
+  "key": "010c9ec7",
+  "text": "вокзал",
+  "voice": "xenia"
+ },
+ {
+  "key": "0dd1e8cf",
+  "text": "аэропорт",
+  "voice": "xenia"
+ },
+ {
+  "key": "49acb466",
+  "text": "билет",
+  "voice": "xenia"
+ },
+ {
+  "key": "fa017724",
+  "text": "налево",
+  "voice": "xenia"
+ },
+ {
+  "key": "18833fc9",
+  "text": "направо",
+  "voice": "xenia"
+ },
+ {
+  "key": "153c8e7c",
+  "text": "туалет",
+  "voice": "xenia"
+ },
+ {
+  "key": "cea650b6",
+  "text": "город",
+  "voice": "xenia"
+ },
+ {
+  "key": "5cd14426",
+  "text": "Где вокзал?",
+  "voice": "xenia"
+ },
+ {
+  "key": "4b89e6a0",
+  "text": "Поверните налево",
+  "voice": "xenia"
+ },
+ {
+  "key": "6abee78c",
+  "text": "Мне нужен билет",
+  "voice": "xenia"
+ },
+ {
+  "key": "70cb7693",
+  "text": "Где туалет?",
+  "voice": "xenia"
+ },
+ {
+  "key": "09453576",
+  "text": "сегодня",
+  "voice": "xenia"
+ },
+ {
+  "key": "d0bae0c6",
+  "text": "завтра",
+  "voice": "xenia"
+ },
+ {
+  "key": "30b0b6a8",
+  "text": "сейчас",
+  "voice": "xenia"
+ },
+ {
+  "key": "62bab99c",
+  "text": "здесь",
+  "voice": "xenia"
+ },
+ {
+  "key": "6e8b3729",
+  "text": "там",
+  "voice": "xenia"
+ },
+ {
+  "key": "0940988c",
+  "text": "всегда",
+  "voice": "xenia"
+ },
+ {
+  "key": "d9423295",
+  "text": "никогда",
+  "voice": "xenia"
+ },
+ {
+  "key": "c53bc871",
+  "text": "вчера",
+  "voice": "xenia"
+ },
+ {
+  "key": "5b2892ba",
+  "text": "Я не понимаю",
+  "voice": "xenia"
+ },
+ {
+  "key": "e35a5363",
+  "text": "Вы можете мне помочь?",
+  "voice": "xenia"
+ },
+ {
+  "key": "869d3087",
+  "text": "Сколько стоит?",
+  "voice": "xenia"
+ },
+ {
+  "key": "531eb901",
+  "text": "Я учу русский",
+  "voice": "xenia"
+ },
+ {
+  "key": "13301566",
+  "text": "До завтра",
+  "voice": "xenia"
+ },
+ {
+  "key": "58a90b4b",
+  "text": "одиннадцать",
+  "voice": "xenia"
+ },
+ {
+  "key": "4f2e6ad9",
+  "text": "двенадцать",
+  "voice": "xenia"
+ },
+ {
+  "key": "19bb9716",
+  "text": "пятнадцать",
+  "voice": "xenia"
+ },
+ {
+  "key": "2dd60ef7",
+  "text": "двадцать",
+  "voice": "xenia"
+ },
+ {
+  "key": "2e4d6633",
+  "text": "тридцать",
+  "voice": "xenia"
+ },
+ {
+  "key": "342bbd4a",
+  "text": "сорок",
+  "voice": "xenia"
+ },
+ {
+  "key": "9bd8fed8",
+  "text": "пятьдесят",
+  "voice": "xenia"
+ },
+ {
+  "key": "3963df6a",
+  "text": "шестьдесят",
+  "voice": "xenia"
+ },
+ {
+  "key": "4e31144a",
+  "text": "семьдесят",
+  "voice": "xenia"
+ },
+ {
+  "key": "6adba48e",
+  "text": "восемьдесят",
+  "voice": "xenia"
+ },
+ {
+  "key": "8a87ea35",
+  "text": "девяносто",
+  "voice": "xenia"
+ },
+ {
+  "key": "b6a6d25c",
+  "text": "сто",
+  "voice": "xenia"
+ },
+ {
+  "key": "ac710c00",
+  "text": "рубль",
+  "voice": "xenia"
+ },
+ {
+  "key": "cf5d31c9",
+  "text": "Мне двадцать пять лет",
+  "voice": "xenia"
+ },
+ {
+  "key": "c470af10",
+  "text": "Сколько вам лет?",
+  "voice": "xenia"
+ },
+ {
+  "key": "20691015",
+  "text": "Это стоит сто рублей",
+  "voice": "xenia"
+ },
+ {
+  "key": "8fecf0b9",
+  "text": "В классе тридцать студентов",
+  "voice": "xenia"
+ },
+ {
+  "key": "9838706b",
+  "text": "Моему дедушке восемьдесят лет",
+  "voice": "xenia"
+ },
+ {
+  "key": "cb80776b",
+  "text": "понедельник",
+  "voice": "xenia"
+ },
+ {
+  "key": "affc7334",
+  "text": "вторник",
+  "voice": "xenia"
+ },
+ {
+  "key": "a3162f3f",
+  "text": "среда",
+  "voice": "xenia"
+ },
+ {
+  "key": "66b3f9cd",
+  "text": "четверг",
+  "voice": "xenia"
+ },
+ {
+  "key": "0fd2fc90",
+  "text": "пятница",
+  "voice": "xenia"
+ },
+ {
+  "key": "1e0bb419",
+  "text": "суббота",
+  "voice": "xenia"
+ },
+ {
+  "key": "7fe3ec45",
+  "text": "воскресенье",
+  "voice": "xenia"
+ },
+ {
+  "key": "106baed9",
+  "text": "час",
+  "voice": "xenia"
+ },
+ {
+  "key": "147a7fc7",
+  "text": "минута",
+  "voice": "xenia"
+ },
+ {
+  "key": "84a383b6",
+  "text": "неделя",
+  "voice": "xenia"
+ },
+ {
+  "key": "75fd1b4a",
+  "text": "утро",
+  "voice": "xenia"
+ },
+ {
+  "key": "4dc5cbd3",
+  "text": "день",
+  "voice": "xenia"
+ },
+ {
+  "key": "3b00d1d0",
+  "text": "вечер",
+  "voice": "xenia"
+ },
+ {
+  "key": "7ea8c392",
+  "text": "Который час?",
+  "voice": "xenia"
+ },
+ {
+  "key": "e78600c8",
+  "text": "Сейчас семь часов",
+  "voice": "xenia"
+ },
+ {
+  "key": "b87e4e5d",
+  "text": "Я работаю в понедельник",
+  "voice": "xenia"
+ },
+ {
+  "key": "b7d6c230",
+  "text": "До пятницы!",
+  "voice": "xenia"
+ },
+ {
+  "key": "60e39408",
+  "text": "Урок днём",
+  "voice": "xenia"
+ },
+ {
+  "key": "f4ca3971",
+  "text": "просыпаться",
+  "voice": "xenia"
+ },
+ {
+  "key": "6b547502",
+  "text": "вставать",
+  "voice": "xenia"
+ },
+ {
+  "key": "c99d89fe",
+  "text": "принимать душ",
+  "voice": "xenia"
+ },
+ {
+  "key": "d6e8d7b2",
+  "text": "завтракать",
+  "voice": "xenia"
+ },
+ {
+  "key": "7c2a9d9d",
+  "text": "обедать",
+  "voice": "xenia"
+ },
+ {
+  "key": "9f66e217",
+  "text": "ужинать",
+  "voice": "xenia"
+ },
+ {
+  "key": "a67ca712",
+  "text": "ложиться спать",
+  "voice": "xenia"
+ },
+ {
+  "key": "d525f5bc",
+  "text": "домой",
+  "voice": "xenia"
+ },
+ {
+  "key": "1754f9ac",
+  "text": "на работу",
+  "voice": "xenia"
+ },
+ {
+  "key": "78d901f9",
+  "text": "обычно",
+  "voice": "xenia"
+ },
+ {
+  "key": "a0b3852d",
+  "text": "часто",
+  "voice": "xenia"
+ },
+ {
+  "key": "22237a25",
+  "text": "иногда",
+  "voice": "xenia"
+ },
+ {
+  "key": "964f08c9",
+  "text": "каждый день",
+  "voice": "xenia"
+ },
+ {
+  "key": "2e4c2b5b",
+  "text": "Я просыпаюсь в семь",
+  "voice": "xenia"
+ },
+ {
+  "key": "ba0dcada",
+  "text": "Она ездит на работу на автобусе",
+  "voice": "xenia"
+ },
+ {
+  "key": "5ff389fd",
+  "text": "Мы обедаем в двенадцать",
+  "voice": "xenia"
+ },
+ {
+  "key": "f457a299",
+  "text": "Он обычно ужинает дома",
+  "voice": "xenia"
+ },
+ {
+  "key": "7d5d3059",
+  "text": "Я ложусь спать в одиннадцать",
+  "voice": "xenia"
+ },
+ {
+  "key": "6f5f30af",
+  "text": "квартира",
+  "voice": "xenia"
+ },
+ {
+  "key": "398881e0",
+  "text": "комната",
+  "voice": "xenia"
+ },
+ {
+  "key": "758f16fc",
+  "text": "спальня",
+  "voice": "xenia"
+ },
+ {
+  "key": "dd1f469d",
+  "text": "кухня",
+  "voice": "xenia"
+ },
+ {
+  "key": "65052444",
+  "text": "ванная",
+  "voice": "xenia"
+ },
+ {
+  "key": "81501e1e",
+  "text": "дверь",
+  "voice": "xenia"
+ },
+ {
+  "key": "123b82fe",
+  "text": "окно",
+  "voice": "xenia"
+ },
+ {
+  "key": "efa38425",
+  "text": "стол",
+  "voice": "xenia"
+ },
+ {
+  "key": "e7d752f0",
+  "text": "стул",
+  "voice": "xenia"
+ },
+ {
+  "key": "1ccfe2ff",
+  "text": "кровать",
+  "voice": "xenia"
+ },
+ {
+  "key": "0aefadf2",
+  "text": "диван",
+  "voice": "xenia"
+ },
+ {
+  "key": "33a28ab9",
+  "text": "ключ",
+  "voice": "xenia"
+ },
+ {
+  "key": "d2e71411",
+  "text": "лампа",
+  "voice": "xenia"
+ },
+ {
+  "key": "0dcfc57a",
+  "text": "В комнате есть диван",
+  "voice": "xenia"
+ },
+ {
+  "key": "6ce671d9",
+  "text": "Кухня маленькая",
+  "voice": "xenia"
+ },
+ {
+  "key": "f8cab254",
+  "text": "Где ключ?",
+  "voice": "xenia"
+ },
+ {
+  "key": "c8f2b9ad",
+  "text": "В моей спальне два окна",
+  "voice": "xenia"
+ },
+ {
+  "key": "48d11d14",
+  "text": "Закройте дверь, пожалуйста",
+  "voice": "xenia"
+ },
+ {
+  "key": "1d5f36cd",
+  "text": "рубашка",
+  "voice": "xenia"
+ },
+ {
+  "key": "291d6da4",
+  "text": "футболка",
+  "voice": "xenia"
+ },
+ {
+  "key": "3071774c",
+  "text": "брюки",
+  "voice": "xenia"
+ },
+ {
+  "key": "db9c9190",
+  "text": "джинсы",
+  "voice": "xenia"
+ },
+ {
+  "key": "5501be42",
+  "text": "платье",
+  "voice": "xenia"
+ },
+ {
+  "key": "9b1f1cfa",
+  "text": "юбка",
+  "voice": "xenia"
+ },
+ {
+  "key": "627a7257",
+  "text": "обувь",
+  "voice": "xenia"
+ },
+ {
+  "key": "5c17426e",
+  "text": "куртка",
+  "voice": "xenia"
+ },
+ {
+  "key": "5a4bacb9",
+  "text": "пальто",
+  "voice": "xenia"
+ },
+ {
+  "key": "d2421184",
+  "text": "шапка",
+  "voice": "xenia"
+ },
+ {
+  "key": "8d926461",
+  "text": "свитер",
+  "voice": "xenia"
+ },
+ {
+  "key": "fac715f3",
+  "text": "носки",
+  "voice": "xenia"
+ },
+ {
+  "key": "7809a83d",
+  "text": "носить",
+  "voice": "xenia"
+ },
+ {
+  "key": "2c0c36f4",
+  "text": "Мне нравится твоя куртка",
+  "voice": "xenia"
+ },
+ {
+  "key": "97b54058",
+  "text": "Эти джинсы слишком большие",
+  "voice": "xenia"
+ },
+ {
+  "key": "8f5a866d",
+  "text": "Можно примерить?",
+  "voice": "xenia"
+ },
+ {
+  "key": "13a8342b",
+  "text": "Она в красном платье",
+  "voice": "xenia"
+ },
+ {
+  "key": "e92996fd",
+  "text": "Сколько стоит эта шапка?",
+  "voice": "xenia"
+ },
+ {
+  "key": "a61f3dc9",
+  "text": "погода",
+  "voice": "xenia"
+ },
+ {
+  "key": "bb8464e7",
+  "text": "солнце",
+  "voice": "xenia"
+ },
+ {
+  "key": "410abf1b",
+  "text": "дождь",
+  "voice": "xenia"
+ },
+ {
+  "key": "e87f1983",
+  "text": "снег",
+  "voice": "xenia"
+ },
+ {
+  "key": "cd2f786b",
+  "text": "ветер",
+  "voice": "xenia"
+ },
+ {
+  "key": "98a4322d",
+  "text": "жарко",
+  "voice": "xenia"
+ },
+ {
+  "key": "cca6f176",
+  "text": "холодно",
+  "voice": "xenia"
+ },
+ {
+  "key": "c7976064",
+  "text": "тепло",
+  "voice": "xenia"
+ },
+ {
+  "key": "f6e6cdb7",
+  "text": "облачно",
+  "voice": "xenia"
+ },
+ {
+  "key": "f4c0f329",
+  "text": "лето",
+  "voice": "xenia"
+ },
+ {
+  "key": "f204fcf6",
+  "text": "зима",
+  "voice": "xenia"
+ },
+ {
+  "key": "5170de4e",
+  "text": "весна",
+  "voice": "xenia"
+ },
+ {
+  "key": "83d27f8e",
+  "text": "осень",
+  "voice": "xenia"
+ },
+ {
+  "key": "659106b4",
+  "text": "Сегодня жарко",
+  "voice": "xenia"
+ },
+ {
+  "key": "bad65776",
+  "text": "Идёт дождь",
+  "voice": "xenia"
+ },
+ {
+  "key": "d2566e96",
+  "text": "Какая сегодня погода?",
+  "voice": "xenia"
+ },
+ {
+  "key": "206c3541",
+  "text": "Я люблю лето",
+  "voice": "xenia"
+ },
+ {
+  "key": "e97a90e6",
+  "text": "Зимой холодно",
+  "voice": "xenia"
+ },
+ {
+  "key": "444e7693",
+  "text": "голова",
+  "voice": "xenia"
+ },
+ {
+  "key": "c66e59d2",
+  "text": "глаз",
+  "voice": "xenia"
+ },
+ {
+  "key": "7ea840b1",
+  "text": "ухо",
+  "voice": "xenia"
+ },
+ {
+  "key": "568fdd19",
+  "text": "нос",
+  "voice": "xenia"
+ },
+ {
+  "key": "7658f763",
+  "text": "рот",
+  "voice": "xenia"
+ },
+ {
+  "key": "40b8d1ae",
+  "text": "рука",
+  "voice": "xenia"
+ },
+ {
+  "key": "61e50cc9",
+  "text": "нога",
+  "voice": "xenia"
+ },
+ {
+  "key": "f6eedb3e",
+  "text": "спина",
+  "voice": "xenia"
+ },
+ {
+  "key": "a880645f",
+  "text": "живот",
+  "voice": "xenia"
+ },
+ {
+  "key": "fce0307a",
+  "text": "зуб",
+  "voice": "xenia"
+ },
+ {
+  "key": "562b475e",
+  "text": "врач",
+  "voice": "xenia"
+ },
+ {
+  "key": "ba867f3d",
+  "text": "болит",
+  "voice": "xenia"
+ },
+ {
+  "key": "c130b115",
+  "text": "больной",
+  "voice": "xenia"
+ },
+ {
+  "key": "85404d07",
+  "text": "У меня болит голова",
+  "voice": "xenia"
+ },
+ {
+  "key": "1d6b64f2",
+  "text": "Мне плохо",
+  "voice": "xenia"
+ },
+ {
+  "key": "293ec588",
+  "text": "Мне нужен врач",
+  "voice": "xenia"
+ },
+ {
+  "key": "d7d61ae4",
+  "text": "У неё голубые глаза",
+  "voice": "xenia"
+ },
+ {
+  "key": "e8d0e428",
+  "text": "Помой руки",
+  "voice": "xenia"
+ },
+ {
+  "key": "075d6df7",
+  "text": "учитель",
+  "voice": "xenia"
+ },
+ {
+  "key": "87d1b044",
+  "text": "учительница",
+  "voice": "xenia"
+ },
+ {
+  "key": "728cbbb7",
+  "text": "студент",
+  "voice": "xenia"
+ },
+ {
+  "key": "4c23c345",
+  "text": "студентка",
+  "voice": "xenia"
+ },
+ {
+  "key": "df9fdaa7",
+  "text": "медсестра",
+  "voice": "xenia"
+ },
+ {
+  "key": "6507a893",
+  "text": "инженер",
+  "voice": "xenia"
+ },
+ {
+  "key": "464a7366",
+  "text": "повар",
+  "voice": "xenia"
+ },
+ {
+  "key": "8f0aade7",
+  "text": "водитель",
+  "voice": "xenia"
+ },
+ {
+  "key": "d3fe09aa",
+  "text": "официант",
+  "voice": "xenia"
+ },
+ {
+  "key": "8535fdc6",
+  "text": "юрист",
+  "voice": "xenia"
+ },
+ {
+  "key": "566eeb5c",
+  "text": "работа",
+  "voice": "xenia"
+ },
+ {
+  "key": "b474e5b2",
+  "text": "больница",
+  "voice": "xenia"
+ },
+ {
+  "key": "301d053b",
+  "text": "Кем вы работаете?",
+  "voice": "xenia"
+ },
+ {
+  "key": "8ab8d422",
+  "text": "Я учитель",
+  "voice": "xenia"
+ },
+ {
+  "key": "62c8c3c0",
+  "text": "Она работает в больнице",
+  "voice": "xenia"
+ },
+ {
+  "key": "5cc1df91",
+  "text": "Он хороший повар",
+  "voice": "xenia"
+ },
+ {
+  "key": "65f5b103",
+  "text": "У меня нет работы",
+  "voice": "xenia"
+ },
+ {
+  "key": "8a649253",
+  "text": "банк",
+  "voice": "xenia"
+ },
+ {
+  "key": "659f7480",
+  "text": "школа",
+  "voice": "xenia"
+ },
+ {
+  "key": "d4c592fc",
+  "text": "парк",
+  "voice": "xenia"
+ },
+ {
+  "key": "aec3b2d8",
+  "text": "магазин",
+  "voice": "xenia"
+ },
+ {
+  "key": "80add3c6",
+  "text": "супермаркет",
+  "voice": "xenia"
+ },
+ {
+  "key": "add4b9e4",
+  "text": "ресторан",
+  "voice": "xenia"
+ },
+ {
+  "key": "4b4682ae",
+  "text": "гостиница",
+  "voice": "xenia"
+ },
+ {
+  "key": "2a7f7403",
+  "text": "музей",
+  "voice": "xenia"
+ },
+ {
+  "key": "bf952a3a",
+  "text": "церковь",
+  "voice": "xenia"
+ },
+ {
+  "key": "efb52611",
+  "text": "библиотека",
+  "voice": "xenia"
+ },
+ {
+  "key": "5b54426b",
+  "text": "аптека",
+  "voice": "xenia"
+ },
+ {
+  "key": "c6f0153f",
+  "text": "почта",
+  "voice": "xenia"
+ },
+ {
+  "key": "96106a7e",
+  "text": "рядом",
+  "voice": "xenia"
+ },
+ {
+  "key": "63500b80",
+  "text": "Здесь рядом есть банк?",
+  "voice": "xenia"
+ },
+ {
+  "key": "b472faac",
+  "text": "Музей рядом с парком",
+  "voice": "xenia"
+ },
+ {
+  "key": "3f4b3f44",
+  "text": "Идите прямо",
+  "voice": "xenia"
+ },
+ {
+  "key": "41375178",
+  "text": "Аптека на углу",
+  "voice": "xenia"
+ },
+ {
+  "key": "0e32e50c",
+  "text": "Я иду в супермаркет",
+  "voice": "xenia"
+ },
+ {
+  "key": "f85319fb",
+  "text": "купить",
+  "voice": "xenia"
+ },
+ {
+  "key": "e96dc49c",
+  "text": "продавать",
+  "voice": "xenia"
+ },
+ {
+  "key": "b0296391",
+  "text": "платить",
+  "voice": "xenia"
+ },
+ {
+  "key": "f3394531",
+  "text": "цена",
+  "voice": "xenia"
+ },
+ {
+  "key": "0840de99",
+  "text": "дёшево",
+  "voice": "xenia"
+ },
+ {
+  "key": "1ba00058",
+  "text": "дорого",
+  "voice": "xenia"
+ },
+ {
+  "key": "02ecaa48",
+  "text": "деньги",
+  "voice": "xenia"
+ },
+ {
+  "key": "55ae7bcf",
+  "text": "карта",
+  "voice": "xenia"
+ },
+ {
+  "key": "0b721f57",
+  "text": "наличные",
+  "voice": "xenia"
+ },
+ {
+  "key": "930cf3f7",
+  "text": "пакет",
+  "voice": "xenia"
+ },
+ {
+  "key": "47704ea9",
+  "text": "чек",
+  "voice": "xenia"
+ },
+ {
+  "key": "c0a3a50b",
+  "text": "размер",
+  "voice": "xenia"
+ },
+ {
+  "key": "4bc838c4",
+  "text": "скидка",
+  "voice": "xenia"
+ },
+ {
+  "key": "697689ae",
+  "text": "Сколько это стоит?",
+  "voice": "xenia"
+ },
+ {
+  "key": "6bb75875",
+  "text": "Это слишком дорого",
+  "voice": "xenia"
+ },
+ {
+  "key": "8baad862",
+  "text": "Можно картой?",
+  "voice": "xenia"
+ },
+ {
+  "key": "21035197",
+  "text": "Я просто смотрю",
+  "voice": "xenia"
+ },
+ {
+  "key": "a9297dd0",
+  "text": "У вас есть размер поменьше?",
+  "voice": "xenia"
+ },
+ {
+  "key": "da61f981",
+  "text": "меню",
+  "voice": "xenia"
+ },
+ {
+  "key": "12eba866",
+  "text": "счёт",
+  "voice": "xenia"
+ },
+ {
+  "key": "962dd139",
+  "text": "заказать",
+  "voice": "xenia"
+ },
+ {
+  "key": "b7a91286",
+  "text": "суп",
+  "voice": "xenia"
+ },
+ {
+  "key": "9fd2db8f",
+  "text": "салат",
+  "voice": "xenia"
+ },
+ {
+  "key": "fa667224",
+  "text": "курица",
+  "voice": "xenia"
+ },
+ {
+  "key": "52ce1d05",
+  "text": "рыба",
+  "voice": "xenia"
+ },
+ {
+  "key": "643e570a",
+  "text": "десерт",
+  "voice": "xenia"
+ },
+ {
+  "key": "cbf7da7b",
+  "text": "стакан",
+  "voice": "xenia"
+ },
+ {
+  "key": "4677d04b",
+  "text": "тарелка",
+  "voice": "xenia"
+ },
+ {
+  "key": "5966bbde",
+  "text": "вилка",
+  "voice": "xenia"
+ },
+ {
+  "key": "87902a3c",
+  "text": "нож",
+  "voice": "xenia"
+ },
+ {
+  "key": "2f1ea7a4",
+  "text": "ложка",
+  "voice": "xenia"
+ },
+ {
+  "key": "e98a48ea",
+  "text": "Столик на двоих, пожалуйста",
+  "voice": "xenia"
+ },
+ {
+  "key": "ee2bc6b5",
+  "text": "Я буду курицу",
+  "voice": "xenia"
+ },
+ {
+  "key": "f3dbe387",
+  "text": "Счёт, пожалуйста",
+  "voice": "xenia"
+ },
+ {
+  "key": "7d6680c2",
+  "text": "Суп очень вкусный",
+  "voice": "xenia"
+ },
+ {
+  "key": "ebf1c68d",
+  "text": "У вас есть десерт?",
+  "voice": "xenia"
+ },
+ {
+  "key": "674a513a",
+  "text": "автобус",
+  "voice": "xenia"
+ },
+ {
+  "key": "3cd1aab6",
+  "text": "такси",
+  "voice": "xenia"
+ },
+ {
+  "key": "4e5c5b02",
+  "text": "метро",
+  "voice": "xenia"
+ },
+ {
+  "key": "47bf6548",
+  "text": "велосипед",
+  "voice": "xenia"
+ },
+ {
+  "key": "0188ee44",
+  "text": "самолёт",
+  "voice": "xenia"
+ },
+ {
+  "key": "c76ad003",
+  "text": "остановка",
+  "voice": "xenia"
+ },
+ {
+  "key": "ba750b81",
+  "text": "пешком",
+  "voice": "xenia"
+ },
+ {
+  "key": "488720a5",
+  "text": "далеко",
+  "voice": "xenia"
+ },
+ {
+  "key": "23806a40",
+  "text": "близко",
+  "voice": "xenia"
+ },
+ {
+  "key": "3b9abe6e",
+  "text": "опаздывать",
+  "voice": "xenia"
+ },
+ {
+  "key": "849ebfe3",
+  "text": "ехать",
+  "voice": "xenia"
+ },
+ {
+  "key": "933e394d",
+  "text": "Я каждый день езжу на метро",
+  "voice": "xenia"
+ },
+ {
+  "key": "78c76c5e",
+  "text": "Где остановка?",
+  "voice": "xenia"
+ },
+ {
+  "key": "01d83bbe",
+  "text": "Я хожу в школу пешком",
+  "voice": "xenia"
+ },
+ {
+  "key": "56a7ae2c",
+  "text": "Один билет до Москвы, пожалуйста",
+  "voice": "xenia"
+ },
+ {
+  "key": "499ff775",
+  "text": "Это далеко?",
+  "voice": "xenia"
+ },
+ {
+  "key": "3d12b79f",
+  "text": "январь",
+  "voice": "xenia"
+ },
+ {
+  "key": "44d9be27",
+  "text": "февраль",
+  "voice": "xenia"
+ },
+ {
+  "key": "7bb0fa53",
+  "text": "март",
+  "voice": "xenia"
+ },
+ {
+  "key": "33997ac0",
+  "text": "апрель",
+  "voice": "xenia"
+ },
+ {
+  "key": "77395778",
+  "text": "май",
+  "voice": "xenia"
+ },
+ {
+  "key": "a711b9aa",
+  "text": "июнь",
+  "voice": "xenia"
+ },
+ {
+  "key": "c302db34",
+  "text": "июль",
+  "voice": "xenia"
+ },
+ {
+  "key": "6f1cbb32",
+  "text": "август",
+  "voice": "xenia"
+ },
+ {
+  "key": "5edb8970",
+  "text": "сентябрь",
+  "voice": "xenia"
+ },
+ {
+  "key": "152381a5",
+  "text": "октябрь",
+  "voice": "xenia"
+ },
+ {
+  "key": "ab3502ae",
+  "text": "ноябрь",
+  "voice": "xenia"
+ },
+ {
+  "key": "49cce537",
+  "text": "декабрь",
+  "voice": "xenia"
+ },
+ {
+  "key": "8e91295e",
+  "text": "день рождения",
+  "voice": "xenia"
+ },
+ {
+  "key": "68365752",
+  "text": "Мой день рождения в мае",
+  "voice": "xenia"
+ },
+ {
+  "key": "f8a6c72e",
+  "text": "Когда у тебя день рождения?",
+  "voice": "xenia"
+ },
+ {
+  "key": "28409a6a",
+  "text": "Сегодня третье марта",
+  "voice": "xenia"
+ },
+ {
+  "key": "64dc978a",
+  "text": "Новый год в январе",
+  "voice": "xenia"
+ },
+ {
+  "key": "ae8af833",
+  "text": "Мы путешествуем в июле",
+  "voice": "xenia"
+ },
+ {
+  "key": "389260b8",
+  "text": "музыка",
+  "voice": "xenia"
+ },
+ {
+  "key": "1fb8257e",
+  "text": "фильм",
+  "voice": "xenia"
+ },
+ {
+  "key": "5450f06c",
+  "text": "игра",
+  "voice": "xenia"
+ },
+ {
+  "key": "892210f7",
+  "text": "спорт",
+  "voice": "xenia"
+ },
+ {
+  "key": "6c3e292e",
+  "text": "футбол",
+  "voice": "xenia"
+ },
+ {
+  "key": "252dad49",
+  "text": "плавать",
+  "voice": "xenia"
+ },
+ {
+  "key": "021dab4b",
+  "text": "танцевать",
+  "voice": "xenia"
+ },
+ {
+  "key": "a4f9e0cf",
+  "text": "петь",
+  "voice": "xenia"
+ },
+ {
+  "key": "a1e75bd2",
+  "text": "играть",
+  "voice": "xenia"
+ },
+ {
+  "key": "94580089",
+  "text": "смотреть",
+  "voice": "xenia"
+ },
+ {
+  "key": "a234879c",
+  "text": "слушать",
+  "voice": "xenia"
+ },
+ {
+  "key": "5c6991a8",
+  "text": "готовить",
+  "voice": "xenia"
+ },
+ {
+  "key": "d170347e",
+  "text": "путешествовать",
+  "voice": "xenia"
+ },
+ {
+  "key": "f8db8c98",
+  "text": "Я люблю слушать музыку",
+  "voice": "xenia"
+ },
+ {
+  "key": "f704dba8",
+  "text": "Ты играешь в футбол?",
+  "voice": "xenia"
+ },
+ {
+  "key": "66a39a6e",
+  "text": "Она любит танцевать",
+  "voice": "xenia"
+ },
+ {
+  "key": "1cfe3cb2",
+  "text": "В субботу мы смотрим фильмы",
+  "voice": "xenia"
+ },
+ {
+  "key": "8c6e3f33",
+  "text": "Что ты делаешь в свободное время?",
+  "voice": "xenia"
+ },
+ {
+  "key": "c345756a",
+  "text": "высокий",
+  "voice": "xenia"
+ },
+ {
+  "key": "49fc9cc2",
+  "text": "низкий",
+  "voice": "xenia"
+ },
+ {
+  "key": "7c42df83",
+  "text": "молодой",
+  "voice": "xenia"
+ },
+ {
+  "key": "6860495e",
+  "text": "старый",
+  "voice": "xenia"
+ },
+ {
+  "key": "a515305e",
+  "text": "красивый",
+  "voice": "xenia"
+ },
+ {
+  "key": "370fd213",
+  "text": "красивая",
+  "voice": "xenia"
+ },
+ {
+  "key": "8837eed6",
+  "text": "худой",
+  "voice": "xenia"
+ },
+ {
+  "key": "69b63608",
+  "text": "волосы",
+  "voice": "xenia"
+ },
+ {
+  "key": "97937b02",
+  "text": "длинный",
+  "voice": "xenia"
+ },
+ {
+  "key": "459ae8b6",
+  "text": "светлый",
+  "voice": "xenia"
+ },
+ {
+  "key": "ec12ff8a",
+  "text": "добрый",
+  "voice": "xenia"
+ },
+ {
+  "key": "fea3f967",
+  "text": "весёлый",
+  "voice": "xenia"
+ },
+ {
+  "key": "4eeb0a51",
+  "text": "смешной",
+  "voice": "xenia"
+ },
+ {
+  "key": "40a7eb83",
+  "text": "У неё длинные волосы",
+  "voice": "xenia"
+ },
+ {
+  "key": "d7cff780",
+  "text": "Он высокий и худой",
+  "voice": "xenia"
+ },
+ {
+  "key": "42837c38",
+  "text": "Моя бабушка очень добрая",
+  "voice": "xenia"
+ },
+ {
+  "key": "d043db49",
+  "text": "Как он выглядит?",
+  "voice": "xenia"
+ },
+ {
+  "key": "2627cde9",
+  "text": "Они молодые",
+  "voice": "xenia"
+ },
+ {
+  "key": "5ec3d10f",
+  "text": "счастлив",
+  "voice": "xenia"
+ },
+ {
+  "key": "b7326d03",
+  "text": "грустно",
+  "voice": "xenia"
+ },
+ {
+  "key": "0e457498",
+  "text": "устал",
+  "voice": "xenia"
+ },
+ {
+  "key": "7c179da1",
+  "text": "голоден",
+  "voice": "xenia"
+ },
+ {
+  "key": "e9e761d5",
+  "text": "хочу пить",
+  "voice": "xenia"
+ },
+ {
+  "key": "211215d6",
+  "text": "злой",
+  "voice": "xenia"
+ },
+ {
+  "key": "297531b5",
+  "text": "боюсь",
+  "voice": "xenia"
+ },
+ {
+  "key": "e96094d7",
+  "text": "скучно",
+  "voice": "xenia"
+ },
+ {
+  "key": "3ae7bc3c",
+  "text": "занят",
+  "voice": "xenia"
+ },
+ {
+  "key": "6192174d",
+  "text": "волнуюсь",
+  "voice": "xenia"
+ },
+ {
+  "key": "186e5dab",
+  "text": "рад",
+  "voice": "xenia"
+ },
+ {
+  "key": "c1c85b2e",
+  "text": "хочу спать",
+  "voice": "xenia"
+ },
+ {
+  "key": "f73433dc",
+  "text": "чувствовать",
+  "voice": "xenia"
+ },
+ {
+  "key": "9f96be2c",
+  "text": "Я голоден",
+  "voice": "xenia"
+ },
+ {
+  "key": "d9adeb5a",
+  "text": "Ты устал?",
+  "voice": "xenia"
+ },
+ {
+  "key": "9e009912",
+  "text": "Она сегодня очень рада",
+  "voice": "xenia"
+ },
+ {
+  "key": "8daf54b0",
+  "text": "Не грусти",
+  "voice": "xenia"
+ },
+ {
+  "key": "f5baf4b3",
+  "text": "Мне немного страшно",
+  "voice": "xenia"
+ },
+ {
+  "key": "caba2e06",
+  "text": "урок",
+  "voice": "xenia"
+ },
+ {
+  "key": "87acb38f",
+  "text": "домашнее задание",
+  "voice": "xenia"
+ },
+ {
+  "key": "b441531b",
+  "text": "ручка",
+  "voice": "xenia"
+ },
+ {
+  "key": "6935921e",
+  "text": "карандаш",
+  "voice": "xenia"
+ },
+ {
+  "key": "f14c89fe",
+  "text": "тетрадь",
+  "voice": "xenia"
+ },
+ {
+  "key": "f9a8c2ba",
+  "text": "бумага",
+  "voice": "xenia"
+ },
+ {
+  "key": "12b30199",
+  "text": "компьютер",
+  "voice": "xenia"
+ },
+ {
+  "key": "02faed4c",
+  "text": "офис",
+  "voice": "xenia"
+ },
+ {
+  "key": "f39a75a7",
+  "text": "собрание",
+  "voice": "xenia"
+ },
+ {
+  "key": "fea847ad",
+  "text": "начальник",
+  "voice": "xenia"
+ },
+ {
+  "key": "df288a9b",
+  "text": "учить",
+  "voice": "xenia"
+ },
+ {
+  "key": "887117b3",
+  "text": "учиться",
+  "voice": "xenia"
+ },
+ {
+  "key": "a808660d",
+  "text": "коллега",
+  "voice": "xenia"
+ },
+ {
+  "key": "44894db9",
+  "text": "Сегодня у меня урок",
+  "voice": "xenia"
+ },
+ {
+  "key": "f7fdaa00",
+  "text": "Можно взять ручку?",
+  "voice": "xenia"
+ },
+ {
+  "key": "838e6306",
+  "text": "Собрание в десять",
+  "voice": "xenia"
+ },
+ {
+  "key": "523f4fe4",
+  "text": "Я учу русский язык",
+  "voice": "xenia"
+ },
+ {
+  "key": "a1cc5e68",
+  "text": "Мой начальник хороший",
+  "voice": "xenia"
+ },
+ {
+  "key": "54bfc72d",
+  "text": "собака",
+  "voice": "xenia"
+ },
+ {
+  "key": "a849a081",
+  "text": "кошка",
+  "voice": "xenia"
+ },
+ {
+  "key": "4c050bf1",
+  "text": "кот",
+  "voice": "xenia"
+ },
+ {
+  "key": "efb69d44",
+  "text": "лошадь",
+  "voice": "xenia"
+ },
+ {
+  "key": "c16349d2",
+  "text": "птица",
+  "voice": "xenia"
+ },
+ {
+  "key": "6b980e35",
+  "text": "корова",
+  "voice": "xenia"
+ },
+ {
+  "key": "d24a1208",
+  "text": "свинья",
+  "voice": "xenia"
+ },
+ {
+  "key": "f39c998c",
+  "text": "мышь",
+  "voice": "xenia"
+ },
+ {
+  "key": "32fb5b93",
+  "text": "заяц",
+  "voice": "xenia"
+ },
+ {
+  "key": "148a94ef",
+  "text": "медведь",
+  "voice": "xenia"
+ },
+ {
+  "key": "15c6958c",
+  "text": "волк",
+  "voice": "xenia"
+ },
+ {
+  "key": "d1eabdef",
+  "text": "лиса",
+  "voice": "xenia"
+ },
+ {
+  "key": "3ea97e3d",
+  "text": "У меня есть собака",
+  "voice": "xenia"
+ },
+ {
+  "key": "e32c4491",
+  "text": "Кошка спит",
+  "voice": "xenia"
+ },
+ {
+  "key": "72a09d4e",
+  "text": "Ты любишь животных?",
+  "voice": "xenia"
+ },
+ {
+  "key": "5c039e43",
+  "text": "Птицы умеют летать",
+  "voice": "xenia"
+ },
+ {
+  "key": "2a04142c",
+  "text": "В лесу живёт медведь",
+  "voice": "xenia"
+ },
+ {
+  "key": "0ed12623",
+  "text": "уметь",
+  "voice": "xenia"
+ },
+ {
+  "key": "f62ad28c",
+  "text": "мочь",
+  "voice": "xenia"
+ },
+ {
+  "key": "38de75f4",
+  "text": "можно",
+  "voice": "xenia"
+ },
+ {
+  "key": "d0552406",
+  "text": "нельзя",
+  "voice": "xenia"
+ },
+ {
+  "key": "927c88e5",
+  "text": "помочь",
+  "voice": "xenia"
+ },
+ {
+  "key": "e6c0de4e",
+  "text": "открыть",
+  "voice": "xenia"
+ },
+ {
+  "key": "c326f2d7",
+  "text": "закрыть",
+  "voice": "xenia"
+ },
+ {
+  "key": "348b87f7",
+  "text": "понимать",
+  "voice": "xenia"
+ },
+ {
+  "key": "e6e6bc51",
+  "text": "найти",
+  "voice": "xenia"
+ },
+ {
+  "key": "0dc85f3b",
+  "text": "ждать",
+  "voice": "xenia"
+ },
+ {
+  "key": "399a6189",
+  "text": "летать",
+  "voice": "xenia"
+ },
+ {
+  "key": "d2ebe757",
+  "text": "помнить",
+  "voice": "xenia"
+ },
+ {
+  "key": "18ab8ab0",
+  "text": "забыть",
+  "voice": "xenia"
+ },
+ {
+  "key": "386586ac",
+  "text": "Я умею плавать",
+  "voice": "xenia"
+ },
+ {
+  "key": "1c6132f6",
+  "text": "Я не могу найти ключи",
+  "voice": "xenia"
+ },
+ {
+  "key": "0d348a0a",
+  "text": "Она говорит на трёх языках",
+  "voice": "xenia"
+ },
+ {
+  "key": "0996944a",
+  "text": "Подожди меня, пожалуйста",
+  "voice": "xenia"
+ },
+ {
+  "key": "767d6050",
+  "text": "ходить",
+  "voice": "xenia"
+ },
+ {
+  "key": "a34f800f",
+  "text": "ездить",
+  "voice": "xenia"
+ },
+ {
+  "key": "c0d1fefe",
+  "text": "куда",
+  "voice": "xenia"
+ },
+ {
+  "key": "ba9d1c3a",
+  "text": "откуда",
+  "voice": "xenia"
+ },
+ {
+  "key": "45abcc7e",
+  "text": "иду",
+  "voice": "xenia"
+ },
+ {
+  "key": "f1e5297d",
+  "text": "еду",
+  "voice": "xenia"
+ },
+ {
+  "key": "b9663712",
+  "text": "сюда",
+  "voice": "xenia"
+ },
+ {
+  "key": "df1ec766",
+  "text": "туда",
+  "voice": "xenia"
+ },
+ {
+  "key": "7cc5b025",
+  "text": "прямо",
+  "voice": "xenia"
+ },
+ {
+  "key": "24a9a54d",
+  "text": "обратно",
+  "voice": "xenia"
+ },
+ {
+  "key": "199ffd32",
+  "text": "дорога",
+  "voice": "xenia"
+ },
+ {
+  "key": "b36d2f9b",
+  "text": "Куда ты идёшь?",
+  "voice": "xenia"
+ },
+ {
+  "key": "94ec76a4",
+  "text": "Я иду домой",
+  "voice": "xenia"
+ },
+ {
+  "key": "57e11ae1",
+  "text": "Завтра мы едем в Петербург",
+  "voice": "xenia"
+ },
+ {
+  "key": "0dc2871f",
+  "text": "Я часто хожу в парк",
+  "voice": "xenia"
+ },
+ {
+  "key": "97955898",
+  "text": "Он ездит на работу на машине",
+  "voice": "xenia"
+ },
+ {
+  "key": "e1b4074a",
+  "text": "был",
+  "voice": "xenia"
+ },
+ {
+  "key": "c861790e",
+  "text": "была",
+  "voice": "xenia"
+ },
+ {
+  "key": "c2616f9c",
+  "text": "было",
+  "voice": "xenia"
+ },
+ {
+  "key": "c0616c76",
+  "text": "были",
+  "voice": "xenia"
+ },
+ {
+  "key": "e75f15b0",
+  "text": "вчера вечером",
+  "voice": "xenia"
+ },
+ {
+  "key": "f1eaf2fc",
+  "text": "на прошлой неделе",
+  "voice": "xenia"
+ },
+ {
+  "key": "ea96a5e9",
+  "text": "назад",
+  "voice": "xenia"
+ },
+ {
+  "key": "fa70d1e0",
+  "text": "родился",
+  "voice": "xenia"
+ },
+ {
+  "key": "bfd1a6e3",
+  "text": "дома",
+  "voice": "xenia"
+ },
+ {
+  "key": "08a13c1a",
+  "text": "рано",
+  "voice": "xenia"
+ },
+ {
+  "key": "34c33cac",
+  "text": "поздно",
+  "voice": "xenia"
+ },
+ {
+  "key": "8c70f570",
+  "text": "отлично",
+  "voice": "xenia"
+ },
+ {
+  "key": "48b64c91",
+  "text": "Вчера я был дома",
+  "voice": "xenia"
+ },
+ {
+  "key": "07cb529f",
+  "text": "Где ты был вчера вечером?",
+  "voice": "xenia"
+ },
+ {
+  "key": "0100e126",
+  "text": "Это был отличный день",
+  "voice": "xenia"
+ },
+ {
+  "key": "f4f493b3",
+  "text": "Мы опоздали",
+  "voice": "xenia"
+ },
+ {
+  "key": "fc69d4f4",
+  "text": "Я родился в Бразилии",
+  "voice": "xenia"
+ },
+ {
+  "key": "f9e4119f",
+  "text": "конечно",
+  "voice": "xenia"
+ },
+ {
+  "key": "5af9577e",
+  "text": "может быть",
+  "voice": "xenia"
+ },
+ {
+  "key": "b1c54157",
+  "text": "ещё раз",
+  "voice": "xenia"
+ },
+ {
+  "key": "bf896fce",
+  "text": "медленнее",
+  "voice": "xenia"
+ },
+ {
+  "key": "8c6b56b8",
+  "text": "повторить",
+  "voice": "xenia"
+ },
+ {
+  "key": "d746c3ea",
+  "text": "значит",
+  "voice": "xenia"
+ },
+ {
+  "key": "6993fe45",
+  "text": "слово",
+  "voice": "xenia"
+ },
+ {
+  "key": "4e8fa7d3",
+  "text": "вопрос",
+  "voice": "xenia"
+ },
+ {
+  "key": "fb2d804a",
+  "text": "ответ",
+  "voice": "xenia"
+ },
+ {
+  "key": "7b81c747",
+  "text": "проблема",
+  "voice": "xenia"
+ },
+ {
+  "key": "76b83a05",
+  "text": "понятно",
+  "voice": "xenia"
+ },
+ {
+  "key": "4bef5237",
+  "text": "как сказать",
+  "voice": "xenia"
+ },
+ {
+  "key": "caea9157",
+  "text": "Извините, повторите, пожалуйста",
+  "voice": "xenia"
+ },
+ {
+  "key": "fe3977c9",
+  "text": "Говорите медленнее, пожалуйста",
+  "voice": "xenia"
+ },
+ {
+  "key": "454991dd",
+  "text": "Что значит это слово?",
+  "voice": "xenia"
+ },
+ {
+  "key": "47668e44",
+  "text": "Как сказать по-русски obrigado?",
+  "voice": "xenia",
+  "tts": "Как сказать по-русски обригадо?"
+ },
+ {
+  "key": "c7d729c1",
+  "text": "Без проблем!",
+  "voice": "xenia"
+ },
+ {
+  "key": "7513a710",
+  "text": "мы",
+  "voice": "xenia"
+ },
+ {
+  "key": "1bed754a",
+  "text": "ты",
+  "voice": "xenia"
+ },
+ {
+  "key": "3d0239ba",
+  "text": "вы",
+  "voice": "xenia"
+ },
+ {
+  "key": "6135c0b5",
+  "text": "бил",
+  "voice": "xenia"
+ },
+ {
+  "key": "e71fe91d",
+  "text": "мыло",
+  "voice": "xenia"
+ },
+ {
+  "key": "7980b988",
+  "text": "мило",
+  "voice": "xenia"
+ },
+ {
+  "key": "3062b562",
+  "text": "хорошо",
+  "voice": "xenia"
+ },
+ {
+  "key": "c5b5ebff",
+  "text": "мать",
+  "voice": "xenia"
+ },
+ {
+  "key": "0ea7e152",
+  "text": "брать",
+  "voice": "xenia"
+ },
+ {
+  "key": "a2399b29",
+  "text": "мат",
+  "voice": "xenia"
+ },
+ {
+  "key": "609dc765",
+  "text": "муха",
+  "voice": "xenia"
+ },
+ {
+  "key": "f8f0216f",
+  "text": "Здравствуйте! Что будете?",
+  "voice": "kseniya"
+ },
+ {
+  "key": "26d4791c",
+  "text": "Мне чай, пожалуйста.",
+  "voice": "aidar"
+ },
+ {
+  "key": "27066c9b",
+  "text": "Чёрный или зелёный?",
+  "voice": "kseniya"
+ },
+ {
+  "key": "c71a547c",
+  "text": "Чёрный.",
+  "voice": "aidar"
+ },
+ {
+  "key": "24a6036f",
+  "text": "С сахаром?",
+  "voice": "kseniya"
+ },
+ {
+  "key": "91ffd7f8",
+  "text": "Нет, спасибо. С лимоном.",
+  "voice": "aidar"
+ },
+ {
+  "key": "6214e2cc",
+  "text": "Здесь или с собой?",
+  "voice": "kseniya"
+ },
+ {
+  "key": "40905d57",
+  "text": "С собой.",
+  "voice": "aidar"
+ },
+ {
+  "key": "f46051da",
+  "text": "Двести рублей. Картой?",
+  "voice": "kseniya"
+ },
+ {
+  "key": "74e15f2a",
+  "text": "Да, картой.",
+  "voice": "aidar"
+ },
+ {
+  "key": "6fda9f42",
+  "text": "Спасибо! Хорошего дня!",
+  "voice": "kseniya"
+ },
+ {
+  "key": "8b95c78c",
+  "text": "Спасибо, и вам!",
+  "voice": "aidar"
+ },
+ {
+  "key": "28efe607",
+  "text": "Привет! Я Дима. А тебя как зовут?",
+  "voice": "eugene"
+ },
+ {
+  "key": "a22be03f",
+  "text": "Привет! Меня зовут *.",
+  "voice": "aidar",
+  "tts": "Привет! Меня зовут Тео."
+ },
+ {
+  "key": "9b0faaed",
+  "text": "Очень приятно! Ты откуда?",
+  "voice": "eugene"
+ },
+ {
+  "key": "b847d8d6",
+  "text": "Я из Бразилии.",
+  "voice": "aidar"
+ },
+ {
+  "key": "16117fc7",
+  "text": "Ого, круто! Ты хорошо говоришь по-русски!",
+  "voice": "eugene"
+ },
+ {
+  "key": "d18614a7",
+  "text": "Спасибо! Я только учу.",
+  "voice": "aidar"
+ },
+ {
+  "key": "353a421c",
+  "text": "А чем ты занимаешься?",
+  "voice": "eugene"
+ },
+ {
+  "key": "4f024a54",
+  "text": "Я студент. А ты?",
+  "voice": "aidar"
+ },
+ {
+  "key": "947da583",
+  "text": "Я программист. Слушай, давай дружить! Дай свой телеграм.",
+  "voice": "eugene"
+ },
+ {
+  "key": "244d09d4",
+  "text": "Давай! Вот мой номер.",
+  "voice": "aidar"
+ },
+ {
+  "key": "2e39e4e3",
+  "text": "Супер! Ну, пока, увидимся!",
+  "voice": "eugene"
+ },
+ {
+  "key": "fe6c13e7",
+  "text": "Пока! До встречи!",
+  "voice": "aidar"
+ },
+ {
+  "key": "87abcf71",
+  "text": "Да? Вы что-то ищете?",
+  "voice": "baya:low"
+ },
+ {
+  "key": "728e8f0e",
+  "text": "Извините, где метро?",
+  "voice": "aidar"
+ },
+ {
+  "key": "d44fdcf2",
+  "text": "Метро? Идите прямо, потом налево.",
+  "voice": "baya:low"
+ },
+ {
+  "key": "6e75be87",
+  "text": "Прямо и налево?",
+  "voice": "aidar"
+ },
+ {
+  "key": "9f63cde6",
+  "text": "Да-да. Минут пять пешком.",
+  "voice": "baya:low"
+ },
+ {
+  "key": "584b6d9d",
+  "text": "Нет, совсем близко. Вы турист?",
+  "voice": "baya:low"
+ },
+ {
+  "key": "256de92e",
+  "text": "Да, я из Бразилии.",
+  "voice": "aidar"
+ },
+ {
+  "key": "ddedadb3",
+  "text": "Добро пожаловать в Казань!",
+  "voice": "baya:low"
+ },
+ {
+  "key": "a174e193",
+  "text": "Спасибо большое!",
+  "voice": "aidar"
+ },
+ {
+  "key": "3d315bc3",
+  "text": "Подходите! Что вам?",
+  "voice": "aidar:low"
+ },
+ {
+  "key": "4057d524",
+  "text": "Почём яблоки?",
+  "voice": "aidar"
+ },
+ {
+  "key": "22ce8320",
+  "text": "Сто пятьдесят за килограмм. Сладкие!",
+  "voice": "aidar:low"
+ },
+ {
+  "key": "940b5db2",
+  "text": "Дайте килограмм, пожалуйста.",
+  "voice": "aidar"
+ },
+ {
+  "key": "0735733e",
+  "text": "Что-нибудь ещё?",
+  "voice": "aidar:low"
+ },
+ {
+  "key": "c13e0dfe",
+  "text": "И ещё помидоры.",
+  "voice": "aidar"
+ },
+ {
+  "key": "3eed70e4",
+  "text": "Всё вместе триста рублей.",
+  "voice": "aidar:low"
+ },
+ {
+  "key": "c2162e32",
+  "text": "А подешевле можно?",
+  "voice": "aidar"
+ },
+ {
+  "key": "9117056f",
+  "text": "Ладно, для вас — двести восемьдесят.",
+  "voice": "aidar:low"
+ },
+ {
+  "key": "cd113079",
+  "text": "Отлично! Вот, держите.",
+  "voice": "aidar"
+ },
+ {
+  "key": "914f002d",
+  "text": "Спасибо! Приходите ещё!",
+  "voice": "aidar:low"
+ },
+ {
+  "key": "d9c04f77",
+  "text": "Спасибо, до свидания!",
+  "voice": "aidar"
+ },
+ {
+  "key": "f9b526f5",
+  "text": "Добрый вечер! Чем могу помочь?",
+  "voice": "xenia"
+ },
+ {
+  "key": "ea28703e",
+  "text": "Добрый вечер! У меня бронь.",
+  "voice": "aidar"
+ },
+ {
+  "key": "ac031d84",
+  "text": "Ваша фамилия?",
+  "voice": "xenia"
+ },
+ {
+  "key": "23de6ae9",
+  "text": "*.",
+  "voice": "aidar",
+  "tts": "Тео."
+ },
+ {
+  "key": "5cdf2dcc",
+  "text": "Так… Номер на три ночи. Ваш паспорт, пожалуйста.",
+  "voice": "xenia"
+ },
+ {
+  "key": "47cbb74a",
+  "text": "Вот, пожалуйста.",
+  "voice": "aidar"
+ },
+ {
+  "key": "9256242e",
+  "text": "Ваш номер триста пять, третий этаж. Завтрак с семи до десяти.",
+  "voice": "xenia"
+ },
+ {
+  "key": "098729d5",
+  "text": "Спасибо. А где лифт?",
+  "voice": "aidar"
+ },
+ {
+  "key": "46b80f38",
+  "text": "Лифт направо. Хорошего отдыха!",
+  "voice": "xenia"
+ },
+ {
+  "key": "1b360099",
+  "text": "Спасибо, спокойной ночи!",
+  "voice": "aidar"
+ },
+ {
+  "key": "d84d30f0",
+  "text": "Следующий! Куда едем?",
+  "voice": "baya"
+ },
+ {
+  "key": "c707f26e",
+  "text": "Один билет до Петербурга, пожалуйста.",
+  "voice": "aidar"
+ },
+ {
+  "key": "d705a5b6",
+  "text": "На когда?",
+  "voice": "baya"
+ },
+ {
+  "key": "a1667f9a",
+  "text": "На завтра, утром.",
+  "voice": "aidar"
+ },
+ {
+  "key": "b98e1d92",
+  "text": "Есть «Сапсан» в девять ноль-ноль. Четыре часа в пути.",
+  "voice": "baya"
+ },
+ {
+  "key": "234fa16a",
+  "text": "Хорошо. Сколько стоит?",
+  "voice": "aidar"
+ },
+ {
+  "key": "591b9be0",
+  "text": "Три тысячи пятьсот. Туда и обратно?",
+  "voice": "baya"
+ },
+ {
+  "key": "9ec24887",
+  "text": "Нет, только туда.",
+  "voice": "aidar"
+ },
+ {
+  "key": "9dd193f6",
+  "text": "Хорошо. Паспорт, пожалуйста.",
+  "voice": "baya"
+ },
+ {
+  "key": "0b0fcaa6",
+  "text": "Вот. Картой можно?",
+  "voice": "aidar"
+ },
+ {
+  "key": "b4c09eb2",
+  "text": "Можно. Вагон пять, место двенадцать. Счастливого пути!",
+  "voice": "baya"
+ },
+ {
+  "key": "08dbbde6",
+  "text": "Здравствуйте. Слушаю вас.",
+  "voice": "kseniya:low"
+ },
+ {
+  "key": "4ade4fca",
+  "text": "Здравствуйте. У меня болит голова.",
+  "voice": "aidar"
+ },
+ {
+  "key": "0aeebeb1",
+  "text": "Давно болит?",
+  "voice": "kseniya:low"
+ },
+ {
+  "key": "03da4789",
+  "text": "С утра.",
+  "voice": "aidar"
+ },
+ {
+  "key": "c34f0d7a",
+  "text": "Температура есть?",
+  "voice": "kseniya:low"
+ },
+ {
+  "key": "bb7d6fea",
+  "text": "Нет, температуры нет.",
+  "voice": "aidar"
+ },
+ {
+  "key": "cffc450c",
+  "text": "Вот, возьмите. Одна таблетка три раза в день.",
+  "voice": "kseniya:low"
+ },
+ {
+  "key": "d9570032",
+  "text": "Три раза в день. Понятно.",
+  "voice": "aidar"
+ },
+ {
+  "key": "639024cd",
+  "text": "С вас двести сорок рублей. Выздоравливайте!",
+  "voice": "kseniya:low"
+ },
+ {
+  "key": "fee5c62f",
+  "text": "Спасибо! До свидания.",
+  "voice": "aidar"
+ },
+ {
+  "key": "c069a3ed",
+  "text": "Добрый день! На Красную площадь?",
+  "voice": "eugene:low"
+ },
+ {
+  "key": "c248605d",
+  "text": "Да, здравствуйте!",
+  "voice": "aidar"
+ },
+ {
+  "key": "f316d006",
+  "text": "Пристегнитесь, пожалуйста. Вы в первый раз в Москве?",
+  "voice": "eugene:low"
+ },
+ {
+  "key": "1feab746",
+  "text": "Да, в первый раз.",
+  "voice": "aidar"
+ },
+ {
+  "key": "a5eb3d3c",
+  "text": "Нравится Москва?",
+  "voice": "eugene:low"
+ },
+ {
+  "key": "021223b9",
+  "text": "Очень! Москва очень красивая.",
+  "voice": "aidar"
+ },
+ {
+  "key": "852b5993",
+  "text": "Сейчас пробки. Минут двадцать будем ехать.",
+  "voice": "eugene:low"
+ },
+ {
+  "key": "6fc7278c",
+  "text": "Ничего, я не спешу.",
+  "voice": "aidar"
+ },
+ {
+  "key": "4d5be992",
+  "text": "Приехали! Вот Красная площадь.",
+  "voice": "eugene:low"
+ },
+ {
+  "key": "8626d761",
+  "text": "Спасибо! Остановите здесь, пожалуйста.",
+  "voice": "aidar"
+ },
+ {
+  "key": "813fe475",
+  "text": "Хорошего дня!",
+  "voice": "eugene:low"
+ },
+ {
+  "key": "4c27431a",
+  "text": "И вам! До свидания!",
+  "voice": "aidar"
+ },
+ {
+  "key": "5f9681c0",
+  "text": "Привет! Заходи, раздевайся!",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "c16185ee",
+  "text": "Привет! Это тебе.",
+  "voice": "aidar"
+ },
+ {
+  "key": "cea21b03",
+  "text": "Ой, какие цветы! Спасибо! Тапочки вот.",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "aea3a37c",
+  "text": "Спасибо!",
+  "voice": "aidar"
+ },
+ {
+  "key": "f1b750be",
+  "text": "Садись! Будешь борщ?",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "7c32f0af",
+  "text": "Да, с удовольствием!",
+  "voice": "aidar"
+ },
+ {
+  "key": "dd43c77e",
+  "text": "Ну как? Вкусно?",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "f7efa73e",
+  "text": "Очень вкусно!",
+  "voice": "aidar"
+ },
+ {
+  "key": "ab9eca73",
+  "text": "Возьми ещё! Не стесняйся!",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "57255e62",
+  "text": "Спасибо, я уже сыт.",
+  "voice": "aidar"
+ },
+ {
+  "key": "fd6ce554",
+  "text": "Ну, давай чай пить!",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "afe4bcfd",
+  "text": "Давай!",
+  "voice": "aidar"
+ },
+ {
+  "key": "b4bc866a",
+  "text": "Алло! Привет, это Маша!",
+  "voice": "baya:high"
+ },
+ {
+  "key": "892413bb",
+  "text": "Привет, Маша! Как дела?",
+  "voice": "aidar"
+ },
+ {
+  "key": "1f053a41",
+  "text": "Нормально! Слушай, пойдём в кино в субботу?",
+  "voice": "baya:high"
+ },
+ {
+  "key": "37ccba74",
+  "text": "Давай! Во сколько?",
+  "voice": "aidar"
+ },
+ {
+  "key": "4773fbee",
+  "text": "В семь вечера. Нормально?",
+  "voice": "baya:high"
+ },
+ {
+  "key": "9f0e9642",
+  "text": "Да, отлично.",
+  "voice": "aidar"
+ },
+ {
+  "key": "d72e2b7c",
+  "text": "Где встретимся?",
+  "voice": "baya:high"
+ },
+ {
+  "key": "4da16553",
+  "text": "У метро.",
+  "voice": "aidar"
+ },
+ {
+  "key": "1331e451",
+  "text": "Договорились! Ну всё, пока!",
+  "voice": "baya:high"
+ },
+ {
+  "key": "d04debd9",
+  "text": "Пока! До субботы!",
+  "voice": "aidar"
+ },
+ {
+  "key": "e73a3e61",
+  "text": "Приезжай скорее. Часы остановились.",
+  "voice": "baya:low"
+ },
+ {
+  "key": "f488bce5",
+  "text": "Добрый вечер! Вы в порядке?",
+  "voice": "eugene"
+ },
+ {
+  "key": "5b1703d6",
+  "text": "Да, я в порядке. Спасибо!",
+  "voice": "aidar"
+ },
+ {
+  "key": "a7732cc2",
+  "text": "Хорошо! Холодно сегодня, да?",
+  "voice": "eugene"
+ },
+ {
+  "key": "2dc8f539",
+  "text": "Да, я есть в порядке.",
+  "voice": "aidar"
+ },
+ {
+  "key": "e0877456",
+  "text": "Вы… есть? Наверное, вы очень устали с дороги.",
+  "voice": "eugene"
+ },
+ {
+  "key": "6a4aa05d",
+  "text": "Меня в порядке.",
+  "voice": "aidar"
+ },
+ {
+  "key": "7b8e81ac",
+  "text": "«Меня в порядке»? Хм. Не торопитесь.",
+  "voice": "eugene"
+ },
+ {
+  "key": "4ca84641",
+  "text": "Я Иван, начальник станции. А как вас зовут?",
+  "voice": "eugene"
+ },
+ {
+  "key": "83c586df",
+  "text": "Меня зовут Тео.",
+  "voice": "aidar"
+ },
+ {
+  "key": "e6020138",
+  "text": "Тео! Очень приятно, Тео.",
+  "voice": "eugene"
+ },
+ {
+  "key": "6119a92f",
+  "text": "Я зовут Тео.",
+  "voice": "aidar"
+ },
+ {
+  "key": "a216d85b",
+  "text": "«Я зовут»? Почти! Меня зовут…",
+  "voice": "eugene"
+ },
+ {
+  "key": "1fd67a54",
+  "text": "Мне тоже очень приятно.",
+  "voice": "aidar"
+ },
+ {
+  "key": "dd464c6f",
+  "text": "Какой вежливый молодой человек!",
+  "voice": "eugene"
+ },
+ {
+  "key": "3dd9d332",
+  "text": "Я тоже приятно.",
+  "voice": "aidar"
+ },
+ {
+  "key": "279df4ff",
+  "text": "Вы тоже… что? Ха-ха. Вы хотели сказать «мне тоже».",
+  "voice": "eugene"
+ },
+ {
+  "key": "f5444f8e",
+  "text": "А откуда вы?",
+  "voice": "eugene"
+ },
+ {
+  "key": "cb17e7ca",
+  "text": "Из Бразилии?! Ого! Там сейчас тепло, а у нас минус двадцать!",
+  "voice": "eugene"
+ },
+ {
+  "key": "1d7e4cd7",
+  "text": "Я откуда Бразилия.",
+  "voice": "aidar"
+ },
+ {
+  "key": "9303ff8b",
+  "text": "Откуда… Бразилия? А, вы из Бразилии!",
+  "voice": "eugene"
+ },
+ {
+  "key": "ad796d5e",
+  "text": "Какой браслет… А куда вы идёте так поздно?",
+  "voice": "eugene"
+ },
+ {
+  "key": "4e8d7154",
+  "text": "Я не знаю.",
+  "voice": "aidar"
+ },
+ {
+  "key": "61a547b9",
+  "text": "Не знаете? Ночью, в снег? Так нельзя!",
+  "voice": "eugene"
+ },
+ {
+  "key": "5f98590c",
+  "text": "Я не уверен.",
+  "voice": "aidar"
+ },
+ {
+  "key": "95c5beae",
+  "text": "Не уверены? Ночью, в снег? Так нельзя!",
+  "voice": "eugene"
+ },
+ {
+  "key": "2317846e",
+  "text": "Я нет знаю.",
+  "voice": "aidar"
+ },
+ {
+  "key": "ee0edb87",
+  "text": "Нет знаете? А, вы не знаете.",
+  "voice": "eugene"
+ },
+ {
+  "key": "baa648d6",
+  "text": "фонарь",
+  "voice": "xenia"
+ },
+ {
+  "key": "6b7d83d6",
+  "text": "часы",
+  "voice": "xenia"
+ },
+ {
+  "key": "2f7dc986",
+  "text": "чемодан",
+  "voice": "xenia"
+ },
+ {
+  "key": "dd562e29",
+  "text": "Идите в чайную «Самовар». Там бабушка Вера. Она всё знает и всех знает.",
+  "voice": "eugene"
+ },
+ {
+  "key": "ee44fda7",
+  "text": "Ой, гость! Заходи, заходи! Ты замёрз?",
+  "voice": "baya:low"
+ },
+ {
+  "key": "d97e8f67",
+  "text": "Да, немного.",
+  "voice": "aidar"
+ },
+ {
+  "key": "52a0b55b",
+  "text": "Бедный! Садись у печки.",
+  "voice": "baya:low"
+ },
+ {
+  "key": "07c91af7",
+  "text": "Нет, я в порядке.",
+  "voice": "aidar"
+ },
+ {
+  "key": "f19790a5",
+  "text": "Ну-ну, а нос красный! Садись у печки.",
+  "voice": "baya:low"
+ },
+ {
+  "key": "63454fee",
+  "text": "Меня зовут Вера, но все говорят «бабушка Вера». А тебя?",
+  "voice": "baya:low"
+ },
+ {
+  "key": "6f0cb7ae",
+  "text": "Меня зовут Тео. Очень приятно!",
+  "voice": "aidar"
+ },
+ {
+  "key": "8429d53b",
+  "text": "Тео! Какое красивое имя.",
+  "voice": "baya:low"
+ },
+ {
+  "key": "318b8ab0",
+  "text": "Я зовут? Ох, милый. Меня зовут Тео!",
+  "voice": "baya:low"
+ },
+ {
+  "key": "d09fdaf6",
+  "text": "Лев… Наш часовщик. Его нет уже неделю. Часы на башне остановились, и зима не кончается.",
+  "voice": "baya:low"
+ },
+ {
+  "key": "4aca921a",
+  "text": "Утром поговорим. Комната стоит пять монет.",
+  "voice": "baya:low"
+ },
+ {
+  "key": "7376b80d",
+  "text": "С тебя пять монет.",
+  "voice": "baya:low"
+ },
+ {
+  "key": "87e0c37a",
+  "text": "Спасибо! Комната наверху. Ой, а ключ у меня.",
+  "voice": "baya:low"
+ },
+ {
+  "key": "9deecb6a",
+  "text": "Можно ключ, пожалуйста?",
+  "voice": "aidar"
+ },
+ {
+  "key": "fd89f3c3",
+  "text": "Конечно! Вот, держи.",
+  "voice": "baya:low"
+ },
+ {
+  "key": "dcce85e6",
+  "text": "Дай ключ.",
+  "voice": "aidar"
+ },
+ {
+  "key": "a6d2f161",
+  "text": "Ох. «Пожалуйста» бесплатно, милый. Две монеты за грубость.",
+  "voice": "baya:low"
+ },
+ {
+  "key": "0b2a0580",
+  "text": "Ключ я дать.",
+  "voice": "aidar"
+ },
+ {
+  "key": "5378f626",
+  "text": "Ключ… я… дать? Не понимаю. Ой, куда я положила ключ?",
+  "voice": "baya:low"
+ },
+ {
+  "key": "2d421c60",
+  "text": "Посмотри у самовара!",
+  "voice": "baya:low"
+ },
+ {
+  "key": "a70d37ba",
+  "text": "печь",
+  "voice": "xenia"
+ },
+ {
+  "key": "b3b79964",
+  "text": "Не у печи!",
+  "voice": "baya:low"
+ },
+ {
+  "key": "3313cac6",
+  "text": "Не у окна!",
+  "voice": "baya:low"
+ },
+ {
+  "key": "1febecd0",
+  "text": "самовар",
+  "voice": "xenia"
+ },
+ {
+  "key": "d442280d",
+  "text": "Нет, не на столе.",
+  "voice": "baya:low"
+ },
+ {
+  "key": "d568e5b1",
+  "text": "Хочешь чаю? С пирожком?",
+  "voice": "baya:low"
+ },
+ {
+  "key": "c9e2cfc0",
+  "text": "Можно чай, пожалуйста?",
+  "voice": "aidar"
+ },
+ {
+  "key": "3dd62a76",
+  "text": "Сейчас будет!",
+  "voice": "baya:low"
+ },
+ {
+  "key": "70373dd6",
+  "text": "Я не люблю чай. Можно воду?",
+  "voice": "aidar"
+ },
+ {
+  "key": "c989ec83",
+  "text": "Не любишь чай? В России? Ну ладно, вода.",
+  "voice": "baya:low"
+ },
+ {
+  "key": "b9eeeb6d",
+  "text": "Я люблю нет чай.",
+  "voice": "aidar"
+ },
+ {
+  "key": "ac81ae2b",
+  "text": "Любишь… нет чай? То есть не любишь?",
+  "voice": "baya:low"
+ },
+ {
+  "key": "89ed8617",
+  "text": "Чай. Пирожок. Быстро.",
+  "voice": "aidar"
+ },
+ {
+  "key": "076c4ed5",
+  "text": "Быстро?! Ох, молодёжь. Ещё одна монета.",
+  "voice": "baya:low"
+ },
+ {
+  "key": "8636e9ff",
+  "text": "А раз ты такой вежливый — чай бесплатно!",
+  "voice": "baya:low"
+ },
+ {
+  "key": "a1ce1c06",
+  "text": "Чай стоит две монеты.",
+  "voice": "baya:low"
+ },
+ {
+  "key": "bb2b9cdc",
+  "text": "Башня",
+  "voice": "baya:low"
+ },
+ {
+  "key": "45971d30",
+  "text": "Ой! Твой браслет светится! Это работа Льва… Завтра иди на ярмарку. Моя внучка Катя тебе поможет.",
+  "voice": "baya:low"
+ },
+ {
+  "key": "9d9fdccf",
+  "text": "Спасибо за всё!",
+  "voice": "aidar"
+ },
+ {
+  "key": "5dbab0ae",
+  "text": "Не за что, милый.",
+  "voice": "baya:low"
+ },
+ {
+  "key": "ab6fe0a5",
+  "text": "Спокойной ночи!",
+  "voice": "aidar"
+ },
+ {
+  "key": "7783dbce",
+  "text": "Спокойной ночи, Тео!",
+  "voice": "baya:low"
+ },
+ {
+  "key": "e5c3f19e",
+  "text": "Я идти спать, спасибо.",
+  "voice": "aidar"
+ },
+ {
+  "key": "44d1784d",
+  "text": "«Я идти»? Ха-ха. Иди, иди спать, милый.",
+  "voice": "baya:low"
+ },
+ {
+  "key": "8c158280",
+  "text": "Добрый вечер!",
+  "voice": "aidar"
+ },
+ {
+  "key": "08e6fccd",
+  "text": "Я в порядке.",
+  "voice": "aidar"
+ },
+ {
+  "key": "e3934565",
+  "text": "Пирожки! Горячие пирожки! Эй, ты! Хочешь есть?",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "af45538e",
+  "text": "Да, я голоден.",
+  "voice": "aidar"
+ },
+ {
+  "key": "64f7c2e8",
+  "text": "Я так и знала!",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "5993385b",
+  "text": "Нет, спасибо.",
+  "voice": "aidar"
+ },
+ {
+  "key": "16238e7c",
+  "text": "Да ладно! Посмотри на эти пирожки!",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "d9eebde9",
+  "text": "Я имею голод.",
+  "voice": "aidar"
+ },
+ {
+  "key": "b9973782",
+  "text": "Ты… имеешь голод? Как кошку? Ха-ха.",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "52665194",
+  "text": "С капустой или с яблоком. Две монеты за штуку. Сколько тебе?",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "84dd54e5",
+  "text": "Можно два пирожка, пожалуйста?",
+  "voice": "aidar"
+ },
+ {
+  "key": "04767c1e",
+  "text": "Два пирожка! С тебя четыре монеты.",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "6d4fece0",
+  "text": "Только один, пожалуйста.",
+  "voice": "aidar"
+ },
+ {
+  "key": "522ae5c3",
+  "text": "Только один? Хорошо, две монеты.",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "bbc16948",
+  "text": "Можно два пирожок?",
+  "voice": "aidar"
+ },
+ {
+  "key": "de1de2e9",
+  "text": "Два… пирожок? Ты хочешь сказать «два пирожка»?",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "755aaf30",
+  "text": "С тебя четыре монеты.",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "34f49f47",
+  "text": "С тебя две монеты.",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "0fb74910",
+  "text": "Подожди… Ты Тео? Бабушка Вера мне всё рассказала! Я Катя.",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "ea75083d",
+  "text": "Очень приятно, Катя!",
+  "voice": "aidar"
+ },
+ {
+  "key": "30f1d765",
+  "text": "Мне тоже!",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "08c59639",
+  "text": "Ты тоже… что? Ха-ха!",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "16faf346",
+  "text": "Ой, у тебя нет шапки! Здесь минус двадцать! Смотри, мама вяжет шапки и шарфы.",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "7b09aaf0",
+  "text": "Да. Сколько стоит шапка?",
+  "voice": "aidar"
+ },
+ {
+  "key": "a2bbdda5",
+  "text": "Зависит от цвета!",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "3dd53a81",
+  "text": "Сколько это есть?",
+  "voice": "aidar"
+ },
+ {
+  "key": "d0ed3c9b",
+  "text": "Сколько… это есть? А, ты про цену?",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "c75867a8",
+  "text": "Есть красная, синяя и зелёная. Какая тебе нравится?",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "c6986be6",
+  "text": "Мне нравится синяя.",
+  "voice": "aidar"
+ },
+ {
+  "key": "6a821a7c",
+  "text": "Хороший выбор! Как небо утром.",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "6cf05623",
+  "text": "Мне нравится красная.",
+  "voice": "aidar"
+ },
+ {
+  "key": "c5dd078b",
+  "text": "Красная, как моя! Мне нравится.",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "dbc10c66",
+  "text": "Зелёная, пожалуйста.",
+  "voice": "aidar"
+ },
+ {
+  "key": "f6a63468",
+  "text": "Зелёная! Как ёлка.",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "ad91dad5",
+  "text": "Мне нравится синий.",
+  "voice": "aidar"
+ },
+ {
+  "key": "70d77bbb",
+  "text": "Синий? Шапка — она, а не он. Синяя!",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "051db1a1",
+  "text": "И шарф! Подай мне жёлтый шарф, пожалуйста. Он слева.",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "e2424cb7",
+  "text": "Жёлтый, пожалуйста!",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "68102aa1",
+  "text": "Это красный, не жёлтый!",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "f01ade75",
+  "text": "жёлтый",
+  "voice": "xenia"
+ },
+ {
+  "key": "c40734a5",
+  "text": "Нет, это синий.",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "0e3dc971",
+  "text": "Нет, это зелёный.",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "62fb64ef",
+  "text": "Спасибо! Шапка и шарф стоят двенадцать монет.",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "0f6a94a9",
+  "text": "Хорошо, вот, пожалуйста.",
+  "voice": "aidar"
+ },
+ {
+  "key": "4e416b6e",
+  "text": "Хм… а можно за десять?",
+  "voice": "aidar"
+ },
+ {
+  "key": "c777e55c",
+  "text": "Ха! Ты молодец. Ладно, десять!",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "b1931da2",
+  "text": "Двенадцать? Это безумие! Ни за что.",
+  "voice": "aidar"
+ },
+ {
+  "key": "af3864b3",
+  "text": "Безумие? Мама вязала два дня! Тогда тринадцать.",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "9a924e51",
+  "text": "С тебя двенадцать монет.",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "03ca9bf6",
+  "text": "С тебя десять монет.",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "3ef308f2",
+  "text": "С тебя тринадцать монет.",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "aac32471",
+  "text": "Тебе очень идёт! Хорошего дня!",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "6ba0879d",
+  "text": "Спасибо, и тебе!",
+  "voice": "aidar"
+ },
+ {
+  "key": "0243f851",
+  "text": "Ой, спасибо!",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "31daa894",
+  "text": "Спасибо, тебя тоже!",
+  "voice": "aidar"
+ },
+ {
+  "key": "db17ba2a",
+  "text": "Меня тоже? Ха-ха, ты хотел сказать «и тебе».",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "5d5d59f1",
+  "text": "Катя! Катя! Часы на башне опять не идут! А ты кто? Ты не отсюда!",
+  "voice": "eugene:x-high"
+ },
+ {
+  "key": "d8f20a0f",
+  "text": "Привет! Я Тео. Я из Бразилии.",
+  "voice": "aidar"
+ },
+ {
+  "key": "143f6a82",
+  "text": "Из Бразилии?! Ого! А там есть снег?",
+  "voice": "eugene:x-high"
+ },
+ {
+  "key": "5ccedd62",
+  "text": "Привет! Я есть Тео.",
+  "voice": "aidar"
+ },
+ {
+  "key": "ef23e729",
+  "text": "Ты есть Тео? Ха-ха, смешно ты говоришь!",
+  "voice": "eugene:x-high"
+ },
+ {
+  "key": "219f573b",
+  "text": "Это Миша. Он знает все улицы. Тео ищет дедушку Льва. Тео, иди в ратушу. Там Дмитрий, наш полицейский.",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "a1a75f35",
+  "text": "Ключ от часов",
+  "voice": "baya:low"
+ },
+ {
+  "key": "3c4d1d26",
+  "text": "Я голоден.",
+  "voice": "aidar"
+ },
+ {
+  "key": "2f6b524a",
+  "text": "Сколько стоит шапка?",
+  "voice": "aidar"
+ },
+ {
+  "key": "59804dad",
+  "text": "А можно за десять?",
+  "voice": "aidar"
+ },
+ {
+  "key": "18580bc3",
+  "text": "Стой! Кто вы? Что вам нужно?",
+  "voice": "aidar:low"
+ },
+ {
+  "key": "ee85d0d4",
+  "text": "Здравствуйте! Я ищу дедушку Льва.",
+  "voice": "aidar"
+ },
+ {
+  "key": "a457d2d4",
+  "text": "Льва? Часовщика? Хм…",
+  "voice": "aidar:low"
+ },
+ {
+  "key": "3335ee03",
+  "text": "Где Лев? Говорите!",
+  "voice": "aidar"
+ },
+ {
+  "key": "da057102",
+  "text": "Говорите?! Здесь я задаю вопросы!",
+  "voice": "aidar:low"
+ },
+ {
+  "key": "a4283a4e",
+  "text": "Я ищу Лев.",
+  "voice": "aidar"
+ },
+ {
+  "key": "d38f7aee",
+  "text": "Лев? Вы ищете… Льва?",
+  "voice": "aidar:low"
+ },
+ {
+  "key": "a08c3adb",
+  "text": "Сначала документы. Как вас зовут?",
+  "voice": "aidar:low"
+ },
+ {
+  "key": "bc52feb5",
+  "text": "Тео… Странное имя.",
+  "voice": "aidar:low"
+ },
+ {
+  "key": "762ea329",
+  "text": "Я зовут? Меня зовут! Ещё раз.",
+  "voice": "aidar:low"
+ },
+ {
+  "key": "7aa51ef7",
+  "text": "Мне двадцать лет.",
+  "voice": "aidar"
+ },
+ {
+  "key": "db19b610",
+  "text": "Двадцать. Хорошо.",
+  "voice": "aidar:low"
+ },
+ {
+  "key": "b89e56ff",
+  "text": "Я имею двадцать лет.",
+  "voice": "aidar"
+ },
+ {
+  "key": "ada52b02",
+  "text": "Имеете? Лет не имеют, молодой человек.",
+  "voice": "aidar:low"
+ },
+ {
+  "key": "93b9c3a8",
+  "text": "Мне двадцать год.",
+  "voice": "aidar"
+ },
+ {
+  "key": "169fe9fe",
+  "text": "Двадцать год? Двадцать лет!",
+  "voice": "aidar:low"
+ },
+ {
+  "key": "eec6c5a7",
+  "text": "Вы работаете? У вас есть работа здесь?",
+  "voice": "aidar:low"
+ },
+ {
+  "key": "3dd89101",
+  "text": "Нет, у меня нет работы.",
+  "voice": "aidar"
+ },
+ {
+  "key": "b7a90a04",
+  "text": "Нет работы? Хм. Подозрительно.",
+  "voice": "aidar:low"
+ },
+ {
+  "key": "1cab9a9e",
+  "text": "Нет, у меня нет работа.",
+  "voice": "aidar"
+ },
+ {
+  "key": "d2361f10",
+  "text": "Нет работа? Работы! Нет работы.",
+  "voice": "aidar:low"
+ },
+ {
+  "key": "b5be4ffa",
+  "text": "Это не ваше дело!",
+  "voice": "aidar"
+ },
+ {
+  "key": "2a1e5395",
+  "text": "Не моё дело?! В этом городе всё — моё дело!",
+  "voice": "aidar:low"
+ },
+ {
+  "key": "fb6015bb",
+  "text": "И зачем вам Лев?",
+  "voice": "aidar:low"
+ },
+ {
+  "key": "016a99eb",
+  "text": "Он друг моей бабушки.",
+  "voice": "aidar"
+ },
+ {
+  "key": "2a3974f4",
+  "text": "Друг бабушки… Ладно.",
+  "voice": "aidar:low"
+ },
+ {
+  "key": "f9038134",
+  "text": "У меня есть письмо от него.",
+  "voice": "aidar"
+ },
+ {
+  "key": "f8dec50c",
+  "text": "Письмо? Покажите! … Хм. Это его почерк.",
+  "voice": "aidar:low"
+ },
+ {
+  "key": "dd11afd4",
+  "text": "Вы грубый молодой человек. Но… ладно.",
+  "voice": "aidar:low"
+ },
+ {
+  "key": "de792bc7",
+  "text": "Хорошо. Вы вежливый молодой человек.",
+  "voice": "aidar:low"
+ },
+ {
+  "key": "4f002145",
+  "text": "Лев пропал в ту ночь, когда часы остановились. Спросите Ольгу Петровну в библиотеке. Она его старый друг.",
+  "voice": "aidar:low"
+ },
+ {
+  "key": "cd2b77af",
+  "text": "Добрый день! Тише, пожалуйста, это библиотека. Чем могу помочь?",
+  "voice": "kseniya"
+ },
+ {
+  "key": "93c47952",
+  "text": "Добрый день! Я ищу дедушку Льва.",
+  "voice": "aidar"
+ },
+ {
+  "key": "8454d195",
+  "text": "Льва?..",
+  "voice": "kseniya"
+ },
+ {
+  "key": "2cc68e08",
+  "text": "Кого? Вы хотите сказать: Льва?",
+  "voice": "kseniya"
+ },
+ {
+  "key": "c726253b",
+  "text": "Вы его знаете?",
+  "voice": "kseniya"
+ },
+ {
+  "key": "18ba5bdf",
+  "text": "Нет, но моя бабушка его знает.",
+  "voice": "aidar"
+ },
+ {
+  "key": "0ccfb1e6",
+  "text": "Ваша бабушка? … Нина? Вы внук Нины?!",
+  "voice": "kseniya"
+ },
+ {
+  "key": "f96e6d18",
+  "text": "Нет, я его не знаю.",
+  "voice": "aidar"
+ },
+ {
+  "key": "bcf2baa4",
+  "text": "Не знаете? Но у вас его браслет! … Вы внук Нины?!",
+  "voice": "kseniya"
+ },
+ {
+  "key": "c62793ae",
+  "text": "Нина и Лев… В детстве они были лучшими друзьями. Он часто говорил о ней.",
+  "voice": "kseniya"
+ },
+ {
+  "key": "73be0e33",
+  "text": "полка",
+  "voice": "xenia"
+ },
+ {
+  "key": "21927b7e",
+  "text": "глобус",
+  "voice": "xenia"
+ },
+ {
+  "key": "4cec8cc0",
+  "text": "газета",
+  "voice": "xenia"
+ },
+ {
+  "key": "ba82e1b5",
+  "text": "Вот старая газета. Часы остановились ровно в полночь. И в ту же ночь Лев пропал.",
+  "voice": "kseniya"
+ },
+ {
+  "key": "ef0b9e50",
+  "text": "Идите в его мастерскую. Там работает Соня, его ученица. Вот карта города.",
+  "voice": "kseniya"
+ },
+ {
+  "key": "79408a9b",
+  "text": "Спасибо, Ольга Петровна!",
+  "voice": "aidar"
+ },
+ {
+  "key": "6144199c",
+  "text": "Пожалуйста. Удачи, Тео!",
+  "voice": "kseniya"
+ },
+ {
+  "key": "419a9000",
+  "text": "Спасибо, ты очень добрая!",
+  "voice": "aidar"
+ },
+ {
+  "key": "d8dfeed9",
+  "text": "Ты? Ох, молодёжь… Пожалуйста.",
+  "voice": "kseniya"
+ },
+ {
+  "key": "ff008325",
+  "text": "Полночь",
+  "voice": "baya:low"
+ },
+ {
+  "key": "27a3b85e",
+  "text": "Я ищу дедушку Льва.",
+  "voice": "aidar"
+ },
+ {
+  "key": "aec5e9d7",
+  "text": "У меня нет работы.",
+  "voice": "aidar"
+ },
+ {
+  "key": "55efff12",
+  "text": "Ой! Кто вы? Мастерская закрыта!",
+  "voice": "kseniya:high"
+ },
+ {
+  "key": "7103f668",
+  "text": "Извините! Меня зовут Тео. Я ищу дедушку Льва.",
+  "voice": "aidar"
+ },
+ {
+  "key": "badbeedf",
+  "text": "Тео? Внук Нины? Лев о вас говорил!",
+  "voice": "kseniya:high"
+ },
+ {
+  "key": "fba387f4",
+  "text": "Извините! Я ищу Лев.",
+  "voice": "aidar"
+ },
+ {
+  "key": "8cbe61a0",
+  "text": "Лев? А, вы ищете Льва?",
+  "voice": "kseniya:high"
+ },
+ {
+  "key": "91f1677e",
+  "text": "Я Соня, его ученица. Лев делает игрушки, а я чиню часы.",
+  "voice": "kseniya:high"
+ },
+ {
+  "key": "57690009",
+  "text": "А ваша бабушка? Что она делает?",
+  "voice": "kseniya:high"
+ },
+ {
+  "key": "725cb19a",
+  "text": "Она работает в школе.",
+  "voice": "aidar"
+ },
+ {
+  "key": "a6f795d0",
+  "text": "Учительница! Как Ольга Петровна раньше.",
+  "voice": "kseniya:high"
+ },
+ {
+  "key": "2bf99155",
+  "text": "Она работать в школе.",
+  "voice": "aidar"
+ },
+ {
+  "key": "d4ab4279",
+  "text": "Работать? Она работает!",
+  "voice": "kseniya:high"
+ },
+ {
+  "key": "97d5046d",
+  "text": "Который час? Я не знаю! Все часы стоят. У вас есть часы?",
+  "voice": "kseniya:high"
+ },
+ {
+  "key": "d6e896ab",
+  "text": "Сейчас десять часов.",
+  "voice": "aidar"
+ },
+ {
+  "key": "77e4bcc9",
+  "text": "Десять! Спасибо.",
+  "voice": "kseniya:high"
+ },
+ {
+  "key": "026646ff",
+  "text": "Сейчас десять час.",
+  "voice": "aidar"
+ },
+ {
+  "key": "f7265471",
+  "text": "Десять час? Десять часов!",
+  "voice": "kseniya:high"
+ },
+ {
+  "key": "c92d7d56",
+  "text": "Лев всегда встаёт в шесть. Он никогда не опаздывает. А вы? Во сколько вы обычно встаёте?",
+  "voice": "kseniya:high"
+ },
+ {
+  "key": "8745541f",
+  "text": "Я обычно встаю в семь.",
+  "voice": "aidar"
+ },
+ {
+  "key": "fcc0a0d2",
+  "text": "В семь? Как я!",
+  "voice": "kseniya:high"
+ },
+ {
+  "key": "04e0e2dc",
+  "text": "Я никогда встаю рано.",
+  "voice": "aidar"
+ },
+ {
+  "key": "8968c429",
+  "text": "Никогда… встаю? Никогда не встаю!",
+  "voice": "kseniya:high"
+ },
+ {
+  "key": "98d4a9ec",
+  "text": "Я обычно встаёт в семь.",
+  "voice": "aidar"
+ },
+ {
+  "key": "25a12240",
+  "text": "Я встаёт? Я встаю!",
+  "voice": "kseniya:high"
+ },
+ {
+  "key": "32e064f7",
+  "text": "Я обычно вставать в семь.",
+  "voice": "aidar"
+ },
+ {
+  "key": "7d0b3c2c",
+  "text": "Вставать? Вы хотите сказать: я встаю.",
+  "voice": "kseniya:high"
+ },
+ {
+  "key": "a5e70764",
+  "text": "Каждое утро Лев открывает мастерскую в восемь. Но в ту ночь он пошёл на башню… и не вернулся.",
+  "voice": "kseniya:high"
+ },
+ {
+  "key": "9a8275fe",
+  "text": "Вы поможете мне? Мастерская работает с понедельника до пятницы. Какой день вам удобно?",
+  "voice": "kseniya:high"
+ },
+ {
+  "key": "7f3c4ce5",
+  "text": "В понедельник.",
+  "voice": "aidar"
+ },
+ {
+  "key": "9616a32c",
+  "text": "В понедельник! Это завтра.",
+  "voice": "kseniya:high"
+ },
+ {
+  "key": "a88f9c92",
+  "text": "На понедельник.",
+  "voice": "aidar"
+ },
+ {
+  "key": "5a20005e",
+  "text": "На понедельник? В понедельник!",
+  "voice": "kseniya:high"
+ },
+ {
+  "key": "7976e370",
+  "text": "Во сколько вы придёте?",
+  "voice": "kseniya:high"
+ },
+ {
+  "key": "8582199a",
+  "text": "Я буду здесь в восемь.",
+  "voice": "aidar"
+ },
+ {
+  "key": "ed298301",
+  "text": "Отлично! В восемь.",
+  "voice": "kseniya:high"
+ },
+ {
+  "key": "3c501f03",
+  "text": "Я есть здесь в восемь.",
+  "voice": "aidar"
+ },
+ {
+  "key": "eb5ce1e0",
+  "text": "Есть здесь? А, вы будете здесь!",
+  "voice": "kseniya:high"
+ },
+ {
+  "key": "0a142a33",
+  "text": "Восемь.",
+  "voice": "aidar"
+ },
+ {
+  "key": "458245c0",
+  "text": "Восемь чего? В восемь?",
+  "voice": "kseniya:high"
+ },
+ {
+  "key": "236b661c",
+  "text": "Напишите ваше имя в книге гостей, пожалуйста. И фамилию. Как пишется ваша фамилия?",
+  "voice": "kseniya:high"
+ },
+ {
+  "key": "9d1b62bd",
+  "text": "С-А-Н-Т-О-С.",
+  "voice": "aidar"
+ },
+ {
+  "key": "6849a28a",
+  "text": "Сантос. Красиво!",
+  "voice": "kseniya:high"
+ },
+ {
+  "key": "3d47eb3b",
+  "text": "С-А-Н-Т-О-З.",
+  "voice": "aidar"
+ },
+ {
+  "key": "054bc924",
+  "text": "З? Сантоз? Нет, «Сантос» с буквой С!",
+  "voice": "kseniya:high"
+ },
+ {
+  "key": "da5a5730",
+  "text": "А где вы живёте сейчас?",
+  "voice": "kseniya:high"
+ },
+ {
+  "key": "c8e4f57c",
+  "text": "Я живу в чайной «Самовар».",
+  "voice": "aidar"
+ },
+ {
+  "key": "b9398f35",
+  "text": "У бабушки Веры! Её пирожки — лучшие в городе.",
+  "voice": "kseniya:high"
+ },
+ {
+  "key": "2e955743",
+  "text": "Я живу в чайная.",
+  "voice": "aidar"
+ },
+ {
+  "key": "96f2567d",
+  "text": "В чайная? В чайной!",
+  "voice": "kseniya:high"
+ },
+ {
+  "key": "04d7e978",
+  "text": "Сердце часов",
+  "voice": "baya:low"
+ },
+ {
+  "key": "f49a95b6",
+  "text": "Ваш браслет светится! Лев всегда говорил: «Когда браслет светится, часы слышат».",
+  "voice": "kseniya:high"
+ },
+ {
+  "key": "7e71cc64",
+  "text": "До завтра, Соня!",
+  "voice": "aidar"
+ },
+ {
+  "key": "8c76c96e",
+  "text": "До завтра, Тео!",
+  "voice": "kseniya:high"
+ },
+ {
+  "key": "9a6fb9e1",
+  "text": "До завтра, Соню!",
+  "voice": "aidar"
+ },
+ {
+  "key": "17a0917c",
+  "text": "Соню? Ха-ха. Меня зовут Соня! «До завтра, Соня».",
+  "voice": "kseniya:high"
+ },
+ {
+  "key": "5ddcf63d",
+  "text": "Он делает игрушки.",
+  "voice": "aidar"
+ },
+ {
+  "key": "4e64e7ef",
+  "text": "Я живу в чайной.",
+  "voice": "aidar"
+ },
+ {
+  "key": "7bb17ec5",
+  "text": "До завтра!",
+  "voice": "aidar"
+ },
+ {
+  "key": "bec3a165",
+  "text": "Тео! Привет! Куда ты идёшь? Я знаю все улицы!",
+  "voice": "eugene:x-high"
+ },
+ {
+  "key": "63a3cdd9",
+  "text": "Что тебе нужно?",
+  "voice": "eugene:x-high"
+ },
+ {
+  "key": "c72c7916",
+  "text": "Где почта?",
+  "voice": "aidar"
+ },
+ {
+  "key": "f26fda40",
+  "text": "Почта? Легко!",
+  "voice": "eugene:x-high"
+ },
+ {
+  "key": "486c2124",
+  "text": "Где есть почта?",
+  "voice": "aidar"
+ },
+ {
+  "key": "2ac1c19b",
+  "text": "Где есть? Ты хочешь сказать: где почта?",
+  "voice": "eugene:x-high"
+ },
+ {
+  "key": "35ac2b69",
+  "text": "Иди прямо, потом направо. Почта рядом с аптекой.",
+  "voice": "eugene:x-high"
+ },
+ {
+  "key": "fd5ac78d",
+  "text": "Сначала прямо, а потом… направо!",
+  "voice": "eugene:x-high"
+ },
+ {
+  "key": "5b3ff0e9",
+  "text": "Нет, не налево!",
+  "voice": "eugene:x-high"
+ },
+ {
+  "key": "14741ce2",
+  "text": "Прямо — это сначала. А потом?",
+  "voice": "eugene:x-high"
+ },
+ {
+  "key": "1ba32701",
+  "text": "Назад? Нет!",
+  "voice": "eugene:x-high"
+ },
+ {
+  "key": "aa186234",
+  "text": "Что дальше? Читай адрес!",
+  "voice": "eugene:x-high"
+ },
+ {
+  "key": "c402021e",
+  "text": "Дом сорок два, Речная улица.",
+  "voice": "eugene:x-high"
+ },
+ {
+  "key": "3446c39d",
+  "text": "двадцать четыре",
+  "voice": "xenia"
+ },
+ {
+  "key": "7ab0aea3",
+  "text": "Это двадцать четыре. А нам нужен сорок два!",
+  "voice": "eugene:x-high"
+ },
+ {
+  "key": "8ec63adc",
+  "text": "сорок два",
+  "voice": "xenia"
+ },
+ {
+  "key": "7feb0231",
+  "text": "четырнадцать",
+  "voice": "xenia"
+ },
+ {
+  "key": "be3eba20",
+  "text": "Нет, это четырнадцать.",
+  "voice": "eugene:x-high"
+ },
+ {
+  "key": "6d0e1786",
+  "text": "пятьдесят два",
+  "voice": "xenia"
+ },
+ {
+  "key": "59072cfb",
+  "text": "Нет, это пятьдесят два.",
+  "voice": "eugene:x-high"
+ },
+ {
+  "key": "c15451e1",
+  "text": "Сорок два? Это дом Фёдора, рыбака! На Речной улице есть магазины, кафе и баня. Но Фёдора там нет. Днём он всегда на реке.",
+  "voice": "eugene:x-high"
+ },
+ {
+  "key": "9e13d0fb",
+  "text": "А что есть в Бразилии? Там есть снег?",
+  "voice": "eugene:x-high"
+ },
+ {
+  "key": "607b60d2",
+  "text": "Нет, там нет снега. Там есть пляжи.",
+  "voice": "aidar"
+ },
+ {
+  "key": "f1e016ee",
+  "text": "Нет снега?! Пляжи?! Я хочу в Бразилию!",
+  "voice": "eugene:x-high"
+ },
+ {
+  "key": "ed417e73",
+  "text": "Нет, там не имеет снег.",
+  "voice": "aidar"
+ },
+ {
+  "key": "ff21f32d",
+  "text": "Не имеет? Ха! Ты хочешь сказать: там нет снега?",
+  "voice": "eugene:x-high"
+ },
+ {
+  "key": "fb594af5",
+  "text": "А сколько в Белоречье магазинов? Угадай!",
+  "voice": "eugene:x-high"
+ },
+ {
+  "key": "16e1dcd7",
+  "text": "Три магазина?",
+  "voice": "aidar"
+ },
+ {
+  "key": "e93f31ca",
+  "text": "Нет! Пять магазинов! Но хорошая попытка.",
+  "voice": "eugene:x-high"
+ },
+ {
+  "key": "e14c230b",
+  "text": "Пять магазинов?",
+  "voice": "aidar"
+ },
+ {
+  "key": "78927f92",
+  "text": "Да! Пять магазинов! Ты молодец!",
+  "voice": "eugene:x-high"
+ },
+ {
+  "key": "5145164f",
+  "text": "Пять магазина?",
+  "voice": "aidar"
+ },
+ {
+  "key": "252c4d4d",
+  "text": "Пять магазина? Пять магазинов!",
+  "voice": "eugene:x-high"
+ },
+ {
+  "key": "3472b0da",
+  "text": "Миша, это для тебя!",
+  "voice": "aidar"
+ },
+ {
+  "key": "5b43eaf6",
+  "text": "Для меня?! Лошадка! Спасибо, Тео!",
+  "voice": "eugene:x-high"
+ },
+ {
+  "key": "c19c9f7d",
+  "text": "Миша, это для ты.",
+  "voice": "aidar"
+ },
+ {
+  "key": "4e4d2e86",
+  "text": "Для ты? Для тебя! … Для меня?!",
+  "voice": "eugene:x-high"
+ },
+ {
+  "key": "87d102b6",
+  "text": "Дедушка Лев обещал мне лошадку… Тео, я его видел! В ту ночь. С фонарём, на реке!",
+  "voice": "eugene:x-high"
+ },
+ {
+  "key": "e671ecff",
+  "text": "Пойдём к Фёдору! Он рыбак. Он всё видит.",
+  "voice": "eugene:x-high"
+ },
+ {
+  "key": "d28c2074",
+  "text": "Река",
+  "voice": "baya:low"
+ },
+ {
+  "key": "e453a1d1",
+  "text": "Идите прямо, потом направо.",
+  "voice": "aidar"
+ },
+ {
+  "key": "62787ef8",
+  "text": "Почта рядом с аптекой.",
+  "voice": "aidar"
+ },
+ {
+  "key": "12e69b68",
+  "text": "Дом сорок два.",
+  "voice": "aidar"
+ },
+ {
+  "key": "c027859d",
+  "text": "Там есть магазины.",
+  "voice": "aidar"
+ },
+ {
+  "key": "36213e6f",
+  "text": "Там нет снега.",
+  "voice": "aidar"
+ },
+ {
+  "key": "e27ee0d2",
+  "text": "Это для тебя!",
+  "voice": "aidar"
+ },
+ {
+  "key": "b1cdacfd",
+  "text": "О, Миша! А это кто с тобой?",
+  "voice": "eugene:low"
+ },
+ {
+  "key": "acd259bf",
+  "text": "Это Тео, из Бразилии! Он ищет дедушку Льва.",
+  "voice": "eugene:x-high"
+ },
+ {
+  "key": "0476a45d",
+  "text": "Льва? Лев — мой дядя! Брат моей мамы.",
+  "voice": "eugene:low"
+ },
+ {
+  "key": "96de8293",
+  "text": "А у тебя есть братья или сёстры?",
+  "voice": "eugene:low"
+ },
+ {
+  "key": "53bd3746",
+  "text": "Да, у меня есть сестра.",
+  "voice": "aidar"
+ },
+ {
+  "key": "d703a210",
+  "text": "Хорошо! А у меня три сестры. Три!",
+  "voice": "eugene:low"
+ },
+ {
+  "key": "4d232927",
+  "text": "Нет, у меня нет братьев и сестёр.",
+  "voice": "aidar"
+ },
+ {
+  "key": "89126691",
+  "text": "Один? Как дядя Лев.",
+  "voice": "eugene:low"
+ },
+ {
+  "key": "11c82ea3",
+  "text": "Да, я имею сестру.",
+  "voice": "aidar"
+ },
+ {
+  "key": "14677c6d",
+  "text": "Имеешь? Ха-ха. У тебя есть сестра, да?",
+  "voice": "eugene:low"
+ },
+ {
+  "key": "9ce09a1c",
+  "text": "Смотри. Я нашёл это на льду. Чей это фонарь?",
+  "voice": "eugene:low"
+ },
+ {
+  "key": "6cd47fbd",
+  "text": "Это фонарь вашего дяди!",
+  "voice": "aidar"
+ },
+ {
+  "key": "aaf12527",
+  "text": "Да… Это его фонарь.",
+  "voice": "eugene:low"
+ },
+ {
+  "key": "585c42bb",
+  "text": "Это фонарь ваш дядя.",
+  "voice": "aidar"
+ },
+ {
+  "key": "2a7a98ec",
+  "text": "Ваш дядя? Вашего дяди!",
+  "voice": "eugene:low"
+ },
+ {
+  "key": "cbfdb8ba",
+  "text": "В ту ночь я видел на реке женщину. Очень странную.",
+  "voice": "eugene:low"
+ },
+ {
+  "key": "f77a10d1",
+  "text": "Как она выглядит?",
+  "voice": "aidar"
+ },
+ {
+  "key": "064eaea3",
+  "text": "Сейчас расскажу.",
+  "voice": "eugene:low"
+ },
+ {
+  "key": "28971806",
+  "text": "Он? Это женщина. Она!",
+  "voice": "eugene:low"
+ },
+ {
+  "key": "345abe39",
+  "text": "Она высокая. У неё длинные белые волосы и голубые глаза. Как лёд. И белое пальто.",
+  "voice": "eugene:low"
+ },
+ {
+  "key": "911f4607",
+  "text": "Это Снежная Дама! Из сказки бабушки Веры!",
+  "voice": "eugene:x-high"
+ },
+ {
+  "key": "06c82674",
+  "text": "Сказки, сказки… Ну, Тео, повтори. Какая она?",
+  "voice": "eugene:low"
+ },
+ {
+  "key": "09989569",
+  "text": "Она высокая. У неё белые волосы.",
+  "voice": "aidar"
+ },
+ {
+  "key": "d073b415",
+  "text": "Точно. Ты хорошо слушаешь.",
+  "voice": "eugene:low"
+ },
+ {
+  "key": "1c83b785",
+  "text": "Он высокий. У него белые волосы.",
+  "voice": "aidar"
+ },
+ {
+  "key": "2af13a64",
+  "text": "Он? Нет, это женщина. Она!",
+  "voice": "eugene:low"
+ },
+ {
+  "key": "e1c2d37d",
+  "text": "Она высокий.",
+  "voice": "aidar"
+ },
+ {
+  "key": "1a3a7c02",
+  "text": "Высокий? Она высокая!",
+  "voice": "eugene:low"
+ },
+ {
+  "key": "df0b845c",
+  "text": "Где она сейчас?",
+  "voice": "aidar"
+ },
+ {
+  "key": "336016f3",
+  "text": "Не знаю. Она пошла к башне. И дядя Лев… за ней.",
+  "voice": "eugene:low"
+ },
+ {
+  "key": "133db850",
+  "text": "Где она есть сейчас?",
+  "voice": "aidar"
+ },
+ {
+  "key": "a82d1cce",
+  "text": "Где она есть? А, где она сейчас?",
+  "voice": "eugene:low"
+ },
+ {
+  "key": "69dadadf",
+  "text": "Будь осторожен, Тео. А это тебе: рыба для бабушки Веры!",
+  "voice": "eugene:low"
+ },
+ {
+  "key": "22fed43b",
+  "text": "Спасибо, Фёдор! До свидания!",
+  "voice": "aidar"
+ },
+ {
+  "key": "46e2e326",
+  "text": "Пока, ребята!",
+  "voice": "eugene:low"
+ },
+ {
+  "key": "9e004347",
+  "text": "Спасибо, Фёдора!",
+  "voice": "aidar"
+ },
+ {
+  "key": "6e4e813b",
+  "text": "Фёдора? Я Фёдор! Ха-ха.",
+  "voice": "eugene:low"
+ },
+ {
+  "key": "ada8e36e",
+  "text": "Снежная Дама",
+  "voice": "baya:low"
+ },
+ {
+  "key": "81c8e36b",
+  "text": "У тебя есть братья или сёстры?",
+  "voice": "aidar"
+ },
+ {
+  "key": "7c02d31e",
+  "text": "У меня есть сестра.",
+  "voice": "aidar"
+ },
+ {
+  "key": "e7742731",
+  "text": "Лев — брат моей мамы.",
+  "voice": "aidar"
+ },
+ {
+  "key": "5dd46820",
+  "text": "Это фонарь вашего дяди.",
+  "voice": "aidar"
+ },
+ {
+  "key": "5d6eb413",
+  "text": "Она высокая.",
+  "voice": "aidar"
+ },
+ {
+  "key": "b0c73d23",
+  "text": "Тео! Садись! Сегодня я повар. Смотри, что у нас есть!",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "3a7da221",
+  "text": "борщ",
+  "voice": "xenia"
+ },
+ {
+  "key": "d38b8484",
+  "text": "пельмени",
+  "voice": "xenia"
+ },
+ {
+  "key": "7312ab7f",
+  "text": "блины",
+  "voice": "xenia"
+ },
+ {
+  "key": "99950c58",
+  "text": "сметана",
+  "voice": "xenia"
+ },
+ {
+  "key": "f68a7bbd",
+  "text": "Что ты будешь?",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "38f8bc70",
+  "text": "Я бы хотел борщ, пожалуйста.",
+  "voice": "aidar"
+ },
+ {
+  "key": "9936f473",
+  "text": "Борщ! Со сметаной, конечно.",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "8505c26b",
+  "text": "Я бы хотел пельмени, пожалуйста.",
+  "voice": "aidar"
+ },
+ {
+  "key": "b67e09f5",
+  "text": "Пельмени! Мои любимые.",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "87e36f20",
+  "text": "Я хотеть борщ.",
+  "voice": "aidar"
+ },
+ {
+  "key": "f5e3a761",
+  "text": "Я хотеть? Ха-ха. Я бы хотел, да?",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "504574d8",
+  "text": "Борщ. Быстро.",
+  "voice": "aidar"
+ },
+ {
+  "key": "d508864d",
+  "text": "Быстро?! Я тебе не официант! Ещё монета.",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "ea87a103",
+  "text": "А что будешь пить?",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "ba8a4be8",
+  "text": "Можно стакан сока?",
+  "voice": "aidar"
+ },
+ {
+  "key": "88fa0d57",
+  "text": "Яблочный сок! Сейчас.",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "498d78ab",
+  "text": "Можно чашку чая?",
+  "voice": "aidar"
+ },
+ {
+  "key": "6da51f62",
+  "text": "Конечно! Из самовара.",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "ec3f37f6",
+  "text": "Можно стакан сок?",
+  "voice": "aidar"
+ },
+ {
+  "key": "cc55c505",
+  "text": "Стакан сок? Стакан сока!",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "0ca5a3c7",
+  "text": "Ой! Хлеба нет! Извини, Тео.",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "1337ced6",
+  "text": "Нет хлеба? Ничего. А сметана есть?",
+  "voice": "aidar"
+ },
+ {
+  "key": "8dac1628",
+  "text": "Сметана есть! Много!",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "e8218202",
+  "text": "Нет хлеб? Ничего.",
+  "voice": "aidar"
+ },
+ {
+  "key": "d88e11e5",
+  "text": "Нет хлеб? Нет хлеба!",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "79bd50aa",
+  "text": "Фёдор прислал рыбу? Спасибо, Тео! Завтра будет уха.",
+  "voice": "baya:low"
+ },
+ {
+  "key": "916f6d99",
+  "text": "А что ты любишь делать? Зимой у нас все любят кататься на коньках.",
+  "voice": "baya:low"
+ },
+ {
+  "key": "9c51d012",
+  "text": "Я люблю читать и плавать.",
+  "voice": "aidar"
+ },
+ {
+  "key": "052b8383",
+  "text": "Плавать?! Здесь? Летом, может быть!",
+  "voice": "baya:low"
+ },
+ {
+  "key": "f8e69176",
+  "text": "Я люблю танцевать!",
+  "voice": "aidar"
+ },
+ {
+  "key": "76966d8b",
+  "text": "Танцевать! На Масленицу будем танцевать.",
+  "voice": "baya:low"
+ },
+ {
+  "key": "1a6be2dc",
+  "text": "Я люблю читаю.",
+  "voice": "aidar"
+ },
+ {
+  "key": "0bb06adf",
+  "text": "Люблю читаю? Люблю читать!",
+  "voice": "baya:low"
+ },
+ {
+  "key": "f3dc0b86",
+  "text": "Бабушка, расскажи про Снежную Даму!",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "5cfa02eb",
+  "text": "Давным-давно Снежная Дама хотела, чтобы зима была всегда. Но один часовщик сделал часы. Пока часы идут, весна приходит.",
+  "voice": "baya:low"
+ },
+ {
+  "key": "21441f76",
+  "text": "Тот часовщик — дедушка нашего Льва.",
+  "voice": "baya:low"
+ },
+ {
+  "key": "f55ba9ae",
+  "text": "Весна",
+  "voice": "baya:low"
+ },
+ {
+  "key": "703d1e36",
+  "text": "Ну что, наелся?",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "db0084cc",
+  "text": "Да, спасибо! Счёт, пожалуйста.",
+  "voice": "aidar"
+ },
+ {
+  "key": "c349024b",
+  "text": "Сейчас!",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "a5ff0670",
+  "text": "Деньги, пожалуйста!",
+  "voice": "aidar"
+ },
+ {
+  "key": "92c6f407",
+  "text": "Деньги? Ты хочешь мои деньги? Ха! Ты хочешь счёт!",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "5e243d2c",
+  "text": "Ужин, напиток, сметана… С тебя девять монет.",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "e24175cb",
+  "text": "С тебя девять монет.",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "015fb37a",
+  "text": "В воскресенье Масленица. Праздник весны… Но какая Масленица без весны?",
+  "voice": "baya:low"
+ },
+ {
+  "key": "740dfe79",
+  "text": "А сметана есть?",
+  "voice": "aidar"
+ },
+ {
+  "key": "89275e52",
+  "text": "Счёт, пожалуйста!",
+  "voice": "aidar"
+ },
+ {
+  "key": "49d207c2",
+  "text": "Тео! Масленица в воскресенье, первого марта! Но если часы не пойдут, весна не придёт.",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "9c133796",
+  "text": "А когда у тебя день рождения?",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "3fe5b956",
+  "text": "Пятнадцатого мая.",
+  "voice": "aidar"
+ },
+ {
+  "key": "e85061f4",
+  "text": "В мае! Весной!",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "05453cf1",
+  "text": "Пятнадцать май.",
+  "voice": "aidar"
+ },
+ {
+  "key": "a2ce0c36",
+  "text": "Пятнадцать май? А, пятнадцатого мая!",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "7925e9b7",
+  "text": "А какое время года ты любишь?",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "60d83317",
+  "text": "Я люблю весну.",
+  "voice": "aidar"
+ },
+ {
+  "key": "4d9a0a5a",
+  "text": "Я тоже! Скорее бы!",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "79581dbd",
+  "text": "Я люблю лето.",
+  "voice": "aidar"
+ },
+ {
+  "key": "4f0a54a8",
+  "text": "Лето! Как в Бразилии, да?",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "791bf51e",
+  "text": "Я люблю зиму!",
+  "voice": "aidar"
+ },
+ {
+  "key": "86f62fd8",
+  "text": "Зиму?! Не говори так громко… Снежная Дама слышит!",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "5fa0e1b8",
+  "text": "Я люблю весна.",
+  "voice": "aidar"
+ },
+ {
+  "key": "fddd37e2",
+  "text": "Весна? Я люблю весну!",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "713623e3",
+  "text": "Для праздника тебе нужна тёплая одежда. Смотри!",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "58ccb359",
+  "text": "платок",
+  "voice": "xenia"
+ },
+ {
+  "key": "37595748",
+  "text": "варежки",
+  "voice": "xenia"
+ },
+ {
+  "key": "0af5dda0",
+  "text": "валенки",
+  "voice": "xenia"
+ },
+ {
+  "key": "2cd12ace",
+  "text": "Тебе нужны валенки! Вот эти. Примерь!",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "523c86b7",
+  "text": "Можно примерить эти валенки?",
+  "voice": "aidar"
+ },
+ {
+  "key": "876af220",
+  "text": "Конечно! Садись.",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "6f57a3a9",
+  "text": "Можно примерить этот валенки?",
+  "voice": "aidar"
+ },
+ {
+  "key": "d4de1907",
+  "text": "Этот валенки? Эти валенки!",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "e1c7fd6a",
+  "text": "Ну как?",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "6b034ecb",
+  "text": "Они слишком большие.",
+  "voice": "aidar"
+ },
+ {
+  "key": "99babd28",
+  "text": "Слишком большие? Вот эти, поменьше.",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "d566c13c",
+  "text": "Они слишком маленькие.",
+  "voice": "aidar"
+ },
+ {
+  "key": "2cfcab1f",
+  "text": "Слишком маленькие? Вот эти, побольше.",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "485f3805",
+  "text": "Они много большие.",
+  "voice": "aidar"
+ },
+ {
+  "key": "87ac3579",
+  "text": "Много большие? Ты хочешь сказать «слишком большие»?",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "d9f3dc8f",
+  "text": "А эти?",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "88ff3b7a",
+  "text": "Эти отличные! Сколько они стоят?",
+  "voice": "aidar"
+ },
+ {
+  "key": "8455205b",
+  "text": "Пятнадцать монет. Но для тебя — двенадцать!",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "f9cd6b5e",
+  "text": "Этот отличный! Сколько стоит?",
+  "voice": "aidar"
+ },
+ {
+  "key": "e85ec8b9",
+  "text": "Этот? Их два! Эти!",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "fb2cd405",
+  "text": "И ещё подарок. Подай мне вон те красные варежки!",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "8a340fe0",
+  "text": "Красные варежки, пожалуйста!",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "ff25e453",
+  "text": "синие варежки",
+  "voice": "xenia"
+ },
+ {
+  "key": "dfa8e6a6",
+  "text": "Это синие!",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "81f79221",
+  "text": "красная шапка",
+  "voice": "xenia"
+ },
+ {
+  "key": "94de0979",
+  "text": "Это шапка, не варежки!",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "e6036cb8",
+  "text": "красные варежки",
+  "voice": "xenia"
+ },
+ {
+  "key": "000fa7ed",
+  "text": "красный шарф",
+  "voice": "xenia"
+ },
+ {
+  "key": "11b3660f",
+  "text": "Это шарф!",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "d3f8212c",
+  "text": "Это тебе. Для твоих рук. Чтобы не замёрз на башне!",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "6fea0e60",
+  "text": "Тео! Катя! Соня сказала: сегодня ночью — на башню! Она нашла дверь, но дверь закрыта.",
+  "voice": "eugene:x-high"
+ },
+ {
+  "key": "b1869dd4",
+  "text": "Сегодня ночью",
+  "voice": "baya:low"
+ },
+ {
+  "key": "99e69b5a",
+  "text": "Масленица первого марта.",
+  "voice": "aidar"
+ },
+ {
+  "key": "5de13b6e",
+  "text": "Мой день рождения пятнадцатого мая.",
+  "voice": "aidar"
+ },
+ {
+  "key": "58d26f1f",
+  "text": "Сколько они стоят?",
+  "voice": "aidar"
+ },
+ {
+  "key": "1fb81a96",
+  "text": "Опять вы! Ночью, в метель! Какая сегодня погода, а?",
+  "voice": "aidar:low"
+ },
+ {
+  "key": "b331a4ad",
+  "text": "Холодно, и идёт снег.",
+  "voice": "aidar"
+ },
+ {
+  "key": "44132dca",
+  "text": "Вот именно! Идите домой!",
+  "voice": "aidar:low"
+ },
+ {
+  "key": "2fb8cac5",
+  "text": "Это холодно.",
+  "voice": "aidar"
+ },
+ {
+  "key": "a1fcdd8a",
+  "text": "Это? Что «это»? Просто: холодно!",
+  "voice": "aidar:low"
+ },
+ {
+  "key": "04088bed",
+  "text": "Дмитрий, пожалуйста! Лев там, наверху. Я знаю.",
+  "voice": "kseniya:high"
+ },
+ {
+  "key": "32610a22",
+  "text": "Дверь закрыта, ключа нет. Вы умеете открывать замки, молодой человек?",
+  "voice": "aidar:low"
+ },
+ {
+  "key": "a7f4b7d4",
+  "text": "Нет, не умею. Но я могу попробовать.",
+  "voice": "aidar"
+ },
+ {
+  "key": "5b5af175",
+  "text": "Хм. Честный ответ.",
+  "voice": "aidar:low"
+ },
+ {
+  "key": "09049eb7",
+  "text": "Я умею открываю.",
+  "voice": "aidar"
+ },
+ {
+  "key": "8516e685",
+  "text": "Умею открываю? Умею открывать!",
+  "voice": "aidar:low"
+ },
+ {
+  "key": "ec06166d",
+  "text": "Что?! Ваш браслет — это ключ?!",
+  "voice": "aidar:low"
+ },
+ {
+  "key": "d13f3337",
+  "text": "Ключ от часов! Как в чертеже! Дмитрий, вы знаете Тео?",
+  "voice": "kseniya:high"
+ },
+ {
+  "key": "c6dd1900",
+  "text": "Да, знаю. Тео, а вы знаете Соню?",
+  "voice": "aidar:low"
+ },
+ {
+  "key": "125c3b80",
+  "text": "Да, я её знаю.",
+  "voice": "aidar"
+ },
+ {
+  "key": "8ddbaedb",
+  "text": "Хорошо. Тогда идём вместе.",
+  "voice": "aidar:low"
+ },
+ {
+  "key": "4ece55a7",
+  "text": "Да, я знаю она.",
+  "voice": "aidar"
+ },
+ {
+  "key": "4438eb0c",
+  "text": "Знаю она? Знаю её!",
+  "voice": "aidar:low"
+ },
+ {
+  "key": "ebb667e3",
+  "text": "Тео, а тебе нравится Белоречье? Даже зимой?",
+  "voice": "kseniya:high"
+ },
+ {
+  "key": "7ae0a438",
+  "text": "Да, мне очень нравится Белоречье!",
+  "voice": "aidar"
+ },
+ {
+  "key": "e750d20c",
+  "text": "Мне тоже. Поэтому мы его спасём.",
+  "voice": "kseniya:high"
+ },
+ {
+  "key": "b56cec07",
+  "text": "Да, я нравлюсь Белоречье.",
+  "voice": "aidar"
+ },
+ {
+  "key": "d8040638",
+  "text": "Ты нравишься Белоречью? Ха-ха! Тебе нравится Белоречье!",
+  "voice": "kseniya:high"
+ },
+ {
+  "key": "e050f2f8",
+  "text": "Слушайте! Кто-то идёт! Что он делает?",
+  "voice": "kseniya:high"
+ },
+ {
+  "key": "38cfa6d5",
+  "text": "Кто-то бежит по лестнице!",
+  "voice": "aidar"
+ },
+ {
+  "key": "7cedd155",
+  "text": "Быстрее! Фонарь!",
+  "voice": "kseniya:high"
+ },
+ {
+  "key": "e2b6b815",
+  "text": "Кто-то бежать по лестнице!",
+  "voice": "aidar"
+ },
+ {
+  "key": "ab06abb9",
+  "text": "Бежать? Бежит! Быстрее!",
+  "voice": "kseniya:high"
+ },
+ {
+  "key": "ef0a7ae2",
+  "text": "Это… Снежная Дама?! Я думал, это сказка!",
+  "voice": "aidar:low"
+ },
+ {
+  "key": "51a6ba39",
+  "text": "Шестерёнка! Это сердце часов! Она её уронила!",
+  "voice": "kseniya:high"
+ },
+ {
+  "key": "aee0ee1b",
+  "text": "Помогите!",
+  "voice": "baya:low"
+ },
+ {
+  "key": "b08a1f5c",
+  "text": "Это Лев! Наверх, быстро!",
+  "voice": "kseniya:high"
+ },
+ {
+  "key": "1d791870",
+  "text": "Я не умею, но могу попробовать.",
+  "voice": "aidar"
+ },
+ {
+  "key": "c236abe0",
+  "text": "Я его знаю.",
+  "voice": "aidar"
+ },
+ {
+  "key": "5596b80d",
+  "text": "Мне очень нравится Белоречье.",
+  "voice": "aidar"
+ },
+ {
+  "key": "99c66cee",
+  "text": "Дедушка Лев! Он спит… Он такой холодный! Тео, шестерёнка! Поставь её на большое колесо!",
+  "voice": "kseniya:high"
+ },
+ {
+  "key": "af214700",
+  "text": "На колесо! Быстрее!",
+  "voice": "kseniya:high"
+ },
+ {
+  "key": "9127863f",
+  "text": "Не в окно!",
+  "voice": "kseniya:high"
+ },
+ {
+  "key": "2caea501",
+  "text": "лестница",
+  "voice": "xenia"
+ },
+ {
+  "key": "7a104a16",
+  "text": "Нет, не на лестницу!",
+  "voice": "kseniya:high"
+ },
+ {
+  "key": "1a5de042",
+  "text": "колесо",
+  "voice": "xenia"
+ },
+ {
+  "key": "99fc88e5",
+  "text": "Нет, это фонарь.",
+  "voice": "kseniya:high"
+ },
+ {
+  "key": "aa132038",
+  "text": "Тик-так… Часы идут… Кто ты, мальчик?",
+  "voice": "eugene:x-low"
+ },
+ {
+  "key": "d7f6db1e",
+  "text": "Я Тео, внук Нины.",
+  "voice": "aidar"
+ },
+ {
+  "key": "18ebac59",
+  "text": "Внук Нины?! Ты приехал… Ты получил моё письмо!",
+  "voice": "eugene:x-low"
+ },
+ {
+  "key": "a10ee2f2",
+  "text": "Я есть Тео, внук Нины.",
+  "voice": "aidar"
+ },
+ {
+  "key": "5c724e9d",
+  "text": "Есть Тео? Ха… Ты Тео!",
+  "voice": "eugene:x-low"
+ },
+ {
+  "key": "f7ce8e00",
+  "text": "Я был здесь неделю! Мне было так холодно… А где вы все были?",
+  "voice": "eugene:x-low"
+ },
+ {
+  "key": "c7b433bb",
+  "text": "Где ты был, Тео?",
+  "voice": "eugene:x-low"
+ },
+ {
+  "key": "62be83ab",
+  "text": "Я был на реке и на ярмарке.",
+  "voice": "aidar"
+ },
+ {
+  "key": "0f5618de",
+  "text": "На реке! У Фёдора? Мой племянник!",
+  "voice": "eugene:x-low"
+ },
+ {
+  "key": "ba17bf8b",
+  "text": "Я есть на реке.",
+  "voice": "aidar"
+ },
+ {
+  "key": "d95a8a2f",
+  "text": "Есть? Сейчас? Нет-нет: ты был на реке!",
+  "voice": "eugene:x-low"
+ },
+ {
+  "key": "2588898b",
+  "text": "А я была в мастерской. Каждый день! Я ждала вас.",
+  "voice": "kseniya:high"
+ },
+ {
+  "key": "482e5b2e",
+  "text": "Снежная Дама была здесь. Она была очень сильная. Она взяла сердце часов… и зима осталась.",
+  "voice": "eugene:x-low"
+ },
+ {
+  "key": "29faa623",
+  "text": "А тебе было страшно, Тео?",
+  "voice": "eugene:x-low"
+ },
+ {
+  "key": "a51d695a",
+  "text": "Да, мне было страшно.",
+  "voice": "aidar"
+ },
+ {
+  "key": "6f3f1139",
+  "text": "Мне тоже, мальчик. Мне тоже.",
+  "voice": "eugene:x-low"
+ },
+ {
+  "key": "13e31639",
+  "text": "Нет, мне не было страшно!",
+  "voice": "aidar"
+ },
+ {
+  "key": "c6b1a4eb",
+  "text": "Смелый, как Нина!",
+  "voice": "eugene:x-low"
+ },
+ {
+  "key": "ff664ea1",
+  "text": "Да, я был страшный.",
+  "voice": "aidar"
+ },
+ {
+  "key": "d75df7c2",
+  "text": "Страшный?! Ты не страшный, ты очень милый! Тебе было страшно.",
+  "voice": "eugene:x-low"
+ },
+ {
+  "key": "b01b7c16",
+  "text": "Смотрите! Солнце! И… капает! Снег тает!",
+  "voice": "kseniya:high"
+ },
+ {
+  "key": "6ed3b446",
+  "text": "Вы были очень смелые. Как вы это сделали?",
+  "voice": "eugene:x-low"
+ },
+ {
+  "key": "ec072da3",
+  "text": "Мы были вместе!",
+  "voice": "aidar"
+ },
+ {
+  "key": "3b4b597c",
+  "text": "Вместе… Да. Так всегда побеждают.",
+  "voice": "eugene:x-low"
+ },
+ {
+  "key": "2e9330c9",
+  "text": "Мы был вместе!",
+  "voice": "aidar"
+ },
+ {
+  "key": "ef10391d",
+  "text": "Мы был? Мы были!",
+  "voice": "eugene:x-low"
+ },
+ {
+  "key": "26ccbb7a",
+  "text": "Тео! Весна пришла! Блины для нашего героя!",
+  "voice": "baya:low"
+ },
+ {
+  "key": "8b749ede",
+  "text": "Тео, ты вернёшься в Бразилию?",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "6e69a66c",
+  "text": "Да, но я вернусь! Спасибо за всё!",
+  "voice": "aidar"
+ },
+ {
+  "key": "2cc83018",
+  "text": "Мы будем ждать!",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "7502afc6",
+  "text": "До встречи, Тео!",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "5fe1a85b",
+  "text": "Я идти домой.",
+  "voice": "aidar"
+ },
+ {
+  "key": "b4eeb5de",
+  "text": "Я идти? Ха-ха. Я иду домой… Но не сегодня!",
+  "voice": "xenia:high"
+ },
+ {
+  "key": "2650aa7b",
+  "text": "Лев говорит, Снежная Дама ушла на север. Она ещё вернётся… Но это уже другая история.",
+  "voice": "baya:low"
+ },
+ {
+  "key": "aa96ed7d",
+  "text": "Весна пришла!",
+  "voice": "baya:low"
+ },
+ {
+  "key": "ffac1650",
+  "text": "Я был на реке.",
+  "voice": "aidar"
+ },
+ {
+  "key": "6a580fc6",
+  "text": "Где ты был?",
+  "voice": "aidar"
+ },
+ {
+  "key": "20cc05da",
+  "text": "Она была очень сильная.",
+  "voice": "aidar"
+ },
+ {
+  "key": "f9f22c96",
+  "text": "Тебе было страшно?",
+  "voice": "aidar"
+ },
+ {
+  "key": "f907421a",
+  "text": "Мы были вместе.",
+  "voice": "aidar"
+ },
+ {
+  "key": "ab59cc59",
+  "text": "Отлично, спасибо!",
+  "voice": "xenia"
+ },
+ {
+  "key": "59d8057e",
+  "text": "Ой, одна монета? Спасибо за чаевые!",
+  "voice": "xenia"
+ },
+ {
+  "key": "9a963a75",
+  "text": "Ой, две монеты? Спасибо за чаевые!",
+  "voice": "xenia"
+ },
+ {
+  "key": "292a6fe8",
+  "text": "Ой, три монеты? Спасибо за чаевые!",
+  "voice": "xenia"
+ },
+ {
+  "key": "595a6d8e",
+  "text": "Ой, четыре монеты? Спасибо за чаевые!",
+  "voice": "xenia"
+ },
+ {
+  "key": "4e2c5b77",
+  "text": "Ой, пять монет? Спасибо за чаевые!",
+  "voice": "xenia"
+ },
+ {
+  "key": "04558df3",
+  "text": "Ой, шесть монет? Спасибо за чаевые!",
+  "voice": "xenia"
+ },
+ {
+  "key": "8912f165",
+  "text": "Ой, семь монет? Спасибо за чаевые!",
+  "voice": "xenia"
+ },
+ {
+  "key": "1ef96e15",
+  "text": "Ой, восемь монет? Спасибо за чаевые!",
+  "voice": "xenia"
+ },
+ {
+  "key": "0020eabd",
+  "text": "Ой, девять монет? Спасибо за чаевые!",
+  "voice": "xenia"
+ },
+ {
+  "key": "c4ac3862",
+  "text": "Ой, десять монет? Спасибо за чаевые!",
+  "voice": "xenia"
+ },
+ {
+  "key": "38848687",
+  "text": "Ой, одиннадцать монет? Спасибо за чаевые!",
+  "voice": "xenia"
+ },
+ {
+  "key": "ca7936a3",
+  "text": "Ой, двенадцать монет? Спасибо за чаевые!",
+  "voice": "xenia"
+ },
+ {
+  "key": "8084adf2",
+  "text": "Ой, тринадцать монет? Спасибо за чаевые!",
+  "voice": "xenia"
+ },
+ {
+  "key": "477c962b",
+  "text": "Ой, четырнадцать монет? Спасибо за чаевые!",
+  "voice": "xenia"
+ },
+ {
+  "key": "a5d0d2f0",
+  "text": "Ой, пятнадцать монет? Спасибо за чаевые!",
+  "voice": "xenia"
+ },
+ {
+  "key": "7f7b25b4",
+  "text": "Ой, шестнадцать монет? Спасибо за чаевые!",
+  "voice": "xenia"
+ },
+ {
+  "key": "658d9a3e",
+  "text": "Ой, семнадцать монет? Спасибо за чаевые!",
+  "voice": "xenia"
+ },
+ {
+  "key": "3440116e",
+  "text": "Ой, восемнадцать монет? Спасибо за чаевые!",
+  "voice": "xenia"
+ },
+ {
+  "key": "2ebca086",
+  "text": "Ой, девятнадцать монет? Спасибо за чаевые!",
+  "voice": "xenia"
+ },
+ {
+  "key": "e8b50c09",
+  "text": "Ой, двадцать монет? Спасибо за чаевые!",
+  "voice": "xenia"
+ },
+ {
+  "key": "3e351b4c",
+  "text": "Ой, двадцать одна монета? Спасибо за чаевые!",
+  "voice": "xenia"
+ },
+ {
+  "key": "23e1ca23",
+  "text": "Ой, двадцать две монеты? Спасибо за чаевые!",
+  "voice": "xenia"
+ },
+ {
+  "key": "ebb4105e",
+  "text": "Ой, двадцать три монеты? Спасибо за чаевые!",
+  "voice": "xenia"
+ },
+ {
+  "key": "7d9b6778",
+  "text": "Ой, двадцать четыре монеты? Спасибо за чаевые!",
+  "voice": "xenia"
+ },
+ {
+  "key": "19c53349",
+  "text": "Ой, двадцать пять монет? Спасибо за чаевые!",
+  "voice": "xenia"
+ },
+ {
+  "key": "6a3f9401",
+  "text": "Ой, двадцать шесть монет? Спасибо за чаевые!",
+  "voice": "xenia"
+ },
+ {
+  "key": "d99f24e3",
+  "text": "Ой, двадцать семь монет? Спасибо за чаевые!",
+  "voice": "xenia"
+ },
+ {
+  "key": "d8457853",
+  "text": "Ой, двадцать восемь монет? Спасибо за чаевые!",
+  "voice": "xenia"
+ },
+ {
+  "key": "6195e93f",
+  "text": "Ой, двадцать девять монет? Спасибо за чаевые!",
+  "voice": "xenia"
+ },
+ {
+  "key": "a886c6d1",
+  "text": "Ой, тридцать монет? Спасибо за чаевые!",
+  "voice": "xenia"
+ },
+ {
+  "key": "dc6ea147",
+  "text": "Хм, тут только ноль. Нужно пять.",
+  "voice": "xenia"
+ },
+ {
+  "key": "4dfc470a",
+  "text": "Хм, тут только одна. Нужно пять.",
+  "voice": "xenia"
+ },
+ {
+  "key": "0b5a0960",
+  "text": "Хм, тут только две. Нужно пять.",
+  "voice": "xenia"
+ },
+ {
+  "key": "00af51ed",
+  "text": "Хм, тут только три. Нужно пять.",
+  "voice": "xenia"
+ },
+ {
+  "key": "2aacdb8f",
+  "text": "Хм, тут только четыре. Нужно пять.",
+  "voice": "xenia"
+ },
+ {
+  "key": "f67c3267",
+  "text": "Хм, тут только ноль. Нужно четыре.",
+  "voice": "xenia"
+ },
+ {
+  "key": "0cb3381a",
+  "text": "Хм, тут только одна. Нужно четыре.",
+  "voice": "xenia"
+ },
+ {
+  "key": "7f646a80",
+  "text": "Хм, тут только две. Нужно четыре.",
+  "voice": "xenia"
+ },
+ {
+  "key": "8588411d",
+  "text": "Хм, тут только три. Нужно четыре.",
+  "voice": "xenia"
+ },
+ {
+  "key": "6a75a8de",
+  "text": "Хм, тут только ноль. Нужно две.",
+  "voice": "xenia"
+ },
+ {
+  "key": "fcf09639",
+  "text": "Хм, тут только одна. Нужно две.",
+  "voice": "xenia"
+ },
+ {
+  "key": "cb047183",
+  "text": "Хм, тут только ноль. Нужно двенадцать.",
+  "voice": "xenia"
+ },
+ {
+  "key": "e452c1e6",
+  "text": "Хм, тут только одна. Нужно двенадцать.",
+  "voice": "xenia"
+ },
+ {
+  "key": "13a3c9a4",
+  "text": "Хм, тут только две. Нужно двенадцать.",
+  "voice": "xenia"
+ },
+ {
+  "key": "17ada821",
+  "text": "Хм, тут только три. Нужно двенадцать.",
+  "voice": "xenia"
+ },
+ {
+  "key": "6282223b",
+  "text": "Хм, тут только четыре. Нужно двенадцать.",
+  "voice": "xenia"
+ },
+ {
+  "key": "fd6aa3fb",
+  "text": "Хм, тут только пять. Нужно двенадцать.",
+  "voice": "xenia"
+ },
+ {
+  "key": "1f230d83",
+  "text": "Хм, тут только шесть. Нужно двенадцать.",
+  "voice": "xenia"
+ },
+ {
+  "key": "0596cdad",
+  "text": "Хм, тут только семь. Нужно двенадцать.",
+  "voice": "xenia"
+ },
+ {
+  "key": "cf1bbcd5",
+  "text": "Хм, тут только восемь. Нужно двенадцать.",
+  "voice": "xenia"
+ },
+ {
+  "key": "73143521",
+  "text": "Хм, тут только девять. Нужно двенадцать.",
+  "voice": "xenia"
+ },
+ {
+  "key": "9f03d3ec",
+  "text": "Хм, тут только десять. Нужно двенадцать.",
+  "voice": "xenia"
+ },
+ {
+  "key": "dc18d477",
+  "text": "Хм, тут только одиннадцать. Нужно двенадцать.",
+  "voice": "xenia"
+ },
+ {
+  "key": "60eacdc8",
+  "text": "Хм, тут только ноль. Нужно десять.",
+  "voice": "xenia"
+ },
+ {
+  "key": "feb3b899",
+  "text": "Хм, тут только одна. Нужно десять.",
+  "voice": "xenia"
+ },
+ {
+  "key": "ba4e16c3",
+  "text": "Хм, тут только две. Нужно десять.",
+  "voice": "xenia"
+ },
+ {
+  "key": "f5effeaa",
+  "text": "Хм, тут только три. Нужно десять.",
+  "voice": "xenia"
+ },
+ {
+  "key": "53a4b320",
+  "text": "Хм, тут только четыре. Нужно десять.",
+  "voice": "xenia"
+ },
+ {
+  "key": "19945d60",
+  "text": "Хм, тут только пять. Нужно десять.",
+  "voice": "xenia"
+ },
+ {
+  "key": "50f869c8",
+  "text": "Хм, тут только шесть. Нужно десять.",
+  "voice": "xenia"
+ },
+ {
+  "key": "2655b2f6",
+  "text": "Хм, тут только семь. Нужно десять.",
+  "voice": "xenia"
+ },
+ {
+  "key": "7c46d4de",
+  "text": "Хм, тут только восемь. Нужно десять.",
+  "voice": "xenia"
+ },
+ {
+  "key": "d83633aa",
+  "text": "Хм, тут только девять. Нужно десять.",
+  "voice": "xenia"
+ },
+ {
+  "key": "988f4ac4",
+  "text": "Хм, тут только ноль. Нужно тринадцать.",
+  "voice": "xenia"
+ },
+ {
+  "key": "d83b52a9",
+  "text": "Хм, тут только одна. Нужно тринадцать.",
+  "voice": "xenia"
+ },
+ {
+  "key": "c74f8d97",
+  "text": "Хм, тут только две. Нужно тринадцать.",
+  "voice": "xenia"
+ },
+ {
+  "key": "0b95885a",
+  "text": "Хм, тут только три. Нужно тринадцать.",
+  "voice": "xenia"
+ },
+ {
+  "key": "ff0f0ecc",
+  "text": "Хм, тут только четыре. Нужно тринадцать.",
+  "voice": "xenia"
+ },
+ {
+  "key": "9e2a7a8c",
+  "text": "Хм, тут только пять. Нужно тринадцать.",
+  "voice": "xenia"
+ },
+ {
+  "key": "e270f6c4",
+  "text": "Хм, тут только шесть. Нужно тринадцать.",
+  "voice": "xenia"
+ },
+ {
+  "key": "848306f6",
+  "text": "Хм, тут только семь. Нужно тринадцать.",
+  "voice": "xenia"
+ },
+ {
+  "key": "20c37dee",
+  "text": "Хм, тут только восемь. Нужно тринадцать.",
+  "voice": "xenia"
+ },
+ {
+  "key": "90602d5a",
+  "text": "Хм, тут только девять. Нужно тринадцать.",
+  "voice": "xenia"
+ },
+ {
+  "key": "7861f34f",
+  "text": "Хм, тут только десять. Нужно тринадцать.",
+  "voice": "xenia"
+ },
+ {
+  "key": "9bf39758",
+  "text": "Хм, тут только одиннадцать. Нужно тринадцать.",
+  "voice": "xenia"
+ },
+ {
+  "key": "c8ef7768",
+  "text": "Хм, тут только двенадцать. Нужно тринадцать.",
+  "voice": "xenia"
+ },
+ {
+  "key": "02142bbd",
+  "text": "Хм, тут только ноль. Нужно девять.",
+  "voice": "xenia"
+ },
+ {
+  "key": "f4425fa4",
+  "text": "Хм, тут только одна. Нужно девять.",
+  "voice": "xenia"
+ },
+ {
+  "key": "1e5ff40a",
+  "text": "Хм, тут только две. Нужно девять.",
+  "voice": "xenia"
+ },
+ {
+  "key": "d7c25da3",
+  "text": "Хм, тут только три. Нужно девять.",
+  "voice": "xenia"
+ },
+ {
+  "key": "f8b10995",
+  "text": "Хм, тут только четыре. Нужно девять.",
+  "voice": "xenia"
+ },
+ {
+  "key": "08427d55",
+  "text": "Хм, тут только пять. Нужно девять.",
+  "voice": "xenia"
+ },
+ {
+  "key": "b612d7bd",
+  "text": "Хм, тут только шесть. Нужно девять.",
+  "voice": "xenia"
+ },
+ {
+  "key": "733d012f",
+  "text": "Хм, тут только семь. Нужно девять.",
+  "voice": "xenia"
+ },
+ {
+  "key": "66c667b7",
+  "text": "Хм, тут только восемь. Нужно девять.",
+  "voice": "xenia"
+ },
+ {
+  "key": "35065caf",
+  "text": "а",
+  "voice": "xenia"
+ },
+ {
+  "key": "300654d0",
+  "text": "е",
+  "voice": "xenia"
+ },
+ {
+  "key": "1ee57054",
+  "text": "еда",
+  "voice": "xenia"
+ },
+ {
+  "key": "d405c3fc",
+  "text": "ё",
+  "voice": "xenia",
+  "tts": "йо"
+ },
+ {
+  "key": "59cb5ee7",
+  "text": "ёлка",
+  "voice": "xenia"
+ },
+ {
+  "key": "3d066947",
+  "text": "и",
+  "voice": "xenia"
+ },
+ {
+  "key": "3b066621",
+  "text": "о",
+  "voice": "xenia"
+ },
+ {
+  "key": "c605adf2",
+  "text": "у",
+  "voice": "xenia"
+ },
+ {
+  "key": "ce05ba8a",
+  "text": "ы",
+  "voice": "xenia"
+ },
+ {
+  "key": "c805b118",
+  "text": "э",
+  "voice": "xenia"
+ },
+ {
+  "key": "6b71cab0",
+  "text": "это",
+  "voice": "xenia"
+ },
+ {
+  "key": "cb05b5d1",
+  "text": "ю",
+  "voice": "xenia"
+ },
+ {
+  "key": "ca05b43e",
+  "text": "я",
+  "voice": "xenia"
+ },
+ {
+  "key": "37080c83",
+  "text": "бэ",
+  "voice": "xenia"
+ },
+ {
+  "key": "37023048",
+  "text": "вэ",
+  "voice": "xenia"
+ },
+ {
+  "key": "1affc59d",
+  "text": "гэ",
+  "voice": "xenia"
+ },
+ {
+  "key": "5af35e6a",
+  "text": "дэ",
+  "voice": "xenia"
+ },
+ {
+  "key": "17059b8c",
+  "text": "жэ",
+  "voice": "xenia"
+ },
+ {
+  "key": "ebd6a11c",
+  "text": "журнал",
+  "voice": "xenia"
+ },
+ {
+  "key": "7af5cf61",
+  "text": "зэ",
+  "voice": "xenia"
+ },
+ {
+  "key": "d8cd8854",
+  "text": "и краткое",
+  "voice": "xenia"
+ },
+ {
+  "key": "28470ee2",
+  "text": "йогурт",
+  "voice": "xenia"
+ },
+ {
+  "key": "94164a67",
+  "text": "ка",
+  "voice": "xenia"
+ },
+ {
+  "key": "9aea0bcf",
+  "text": "эль",
+  "voice": "xenia"
+ },
+ {
+  "key": "04fc27ac",
+  "text": "эм",
+  "voice": "xenia"
+ },
+ {
+  "key": "05fc293f",
+  "text": "эн",
+  "voice": "xenia"
+ },
+ {
+  "key": "1b0a52f9",
+  "text": "пэ",
+  "voice": "xenia"
+ },
+ {
+  "key": "38fc7988",
+  "text": "эр",
+  "voice": "xenia"
+ },
+ {
+  "key": "39fc7b1b",
+  "text": "эс",
+  "voice": "xenia"
+ },
+ {
+  "key": "15ed6bd8",
+  "text": "тэ",
+  "voice": "xenia"
+ },
+ {
+  "key": "0d301ea3",
+  "text": "торт",
+  "voice": "xenia"
+ },
+ {
+  "key": "3cfc7fd4",
+  "text": "эф",
+  "voice": "xenia"
+ },
+ {
+  "key": "62f348a3",
+  "text": "фото",
+  "voice": "xenia"
+ },
+ {
+  "key": "f8dbf510",
+  "text": "ха",
+  "voice": "xenia"
+ },
+ {
+  "key": "75f00d9c",
+  "text": "цэ",
+  "voice": "xenia"
+ },
+ {
+  "key": "3c15c9e9",
+  "text": "цирк",
+  "voice": "xenia"
+ },
+ {
+  "key": "59e10af1",
+  "text": "чэ",
+  "voice": "xenia"
+ },
+ {
+  "key": "c86b3d81",
+  "text": "чай",
+  "voice": "xenia"
+ },
+ {
+  "key": "87082d45",
+  "text": "ша",
+  "voice": "xenia"
+ },
+ {
+  "key": "80f94d3c",
+  "text": "ща",
+  "voice": "xenia"
+ },
+ {
+  "key": "88f959d4",
+  "text": "щи",
+  "voice": "xenia"
+ },
+ {
+  "key": "7ba5037e",
+  "text": "твёрдый знак",
+  "voice": "xenia"
+ },
+ {
+  "key": "207be139",
+  "text": "объект",
+  "voice": "xenia"
+ },
+ {
+  "key": "e310d314",
+  "text": "мягкий знак",
+  "voice": "xenia"
+ },
+ {
+  "key": "5420ef21",
+  "text": "соль",
+  "voice": "xenia"
+ },
+ {
+  "key": "89f3a867",
+  "text": "до",
+  "voice": "xenia"
+ },
+ {
+  "key": "54cbe250",
+  "text": "свидания",
+  "voice": "xenia"
+ },
+ {
+  "key": "ebebbc27",
+  "text": "доброе",
+  "voice": "xenia"
+ },
+ {
+  "key": "f57f6d66",
+  "text": "спокойной",
+  "voice": "xenia"
+ },
+ {
+  "key": "7183f705",
+  "text": "ночи",
+  "voice": "xenia"
+ },
+ {
+  "key": "73b93a07",
+  "text": "Как",
+  "voice": "xenia"
+ },
+ {
+  "key": "45aa1cb1",
+  "text": "дела",
+  "voice": "xenia"
+ },
+ {
+  "key": "c3263182",
+  "text": "Хорошо",
+  "voice": "xenia"
+ },
+ {
+  "key": "6b1bcef4",
+  "text": "тебя",
+  "voice": "xenia"
+ },
+ {
+  "key": "5beb847f",
+  "text": "зовут",
+  "voice": "xenia"
+ },
+ {
+  "key": "0cdbb64e",
+  "text": "Меня",
+  "voice": "xenia"
+ },
+ {
+  "key": "756782f3",
+  "text": "Анна",
+  "voice": "xenia"
+ },
+ {
+  "key": "eaefb02c",
+  "text": "Очень",
+  "voice": "xenia"
+ },
+ {
+  "key": "1a21a664",
+  "text": "приятно",
+  "voice": "xenia"
+ },
+ {
+  "key": "41f56b90",
+  "text": "Это",
+  "voice": "xenia"
+ },
+ {
+  "key": "ad2aa1f0",
+  "text": "моя",
+  "voice": "xenia"
+ },
+ {
+  "key": "d961f7ee",
+  "text": "меня",
+  "voice": "xenia"
+ },
+ {
+  "key": "b4390ecc",
+  "text": "Она",
+  "voice": "xenia"
+ },
+ {
+  "key": "13a454f6",
+  "text": "подруга",
+  "voice": "xenia"
+ },
+ {
+  "key": "34c52370",
+  "text": "Мы",
+  "voice": "xenia"
+ },
+ {
+  "key": "5947e9ac",
+  "text": "хочу",
+  "voice": "xenia"
+ },
+ {
+  "key": "c6c7783c",
+  "text": "воды",
+  "voice": "xenia"
+ },
+ {
+  "key": "26440df8",
+  "text": "пью",
+  "voice": "xenia"
+ },
+ {
+  "key": "c405aacc",
+  "text": "с",
+  "voice": "xenia"
+ },
+ {
+  "key": "c45cbef6",
+  "text": "молоком",
+  "voice": "xenia"
+ },
+ {
+  "key": "1cfe7117",
+  "text": "Хлеб",
+  "voice": "xenia"
+ },
+ {
+  "key": "8ab47efc",
+  "text": "вкусный",
+  "voice": "xenia"
+ },
+ {
+  "key": "5cdb5caa",
+  "text": "Ты",
+  "voice": "xenia"
+ },
+ {
+  "key": "3a8e6e39",
+  "text": "любишь",
+  "voice": "xenia"
+ },
+ {
+  "key": "6cf7ccd3",
+  "text": "кота",
+  "voice": "xenia"
+ },
+ {
+  "key": "82ae44eb",
+  "text": "Ей",
+  "voice": "xenia"
+ },
+ {
+  "key": "1b6619ed",
+  "text": "лет",
+  "voice": "xenia"
+ },
+ {
+  "key": "4935edc5",
+  "text": "Три",
+  "voice": "xenia"
+ },
+ {
+  "key": "0da5c374",
+  "text": "Машина",
+  "voice": "xenia"
+ },
+ {
+  "key": "2e561572",
+  "text": "красная",
+  "voice": "xenia"
+ },
+ {
+  "key": "e6e593f2",
+  "text": "Мой",
+  "voice": "xenia"
+ },
+ {
+  "key": "24415861",
+  "text": "синяя",
+  "voice": "xenia"
+ },
+ {
+  "key": "13fb3d75",
+  "text": "Где",
+  "voice": "xenia"
+ },
+ {
+  "key": "832a5fd2",
+  "text": "мой",
+  "voice": "xenia"
+ },
+ {
+  "key": "a6f8e406",
+  "text": "говорю",
+  "voice": "xenia"
+ },
+ {
+  "key": "40e0511a",
+  "text": "по-русски",
+  "voice": "xenia"
+ },
+ {
+  "key": "8b21ee80",
+  "text": "едим",
+  "voice": "xenia"
+ },
+ {
+  "key": "86ca21b4",
+  "text": "Он",
+  "voice": "xenia"
+ },
+ {
+  "key": "efcd661f",
+  "text": "читает",
+  "voice": "xenia"
+ },
+ {
+  "key": "cb3e3036",
+  "text": "книгу",
+  "voice": "xenia"
+ },
+ {
+  "key": "22a25956",
+  "text": "работаю",
+  "voice": "xenia"
+ },
+ {
+  "key": "101b5af9",
+  "text": "каждый",
+  "voice": "xenia"
+ },
+ {
+  "key": "ee2a4a03",
+  "text": "Поверните",
+  "voice": "xenia"
+ },
+ {
+  "key": "5af52125",
+  "text": "Мне",
+  "voice": "xenia"
+ },
+ {
+  "key": "dd3173d7",
+  "text": "нужен",
+  "voice": "xenia"
+ },
+ {
+  "key": "8f119167",
+  "text": "не",
+  "voice": "xenia"
+ },
+ {
+  "key": "da1ce475",
+  "text": "понимаю",
+  "voice": "xenia"
+ },
+ {
+  "key": "7cb2ec9a",
+  "text": "Вы",
+  "voice": "xenia"
+ },
+ {
+  "key": "52408287",
+  "text": "можете",
+  "voice": "xenia"
+ },
+ {
+  "key": "772c8b85",
+  "text": "мне",
+  "voice": "xenia"
+ },
+ {
+  "key": "c9a6663f",
+  "text": "Сколько",
+  "voice": "xenia"
+ },
+ {
+  "key": "b35ae96a",
+  "text": "стоит",
+  "voice": "xenia"
+ },
+ {
+  "key": "d99627c4",
+  "text": "учу",
+  "voice": "xenia"
+ },
+ {
+  "key": "007868d3",
+  "text": "русский",
+  "voice": "xenia"
+ },
+ {
+  "key": "09a4c007",
+  "text": "До",
+  "voice": "xenia"
+ },
+ {
+  "key": "1336c079",
+  "text": "вам",
+  "voice": "xenia"
+ },
+ {
+  "key": "3427b1e6",
+  "text": "рублей",
+  "voice": "xenia"
+ },
+ {
+  "key": "acce284b",
+  "text": "классе",
+  "voice": "xenia"
+ },
+ {
+  "key": "d20d70db",
+  "text": "студентов",
+  "voice": "xenia"
+ },
+ {
+  "key": "8c78d9ff",
+  "text": "Моему",
+  "voice": "xenia"
+ },
+ {
+  "key": "2b7f4c9c",
+  "text": "дедушке",
+  "voice": "xenia"
+ },
+ {
+  "key": "39971ce7",
+  "text": "Который",
+  "voice": "xenia"
+ },
+ {
+  "key": "8e844f48",
+  "text": "Сейчас",
+  "voice": "xenia"
+ },
+ {
+  "key": "9d6f64b5",
+  "text": "часов",
+  "voice": "xenia"
+ },
+ {
+  "key": "37065fd5",
+  "text": "в",
+  "voice": "xenia"
+ },
+ {
+  "key": "2ad32711",
+  "text": "пятницы",
+  "voice": "xenia"
+ },
+ {
+  "key": "7b69cf66",
+  "text": "Урок",
+  "voice": "xenia"
+ },
+ {
+  "key": "b8053477",
+  "text": "днём",
+  "voice": "xenia"
+ },
+ {
+  "key": "f56cd5d1",
+  "text": "принимать",
+  "voice": "xenia"
+ },
+ {
+  "key": "4b00e2f8",
+  "text": "душ",
+  "voice": "xenia"
+ },
+ {
+  "key": "bbb829f0",
+  "text": "ложиться",
+  "voice": "xenia"
+ },
+ {
+  "key": "8a118988",
+  "text": "на",
+  "voice": "xenia"
+ },
+ {
+  "key": "696f0945",
+  "text": "работу",
+  "voice": "xenia"
+ },
+ {
+  "key": "77d5274a",
+  "text": "просыпаюсь",
+  "voice": "xenia"
+ },
+ {
+  "key": "234a8159",
+  "text": "ездит",
+  "voice": "xenia"
+ },
+ {
+  "key": "a903e69d",
+  "text": "автобусе",
+  "voice": "xenia"
+ },
+ {
+  "key": "6afdc06a",
+  "text": "обедаем",
+  "voice": "xenia"
+ },
+ {
+  "key": "9a465d52",
+  "text": "ужинает",
+  "voice": "xenia"
+ },
+ {
+  "key": "0a55f9ea",
+  "text": "ложусь",
+  "voice": "xenia"
+ },
+ {
+  "key": "3e8889bf",
+  "text": "комнате",
+  "voice": "xenia"
+ },
+ {
+  "key": "df25e8fd",
+  "text": "Кухня",
+  "voice": "xenia"
+ },
+ {
+  "key": "ae8d1a57",
+  "text": "маленькая",
+  "voice": "xenia"
+ },
+ {
+  "key": "eeb88365",
+  "text": "моей",
+  "voice": "xenia"
+ },
+ {
+  "key": "cf8fa4aa",
+  "text": "спальне",
+  "voice": "xenia"
+ },
+ {
+  "key": "0c3b798c",
+  "text": "окна",
+  "voice": "xenia"
+ },
+ {
+  "key": "0eea5364",
+  "text": "Закройте",
+  "voice": "xenia"
+ },
+ {
+  "key": "6f455304",
+  "text": "нравится",
+  "voice": "xenia"
+ },
+ {
+  "key": "794b31da",
+  "text": "твоя",
+  "voice": "xenia"
+ },
+ {
+  "key": "47f57502",
+  "text": "Эти",
+  "voice": "xenia"
+ },
+ {
+  "key": "b81868f7",
+  "text": "слишком",
+  "voice": "xenia"
+ },
+ {
+  "key": "e558abc4",
+  "text": "большие",
+  "voice": "xenia"
+ },
+ {
+  "key": "d2fef814",
+  "text": "Можно",
+  "voice": "xenia"
+ },
+ {
+  "key": "80431acf",
+  "text": "примерить",
+  "voice": "xenia"
+ },
+ {
+  "key": "216f98e1",
+  "text": "красном",
+  "voice": "xenia"
+ },
+ {
+  "key": "7971e0ba",
+  "text": "эта",
+  "voice": "xenia"
+ },
+ {
+  "key": "3e01f356",
+  "text": "Сегодня",
+  "voice": "xenia"
+ },
+ {
+  "key": "2093299e",
+  "text": "Идёт",
+  "voice": "xenia"
+ },
+ {
+  "key": "aa15732e",
+  "text": "Какая",
+  "voice": "xenia"
+ },
+ {
+  "key": "5d2b2a1e",
+  "text": "люблю",
+  "voice": "xenia"
+ },
+ {
+  "key": "989b8197",
+  "text": "Зимой",
+  "voice": "xenia"
+ },
+ {
+  "key": "7807ede4",
+  "text": "плохо",
+  "voice": "xenia"
+ },
+ {
+  "key": "6eade402",
+  "text": "неё",
+  "voice": "xenia"
+ },
+ {
+  "key": "b5f00e01",
+  "text": "голубые",
+  "voice": "xenia"
+ },
+ {
+  "key": "41bdcac6",
+  "text": "глаза",
+  "voice": "xenia"
+ },
+ {
+  "key": "b1d73835",
+  "text": "Помой",
+  "voice": "xenia"
+ },
+ {
+  "key": "38b8c516",
+  "text": "руки",
+  "voice": "xenia"
+ },
+ {
+  "key": "6bac617c",
+  "text": "Кем",
+  "voice": "xenia"
+ },
+ {
+  "key": "9a88db3a",
+  "text": "работаете",
+  "voice": "xenia"
+ },
+ {
+  "key": "8470202b",
+  "text": "работает",
+  "voice": "xenia"
+ },
+ {
+  "key": "b174e0f9",
+  "text": "больнице",
+  "voice": "xenia"
+ },
+ {
+  "key": "825ab96b",
+  "text": "хороший",
+  "voice": "xenia"
+ },
+ {
+  "key": "716f15dd",
+  "text": "работы",
+  "voice": "xenia"
+ },
+ {
+  "key": "65246bbc",
+  "text": "Здесь",
+  "voice": "xenia"
+ },
+ {
+  "key": "e4c4a163",
+  "text": "Музей",
+  "voice": "xenia"
+ },
+ {
+  "key": "5c6d82ae",
+  "text": "парком",
+  "voice": "xenia"
+ },
+ {
+  "key": "11d4e0d2",
+  "text": "Идите",
+  "voice": "xenia"
+ },
+ {
+  "key": "18d1954b",
+  "text": "Аптека",
+  "voice": "xenia"
+ },
+ {
+  "key": "a5d87aa1",
+  "text": "углу",
+  "voice": "xenia"
+ },
+ {
+  "key": "cbb5cfe8",
+  "text": "картой",
+  "voice": "xenia"
+ },
+ {
+  "key": "456f4d13",
+  "text": "просто",
+  "voice": "xenia"
+ },
+ {
+  "key": "d7c29b52",
+  "text": "смотрю",
+  "voice": "xenia"
+ },
+ {
+  "key": "0e36b89a",
+  "text": "вас",
+  "voice": "xenia"
+ },
+ {
+  "key": "7ecc0b11",
+  "text": "поменьше",
+  "voice": "xenia"
+ },
+ {
+  "key": "2943af87",
+  "text": "Столик",
+  "voice": "xenia"
+ },
+ {
+  "key": "6cac0d38",
+  "text": "двоих",
+  "voice": "xenia"
+ },
+ {
+  "key": "33381fe8",
+  "text": "буду",
+  "voice": "xenia"
+ },
+ {
+  "key": "ed665dad",
+  "text": "курицу",
+  "voice": "xenia"
+ },
+ {
+  "key": "24b3eb46",
+  "text": "Счёт",
+  "voice": "xenia"
+ },
+ {
+  "key": "0e2be9e6",
+  "text": "Суп",
+  "voice": "xenia"
+ },
+ {
+  "key": "193b630c",
+  "text": "очень",
+  "voice": "xenia"
+ },
+ {
+  "key": "3cab921e",
+  "text": "езжу",
+  "voice": "xenia"
+ },
+ {
+  "key": "18db1d05",
+  "text": "хожу",
+  "voice": "xenia"
+ },
+ {
+  "key": "d8a02989",
+  "text": "школу",
+  "voice": "xenia"
+ },
+ {
+  "key": "18f19b18",
+  "text": "Один",
+  "voice": "xenia"
+ },
+ {
+  "key": "05008227",
+  "text": "Москвы",
+  "voice": "xenia"
+ },
+ {
+  "key": "f6a0734a",
+  "text": "рождения",
+  "voice": "xenia"
+ },
+ {
+  "key": "7339512c",
+  "text": "мае",
+  "voice": "xenia"
+ },
+ {
+  "key": "a0c2d95a",
+  "text": "Когда",
+  "voice": "xenia"
+ },
+ {
+  "key": "f197cec7",
+  "text": "третье",
+  "voice": "xenia"
+ },
+ {
+  "key": "1aa075d9",
+  "text": "марта",
+  "voice": "xenia"
+ },
+ {
+  "key": "8097bf68",
+  "text": "Новый",
+  "voice": "xenia"
+ },
+ {
+  "key": "18b82f00",
+  "text": "год",
+  "voice": "xenia"
+ },
+ {
+  "key": "3412a974",
+  "text": "январе",
+  "voice": "xenia"
+ },
+ {
+  "key": "11b292b0",
+  "text": "путешествуем",
+  "voice": "xenia"
+ },
+ {
+  "key": "4c021fdf",
+  "text": "июле",
+  "voice": "xenia"
+ },
+ {
+  "key": "eb91e781",
+  "text": "музыку",
+  "voice": "xenia"
+ },
+ {
+  "key": "faf64e7f",
+  "text": "играешь",
+  "voice": "xenia"
+ },
+ {
+  "key": "4b3ff48d",
+  "text": "любит",
+  "voice": "xenia"
+ },
+ {
+  "key": "4b0bfaf0",
+  "text": "субботу",
+  "voice": "xenia"
+ },
+ {
+  "key": "11bc12a4",
+  "text": "смотрим",
+  "voice": "xenia"
+ },
+ {
+  "key": "23dc466f",
+  "text": "фильмы",
+  "voice": "xenia"
+ },
+ {
+  "key": "1f72d7f6",
+  "text": "Что",
+  "voice": "xenia"
+ },
+ {
+  "key": "4ffb3d80",
+  "text": "делаешь",
+  "voice": "xenia"
+ },
+ {
+  "key": "a054553d",
+  "text": "свободное",
+  "voice": "xenia"
+ },
+ {
+  "key": "d667d03b",
+  "text": "время",
+  "voice": "xenia"
+ },
+ {
+  "key": "9b93814e",
+  "text": "длинные",
+  "voice": "xenia"
+ },
+ {
+  "key": "50e63ad0",
+  "text": "Моя",
+  "voice": "xenia"
+ },
+ {
+  "key": "906fd83e",
+  "text": "бабушка",
+  "voice": "xenia"
+ },
+ {
+  "key": "f5e74eb7",
+  "text": "добрая",
+  "voice": "xenia"
+ },
+ {
+  "key": "070c7214",
+  "text": "он",
+  "voice": "xenia"
+ },
+ {
+  "key": "0c47db41",
+  "text": "выглядит",
+  "voice": "xenia"
+ },
+ {
+  "key": "bc391b64",
+  "text": "Они",
+  "voice": "xenia"
+ },
+ {
+  "key": "7b461e66",
+  "text": "молодые",
+  "voice": "xenia"
+ },
+ {
+  "key": "10b70f01",
+  "text": "рада",
+  "voice": "xenia"
+ },
+ {
+  "key": "0eb61107",
+  "text": "Не",
+  "voice": "xenia"
+ },
+ {
+  "key": "5850c110",
+  "text": "грусти",
+  "voice": "xenia"
+ },
+ {
+  "key": "befaf96b",
+  "text": "немного",
+  "voice": "xenia"
+ },
+ {
+  "key": "c9d98dad",
+  "text": "страшно",
+  "voice": "xenia"
+ },
+ {
+  "key": "93bb0702",
+  "text": "домашнее",
+  "voice": "xenia"
+ },
+ {
+  "key": "1993b4ca",
+  "text": "задание",
+  "voice": "xenia"
+ },
+ {
+  "key": "f1c41d85",
+  "text": "взять",
+  "voice": "xenia"
+ },
+ {
+  "key": "8541091e",
+  "text": "ручку",
+  "voice": "xenia"
+ },
+ {
+  "key": "b40afa87",
+  "text": "Собрание",
+  "voice": "xenia"
+ },
+ {
+  "key": "4e6a3bee",
+  "text": "язык",
+  "voice": "xenia"
+ },
+ {
+  "key": "a18195e1",
+  "text": "Кошка",
+  "voice": "xenia"
+ },
+ {
+  "key": "a7a39c33",
+  "text": "спит",
+  "voice": "xenia"
+ },
+ {
+  "key": "c3626cb6",
+  "text": "животных",
+  "voice": "xenia"
+ },
+ {
+  "key": "f4752e47",
+  "text": "Птицы",
+  "voice": "xenia"
+ },
+ {
+  "key": "d4b448c1",
+  "text": "умеют",
+  "voice": "xenia"
+ },
+ {
+  "key": "dfad7e55",
+  "text": "лесу",
+  "voice": "xenia"
+ },
+ {
+  "key": "c5773a7c",
+  "text": "живёт",
+  "voice": "xenia"
+ },
+ {
+  "key": "f7175499",
+  "text": "умею",
+  "voice": "xenia"
+ },
+ {
+  "key": "f4c9a205",
+  "text": "могу",
+  "voice": "xenia"
+ },
+ {
+  "key": "c9e65513",
+  "text": "ключи",
+  "voice": "xenia"
+ },
+ {
+  "key": "8e5191da",
+  "text": "говорит",
+  "voice": "xenia"
+ },
+ {
+  "key": "0452d61d",
+  "text": "трёх",
+  "voice": "xenia"
+ },
+ {
+  "key": "04c5ed2d",
+  "text": "языках",
+  "voice": "xenia"
+ },
+ {
+  "key": "31f7f8ac",
+  "text": "Подожди",
+  "voice": "xenia"
+ },
+ {
+  "key": "1109d15e",
+  "text": "Куда",
+  "voice": "xenia"
+ },
+ {
+  "key": "56ff1ee4",
+  "text": "идёшь",
+  "voice": "xenia"
+ },
+ {
+  "key": "f07789e6",
+  "text": "Завтра",
+  "voice": "xenia"
+ },
+ {
+  "key": "912ec3e5",
+  "text": "едем",
+  "voice": "xenia"
+ },
+ {
+  "key": "0f171115",
+  "text": "Петербург",
+  "voice": "xenia"
+ },
+ {
+  "key": "f9a4855b",
+  "text": "машине",
+  "voice": "xenia"
+ },
+ {
+  "key": "8520bf22",
+  "text": "вечером",
+  "voice": "xenia"
+ },
+ {
+  "key": "f1785588",
+  "text": "прошлой",
+  "voice": "xenia"
+ },
+ {
+  "key": "9aa3a658",
+  "text": "неделе",
+  "voice": "xenia"
+ },
+ {
+  "key": "19b67511",
+  "text": "Вчера",
+  "voice": "xenia"
+ },
+ {
+  "key": "ea6dc1f2",
+  "text": "отличный",
+  "voice": "xenia"
+ },
+ {
+  "key": "91560eee",
+  "text": "опоздали",
+  "voice": "xenia"
+ },
+ {
+  "key": "8a60bcd0",
+  "text": "Бразилии",
+  "voice": "xenia"
+ },
+ {
+  "key": "6cfee788",
+  "text": "может",
+  "voice": "xenia"
+ },
+ {
+  "key": "7235311b",
+  "text": "быть",
+  "voice": "xenia"
+ },
+ {
+  "key": "bb37c53e",
+  "text": "ещё",
+  "voice": "xenia"
+ },
+ {
+  "key": "196e5f3e",
+  "text": "раз",
+  "voice": "xenia"
+ },
+ {
+  "key": "7c1d5c67",
+  "text": "как",
+  "voice": "xenia"
+ },
+ {
+  "key": "32126837",
+  "text": "сказать",
+  "voice": "xenia"
+ },
+ {
+  "key": "82bcef5e",
+  "text": "Извините",
+  "voice": "xenia"
+ },
+ {
+  "key": "356acdc3",
+  "text": "повторите",
+  "voice": "xenia"
+ },
+ {
+  "key": "f3eba8dd",
+  "text": "Говорите",
+  "voice": "xenia"
+ },
+ {
+  "key": "c7d9c294",
+  "text": "Без",
+  "voice": "xenia"
+ },
+ {
+  "key": "62c687cd",
+  "text": "проблем",
+  "voice": "xenia"
+ },
+ {
+  "key": "faaf1c96",
+  "text": "Здравствуйте",
+  "voice": "xenia"
+ },
+ {
+  "key": "b90d1f97",
+  "text": "будете",
+  "voice": "xenia"
+ },
+ {
+  "key": "b2f2173a",
+  "text": "Чёрный",
+  "voice": "xenia"
+ },
+ {
+  "key": "32ce0ce4",
+  "text": "или",
+  "voice": "xenia"
+ },
+ {
+  "key": "a0efaf69",
+  "text": "сахаром",
+  "voice": "xenia"
+ },
+ {
+  "key": "6da37b9f",
+  "text": "Нет",
+  "voice": "xenia"
+ },
+ {
+  "key": "eb6ce7d5",
+  "text": "лимоном",
+  "voice": "xenia"
+ },
+ {
+  "key": "e6808148",
+  "text": "собой",
+  "voice": "xenia"
+ },
+ {
+  "key": "b864093b",
+  "text": "Двести",
+  "voice": "xenia"
+ },
+ {
+  "key": "c53ecf88",
+  "text": "Картой",
+  "voice": "xenia"
+ },
+ {
+  "key": "ffa4b049",
+  "text": "Да",
+  "voice": "xenia"
+ },
+ {
+  "key": "8010ec35",
+  "text": "Спасибо",
+  "voice": "xenia"
+ },
+ {
+  "key": "50215f46",
+  "text": "Хорошего",
+  "voice": "xenia"
+ },
+ {
+  "key": "729a73ef",
+  "text": "дня",
+  "voice": "xenia"
+ },
+ {
+  "key": "3805a81b",
+  "text": "Привет",
+  "voice": "xenia"
+ },
+ {
+  "key": "d2695775",
+  "text": "Дима",
+  "voice": "xenia"
+ },
+ {
+  "key": "811e4750",
+  "text": "из",
+  "voice": "xenia"
+ },
+ {
+  "key": "3a2049d8",
+  "text": "Ого",
+  "voice": "xenia"
+ },
+ {
+  "key": "7520f7ac",
+  "text": "круто",
+  "voice": "xenia"
+ },
+ {
+  "key": "9c566ff0",
+  "text": "говоришь",
+  "voice": "xenia"
+ },
+ {
+  "key": "83426e3e",
+  "text": "только",
+  "voice": "xenia"
+ },
+ {
+  "key": "497051cf",
+  "text": "чем",
+  "voice": "xenia"
+ },
+ {
+  "key": "c6192816",
+  "text": "занимаешься",
+  "voice": "xenia"
+ },
+ {
+  "key": "085063a0",
+  "text": "программист",
+  "voice": "xenia"
+ },
+ {
+  "key": "923ac889",
+  "text": "Слушай",
+  "voice": "xenia"
+ },
+ {
+  "key": "318817ee",
+  "text": "давай",
+  "voice": "xenia"
+ },
+ {
+  "key": "96dce9ee",
+  "text": "дружить",
+  "voice": "xenia"
+ },
+ {
+  "key": "e0480c50",
+  "text": "Дай",
+  "voice": "xenia"
+ },
+ {
+  "key": "9235da4f",
+  "text": "свой",
+  "voice": "xenia"
+ },
+ {
+  "key": "a22d38db",
+  "text": "телеграм",
+  "voice": "xenia"
+ },
+ {
+  "key": "ccdda10e",
+  "text": "Давай",
+  "voice": "xenia"
+ },
+ {
+  "key": "17d161a9",
+  "text": "Вот",
+  "voice": "xenia"
+ },
+ {
+  "key": "67354f27",
+  "text": "номер",
+  "voice": "xenia"
+ },
+ {
+  "key": "2d07ca4b",
+  "text": "Супер",
+  "voice": "xenia"
+ },
+ {
+  "key": "1cb62711",
+  "text": "Ну",
+  "voice": "xenia"
+ },
+ {
+  "key": "d5e9fb6a",
+  "text": "пока",
+  "voice": "xenia"
+ },
+ {
+  "key": "efd4ca4c",
+  "text": "увидимся",
+  "voice": "xenia"
+ },
+ {
+  "key": "9f83e78a",
+  "text": "Пока",
+  "voice": "xenia"
+ },
+ {
+  "key": "c3317ebe",
+  "text": "встречи",
+  "voice": "xenia"
+ },
+ {
+  "key": "addc6965",
+  "text": "что-то",
+  "voice": "xenia"
+ },
+ {
+  "key": "b954ee18",
+  "text": "ищете",
+  "voice": "xenia"
+ },
+ {
+  "key": "9d9d5dd5",
+  "text": "где",
+  "voice": "xenia"
+ },
+ {
+  "key": "43458da2",
+  "text": "Метро",
+  "voice": "xenia"
+ },
+ {
+  "key": "1561228c",
+  "text": "потом",
+  "voice": "xenia"
+ },
+ {
+  "key": "bc9c7e45",
+  "text": "Прямо",
+  "voice": "xenia"
+ },
+ {
+  "key": "ec4c64a8",
+  "text": "Да-да",
+  "voice": "xenia"
+ },
+ {
+  "key": "8414856d",
+  "text": "Минут",
+  "voice": "xenia"
+ },
+ {
+  "key": "7504226e",
+  "text": "совсем",
+  "voice": "xenia"
+ },
+ {
+  "key": "5233c8e9",
+  "text": "турист",
+  "voice": "xenia"
+ },
+ {
+  "key": "e17d1a08",
+  "text": "Добро",
+  "voice": "xenia"
+ },
+ {
+  "key": "9eeb292f",
+  "text": "пожаловать",
+  "voice": "xenia"
+ },
+ {
+  "key": "c8949431",
+  "text": "Казань",
+  "voice": "xenia"
+ },
+ {
+  "key": "e950973e",
+  "text": "большое",
+  "voice": "xenia"
+ },
+ {
+  "key": "1bb3afea",
+  "text": "Подходите",
+  "voice": "xenia"
+ },
+ {
+  "key": "c067da50",
+  "text": "Почём",
+  "voice": "xenia"
+ },
+ {
+  "key": "01986206",
+  "text": "яблоки",
+  "voice": "xenia"
+ },
+ {
+  "key": "0d29a9bc",
+  "text": "Сто",
+  "voice": "xenia"
+ },
+ {
+  "key": "85f5e0b2",
+  "text": "за",
+  "voice": "xenia"
+ },
+ {
+  "key": "ad516e97",
+  "text": "килограмм",
+  "voice": "xenia"
+ },
+ {
+  "key": "ce6a785a",
+  "text": "Сладкие",
+  "voice": "xenia"
+ },
+ {
+  "key": "1a81abd9",
+  "text": "Дайте",
+  "voice": "xenia"
+ },
+ {
+  "key": "0a27aef4",
+  "text": "Что-нибудь",
+  "voice": "xenia"
+ },
+ {
+  "key": "faf06bff",
+  "text": "помидоры",
+  "voice": "xenia"
+ },
+ {
+  "key": "1c8ae5f7",
+  "text": "Всё",
+  "voice": "xenia"
+ },
+ {
+  "key": "69b69aa4",
+  "text": "вместе",
+  "voice": "xenia"
+ },
+ {
+  "key": "0731026e",
+  "text": "триста",
+  "voice": "xenia"
+ },
+ {
+  "key": "87072f1a",
+  "text": "подешевле",
+  "voice": "xenia"
+ },
+ {
+  "key": "ed39cac5",
+  "text": "Ладно",
+  "voice": "xenia"
+ },
+ {
+  "key": "128c6545",
+  "text": "для",
+  "voice": "xenia"
+ },
+ {
+  "key": "99facf1b",
+  "text": "двести",
+  "voice": "xenia"
+ },
+ {
+  "key": "197ff110",
+  "text": "Отлично",
+  "voice": "xenia"
+ },
+ {
+  "key": "c7575c21",
+  "text": "держите",
+  "voice": "xenia"
+ },
+ {
+  "key": "9d59fb34",
+  "text": "Приходите",
+  "voice": "xenia"
+ },
+ {
+  "key": "b47f432a",
+  "text": "Добрый",
+  "voice": "xenia"
+ },
+ {
+  "key": "a085f4ef",
+  "text": "Чем",
+  "voice": "xenia"
+ },
+ {
+  "key": "7ab61e8f",
+  "text": "бронь",
+  "voice": "xenia"
+ },
+ {
+  "key": "ee4e799f",
+  "text": "Ваша",
+  "voice": "xenia"
+ },
+ {
+  "key": "bf595eeb",
+  "text": "фамилия",
+  "voice": "xenia"
+ },
+ {
+  "key": "c67cd8ef",
+  "text": "Так",
+  "voice": "xenia"
+ },
+ {
+  "key": "61dbb807",
+  "text": "Номер",
+  "voice": "xenia"
+ },
+ {
+  "key": "29b5db75",
+  "text": "Ваш",
+  "voice": "xenia"
+ },
+ {
+  "key": "db4f3b72",
+  "text": "паспорт",
+  "voice": "xenia"
+ },
+ {
+  "key": "6e5b6787",
+  "text": "третий",
+  "voice": "xenia"
+ },
+ {
+  "key": "ba4ac864",
+  "text": "этаж",
+  "voice": "xenia"
+ },
+ {
+  "key": "68345154",
+  "text": "Завтрак",
+  "voice": "xenia"
+ },
+ {
+  "key": "7227c8c7",
+  "text": "семи",
+  "voice": "xenia"
+ },
+ {
+  "key": "b3f30188",
+  "text": "десяти",
+  "voice": "xenia"
+ },
+ {
+  "key": "21de6fec",
+  "text": "лифт",
+  "voice": "xenia"
+ },
+ {
+  "key": "767d030c",
+  "text": "Лифт",
+  "voice": "xenia"
+ },
+ {
+  "key": "90d7f109",
+  "text": "отдыха",
+  "voice": "xenia"
+ },
+ {
+  "key": "f6ddccd3",
+  "text": "Следующий",
+  "voice": "xenia"
+ },
+ {
+  "key": "e656493f",
+  "text": "Петербурга",
+  "voice": "xenia"
+ },
+ {
+  "key": "09b60928",
+  "text": "На",
+  "voice": "xenia"
+ },
+ {
+  "key": "7a846bba",
+  "text": "когда",
+  "voice": "xenia"
+ },
+ {
+  "key": "337886c2",
+  "text": "утром",
+  "voice": "xenia"
+ },
+ {
+  "key": "a33e386d",
+  "text": "Есть",
+  "voice": "xenia"
+ },
+ {
+  "key": "8d84c0e7",
+  "text": "Сапсан",
+  "voice": "xenia"
+ },
+ {
+  "key": "7e037bec",
+  "text": "ноль-ноль",
+  "voice": "xenia"
+ },
+ {
+  "key": "5a93b7cd",
+  "text": "Четыре",
+  "voice": "xenia"
+ },
+ {
+  "key": "c27e0ccb",
+  "text": "часа",
+  "voice": "xenia"
+ },
+ {
+  "key": "3a4522b5",
+  "text": "пути",
+  "voice": "xenia"
+ },
+ {
+  "key": "256dc46d",
+  "text": "тысячи",
+  "voice": "xenia"
+ },
+ {
+  "key": "f3442b94",
+  "text": "пятьсот",
+  "voice": "xenia"
+ },
+ {
+  "key": "b0556cc6",
+  "text": "Туда",
+  "voice": "xenia"
+ },
+ {
+  "key": "744176d2",
+  "text": "Паспорт",
+  "voice": "xenia"
+ },
+ {
+  "key": "69f95bc9",
+  "text": "Вагон",
+  "voice": "xenia"
+ },
+ {
+  "key": "02048875",
+  "text": "место",
+  "voice": "xenia"
+ },
+ {
+  "key": "ef3520ea",
+  "text": "Счастливого",
+  "voice": "xenia"
+ },
+ {
+  "key": "233a19cc",
+  "text": "Слушаю",
+  "voice": "xenia"
+ },
+ {
+  "key": "4e05479e",
+  "text": "Давно",
+  "voice": "xenia"
+ },
+ {
+  "key": "67fd0540",
+  "text": "утра",
+  "voice": "xenia"
+ },
+ {
+  "key": "a84ca073",
+  "text": "Температура",
+  "voice": "xenia"
+ },
+ {
+  "key": "4a87a44e",
+  "text": "температуры",
+  "voice": "xenia"
+ },
+ {
+  "key": "d2b1a033",
+  "text": "возьмите",
+  "voice": "xenia"
+ },
+ {
+  "key": "97e59712",
+  "text": "Одна",
+  "voice": "xenia"
+ },
+ {
+  "key": "6c2b1fca",
+  "text": "таблетка",
+  "voice": "xenia"
+ },
+ {
+  "key": "16b9570a",
+  "text": "раза",
+  "voice": "xenia"
+ },
+ {
+  "key": "4aa69825",
+  "text": "Понятно",
+  "voice": "xenia"
+ },
+ {
+  "key": "3e21b896",
+  "text": "Выздоравливайте",
+  "voice": "xenia"
+ },
+ {
+  "key": "4793b82a",
+  "text": "Красную",
+  "voice": "xenia"
+ },
+ {
+  "key": "224ca822",
+  "text": "площадь",
+  "voice": "xenia"
+ },
+ {
+  "key": "1ff71bb6",
+  "text": "здравствуйте",
+  "voice": "xenia"
+ },
+ {
+  "key": "c79930d8",
+  "text": "Пристегнитесь",
+  "voice": "xenia"
+ },
+ {
+  "key": "25dcc4e3",
+  "text": "первый",
+  "voice": "xenia"
+ },
+ {
+  "key": "4b00f059",
+  "text": "Москве",
+  "voice": "xenia"
+ },
+ {
+  "key": "b4ce1ca4",
+  "text": "Нравится",
+  "voice": "xenia"
+ },
+ {
+  "key": "4e00f512",
+  "text": "Москва",
+  "voice": "xenia"
+ },
+ {
+  "key": "cd35027d",
+  "text": "пробки",
+  "voice": "xenia"
+ },
+ {
+  "key": "f85a1c02",
+  "text": "будем",
+  "voice": "xenia"
+ },
+ {
+  "key": "25df3815",
+  "text": "Ничего",
+  "voice": "xenia"
+ },
+ {
+  "key": "0b4d8015",
+  "text": "спешу",
+  "voice": "xenia"
+ },
+ {
+  "key": "912a3777",
+  "text": "Приехали",
+  "voice": "xenia"
+ },
+ {
+  "key": "47e09a52",
+  "text": "Красная",
+  "voice": "xenia"
+ },
+ {
+  "key": "f416f22a",
+  "text": "Остановите",
+  "voice": "xenia"
+ },
+ {
+  "key": "fb560845",
+  "text": "Заходи",
+  "voice": "xenia"
+ },
+ {
+  "key": "0bd3fe2e",
+  "text": "раздевайся",
+  "voice": "xenia"
+ },
+ {
+  "key": "751bdeb2",
+  "text": "тебе",
+  "voice": "xenia"
+ },
+ {
+  "key": "82ca1b68",
+  "text": "Ой",
+  "voice": "xenia"
+ },
+ {
+  "key": "d9de7ca8",
+  "text": "какие",
+  "voice": "xenia"
+ },
+ {
+  "key": "590fecf3",
+  "text": "цветы",
+  "voice": "xenia"
+ },
+ {
+  "key": "50294ffd",
+  "text": "Тапочки",
+  "voice": "xenia"
+ },
+ {
+  "key": "f5459bc9",
+  "text": "вот",
+  "voice": "xenia"
+ },
+ {
+  "key": "b4ff43a5",
+  "text": "Садись",
+  "voice": "xenia"
+ },
+ {
+  "key": "c49a45fe",
+  "text": "Будешь",
+  "voice": "xenia"
+ },
+ {
+  "key": "2a87b62f",
+  "text": "удовольствием",
+  "voice": "xenia"
+ },
+ {
+  "key": "4140af9e",
+  "text": "Вкусно",
+  "voice": "xenia"
+ },
+ {
+  "key": "8593e7fe",
+  "text": "вкусно",
+  "voice": "xenia"
+ },
+ {
+  "key": "f302adfe",
+  "text": "Возьми",
+  "voice": "xenia"
+ },
+ {
+  "key": "c411db8f",
+  "text": "стесняйся",
+  "voice": "xenia"
+ },
+ {
+  "key": "83bc043b",
+  "text": "уже",
+  "voice": "xenia"
+ },
+ {
+  "key": "c4890745",
+  "text": "сыт",
+  "voice": "xenia"
+ },
+ {
+  "key": "f18ddac1",
+  "text": "Алло",
+  "voice": "xenia"
+ },
+ {
+  "key": "f1dc7911",
+  "text": "Маша",
+  "voice": "xenia"
+ },
+ {
+  "key": "9fa475ea",
+  "text": "Нормально",
+  "voice": "xenia"
+ },
+ {
+  "key": "482f6318",
+  "text": "пойдём",
+  "voice": "xenia"
+ },
+ {
+  "key": "3e9883d8",
+  "text": "кино",
+  "voice": "xenia"
+ },
+ {
+  "key": "89b30111",
+  "text": "Во",
+  "voice": "xenia"
+ },
+ {
+  "key": "731bc05f",
+  "text": "сколько",
+  "voice": "xenia"
+ },
+ {
+  "key": "c250afa0",
+  "text": "вечера",
+  "voice": "xenia"
+ },
+ {
+  "key": "533bbb21",
+  "text": "встретимся",
+  "voice": "xenia"
+ },
+ {
+  "key": "a79c6ee0",
+  "text": "Договорились",
+  "voice": "xenia"
+ },
+ {
+  "key": "f96de757",
+  "text": "всё",
+  "voice": "xenia"
+ },
+ {
+  "key": "530c0788",
+  "text": "субботы",
+  "voice": "xenia"
+ },
+ {
+  "key": "3a0edc0f",
+  "text": "Приезжай",
+  "voice": "xenia"
+ },
+ {
+  "key": "f97b5b9a",
+  "text": "скорее",
+  "voice": "xenia"
+ },
+ {
+  "key": "c86571f6",
+  "text": "Часы",
+  "voice": "xenia"
+ },
+ {
+  "key": "e5f40085",
+  "text": "остановились",
+  "voice": "xenia"
+ },
+ {
+  "key": "b5175b72",
+  "text": "порядке",
+  "voice": "xenia"
+ },
+ {
+  "key": "c64a6d16",
+  "text": "Холодно",
+  "voice": "xenia"
+ },
+ {
+  "key": "a48a8c2b",
+  "text": "Наверное",
+  "voice": "xenia"
+ },
+ {
+  "key": "17504be0",
+  "text": "устали",
+  "voice": "xenia"
+ },
+ {
+  "key": "21a009ca",
+  "text": "дороги",
+  "voice": "xenia"
+ },
+ {
+  "key": "05d62294",
+  "text": "Хм",
+  "voice": "xenia"
+ },
+ {
+  "key": "8a59643c",
+  "text": "торопитесь",
+  "voice": "xenia"
+ },
+ {
+  "key": "114d4170",
+  "text": "Иван",
+  "voice": "xenia"
+ },
+ {
+  "key": "d5db49c5",
+  "text": "станции",
+  "voice": "xenia"
+ },
+ {
+  "key": "c070038a",
+  "text": "Тео",
+  "voice": "xenia"
+ },
+ {
+  "key": "46967877",
+  "text": "Почти",
+  "voice": "xenia"
+ },
+ {
+  "key": "1ec29d40",
+  "text": "тоже",
+  "voice": "xenia"
+ },
+ {
+  "key": "7819a1a6",
+  "text": "Какой",
+  "voice": "xenia"
+ },
+ {
+  "key": "a76266d5",
+  "text": "вежливый",
+  "voice": "xenia"
+ },
+ {
+  "key": "2d407e31",
+  "text": "человек",
+  "voice": "xenia"
+ },
+ {
+  "key": "4a2c6b96",
+  "text": "что",
+  "voice": "xenia"
+ },
+ {
+  "key": "d45e83c2",
+  "text": "Ха-ха",
+  "voice": "xenia"
+ },
+ {
+  "key": "eaeca824",
+  "text": "хотели",
+  "voice": "xenia"
+ },
+ {
+  "key": "80c1fd70",
+  "text": "Из",
+  "voice": "xenia"
+ },
+ {
+  "key": "c47cd5c9",
+  "text": "Там",
+  "voice": "xenia"
+ },
+ {
+  "key": "22a2336b",
+  "text": "нас",
+  "voice": "xenia"
+ },
+ {
+  "key": "fd603894",
+  "text": "минус",
+  "voice": "xenia"
+ },
+ {
+  "key": "21601785",
+  "text": "Бразилия",
+  "voice": "xenia"
+ },
+ {
+  "key": "74fb8bda",
+  "text": "Откуда",
+  "voice": "xenia"
+ },
+ {
+  "key": "41ae12b3",
+  "text": "браслет",
+  "voice": "xenia"
+ },
+ {
+  "key": "d40b5091",
+  "text": "идёте",
+  "voice": "xenia"
+ },
+ {
+  "key": "708b3a4f",
+  "text": "так",
+  "voice": "xenia"
+ },
+ {
+  "key": "baeabf07",
+  "text": "знаю",
+  "voice": "xenia"
+ },
+ {
+  "key": "87326bff",
+  "text": "знаете",
+  "voice": "xenia"
+ },
+ {
+  "key": "464b8025",
+  "text": "Ночью",
+  "voice": "xenia"
+ },
+ {
+  "key": "3236533f",
+  "text": "уверен",
+  "voice": "xenia"
+ },
+ {
+  "key": "7f8bab9c",
+  "text": "уверены",
+  "voice": "xenia"
+ },
+ {
+  "key": "59099141",
+  "text": "чайную",
+  "voice": "xenia"
+ },
+ {
+  "key": "f6c03f30",
+  "text": "Самовар",
+  "voice": "xenia"
+ },
+ {
+  "key": "42a42f10",
+  "text": "Вера",
+  "voice": "xenia"
+ },
+ {
+  "key": "da9b1b50",
+  "text": "знает",
+  "voice": "xenia"
+ },
+ {
+  "key": "ea4e7d6a",
+  "text": "всех",
+  "voice": "xenia"
+ },
+ {
+  "key": "760b58c1",
+  "text": "гость",
+  "voice": "xenia"
+ },
+ {
+  "key": "6b713c65",
+  "text": "заходи",
+  "voice": "xenia"
+ },
+ {
+  "key": "193896ac",
+  "text": "замёрз",
+  "voice": "xenia"
+ },
+ {
+  "key": "ca8080a8",
+  "text": "Бедный",
+  "voice": "xenia"
+ },
+ {
+  "key": "787f7800",
+  "text": "печки",
+  "voice": "xenia"
+ },
+ {
+  "key": "f32cd178",
+  "text": "Ну-ну",
+  "voice": "xenia"
+ },
+ {
+  "key": "88118662",
+  "text": "но",
+  "voice": "xenia"
+ },
+ {
+  "key": "156e136b",
+  "text": "все",
+  "voice": "xenia"
+ },
+ {
+  "key": "47cb8bc1",
+  "text": "говорят",
+  "voice": "xenia"
+ },
+ {
+  "key": "8419b48a",
+  "text": "Какое",
+  "voice": "xenia"
+ },
+ {
+  "key": "ad01814b",
+  "text": "красивое",
+  "voice": "xenia"
+ },
+ {
+  "key": "81cc4aaa",
+  "text": "имя",
+  "voice": "xenia"
+ },
+ {
+  "key": "0ec964cc",
+  "text": "Ох",
+  "voice": "xenia"
+ },
+ {
+  "key": "823359aa",
+  "text": "милый",
+  "voice": "xenia"
+ },
+ {
+  "key": "8df0cabd",
+  "text": "Лев",
+  "voice": "xenia"
+ },
+ {
+  "key": "a9970e20",
+  "text": "Наш",
+  "voice": "xenia"
+ },
+ {
+  "key": "2a8683fa",
+  "text": "часовщик",
+  "voice": "xenia"
+ },
+ {
+  "key": "8d4d9cc5",
+  "text": "Его",
+  "voice": "xenia"
+ },
+ {
+  "key": "85a38549",
+  "text": "неделю",
+  "voice": "xenia"
+ },
+ {
+  "key": "60b304ea",
+  "text": "башне",
+  "voice": "xenia"
+ },
+ {
+  "key": "2ae82054",
+  "text": "кончается",
+  "voice": "xenia"
+ },
+ {
+  "key": "958af062",
+  "text": "Утром",
+  "voice": "xenia"
+ },
+ {
+  "key": "8dc89ee7",
+  "text": "поговорим",
+  "voice": "xenia"
+ },
+ {
+  "key": "ba24a7c0",
+  "text": "Комната",
+  "voice": "xenia"
+ },
+ {
+  "key": "6873a6d1",
+  "text": "монет",
+  "voice": "xenia"
+ },
+ {
+  "key": "1f032e93",
+  "text": "наверху",
+  "voice": "xenia"
+ },
+ {
+  "key": "0840157f",
+  "text": "Конечно",
+  "voice": "xenia"
+ },
+ {
+  "key": "e054cdf8",
+  "text": "держи",
+  "voice": "xenia"
+ },
+ {
+  "key": "f3a72df8",
+  "text": "Пожалуйста",
+  "voice": "xenia"
+ },
+ {
+  "key": "58ac4e75",
+  "text": "бесплатно",
+  "voice": "xenia"
+ },
+ {
+  "key": "60362da2",
+  "text": "Две",
+  "voice": "xenia"
+ },
+ {
+  "key": "0808f86e",
+  "text": "монеты",
+  "voice": "xenia"
+ },
+ {
+  "key": "0aa6f389",
+  "text": "грубость",
+  "voice": "xenia"
+ },
+ {
+  "key": "9eac6959",
+  "text": "Ключ",
+  "voice": "xenia"
+ },
+ {
+  "key": "7b82bc87",
+  "text": "дать",
+  "voice": "xenia"
+ },
+ {
+  "key": "55ba2e80",
+  "text": "положила",
+  "voice": "xenia"
+ },
+ {
+  "key": "e6cdaf21",
+  "text": "Посмотри",
+  "voice": "xenia"
+ },
+ {
+  "key": "205f98a0",
+  "text": "самовара",
+  "voice": "xenia"
+ },
+ {
+  "key": "f30daf5e",
+  "text": "печи",
+  "voice": "xenia"
+ },
+ {
+  "key": "4e629930",
+  "text": "столе",
+  "voice": "xenia"
+ },
+ {
+  "key": "400455e2",
+  "text": "Хочешь",
+  "voice": "xenia"
+ },
+ {
+  "key": "196bbd04",
+  "text": "чаю",
+  "voice": "xenia"
+ },
+ {
+  "key": "ab67aeb2",
+  "text": "пирожком",
+  "voice": "xenia"
+ },
+ {
+  "key": "0a5a3858",
+  "text": "будет",
+  "voice": "xenia"
+ },
+ {
+  "key": "cec784d4",
+  "text": "воду",
+  "voice": "xenia"
+ },
+ {
+  "key": "9a462b5d",
+  "text": "России",
+  "voice": "xenia"
+ },
+ {
+  "key": "478af125",
+  "text": "ладно",
+  "voice": "xenia"
+ },
+ {
+  "key": "331d5999",
+  "text": "Любишь",
+  "voice": "xenia"
+ },
+ {
+  "key": "09dada01",
+  "text": "То",
+  "voice": "xenia"
+ },
+ {
+  "key": "1f9a10a1",
+  "text": "Чай",
+  "voice": "xenia"
+ },
+ {
+  "key": "a70fda82",
+  "text": "Пирожок",
+  "voice": "xenia"
+ },
+ {
+  "key": "c1efc4b0",
+  "text": "Быстро",
+  "voice": "xenia"
+ },
+ {
+  "key": "9872f52f",
+  "text": "молодёжь",
+  "voice": "xenia"
+ },
+ {
+  "key": "72356d5e",
+  "text": "Ещё",
+  "voice": "xenia"
+ },
+ {
+  "key": "eeb7ebf2",
+  "text": "одна",
+  "voice": "xenia"
+ },
+ {
+  "key": "4f096833",
+  "text": "монета",
+  "voice": "xenia"
+ },
+ {
+  "key": "bec6b42e",
+  "text": "такой",
+  "voice": "xenia"
+ },
+ {
+  "key": "fc6e6182",
+  "text": "две",
+  "voice": "xenia"
+ },
+ {
+  "key": "198a7e38",
+  "text": "Твой",
+  "voice": "xenia"
+ },
+ {
+  "key": "d2269137",
+  "text": "светится",
+  "voice": "xenia"
+ },
+ {
+  "key": "42d36de0",
+  "text": "Льва",
+  "voice": "xenia"
+ },
+ {
+  "key": "2caba523",
+  "text": "иди",
+  "voice": "xenia"
+ },
+ {
+  "key": "d29025c1",
+  "text": "ярмарку",
+  "voice": "xenia"
+ },
+ {
+  "key": "d3cce7d8",
+  "text": "внучка",
+  "voice": "xenia"
+ },
+ {
+  "key": "94a42d70",
+  "text": "Катя",
+  "voice": "xenia"
+ },
+ {
+  "key": "064d877f",
+  "text": "поможет",
+  "voice": "xenia"
+ },
+ {
+  "key": "051ba006",
+  "text": "Спокойной",
+  "voice": "xenia"
+ },
+ {
+  "key": "7b6f8cc3",
+  "text": "Иди",
+  "voice": "xenia"
+ },
+ {
+  "key": "1d0606e8",
+  "text": "Пирожки",
+  "voice": "xenia"
+ },
+ {
+  "key": "ff257e39",
+  "text": "Горячие",
+  "voice": "xenia"
+ },
+ {
+  "key": "9aa60088",
+  "text": "пирожки",
+  "voice": "xenia"
+ },
+ {
+  "key": "02e9a593",
+  "text": "Эй",
+  "voice": "xenia"
+ },
+ {
+  "key": "f8ac5fb8",
+  "text": "знала",
+  "voice": "xenia"
+ },
+ {
+  "key": "7171d422",
+  "text": "эти",
+  "voice": "xenia"
+ },
+ {
+  "key": "57b3c036",
+  "text": "имею",
+  "voice": "xenia"
+ },
+ {
+  "key": "e594d657",
+  "text": "голод",
+  "voice": "xenia"
+ },
+ {
+  "key": "4ed7aecf",
+  "text": "имеешь",
+  "voice": "xenia"
+ },
+ {
+  "key": "f54a19b8",
+  "text": "кошку",
+  "voice": "xenia"
+ },
+ {
+  "key": "ba7cd7f3",
+  "text": "капустой",
+  "voice": "xenia"
+ },
+ {
+  "key": "b8e0cc30",
+  "text": "яблоком",
+  "voice": "xenia"
+ },
+ {
+  "key": "8fd997db",
+  "text": "штуку",
+  "voice": "xenia"
+ },
+ {
+  "key": "92a5f3f0",
+  "text": "пирожка",
+  "voice": "xenia"
+ },
+ {
+  "key": "5d3628e9",
+  "text": "Два",
+  "voice": "xenia"
+ },
+ {
+  "key": "1eeaa41e",
+  "text": "Только",
+  "voice": "xenia"
+ },
+ {
+  "key": "24afd422",
+  "text": "пирожок",
+  "voice": "xenia"
+ },
+ {
+  "key": "033c6182",
+  "text": "хочешь",
+  "voice": "xenia"
+ },
+ {
+  "key": "c707bade",
+  "text": "Бабушка",
+  "voice": "xenia"
+ },
+ {
+  "key": "c0ed4059",
+  "text": "рассказала",
+  "voice": "xenia"
+ },
+ {
+  "key": "ca4204ec",
+  "text": "шапки",
+  "voice": "xenia"
+ },
+ {
+  "key": "57cc5d10",
+  "text": "Смотри",
+  "voice": "xenia"
+ },
+ {
+  "key": "5c09201f",
+  "text": "вяжет",
+  "voice": "xenia"
+ },
+ {
+  "key": "8ecbca7e",
+  "text": "шарфы",
+  "voice": "xenia"
+ },
+ {
+  "key": "0c19b1b1",
+  "text": "Зависит",
+  "voice": "xenia"
+ },
+ {
+  "key": "4e0ce1d9",
+  "text": "от",
+  "voice": "xenia"
+ },
+ {
+  "key": "921046ae",
+  "text": "цвета",
+  "voice": "xenia"
+ },
+ {
+  "key": "5655d69c",
+  "text": "про",
+  "voice": "xenia"
+ },
+ {
+  "key": "20398c08",
+  "text": "цену",
+  "voice": "xenia"
+ },
+ {
+  "key": "45888735",
+  "text": "зелёная",
+  "voice": "xenia"
+ },
+ {
+  "key": "ec17848b",
+  "text": "Хороший",
+  "voice": "xenia"
+ },
+ {
+  "key": "23c04dc7",
+  "text": "выбор",
+  "voice": "xenia"
+ },
+ {
+  "key": "f806e6d4",
+  "text": "небо",
+  "voice": "xenia"
+ },
+ {
+  "key": "f9129855",
+  "text": "Зелёная",
+  "voice": "xenia"
+ },
+ {
+  "key": "873c7a18",
+  "text": "Синий",
+  "voice": "xenia"
+ },
+ {
+  "key": "03949524",
+  "text": "Шапка",
+  "voice": "xenia"
+ },
+ {
+  "key": "3c9dfaac",
+  "text": "она",
+  "voice": "xenia"
+ },
+ {
+  "key": "bda93701",
+  "text": "Синяя",
+  "voice": "xenia"
+ },
+ {
+  "key": "11f51601",
+  "text": "шарф",
+  "voice": "xenia"
+ },
+ {
+  "key": "5b048877",
+  "text": "Подай",
+  "voice": "xenia"
+ },
+ {
+  "key": "b7f9ff12",
+  "text": "слева",
+  "voice": "xenia"
+ },
+ {
+  "key": "8542cd55",
+  "text": "Жёлтый",
+  "voice": "xenia"
+ },
+ {
+  "key": "ac922e31",
+  "text": "стоят",
+  "voice": "xenia"
+ },
+ {
+  "key": "f9d60fb0",
+  "text": "Ха",
+  "voice": "xenia"
+ },
+ {
+  "key": "1b370ddd",
+  "text": "молодец",
+  "voice": "xenia"
+ },
+ {
+  "key": "eafef839",
+  "text": "Двенадцать",
+  "voice": "xenia"
+ },
+ {
+  "key": "e61d99b4",
+  "text": "безумие",
+  "voice": "xenia"
+ },
+ {
+  "key": "01b5fc90",
+  "text": "Ни",
+  "voice": "xenia"
+ },
+ {
+  "key": "3c8cea14",
+  "text": "Безумие",
+  "voice": "xenia"
+ },
+ {
+  "key": "e8dd6cc5",
+  "text": "Мама",
+  "voice": "xenia"
+ },
+ {
+  "key": "40d7f30a",
+  "text": "вязала",
+  "voice": "xenia"
+ },
+ {
+  "key": "ead70822",
+  "text": "Тогда",
+  "voice": "xenia"
+ },
+ {
+  "key": "fafc6934",
+  "text": "тринадцать",
+  "voice": "xenia"
+ },
+ {
+  "key": "9f2f2cd2",
+  "text": "Тебе",
+  "voice": "xenia"
+ },
+ {
+  "key": "819c4ffe",
+  "text": "идёт",
+  "voice": "xenia"
+ },
+ {
+  "key": "03e359f4",
+  "text": "хотел",
+  "voice": "xenia"
+ },
+ {
+  "key": "21a20cc1",
+  "text": "опять",
+  "voice": "xenia"
+ },
+ {
+  "key": "e96c3674",
+  "text": "идут",
+  "voice": "xenia"
+ },
+ {
+  "key": "77ab11f9",
+  "text": "кто",
+  "voice": "xenia"
+ },
+ {
+  "key": "bcd6fc26",
+  "text": "отсюда",
+  "voice": "xenia"
+ },
+ {
+  "key": "4568c732",
+  "text": "смешно",
+  "voice": "xenia"
+ },
+ {
+  "key": "e6b91f49",
+  "text": "Миша",
+  "voice": "xenia"
+ },
+ {
+  "key": "b0d7ecc2",
+  "text": "улицы",
+  "voice": "xenia"
+ },
+ {
+  "key": "d44a8cbd",
+  "text": "ищет",
+  "voice": "xenia"
+ },
+ {
+  "key": "b97e9926",
+  "text": "дедушку",
+  "voice": "xenia"
+ },
+ {
+  "key": "5c79161f",
+  "text": "ратушу",
+  "voice": "xenia"
+ },
+ {
+  "key": "a46066ea",
+  "text": "Дмитрий",
+  "voice": "xenia"
+ },
+ {
+  "key": "19a22540",
+  "text": "наш",
+  "voice": "xenia"
+ },
+ {
+  "key": "df84faad",
+  "text": "полицейский",
+  "voice": "xenia"
+ },
+ {
+  "key": "3d9c285f",
+  "text": "Стой",
+  "voice": "xenia"
+ },
+ {
+  "key": "efd8f1d9",
+  "text": "Кто",
+  "voice": "xenia"
+ },
+ {
+  "key": "de386522",
+  "text": "нужно",
+  "voice": "xenia"
+ },
+ {
+  "key": "44b17deb",
+  "text": "ищу",
+  "voice": "xenia"
+ },
+ {
+  "key": "1761d51e",
+  "text": "Часовщика",
+  "voice": "xenia"
+ },
+ {
+  "key": "89d05ff8",
+  "text": "задаю",
+  "voice": "xenia"
+ },
+ {
+  "key": "441e8848",
+  "text": "вопросы",
+  "voice": "xenia"
+ },
+ {
+  "key": "a7e199cd",
+  "text": "Сначала",
+  "voice": "xenia"
+ },
+ {
+  "key": "78df0205",
+  "text": "документы",
+  "voice": "xenia"
+ },
+ {
+  "key": "650d3fe5",
+  "text": "Странное",
+  "voice": "xenia"
+ },
+ {
+  "key": "43324357",
+  "text": "Двадцать",
+  "voice": "xenia"
+ },
+ {
+  "key": "df24edfa",
+  "text": "Имеете",
+  "voice": "xenia"
+ },
+ {
+  "key": "3df04ccd",
+  "text": "Лет",
+  "voice": "xenia"
+ },
+ {
+  "key": "83fe429c",
+  "text": "имеют",
+  "voice": "xenia"
+ },
+ {
+  "key": "b9326262",
+  "text": "Подозрительно",
+  "voice": "xenia"
+ },
+ {
+  "key": "5b62a37d",
+  "text": "Работы",
+  "voice": "xenia"
+ },
+ {
+  "key": "fb0d06e0",
+  "text": "ваше",
+  "voice": "xenia"
+ },
+ {
+  "key": "3faa133f",
+  "text": "дело",
+  "voice": "xenia"
+ },
+ {
+  "key": "ab2a9eca",
+  "text": "моё",
+  "voice": "xenia"
+ },
+ {
+  "key": "b0282664",
+  "text": "этом",
+  "voice": "xenia"
+ },
+ {
+  "key": "d2d70a39",
+  "text": "городе",
+  "voice": "xenia"
+ },
+ {
+  "key": "f41b3c16",
+  "text": "зачем",
+  "voice": "xenia"
+ },
+ {
+  "key": "886fcba6",
+  "text": "бабушки",
+  "voice": "xenia"
+ },
+ {
+  "key": "59e066c7",
+  "text": "Друг",
+  "voice": "xenia"
+ },
+ {
+  "key": "31d7e035",
+  "text": "письмо",
+  "voice": "xenia"
+ },
+ {
+  "key": "780e3826",
+  "text": "него",
+  "voice": "xenia"
+ },
+ {
+  "key": "aeb66755",
+  "text": "Письмо",
+  "voice": "xenia"
+ },
+ {
+  "key": "8f9ee3e5",
+  "text": "Покажите",
+  "voice": "xenia"
+ },
+ {
+  "key": "16e32525",
+  "text": "его",
+  "voice": "xenia"
+ },
+ {
+  "key": "0e14d64e",
+  "text": "почерк",
+  "voice": "xenia"
+ },
+ {
+  "key": "2a6d4d9e",
+  "text": "грубый",
+  "voice": "xenia"
+ },
+ {
+  "key": "07b60602",
+  "text": "Но",
+  "voice": "xenia"
+ },
+ {
+  "key": "81233790",
+  "text": "пропал",
+  "voice": "xenia"
+ },
+ {
+  "key": "13ed68b2",
+  "text": "ту",
+  "voice": "xenia"
+ },
+ {
+  "key": "dd84a109",
+  "text": "ночь",
+  "voice": "xenia"
+ },
+ {
+  "key": "222694eb",
+  "text": "Спросите",
+  "voice": "xenia"
+ },
+ {
+  "key": "6b1d0264",
+  "text": "Ольгу",
+  "voice": "xenia"
+ },
+ {
+  "key": "547c6f67",
+  "text": "Петровну",
+  "voice": "xenia"
+ },
+ {
+  "key": "f2b52aca",
+  "text": "библиотеке",
+  "voice": "xenia"
+ },
+ {
+  "key": "20460d18",
+  "text": "Тише",
+  "voice": "xenia"
+ },
+ {
+  "key": "228d7590",
+  "text": "Кого",
+  "voice": "xenia"
+ },
+ {
+  "key": "c8763819",
+  "text": "хотите",
+  "voice": "xenia"
+ },
+ {
+  "key": "1b85d625",
+  "text": "Нина",
+  "voice": "xenia"
+ },
+ {
+  "key": "36463501",
+  "text": "внук",
+  "voice": "xenia"
+ },
+ {
+  "key": "d0856014",
+  "text": "Нины",
+  "voice": "xenia"
+ },
+ {
+  "key": "31a219c2",
+  "text": "детстве",
+  "voice": "xenia"
+ },
+ {
+  "key": "449e0744",
+  "text": "они",
+  "voice": "xenia"
+ },
+ {
+  "key": "0a396830",
+  "text": "лучшими",
+  "voice": "xenia"
+ },
+ {
+  "key": "c6ca1a0a",
+  "text": "друзьями",
+  "voice": "xenia"
+ },
+ {
+  "key": "1750d685",
+  "text": "говорил",
+  "voice": "xenia"
+ },
+ {
+  "key": "96ae22fa",
+  "text": "ней",
+  "voice": "xenia"
+ },
+ {
+  "key": "fa4e5313",
+  "text": "старая",
+  "voice": "xenia"
+ },
+ {
+  "key": "ee99a33c",
+  "text": "ровно",
+  "voice": "xenia"
+ },
+ {
+  "key": "1b7e0585",
+  "text": "полночь",
+  "voice": "xenia"
+ },
+ {
+  "key": "0f058ef4",
+  "text": "же",
+  "voice": "xenia"
+ },
+ {
+  "key": "07a62179",
+  "text": "мастерскую",
+  "voice": "xenia"
+ },
+ {
+  "key": "fc6c265a",
+  "text": "Соня",
+  "voice": "xenia"
+ },
+ {
+  "key": "0692577d",
+  "text": "ученица",
+  "voice": "xenia"
+ },
+ {
+  "key": "d5d70ef2",
+  "text": "города",
+  "voice": "xenia"
+ },
+ {
+  "key": "de1db76d",
+  "text": "Ольга",
+  "voice": "xenia"
+ },
+ {
+  "key": "257c256a",
+  "text": "Петровна",
+  "voice": "xenia"
+ },
+ {
+  "key": "59ddcdb1",
+  "text": "Удачи",
+  "voice": "xenia"
+ },
+ {
+  "key": "ceee2b31",
+  "text": "Мастерская",
+  "voice": "xenia"
+ },
+ {
+  "key": "e7272b83",
+  "text": "закрыта",
+  "voice": "xenia"
+ },
+ {
+  "key": "b5e14861",
+  "text": "Внук",
+  "voice": "xenia"
+ },
+ {
+  "key": "2d74488a",
+  "text": "делает",
+  "voice": "xenia"
+ },
+ {
+  "key": "a0430eed",
+  "text": "игрушки",
+  "voice": "xenia"
+ },
+ {
+  "key": "ca746491",
+  "text": "чиню",
+  "voice": "xenia"
+ },
+ {
+  "key": "000d0ebf",
+  "text": "ваша",
+  "voice": "xenia"
+ },
+ {
+  "key": "6a9f7c5f",
+  "text": "школе",
+  "voice": "xenia"
+ },
+ {
+  "key": "d1cf3b64",
+  "text": "Учительница",
+  "voice": "xenia"
+ },
+ {
+  "key": "0d2de523",
+  "text": "раньше",
+  "voice": "xenia"
+ },
+ {
+  "key": "e8705622",
+  "text": "Работать",
+  "voice": "xenia"
+ },
+ {
+  "key": "788b76cb",
+  "text": "Все",
+  "voice": "xenia"
+ },
+ {
+  "key": "018e8d64",
+  "text": "Десять",
+  "voice": "xenia"
+ },
+ {
+  "key": "b0d048cd",
+  "text": "встаёт",
+  "voice": "xenia"
+ },
+ {
+  "key": "88686507",
+  "text": "опаздывает",
+  "voice": "xenia"
+ },
+ {
+  "key": "4fe92a68",
+  "text": "встаёте",
+  "voice": "xenia"
+ },
+ {
+  "key": "305e8df0",
+  "text": "встаю",
+  "voice": "xenia"
+ },
+ {
+  "key": "64b67cb5",
+  "text": "Никогда",
+  "voice": "xenia"
+ },
+ {
+  "key": "a0e6d922",
+  "text": "Вставать",
+  "voice": "xenia"
+ },
+ {
+  "key": "bc18756c",
+  "text": "Каждое",
+  "voice": "xenia"
+ },
+ {
+  "key": "31f560d5",
+  "text": "открывает",
+  "voice": "xenia"
+ },
+ {
+  "key": "227267e0",
+  "text": "пошёл",
+  "voice": "xenia"
+ },
+ {
+  "key": "87b3424f",
+  "text": "башню",
+  "voice": "xenia"
+ },
+ {
+  "key": "7dbfdde9",
+  "text": "вернулся",
+  "voice": "xenia"
+ },
+ {
+  "key": "3605ad7e",
+  "text": "поможете",
+  "voice": "xenia"
+ },
+ {
+  "key": "b6359841",
+  "text": "понедельника",
+  "voice": "xenia"
+ },
+ {
+  "key": "daefd9d8",
+  "text": "удобно",
+  "voice": "xenia"
+ },
+ {
+  "key": "d3630640",
+  "text": "придёте",
+  "voice": "xenia"
+ },
+ {
+  "key": "bb7f18cf",
+  "text": "Восемь",
+  "voice": "xenia"
+ },
+ {
+  "key": "0ae349b0",
+  "text": "чего",
+  "voice": "xenia"
+ },
+ {
+  "key": "8e4a4126",
+  "text": "Напишите",
+  "voice": "xenia"
+ },
+ {
+  "key": "dd3e4c8c",
+  "text": "книге",
+  "voice": "xenia"
+ },
+ {
+  "key": "5749842d",
+  "text": "гостей",
+  "voice": "xenia"
+ },
+ {
+  "key": "be595d58",
+  "text": "фамилию",
+  "voice": "xenia"
+ },
+ {
+  "key": "0270b9d5",
+  "text": "пишется",
+  "voice": "xenia"
+ },
+ {
+  "key": "b1fafc41",
+  "text": "С-А-Н-Т-О-С",
+  "voice": "xenia"
+ },
+ {
+  "key": "4bdb33ca",
+  "text": "Сантос",
+  "voice": "xenia"
+ },
+ {
+  "key": "51bc84fc",
+  "text": "Красиво",
+  "voice": "xenia"
+ },
+ {
+  "key": "c3fb1897",
+  "text": "С-А-Н-Т-О-З",
+  "voice": "xenia"
+ },
+ {
+  "key": "35db1128",
+  "text": "Сантоз",
+  "voice": "xenia"
+ },
+ {
+  "key": "268f98e8",
+  "text": "буквой",
+  "voice": "xenia"
+ },
+ {
+  "key": "23b70ceb",
+  "text": "живёте",
+  "voice": "xenia"
+ },
+ {
+  "key": "78494100",
+  "text": "живу",
+  "voice": "xenia"
+ },
+ {
+  "key": "ae2b4a45",
+  "text": "чайной",
+  "voice": "xenia"
+ },
+ {
+  "key": "5da45991",
+  "text": "Веры",
+  "voice": "xenia"
+ },
+ {
+  "key": "5aae05f3",
+  "text": "Её",
+  "voice": "xenia"
+ },
+ {
+  "key": "d6aec623",
+  "text": "лучшие",
+  "voice": "xenia"
+ },
+ {
+  "key": "381d18f9",
+  "text": "чайная",
+  "voice": "xenia"
+ },
+ {
+  "key": "961f2eda",
+  "text": "Сердце",
+  "voice": "xenia"
+ },
+ {
+  "key": "f5a160d0",
+  "text": "слышат",
+  "voice": "xenia"
+ },
+ {
+  "key": "fd6c27ed",
+  "text": "Соню",
+  "voice": "xenia"
+ },
+ {
+  "key": "3e966bdf",
+  "text": "Почта",
+  "voice": "xenia"
+ },
+ {
+  "key": "68a3d20a",
+  "text": "Легко",
+  "voice": "xenia"
+ },
+ {
+  "key": "1b99a434",
+  "text": "аптекой",
+  "voice": "xenia"
+ },
+ {
+  "key": "8abb896d",
+  "text": "сначала",
+  "voice": "xenia"
+ },
+ {
+  "key": "b1e3ce09",
+  "text": "Назад",
+  "voice": "xenia"
+ },
+ {
+  "key": "46c61da5",
+  "text": "дальше",
+  "voice": "xenia"
+ },
+ {
+  "key": "8fa92f03",
+  "text": "Читай",
+  "voice": "xenia"
+ },
+ {
+  "key": "e7fd3a29",
+  "text": "адрес",
+  "voice": "xenia"
+ },
+ {
+  "key": "6960e8e1",
+  "text": "Дом",
+  "voice": "xenia"
+ },
+ {
+  "key": "f185e18b",
+  "text": "Речная",
+  "voice": "xenia"
+ },
+ {
+  "key": "0da2125c",
+  "text": "нам",
+  "voice": "xenia"
+ },
+ {
+  "key": "1039422a",
+  "text": "Сорок",
+  "voice": "xenia"
+ },
+ {
+  "key": "f064d468",
+  "text": "Фёдора",
+  "voice": "xenia"
+ },
+ {
+  "key": "ab07fba7",
+  "text": "рыбака",
+  "voice": "xenia"
+ },
+ {
+  "key": "a39efea7",
+  "text": "Речной",
+  "voice": "xenia"
+ },
+ {
+  "key": "42d73f98",
+  "text": "улице",
+  "voice": "xenia"
+ },
+ {
+  "key": "b1186969",
+  "text": "магазины",
+  "voice": "xenia"
+ },
+ {
+  "key": "3faf2444",
+  "text": "кафе",
+  "voice": "xenia"
+ },
+ {
+  "key": "7d647ddc",
+  "text": "баня",
+  "voice": "xenia"
+ },
+ {
+  "key": "ad67be57",
+  "text": "Днём",
+  "voice": "xenia"
+ },
+ {
+  "key": "6fc5459b",
+  "text": "реке",
+  "voice": "xenia"
+ },
+ {
+  "key": "b31bc0c9",
+  "text": "снега",
+  "voice": "xenia"
+ },
+ {
+  "key": "1d20fa2e",
+  "text": "пляжи",
+  "voice": "xenia"
+ },
+ {
+  "key": "08c05a0e",
+  "text": "Пляжи",
+  "voice": "xenia"
+ },
+ {
+  "key": "206015f2",
+  "text": "Бразилию",
+  "voice": "xenia"
+ },
+ {
+  "key": "6e29e08b",
+  "text": "имеет",
+  "voice": "xenia"
+ },
+ {
+  "key": "0470d80d",
+  "text": "Белоречье",
+  "voice": "xenia"
+ },
+ {
+  "key": "93356a60",
+  "text": "магазинов",
+  "voice": "xenia"
+ },
+ {
+  "key": "53df11f4",
+  "text": "Угадай",
+  "voice": "xenia"
+ },
+ {
+  "key": "0618ef38",
+  "text": "магазина",
+  "voice": "xenia"
+ },
+ {
+  "key": "5b7a6cfd",
+  "text": "Пять",
+  "voice": "xenia"
+ },
+ {
+  "key": "186f2d45",
+  "text": "хорошая",
+  "voice": "xenia"
+ },
+ {
+  "key": "598dad9a",
+  "text": "попытка",
+  "voice": "xenia"
+ },
+ {
+  "key": "b6549625",
+  "text": "Для",
+  "voice": "xenia"
+ },
+ {
+  "key": "ce68d01a",
+  "text": "Лошадка",
+  "voice": "xenia"
+ },
+ {
+  "key": "d5a86583",
+  "text": "Дедушка",
+  "voice": "xenia"
+ },
+ {
+  "key": "56e0bf97",
+  "text": "обещал",
+  "voice": "xenia"
+ },
+ {
+  "key": "b3e5a817",
+  "text": "лошадку",
+  "voice": "xenia"
+ },
+ {
+  "key": "7016c3ed",
+  "text": "видел",
+  "voice": "xenia"
+ },
+ {
+  "key": "3bb6f3f3",
+  "text": "фонарём",
+  "voice": "xenia"
+ },
+ {
+  "key": "16086478",
+  "text": "Пойдём",
+  "voice": "xenia"
+ },
+ {
+  "key": "3f066c6d",
+  "text": "к",
+  "voice": "xenia"
+ },
+ {
+  "key": "836428d1",
+  "text": "Фёдору",
+  "voice": "xenia"
+ },
+ {
+  "key": "9971be2d",
+  "text": "рыбак",
+  "voice": "xenia"
+ },
+ {
+  "key": "50ee24a3",
+  "text": "видит",
+  "voice": "xenia"
+ },
+ {
+  "key": "db70ff09",
+  "text": "тобой",
+  "voice": "xenia"
+ },
+ {
+  "key": "a526ebcd",
+  "text": "дядя",
+  "voice": "xenia"
+ },
+ {
+  "key": "4d23fc8a",
+  "text": "Брат",
+  "voice": "xenia"
+ },
+ {
+  "key": "aa4a6d14",
+  "text": "мамы",
+  "voice": "xenia"
+ },
+ {
+  "key": "2f4daca7",
+  "text": "братья",
+  "voice": "xenia"
+ },
+ {
+  "key": "9b63c9c1",
+  "text": "сёстры",
+  "voice": "xenia"
+ },
+ {
+  "key": "9ba2a4a5",
+  "text": "сестры",
+  "voice": "xenia"
+ },
+ {
+  "key": "0d046335",
+  "text": "братьев",
+  "voice": "xenia"
+ },
+ {
+  "key": "a6d89bfd",
+  "text": "сестёр",
+  "voice": "xenia"
+ },
+ {
+  "key": "a3a2b13d",
+  "text": "сестру",
+  "voice": "xenia"
+ },
+ {
+  "key": "c415b8ef",
+  "text": "Имеешь",
+  "voice": "xenia"
+ },
+ {
+  "key": "c45db168",
+  "text": "нашёл",
+  "voice": "xenia"
+ },
+ {
+  "key": "c6f89633",
+  "text": "льду",
+  "voice": "xenia"
+ },
+ {
+  "key": "9b85ed10",
+  "text": "Чей",
+  "voice": "xenia"
+ },
+ {
+  "key": "715ae635",
+  "text": "вашего",
+  "voice": "xenia"
+ },
+ {
+  "key": "ee275eb8",
+  "text": "дяди",
+  "voice": "xenia"
+ },
+ {
+  "key": "0736ad95",
+  "text": "ваш",
+  "voice": "xenia"
+ },
+ {
+  "key": "41442b15",
+  "text": "Вашего",
+  "voice": "xenia"
+ },
+ {
+  "key": "1b0daed2",
+  "text": "женщину",
+  "voice": "xenia"
+ },
+ {
+  "key": "9195b7bd",
+  "text": "странную",
+  "voice": "xenia"
+ },
+ {
+  "key": "44a598e6",
+  "text": "расскажу",
+  "voice": "xenia"
+ },
+ {
+  "key": "2d246990",
+  "text": "высокая",
+  "voice": "xenia"
+ },
+ {
+  "key": "0d18439c",
+  "text": "белые",
+  "voice": "xenia"
+ },
+ {
+  "key": "1461687f",
+  "text": "лёд",
+  "voice": "xenia"
+ },
+ {
+  "key": "209bc58d",
+  "text": "белое",
+  "voice": "xenia"
+ },
+ {
+  "key": "f3e33d42",
+  "text": "Снежная",
+  "voice": "xenia"
+ },
+ {
+  "key": "0f7160cd",
+  "text": "Дама",
+  "voice": "xenia"
+ },
+ {
+  "key": "635a9809",
+  "text": "сказки",
+  "voice": "xenia"
+ },
+ {
+  "key": "91315429",
+  "text": "Сказки",
+  "voice": "xenia"
+ },
+ {
+  "key": "080cc88e",
+  "text": "повтори",
+  "voice": "xenia"
+ },
+ {
+  "key": "71074d99",
+  "text": "Точно",
+  "voice": "xenia"
+ },
+ {
+  "key": "1f9a7869",
+  "text": "слушаешь",
+  "voice": "xenia"
+ },
+ {
+  "key": "6d4c088a",
+  "text": "Высокий",
+  "voice": "xenia"
+ },
+ {
+  "key": "a907e7fb",
+  "text": "пошла",
+  "voice": "xenia"
+ },
+ {
+  "key": "983e59f5",
+  "text": "Будь",
+  "voice": "xenia"
+ },
+ {
+  "key": "96a50132",
+  "text": "осторожен",
+  "voice": "xenia"
+ },
+ {
+  "key": "4cd83ec8",
+  "text": "Фёдор",
+  "voice": "xenia"
+ },
+ {
+  "key": "d8610784",
+  "text": "ребята",
+  "voice": "xenia"
+ },
+ {
+  "key": "83f1299e",
+  "text": "будешь",
+  "voice": "xenia"
+ },
+ {
+  "key": "3d0815f5",
+  "text": "бы",
+  "voice": "xenia"
+ },
+ {
+  "key": "7b3c5541",
+  "text": "Борщ",
+  "voice": "xenia"
+ },
+ {
+  "key": "87dfe996",
+  "text": "Со",
+  "voice": "xenia"
+ },
+ {
+  "key": "aaa38851",
+  "text": "сметаной",
+  "voice": "xenia"
+ },
+ {
+  "key": "941c44e4",
+  "text": "Пельмени",
+  "voice": "xenia"
+ },
+ {
+  "key": "e7e59585",
+  "text": "Мои",
+  "voice": "xenia"
+ },
+ {
+  "key": "2f5ebc27",
+  "text": "любимые",
+  "voice": "xenia"
+ },
+ {
+  "key": "9d0386a9",
+  "text": "хотеть",
+  "voice": "xenia"
+ },
+ {
+  "key": "da11587c",
+  "text": "сока",
+  "voice": "xenia"
+ },
+ {
+  "key": "b33f4d54",
+  "text": "Яблочный",
+  "voice": "xenia"
+ },
+ {
+  "key": "0a70de7d",
+  "text": "чашку",
+  "voice": "xenia"
+ },
+ {
+  "key": "1a6bbe97",
+  "text": "чая",
+  "voice": "xenia"
+ },
+ {
+  "key": "e6cca9db",
+  "text": "Стакан",
+  "voice": "xenia"
+ },
+ {
+  "key": "cb926c65",
+  "text": "Хлеба",
+  "voice": "xenia"
+ },
+ {
+  "key": "ffc6fa47",
+  "text": "Извини",
+  "voice": "xenia"
+ },
+ {
+  "key": "45fbfdc5",
+  "text": "хлеба",
+  "voice": "xenia"
+ },
+ {
+  "key": "74694bb8",
+  "text": "Сметана",
+  "voice": "xenia"
+ },
+ {
+  "key": "cd839831",
+  "text": "Много",
+  "voice": "xenia"
+ },
+ {
+  "key": "235ac40f",
+  "text": "прислал",
+  "voice": "xenia"
+ },
+ {
+  "key": "bfcec89c",
+  "text": "рыбу",
+  "voice": "xenia"
+ },
+ {
+  "key": "78a8373f",
+  "text": "уха",
+  "voice": "xenia"
+ },
+ {
+  "key": "22881c1f",
+  "text": "делать",
+  "voice": "xenia"
+ },
+ {
+  "key": "6236c81e",
+  "text": "любят",
+  "voice": "xenia"
+ },
+ {
+  "key": "933bad5b",
+  "text": "кататься",
+  "voice": "xenia"
+ },
+ {
+  "key": "805decfd",
+  "text": "коньках",
+  "voice": "xenia"
+ },
+ {
+  "key": "281faa69",
+  "text": "Плавать",
+  "voice": "xenia"
+ },
+ {
+  "key": "ba31b2ef",
+  "text": "Летом",
+  "voice": "xenia"
+ },
+ {
+  "key": "9893bd2b",
+  "text": "Танцевать",
+  "voice": "xenia"
+ },
+ {
+  "key": "2d70c772",
+  "text": "Масленицу",
+  "voice": "xenia"
+ },
+ {
+  "key": "6f6122b2",
+  "text": "читаю",
+  "voice": "xenia"
+ },
+ {
+  "key": "a0d326be",
+  "text": "Люблю",
+  "voice": "xenia"
+ },
+ {
+  "key": "3ba58abb",
+  "text": "расскажи",
+  "voice": "xenia"
+ },
+ {
+  "key": "b3e4153a",
+  "text": "Снежную",
+  "voice": "xenia"
+ },
+ {
+  "key": "5c71da04",
+  "text": "Даму",
+  "voice": "xenia"
+ },
+ {
+  "key": "c66a031f",
+  "text": "Давным-давно",
+  "voice": "xenia"
+ },
+ {
+  "key": "e2ec9b8c",
+  "text": "хотела",
+  "voice": "xenia"
+ },
+ {
+  "key": "0bc356ea",
+  "text": "чтобы",
+  "voice": "xenia"
+ },
+ {
+  "key": "09395275",
+  "text": "сделал",
+  "voice": "xenia"
+ },
+ {
+  "key": "370a8369",
+  "text": "приходит",
+  "voice": "xenia"
+ },
+ {
+  "key": "c68be379",
+  "text": "Тот",
+  "voice": "xenia"
+ },
+ {
+  "key": "287f47e3",
+  "text": "дедушка",
+  "voice": "xenia"
+ },
+ {
+  "key": "92c3991e",
+  "text": "нашего",
+  "voice": "xenia"
+ },
+ {
+  "key": "ea6b8ae0",
+  "text": "наелся",
+  "voice": "xenia"
+ },
+ {
+  "key": "a3038aa8",
+  "text": "Деньги",
+  "voice": "xenia"
+ },
+ {
+  "key": "842a6165",
+  "text": "мои",
+  "voice": "xenia"
+ },
+ {
+  "key": "0060c2d3",
+  "text": "Ужин",
+  "voice": "xenia"
+ },
+ {
+  "key": "933415db",
+  "text": "напиток",
+  "voice": "xenia"
+ },
+ {
+  "key": "9c71762f",
+  "text": "Масленица",
+  "voice": "xenia"
+ },
+ {
+  "key": "530ec416",
+  "text": "Праздник",
+  "voice": "xenia"
+ },
+ {
+  "key": "5870e953",
+  "text": "весны",
+  "voice": "xenia"
+ },
+ {
+  "key": "43d6a0ce",
+  "text": "какая",
+  "voice": "xenia"
+ },
+ {
+  "key": "654292f4",
+  "text": "без",
+  "voice": "xenia"
+ },
+ {
+  "key": "31aae8d6",
+  "text": "первого",
+  "voice": "xenia"
+ },
+ {
+  "key": "b9083f70",
+  "text": "если",
+  "voice": "xenia"
+ },
+ {
+  "key": "9e00c038",
+  "text": "пойдут",
+  "voice": "xenia"
+ },
+ {
+  "key": "599dccf5",
+  "text": "придёт",
+  "voice": "xenia"
+ },
+ {
+  "key": "99e829d5",
+  "text": "Пятнадцатого",
+  "voice": "xenia"
+ },
+ {
+  "key": "ad39ac7a",
+  "text": "мая",
+  "voice": "xenia"
+ },
+ {
+  "key": "d24333df",
+  "text": "Весной",
+  "voice": "xenia"
+ },
+ {
+  "key": "f2cafdf6",
+  "text": "Пятнадцать",
+  "voice": "xenia"
+ },
+ {
+  "key": "26d173b5",
+  "text": "пятнадцатого",
+  "voice": "xenia"
+ },
+ {
+  "key": "ddcf786a",
+  "text": "какое",
+  "voice": "xenia"
+ },
+ {
+  "key": "19ebfc90",
+  "text": "года",
+  "voice": "xenia"
+ },
+ {
+  "key": "6070f5eb",
+  "text": "весну",
+  "voice": "xenia"
+ },
+ {
+  "key": "e678577a",
+  "text": "Скорее",
+  "voice": "xenia"
+ },
+ {
+  "key": "7442d689",
+  "text": "Лето",
+  "voice": "xenia"
+ },
+ {
+  "key": "81044b13",
+  "text": "зиму",
+  "voice": "xenia"
+ },
+ {
+  "key": "b4973973",
+  "text": "Зиму",
+  "voice": "xenia"
+ },
+ {
+  "key": "d8f932bc",
+  "text": "говори",
+  "voice": "xenia"
+ },
+ {
+  "key": "5081dc84",
+  "text": "громко",
+  "voice": "xenia"
+ },
+ {
+  "key": "a5a7d298",
+  "text": "слышит",
+  "voice": "xenia"
+ },
+ {
+  "key": "b5701572",
+  "text": "праздника",
+  "voice": "xenia"
+ },
+ {
+  "key": "e0386848",
+  "text": "нужна",
+  "voice": "xenia"
+ },
+ {
+  "key": "86cdd617",
+  "text": "тёплая",
+  "voice": "xenia"
+ },
+ {
+  "key": "30411f6c",
+  "text": "одежда",
+  "voice": "xenia"
+ },
+ {
+  "key": "2b38de59",
+  "text": "нужны",
+  "voice": "xenia"
+ },
+ {
+  "key": "a0960a3d",
+  "text": "Примерь",
+  "voice": "xenia"
+ },
+ {
+  "key": "1628c6f6",
+  "text": "этот",
+  "voice": "xenia"
+ },
+ {
+  "key": "a75f0796",
+  "text": "Этот",
+  "voice": "xenia"
+ },
+ {
+  "key": "c4eb1fd7",
+  "text": "Слишком",
+  "voice": "xenia"
+ },
+ {
+  "key": "e894655d",
+  "text": "маленькие",
+  "voice": "xenia"
+ },
+ {
+  "key": "ddcbcb3f",
+  "text": "побольше",
+  "voice": "xenia"
+ },
+ {
+  "key": "1d10fa91",
+  "text": "много",
+  "voice": "xenia"
+ },
+ {
+  "key": "ee6dc83e",
+  "text": "отличные",
+  "voice": "xenia"
+ },
+ {
+  "key": "52c1b506",
+  "text": "Их",
+  "voice": "xenia"
+ },
+ {
+  "key": "2c130094",
+  "text": "подарок",
+  "voice": "xenia"
+ },
+ {
+  "key": "0e45c324",
+  "text": "вон",
+  "voice": "xenia"
+ },
+ {
+  "key": "fded4610",
+  "text": "те",
+  "voice": "xenia"
+ },
+ {
+  "key": "a48aaa97",
+  "text": "красные",
+  "voice": "xenia"
+ },
+ {
+  "key": "feb364f7",
+  "text": "Красные",
+  "voice": "xenia"
+ },
+ {
+  "key": "aa66fc2c",
+  "text": "синие",
+  "voice": "xenia"
+ },
+ {
+  "key": "af443daa",
+  "text": "твоих",
+  "voice": "xenia"
+ },
+ {
+  "key": "13a1286a",
+  "text": "рук",
+  "voice": "xenia"
+ },
+ {
+  "key": "9999a80a",
+  "text": "Чтобы",
+  "voice": "xenia"
+ },
+ {
+  "key": "a0c22f42",
+  "text": "сказала",
+  "voice": "xenia"
+ },
+ {
+  "key": "fed02ec5",
+  "text": "ночью",
+  "voice": "xenia"
+ },
+ {
+  "key": "3c63f443",
+  "text": "нашла",
+  "voice": "xenia"
+ },
+ {
+  "key": "465b2321",
+  "text": "Опять",
+  "voice": "xenia"
+ },
+ {
+  "key": "6e329958",
+  "text": "метель",
+  "voice": "xenia"
+ },
+ {
+  "key": "b896e9fc",
+  "text": "именно",
+  "voice": "xenia"
+ },
+ {
+  "key": "d97d0d73",
+  "text": "Просто",
+  "voice": "xenia"
+ },
+ {
+  "key": "e9ea373e",
+  "text": "Дверь",
+  "voice": "xenia"
+ },
+ {
+  "key": "d1e661ab",
+  "text": "ключа",
+  "voice": "xenia"
+ },
+ {
+  "key": "7f6aea11",
+  "text": "умеете",
+  "voice": "xenia"
+ },
+ {
+  "key": "12aa5884",
+  "text": "открывать",
+  "voice": "xenia"
+ },
+ {
+  "key": "afbb80f8",
+  "text": "замки",
+  "voice": "xenia"
+ },
+ {
+  "key": "e3f97454",
+  "text": "попробовать",
+  "voice": "xenia"
+ },
+ {
+  "key": "6a3e446d",
+  "text": "Честный",
+  "voice": "xenia"
+ },
+ {
+  "key": "dd16b684",
+  "text": "открываю",
+  "voice": "xenia"
+ },
+ {
+  "key": "d49144f9",
+  "text": "Умею",
+  "voice": "xenia"
+ },
+ {
+  "key": "2f1300c3",
+  "text": "чертеже",
+  "voice": "xenia"
+ },
+ {
+  "key": "1af0bb13",
+  "text": "её",
+  "voice": "xenia"
+ },
+ {
+  "key": "6b9c2d5c",
+  "text": "идём",
+  "voice": "xenia"
+ },
+ {
+  "key": "6e6546e7",
+  "text": "Знаю",
+  "voice": "xenia"
+ },
+ {
+  "key": "8696b908",
+  "text": "Даже",
+  "voice": "xenia"
+ },
+ {
+  "key": "48ec75f7",
+  "text": "зимой",
+  "voice": "xenia"
+ },
+ {
+  "key": "dbe612fa",
+  "text": "Поэтому",
+  "voice": "xenia"
+ },
+ {
+  "key": "444bfea3",
+  "text": "спасём",
+  "voice": "xenia"
+ },
+ {
+  "key": "1ecd653e",
+  "text": "нравлюсь",
+  "voice": "xenia"
+ },
+ {
+  "key": "a534617e",
+  "text": "нравишься",
+  "voice": "xenia"
+ },
+ {
+  "key": "c9707b2c",
+  "text": "Белоречью",
+  "voice": "xenia"
+ },
+ {
+  "key": "ce53272c",
+  "text": "Слушайте",
+  "voice": "xenia"
+ },
+ {
+  "key": "0f87a88c",
+  "text": "Кто-то",
+  "voice": "xenia"
+ },
+ {
+  "key": "67c0803d",
+  "text": "бежит",
+  "voice": "xenia"
+ },
+ {
+  "key": "080a3510",
+  "text": "по",
+  "voice": "xenia"
+ },
+ {
+  "key": "2faea9ba",
+  "text": "лестнице",
+  "voice": "xenia"
+ },
+ {
+  "key": "d187e7dc",
+  "text": "Быстрее",
+  "voice": "xenia"
+ },
+ {
+  "key": "21aab376",
+  "text": "Фонарь",
+  "voice": "xenia"
+ },
+ {
+  "key": "71a0e33b",
+  "text": "бежать",
+  "voice": "xenia"
+ },
+ {
+  "key": "c685345b",
+  "text": "Бежать",
+  "voice": "xenia"
+ },
+ {
+  "key": "03227d1d",
+  "text": "Бежит",
+  "voice": "xenia"
+ },
+ {
+  "key": "cd8b4875",
+  "text": "думал",
+  "voice": "xenia"
+ },
+ {
+  "key": "6b5aa4a1",
+  "text": "сказка",
+  "voice": "xenia"
+ },
+ {
+  "key": "0c9e3320",
+  "text": "Шестерёнка",
+  "voice": "xenia"
+ },
+ {
+  "key": "cedba5ba",
+  "text": "сердце",
+  "voice": "xenia"
+ },
+ {
+  "key": "a5a2611e",
+  "text": "уронила",
+  "voice": "xenia"
+ },
+ {
+  "key": "50e35678",
+  "text": "Помогите",
+  "voice": "xenia"
+ },
+ {
+  "key": "592d8962",
+  "text": "Наверх",
+  "voice": "xenia"
+ },
+ {
+  "key": "16e35890",
+  "text": "быстро",
+  "voice": "xenia"
+ },
+ {
+  "key": "f4cb9574",
+  "text": "холодный",
+  "voice": "xenia"
+ },
+ {
+  "key": "57438700",
+  "text": "шестерёнка",
+  "voice": "xenia"
+ },
+ {
+  "key": "6fe1da67",
+  "text": "Поставь",
+  "voice": "xenia"
+ },
+ {
+  "key": "79af1e38",
+  "text": "лестницу",
+  "voice": "xenia"
+ },
+ {
+  "key": "1ef81dc2",
+  "text": "Тик-так",
+  "voice": "xenia"
+ },
+ {
+  "key": "5015cdc1",
+  "text": "мальчик",
+  "voice": "xenia"
+ },
+ {
+  "key": "1210db95",
+  "text": "приехал",
+  "voice": "xenia"
+ },
+ {
+  "key": "2c2e6f4e",
+  "text": "получил",
+  "voice": "xenia"
+ },
+ {
+  "key": "a48fdd57",
+  "text": "ярмарке",
+  "voice": "xenia"
+ },
+ {
+  "key": "c2ebb4bf",
+  "text": "племянник",
+  "voice": "xenia"
+ },
+ {
+  "key": "0e0fb76a",
+  "text": "Нет-нет",
+  "voice": "xenia"
+ },
+ {
+  "key": "fc0efb2d",
+  "text": "мастерской",
+  "voice": "xenia"
+ },
+ {
+  "key": "c541fad9",
+  "text": "Каждый",
+  "voice": "xenia"
+ },
+ {
+  "key": "236309ae",
+  "text": "ждала",
+  "voice": "xenia"
+ },
+ {
+  "key": "1c6dfb7b",
+  "text": "сильная",
+  "voice": "xenia"
+ },
+ {
+  "key": "cef44680",
+  "text": "взяла",
+  "voice": "xenia"
+ },
+ {
+  "key": "0007a374",
+  "text": "осталась",
+  "voice": "xenia"
+ },
+ {
+  "key": "f5667e14",
+  "text": "Смелый",
+  "voice": "xenia"
+ },
+ {
+  "key": "d98ea745",
+  "text": "страшный",
+  "voice": "xenia"
+ },
+ {
+  "key": "cb30b2e5",
+  "text": "Страшный",
+  "voice": "xenia"
+ },
+ {
+  "key": "50ff7f19",
+  "text": "Смотрите",
+  "voice": "xenia"
+ },
+ {
+  "key": "e1da00c7",
+  "text": "Солнце",
+  "voice": "xenia"
+ },
+ {
+  "key": "201fc4ff",
+  "text": "капает",
+  "voice": "xenia"
+ },
+ {
+  "key": "13dc3423",
+  "text": "Снег",
+  "voice": "xenia"
+ },
+ {
+  "key": "763fdc04",
+  "text": "тает",
+  "voice": "xenia"
+ },
+ {
+  "key": "b0b04cd0",
+  "text": "смелые",
+  "voice": "xenia"
+ },
+ {
+  "key": "d242db37",
+  "text": "сделали",
+  "voice": "xenia"
+ },
+ {
+  "key": "68d916c4",
+  "text": "Вместе",
+  "voice": "xenia"
+ },
+ {
+  "key": "1b13c4d0",
+  "text": "побеждают",
+  "voice": "xenia"
+ },
+ {
+  "key": "f0881e79",
+  "text": "пришла",
+  "voice": "xenia"
+ },
+ {
+  "key": "4d64925f",
+  "text": "Блины",
+  "voice": "xenia"
+ },
+ {
+  "key": "23884904",
+  "text": "героя",
+  "voice": "xenia"
+ },
+ {
+  "key": "122af42e",
+  "text": "вернёшься",
+  "voice": "xenia"
+ },
+ {
+  "key": "59b13701",
+  "text": "вернусь",
+  "voice": "xenia"
+ },
+ {
+  "key": "32eefc4d",
+  "text": "ушла",
+  "voice": "xenia"
+ },
+ {
+  "key": "7ac960ce",
+  "text": "север",
+  "voice": "xenia"
+ },
+ {
+  "key": "3bf6b694",
+  "text": "вернётся",
+  "voice": "xenia"
+ },
+ {
+  "key": "45f0ff0e",
+  "text": "другая",
+  "voice": "xenia"
+ },
+ {
+  "key": "95f101a7",
+  "text": "история",
+  "voice": "xenia"
+ },
+ {
+  "key": "0c31bb6d",
+  "text": "чаевые",
+  "voice": "xenia"
+ },
+ {
+  "key": "853df234",
+  "text": "шестнадцать",
+  "voice": "xenia"
+ },
+ {
+  "key": "c8059dd4",
+  "text": "семнадцать",
+  "voice": "xenia"
+ },
+ {
+  "key": "c15359e0",
+  "text": "восемнадцать",
+  "voice": "xenia"
+ },
+ {
+  "key": "77a0109c",
+  "text": "девятнадцать",
+  "voice": "xenia"
+ },
+ {
+  "key": "4ec27dd0",
+  "text": "тут",
+  "voice": "xenia"
+ },
+ {
+  "key": "9e058af5",
+  "text": "ноль",
+  "voice": "xenia"
+ },
+ {
+  "key": "00f74a82",
+  "text": "Нужно",
+  "voice": "xenia"
+ },
+ {
+  "key": "773d3974",
+  "text": "краткое",
+  "voice": "xenia"
+ },
+ {
+  "key": "5b46bfc8",
+  "text": "твёрдый",
+  "voice": "xenia"
+ },
+ {
+  "key": "c6ead1eb",
+  "text": "знак",
+  "voice": "xenia"
+ },
+ {
+  "key": "97a6611a",
+  "text": "мягкий",
+  "voice": "xenia"
+ }
+]

@@ -53,7 +53,10 @@ for (const t of [...out.keys()]) for (const w of t.match(/[\p{L}\p{M}\p{N}]+(?:[
 // What the voice actually reads, when it differs from the text on screen: "*" is a name the learner
 // says, and the Latin words in the Russian lines are spelled in Cyrillic so the voice can read them.
 const LATIN = { obrigado: "обригадо" };
+// a lone letter the voice cannot say by itself
+const SPELL = { "ё": "йо" };
 const ttsOf = t => {
+  if (SPELL[t]) return SPELL[t];
   let s = t.replace(/\*/g, "Тео").replace(/[A-Za-z]+/g, w => LATIN[w.toLowerCase()] || w);
   return s === t ? null : s;
 };
