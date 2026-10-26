@@ -611,7 +611,44 @@ textarea.lines::placeholder{color:#a3acbb}
   .l-foot .btn{width:100%}
   .fb .mark{width:44px;height:44px}
 }
-@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+
+/* motion: one set of curves for the whole app (strong ease-out for things that appear, iOS sheet curve for panels) */
+:root{--ease-out:cubic-bezier(.23,1,.32,1);--ease-in-out:cubic-bezier(.77,0,.175,1);--ease-drawer:cubic-bezier(.32,.72,0,1)}
+/* every tappable thing answers the finger: tiles sink a little, small buttons shrink a little */
+.opt,.ptile,.wt,.ex,.obj,.chip,.coin,.talk-row,.lang-btn,.stat,.nav button,.guide-btn,.l-top .x,.lang-menu button,.linkish,.bag-btn,.sy-pause,.say,.switch{
+  transition:transform 160ms var(--ease-out),background-color 150ms ease,border-color 150ms ease,color 150ms ease}
+.opt:active:not(:disabled),.ptile:active:not(:disabled),.wt:active:not(:disabled),.ex:active,.obj:active:not(:disabled){transform:translateY(2px)}
+.chip:active,.coin:active:not(:disabled),.talk-row:active,.lang-btn:active,.stat:active,.nav button:active,.guide-btn:active,.l-top .x:active,
+.lang-menu button:active,.linkish:active,.bag-btn:active,.sy-pause:active,.say:active{transform:scale(.95)}
+.coin.on:active:not(:disabled){transform:translateY(-6px) scale(.95)}
+.speak{transition:transform 80ms,box-shadow 80ms}
+.switch::after{transition:transform 200ms var(--ease-out)}
+.bar i{transition:width .5s var(--ease-out)}
+/* menus grow from the button that opened them; windows from the middle */
+@keyframes popin{from{opacity:0;scale:.96}}
+.lang-menu{transform-origin:top left;animation:popin 160ms var(--ease-out) both}
+.pop{transform-origin:top center;animation:popin 180ms var(--ease-out) both}
+.modal:not([hidden]){animation:fadein 200ms ease both}
+.modal-box{animation:popin 240ms var(--ease-out) both}
+.toast,.rw{animation-timing-function:var(--ease-out)}
+/* the lesson opens like a sheet from below */
+@keyframes sheetin{from{opacity:0;translate:0 28px}}
+.lesson:not([hidden]){animation:sheetin 320ms var(--ease-drawer) both}
+/* a new step slides in, one piece after the other; tapping inside the same step moves nothing */
+@property --d{syntax:"<time>";inherits:false;initial-value:0ms}  /* each piece keeps its own delay */
+@keyframes stepin{from{opacity:0;translate:0 10px}}
+.l-in.fresh:not(.vn):not(.talk) > *,.l-in.fresh .vn-box > *,.l-in.talk.fresh .chat > .bub:last-child,.l-in.talk.fresh .your-turn{animation:stepin 280ms var(--ease-out) var(--d,0ms) both}
+.l-in.fresh > :nth-child(2),.l-in.fresh .vn-box > :nth-child(2){--d:40ms}
+.l-in.fresh > :nth-child(3),.l-in.fresh .vn-box > :nth-child(3){--d:80ms}
+.l-in.fresh > :nth-child(4),.l-in.fresh .vn-box > :nth-child(4){--d:120ms}
+.l-in.fresh > :nth-child(n+5),.l-in.fresh .vn-box > :nth-child(n+5){--d:160ms}
+.l-in.talk .bub{animation:none}
+.l-foot.fresh .l-foot-in{animation:stepin 240ms var(--ease-out) both}
+.stage.same .lay.hd,.stage.same .actor:not(.enter){animation:none}
+/* less motion asked: nothing slides or bounces, but things still fade in so changes are not abrupt */
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}
+  .modal:not([hidden]),.modal-box,.toast,.lesson:not([hidden]),.l-in.fresh:not(.vn):not(.talk) > *,.l-in.fresh .vn-box > *,.l-foot.fresh .l-foot-in,.lang-menu,.pop{animation:fadein 180ms ease both!important}
+  .opt,.ptile,.wt,.chip,.talk-row,.nav button,.stat{transition:background-color 150ms ease,border-color 150ms ease,color 150ms ease!important}}
 </style>
 </head>
 <body>
@@ -915,7 +952,8 @@ const SFX = {
   coin() { tone(988, 0, .08, "square", .05); tone(1319, .07, .3, "square", .05); },
   combo() { tone(880, 0, .08, "sine", .1); tone(1320, .05, .14, "sine", .1); },
 };
-const sfx = n => { if (S.sound) SFX[n](); };
+const HAPTIC = { ok: 12, combo: [12, 50, 18], bad: [28, 60, 28] };
+const sfx = n => { if (!S.sound) return; SFX[n](); if (HAPTIC[n] && navigator.vibrate) try { navigator.vibrate(HAPTIC[n]); } catch (e) {} };
 
 let voices = [];
 function loadVoices() { try { voices = speechSynthesis.getVoices() || []; } catch { voices = []; } }
@@ -1464,6 +1502,21 @@ function resultHtml(r) {
   return `<div class="score ${cls}"><b>${r.score}%</b><div class="bar"><i style="width:${Math.max(4, r.score)}%"></i></div></div>
     <div class="said">${words}</div>${r.heard ? `<p class="heard">Entendi: “${esc(r.heard)}”</p>` : ""}`;
 }
+// Swaps the lesson screen without the flicker of a full redraw: the progress bar grows from where it was,
+// the backdrop and portraits stay still while the scene is the same, and only a new step slides in.
+let paintStep = null;
+function paintLesson(html, step) {
+  const el = $("#lesson"), was = el.querySelector(".l-top .bar i"), w = was && was.style.width,
+    scene = (el.querySelector(".stage") || {}).className, foot = (el.querySelector(".l-foot") || {}).className;
+  const fresh = step !== paintStep || !el.firstChild; paintStep = step;
+  el.innerHTML = html;
+  const inn = el.querySelector(".l-in"); if (fresh && inn) inn.classList.add("fresh");
+  const st = el.querySelector(".stage"), bg = c => (/bg-\S+/.exec(c || "") || [])[0];
+  if (st && scene && bg(st.className) === bg(scene)) st.classList.add("same");
+  const ft = el.querySelector(".l-foot"); if (ft && foot != null && ft.className !== foot) ft.classList.add("fresh");
+  const bar = el.querySelector(".l-top .bar i");
+  if (bar && w && bar.style.width !== w && !reduceMotion) { const to = bar.style.width; bar.style.width = w; void bar.offsetWidth; bar.style.width = to; }
+}
 function renderLesson() {
   const it = curItem(); prepare(it);
   const lang = LS.lang, Ln = LANGS[lang], pct = LS.total ? LS.graded / LS.total * 100 : 100;
@@ -1548,8 +1601,8 @@ function renderLesson() {
     }
   }
   const hearts = LS.mode !== "lesson" || LS.speechTest ? `<span class="l-hearts inf" title="Não gasta vidas">${I(LS.mode === "review" ? "target" : "mic")}</span>` : `<span class="l-hearts" title="Vidas">${I("heart")}${S.hearts}</span>`;
-  $("#lesson").innerHTML = `<div class="l-top"><button class="x" data-act="quit" aria-label="Sair da lição">${I("x")}</button><div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="${LS.total}" aria-valuenow="${LS.graded}"><i style="width:${pct}%"></i></div>${hearts}</div>
-    <div class="l-body"><div class="l-in">${body}</div></div><div class="l-foot ${["ok", "bad", "soft"].includes(LS.state) ? LS.state : ""}" id="lfoot">${footHtml(it)}</div>`;
+  paintLesson(`<div class="l-top"><button class="x" data-act="quit" aria-label="Sair da lição">${I("x")}</button><div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="${LS.total}" aria-valuenow="${LS.graded}"><i style="width:${pct}%"></i></div>${hearts}</div>
+    <div class="l-body"><div class="l-in">${body}</div></div><div class="l-foot ${["ok", "bad", "soft"].includes(LS.state) ? LS.state : ""}" id="lfoot">${footHtml(it)}</div>`, it);
   const ta = $("#typeIn");
   if (ta) { ta.addEventListener("input", () => { it.typed = ta.value; updateCheck(); }); if (LS.state === "answer") setTimeout(() => ta.focus(), 30); }
 }
@@ -1758,7 +1811,7 @@ function finish() {
   const spkSub = spkAvg == null ? "" : spkAvg >= GREAT ? " Sua pronúncia está ótima." : spkAvg >= PASS ? " Sua fala já dá para entender bem." : " Continue falando em voz alta: a pronúncia melhora com a repetição.";
   const title = LS.mode === "review" ? "Treino concluído!" : LS.mode === "practice" ? "Treino de fala concluído!" : LS.speechTest ? "Prova de fala concluída!" : perfect ? "Lição perfeita!" : "Lição concluída!";
   const sub = (LS.mode === "review" ? "Sua memória agradece." : LS.mode === "practice" || LS.speechTest ? "Falar em voz alta todo dia é o que treina o sotaque." : perfect ? "Nenhum erro. Impressionante." : `Você errou ${LS.mistakes} ${LS.mistakes === 1 ? "vez" : "vezes"} e corrigiu tudo.`) + spkSub;
-  $("#lesson").innerHTML = `<div class="l-body"><div class="end">
+  paintLesson(`<div class="l-body"><div class="end">
     <div style="color:var(--gold)">${I(perfect ? "trophy" : "star", "i tower-big")}</div>
     <h1>${title}</h1><p class="sub">${sub}</p>
     <div class="end-stats">
@@ -1769,7 +1822,7 @@ function finish() {
       ${spkAvg != null ? `<div class="es" style="--c:var(--lang)"><span>Pronúncia</span><b>${I("mic")}${spkAvg}%</b></div>` : ""}
     </div>
     <div class="rewards">${rewards.join("")}</div>
-  </div></div><div class="l-foot"><div class="l-foot-in" style="justify-content:flex-end"><button class="btn" data-act="endDone">Continuar</button></div></div>`;
+  </div></div><div class="l-foot"><div class="l-foot-in" style="justify-content:flex-end"><button class="btn" data-act="endDone">Continuar</button></div></div>`, "end");
   sfx(lvAfter > lvBefore ? "level" : "done");
   confetti(perfect || lvAfter > lvBefore ? 220 : 120);
   LS.finished = true;
@@ -1844,10 +1897,10 @@ function renderTalk() {
     ${TK.hint ? `<p class="hint">Dica: <b>${esc(st.say)}</b> <span class="muted">· ${esc(st.sayPt)}</span></p>` : ""}
     ${TK.chosen != null && !self ? `<p class="hint">Agora diga em voz alta: <b>${esc(TK.opts[TK.chosen])}</b></p>` : ""}
     ${optsHtml}</div>`;
-  $("#lesson").innerHTML = `<div class="l-top"><button class="x" data-act="talkQuit" aria-label="Sair da conversa">${I("x")}</button><div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="${total}" aria-valuenow="${TK.i}"><i style="width:${pct}%"></i></div><span class="l-hearts inf" title="Conversa não gasta vidas">${I("chat")}</span></div>
+  paintLesson(`<div class="l-top"><button class="x" data-act="talkQuit" aria-label="Sair da conversa">${I("x")}</button><div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="${total}" aria-valuenow="${TK.i}"><i style="width:${pct}%"></i></div><span class="l-hearts inf" title="Conversa não gasta vidas">${I("chat")}</span></div>
     <div class="l-body" id="talkBody"><div class="l-in talk"><div class="scene"><span class="l-tag">${I("chat")}${esc(TK.talk.lvl)} · Conversa</span><h2>${esc(TK.talk.t)}</h2><p class="muted">${esc(TK.talk.place)}</p></div>
       <div class="chat">${TK.log.map(bubbleHtml).join("")}</div>${turn}</div></div>
-    <div class="l-foot ${TK.fb ? (TK.fb.ok ? "ok" : "soft") : ""}">${talkFoot(self)}</div>`;
+    <div class="l-foot ${TK.fb ? (TK.fb.ok ? "ok" : "soft") : ""}">${talkFoot(self)}</div>`, "t" + TK.i + (TK.fb ? "f" : ""));
   const b = $("#talkBody"); b.scrollTop = b.scrollHeight;
 }
 function talkFoot(self) {
@@ -1918,7 +1971,7 @@ function renderTalkEnd() {
   for (const q of e.quests) rewards.push(`<div class="rw" style="color:var(--xp)">${I("target")}<div>Missão cumprida: ${esc(q.text)}<small>+${q.reward} moedas</small></div></div>`);
   for (const a of e.achs) rewards.push(`<div class="rw" style="color:var(--gold-dark)">${I("medal")}<div>Conquista: ${esc(a.name)}<small>${esc(a.desc)} · +${ACH_REWARD} moedas</small></div></div>`);
   const stars = e.avg == null ? 0 : starsOf(e.avg);
-  $("#lesson").innerHTML = `<div class="l-body"><div class="end">
+  paintLesson(`<div class="l-body"><div class="end">
     <div class="stars">${[1, 2, 3].map(i => `<span class="${i <= stars ? "on" : ""}">${I("star")}</span>`).join("")}</div>
     <h1>Conversa concluída!</h1><p class="sub">${esc(TK.talk.t)} · ${e.avg == null ? "Agora repita as falas em voz alta para fixar." : e.avg >= GREAT ? "Você falou com muita clareza." : "Repita as falas para deixar a pronúncia mais redonda."}</p>
     <div class="end-stats">
@@ -1927,7 +1980,7 @@ function renderTalkEnd() {
       <div class="es" style="--c:var(--coin)"><span>Tempo</span><b>${Math.floor(secs / 60)}:${pad(secs % 60)}</b></div>
     </div>
     <div class="rewards">${rewards.join("")}</div>
-  </div></div><div class="l-foot"><div class="l-foot-in"><button class="btn ghost" data-act="shadowGo">${I("mic")}Repetir colado</button><button class="btn" data-act="talkClose">Concluir</button></div></div>`;
+  </div></div><div class="l-foot"><div class="l-foot-in"><button class="btn ghost" data-act="shadowGo">${I("mic")}Repetir colado</button><button class="btn" data-act="talkClose">Concluir</button></div></div>`, "end");
 }
 
 // ---------- shadowing + record & compare ----------
@@ -1940,7 +1993,7 @@ function startShadow() {
 }
 function renderShadow() {
   const ln = TK.lines[TK.si], n = TK.lines.length, r = TK.sres, canRec = !!(navigator.mediaDevices && window.MediaRecorder);
-  $("#lesson").innerHTML = `<div class="l-top"><button class="x" data-act="talkClose" aria-label="Sair">${I("x")}</button><div class="bar"><i style="width:${TK.si / n * 100}%"></i></div><span class="l-hearts inf">${I("mic")}</span></div>
+  paintLesson(`<div class="l-top"><button class="x" data-act="talkClose" aria-label="Sair">${I("x")}</button><div class="bar"><i style="width:${TK.si / n * 100}%"></i></div><span class="l-hearts inf">${I("mic")}</span></div>
     <div class="l-body"><div class="l-in"><span class="l-tag">${I("mic")}Repetir colado · ${TK.si + 1} de ${n}</span>
       <h2 class="l-q">Ouça e repita logo em seguida, imitando o ritmo</h2>
       <div class="prompt"><div class="sent"><small class="who-s">${esc(ln.who)}</small>${esc(ln.t)}</div>${speakBtn(ln.t, TK.lang)}</div>
@@ -1951,7 +2004,7 @@ function renderShadow() {
         ${TK.clip ? `<button class="btn small ghost" data-act="say" data-t="${esc(ln.t)}">${I("speaker")}Nativo</button><button class="btn small ghost" data-act="recPlay">${I("play")}Você</button>` : ""}
         <p class="muted">Grave sua voz e ouça logo depois do nativo. Comparar com o ouvido é um ótimo jeito de pegar o sotaque.</p></div>` : ""}
     </div></div>
-    <div class="l-foot"><div class="l-foot-in"><button class="skip" data-act="shadowPrev" ${TK.si ? "" : "disabled"}>Voltar</button><button class="btn" data-act="shadowNext">${TK.si + 1 >= n ? "Terminar" : "Próxima"}</button></div></div>`;
+    <div class="l-foot"><div class="l-foot-in"><button class="skip" data-act="shadowPrev" ${TK.si ? "" : "disabled"}>Voltar</button><button class="btn" data-act="shadowNext">${TK.si + 1 >= n ? "Terminar" : "Próxima"}</button></div></div>`, "sh" + TK.si);
 }
 let recStream = null;
 async function recordAndCompare() {
@@ -2174,7 +2227,7 @@ function drillNext() {
 }
 function renderDrill() {
   const d = SY.drill, [en, pt] = SY.ch.phrases[d.i], N = SY.ch.phrases.length, self = !canListen();
-  $("#lesson").innerHTML = `<div class="l-top"><button class="x" data-act="syQuit" aria-label="Sair da história">${I("x")}</button><div class="bar"><i style="width:${d.i / N * 100}%"></i></div><span class="l-hearts inf">${I("mic")}</span></div>
+  paintLesson(`<div class="l-top"><button class="x" data-act="syQuit" aria-label="Sair da história">${I("x")}</button><div class="bar"><i style="width:${d.i / N * 100}%"></i></div><span class="l-hearts inf">${I("mic")}</span></div>
     <div class="l-body"><div class="l-in"><span class="l-tag">${I("mic")}Treino de fala do capítulo · ${d.i + 1} de ${N}</span>
       <h2 class="l-q">Diga a frase do dia a dia em voz alta</h2>
       <div class="prompt"><div class="sent">${esc(en)}</div>${speakBtn(en, SY.l)}</div>
@@ -2182,7 +2235,7 @@ function renderDrill() {
       ${SY.err ? `<div class="mic-err">${esc(SY.err)}</div>` : ""}
       ${self ? `<div class="tipbox">Ouça, repita em voz alta duas vezes e tente imitar o ritmo.</div>` : `<div class="mic-wrap"><button class="mic ${SY.listening ? "on" : ""}" data-act="syDrillMic" aria-label="Falar">${I("mic")}</button><span class="mic-label">${SY.listening ? "Ouvindo…" : d.res ? (d.res.score >= PASS ? "Muito bem! Toque para tentar de novo" : "Toque e tente de novo") : "Toque e fale"}</span>${d.res ? resultHtml(d.res) : ""}</div>`}
     </div></div>
-    <div class="l-foot"><div class="l-foot-in"><span></span><button class="btn ${d.res && d.res.score >= PASS ? "ok" : self ? "" : "ghost"}" data-act="syDrillNext">${d.i + 1 >= N ? "Terminar" : d.res || self ? "Próxima" : "Pular"}</button></div></div>`;
+    <div class="l-foot"><div class="l-foot-in"><span></span><button class="btn ${d.res && d.res.score >= PASS ? "ok" : self ? "" : "ghost"}" data-act="syDrillNext">${d.i + 1 >= N ? "Terminar" : d.res || self ? "Próxima" : "Pular"}</button></div></div>`, "d" + d.i);
 }
 function renderStory() {
   if (SY.end) return renderStoryEnd();
@@ -2235,13 +2288,13 @@ function renderStory() {
     foot = fb && (fb.ok || fb.over) ? cont("Continuar", fb.ok ? "ok" : "") : `<button class="btn" data-act="syPay" ${SY.hand ? "" : "disabled"}>Pagar ${SY.hand}</button>`;
   }
   const bagN = bagOf(SY.l).length;
-  $("#lesson").innerHTML = `<div class="l-top"><button class="x" data-act="syQuit" aria-label="Sair da história">${I("x")}</button><div class="bar"><i style="width:${SY.i / N * 100}%"></i></div>
+  paintLesson(`<div class="l-top"><button class="x" data-act="syQuit" aria-label="Sair da história">${I("x")}</button><div class="bar"><i style="width:${SY.i / N * 100}%"></i></div>
       <span class="purse-n" title="Moedas na história">${I("gem")}${SY.purse}</span><button class="bag-btn" data-act="syBag" aria-label="Mochila">${I("bag")}<b>${bagN}</b></button></div>
     <div class="l-body"><div class="l-in vn">
       <div class="stage bg-${SY.scene}">${stageLayers(SY.scene, SY.who && !n.nar ? syActor(SY.who) : "")}<span class="stage-label">${esc(SY.label)}</span><button class="sy-pause" data-act="syPause" data-p="false" aria-label="Pausar a fala">${I("pause")}</button><div class="bracelet ${SY.glow ? "glow" : ""}" title="Brilhos da pulseira: ${SY.shards}">${I("zig")}<b>${SY.shards}</b></div></div>
       <div class="vn-box">${box}</div>
     </div></div>
-    <div class="l-foot"><div class="l-foot-in vn-foot">${foot}</div></div>`;
+    <div class="l-foot"><div class="l-foot-in vn-foot">${foot}</div></div>`, "s" + SY.i + (SY.pick ? "p" : ""));
   syFly();
 }
 function finishStory() {
@@ -2269,7 +2322,7 @@ function renderStoryEnd() {
   if (e.streakUp) rewards.push(`<div class="rw" style="color:var(--flame)">${I("flame")}<div>Sequência de ${S.streak} ${S.streak === 1 ? "dia" : "dias"}!<small>Volte amanhã para manter o fogo aceso</small></div></div>`);
   for (const q of e.quests) rewards.push(`<div class="rw" style="color:var(--xp)">${I("target")}<div>Missão cumprida: ${esc(q.text)}<small>+${q.reward} moedas</small></div></div>`);
   for (const a of e.achs) rewards.push(`<div class="rw" style="color:var(--gold-dark)">${I("medal")}<div>Conquista: ${esc(a.name)}<small>${esc(a.desc)} · +${ACH_REWARD} moedas</small></div></div>`);
-  $("#lesson").innerHTML = `<div class="l-body"><div class="end">
+  paintLesson(`<div class="l-body"><div class="end">
     <div class="stars">${[1, 2, 3].map(i => `<span class="${i <= e.stars ? "on" : ""}">${I("star")}</span>`).join("")}</div>
     <h1>Capítulo ${ch.n} concluído!</h1><p class="sub">${esc(ch.t)} · ${SY.mistakes ? `${SY.mistakes} ${SY.mistakes === 1 ? "tropeço" : "tropeços"} no ${learnName(SY.l)}. Jogue de novo para tentar as 3 estrelas.` : `Sem nenhum erro de ${learnName(SY.l)}. Impecável!`}</p>
     <div class="end-stats">
@@ -2281,7 +2334,7 @@ function renderStoryEnd() {
     <div class="card phrases"><h3>Frases do capítulo</h3>${ch.phrases.map(([en, pt]) => `<div class="ph-row"><button class="say" data-act="say" data-t="${esc(en)}" data-l="${SY.l}" aria-label="Ouvir">${I("speaker")}</button><div><b>${esc(en)}</b><small>${esc(pt)}</small></div></div>`).join("")}
       <button class="btn small ghost" data-act="syNotes">${I("pen")}Anotar no caderno</button></div>
     <div class="rewards">${rewards.join("")}</div>
-  </div></div><div class="l-foot"><div class="l-foot-in"><button class="btn ghost" data-act="syAgain">Jogar de novo</button><button class="btn" data-act="syClose">Concluir</button></div></div>`;
+  </div></div><div class="l-foot"><div class="l-foot-in"><button class="btn ghost" data-act="syAgain">Jogar de novo</button><button class="btn" data-act="syClose">Concluir</button></div></div>`, "end");
 }
 function closeStory() {
   stopListening(); SY = null;
