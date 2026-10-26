@@ -563,6 +563,15 @@ img.pix.mini.face{width:26px;height:26px;object-fit:cover;object-position:50% 22
 .gloss.up::before{bottom:-8px;border-left:0;border-top:0}
 @keyframes glossIn{from{opacity:0;transform:translateY(-4px)}}
 @media (prefers-reduced-motion: reduce){.gloss{animation:none}}
+/* account */
+.acc-card h3{display:flex;align-items:center;gap:8px}.acc-card h3 svg{width:22px;height:22px;color:var(--lang)}
+.acc-card p{margin:6px 0;font-weight:700}.acc-status{font-size:14px}
+.acc-acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+.acc-form{display:grid;gap:12px;margin-top:8px}
+.acc-form label{display:grid;gap:6px;font-weight:800}
+.acc-form input{border:2px solid var(--line-2);border-radius:12px;background:var(--surface);color:var(--ink);padding:12px 14px;font:700 17px var(--body)}
+.acc-form input:focus{border-color:var(--lang);outline:0}
+.acc-err{color:var(--bad);font-weight:800;margin:0;min-height:1.2em}
 /* alphabet */
 .abc-top{display:grid;gap:6px;justify-items:center}
 .abc-top .btn{font-size:17px;padding:14px}
@@ -942,13 +951,13 @@ try {
   if (raw && typeof raw === "object") { S = Object.assign(fresh(), raw); S.stats = Object.assign(fresh().stats, raw.stats || {}); }
 } catch {}
 if (!LANGS[S.lang]) S.lang = "en";
-function save() { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch {} }
+function save() { S.savedAt = Date.now(); try { localStorage.setItem(KEY, JSON.stringify(S)); } catch {} cloudSoon(); }
 // Notes live under their own key, so "Apagar progresso" never touches them. They go only when the learner
 // deletes a page or the whole notebook of a language.
 const NOTES_KEY = "xibolete-notes-v1";
 let NOTES = {};
 try { const raw = JSON.parse(localStorage.getItem(NOTES_KEY)); if (raw && typeof raw === "object") NOTES = raw; } catch {}
-function saveNotes() { try { localStorage.setItem(NOTES_KEY, JSON.stringify(NOTES)); return true; } catch { return false; } }
+function saveNotes(quiet) { if (!quiet) { S.notesAt = Date.now(); save(); } try { localStorage.setItem(NOTES_KEY, JSON.stringify(NOTES)); return true; } catch { return false; } }
 // ask the browser not to clear this site's storage when the disk gets full
 try { navigator.storage && navigator.storage.persist && navigator.storage.persist(); } catch {}
 function today() {
@@ -1575,6 +1584,7 @@ function viewProfile() {
     <div class="tiles">${tiles.map(([ic, c, v, l]) => `<div class="tile"><span style="color:${c}">${I(ic)}</span><div><b>${v}</b><span>${l}</span></div></div>`).join("")}</div>
     <div class="card"><h3>Seus idiomas</h3>${LKEYS.map(k => { const L = LANGS[k], p = coursePct(k); return `<button class="lang-row" data-act="setLang" data-k="${k}"><span class="badge" style="--bc:${L.color}">${L.code}</span>
       <div><b>${esc(L.name)}</b> <small>· ${learnedCount(k)} palavras · ${p}% do curso${S.plan[k] ? ` · meta ${goalMin(k)} min/dia` : ""}</small><div class="bar"><i style="width:${p}%;background:${L.color}"></i></div></div>${k === S.lang ? `<small style="color:${L.color}">atual</small>` : "<small>trocar</small>"}</button>`; }).join("")}</div>
+    ${accountHtml()}
     <div class="card"><h3>Ajustes</h3>
       <div class="set-row"><div><b>Meta diária de ${esc(LANGS[S.lang].learning)}</b><p>Quantos minutos por dia você quer dedicar a este idioma. Cada idioma tem a sua meta.</p></div><div class="chips">${GOAL_MINS.map(([g, n]) => `<button class="chip" data-act="goalMin" data-g="${g}" aria-pressed="${goalMin() === g}">${n} · ${g} min</button>`).join("")}</div>
         <button class="linkish" data-act="planEdit">Refazer as perguntas de ${esc(LANGS[S.lang].learning)}</button></div>
@@ -1697,7 +1707,7 @@ const saveNet = () => { try { NET ? localStorage.setItem(NET_KEY, JSON.stringify
 let FR = { me: null, people: {}, links: [], unread: {}, chat: null, msgs: [], doubt: false, av: AVATARS[0], busy: false, err: "", add: "", loaded: false };
 
 function keepSession(j) {
-  NET = { at: j.access_token, rt: j.refresh_token, exp: j.expires_at || Math.floor(Date.now() / 1000) + j.expires_in, id: j.user.id };
+  NET = { at: j.access_token, rt: j.refresh_token, exp: j.expires_at || Math.floor(Date.now() / 1000) + j.expires_in, id: j.user.id, user: userOf(j) };
   saveNet();
 }
 let refreshing = null; // one refresh at a time: the refresh token changes on every use
@@ -1713,11 +1723,168 @@ async function sbToken() {
 async function sb(path, opt = {}) {
   const t = await sbToken();
   const r = await fetch(SB_URL + "/rest/v1/" + path, { method: opt.method || "GET", body: opt.body ? JSON.stringify(opt.body) : undefined,
-    headers: { apikey: SB_KEY, Authorization: "Bearer " + t, "Content-Type": "application/json", Prefer: "return=representation" } });
+    headers: { apikey: SB_KEY, Authorization: "Bearer " + t, "Content-Type": "application/json", Prefer: opt.prefer || "return=representation" } });
   const txt = await r.text();
   if (!r.ok) { const e = new Error(txt); e.status = r.status; throw e; }
   return txt ? JSON.parse(txt) : null;
 }
+
+// ---------- cloud backup ----------
+// The whole progress and the notebook are also kept in Supabase, in the learner's own row of `saves`
+// (supabase/backup.sql), so they survive a cleared browser. Every device starts with an anonymous account;
+// a user name and password (shown as the account; stored as <name>@xibolete.app) lets other devices open
+// the same account. When two copies differ, the newest is the base and what only grows (lessons done,
+// words learned, story chapters, achievements, XP, letters) is merged in, so no progress is lost.
+const ACC_DOMAIN = "@xibolete.app";
+const CLOUD = { base: 0, at: 0, busy: null, err: "", off: false };
+const userOf = j => { const e = (j.user && j.user.email) || ""; return e.endsWith(ACC_DOMAIN) ? e.slice(0, -ACC_DOMAIN.length) : e || null; };
+async function ensureNet() {
+  if (NET) return;
+  const r = await fetch(SB_URL + "/auth/v1/signup", { method: "POST", headers: { apikey: SB_KEY, "Content-Type": "application/json" }, body: JSON.stringify({ data: {} }) });
+  if (!r.ok) throw new Error("signup " + r.status);
+  keepSession(await r.json());
+}
+const maxBy = (a = {}, b = {}, f) => { const o = Object.assign({}, b, a); for (const k in b) if (k in a) o[k] = f(a[k], b[k]); return o; };
+function mergeSaves(base, other) {
+  const m = Object.assign(fresh(), base);
+  if ((base.resetAt || 0) > (other.savedAt || 0)) return m;  // "Apagar progresso" happened after the other copy
+  m.stats = Object.assign(fresh().stats, base.stats || {});
+  const num = (x, y) => Math.max(+x || 0, +y || 0);
+  m.xp = num(base.xp, other.xp);
+  m.bestStreak = num(base.bestStreak, other.bestStreak);
+  m.progress = maxBy(base.progress, other.progress, (x, y) => maxBy(x, y, num));
+  m.chests = Object.assign({}, other.chests, base.chests);
+  m.ach = Object.assign({}, other.ach, base.ach);
+  m.placed = Object.assign({}, other.placed, base.placed);
+  m.plan = Object.assign({}, other.plan, base.plan);
+  m.day = Object.assign({}, other.day, base.day);
+  m.srs = maxBy(base.srs, other.srs, (x, y) => (y.s > x.s || (y.s === x.s && y.due > x.due)) ? y : x);
+  m.story = maxBy(base.story, other.story, (x, y) => ({ stars: num(x.stars, y.stars), times: num(x.times, y.times), best: num(x.best, y.best) }));
+  m.abc = maxBy(base.abc, other.abc, (x, y) => maxBy(x, y, num));
+  m.speech = Object.assign({}, other.speech, base.speech);
+  m.talks = Object.assign({}, other.talks, base.talks);
+  for (const k in other.stats || {}) if (typeof other.stats[k] === "number") m.stats[k] = num(m.stats[k], other.stats[k]);
+  m.stats.langs = maxBy(m.stats.langs, (other.stats || {}).langs, num);
+  m.savedAt = Math.max(base.savedAt || 0, other.savedAt || 0);
+  if (!m.onboarded && other.onboarded) m.onboarded = true;
+  return m;
+}
+// notebook: per language, the copy with more written wins (a page is never lost to an empty one)
+const notesLen = n => JSON.stringify(n || "").length;
+function mergeNotes(a = {}, b = {}) { const o = Object.assign({}, b, a); for (const k in b) if (k in a && notesLen(b[k]) > notesLen(a[k])) o[k] = b[k]; return o; }
+function adopt(newS, newNotes) {
+  S = newS; NOTES = newNotes;
+  if (!LANGS[S.lang]) S.lang = "en";
+  try { localStorage.setItem(KEY, JSON.stringify(S)); } catch {}
+  saveNotes(true);
+  if (!LS && !TK && !SY) render();
+}
+// brings the cloud copy in (merged) when it is newer than what this device last saw; returns the row
+async function cloudPull() {
+  const rows = await sb(`saves?user_id=eq.${NET.id}&select=data,saved_at`);
+  const row = rows && rows[0];
+  if (!row) return null;
+  const at = Date.parse(row.saved_at);
+  if (at > CLOUD.base && row.data && row.data.save) {
+    const remote = row.data.save, mine = (S.savedAt || 0) >= (remote.savedAt || 0);
+    adopt(mine ? mergeSaves(S, remote) : mergeSaves(remote, S), mergeNotes(NOTES, row.data.notes));
+  }
+  CLOUD.base = Math.max(CLOUD.base, at);
+  return row;
+}
+async function cloudPush() {
+  if (!NET || CLOUD.off) return;
+  await cloudPull();  // someone else (another device) may have saved meanwhile: merge that first
+  const at = new Date().toISOString();
+  await sb("saves?on_conflict=user_id", { method: "POST", prefer: "resolution=merge-duplicates,return=minimal", body: { user_id: NET.id, data: { save: S, notes: NOTES }, saved_at: at } });
+  CLOUD.base = Date.parse(at); CLOUD.at = Date.now(); CLOUD.err = "";
+}
+// one sync at a time; failures (offline, server not set up) are kept quiet and tried again later
+function cloudSync(push = true) {
+  if (CLOUD.busy || !navigator.onLine) return CLOUD.busy;
+  CLOUD.busy = (async () => {
+    try { await ensureNet(); if (push && Math.max(S.savedAt || 0, S.notesAt || 0) > CLOUD.base) await cloudPush(); else { await cloudPull(); CLOUD.at = Date.now(); } CLOUD.err = ""; }
+    catch (e) { CLOUD.err = e.status === 404 ? "setup" : "net"; if (e.status === 404) CLOUD.off = true; }
+    finally { CLOUD.busy = null; }
+  })();
+  return CLOUD.busy;
+}
+let cloudTimer = 0;
+function cloudSoon() { if (!cloudTimer) cloudTimer = setTimeout(() => { cloudTimer = 0; cloudSync(); }, 15000); }
+setTimeout(() => cloudSync(), 1500);
+addEventListener("online", () => cloudSync());
+document.addEventListener("visibilitychange", () => { if (document.hidden) { clearTimeout(cloudTimer); cloudTimer = 0; cloudSync(); } else if (Date.now() - CLOUD.at > 60e3) cloudSync(); });
+
+// the account card in the profile
+function accountHtml() {
+  const who = NET && NET.user, ago = CLOUD.at ? Math.max(1, Math.round((Date.now() - CLOUD.at) / 60e3)) : 0;
+  const status = CLOUD.err === "setup" ? "O backup na nuvem ainda não foi ligado no servidor." : !navigator.onLine || CLOUD.err ? "Sem conexão agora: o backup é feito assim que a internet voltar." : CLOUD.at ? `Último backup: ${ago <= 1 ? "agora há pouco" : `há ${ago} min`}.` : "Fazendo o primeiro backup…";
+  return `<div class="card acc-card"><h3>${I("user")}Conta e backup</h3>
+    ${who ? `<p>Conectado como <b>${esc(who)}</b>. Seu progresso é salvo na nuvem, e você entra com esse usuário em qualquer aparelho.</p>`
+      : `<p>Seu progresso já é salvo na nuvem, mas só este aparelho consegue abrir esse backup. Crie um usuário e senha para entrar em outros aparelhos e nunca perder nada.</p>`}
+    <p class="muted acc-status">${esc(status)}</p>
+    <div class="acc-acts">${who ? `<button class="btn ghost small" data-act="accOut">Sair desta conta</button>`
+      : `<button class="btn small" data-act="accNew">Criar usuário e senha</button><button class="btn ghost small" data-act="accIn">Já tenho login</button>`}</div></div>`;
+}
+const accForm = (title, text, act, btn) => modal(`<h2>${title}</h2><p class="muted" style="font-weight:700">${text}</p>
+  <div class="acc-form" data-go="${act}"><label>Nome de usuário<input id="accUser" autocomplete="username" autocapitalize="none" spellcheck="false" maxlength="20" placeholder="ex.: maria.silva"></label>
+  <label>Senha<input id="accPass" type="password" autocomplete="${act === "accNewGo" ? "new-password" : "current-password"}" minlength="6" placeholder="pelo menos 6 letras ou números"></label>
+  <p class="acc-err" id="accErr" role="alert"></p>
+  <div class="acts"><button type="button" class="btn ghost" data-act="closeModal">Cancelar</button><button class="btn" type="button" data-act="${act}">${btn}</button></div></div>`);
+function accFields() {
+  const u = ($("#accUser").value || "").trim().toLowerCase(), p = $("#accPass").value || "", err = t => { $("#accErr").textContent = t; return null; };
+  if (!/^[a-z0-9._-]{3,20}$/.test(u)) return err("O nome de usuário precisa de 3 a 20 letras sem acento, números, ponto, traço ou _.");
+  if (p.length < 6) return err("A senha precisa de pelo menos 6 caracteres.");
+  return { email: u + ACC_DOMAIN, password: p, u };
+}
+const accBusy = on => document.querySelectorAll(".acc-form button").forEach(b => { b.disabled = on; });
+const ACA = {
+  accNew: () => accForm("Criar usuário e senha", "Com eles você entra na mesma conta em outro celular ou computador. Anote a senha: por enquanto não dá para recuperar uma senha esquecida.", "accNewGo", "Criar"),
+  accIn: () => accForm("Entrar na sua conta", "Use o usuário e a senha que você criou em outro aparelho. O progresso deste aparelho é juntado com o da conta.", "accInGo", "Entrar"),
+  accNewGo: async () => {
+    const f = accFields(); if (!f) return;
+    accBusy(true);
+    try {
+      await ensureNet();
+      const r = await fetch(SB_URL + "/auth/v1/user", { method: "PUT", headers: { apikey: SB_KEY, Authorization: "Bearer " + await sbToken(), "Content-Type": "application/json" }, body: JSON.stringify({ email: f.email, password: f.password }) });
+      const j = await r.json().catch(() => ({}));
+      if (!r.ok) throw Object.assign(new Error(j.msg || j.message || ""), { code: j.error_code || j.code, status: r.status });
+      if (userOf({ user: j }) !== f.u) throw Object.assign(new Error("confirm"), { code: "confirm" });
+      NET.user = f.u; saveNet(); cloudSync();
+      closeModal(); render(); toast(`Pronto! Agora é só entrar como <b>${esc(f.u)}</b> em outro aparelho.`, "star");
+    } catch (e) {
+      accBusy(false);
+      $("#accErr").textContent = e.code === "email_exists" || /already/i.test(e.message) ? "Esse nome de usuário já existe. Escolha outro."
+        : e.code === "confirm" ? "O servidor ainda pede confirmação por e-mail. Desligue \"Confirm email\" no Supabase (veja o COMO-EDITAR)."
+        : e.code === "weak_password" ? "Essa senha é fraca demais. Tente outra." : "Não deu para criar agora. Confira a internet e tente de novo.";
+    }
+  },
+  accInGo: async () => {
+    const f = accFields(); if (!f) return;
+    accBusy(true);
+    try {
+      const r = await fetch(SB_URL + "/auth/v1/token?grant_type=password", { method: "POST", headers: { apikey: SB_KEY, "Content-Type": "application/json" }, body: JSON.stringify({ email: f.email, password: f.password }) });
+      if (!r.ok) throw Object.assign(new Error(""), { status: r.status });
+      keepSession(await r.json());
+      // a different account: its friends and its backup are other ones
+      FR.me = null; FR.loaded = false; FR.people = {}; FR.links = []; FR.unread = {}; CLOUD.base = 0; CLOUD.off = false;
+      await cloudSync(false);
+      closeModal(); render(); toast(`Bem-vindo de volta, <b>${esc(f.u)}</b>! Seu progresso foi carregado.`, "star");
+      cloudSync();
+    } catch (e) { accBusy(false); $("#accErr").textContent = e.status === 400 ? "Usuário ou senha errados." : "Não deu para entrar agora. Confira a internet e tente de novo."; }
+  },
+  accOut: () => modal(`<h2>Sair desta conta?</h2><p class="muted" style="font-weight:700">Seu progresso fica guardado na conta, e você volta a ele entrando de novo. Neste aparelho o Xibolete começa do zero, com o caderno vazio.</p>
+    <div class="acts"><button class="btn" data-act="closeModal">Cancelar</button><button class="btn bad" data-act="accOutYes">Sair</button></div>`),
+  accOutYes: async () => {
+    await cloudSync().catch(() => {});
+    NET = null; saveNet(); FR.me = null; FR.loaded = false; FR.people = {}; FR.links = []; FR.unread = {}; CLOUD.base = 0; CLOUD.at = 0;
+    S = fresh(); NOTES = {}; PL = null;
+    try { localStorage.setItem(KEY, JSON.stringify(S)); } catch {}
+    saveNotes(true);
+    closeModal(); render(); toast("Você saiu da conta.", "user");
+    cloudSync();
+  },
+};
 
 // what friends see about me
 const minsOf = d => { const x = S.day[d]; return x && x.sec ? Math.round(Object.values(x.sec).reduce((a, b) => a + b, 0) / 60) : 0; };
@@ -3331,11 +3498,12 @@ const A = {
   toggle: d => { S[d.k] = !S[d.k]; save(); render(); },
   reset: () => modal(`<h2>Apagar todo o progresso?</h2><p class="muted" style="font-weight:700">XP, moedas, lições, sequência e conquistas de todos os idiomas serão apagados. Não dá para desfazer. Suas anotações do caderno continuam guardadas.</p>
     <div class="acts"><button class="btn" data-act="closeModal">Cancelar</button><button class="btn bad" data-act="resetYes">Apagar tudo</button></div>`),
-  resetYes: () => { S = fresh(); save(); closeModal(); render(); },
+  resetYes: () => { S = fresh(); S.resetAt = Date.now(); save(); closeModal(); render(); },
   closeModal: () => closeModal(),
   navMore: () => modal(navMoreHtml()),
   ...FRA,
   ...ABA,
+  ...ACA,
   plLang: d => { PL.lang = d.k; Object.assign(PL, S.plan[d.k] || {}); renderOnboarding(); },
   plPick: d => { PL[d.f] = d.f === "min" ? +d.val : d.val; renderOnboarding(); },
   plNext: () => { PL.i++; renderOnboarding(); scrollTo(0, 0); },
@@ -3547,6 +3715,7 @@ document.addEventListener("click", e => {
 document.addEventListener("keydown", e => {
   if (e.key === "Enter" && !e.shiftKey && e.target.id === "frText") { e.preventDefault(); A.frSend(); return; }
   if (e.key === "Enter" && e.target.id === "frCode") { e.preventDefault(); A.frAdd(); return; }
+  if (e.key === "Enter" && e.target.closest && e.target.closest(".acc-form")) { e.preventDefault(); A[e.target.closest(".acc-form").dataset.go](); return; }
   if ((e.key === "Enter" || e.key === " ") && e.target.classList && e.target.classList.contains("tw")) { e.preventDefault(); e.target.click(); return; }
   if (!$("#modal").hidden) { if (e.key === "Escape") closeModal(); return; }
   if (SY) {

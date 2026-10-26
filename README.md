@@ -87,7 +87,7 @@ No livro de Juízes, na Bíblia, os homens de Galaade descobriam quem era da tri
 
 ## Onde ficam os dados
 
-Seu progresso fica salvo no `localStorage` do navegador. O Xibolete não tem servidor próprio. Quando você usa o microfone, o navegador pode enviar o áudio para o serviço de reconhecimento de voz dele (o do Google, no Chrome) para transformar a fala em texto.
+Seu progresso fica salvo no navegador e também tem backup automático na nuvem (Supabase), numa linha que só a sua conta consegue ler. Com um usuário e senha (no Perfil, em "Conta e backup") você entra na mesma conta em outro celular ou computador. Se dois aparelhos tiverem progressos diferentes, eles são juntados: lições feitas, palavras, capítulos e conquistas nunca se perdem. Quando você usa o microfone, o navegador pode enviar o áudio para o serviço de reconhecimento de voz dele (o do Google, no Chrome) para transformar a fala em texto.
 
 ## Adicionar conteúdo
 

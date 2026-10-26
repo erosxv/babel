@@ -13,6 +13,7 @@ Todo o conteúdo do app fica em arquivos de texto separados do código. Para mud
 | `alfabeto.js` | A aba Alfabeto de cada idioma: as letras, o som, uma dica de pronúncia, uma palavra de exemplo e se a letra é "amiga", "falsa amiga", "nova" ou "especial". O formato está explicado no começo do arquivo |
 | `glossario.js` | O que cada palavra quer dizer: aparece no balão quando o aluno toca numa palavra. Para ver quais palavras ainda faltam, rode `node tools/glossario-faltam.js` |
 | `supabase/amigos.sql` | As tabelas e as regras de privacidade da aba Amigos, no servidor Supabase. Só precisa rodar de novo (no SQL Editor do Supabase) se ele mudar |
+| `supabase/backup.sql` | A tabela do backup do progresso na nuvem (cada conta só lê a própria linha). Para o login com usuário e senha funcionar, o Supabase precisa estar com "Confirm email" desligado (Authentication → Sign In / Providers → Email) |
 | `arte.js` | A pixel art: o visual dos personagens e dos cenários |
 | `hd2d.js` | A arte HD-2D da história: os cenários em 3D (`STORY`) e os retratos grandes de quem fala (`BUSTS`) |
 | `hd2d-worker.js` | Desenha os cenários em segundo plano (não precisa mexer) |
