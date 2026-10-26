@@ -11,6 +11,7 @@ Todo o conteúdo do app fica em arquivos de texto separados do código. Para mud
 | `historia.js` | O modo História em inglês: personagens, itens da mochila, dicas e capítulos |
 | `historia-ru.js` | O modo História em russo: outra história (Белоречье e o relógio parado), com o mesmo formato |
 | `glossario.js` | O que cada palavra quer dizer: aparece no balão quando o aluno toca numa palavra. Para ver quais palavras ainda faltam, rode `node tools/glossario-faltam.js` |
+| `supabase/amigos.sql` | As tabelas e as regras de privacidade da aba Amigos, no servidor Supabase. Só precisa rodar de novo (no SQL Editor do Supabase) se ele mudar |
 | `arte.js` | A pixel art: o visual dos personagens e dos cenários |
 | `hd2d.js` | A arte HD-2D da história: os cenários em 3D (`STORY`) e os retratos grandes de quem fala (`BUSTS`) |
 | `hd2d-worker.js` | Desenha os cenários em segundo plano (não precisa mexer) |
@@ -67,6 +68,13 @@ Cuidado com aspas e vírgulas: cada frase fica entre aspas `"…"`, e os itens d
 
 - Em histórias, conversas e lições, cada palavra do idioma estudado tem um tracejado embaixo. Ao tocar, ela é falada sozinha e aparece um balão com o significado, tirado de `glossario.js` (significados separados por ` / `). Se a palavra não estiver lá, o app procura no vocabulário das lições em `data.js`.
 - Ao escolher um idioma, o app faz algumas perguntas (por que estudar, quanto já sabe, quantos minutos por dia). A meta de minutos pode ser trocada depois em Perfil. O tempo só conta enquanto o aluno está numa lição, história ou conversa e mexeu no app no último minuto e meio.
+
+## Aba Amigos (online)
+
+- É a única parte que precisa de internet. Ela usa o projeto Supabase `eubptqdfpoxbwonbrbsh`: o endereço e a chave pública ficam no começo do bloco "friends" em `index.html`.
+- Cada pessoa cria um perfil sem e-mail nem senha: escolhe um nome e um bicho, e recebe um código de 6 letras. O amigo digita esse código, ou abre o link de convite (`?amigo=CÓDIGO`).
+- Sequência em dupla: dias seguidos em que os dois estudaram. Missão da semana: 60 minutos somando os dois, que dá 20 moedas para cada um. No chat dá para marcar uma mensagem como dúvida do idioma.
+- O perfil fica guardado no aparelho. Se a pessoa apagar os dados do navegador, ela perde o perfil e precisa criar outro.
 
 ## Gerar as vozes
 

@@ -544,6 +544,71 @@ img.pix.mini.face{width:26px;height:26px;object-fit:cover;object-position:50% 22
 .gloss.up::before{bottom:-8px;border-left:0;border-top:0}
 @keyframes glossIn{from{opacity:0;transform:translateY(-4px)}}
 @media (prefers-reduced-motion: reduce){.gloss{animation:none}}
+/* friends */
+.fr-wait{text-align:center;color:var(--muted);font-weight:700}
+.fr-err{display:flex;gap:10px;align-items:center;flex-wrap:wrap;border-color:var(--bad)}
+.fr-err-t{color:var(--bad);font-weight:700;margin:0 0 10px}
+.fr-me{display:flex;gap:14px;align-items:center}
+.fr-me>div{flex:1;min-width:0}
+.fr-me p{margin:2px 0 0;font-size:13px}
+.fr-code{font-family:var(--display);font-size:26px;letter-spacing:.18em;color:var(--lamp)}
+.fr-av{display:grid;place-items:center;flex:none;width:44px;height:44px;border-radius:50%;background:var(--surface-2);font-size:24px}
+.fr-av.big{width:62px;height:62px;font-size:34px;border:3px solid var(--lamp)}
+.fr-row{display:flex;gap:8px}
+.fr-in{flex:1;min-width:0;width:100%;border:2px solid var(--line-2);background:var(--bg);color:var(--ink);border-radius:12px;padding:10px 12px;font:600 16px var(--body)}
+.fr-in:focus{outline:none;border-color:var(--lamp)}
+#frCode{text-transform:uppercase;letter-spacing:.15em;font-family:var(--display)}
+.fr-person{display:flex;gap:12px;align-items:center;width:100%;padding:10px 4px;border:0;border-top:1px solid var(--line);background:none;color:var(--ink);text-align:left;position:relative}
+.fr-person:first-of-type{border-top:0}
+.fr-person>div{flex:1;min-width:0}
+.fr-person b{display:block}
+.fr-person small{display:block;font-weight:700}
+.fr-ok{color:var(--ok);font-weight:700}
+.fr-fire{display:inline-flex;align-items:center;gap:2px;color:var(--flame);font-weight:800}
+.fr-fire svg{width:18px;height:18px}
+.fr-duo{font-weight:800;color:var(--lamp)}
+.fr-badge{position:absolute;left:34px;top:6px;min-width:18px;height:18px;padding:0 5px;border-radius:9px;background:var(--bad);color:#fff;font:800 11px/18px var(--body);font-style:normal;text-align:center}
+.fr-sent{font-size:13px;margin:10px 0 0}
+.fr-list{margin:0 0 14px;padding-left:18px;color:var(--muted);font-weight:700;display:grid;gap:4px}
+.fr-lbl{display:block;font-weight:800;margin:12px 0 6px}
+.fr-avs{display:grid;grid-template-columns:repeat(6,1fr);gap:6px;margin-bottom:14px}
+.fr-avpick{aspect-ratio:1;border:2px solid var(--line-2);background:var(--surface-2);border-radius:12px;font-size:24px}
+.fr-avpick[aria-pressed="true"]{border-color:var(--lamp);background:color-mix(in srgb,var(--lamp) 20%,var(--surface))}
+.fr-fine{font-size:13px;margin:10px 0 0;text-align:center}
+.fr-chat{display:flex;flex-direction:column;gap:12px}
+.fr-top{display:flex;gap:10px;align-items:center}
+.fr-top>div{flex:1;min-width:0}
+.fr-top b{display:block}
+.fr-top small{display:flex;align-items:center;gap:3px;font-weight:700}
+.fr-top small svg{width:14px;height:14px;color:var(--flame)}
+.fr-top .x{border:0;background:none;color:var(--muted);padding:6px}
+.fr-top .x svg{width:24px;height:24px}
+.fr-top .linkish{font-size:12px}
+.fr-duocard{display:flex;gap:14px;align-items:center;background:var(--paper);color:var(--paper-ink);border:2px solid var(--paper-edge);border-radius:16px;padding:12px 14px}
+.fr-duo-n{display:grid;justify-items:center;line-height:1}
+.fr-duo-n span{font-size:22px}
+.fr-duo-n b{font-family:var(--display);font-size:30px}
+.fr-duo-n small{font-weight:800;font-size:11px}
+.fr-mission{flex:1;display:grid;gap:4px}
+.fr-mission small{font-weight:700}
+.fr-mission .bar{height:10px;border-radius:5px;background:color-mix(in srgb,var(--paper-ink) 15%,transparent);overflow:hidden}
+.fr-mission .bar i{display:block;height:100%;background:var(--lamp-dark);border-radius:5px}
+.fr-mission .btn{justify-self:start}
+.fr-msgs{display:flex;flex-direction:column;gap:8px;min-height:180px;max-height:min(52vh,460px);overflow-y:auto;padding:4px 2px;overscroll-behavior:contain}
+.fr-empty{text-align:center;margin:auto 0;font-weight:700}
+.fr-msg{max-width:80%;align-self:flex-start;background:var(--surface-2);border-radius:16px 16px 16px 4px;padding:8px 12px}
+.fr-msg.me{align-self:flex-end;background:color-mix(in srgb,var(--lamp) 22%,var(--surface));border-radius:16px 16px 4px 16px}
+.fr-msg.doubt{border:2px solid var(--lamp)}
+.fr-msg p{margin:0;white-space:pre-wrap;overflow-wrap:anywhere}
+.fr-msg time{display:block;text-align:right;font-size:11px;color:var(--muted);font-weight:700}
+.fr-tag{display:block;font-size:12px;font-weight:800;color:var(--lamp);margin-bottom:2px}
+.fr-nudge{align-self:center;font-size:13px;font-weight:800;color:var(--muted);background:var(--surface);border:1px dashed var(--line-2);border-radius:20px;padding:4px 12px}
+.fr-quick{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+.fr-quick .chip{white-space:nowrap;font-size:13px;padding:6px 10px}
+.fr-send{display:flex;gap:6px;align-items:flex-end}
+.fr-send textarea{resize:none;max-height:120px}
+.fr-dbt{font-size:13px;padding:8px}
+.fr-dbt[aria-pressed="true"]{border-color:var(--lamp);color:var(--lamp)}
 .tw.on{background:color-mix(in srgb,var(--lamp) 55%,transparent);border-bottom-color:transparent}
 @media (hover: hover) and (pointer: fine){.tw:hover{background:color-mix(in srgb,var(--lamp) 25%,transparent)}}
 .vn-en{margin:2px 0 0;font-size:21px;font-weight:800;line-height:1.3}
@@ -630,8 +695,10 @@ textarea.lines::placeholder{color:#a3acbb}
 @media (max-width:760px){
   .shell{grid-template-columns:minmax(0,1fr);padding-bottom:110px;gap:0}
   .nav{position:fixed;left:0;right:0;bottom:0;top:auto;z-index:30;flex-direction:row;justify-content:space-around;background:var(--bg);border-top:2px solid var(--line);
-    padding:6px max(8px,env(safe-area-inset-right,0px)) calc(6px + env(safe-area-inset-bottom,0px)) max(8px,env(safe-area-inset-left,0px));gap:0}
-  .nav button{flex-direction:column;gap:2px;padding:6px 4px;font-size:10px;flex:1;align-items:center;letter-spacing:.02em}
+    padding:6px max(4px,env(safe-area-inset-right,0px)) calc(6px + env(safe-area-inset-bottom,0px)) max(4px,env(safe-area-inset-left,0px));gap:0}
+  .nav button{flex-direction:column;gap:2px;padding:6px 0;font-size:9px;flex:1 1 0;min-width:0;align-items:center;letter-spacing:0}
+  .nav button svg{width:24px;height:24px}
+  @media (max-width:360px){ .nav button{font-size:8px} }
   .nav .dot{position:absolute;margin:0;transform:translate(14px,-2px)}
   .nav button{position:relative}
   .logo span{display:none}
@@ -769,6 +836,7 @@ const P = {
   target: '<circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2.4"/><circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="2.4"/><circle cx="12" cy="12" r="1.8" fill="currentColor"/>',
   trophy: '<path fill="currentColor" d="M7 3h10v5.5a5 5 0 0 1-10 0zM10.5 13.3h3V17h2.5a1 1 0 0 1 1 1v3H7v-3a1 1 0 0 1 1-1h2.5z"/><path fill="none" stroke="currentColor" stroke-width="2" d="M7 5H4v1.5A3.5 3.5 0 0 0 7.5 10M17 5h3v1.5A3.5 3.5 0 0 1 16.5 10"/>',
   bag: '<path fill="currentColor" d="M4.5 8h15l-1.2 11.6a1.6 1.6 0 0 1-1.6 1.4H7.3a1.6 1.6 0 0 1-1.6-1.4z"/><path fill="none" stroke="currentColor" stroke-width="2" d="M8.5 10V7a3.5 3.5 0 0 1 7 0v3"/>',
+  users: '<circle cx="9" cy="8" r="3.6" fill="currentColor"/><circle cx="17" cy="9.5" r="2.8" fill="currentColor"/><path fill="currentColor" d="M2.5 19.6c.5-3.6 3.3-5.7 6.5-5.7s6 2.1 6.5 5.7a.8.8 0 0 1-.8.9H3.3a.8.8 0 0 1-.8-.9zM16.4 20.5c.3-.3.4-.7.4-1.1-.2-1.8-.9-3.3-2-4.4.7-.4 1.5-.6 2.4-.6 2.6 0 4.6 1.7 5 4.6a1.3 1.3 0 0 1-1.3 1.5z"/>',
   user: '<circle cx="12" cy="8" r="4.2" fill="currentColor"/><path fill="currentColor" d="M3.8 20.5c.6-4.2 4-6.6 8.2-6.6s7.6 2.4 8.2 6.6a.9.9 0 0 1-.9 1H4.7a.9.9 0 0 1-.9-1z"/>',
   shield: '<path fill="currentColor" d="M12 2.5l8 3v6.2c0 4.8-3.3 8.4-8 9.8-4.7-1.4-8-5-8-9.8V5.5z"/><path fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M8.4 12l2.6 2.6 4.8-5"/>',
   medal: '<path fill="currentColor" opacity=".75" d="M7 2h4l2 5-3 2zM17 2h-4l-2 5 3 2z"/><circle cx="12" cy="15" r="6.5" fill="currentColor"/><path fill="#fff" opacity=".85" d="M12 11.3l1.1 2.3 2.5.3-1.8 1.7.5 2.5-2.3-1.2-2.3 1.2.5-2.5-1.8-1.7 2.5-.3z"/>',
@@ -791,7 +859,7 @@ const KEY = "babel-save-v1"; // name from before the app was renamed; kept so sa
 const fresh = () => ({
   v: 1, onboarded: false, lang: "en", view: "learn", xp: 0, coins: 50, hearts: 5, heartsAt: Date.now(),
   streak: 0, bestStreak: 0, lastDay: null, freezes: 0, goal: 30, day: {}, boostUntil: 0,
-  sound: true, translit: true, progress: {}, chests: {}, srs: {}, ach: {}, quests: {}, speech: {}, talks: {}, voicePick: {}, story: {}, bag: [], noMicUntil: 0, plan: {},
+  sound: true, translit: true, progress: {}, chests: {}, srs: {}, ach: {}, quests: {}, speech: {}, talks: {}, voicePick: {}, story: {}, bag: [], noMicUntil: 0, plan: {}, coop: {},
   stats: { lessons: 0, perfect: 0, maxCombo: 0, reviews: 0, langs: {}, correct: 0, answered: 0, owl: false, early: false, chests: 0, spoken: 0, spokenGreat: 0, speechTests: 0, talks: 0, story: 0 },
 });
 let S = fresh();
@@ -1261,9 +1329,9 @@ function renderChrome() {
     <button class="stat heart" data-act="heartsInfo" title="Vidas">${I("heart")}${S.hearts}</button>
     <button class="stat xp" data-act="go" data-v="profile" title="Nível ${lv.L}">${I("bolt")}${lv.L}${boosted() ? '<span class="boost-tag">2x</span>' : ""}</button>`;
   const due = dueWords(S.lang).length;
-  const navs = [["learn", "home", "Aprender", "Aprender"], ["story", "book", "História", "História"], ["talk", "chat", "Conversas", "Papo"], ["speak", "mic", "Pronúncia", "Fala"], ["train", "target", "Treino", "Treino"], ["notes", "pen", "Caderno", "Caderno"], ["ach", "trophy", "Conquistas", "Troféus"], ["shop", "bag", "Loja", "Loja"], ["profile", "user", "Perfil", "Perfil"]];
+  const navs = [["learn", "home", "Aprender", "Aprender"], ["story", "book", "História", "História"], ["talk", "chat", "Conversas", "Papo"], ["speak", "mic", "Pronúncia", "Fala"], ["train", "target", "Treino", "Treino"], ["notes", "pen", "Caderno", "Caderno"], ["ach", "trophy", "Conquistas", "Troféus"], ["shop", "bag", "Loja", "Loja"], ["friends", "users", "Amigos", "Amigos"], ["profile", "user", "Perfil", "Perfil"]];
   $("#nav").innerHTML = navs.map(([v, ic, label, short]) =>
-    `<button data-act="go" data-v="${v}" ${S.view === v ? 'aria-current="page"' : ""} aria-label="${label}">${I(ic)}<span class="nl">${label}</span><span class="ns">${short}</span>${v === "train" && due >= 4 ? '<i class="dot" title="Palavras para revisar"></i>' : ""}</button>`).join("");
+    `<button data-act="go" data-v="${v}" ${S.view === v ? 'aria-current="page"' : ""} aria-label="${label}">${I(ic)}<span class="nl">${label}</span><span class="ns">${short}</span>${v === "train" && due >= 4 ? '<i class="dot" title="Palavras para revisar"></i>' : ""}${v === "friends" && unreadTotal() ? '<i class="dot" title="Mensagens novas"></i>' : ""}</button>`).join("");
   $("#side").innerHTML = sideHtml();
 }
 function goalHtml() {
@@ -1405,12 +1473,276 @@ function viewProfile() {
       <div class="set-row"><div><b>Apagar progresso</b><p>Zera XP, moedas, lições e conquistas de todos os idiomas. Seu caderno de anotações não é apagado.</p></div><button class="btn small bad" data-act="reset">Apagar tudo</button></div>
     </div></div>`;
 }
+// ---------- friends (online) ----------
+// The Friends tab is the only part of the app that needs the internet. It talks to a Supabase project
+// (tables and privacy rules: supabase/amigos.sql). On first use the learner gets an anonymous account
+// (no e-mail, no password) with a name, an animal and a 6-letter code that friends type to add them.
+// Each side keeps its stats in its profile, so the "fire together" streak and the weekly duo mission
+// are worked out here from both profiles.
+const SB_URL = "https://eubptqdfpoxbwonbrbsh.supabase.co", SB_KEY = "sb_publishable_FpXmNXXNHfn7-TF4niJehw_N4omzVK6";
+const NET_KEY = "xibolete-net-v1"; // its own key, so "Apagar progresso" does not sign the learner out
+const AVATARS = ["🦊", "🐻", "🐼", "🐸", "🐧", "🦉", "🐯", "🐙", "🦄", "🐢", "🐝", "🐺"];
+const DUO_GOAL = 60, DUO_COINS = 20; // weekly duo mission: minutes studied by the two together, and the prize
+const QUICK = [["nudge", "👋 Bora estudar hoje?"], ["nudge", "🔥 Não deixa o fogo apagar!"], ["msg", "👏 Mandou bem!"]];
+let NET = null;
+try { NET = JSON.parse(localStorage.getItem(NET_KEY)) || null; } catch {}
+const saveNet = () => { try { NET ? localStorage.setItem(NET_KEY, JSON.stringify(NET)) : localStorage.removeItem(NET_KEY); } catch {} };
+let FR = { me: null, people: {}, links: [], unread: {}, chat: null, msgs: [], doubt: false, av: AVATARS[0], busy: false, err: "", add: "", loaded: false };
+
+function keepSession(j) {
+  NET = { at: j.access_token, rt: j.refresh_token, exp: j.expires_at || Math.floor(Date.now() / 1000) + j.expires_in, id: j.user.id };
+  saveNet();
+}
+let refreshing = null; // one refresh at a time: the refresh token changes on every use
+async function sbToken() {
+  if (!NET) throw new Error("sem conta");
+  if (NET.exp - 60 > Date.now() / 1000) return NET.at;
+  refreshing ||= fetch(SB_URL + "/auth/v1/token?grant_type=refresh_token", { method: "POST", headers: { apikey: SB_KEY, "Content-Type": "application/json" }, body: JSON.stringify({ refresh_token: NET.rt }) })
+    .then(async r => { if (r.ok) return keepSession(await r.json()); if (r.status === 400 || r.status === 401) { NET = null; FR.me = null; saveNet(); } throw new Error("auth " + r.status); })
+    .finally(() => { refreshing = null; });
+  await refreshing;
+  return NET.at;
+}
+async function sb(path, opt = {}) {
+  const t = await sbToken();
+  const r = await fetch(SB_URL + "/rest/v1/" + path, { method: opt.method || "GET", body: opt.body ? JSON.stringify(opt.body) : undefined,
+    headers: { apikey: SB_KEY, Authorization: "Bearer " + t, "Content-Type": "application/json", Prefer: "return=representation" } });
+  const txt = await r.text();
+  if (!r.ok) { const e = new Error(txt); e.status = r.status; throw e; }
+  return txt ? JSON.parse(txt) : null;
+}
+
+// what friends see about me
+const minsOf = d => { const x = S.day[d]; return x && x.sec ? Math.round(Object.values(x.sec).reduce((a, b) => a + b, 0) / 60) : 0; };
+function myStats() {
+  const min = {};
+  for (let i = -13; i <= 0; i++) { const d = dayOffset(i), m = minsOf(d); if (m) min[d] = m; }
+  const days = Object.keys(S.day).filter(d => S.day[d].xp > 0 || minsOf(d) >= 1).sort();
+  return { streak: S.lastDay >= dayOffset(-1) ? S.streak : 0, last: S.lastDay, days, min, xp: S.xp, lv: lvl(S.xp).L, lang: S.lang, goal: goalMin() };
+}
+let lastPush = "";
+async function pushStats(force) {
+  if (!NET || !FR.me) return;
+  const st = myStats(), j = JSON.stringify(st);
+  if (!force && j === lastPush) return;
+  try { await sb(`profiles?id=eq.${NET.id}`, { method: "PATCH", body: { stats: st, updated_at: new Date().toISOString() } }); lastPush = j; FR.me.stats = st; } catch {}
+}
+const studiedOn = (st, d) => (st.days || []).includes(d) || st.last === d;
+// days in a row both studied, counting today only once both did
+function pairStreak(a, b) {
+  const both = d => studiedOn(a, d) && studiedOn(b, d);
+  let n = 0, i = both(dkey()) ? 0 : -1;
+  while (both(dayOffset(i))) { n++; i--; }
+  return n;
+}
+function weekDays() { const d = new Date(), back = (d.getDay() + 6) % 7; return Array.from({ length: back + 1 }, (_, i) => dayOffset(i - back)); }
+const weekMins = st => weekDays().reduce((a, d) => a + ((st.min || {})[d] || 0), 0);
+const weekId = () => weekDays()[0];
+
+async function frLoad() {
+  FR.busy = !!NET; FR.err = "";
+  if (NET) try {
+    const [people, links] = await Promise.all([sb("profiles?select=id,code,name,avatar,stats,updated_at"), sb("friendships?select=*")]);
+    FR.people = Object.fromEntries(people.map(p => [p.id, p]));
+    FR.links = links;
+    FR.me = FR.people[NET.id] || null;
+    if (FR.me) { await pushStats(true); await frUnread(); }
+  } catch (e) { FR.err = NET ? "Não deu para falar com o servidor. Confira a internet e tente de novo." : ""; }
+  FR.busy = false; FR.loaded = true;
+  if (S.view === "friends" && !LS && !TK && !SY) render();
+}
+async function frUnread() {
+  if (!FR.me) return;
+  try {
+    const rows = await sb(`messages?select=sender&receiver=eq.${NET.id}&read_at=is.null`);
+    FR.unread = {}; for (const r of rows) FR.unread[r.sender] = (FR.unread[r.sender] || 0) + 1;
+  } catch {}
+}
+const unreadTotal = () => Object.values(FR.unread).reduce((a, b) => a + b, 0);
+const otherOf = l => l.requester === NET.id ? l.addressee : l.requester;
+
+function viewFriends() {
+  const head = `<div class="page-head"><h1>Amigos</h1><p>Estude junto, mantenha o fogo aceso em dupla e tire dúvidas no chat.</p></div>`;
+  if (!FR.loaded || (FR.busy && !FR.me)) return head + `<div class="card fr-wait">Conectando…</div>`;
+  if (!FR.me) return head + frJoinHtml();
+  if (FR.chat && FR.people[FR.chat]) return frChatHtml();
+  const me = FR.me, friends = [], incoming = [], sent = [];
+  for (const l of FR.links) { const p = FR.people[otherOf(l)]; if (!p) continue; (l.status === "accepted" ? friends : l.requester === NET.id ? sent : incoming).push(p); }
+  friends.sort((a, b) => (FR.unread[b.id] || 0) - (FR.unread[a.id] || 0) || (b.stats.streak || 0) - (a.stats.streak || 0));
+  return head + `<div class="stack">
+    ${FR.err ? `<div class="card fr-err">${esc(FR.err)} <button class="btn small ghost" data-act="frRetry">Tentar de novo</button></div>` : ""}
+    <div class="card fr-me"><span class="fr-av big">${esc(me.avatar)}</span><div><b>${esc(me.name)}</b><p class="muted">Seu código de amigo</p><div class="fr-code">${esc(me.code)}</div></div>
+      <button class="btn small" data-act="frShare">${I("share")}Convidar</button></div>
+    <div class="card"><h3>Adicionar amigo</h3><p class="muted">Peça o código de 6 letras e digite aqui.</p>
+      <div class="fr-row"><input id="frCode" class="fr-in" maxlength="6" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="Ex.: K7MP2Q" value="${esc(FR.add)}" aria-label="Código do amigo"><button class="btn small" data-act="frAdd">Adicionar</button></div></div>
+    ${incoming.length ? `<div class="card"><h3>Pedidos de amizade</h3>${incoming.map(p => `<div class="fr-person"><span class="fr-av">${esc(p.avatar)}</span><div><b>${esc(p.name)}</b><small class="muted">quer estudar com você</small></div>
+      <button class="btn small ok" data-act="frAccept" data-id="${p.id}">Aceitar</button><button class="linkish" data-act="frRemove" data-id="${p.id}">Recusar</button></div>`).join("")}</div>` : ""}
+    <div class="card"><h3>Seus amigos</h3>${friends.length ? friends.map(frPersonHtml).join("") : `<p class="muted">Ninguém ainda. Mande seu código para alguém e estudem juntos: dá para manter uma sequência em dupla e cumprir a missão da semana.</p>`}
+      ${sent.length ? `<p class="muted fr-sent">Esperando resposta: ${sent.map(p => esc(p.avatar + " " + p.name)).join(", ")}</p>` : ""}</div>
+  </div>`;
+}
+function frPersonHtml(p) {
+  const st = p.stats || {}, today = studiedOn(st, dkey()), duo = pairStreak(FR.me.stats || myStats(), st), un = FR.unread[p.id] || 0;
+  return `<button class="fr-person" data-act="frOpen" data-id="${p.id}"><span class="fr-av">${esc(p.avatar)}</span>
+    <div><b>${esc(p.name)}</b><small class="${today ? "fr-ok" : "muted"}">${today ? "✓ estudou hoje" : "ainda não estudou hoje"}${st.lang && LANGS[st.lang] ? ` · ${esc(LANGS[st.lang].name)}` : ""}</small></div>
+    <span class="fr-fire" title="Sequência de ${p.name}">${I("flame")}${st.streak || 0}</span>${duo ? `<span class="fr-duo" title="Dias seguidos estudando juntos">👥${duo}</span>` : ""}${un ? `<i class="fr-badge">${un}</i>` : ""}</button>`;
+}
+function frJoinHtml() {
+  return `<div class="card fr-join"><h3>Entre na turma</h3>
+    <ul class="fr-list"><li>🔥 Sequência em dupla: os dias seguidos em que vocês dois estudaram</li><li>🤝 Missão da semana: ${DUO_GOAL} minutos somando os dois</li><li>💬 Chat para tirar dúvidas e dar aquele empurrão</li></ul>
+    <label class="fr-lbl" for="frName">Seu nome (é o que seus amigos vão ver)</label>
+    <input id="frName" class="fr-in" maxlength="30" autocomplete="nickname" placeholder="Como quer ser chamado?" value="${esc(FR.name || "")}">
+    <p class="fr-lbl">Escolha um bicho</p>
+    <div class="fr-avs">${AVATARS.map(a => `<button class="fr-avpick" data-act="frAv" data-a="${a}" aria-pressed="${FR.av === a}" aria-label="${a}">${a}</button>`).join("")}</div>
+    ${FR.err ? `<p class="fr-err-t">${esc(FR.err)}</p>` : ""}
+    <button class="btn wide" data-act="frJoin" ${FR.busy ? "disabled" : ""}>${FR.busy ? "Criando…" : "Criar meu perfil"}</button>
+    <p class="muted fr-fine">Precisa de internet. Não pedimos e-mail nem senha: o perfil fica guardado neste aparelho.</p></div>`;
+}
+function frChatHtml() {
+  const p = FR.people[FR.chat], st = p.stats || {}, mine = FR.me.stats || myStats();
+  const duo = pairStreak(mine, st), wk = weekMins(mine) + weekMins(st), pct = Math.min(100, Math.round(wk / DUO_GOAL * 100));
+  const claimed = (S.coop || {})[FR.chat + "|" + weekId()];
+  return `<div class="fr-chat">
+    <div class="fr-top"><button class="x" data-act="frBack" aria-label="Voltar">${I("left")}</button><span class="fr-av">${esc(p.avatar)}</span><div><b>${esc(p.name)}</b><small class="muted">${I("flame")} ${st.streak || 0} dias · nível ${st.lv || 1}</small></div>
+      <button class="linkish" data-act="frRemove" data-id="${p.id}">Desfazer amizade</button></div>
+    <div class="fr-duocard"><div class="fr-duo-n"><span>👥</span><b>${duo}</b><small>${duo === 1 ? "dia" : "dias"} juntos</small></div>
+      <div class="fr-mission"><b>Missão da semana</b><small>${wk} de ${DUO_GOAL} min somando os dois</small><div class="bar"><i style="width:${pct}%"></i></div>
+      ${wk >= DUO_GOAL ? (claimed ? `<small class="fr-ok">✓ Prêmio recebido</small>` : `<button class="btn small gold" data-act="frClaim">Pegar ${DUO_COINS} moedas</button>`) : ""}</div></div>
+    <div class="fr-msgs" id="frMsgs">${frMsgsHtml()}</div>
+    <div class="fr-quick">${QUICK.map(([k, t]) => `<button class="chip" data-act="frQuick" data-k="${k}" data-t="${esc(t)}">${esc(t)}</button>`).join("")}</div>
+    <div class="fr-send"><button class="chip fr-dbt" data-act="frDoubt" aria-pressed="${FR.doubt}" title="Marcar como dúvida de ${esc(LANGS[S.lang].learning)}">❓ Dúvida</button>
+      <textarea id="frText" class="fr-in" rows="1" maxlength="600" placeholder="${FR.doubt ? `Sua dúvida de ${esc(LANGS[S.lang].learning)}…` : "Escreva uma mensagem…"}" aria-label="Mensagem"></textarea>
+      <button class="btn small" data-act="frSend" aria-label="Enviar">Enviar</button></div>
+  </div>`;
+}
+function frMsgsHtml() {
+  if (!FR.msgs.length) return `<p class="muted fr-empty">Comece a conversa. Dica: toque em ❓ Dúvida para perguntar algo sobre o idioma.</p>`;
+  return FR.msgs.map(m => {
+    const me = m.sender === NET.id, time = new Date(m.created_at).toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" });
+    if (m.kind === "nudge") return `<div class="fr-nudge">${me ? "Você" : esc(FR.people[m.sender]?.name || "")}: ${esc(m.body)}</div>`;
+    const tag = m.kind === "doubt" ? `<span class="fr-tag">❓ Dúvida${m.lang && LANGS[m.lang] ? " de " + esc(LANGS[m.lang].learning) : ""}</span>` : "";
+    return `<div class="fr-msg ${me ? "me" : ""} ${m.kind === "doubt" ? "doubt" : ""}">${tag}<p>${esc(m.body)}</p><time>${time}</time></div>`;
+  }).join("");
+}
+function paintMsgs() {
+  const box = $("#frMsgs"); if (!box) return;
+  const atEnd = box.scrollHeight - box.scrollTop - box.clientHeight < 60;
+  box.innerHTML = frMsgsHtml();
+  if (atEnd || !paintMsgs.done) box.scrollTop = box.scrollHeight;
+  paintMsgs.done = true;
+}
+async function frFetchMsgs() {
+  const a = NET.id, b = FR.chat, last = FR.msgs.length ? FR.msgs[FR.msgs.length - 1].id : 0;
+  const rows = await sb(`messages?select=*&or=(and(sender.eq.${a},receiver.eq.${b}),and(sender.eq.${b},receiver.eq.${a}))&id=gt.${last}&order=id.desc&limit=80`);
+  if (!rows.length) return false;
+  FR.msgs = FR.msgs.concat(rows.reverse()).slice(-200);
+  if (rows.some(r => r.sender === b)) { sb("rpc/mark_read", { method: "POST", body: { friend: b } }).catch(() => {}); delete FR.unread[b]; }
+  return true;
+}
+async function frPost(body, kind) {
+  body = body.trim().slice(0, 600); if (!body || !FR.chat) return;
+  try {
+    await sb("messages", { method: "POST", body: { receiver: FR.chat, body, kind, lang: kind === "doubt" ? S.lang : null } });
+    await frFetchMsgs(); paintMsgs(); sfx("ok");
+  } catch (e) { toast(e.status ? "Não deu para enviar. Vocês ainda são amigos?" : "Sem internet agora. Tente de novo.", "x"); }
+}
+const goodCode = c => /^[A-Z2-9]{6}$/.test(c);
+const newCode = () => Array.from(crypto.getRandomValues(new Uint8Array(6)), n => "ABCDEFGHJKLMNPQRSTUVWXYZ23456789"[n % 32]).join("");
+
+const FRA = {
+  frAv: d => { FR.av = d.a; FR.name = ($("#frName") || {}).value || FR.name; render(); },
+  frJoin: async () => {
+    const name = ($("#frName").value || "").trim().slice(0, 30);
+    FR.name = name;
+    if (!name) { FR.err = "Escreva um nome para seus amigos te reconhecerem."; render(); $("#frName").focus(); return; }
+    FR.busy = true; FR.err = ""; render();
+    try {
+      if (!NET) {
+        const r = await fetch(SB_URL + "/auth/v1/signup", { method: "POST", headers: { apikey: SB_KEY, "Content-Type": "application/json" }, body: JSON.stringify({ data: {} }) });
+        if (!r.ok) throw new Error("signup " + r.status + " " + await r.text());
+        keepSession(await r.json());
+      }
+      for (let i = 0; i < 5 && !FR.me; i++) {
+        try { FR.me = (await sb("profiles", { method: "POST", body: { id: NET.id, code: newCode(), name, avatar: FR.av, stats: myStats() } }))[0]; }
+        catch (e) { if (e.status !== 409) throw e; }
+      }
+      if (!FR.me) throw new Error("code");
+      FR.people[NET.id] = FR.me;
+      toast(`Perfil criado! Seu código é <b>${esc(FR.me.code)}</b>.`, "star");
+    } catch (e) { FR.err = /anonymous/i.test(e.message) ? "O servidor ainda não aceita perfis novos. Tente mais tarde." : "Não deu para criar o perfil. Confira a internet e tente de novo."; }
+    FR.busy = false; render();
+  },
+  frRetry: () => { frLoad(); render(); },
+  frShare: async () => {
+    const link = location.origin + location.pathname + "?amigo=" + FR.me.code, text = `Estuda idiomas comigo no Xibolete! Meu código de amigo é ${FR.me.code}.`;
+    try { if (navigator.share) { await navigator.share({ title: "Xibolete", text, url: link }); return; } } catch { return; }
+    try { await navigator.clipboard.writeText(text + " " + link); toast("Convite copiado. É só colar numa conversa.", "check"); } catch { modal(`<h2>Seu convite</h2><p>${esc(text)}<br>${esc(link)}</p><button class="btn wide" data-act="closeModal">Ok</button>`); }
+  },
+  frAdd: async () => {
+    const code = ($("#frCode").value || "").trim().toUpperCase().replace(/[^A-Z0-9]/g, "");
+    FR.add = code;
+    if (!goodCode(code)) { toast("O código tem 6 letras e números, como K7MP2Q.", "x"); return; }
+    if (code === FR.me.code) { toast("Esse é o seu próprio código.", "x"); return; }
+    try {
+      const found = (await sb("rpc/find_by_code", { method: "POST", body: { c: code } }))[0];
+      if (!found) { toast("Nenhum perfil com esse código. Confira as letras.", "x"); return; }
+      const back = FR.links.find(l => l.requester === found.id && l.addressee === NET.id);
+      if (back) await sb(`friendships?requester=eq.${found.id}&addressee=eq.${NET.id}`, { method: "PATCH", body: { status: "accepted" } });
+      else if (!FR.links.some(l => otherOf(l) === found.id)) await sb("friendships", { method: "POST", body: { requester: NET.id, addressee: found.id } });
+      FR.add = "";
+      toast(back ? `Agora você e ${esc(found.name)} são amigos!` : `Pedido enviado para ${esc(found.avatar + " " + found.name)}.`, "check");
+      await frLoad();
+    } catch { toast("Não deu agora. Confira a internet e tente de novo.", "x"); }
+  },
+  frAccept: async d => {
+    try { await sb(`friendships?requester=eq.${d.id}&addressee=eq.${NET.id}`, { method: "PATCH", body: { status: "accepted" } }); sfx("done"); await frLoad(); }
+    catch { toast("Não deu agora. Tente de novo.", "x"); }
+  },
+  frRemove: d => {
+    const p = FR.people[d.id];
+    modal(`<h2>${FR.links.some(l => otherOf(l) === d.id && l.status === "accepted") ? "Desfazer amizade" : "Recusar pedido"}?</h2><p>${esc(p ? p.avatar + " " + p.name : "")} deixa de ver seu progresso e vocês não trocam mais mensagens.</p>
+      <div class="acts"><button class="btn ghost" data-act="closeModal">Cancelar</button><button class="btn bad" data-act="frRemoveYes" data-id="${d.id}">Confirmar</button></div>`);
+  },
+  frRemoveYes: async d => {
+    closeModal();
+    try { await sb(`friendships?or=(and(requester.eq.${NET.id},addressee.eq.${d.id}),and(requester.eq.${d.id},addressee.eq.${NET.id}))`, { method: "DELETE" }); FR.chat = null; await frLoad(); }
+    catch { toast("Não deu agora. Tente de novo.", "x"); }
+  },
+  frOpen: async d => {
+    FR.chat = d.id; FR.msgs = []; FR.doubt = false; paintMsgs.done = false; render(); scrollTo(0, 0);
+    try { await frFetchMsgs(); } catch {}
+    paintMsgs(); renderChrome();
+  },
+  frBack: () => { FR.chat = null; render(); },
+  frDoubt: () => { FR.doubt = !FR.doubt; const b = $(".fr-dbt"); if (b) b.setAttribute("aria-pressed", FR.doubt); const t = $("#frText"); if (t) { t.placeholder = FR.doubt ? `Sua dúvida de ${LANGS[S.lang].learning}…` : "Escreva uma mensagem…"; t.focus(); } },
+  frSend: () => { const t = $("#frText"); if (!t || !t.value.trim()) return; const v = t.value; t.value = ""; frPost(v, FR.doubt ? "doubt" : "msg"); if (FR.doubt) A.frDoubt(); },
+  frQuick: d => frPost(d.t, d.k),
+  frClaim: () => {
+    const k = FR.chat + "|" + weekId(); S.coop ||= {};
+    if (S.coop[k]) return;
+    S.coop[k] = 1; S.coins += DUO_COINS; save(); sfx("done");
+    toast(`Missão em dupla cumprida! +${DUO_COINS} moedas`, "gem"); render();
+  },
+};
+
+// background: new messages while a chat is open, unread count and my stats now and then
+setInterval(async () => {
+  if (document.hidden || !NET || !FR.me || S.view !== "friends" || !FR.chat || LS || TK || SY) return;
+  try { if (await frFetchMsgs()) { paintMsgs(); sfx("tap"); } } catch {}
+}, 4000);
+setInterval(async () => {
+  if (document.hidden || !NET || !FR.me) return;
+  const before = unreadTotal();
+  await pushStats(); await frUnread();
+  if (unreadTotal() !== before && !LS && !TK && !SY && !PL) renderChrome();
+}, 60000);
+
 function render() {
   closeGloss();
   if (!S.onboarded || PL) { renderOnboarding(); return; }
   $("#app").querySelector(".top").hidden = false; $("#shell").hidden = false; $("#onb").hidden = true;
   regen(); renderChrome();
-  const v = { learn: viewLearn, story: viewStory, talk: viewTalk, notes: viewNotes, speak: viewSpeak, train: viewTrain, ach: viewAch, shop: viewShop, profile: viewProfile }[S.view] || viewLearn;
+  const v = { learn: viewLearn, story: viewStory, talk: viewTalk, notes: viewNotes, speak: viewSpeak, train: viewTrain, ach: viewAch, shop: viewShop, friends: viewFriends, profile: viewProfile }[S.view] || viewLearn;
   $("#view").innerHTML = v();
 }
 
@@ -2729,6 +3061,7 @@ const A = {
     <div class="acts"><button class="btn" data-act="closeModal">Cancelar</button><button class="btn bad" data-act="resetYes">Apagar tudo</button></div>`),
   resetYes: () => { S = fresh(); save(); closeModal(); render(); },
   closeModal: () => closeModal(),
+  ...FRA,
   plLang: d => { PL.lang = d.k; Object.assign(PL, S.plan[d.k] || {}); renderOnboarding(); },
   plPick: d => { PL[d.f] = d.f === "min" ? +d.val : d.val; renderOnboarding(); },
   plNext: () => { PL.i++; renderOnboarding(); scrollTo(0, 0); },
@@ -2929,6 +3262,8 @@ document.addEventListener("click", e => {
   if (fn) fn(el.dataset, el);
 });
 document.addEventListener("keydown", e => {
+  if (e.key === "Enter" && !e.shiftKey && e.target.id === "frText") { e.preventDefault(); A.frSend(); return; }
+  if (e.key === "Enter" && e.target.id === "frCode") { e.preventDefault(); A.frAdd(); return; }
   if ((e.key === "Enter" || e.key === " ") && e.target.classList && e.target.classList.contains("tw")) { e.preventDefault(); e.target.click(); return; }
   if (!$("#modal").hidden) { if (e.key === "Escape") closeModal(); return; }
   if (SY) {
@@ -3005,6 +3340,9 @@ if (S.onboarded) { const c = currentOf(S.lang); if (c && S.view === "learn" && !
 if (S.onboarded && !S.plan[S.lang]) PL = { steps: ["why", "level", "goal", "ready"], i: 0, lang: S.lang };  // people who started before the plan existed answer once
 render();
 if (streakNotice) toast(esc(streakNotice), "flame");
+{ const inv = new URLSearchParams(location.search).get("amigo");
+  if (inv) { FR.add = inv.toUpperCase().slice(0, 6); if (S.onboarded) { S.view = "friends"; render(); } history.replaceState(null, "", location.pathname); } }
+frLoad();
 if (S.onboarded && S.view === "learn") {
   const cur = document.querySelector(".node.current");
   cur && cur.scrollIntoView({ block: "center" });
