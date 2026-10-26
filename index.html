@@ -569,6 +569,7 @@ img.pix.mini.face{width:26px;height:26px;object-fit:cover;object-position:50% 22
 .fr-duo{font-weight:800;color:var(--lamp)}
 .fr-badge{position:absolute;left:34px;top:6px;min-width:18px;height:18px;padding:0 5px;border-radius:9px;background:var(--bad);color:#fff;font:800 11px/18px var(--body);font-style:normal;text-align:center}
 .fr-sent{font-size:13px;margin:10px 0 0}
+.fr-out{align-self:center;font-size:13px}
 .fr-list{margin:0 0 14px;padding-left:18px;color:var(--muted);font-weight:700;display:grid;gap:4px}
 .fr-lbl{display:block;font-weight:800;margin:12px 0 6px}
 .fr-avs{display:grid;grid-template-columns:repeat(6,1fr);gap:6px;margin-bottom:14px}
@@ -607,7 +608,8 @@ img.pix.mini.face{width:26px;height:26px;object-fit:cover;object-position:50% 22
 .fr-quick .chip{white-space:nowrap;font-size:13px;padding:6px 10px}
 .fr-send{display:flex;gap:6px;align-items:flex-end}
 .fr-send textarea{resize:none;max-height:120px}
-.fr-dbt{font-size:13px;padding:8px}
+.fr-dbt{font-size:18px;padding:6px 10px;line-height:1.2}
+.fr-send .fr-in{padding:9px 12px;line-height:1.3}
 .fr-dbt[aria-pressed="true"]{border-color:var(--lamp);color:var(--lamp)}
 .tw.on{background:color-mix(in srgb,var(--lamp) 55%,transparent);border-bottom-color:transparent}
 @media (hover: hover) and (pointer: fine){.tw:hover{background:color-mix(in srgb,var(--lamp) 25%,transparent)}}
@@ -1549,7 +1551,9 @@ async function frLoad() {
     if (FR.me) { await pushStats(true); await frUnread(); }
   } catch (e) { FR.err = NET ? "Não deu para falar com o servidor. Confira a internet e tente de novo." : ""; }
   FR.busy = false; FR.loaded = true;
-  if (S.view === "friends" && !LS && !TK && !SY) render();
+  const typing = document.activeElement && document.activeElement.id;
+  if (typing === "frCode") FR.add = document.activeElement.value;
+  if (S.view === "friends" && !FR.chat && !LS && !TK && !SY && !PL) { render(); if (typing === "frCode") $("#frCode").focus(); }
 }
 async function frUnread() {
   if (!FR.me) return;
@@ -1579,6 +1583,7 @@ function viewFriends() {
       <button class="btn small ok" data-act="frAccept" data-id="${p.id}">Aceitar</button><button class="linkish" data-act="frRemove" data-id="${p.id}">Recusar</button></div>`).join("")}</div>` : ""}
     <div class="card"><h3>Seus amigos</h3>${friends.length ? friends.map(frPersonHtml).join("") : `<p class="muted">Ninguém ainda. Mande seu código para alguém e estudem juntos: dá para manter uma sequência em dupla e cumprir a missão da semana.</p>`}
       ${sent.length ? `<p class="muted fr-sent">Esperando resposta: ${sent.map(p => esc(p.avatar + " " + p.name)).join(", ")}</p>` : ""}</div>
+    <button class="linkish fr-out" data-act="frDelete">Apagar meu perfil de amigos</button>
   </div>`;
 }
 function frPersonHtml(p) {
@@ -1610,13 +1615,13 @@ function frChatHtml() {
       ${wk >= DUO_GOAL ? (claimed ? `<small class="fr-ok">✓ Prêmio recebido</small>` : `<button class="btn small gold" data-act="frClaim">Pegar ${DUO_COINS} moedas</button>`) : ""}</div></div>
     <div class="fr-msgs" id="frMsgs">${frMsgsHtml()}</div>
     <div class="fr-quick">${QUICK.map(([k, t]) => `<button class="chip" data-act="frQuick" data-k="${k}" data-t="${esc(t)}">${esc(t)}</button>`).join("")}</div>
-    <div class="fr-send"><button class="chip fr-dbt" data-act="frDoubt" aria-pressed="${FR.doubt}" title="Marcar como dúvida de ${esc(LANGS[S.lang].learning)}">❓ Dúvida</button>
-      <textarea id="frText" class="fr-in" rows="1" maxlength="600" placeholder="${FR.doubt ? `Sua dúvida de ${esc(LANGS[S.lang].learning)}…` : "Escreva uma mensagem…"}" aria-label="Mensagem"></textarea>
+    <div class="fr-send"><button class="chip fr-dbt" data-act="frDoubt" aria-pressed="${FR.doubt}" title="Marcar como dúvida de ${esc(LANGS[S.lang].learning)}" aria-label="Marcar como dúvida">❓</button>
+      <textarea id="frText" class="fr-in" rows="1" maxlength="600" placeholder="${FR.doubt ? `Dúvida de ${esc(LANGS[S.lang].learning)}…` : "Mensagem…"}" aria-label="Mensagem"></textarea>
       <button class="btn small" data-act="frSend" aria-label="Enviar">Enviar</button></div>
   </div>`;
 }
 function frMsgsHtml() {
-  if (!FR.msgs.length) return `<p class="muted fr-empty">Comece a conversa. Dica: toque em ❓ Dúvida para perguntar algo sobre o idioma.</p>`;
+  if (!FR.msgs.length) return `<p class="muted fr-empty">Comece a conversa. Dica: toque em ❓ para marcar uma pergunta algo sobre o idioma.</p>`;
   return FR.msgs.map(m => {
     const me = m.sender === NET.id, time = new Date(m.created_at).toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" });
     if (m.kind === "nudge") return `<div class="fr-nudge">${me ? "Você" : esc(FR.people[m.sender]?.name || "")}: ${esc(m.body)}</div>`;
@@ -1672,6 +1677,14 @@ const FRA = {
     } catch (e) { FR.err = /anonymous/i.test(e.message) ? "O servidor ainda não aceita perfis novos. Tente mais tarde." : "Não deu para criar o perfil. Confira a internet e tente de novo."; }
     FR.busy = false; render();
   },
+  frDelete: () => modal(`<h2>Apagar seu perfil de amigos?</h2><p class="muted" style="font-weight:700">Seu nome, seu código, suas amizades e todas as conversas somem do servidor. Seu progresso nas lições continua neste aparelho.</p>
+    <div class="acts"><button class="btn" data-act="closeModal">Cancelar</button><button class="btn bad" data-act="frDeleteYes">Apagar</button></div>`),
+  frDeleteYes: async () => {
+    closeModal();
+    try { await sb(`profiles?id=eq.${NET.id}`, { method: "DELETE" }); } catch { toast("Não deu agora. Confira a internet e tente de novo.", "x"); return; }
+    NET = null; saveNet(); FR = Object.assign(FR, { me: null, people: {}, links: [], unread: {}, chat: null, msgs: [], err: "" });
+    toast("Perfil de amigos apagado.", "check"); render();
+  },
   frRetry: () => { frLoad(); render(); },
   frShare: async () => {
     const link = location.origin + location.pathname + "?amigo=" + FR.me.code, text = `Estuda idiomas comigo no Xibolete! Meu código de amigo é ${FR.me.code}.`;
@@ -1713,8 +1726,8 @@ const FRA = {
     try { await frFetchMsgs(); } catch {}
     paintMsgs(); renderChrome();
   },
-  frBack: () => { FR.chat = null; render(); },
-  frDoubt: () => { FR.doubt = !FR.doubt; const b = $(".fr-dbt"); if (b) b.setAttribute("aria-pressed", FR.doubt); const t = $("#frText"); if (t) { t.placeholder = FR.doubt ? `Sua dúvida de ${LANGS[S.lang].learning}…` : "Escreva uma mensagem…"; t.focus(); } },
+  frBack: () => { FR.chat = null; render(); frLoad(); },
+  frDoubt: () => { FR.doubt = !FR.doubt; const b = $(".fr-dbt"); if (b) b.setAttribute("aria-pressed", FR.doubt); const t = $("#frText"); if (t) { t.placeholder = FR.doubt ? `Dúvida de ${LANGS[S.lang].learning}…` : "Mensagem…"; t.focus(); } },
   frSend: () => { const t = $("#frText"); if (!t || !t.value.trim()) return; const v = t.value; t.value = ""; frPost(v, FR.doubt ? "doubt" : "msg"); if (FR.doubt) A.frDoubt(); },
   frQuick: d => frPost(d.t, d.k),
   frClaim: () => {
@@ -1733,6 +1746,7 @@ setInterval(async () => {
 setInterval(async () => {
   if (document.hidden || !NET || !FR.me) return;
   const before = unreadTotal();
+  if (S.view === "friends" && !FR.chat && !LS && !TK && !SY && !PL) { await frLoad(); return; } // new requests and friends' progress
   await pushStats(); await frUnread();
   if (unreadTotal() !== before && !LS && !TK && !SY && !PL) renderChrome();
 }, 60000);
@@ -2980,7 +2994,7 @@ function noteTurn(to, focus) {
 
 // ---------- actions ----------
 const A = {
-  go: d => { closeModal(); S.view = d.v; pop = null; save(); render(); scrollTo(0, 0); },
+  go: d => { closeModal(); S.view = d.v; pop = null; save(); if (d.v === "friends") { FR.chat = null; if (FR.me) frLoad(); } render(); scrollTo(0, 0); },
   langMenu: () => {
     const m = $("#langMenu"), open = m.hidden;
     m.innerHTML = LKEYS.map(k => `<button data-act="setLang" data-k="${k}" aria-current="${k === S.lang}"><span class="badge" style="--bc:${LANGS[k].color}">${LANGS[k].code}</span>${esc(LANGS[k].name)}<span class="pct">${coursePct(k)}%</span></button>`).join("");
