@@ -5604,5 +5604,7363 @@
   "heard": "Can to swim? No toe.",
   "score": 0.73,
   "kept": false
+ },
+ "8ff53680": {
+  "text": "eleven",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "f5352bb4": {
+  "text": "twelve",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "63374a36": {
+  "text": "thirteen",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "07cc2b2a": {
+  "text": "fifteen",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "00500da8": {
+  "text": "twenty",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "1a956a35": {
+  "text": "thirty",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "bd93ede1": {
+  "text": "fifty",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "6232229c": {
+  "text": "sixty",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "914f96c5": {
+  "text": "seventy",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "4f5dda2b": {
+  "text": "eighty",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "c1faa93e": {
+  "text": "ninety",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "2ba4b5cb": {
+  "text": "one hundred",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "b9154abb": {
+  "text": "I'm twenty-five years old",
+  "heard": "I'm 25 years old.",
+  "score": 1.0,
+  "kept": true
+ },
+ "994faca9": {
+  "text": "It costs forty dollars",
+  "heard": "It costs $40.",
+  "score": 0.86,
+  "kept": true
+ },
+ "8fbac0cd": {
+  "text": "There are thirty students in the class",
+  "heard": "There are 30 students in the class. There!",
+  "score": 0.93,
+  "kept": true
+ },
+ "aa9e9379": {
+  "text": "My grandfather is eighty",
+  "heard": "My grandfather is 80.",
+  "score": 1.0,
+  "kept": true
+ },
+ "b6032c0f": {
+  "text": "hour",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "38e70f69": {
+  "text": "minute",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "d5c6965d": {
+  "text": "week",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "7c3f812f": {
+  "text": "morning",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "ac247217": {
+  "text": "afternoon",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "c3b8342f": {
+  "text": "evening",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "4727e413": {
+  "text": "It's seven o'clock",
+  "heard": "It's seven o'clock.",
+  "score": 1.0,
+  "kept": true
+ },
+ "13ba3092": {
+  "text": "I work on Monday",
+  "heard": "I work on Monday.",
+  "score": 1.0,
+  "kept": true
+ },
+ "78d305db": {
+  "text": "See you on Friday",
+  "heard": "See you on Friday.",
+  "score": 1.0,
+  "kept": true
+ },
+ "9ecfac84": {
+  "text": "The class is in the afternoon",
+  "heard": "The class is in the afternoon.",
+  "score": 1.0,
+  "kept": true
+ },
+ "ecc908c2": {
+  "text": "wake up",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "91336f30": {
+  "text": "get up",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "b203b399": {
+  "text": "take a shower",
+  "heard": "Take a shower.",
+  "score": 1.0,
+  "kept": true
+ },
+ "1d31d982": {
+  "text": "have breakfast",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "326ea19d": {
+  "text": "go to work",
+  "heard": "Go to work.",
+  "score": 1.0,
+  "kept": true
+ },
+ "c73d9c8b": {
+  "text": "have lunch",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "01670440": {
+  "text": "come home",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "c2075ec9": {
+  "text": "have dinner",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "812e5d77": {
+  "text": "go to bed",
+  "heard": "Go to bed.",
+  "score": 1.0,
+  "kept": true
+ },
+ "0391d612": {
+  "text": "usually",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "9a6320f7": {
+  "text": "often",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "5d689621": {
+  "text": "sometimes",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "96a1d067": {
+  "text": "I wake up at seven",
+  "heard": "I wake up at 7.",
+  "score": 1.0,
+  "kept": true
+ },
+ "daf15776": {
+  "text": "She goes to work by bus",
+  "heard": "She goes to work by bus.",
+  "score": 1.0,
+  "kept": true
+ },
+ "1799ae18": {
+  "text": "We have lunch at noon",
+  "heard": "We have lunch at noon.",
+  "score": 1.0,
+  "kept": true
+ },
+ "e70616bd": {
+  "text": "He usually has dinner at home",
+  "heard": "He usually has dinner at home.",
+  "score": 1.0,
+  "kept": true
+ },
+ "eaafdbda": {
+  "text": "I go to bed at eleven",
+  "heard": "I go to bed at 11.",
+  "score": 1.0,
+  "kept": true
+ },
+ "16fb7f77": {
+  "text": "bedroom",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "33e6572f": {
+  "text": "kitchen",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "03b1d87b": {
+  "text": "living room",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "4a9c9bdf": {
+  "text": "table",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "2bab0c25": {
+  "text": "couch",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "6815c86c": {
+  "text": "key",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "6bf0ef3b": {
+  "text": "lamp",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "b1c2ce91": {
+  "text": "apartment",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "5e327ac2": {
+  "text": "There is a couch in the living room",
+  "heard": "There is a couch in the living room.",
+  "score": 1.0,
+  "kept": true
+ },
+ "3a8b3ffb": {
+  "text": "The kitchen is small",
+  "heard": "The kitchen is small.",
+  "score": 1.0,
+  "kept": true
+ },
+ "8451db35": {
+  "text": "Where is the key?",
+  "heard": "Where is the key?",
+  "score": 1.0,
+  "kept": true
+ },
+ "1058f330": {
+  "text": "My bedroom has two windows",
+  "heard": "My bedroom has two windows.",
+  "score": 1.0,
+  "kept": true
+ },
+ "cc56694a": {
+  "text": "Close the door, please",
+  "heard": "Close the door please.",
+  "score": 1.0,
+  "kept": true
+ },
+ "a8136946": {
+  "text": "T-shirt",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "de2337e1": {
+  "text": "pants",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "be2f5538": {
+  "text": "skirt",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "b3068a53": {
+  "text": "shoes",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "dc398e12": {
+  "text": "coat",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "19519f98": {
+  "text": "sweater",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "7f5f6abe": {
+  "text": "scarf",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "e4bc209e": {
+  "text": "wear",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "21745b34": {
+  "text": "I like your jacket",
+  "heard": "Like your jacket?",
+  "score": 0.86,
+  "kept": true
+ },
+ "04558c6a": {
+  "text": "These shoes are too big",
+  "heard": "These shoes are too big.",
+  "score": 1.0,
+  "kept": true
+ },
+ "35a9622a": {
+  "text": "Can I try it on?",
+  "heard": "Can I try it on?",
+  "score": 1.0,
+  "kept": true
+ },
+ "9e21cac5": {
+  "text": "She is wearing a red dress",
+  "heard": "She is wearing a red dress.",
+  "score": 1.0,
+  "kept": true
+ },
+ "d0e47324": {
+  "text": "How much is this hat?",
+  "heard": "How much is this hat?",
+  "score": 1.0,
+  "kept": true
+ },
+ "36404793": {
+  "text": "weather",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "e04e3f61": {
+  "text": "sun",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "89a3b5d3": {
+  "text": "rain",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "848317f2": {
+  "text": "snow",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "1414f107": {
+  "text": "wind",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "fec3a7d4": {
+  "text": "hot",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "81fa6638": {
+  "text": "warm",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "fce32734": {
+  "text": "summer",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "c4bb620c": {
+  "text": "winter",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "63f1336c": {
+  "text": "spring",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "f85a0760": {
+  "text": "fall",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "3e4c060c": {
+  "text": "It's hot today",
+  "heard": "It's hot today.",
+  "score": 1.0,
+  "kept": true
+ },
+ "198c4ebc": {
+  "text": "It's raining",
+  "heard": "It's raining.",
+  "score": 1.0,
+  "kept": true
+ },
+ "0a0734c6": {
+  "text": "What's the weather like?",
+  "heard": "What's the weather like?",
+  "score": 1.0,
+  "kept": true
+ },
+ "d98a3b09": {
+  "text": "I love summer",
+  "heard": "I love summer.",
+  "score": 1.0,
+  "kept": true
+ },
+ "d5fe09d4": {
+  "text": "It's cold in winter",
+  "heard": "It's cold in winter.",
+  "score": 1.0,
+  "kept": true
+ },
+ "8ba8ed1a": {
+  "text": "eye",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "918d404a": {
+  "text": "nose",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "742581dc": {
+  "text": "mouth",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "c4ba2f20": {
+  "text": "hand",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "386f27b5": {
+  "text": "arm",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "3f6ae937": {
+  "text": "leg",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "2d505a99": {
+  "text": "foot",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "31b23887": {
+  "text": "sick",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "a1f02512": {
+  "text": "doctor",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "62bdfdb8": {
+  "text": "hurt",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "3c6345f1": {
+  "text": "My head hurts",
+  "heard": "My head hurts.",
+  "score": 1.0,
+  "kept": true
+ },
+ "98527516": {
+  "text": "I feel sick",
+  "heard": "I feel sick.",
+  "score": 1.0,
+  "kept": true
+ },
+ "888125f6": {
+  "text": "I need a doctor",
+  "heard": "I need a doctor.",
+  "score": 1.0,
+  "kept": true
+ },
+ "3cd6e633": {
+  "text": "She has blue eyes",
+  "heard": "She has blue eyes.",
+  "score": 1.0,
+  "kept": true
+ },
+ "2660b14f": {
+  "text": "Wash your hands",
+  "heard": "Wash your hands.",
+  "score": 1.0,
+  "kept": true
+ },
+ "03274595": {
+  "text": "teacher",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "00313120": {
+  "text": "student",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "f79f39aa": {
+  "text": "nurse",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "9c3dd718": {
+  "text": "engineer",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "ef3e2929": {
+  "text": "cook",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "e55419df": {
+  "text": "driver",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "7a1dd997": {
+  "text": "waiter",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "92a761cd": {
+  "text": "police officer",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "d2d74d01": {
+  "text": "lawyer",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "808e8652": {
+  "text": "farmer",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "22244cde": {
+  "text": "artist",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "ddd42fdc": {
+  "text": "job",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "b9f7a551": {
+  "text": "What do you do?",
+  "heard": "What do you do?",
+  "score": 1.0,
+  "kept": true
+ },
+ "49e66f6d": {
+  "text": "I'm a teacher",
+  "heard": "I'm a teacher.",
+  "score": 1.0,
+  "kept": true
+ },
+ "961de2b9": {
+  "text": "She works in a hospital",
+  "heard": "She works in a hospital.",
+  "score": 1.0,
+  "kept": true
+ },
+ "4ded67ea": {
+  "text": "He is a good cook",
+  "heard": "He is a good cook.",
+  "score": 1.0,
+  "kept": true
+ },
+ "96020bf0": {
+  "text": "I don't have a job",
+  "heard": "I don't have a job.",
+  "score": 1.0,
+  "kept": true
+ },
+ "9f312044": {
+  "text": "supermarket",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "97487236": {
+  "text": "restaurant",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "7d8c66dd": {
+  "text": "hotel",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "b4816015": {
+  "text": "museum",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "30e12fe2": {
+  "text": "church",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "f7bf775c": {
+  "text": "pharmacy",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "866a3091": {
+  "text": "post office",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "244a2150": {
+  "text": "corner",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "54f3570f": {
+  "text": "near",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "100bc1df": {
+  "text": "The museum is next to the park",
+  "heard": "The museum is next to the park.",
+  "score": 1.0,
+  "kept": true
+ },
+ "e503b372": {
+  "text": "Go straight ahead",
+  "heard": "Oh, I just straight ahead.",
+  "score": 0.5,
+  "kept": false
+ },
+ "2341c754": {
+  "text": "The pharmacy is on the corner",
+  "heard": "The pharmacy is on the corner.",
+  "score": 1.0,
+  "kept": true
+ },
+ "e15169fb": {
+  "text": "I'm going to the supermarket",
+  "heard": "I'm going to the supermarket.",
+  "score": 1.0,
+  "kept": true
+ },
+ "65d5776b": {
+  "text": "buy",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "5e5b9905": {
+  "text": "sell",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "5e560689": {
+  "text": "pay",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "0b44452a": {
+  "text": "price",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "906ad500": {
+  "text": "cheap",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "953e947e": {
+  "text": "expensive",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "e150c94f": {
+  "text": "money",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "8827595f": {
+  "text": "card",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "962530d2": {
+  "text": "cash",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "c7e7bc2e": {
+  "text": "store",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "eae6b243": {
+  "text": "receipt",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "23a0d95c": {
+  "text": "size",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "f6c176b9": {
+  "text": "It's too expensive",
+  "heard": "It's too expensive.",
+  "score": 1.0,
+  "kept": true
+ },
+ "3661654a": {
+  "text": "Can I pay by card?",
+  "heard": "Can I pay by card?",
+  "score": 1.0,
+  "kept": true
+ },
+ "d91f617b": {
+  "text": "I'm just looking",
+  "heard": "Licking I'm just looking",
+  "score": 0.89,
+  "kept": true
+ },
+ "2ffdb77e": {
+  "text": "Do you have a smaller size?",
+  "heard": "Do you have a smaller size?",
+  "score": 1.0,
+  "kept": true
+ },
+ "99e4dd3a": {
+  "text": "menu",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "732c1097": {
+  "text": "order",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "b3711c47": {
+  "text": "check",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "f624f702": {
+  "text": "soup",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "afad8963": {
+  "text": "fish",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "b75b8129": {
+  "text": "dessert",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "f203a92b": {
+  "text": "glass",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "c9011403": {
+  "text": "plate",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "3e58c421": {
+  "text": "fork",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "7183f6da": {
+  "text": "knife",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "336f28b6": {
+  "text": "spoon",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "0411098b": {
+  "text": "A table for two, please",
+  "heard": "A table for two, please.",
+  "score": 1.0,
+  "kept": true
+ },
+ "09751a26": {
+  "text": "I'd like the chicken",
+  "heard": "I'd like the chicken.",
+  "score": 1.0,
+  "kept": true
+ },
+ "53659582": {
+  "text": "Can I have the check, please?",
+  "heard": "Can I have the check please?",
+  "score": 1.0,
+  "kept": true
+ },
+ "5fde2f6c": {
+  "text": "The soup is delicious",
+  "heard": "The soup is delicious.",
+  "score": 1.0,
+  "kept": true
+ },
+ "837faf68": {
+  "text": "Do you have any dessert?",
+  "heard": "Do you have any dessert?",
+  "score": 1.0,
+  "kept": true
+ },
+ "5fd56df9": {
+  "text": "bus",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "0e5e77a9": {
+  "text": "taxi",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "a3c91014": {
+  "text": "subway",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "c4602668": {
+  "text": "bike",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "cccb0055": {
+  "text": "plane",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "dcb746fb": {
+  "text": "boat",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "514ef933": {
+  "text": "bus stop",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "1faee677": {
+  "text": "drive",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "a0262210": {
+  "text": "walk",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "dfa2efb1": {
+  "text": "map",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "bcf819ee": {
+  "text": "far",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "cb532ae5": {
+  "text": "stop",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "82db4d21": {
+  "text": "late",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "83b49c84": {
+  "text": "I take the subway every day",
+  "heard": "I take the subway every day.",
+  "score": 1.0,
+  "kept": true
+ },
+ "cc9e2498": {
+  "text": "Where is the bus stop?",
+  "heard": "Where's the bus stop?",
+  "score": 1.0,
+  "kept": true
+ },
+ "d808a1f2": {
+  "text": "I walk to school",
+  "heard": "I walked to school.",
+  "score": 0.75,
+  "kept": true
+ },
+ "cb23cf3d": {
+  "text": "One ticket to Boston, please",
+  "heard": "One ticket to Boston, please.",
+  "score": 1.0,
+  "kept": true
+ },
+ "5eda7294": {
+  "text": "Is it far?",
+  "heard": "Is it far?",
+  "score": 1.0,
+  "kept": true
+ },
+ "9d2cfb7d": {
+  "text": "January",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "fca77633": {
+  "text": "February",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "c0846390": {
+  "text": "March",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "98dbac97": {
+  "text": "April",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "e920f785": {
+  "text": "June",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "011ca01f": {
+  "text": "July",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "5ddb609c": {
+  "text": "August",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "c212b600": {
+  "text": "September",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "ecf21807": {
+  "text": "October",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "3ea53a3f": {
+  "text": "November",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "662dcc9e": {
+  "text": "December",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "efeb5a2c": {
+  "text": "birthday",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "a194d136": {
+  "text": "My birthday is in May",
+  "heard": "My birthday is in May.",
+  "score": 1.0,
+  "kept": true
+ },
+ "332fec60": {
+  "text": "When is your birthday?",
+  "heard": "When is your birthday?",
+  "score": 1.0,
+  "kept": true
+ },
+ "7693627c": {
+  "text": "Today is March third",
+  "heard": "Today is March 3rd.",
+  "score": 0.75,
+  "kept": true
+ },
+ "1d1f1833": {
+  "text": "Christmas is in December",
+  "heard": "Christmas is in December.",
+  "score": 1.0,
+  "kept": true
+ },
+ "5d9f3698": {
+  "text": "We travel in July",
+  "heard": "We travel in July.",
+  "score": 1.0,
+  "kept": true
+ },
+ "9f9c4fd4": {
+  "text": "music",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "aef39ccf": {
+  "text": "movie",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "4249d707": {
+  "text": "game",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "2f54deed": {
+  "text": "sport",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "04a9735e": {
+  "text": "soccer",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "71da140d": {
+  "text": "swim",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "f815289c": {
+  "text": "dance",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "15d2601e": {
+  "text": "sing",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "c2cbd863": {
+  "text": "play",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "5fb7b228": {
+  "text": "watch",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "3b3b76a6": {
+  "text": "listen",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "e66176f9": {
+  "text": "travel",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "24350218": {
+  "text": "I like listening to music",
+  "heard": "Why? I like listening to music.",
+  "score": 0.91,
+  "kept": true
+ },
+ "fc4ee3df": {
+  "text": "Do you play soccer?",
+  "heard": "Do you play soccer?",
+  "score": 1.0,
+  "kept": true
+ },
+ "3e4da764": {
+  "text": "She loves dancing",
+  "heard": "Loves dancing.",
+  "score": 0.8,
+  "kept": true
+ },
+ "4604e4ff": {
+  "text": "We watch movies on Saturday",
+  "heard": "We watch movies on Saturday.",
+  "score": 1.0,
+  "kept": true
+ },
+ "df807192": {
+  "text": "What do you do in your free time?",
+  "heard": "What do you do in your free time?",
+  "score": 1.0,
+  "kept": true
+ },
+ "112cdf96": {
+  "text": "tall",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "ba226bd5": {
+  "text": "short",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "58446843": {
+  "text": "young",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "1f951fd4": {
+  "text": "beautiful",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "e5819366": {
+  "text": "ugly",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "c52bb172": {
+  "text": "thin",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "d4b676b9": {
+  "text": "hair",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "c2ecdf53": {
+  "text": "long",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "816f8d46": {
+  "text": "curly",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "bfec2606": {
+  "text": "blond",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "d913e243": {
+  "text": "kind",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "42abb7cb": {
+  "text": "funny",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "eb513f57": {
+  "text": "She has long hair",
+  "heard": "She has long hair.",
+  "score": 1.0,
+  "kept": true
+ },
+ "4ebf9597": {
+  "text": "He is tall and thin",
+  "heard": "He is tall and thin.",
+  "score": 1.0,
+  "kept": true
+ },
+ "50fafb34": {
+  "text": "My grandmother is very kind",
+  "heard": "My grandmother is very kind.",
+  "score": 1.0,
+  "kept": true
+ },
+ "665fce4a": {
+  "text": "What does he look like?",
+  "heard": "What does he look like?",
+  "score": 1.0,
+  "kept": true
+ },
+ "98975bdd": {
+  "text": "They are young",
+  "heard": "They're young.",
+  "score": 1.0,
+  "kept": true
+ },
+ "e61cac07": {
+  "text": "sad",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "720c3fd5": {
+  "text": "tired",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "10f5d87c": {
+  "text": "hungry",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "652f2c70": {
+  "text": "thirsty",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "b50aaefe": {
+  "text": "angry",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "3f32c75d": {
+  "text": "scared",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "eda17c15": {
+  "text": "bored",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "5cfb6080": {
+  "text": "busy",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "a1121c17": {
+  "text": "worried",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "264281a5": {
+  "text": "excited",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "8d8512e3": {
+  "text": "sleepy",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "b33572bd": {
+  "text": "feel",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "59d1f87d": {
+  "text": "I'm hungry",
+  "heard": "I'm hungry.",
+  "score": 1.0,
+  "kept": true
+ },
+ "1f093395": {
+  "text": "Are you tired?",
+  "heard": "Are you tired?",
+  "score": 1.0,
+  "kept": true
+ },
+ "41fe736a": {
+  "text": "She is very happy today",
+  "heard": "She is very happy today.",
+  "score": 1.0,
+  "kept": true
+ },
+ "223936ae": {
+  "text": "Don't be sad",
+  "heard": "Don't be sad.",
+  "score": 1.0,
+  "kept": true
+ },
+ "6f728507": {
+  "text": "I'm a little scared",
+  "heard": "I'm a little scared.",
+  "score": 1.0,
+  "kept": true
+ },
+ "ab3e0bff": {
+  "text": "class",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "1c90ef81": {
+  "text": "lesson",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "6d3a0633": {
+  "text": "homework",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "6f4b93f0": {
+  "text": "pen",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "78627a04": {
+  "text": "pencil",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "4dec6320": {
+  "text": "notebook",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "2cacaa39": {
+  "text": "paper",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "b1514998": {
+  "text": "computer",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "aa8eba31": {
+  "text": "office",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "0d8b883a": {
+  "text": "meeting",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "d18a160c": {
+  "text": "boss",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "7f697715": {
+  "text": "learn",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "1d1a14a2": {
+  "text": "teach",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "565c3f63": {
+  "text": "I have class today",
+  "heard": "I have class today.",
+  "score": 1.0,
+  "kept": true
+ },
+ "aa34b128": {
+  "text": "Can I borrow a pen?",
+  "heard": "Can I borrow a pen?",
+  "score": 1.0,
+  "kept": true
+ },
+ "c54bae03": {
+  "text": "The meeting is at ten",
+  "heard": "The meeting is at 10.",
+  "score": 1.0,
+  "kept": true
+ },
+ "a6e59a52": {
+  "text": "I'm learning English",
+  "heard": "I'm learning English.",
+  "score": 1.0,
+  "kept": true
+ },
+ "c0ee1441": {
+  "text": "My boss is nice",
+  "heard": "My boss is nice",
+  "score": 1.0,
+  "kept": true
+ },
+ "e668bd09": {
+  "text": "dog",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "9b8951a6": {
+  "text": "horse",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "977128b2": {
+  "text": "bird",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "f78ddc50": {
+  "text": "cow",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "6840fb8f": {
+  "text": "pig",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "592318c4": {
+  "text": "mouse",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "cb619ce5": {
+  "text": "rabbit",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "f2dead7f": {
+  "text": "lion",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "8a524c53": {
+  "text": "bear",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "6a164f08": {
+  "text": "monkey",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "bb323378": {
+  "text": "duck",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "5bf16557": {
+  "text": "I have a dog",
+  "heard": "I have a dog.",
+  "score": 1.0,
+  "kept": true
+ },
+ "00bae145": {
+  "text": "The cat is sleeping",
+  "heard": "The cat is sleeping.",
+  "score": 1.0,
+  "kept": true
+ },
+ "73fb5968": {
+  "text": "Do you like animals?",
+  "heard": "Do you like animals?",
+  "score": 1.0,
+  "kept": true
+ },
+ "b35c1178": {
+  "text": "Birds can fly",
+  "heard": "Birds can fly.",
+  "score": 1.0,
+  "kept": true
+ },
+ "b3b8e6eb": {
+  "text": "There is a horse on the farm",
+  "heard": "There is a horse on the farm.",
+  "score": 1.0,
+  "kept": true
+ },
+ "f0743965": {
+  "text": "can",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "ed786bd6": {
+  "text": "can't",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "3871a3fa": {
+  "text": "help",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "d35ec4c9": {
+  "text": "open",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "27cb3b23": {
+  "text": "close",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "7013d630": {
+  "text": "carry",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "0ec63aab": {
+  "text": "understand",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "bdf0855a": {
+  "text": "find",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "892e4ca0": {
+  "text": "wait",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "b2e48278": {
+  "text": "fix",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "c84b99e2": {
+  "text": "remember",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "282c316c": {
+  "text": "forget",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "a1490e8e": {
+  "text": "I can swim",
+  "heard": "I can swim.",
+  "score": 1.0,
+  "kept": true
+ },
+ "e99f913e": {
+  "text": "I can't find my keys",
+  "heard": "I can't find my keys.",
+  "score": 1.0,
+  "kept": true
+ },
+ "a164eeda": {
+  "text": "She can speak three languages",
+  "heard": "She can speak three languages.",
+  "score": 1.0,
+  "kept": true
+ },
+ "da660e45": {
+  "text": "Wait for me, please",
+  "heard": "Wait for me please.",
+  "score": 1.0,
+  "kept": true
+ },
+ "4742d9e9": {
+  "text": "right now",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "1460a7f7": {
+  "text": "cooking",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "f1fe9ddb": {
+  "text": "eating",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "35572b80": {
+  "text": "sleeping",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "147eb74c": {
+  "text": "running",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "eeda06a8": {
+  "text": "waiting",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "d59a4b69": {
+  "text": "talking",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "71ef5835": {
+  "text": "playing",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "04d33a22": {
+  "text": "studying",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "df66914f": {
+  "text": "writing",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "9cd71404": {
+  "text": "doing",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "f21e1b5a": {
+  "text": "What are you doing?",
+  "heard": "What are you doing?",
+  "score": 1.0,
+  "kept": true
+ },
+ "57e4f5cc": {
+  "text": "I'm cooking dinner",
+  "heard": "I'm cooking dinner.",
+  "score": 1.0,
+  "kept": true
+ },
+ "db3b2c7b": {
+  "text": "They are playing in the park",
+  "heard": "They are playing in the park.  YEK!",
+  "score": 0.92,
+  "kept": true
+ },
+ "43ba6db1": {
+  "text": "She is talking on the phone",
+  "heard": "She is talking on the phone.",
+  "score": 1.0,
+  "kept": true
+ },
+ "f4e5c9d6": {
+  "text": "We are waiting for the bus",
+  "heard": "We are waiting for the bus.",
+  "score": 1.0,
+  "kept": true
+ },
+ "16e2c1f2": {
+  "text": "was",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "c7eb512c": {
+  "text": "were",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "25fb1e63": {
+  "text": "last night",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "e6f9c64b": {
+  "text": "last week",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "3641595a": {
+  "text": "ago",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "c487c2fe": {
+  "text": "born",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "7fe4b3b0": {
+  "text": "there was",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "c2e0bb26": {
+  "text": "there were",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "2d084d1f": {
+  "text": "at home",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "3530569c": {
+  "text": "early",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "fb1355ee": {
+  "text": "great",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "a58bf5dd": {
+  "text": "I was at home yesterday",
+  "heard": "I was at home yesterday. I",
+  "score": 0.91,
+  "kept": true
+ },
+ "d91defcd": {
+  "text": "Where were you last night?",
+  "heard": "Where were you last night?",
+  "score": 1.0,
+  "kept": true
+ },
+ "4244424d": {
+  "text": "It was a great day",
+  "heard": "It was a great day.",
+  "score": 1.0,
+  "kept": true
+ },
+ "b80f404a": {
+  "text": "We were late",
+  "heard": "We were late.",
+  "score": 1.0,
+  "kept": true
+ },
+ "b375892b": {
+  "text": "I was born in Brazil",
+  "heard": "I was born in Brazil.",
+  "score": 1.0,
+  "kept": true
+ },
+ "2483ee0e": {
+  "text": "excuse me",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "b69943ed": {
+  "text": "of course",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "e13cb2ab": {
+  "text": "maybe",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "b33fe54f": {
+  "text": "again",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "1ab97f1f": {
+  "text": "slowly",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "d99ba82a": {
+  "text": "repeat",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "9ede2954": {
+  "text": "mean",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "6a98e9fd": {
+  "text": "word",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "06d5a845": {
+  "text": "question",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "848019df": {
+  "text": "answer",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "bdeb87dc": {
+  "text": "problem",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "1efb9680": {
+  "text": "sure",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "842c6f1c": {
+  "text": "Excuse me, can you repeat that?",
+  "heard": "Excuse me, can you repeat that?",
+  "score": 1.0,
+  "kept": true
+ },
+ "b6c1395d": {
+  "text": "Can you speak slowly, please?",
+  "heard": "Can you speak slowly please?",
+  "score": 1.0,
+  "kept": true
+ },
+ "ee37e306": {
+  "text": "What does this word mean?",
+  "heard": "What does this word mean?",
+  "score": 1.0,
+  "kept": true
+ },
+ "3725c31f": {
+  "text": "How do you say obrigado in English?",
+  "heard": "How do you say Obergato in English?",
+  "score": 0.86,
+  "kept": true
+ },
+ "3604c9dc": {
+  "text": "No problem!",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "c40bf6cc": {
+  "text": "A",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "c00bf080": {
+  "text": "E",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "597d11c6": {
+  "text": "egg",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "cc0c0364": {
+  "text": "I",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "72e0f880": {
+  "text": "ice",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "ca0c003e": {
+  "text": "O",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "45b473eb": {
+  "text": "orange",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "d00c09b0": {
+  "text": "U",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "f590e1e5": {
+  "text": "umbrella",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "dc0c1c94": {
+  "text": "Y",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "c70bfb85": {
+  "text": "B",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "348f1364": {
+  "text": "ball",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "c60bf9f2": {
+  "text": "C",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "c10bf213": {
+  "text": "D",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "c30bf539": {
+  "text": "F",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "c20bf3a6": {
+  "text": "G",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "cd0c04f7": {
+  "text": "H",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "cf0c081d": {
+  "text": "J",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "ce0c068a": {
+  "text": "K",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "c90bfeab": {
+  "text": "L",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "d52792d1": {
+  "text": "love",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "c80bfd18": {
+  "text": "M",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "cb0c01d1": {
+  "text": "N",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "e6de9f61": {
+  "text": "night",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "d50c118f": {
+  "text": "P",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "d40c0ffc": {
+  "text": "Q",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "0fb740c9": {
+  "text": "queen",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "d70c14b5": {
+  "text": "R",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "d60c1322": {
+  "text": "S",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "d10c0b43": {
+  "text": "T",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "d30c0e69": {
+  "text": "V",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "9625faa2": {
+  "text": "van",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "d20c0cd6": {
+  "text": "W",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "dd0c1e27": {
+  "text": "X",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "70c67e32": {
+  "text": "box",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "df0c214d": {
+  "text": "Z",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "927c3c2b": {
+  "text": "zoo",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "50b8d09c": {
+  "text": "you",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "7a8c7df8": {
+  "text": "Good",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "01c3ac8d": {
+  "text": "how",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "406f344d": {
+  "text": "are",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "4024f153": {
+  "text": "am",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "bef086ed": {
+  "text": "fine",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "0815494f": {
+  "text": "What",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "4e388f15": {
+  "text": "is",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "00f0e6aa": {
+  "text": "your",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "8d39bde6": {
+  "text": "name",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "4bdfdfb3": {
+  "text": "My",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "76b5f525": {
+  "text": "Ana",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "925f811c": {
+  "text": "Nice",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "42454824": {
+  "text": "to",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "88d37956": {
+  "text": "meet",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "5a59b1a1": {
+  "text": "This",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "4c2dfe93": {
+  "text": "my",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "e40c292c": {
+  "text": "a",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "4bb89181": {
+  "text": "She",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "5bf7fdc9": {
+  "text": "We",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "8b2c112f": {
+  "text": "want",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "15743f91": {
+  "text": "drink",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "0c4afe69": {
+  "text": "with",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "169949bc": {
+  "text": "The",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "61ceb934": {
+  "text": "Do",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "0be7cf36": {
+  "text": "like",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "9d2d8a9c": {
+  "text": "cats",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "2166e5bd": {
+  "text": "years",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "2e430863": {
+  "text": "Three",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "a2055896": {
+  "text": "coffees",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "91dad0f8": {
+  "text": "Where",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "6c6e2525": {
+  "text": "eat",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "4220774b": {
+  "text": "go",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "b526ec40": {
+  "text": "see",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "a2780a89": {
+  "text": "speak",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "be269f5c": {
+  "text": "write",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "5b98d260": {
+  "text": "work",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "1b9ae0bb": {
+  "text": "English",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "5beb31d6": {
+  "text": "He",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "600eb782": {
+  "text": "reads",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "094ef704": {
+  "text": "every",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "e44f21fd": {
+  "text": "day",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "b40eb21c": {
+  "text": "the",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "13f2879a": {
+  "text": "Turn",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "72ea8bed": {
+  "text": "need",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "69b0596d": {
+  "text": "don't",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "52fed105": {
+  "text": "Can",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "682e2aa7": {
+  "text": "me",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "644e442d": {
+  "text": "How",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "d12fe57c": {
+  "text": "much",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "47388410": {
+  "text": "it",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "33380b6b": {
+  "text": "learning",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "17b183e0": {
+  "text": "See",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "7ee93563": {
+  "text": "hundred",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "fe00a57c": {
+  "text": "I'm",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "825d8b1f": {
+  "text": "twenty-five",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "46e8d230": {
+  "text": "It",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "1424bf11": {
+  "text": "costs",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "7395fea4": {
+  "text": "dollars",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "5ea746fd": {
+  "text": "There",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "a070a5a9": {
+  "text": "students",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "41387a9e": {
+  "text": "in",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "77688e8b": {
+  "text": "grandfather",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "5d3c9be4": {
+  "text": "time",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "28cb3c32": {
+  "text": "It's",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "5fc7021f": {
+  "text": "o'clock",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "61342fd0": {
+  "text": "on",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "ae33040d": {
+  "text": "wake",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "43430b20": {
+  "text": "up",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "540ca757": {
+  "text": "get",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "0a339056": {
+  "text": "take",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "f90cbb4b": {
+  "text": "shower",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "9a32f866": {
+  "text": "breakfast",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "cf1ef61f": {
+  "text": "lunch",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "fd42bc61": {
+  "text": "come",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "d2c8c28e": {
+  "text": "home",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "57b20f7d": {
+  "text": "dinner",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "09784e5b": {
+  "text": "goes",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "542bcc94": {
+  "text": "by",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "88ab4733": {
+  "text": "noon",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "edbf0fe3": {
+  "text": "has",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "05bfb038": {
+  "text": "living",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "37fd327a": {
+  "text": "room",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "a2c4f48c": {
+  "text": "small",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "d59726ea": {
+  "text": "windows",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "cd86acc3": {
+  "text": "Close",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "7aa9b1a8": {
+  "text": "These",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "9e10ce11": {
+  "text": "too",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "ac1db00e": {
+  "text": "try",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "c6d35f72": {
+  "text": "wearing",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "8b86c991": {
+  "text": "What's",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "3c168691": {
+  "text": "hurts",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "43edbc4b": {
+  "text": "eyes",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "239f0d8e": {
+  "text": "Wash",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "04187fa9": {
+  "text": "hands",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "e2c119fb": {
+  "text": "police",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "c1af3779": {
+  "text": "officer",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "621cd814": {
+  "text": "do",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "4492b3e9": {
+  "text": "works",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "89e7fa47": {
+  "text": "post",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "4de8dd35": {
+  "text": "Is",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "5cb68de8": {
+  "text": "next",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "41d0c56b": {
+  "text": "Go",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "28ff8847": {
+  "text": "straight",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "ca24650e": {
+  "text": "ahead",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "0b4ec68d": {
+  "text": "going",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "8f259e5f": {
+  "text": "just",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "5506547a": {
+  "text": "looking",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "0d51613b": {
+  "text": "smaller",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "acf38390": {
+  "text": "for",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "0700b3a7": {
+  "text": "I'd",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "35dcc586": {
+  "text": "delicious",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "2c29f04d": {
+  "text": "any",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "1cb1b18f": {
+  "text": "One",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "dc36a144": {
+  "text": "Boston",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "021e3a39": {
+  "text": "When",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "e7c0775e": {
+  "text": "Today",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "69f9493e": {
+  "text": "third",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "a9bd7d9b": {
+  "text": "Christmas",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "77104bea": {
+  "text": "listening",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "2f4bd506": {
+  "text": "loves",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "60e75e8f": {
+  "text": "dancing",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "257fbbf4": {
+  "text": "movies",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "99b3eedb": {
+  "text": "free",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "0f29c2a6": {
+  "text": "and",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "20dc1db0": {
+  "text": "does",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "5c3ae3b6": {
+  "text": "he",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "e6ef5696": {
+  "text": "look",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "584f211f": {
+  "text": "They",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "a2fb5eed": {
+  "text": "Are",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "3baadc0d": {
+  "text": "Don't",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "382ba080": {
+  "text": "be",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "0c6175c1": {
+  "text": "little",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "65950d80": {
+  "text": "borrow",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "1231a1fc": {
+  "text": "nice",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "ed88e86a": {
+  "text": "animals",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "e0d0f573": {
+  "text": "Birds",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "fd902939": {
+  "text": "farm",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "f94a08cd": {
+  "text": "keys",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "bb953498": {
+  "text": "languages",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "0bd501c0": {
+  "text": "Wait",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "63e1d819": {
+  "text": "last",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "808bf777": {
+  "text": "Brazil",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "6c370998": {
+  "text": "excuse",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "69343c68": {
+  "text": "of",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "d1f81558": {
+  "text": "course",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "5993d9b8": {
+  "text": "Excuse",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "cb18332c": {
+  "text": "that",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "c91c7e60": {
+  "text": "say",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "aeea89a8": {
+  "text": "obrigado",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "61e6be1a": {
+  "text": "No",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "623f367d": {
+  "text": "Hey",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "5c5fb48f": {
+  "text": "ya",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "9f2975a0": {
+  "text": "Sure",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "78c7c40f": {
+  "text": "thing",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "09be5f96": {
+  "text": "Medium",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "023e8617": {
+  "text": "Anything",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "bdbf5bf0": {
+  "text": "else",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "8c1b34e8": {
+  "text": "Nah",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "ae55e386": {
+  "text": "that's",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "05024ed0": {
+  "text": "Thanks",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "0f7e1b30": {
+  "text": "For",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "5d342984": {
+  "text": "or",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "41f59644": {
+  "text": "To",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "706a76dc": {
+  "text": "Cool",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "f5a69226": {
+  "text": "That's",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "a167b1eb": {
+  "text": "Here",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "75fa501b": {
+  "text": "Have",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "b5bdd13c": {
+  "text": "You",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "77484f38": {
+  "text": "Jake",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "95cd8075": {
+  "text": "from",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "66e48762": {
+  "text": "Oh",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "f03e2abc": {
+  "text": "cool",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "2860fb68": {
+  "text": "brings",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "f9efa80a": {
+  "text": "vacation",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "06cf275c": {
+  "text": "Awesome",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "42026237": {
+  "text": "So",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "42521417": {
+  "text": "so",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "74e1ca29": {
+  "text": "Well",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "ba9eeb49": {
+  "text": "okay",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "dc4cfb86": {
+  "text": "kinda",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "e234733b": {
+  "text": "lost",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "0f5edaca": {
+  "text": "Yeah",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "6f1671ba": {
+  "text": "where's",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "a89ef012": {
+  "text": "it's",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "160da1c3": {
+  "text": "blocks",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "3db9b915": {
+  "text": "down",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "1ce2cb64": {
+  "text": "way",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "20af1fc9": {
+  "text": "Two",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "b6a43ae9": {
+  "text": "Yep",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "689219d9": {
+  "text": "miss",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "beed41b0": {
+  "text": "thanks",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "4c5165c8": {
+  "text": "lot",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "67eb44ba": {
+  "text": "Hi",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "660ec0f4": {
+  "text": "ready",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "eae69190": {
+  "text": "burger",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "d6fca9cc": {
+  "text": "Fries",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "17ba5e5e": {
+  "text": "side",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "71b5ed46": {
+  "text": "And",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "f606c87f": {
+  "text": "Just",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "baa64fcd": {
+  "text": "Got",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "d10780d9": {
+  "text": "I'll",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "e2a61acc": {
+  "text": "Enjoy",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "6fc5ca7f": {
+  "text": "looks",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "839ac3b7": {
+  "text": "How's",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "bd022a20": {
+  "text": "everything",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "df2c6ece": {
+  "text": "Really",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "b273a1f7": {
+  "text": "anything",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "27e17df3": {
+  "text": "welcome",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "d47a32d1": {
+  "text": "Checking",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "be35d2b9": {
+  "text": "reservation",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "a34ac38e": {
+  "text": "Great",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "548e0c66": {
+  "text": "Silva",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "e1adfe4e": {
+  "text": "Perfect",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "3acb3769": {
+  "text": "Okay",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "c0580964": {
+  "text": "you're",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "13254bc4": {
+  "text": "all",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "c6270703": {
+  "text": "set",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "b02f4284": {
+  "text": "You're",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "da9c223e": {
+  "text": "time's",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "4db95739": {
+  "text": "checkout",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "6472158b": {
+  "text": "Checkout's",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "07286448": {
+  "text": "wifi",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "79cc63fa": {
+  "text": "password's",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "506b03fa": {
+  "text": "let",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "464bc5aa": {
+  "text": "know",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "8dbc1488": {
+  "text": "Actually",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "35afd776": {
+  "text": "medium",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "b2f59b9a": {
+  "text": "Let",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "9b2c20a0": {
+  "text": "Fitting",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "2c95c42b": {
+  "text": "rooms",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "31f6520f": {
+  "text": "over",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "eadf668e": {
+  "text": "how'd",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "aee47c2c": {
+  "text": "fit",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "b0afc98d": {
+  "text": "fits",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "017b3391": {
+  "text": "That'll",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "2a8d6e8f": {
+  "text": "bucks",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "68e48a88": {
+  "text": "Of",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "aaf74aa2": {
+  "text": "tap",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "8dd31791": {
+  "text": "Done",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "9ad1bb62": {
+  "text": "weekend",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "8c3dc72a": {
+  "text": "Not",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "b323923e": {
+  "text": "about",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "0cbf1bf4": {
+  "text": "Wanna",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "0662faa5": {
+  "text": "sounds",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "efb4a376": {
+  "text": "Meet",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "e40ddc70": {
+  "text": "headache",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "41a6f93d": {
+  "text": "Since",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "0ea847ae": {
+  "text": "Try",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "d4ee4008": {
+  "text": "these",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "8cdbd876": {
+  "text": "Take",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "02ff0734": {
+  "text": "hours",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "df232561": {
+  "text": "lots",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "903cb9ad": {
+  "text": "Will",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "02e055cf": {
+  "text": "Morning",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "7e09470d": {
+  "text": "Pretty",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "543b679b": {
+  "text": "yours",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "5136dd21": {
+  "text": "stayed",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "bb41bbcc": {
+  "text": "chilled",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "d8b9cf23": {
+  "text": "went",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "f4b2c848": {
+  "text": "beach",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "a8db785e": {
+  "text": "fun",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "f3611c71": {
+  "text": "some",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "c156016f": {
+  "text": "that'd",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "96d3996f": {
+  "text": "Talk",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "523ab9a9": {
+  "text": "later",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "f7f62b49": {
+  "text": "Later",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "dddf5217": {
+  "text": "how's",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "6ed196a4": {
+  "text": "Doing",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "3c6928de": {
+  "text": "Did",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "d762953e": {
+  "text": "did",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "04d092fd": {
+  "text": "total",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "ab1a365f": {
+  "text": "out",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "02d2b8aa": {
+  "text": "hit",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "7e47596b": {
+  "text": "something",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "67e00bc7": {
+  "text": "Me",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "85737ca4": {
+  "text": "Wow",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "05537a1b": {
+  "text": "easy",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "957cb5e3": {
+  "text": "buddy",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "66a9cf89": {
+  "text": "bottle",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "17f709f1": {
+  "text": "what's",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "29b19c8a": {
+  "text": "not",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "97413796": {
+  "text": "weird",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "4e529eb9": {
+  "text": "Hmm",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "c508c328": {
+  "text": "must",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "9918f4ae": {
+  "text": "really",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "b3f184a9": {
+  "text": "call",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "a46ecabf": {
+  "text": "Newbie",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "59d56861": {
+  "text": "Aw",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "5584392f": {
+  "text": "sweet",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "856e942f": {
+  "text": "what",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "7de0c4cd": {
+  "text": "Haha",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "056c1458": {
+  "text": "where",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "51180c4a": {
+  "text": "Huh",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "d6dfb05d": {
+  "text": "real",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "31b98836": {
+  "text": "mystery",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "c5d6f4aa": {
+  "text": "aren't",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "18743595": {
+  "text": "From",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "c8d632fc": {
+  "text": "place",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "f8216f7b": {
+  "text": "door's",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "ce164093": {
+  "text": "locked",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "1978793c": {
+  "text": "Give",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "0f0649ca": {
+  "text": "Whoa",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "8e4139ed": {
+  "text": "coins",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "8cba386f": {
+  "text": "attitude",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "cd1ac90c": {
+  "text": "Key",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "994c2d1c": {
+  "text": "give",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "726b61c7": {
+  "text": "there's",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "312f0b60": {
+  "text": "spare",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "e9c99bb4": {
+  "text": "somewhere",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "89193acd": {
+  "text": "under",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "34366661": {
+  "text": "Nope",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "64ff7b9f": {
+  "text": "found",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "7d6f0881": {
+  "text": "Come",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "d43ff4c1": {
+  "text": "Coffee",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "9cd96b85": {
+  "text": "Bread",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "215d2ad2": {
+  "text": "Coming",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "8c141b56": {
+  "text": "Like",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "8b3dc597": {
+  "text": "Now",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "31f88553": {
+  "text": "Somebody's",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "ba184f6d": {
+  "text": "grumpy",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "3f1cd30d": {
+  "text": "Fine",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "a8901de9": {
+  "text": "extra",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "d24d060c": {
+  "text": "coin",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "b536a99d": {
+  "text": "since",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "a87f8823": {
+  "text": "asked",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "d97a0b6b": {
+  "text": "nicely",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "f2fc373d": {
+  "text": "bracelet",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "f3f8ad68": {
+  "text": "I've",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "5a45cc6a": {
+  "text": "seen",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "f3fb51d1": {
+  "text": "symbol",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "3845ff3e": {
+  "text": "before",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "369870e0": {
+  "text": "Guild",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "1a72ca12": {
+  "text": "ask",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "fb60fc2c": {
+  "text": "Marcus",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "fb5837ac": {
+  "text": "Anytime",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "d6f8a003": {
+  "text": "Bye",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "6d12b46c": {
+  "text": "caveman",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "37dd81a0": {
+  "text": "Be",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "244cda27": {
+  "text": "careful",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "c9d907b0": {
+  "text": "Shinar's",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "3c11eacf": {
+  "text": "Fresh",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "24375f24": {
+  "text": "apples",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "6a4ad944": {
+  "text": "Apples",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "5feb3822": {
+  "text": "Ha",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "465ad034": {
+  "text": "knew",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "694b8a7e": {
+  "text": "pet",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "2534f991": {
+  "text": "They're",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "147aa128": {
+  "text": "each",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "e1978fa2": {
+  "text": "many",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "33b262ea": {
+  "text": "Mei",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "003294c2": {
+  "text": "sells",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "0040b680": {
+  "text": "cloaks",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "2f715c1a": {
+  "text": "Looking",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "0da87ff3": {
+  "text": "cloak",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "32fa6e80": {
+  "text": "Depends",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "3d7e6258": {
+  "text": "color",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "b3a43630": {
+  "text": "Yes",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "581bb82d": {
+  "text": "got",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "97bc1282": {
+  "text": "Which",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "8f735a56": {
+  "text": "choice",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "176b9bf7": {
+  "text": "Blue's",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "2ca135cd": {
+  "text": "favorite",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "05b55ef1": {
+  "text": "Ooh",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "de96f676": {
+  "text": "bold",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "a953c75c": {
+  "text": "Green",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "b926f28c": {
+  "text": "sea",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "a19a8c3f": {
+  "text": "grab",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "82647bec": {
+  "text": "Anyway",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "bc14f783": {
+  "text": "Thank",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "14c048af": {
+  "text": "Deal",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "3b48a5d4": {
+  "text": "Twelve",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "2f633d36": {
+  "text": "crazy",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "bbd1f9d6": {
+  "text": "Crazy",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "654f3596": {
+  "text": "Then",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "fc34871f": {
+  "text": "Looks",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "71f39f63": {
+  "text": "bye",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "cec76752": {
+  "text": "also",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "4b7f7705": {
+  "text": "Stop",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "ee8d74aa": {
+  "text": "huh",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "1e9e9f85": {
+  "text": "Right",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "7f2c2a34": {
+  "text": "Move",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "704c607e": {
+  "text": "Nobody",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "feab4a74": {
+  "text": "talks",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "256f9e1c": {
+  "text": "Let's",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "ed28de2a": {
+  "text": "Sorry",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "e4c35bdc": {
+  "text": "hard",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "6dbf9171": {
+  "text": "Still",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "808a97e9": {
+  "text": "doesn't",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "af32845d": {
+  "text": "anybody",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "0fe07306": {
+  "text": "Name",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "8390060e": {
+  "text": "People",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "662c08ce": {
+  "text": "Seriously",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "67d07dca": {
+  "text": "Your",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "e6e5718f": {
+  "text": "names",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "b338c84b": {
+  "text": "Maybe",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "466387c8": {
+  "text": "Twenty",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "0ffc84e0": {
+  "text": "younger",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "ee7b9448": {
+  "text": "keep",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "e422e7e3": {
+  "text": "them",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "7459deae": {
+  "text": "perfect",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "559f4095": {
+  "text": "yet",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "29742e5c": {
+  "text": "Show",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "53ddadb4": {
+  "text": "By",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "117a998a": {
+  "text": "gods",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "7b8038d9": {
+  "text": "Why",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "e7252e76": {
+  "text": "wrong",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "2001734c": {
+  "text": "Nothing's",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "698989d8": {
+  "text": "touch",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "331dcf36": {
+  "text": "Calm",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "b0e603bd": {
+  "text": "Rosie",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "576cc974": {
+  "text": "told",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "2acd4eca": {
+  "text": "run",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "963335ee": {
+  "text": "people",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "514c98f2": {
+  "text": "boxes",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "d822d4ff": {
+  "text": "they",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "c2b4e50e": {
+  "text": "deliver",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "f7943c6a": {
+  "text": "letters",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "db4979a4": {
+  "text": "Every",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "4645d6c2": {
+  "text": "Tell",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "1a32ed3b": {
+  "text": "runs",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "d3988d03": {
+  "text": "Sleepy",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "197e2aee": {
+  "text": "Fox",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "035f1f67": {
+  "text": "Best",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "15f13256": {
+  "text": "Shinar",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "4124f2e6": {
+  "text": "an",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "9be987d0": {
+  "text": "inn",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "e92df9e1": {
+  "text": "she",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "54ea875b": {
+  "text": "away",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "c7f8ce68": {
+  "text": "working",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "b8cd918f": {
+  "text": "Almost",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "e5208a09": {
+  "text": "Tobias",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "47353550": {
+  "text": "guy",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "009b65b1": {
+  "text": "Too",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "c21cf202": {
+  "text": "Remember",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "f60c4582": {
+  "text": "s",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "029402af": {
+  "text": "fast",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "e85541e0": {
+  "text": "more",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "4b447f4c": {
+  "text": "That",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "d71c946a": {
+  "text": "saw",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "60e47df0": {
+  "text": "On",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "ad28c330": {
+  "text": "wrist",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "fca0333b": {
+  "text": "Queen's",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "33952623": {
+  "text": "advisor",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "b6973ef7": {
+  "text": "Get",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "eabd3d97": {
+  "text": "rest",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "4d56d846": {
+  "text": "Tomorrow",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "4881d841": {
+  "text": "first",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "dfe4e404": {
+  "text": "Time",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "652b04df": {
+  "text": "start",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "a2567906": {
+  "text": "Breakfast",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "d6bec8a4": {
+  "text": "half",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "827a7e1d": {
+  "text": "past",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "40e8c8be": {
+  "text": "In",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "f691d28a": {
+  "text": "days",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "9763b8b7": {
+  "text": "Lena",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "9a688bf3": {
+  "text": "She's",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "b2ff2b29": {
+  "text": "Never",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "72ba176f": {
+  "text": "almost",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "4d38965b": {
+  "text": "Same",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "5e25208d": {
+  "text": "as",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "7337a547": {
+  "text": "getting",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "a3e080e7": {
+  "text": "Getting",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "a4810d1f": {
+  "text": "calendar",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "ebee50c5": {
+  "text": "closed",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "746fd83e": {
+  "text": "Sundays",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "59c2cae7": {
+  "text": "quarter",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "dbe0f949": {
+  "text": "Hurry",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "396efb6a": {
+  "text": "tonight",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "aed763c6": {
+  "text": "Iris",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "39d0a3c2": {
+  "text": "everybody's",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "5967f3a5": {
+  "text": "details",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "a96fc6c9": {
+  "text": "spell",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "34d0896c": {
+  "text": "N-E-W-B-I-E",
+  "heard": "W-B-I-E.",
+  "score": 0.8,
+  "kept": true
+ },
+ "e5938962": {
+  "text": "N-U-B-I",
+  "heard": "Uh-uh, N-U-B-I.",
+  "score": 0.8,
+  "kept": true
+ },
+ "f8562b99": {
+  "text": "Nubi",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "40f50df6": {
+  "text": "King",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "bc7a115e": {
+  "text": "Street",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "be425ea7": {
+  "text": "Rosie's",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "c2fc66e3": {
+  "text": "Weekends",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "95ce3757": {
+  "text": "worker",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "f749db6d": {
+  "text": "inside",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "dbc51e80": {
+  "text": "Work",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "eeb85ac4": {
+  "text": "starts",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "a2e16552": {
+  "text": "finishes",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "74da67bf": {
+  "text": "Lunch",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "9b76c143": {
+  "text": "routine",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "555cbe68": {
+  "text": "Keep",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "73eb1dac": {
+  "text": "gets",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "1dcc6917": {
+  "text": "Only",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "1bd670a0": {
+  "text": "number",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "2fd9d583": {
+  "text": "Fish",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "f316d80d": {
+  "text": "Need",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "4708a35a": {
+  "text": "Where's",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "6c33113b": {
+  "text": "Easy",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "1ac2693d": {
+  "text": "Bakery",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "d6786ba0": {
+  "text": "properly",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "ba477146": {
+  "text": "Pip",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "914bd27a": {
+  "text": "turn",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "08d2ece2": {
+  "text": "which",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "dce2da08": {
+  "text": "Next",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "61e9eac0": {
+  "text": "Number",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "b9c16854": {
+  "text": "Forty-two",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "d19fdf7b": {
+  "text": "Twenty-four",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "592c8de7": {
+  "text": "Check",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "0964bc5d": {
+  "text": "letter",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "69960bb6": {
+  "text": "Look",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "36c7fad5": {
+  "text": "here's",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "3e1cd17a": {
+  "text": "Find",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "3ce67298": {
+  "text": "nobody's",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "c5da702c": {
+  "text": "But",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "919a0c3d": {
+  "text": "note",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "9f8ef6ce": {
+  "text": "Gone",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "e81ebb08": {
+  "text": "harbour",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "58dd75e4": {
+  "text": "ships",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "c326f72e": {
+  "text": "shops",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "a847e0a9": {
+  "text": "shop",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "9b47cc32": {
+  "text": "shoe",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "e5185c1a": {
+  "text": "than",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "8d80552f": {
+  "text": "Who",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "f4b57e09": {
+  "text": "well",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "b5df2b27": {
+  "text": "dead",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "6a8e75aa": {
+  "text": "end",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "e60d1486": {
+  "text": "learner",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "92773890": {
+  "text": "Left",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "6803cec6": {
+  "text": "Listen",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "e522e976": {
+  "text": "then",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "0d862f00": {
+  "text": "Ahoy",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "c0385610": {
+  "text": "You've",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "88fa678b": {
+  "text": "Captain",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "24b7ce55": {
+  "text": "Ola",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "4a0c52af": {
+  "text": "brother's",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "573f252c": {
+  "text": "Her",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "dad4df89": {
+  "text": "Gull",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "9cf5355c": {
+  "text": "Quick",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "ea6e4ac9": {
+  "text": "sailor",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "6208a3a3": {
+  "text": "Whose",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "e56984d6": {
+  "text": "Mine",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "a025d330": {
+  "text": "He's",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "312fd389": {
+  "text": "picture",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "76ccae63": {
+  "text": "daughter's",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "fe9b628b": {
+  "text": "Tom",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "3fa7357c": {
+  "text": "Sam",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "0d110fc2": {
+  "text": "brothers",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "d1696a16": {
+  "text": "sisters",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "c617f7a2": {
+  "text": "tell",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "45939473": {
+  "text": "Long",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "30be372f": {
+  "text": "brown",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "5505928f": {
+  "text": "smile",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "54e455d9": {
+  "text": "Hair",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "4044a22d": {
+  "text": "rope",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "605d486b": {
+  "text": "His",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "0a7f32f2": {
+  "text": "thought",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "a25535a3": {
+  "text": "girl",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "e40e2439": {
+  "text": "Last",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "ae7f4d1c": {
+  "text": "year",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "e12037ab": {
+  "text": "capital",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "7cfd61b2": {
+  "text": "Ask",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "a41b7c2f": {
+  "text": "compass",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "0534f793": {
+  "text": "sister's",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "cd0c4a3b": {
+  "text": "same",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "82fa0d53": {
+  "text": "Fair",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "10f8199c": {
+  "text": "winds",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "588a5993": {
+  "text": "Welcome",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "714c5d9d": {
+  "text": "Dinner",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "7cdb74f5": {
+  "text": "Here's",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "7ac4d962": {
+  "text": "would",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "a544440a": {
+  "text": "mom's",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "ec7e97cf": {
+  "text": "recipe",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "a9a58d8c": {
+  "text": "drop",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "bb2376f2": {
+  "text": "isn't",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "94e2dfef": {
+  "text": "eggs",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "c3493f6d": {
+  "text": "sausages",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "4f34d900": {
+  "text": "More",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "60d56f8c": {
+  "text": "but",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "c9d23be5": {
+  "text": "hate",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "3455d4a2": {
+  "text": "washing",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "9de96441": {
+  "text": "dishes",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "2e3e57fb": {
+  "text": "reading",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "81f4ae28": {
+  "text": "swimming",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "7e406f48": {
+  "text": "Swimming",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "c1280cb5": {
+  "text": "Brrr",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "a0f6c56e": {
+  "text": "wash",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "9dc3aa14": {
+  "text": "Add",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "a4e995fb": {
+  "text": "ing",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "5fa45c2c": {
+  "text": "Tonight's",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "bb4ecf1c": {
+  "text": "bill",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "294fc75c": {
+  "text": "account",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "c150b74c": {
+  "text": "Birthday",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "c32281d5": {
+  "text": "Festival",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "6223f1d6": {
+  "text": "fifteenth",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "1a83051b": {
+  "text": "clothes",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "e29c4bb5": {
+  "text": "festival",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "b59e6a6a": {
+  "text": "weeks",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "d094a1d5": {
+  "text": "boot",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "a6478e7c": {
+  "text": "Size",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "82eef0ad": {
+  "text": "bigger",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "6d618f41": {
+  "text": "Very",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "7b7a7318": {
+  "text": "pass",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "d1df8006": {
+  "text": "flower",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "9e6605ca": {
+  "text": "Those",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "cb01aecb": {
+  "text": "when's",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "8a7324ef": {
+  "text": "gift",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "d643be8c": {
+  "text": "Spring",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "5cf37624": {
+  "text": "favourite",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "cc628958": {
+  "text": "season",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "b224312f": {
+  "text": "Over",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "61449679": {
+  "text": "stall",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "1f84448e": {
+  "text": "Far",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "21d9d8e7": {
+  "text": "wet",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "090f523c": {
+  "text": "temple",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "46b889a2": {
+  "text": "Shh",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "8ff0a3b7": {
+  "text": "Quiet",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "88e65fab": {
+  "text": "stones",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "1b6e7dc9": {
+  "text": "after",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "5ce477a4": {
+  "text": "Or",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "aada77e9": {
+  "text": "says",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "d940d530": {
+  "text": "special",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "1ad8f02f": {
+  "text": "altar",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "8e3905fc": {
+  "text": "glowing",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "0541798f": {
+  "text": "ride",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "54d4daaf": {
+  "text": "useful",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "9472a4f6": {
+  "text": "Can't",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "46676a40": {
+  "text": "Stay",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "e46b4575": {
+  "text": "trust",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "0bd2c6d5": {
+  "text": "him",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "4594fdc9": {
+  "text": "crystal",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "a7dd3a69": {
+  "text": "After",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "4ed12c66": {
+  "text": "worry",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "725f53d4": {
+  "text": "wants",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "142ce44f": {
+  "text": "talk",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "d2487b23": {
+  "text": "Bram",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "56d563a8": {
+  "text": "At",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "79d90ec3": {
+  "text": "thief",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "796eec92": {
+  "text": "Was",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "93d394b6": {
+  "text": "Tall",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "b29019a6": {
+  "text": "grey",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "5fdddd75": {
+  "text": "Short",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "48179d4c": {
+  "text": "Were",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "8a438c87": {
+  "text": "wasn't",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "eadc8c31": {
+  "text": "even",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "7e0911a1": {
+  "text": "Brave",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "c633c0e2": {
+  "text": "Everybody's",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "ad27ee58": {
+  "text": "safe",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "7681059c": {
+  "text": "mother's",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "8248749b": {
+  "text": "knows",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "d397b280": {
+  "text": "person",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "9c7f8847": {
+  "text": "best",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "3ff50c63": {
+  "text": "Kind",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "ae97e7d2": {
+  "text": "smart",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "a234df25": {
+  "text": "important",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "9292a6c1": {
+  "text": "chance",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "438b6bce": {
+  "text": "crystals",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "487f2bbd": {
+  "text": "crying",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "1d794a89": {
+  "text": "A-R-I",
+  "heard": "I can't put in her eye.",
+  "score": 0.2,
+  "kept": false
+ },
+ "940adfad": {
+  "text": "E-R-I",
+  "heard": "Okay, I",
+  "score": 0.4,
+  "kept": false
+ },
+ "ec9c9e4d": {
+  "text": "Eri",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "3c1a5dab": {
+  "text": "ei",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "709433ea": {
+  "text": "trip",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "ac0cfc01": {
+  "text": "brave",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "3ebac865": {
+  "text": "means",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "ee80391c": {
+  "text": "strangers",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "e85afaf2": {
+  "text": "soon",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "08b83f7f": {
+  "text": "You'd",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "3a4a268f": {
+  "text": "better",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "bb0aeb8a": {
+  "text": "tip",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "c5d13fab": {
+  "text": "sixteen",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "a4c6ff66": {
+  "text": "seventeen",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "a57e9c10": {
+  "text": "eighteen",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "e21ee631": {
+  "text": "nineteen",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "8cf297ec": {
+  "text": "21",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "8ff29ca5": {
+  "text": "22",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "8ef29b12": {
+  "text": "23",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "89f29333": {
+  "text": "24",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "88f291a0": {
+  "text": "25",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "8bf29659": {
+  "text": "26",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "8af294c6": {
+  "text": "27",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "95f2a617": {
+  "text": "28",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "94f2a484": {
+  "text": "29",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "87f05176": {
+  "text": "30",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "9d9e89f7": {
+  "text": "only",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "8b6fe763": {
+  "text": "zero",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
+ },
+ "bc03351c": {
+  "text": "said",
+  "heard": "",
+  "score": 0,
+  "kept": false,
+  "short": true
  }
 }
