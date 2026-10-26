@@ -544,6 +544,50 @@ img.pix.mini.face{width:26px;height:26px;object-fit:cover;object-position:50% 22
 .gloss.up::before{bottom:-8px;border-left:0;border-top:0}
 @keyframes glossIn{from{opacity:0;transform:translateY(-4px)}}
 @media (prefers-reduced-motion: reduce){.gloss{animation:none}}
+/* alphabet */
+.abc-top{display:grid;gap:6px;justify-items:center}
+.abc-top .btn{font-size:17px;padding:14px}
+.abc-legend{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13px;color:var(--muted);font-weight:600}
+.abc-legend span{display:inline-flex;align-items:center;gap:5px}
+.abc-legend b{color:var(--ink)}
+.abc-h{margin:4px 0 10px}
+.abc-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+@media (min-width:900px){.abc-grid{grid-template-columns:repeat(6,minmax(0,1fr))}}
+.abc-cell{position:relative;display:grid;justify-items:center;gap:2px;padding:12px 6px 10px;border:2px solid var(--line-2);border-bottom-width:4px;border-radius:14px;background:var(--surface);color:var(--ink)}
+.abc-cell b{font:500 24px/1.1 var(--body);letter-spacing:.06em;white-space:nowrap}
+.abc-cell small{color:var(--muted);font-weight:700;font-size:13px;min-height:1.2em}
+.abc-bar{width:80%;height:7px;border-radius:4px;background:var(--line-2);overflow:hidden;margin-top:6px}
+.abc-bar i{display:block;height:100%;background:var(--lamp);border-radius:4px}
+.abc-dot{display:inline-block;width:8px;height:8px;border-radius:50%;flex:none}
+.abc-cell .abc-dot{position:absolute;top:7px;right:7px}
+.k-a{background:var(--ok)}.k-f{background:var(--flame)}.k-n{background:var(--lamp)}.k-x{background:var(--muted)}
+.k-a-t{color:var(--ok)}.k-f-t{color:var(--flame)}.k-n-t{color:var(--lamp)}.k-x-t{color:var(--muted)}
+.ab-card{display:grid;gap:10px;justify-items:center;text-align:center}
+.ab-card p{margin:0}
+.ab-glyph{font:500 64px/1.1 var(--body);letter-spacing:.08em;color:var(--ink);text-align:center}
+.ab-glyph.big{border:0;background:var(--surface-2);border-radius:20px;padding:10px 26px;font-size:72px}
+.ab-sound{font-weight:800;font-size:18px}
+.ab-quiz{display:flex;flex-direction:column;gap:18px;min-height:60vh}
+.ab-top{display:flex;align-items:center;gap:12px}
+.ab-top .x{border:0;background:none;color:var(--muted);padding:4px}
+.ab-top .x svg{width:26px;height:26px}
+.ab-top .bar{flex:1;height:14px;border-radius:7px;background:var(--line-2);overflow:hidden}
+.ab-top .bar i{display:block;height:100%;background:var(--lamp);border-radius:7px;transition:width 300ms var(--ease-out,ease-out)}
+.ab-ask{font-family:var(--display);font-size:22px;margin:8px 0 0;text-align:center}
+.ab-quiz .ab-glyph{margin:6px 0}
+.ab-hear{align-self:center;display:grid;place-items:center;width:110px;height:110px;border-radius:24px;border:0;border-bottom:5px solid var(--lamp-dark);background:var(--lamp);color:var(--lamp-ink)}
+.ab-hear svg{width:52px;height:52px}
+.ab-opts{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.ab-opt{border:2px solid var(--line-2);border-bottom-width:4px;border-radius:14px;background:var(--surface);color:var(--ink);padding:16px 8px;font:800 20px var(--body)}
+.ab-opt.glyph{font-weight:500;font-size:30px;letter-spacing:.06em}
+.ab-opt.good{border-color:var(--ok);background:color-mix(in srgb,var(--ok) 18%,var(--surface));color:var(--ok)}
+.ab-opt.bad{border-color:var(--bad);background:color-mix(in srgb,var(--bad) 18%,var(--surface));color:var(--bad)}
+.ab-opt.dim{opacity:.5}
+.ab-fb{display:grid;gap:12px;margin-top:auto;padding:14px;border-radius:16px;background:color-mix(in srgb,var(--ok) 14%,var(--surface))}
+.ab-fb.bad{background:color-mix(in srgb,var(--bad) 14%,var(--surface))}
+.ab-fb b{color:var(--ok)}.ab-fb.bad b{color:var(--bad)}
+.ab-end{display:grid;gap:10px;justify-items:center;text-align:center}
+.ab-big{font-size:56px}
 /* friends */
 .fr-wait{text-align:center;color:var(--muted);font-weight:700}
 .fr-err{display:flex;gap:10px;align-items:center;flex-wrap:wrap;border-color:var(--bad)}
@@ -803,6 +847,7 @@ textarea.lines::placeholder{color:#a3acbb}
 <script src="historia.js"></script>
 <script src="historia-ru.js"></script>
 <script src="glossario.js"></script>
+<script src="alfabeto.js"></script>
 <script>
 (() => {
 "use strict";
@@ -839,6 +884,7 @@ const P = {
   trophy: '<path fill="currentColor" d="M7 3h10v5.5a5 5 0 0 1-10 0zM10.5 13.3h3V17h2.5a1 1 0 0 1 1 1v3H7v-3a1 1 0 0 1 1-1h2.5z"/><path fill="none" stroke="currentColor" stroke-width="2" d="M7 5H4v1.5A3.5 3.5 0 0 0 7.5 10M17 5h3v1.5A3.5 3.5 0 0 1 16.5 10"/>',
   bag: '<path fill="currentColor" d="M4.5 8h15l-1.2 11.6a1.6 1.6 0 0 1-1.6 1.4H7.3a1.6 1.6 0 0 1-1.6-1.4z"/><path fill="none" stroke="currentColor" stroke-width="2" d="M8.5 10V7a3.5 3.5 0 0 1 7 0v3"/>',
   users: '<circle cx="9" cy="8" r="3.6" fill="currentColor"/><circle cx="17" cy="9.5" r="2.8" fill="currentColor"/><path fill="currentColor" d="M2.5 19.6c.5-3.6 3.3-5.7 6.5-5.7s6 2.1 6.5 5.7a.8.8 0 0 1-.8.9H3.3a.8.8 0 0 1-.8-.9zM16.4 20.5c.3-.3.4-.7.4-1.1-.2-1.8-.9-3.3-2-4.4.7-.4 1.5-.6 2.4-.6 2.6 0 4.6 1.7 5 4.6a1.3 1.3 0 0 1-1.3 1.5z"/>',
+  abc: '<text x="12" y="17.5" text-anchor="middle" font-family="Arial, sans-serif" font-weight="900" font-size="14" fill="currentColor">Aa</text>',
   user: '<circle cx="12" cy="8" r="4.2" fill="currentColor"/><path fill="currentColor" d="M3.8 20.5c.6-4.2 4-6.6 8.2-6.6s7.6 2.4 8.2 6.6a.9.9 0 0 1-.9 1H4.7a.9.9 0 0 1-.9-1z"/>',
   shield: '<path fill="currentColor" d="M12 2.5l8 3v6.2c0 4.8-3.3 8.4-8 9.8-4.7-1.4-8-5-8-9.8V5.5z"/><path fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M8.4 12l2.6 2.6 4.8-5"/>',
   medal: '<path fill="currentColor" opacity=".75" d="M7 2h4l2 5-3 2zM17 2h-4l-2 5 3 2z"/><circle cx="12" cy="15" r="6.5" fill="currentColor"/><path fill="#fff" opacity=".85" d="M12 11.3l1.1 2.3 2.5.3-1.8 1.7.5 2.5-2.3-1.2-2.3 1.2.5-2.5-1.8-1.7 2.5-.3z"/>',
@@ -861,7 +907,7 @@ const KEY = "babel-save-v1"; // name from before the app was renamed; kept so sa
 const fresh = () => ({
   v: 1, onboarded: false, lang: "en", view: "learn", xp: 0, coins: 50, hearts: 5, heartsAt: Date.now(),
   streak: 0, bestStreak: 0, lastDay: null, freezes: 0, goal: 30, day: {}, boostUntil: 0,
-  sound: true, translit: true, progress: {}, chests: {}, srs: {}, ach: {}, quests: {}, speech: {}, talks: {}, voicePick: {}, story: {}, bag: [], noMicUntil: 0, plan: {}, coop: {},
+  sound: true, translit: true, progress: {}, chests: {}, srs: {}, ach: {}, quests: {}, speech: {}, talks: {}, voicePick: {}, story: {}, bag: [], noMicUntil: 0, plan: {}, coop: {}, abc: {},
   stats: { lessons: 0, perfect: 0, maxCombo: 0, reviews: 0, langs: {}, correct: 0, answered: 0, owl: false, early: false, chests: 0, spoken: 0, spokenGreat: 0, speechTests: 0, talks: 0, story: 0 },
 });
 let S = fresh();
@@ -903,7 +949,7 @@ let lastTouch = Date.now();
 for (const e of ["pointerdown", "keydown"]) addEventListener(e, () => { lastTouch = Date.now(); }, { passive: true, capture: true });
 setInterval(() => {
   if (!S.onboarded || document.hidden || Date.now() - lastTouch > 90e3) return;
-  const busy = !$("#lesson").hidden || ["speak", "notes"].includes(S.view) && $("#onb").hidden;
+  const busy = !$("#lesson").hidden || ["speak", "notes", "abc"].includes(S.view) && $("#onb").hidden;
   if (!busy) return;
   const k = typeof SY !== "undefined" && SY ? SY.l : S.lang, d = today(), had = studySec(k, d), goal = goalMin(k) * 60;
   (d.sec ||= {})[k] = had + 5;
@@ -1331,7 +1377,7 @@ function renderChrome() {
     <button class="stat heart" data-act="heartsInfo" title="Vidas">${I("heart")}${S.hearts}</button>
     <button class="stat xp" data-act="go" data-v="profile" title="Nível ${lv.L}">${I("bolt")}${lv.L}${boosted() ? '<span class="boost-tag">2x</span>' : ""}</button>`;
   const due = dueWords(S.lang).length;
-  const navs = [["learn", "home", "Aprender", "Aprender"], ["story", "book", "História", "História"], ["talk", "chat", "Conversas", "Papo"], ["speak", "mic", "Pronúncia", "Fala"], ["train", "target", "Treino", "Treino"], ["notes", "pen", "Caderno", "Caderno"], ["ach", "trophy", "Conquistas", "Troféus"], ["shop", "bag", "Loja", "Loja"], ["friends", "users", "Amigos", "Amigos"], ["profile", "user", "Perfil", "Perfil"]];
+  const navs = [["learn", "home", "Aprender", "Aprender"], ["abc", "abc", "Alfabeto", "ABC"], ["story", "book", "História", "História"], ["talk", "chat", "Conversas", "Papo"], ["speak", "mic", "Pronúncia", "Fala"], ["train", "target", "Treino", "Treino"], ["notes", "pen", "Caderno", "Caderno"], ["ach", "trophy", "Conquistas", "Troféus"], ["shop", "bag", "Loja", "Loja"], ["friends", "users", "Amigos", "Amigos"], ["profile", "user", "Perfil", "Perfil"]];
   $("#nav").innerHTML = navs.map(([v, ic, label, short]) =>
     `<button data-act="go" data-v="${v}" ${S.view === v ? 'aria-current="page"' : ""} aria-label="${label}">${I(ic)}<span class="nl">${label}</span><span class="ns">${short}</span>${v === "train" && due >= 4 ? '<i class="dot" title="Palavras para revisar"></i>' : ""}${v === "friends" && unreadTotal() ? '<i class="dot" title="Mensagens novas"></i>' : ""}</button>`).join("");
   $("#side").innerHTML = sideHtml();
@@ -1475,6 +1521,97 @@ function viewProfile() {
       <div class="set-row"><div><b>Apagar progresso</b><p>Zera XP, moedas, lições e conquistas de todos os idiomas. Seu caderno de anotações não é apagado.</p></div><button class="btn small bad" data-act="reset">Apagar tudo</button></div>
     </div></div>`;
 }
+// ---------- alphabet ----------
+// One board per language (alfabeto.js), like Duolingo's: every letter with its sound and a bar that fills
+// as the learner gets it right in "Aprender as letras" (5 right answers fill a letter). Tapping a letter
+// says its name and opens a card with how to say it and an example word.
+const ABC_MAX = 5, ABC_Q = 10;
+const ABC_KIND = { a: ["amiga", "igual ao português"], f: ["falsa amiga", "parece, mas soa diferente"], n: ["nova", "não existe em português"], x: ["especial", "sinal sem som ou letra rara"] };
+const abcOf = (k = S.lang) => (window.XIB_ABC || {})[k];
+const abcAll = (k = S.lang) => abcOf(k) ? abcOf(k).grupos.flatMap(g => g[1]) : [];
+const abcLv = (k, g) => ((S.abc || {})[k] || {})[g] || 0;
+let AB = null; // the practice round in progress
+function viewAbc() {
+  if (AB) return abQuizHtml();
+  const k = S.lang, L = LANGS[k], A_ = abcOf(k), all = abcAll(k);
+  const done = all.filter(l => abcLv(k, l[0]) >= ABC_MAX).length;
+  return `<div class="page-head"><h1>Alfabeto ${esc(L.learning)}</h1><p>${esc(A_.intro)}</p></div><div class="stack">
+    <div class="abc-top"><button class="btn wide" data-act="abStart">Aprender as letras</button><small class="muted">${done} de ${all.length} letras dominadas</small></div>
+    <div class="abc-legend">${Object.entries(ABC_KIND).filter(([t]) => all.some(l => l[6] === t)).map(([t, [n, d]]) => `<span><i class="abc-dot k-${t}"></i><b>${n}</b> ${d}</span>`).join("")}</div>
+    ${A_.grupos.map(([title, letters]) => `<section><h3 class="abc-h">${esc(title)}</h3><div class="abc-grid">${letters.map(l => {
+      const lv = abcLv(k, l[0]);
+      return `<button class="abc-cell" data-act="abLetter" data-g="${esc(l[0])}" aria-label="Letra ${esc(l[0])}, som ${esc(l[1])}"><i class="abc-dot k-${l[6]}"></i><b>${esc(l[0])}</b><small>${esc(l[1])}</small><span class="abc-bar"><i style="width:${lv / ABC_MAX * 100}%"></i></span></button>`;
+    }).join("")}</div></section>`).join("")}
+  </div>`;
+}
+function abFind(g, k = S.lang) { return abcAll(k).find(l => l[0] === g); }
+function abShuffle(a) { for (let i = a.length - 1; i > 0; i--) { const j = Math.random() * (i + 1) | 0; [a[i], a[j]] = [a[j], a[i]]; } return a; }
+function abMakeRound() {
+  const k = S.lang, all = abcAll(k);
+  // the letters known least come first; ties in random order
+  const pool = abShuffle(all.slice()).sort((a, b) => abcLv(k, a[0]) - abcLv(k, b[0]));
+  const qs = [];
+  for (let i = 0; i < ABC_Q; i++) {
+    const l = pool[i % pool.length], hear = i % 2 === 1;
+    const others = abShuffle(all.filter(o => o[0] !== l[0] && (hear || o[1] !== l[1])));
+    const seen = new Set([hear ? l[0] : l[1]]), opts = [l];
+    for (const o of others) { const key = hear ? o[0] : o[1]; if (!seen.has(key)) { seen.add(key); opts.push(o); } if (opts.length === 4) break; }
+    qs.push({ l, hear, opts: abShuffle(opts) });
+  }
+  return qs;
+}
+function abQuizHtml() {
+  const k = S.lang, n = AB.qs.length;
+  if (AB.i >= n) return `<div class="ab-end card"><div class="ab-big">${AB.right === n ? "🏆" : "✨"}</div><h2>${AB.right} de ${n} certas</h2>
+    <p class="muted">${AB.right === n ? "Perfeito! " : ""}+${AB.xp} XP. Cada acerto enche um pouco a barrinha da letra.</p>
+    <button class="btn wide" data-act="abDone">Continuar</button></div>`;
+  const q = AB.qs[AB.i], l = q.l, picked = AB.pick != null;
+  const head = `<div class="ab-top"><button class="x" data-act="abQuit" aria-label="Sair">${I("x")}</button><div class="bar"><i style="width:${AB.i / n * 100}%"></i></div></div>`;
+  const prompt = q.hear
+    ? `<p class="ab-ask">Que letra é esta?</p><button class="ab-hear" data-act="abSay" aria-label="Ouvir de novo">${I("speaker")}</button>`
+    : `<p class="ab-ask">Qual é o som desta letra?</p><div class="ab-glyph">${esc(l[0])}</div>`;
+  const opts = q.opts.map((o, i) => {
+    const st = !picked ? "" : o === l ? "good" : i === AB.pick ? "bad" : "dim";
+    return `<button class="ab-opt ${st} ${q.hear ? "glyph" : ""}" data-act="abPick" data-i="${i}" ${picked ? "disabled" : ""}>${esc(q.hear ? o[0] : o[1])}</button>`;
+  }).join("");
+  const ok = picked && q.opts[AB.pick] === l;
+  const foot = picked ? `<div class="ab-fb ${ok ? "good" : "bad"}"><div><b>${ok ? "Isso!" : "Quase."}</b> <span>${esc(l[0])} soa “${esc(l[1])}”. ${esc(l[3])}</span></div>
+    <button class="btn ${ok ? "ok" : "bad"}" data-act="abNext">Continuar</button></div>` : "";
+  return `<div class="ab-quiz">${head}${prompt}<div class="ab-opts">${opts}</div>${foot}</div>`;
+}
+const ABA = {
+  abLetter: d => {
+    const l = abFind(d.g); if (!l) return;
+    speak(l[2], S.lang);
+    const [kn, kd] = ABC_KIND[l[6]], lv = abcLv(S.lang, l[0]);
+    modal(`<div class="ab-card"><button class="ab-glyph big" data-act="say" data-t="${esc(l[2])}" aria-label="Ouvir o nome da letra">${esc(l[0])}</button>
+      <p class="ab-sound">soa “${esc(l[1])}” · <span class="k-${l[6]}-t">${kn}</span></p>
+      <p>${esc(l[3])}</p>
+      <div class="ex-row">${exChip(l[4], l[5])}</div>
+      <small class="muted">${lv >= ABC_MAX ? "✓ Letra dominada" : `${lv} de ${ABC_MAX} acertos`} · ${esc(kd)}</small>
+      <button class="btn wide" data-act="closeModal">Fechar</button></div>`);
+  },
+  abStart: () => { AB = { qs: abMakeRound(), i: 0, pick: null, right: 0 }; render(); scrollTo(0, 0); abAsk(); },
+  abSay: () => { const q = AB && AB.qs[AB.i]; if (q) speak(q.l[2], S.lang); },
+  abPick: d => {
+    if (!AB || AB.pick != null) return;
+    const q = AB.qs[AB.i]; AB.pick = +d.i;
+    const ok = q.opts[AB.pick] === q.l, k = S.lang;
+    S.abc ||= {}; S.abc[k] ||= {};
+    if (ok) { AB.right++; S.abc[k][q.l[0]] = Math.min(ABC_MAX, abcLv(k, q.l[0]) + 1); sfx("ok"); }
+    else sfx("bad");
+    save(); render(); speak(q.l[2], k);
+  },
+  abNext: () => {
+    AB.i++; AB.pick = null;
+    if (AB.i >= AB.qs.length) { AB.xp = addXp(AB.right + 5); bumpStreak(); save(); sfx("done"); }
+    render(); abAsk();
+  },
+  abQuit: () => { AB = null; render(); },
+  abDone: () => { AB = null; render(); scrollTo(0, 0); },
+};
+function abAsk() { const q = AB && AB.qs[AB.i]; if (q && q.hear) setTimeout(() => speak(q.l[2], S.lang), 250); }
+
 // ---------- friends (online) ----------
 // The Friends tab is the only part of the app that needs the internet. It talks to a Supabase project
 // (tables and privacy rules: supabase/amigos.sql). On first use the learner gets an anonymous account
@@ -1756,7 +1893,7 @@ function render() {
   if (!S.onboarded || PL) { renderOnboarding(); return; }
   $("#app").querySelector(".top").hidden = false; $("#shell").hidden = false; $("#onb").hidden = true;
   regen(); renderChrome();
-  const v = { learn: viewLearn, story: viewStory, talk: viewTalk, notes: viewNotes, speak: viewSpeak, train: viewTrain, ach: viewAch, shop: viewShop, friends: viewFriends, profile: viewProfile }[S.view] || viewLearn;
+  const v = { learn: viewLearn, abc: viewAbc, story: viewStory, talk: viewTalk, notes: viewNotes, speak: viewSpeak, train: viewTrain, ach: viewAch, shop: viewShop, friends: viewFriends, profile: viewProfile }[S.view] || viewLearn;
   $("#view").innerHTML = v();
 }
 
@@ -2994,7 +3131,7 @@ function noteTurn(to, focus) {
 
 // ---------- actions ----------
 const A = {
-  go: d => { closeModal(); S.view = d.v; pop = null; save(); if (d.v === "friends") { FR.chat = null; if (FR.me) frLoad(); } render(); scrollTo(0, 0); },
+  go: d => { closeModal(); S.view = d.v; pop = null; AB = null; save(); if (d.v === "friends") { FR.chat = null; if (FR.me) frLoad(); } render(); scrollTo(0, 0); },
   langMenu: () => {
     const m = $("#langMenu"), open = m.hidden;
     m.innerHTML = LKEYS.map(k => `<button data-act="setLang" data-k="${k}" aria-current="${k === S.lang}"><span class="badge" style="--bc:${LANGS[k].color}">${LANGS[k].code}</span>${esc(LANGS[k].name)}<span class="pct">${coursePct(k)}%</span></button>`).join("");
@@ -3076,6 +3213,7 @@ const A = {
   resetYes: () => { S = fresh(); save(); closeModal(); render(); },
   closeModal: () => closeModal(),
   ...FRA,
+  ...ABA,
   plLang: d => { PL.lang = d.k; Object.assign(PL, S.plan[d.k] || {}); renderOnboarding(); },
   plPick: d => { PL[d.f] = d.f === "min" ? +d.val : d.val; renderOnboarding(); },
   plNext: () => { PL.i++; renderOnboarding(); scrollTo(0, 0); },

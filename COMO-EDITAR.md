@@ -10,6 +10,7 @@ Todo o conteúdo do app fica em arquivos de texto separados do código. Para mud
 | `conversas.js` | As situações da aba Conversas |
 | `historia.js` | O modo História em inglês: personagens, itens da mochila, dicas e capítulos |
 | `historia-ru.js` | O modo História em russo: outra história (Белоречье e o relógio parado), com o mesmo formato |
+| `alfabeto.js` | A aba Alfabeto de cada idioma: as letras, o som, uma dica de pronúncia, uma palavra de exemplo e se a letra é "amiga", "falsa amiga", "nova" ou "especial". O formato está explicado no começo do arquivo |
 | `glossario.js` | O que cada palavra quer dizer: aparece no balão quando o aluno toca numa palavra. Para ver quais palavras ainda faltam, rode `node tools/glossario-faltam.js` |
 | `supabase/amigos.sql` | As tabelas e as regras de privacidade da aba Amigos, no servidor Supabase. Só precisa rodar de novo (no SQL Editor do Supabase) se ele mudar |
 | `arte.js` | A pixel art: o visual dos personagens e dos cenários |
