@@ -525,6 +525,1941 @@
   "voice": "af_heart"
  },
  {
+  "key": "8ff53680",
+  "text": "eleven",
+  "voice": "af_heart"
+ },
+ {
+  "key": "f5352bb4",
+  "text": "twelve",
+  "voice": "af_heart"
+ },
+ {
+  "key": "63374a36",
+  "text": "thirteen",
+  "voice": "af_heart"
+ },
+ {
+  "key": "07cc2b2a",
+  "text": "fifteen",
+  "voice": "af_heart"
+ },
+ {
+  "key": "00500da8",
+  "text": "twenty",
+  "voice": "af_heart"
+ },
+ {
+  "key": "1a956a35",
+  "text": "thirty",
+  "voice": "af_heart"
+ },
+ {
+  "key": "8583378f",
+  "text": "forty",
+  "voice": "af_heart"
+ },
+ {
+  "key": "bd93ede1",
+  "text": "fifty",
+  "voice": "af_heart"
+ },
+ {
+  "key": "6232229c",
+  "text": "sixty",
+  "voice": "af_heart"
+ },
+ {
+  "key": "914f96c5",
+  "text": "seventy",
+  "voice": "af_heart"
+ },
+ {
+  "key": "4f5dda2b",
+  "text": "eighty",
+  "voice": "af_heart"
+ },
+ {
+  "key": "c1faa93e",
+  "text": "ninety",
+  "voice": "af_heart"
+ },
+ {
+  "key": "2ba4b5cb",
+  "text": "one hundred",
+  "voice": "af_heart"
+ },
+ {
+  "key": "b9154abb",
+  "text": "I'm twenty-five years old",
+  "voice": "af_heart"
+ },
+ {
+  "key": "4d62bdfa",
+  "text": "How old are you?",
+  "voice": "af_heart"
+ },
+ {
+  "key": "994faca9",
+  "text": "It costs forty dollars",
+  "voice": "af_heart"
+ },
+ {
+  "key": "8fbac0cd",
+  "text": "There are thirty students in the class",
+  "voice": "af_heart"
+ },
+ {
+  "key": "aa9e9379",
+  "text": "My grandfather is eighty",
+  "voice": "af_heart"
+ },
+ {
+  "key": "3a56e759",
+  "text": "Monday",
+  "voice": "af_heart"
+ },
+ {
+  "key": "fe18fbb0",
+  "text": "Tuesday",
+  "voice": "af_heart"
+ },
+ {
+  "key": "e8239b77",
+  "text": "Wednesday",
+  "voice": "af_heart"
+ },
+ {
+  "key": "99eb4fd7",
+  "text": "Thursday",
+  "voice": "af_heart"
+ },
+ {
+  "key": "bc09cf52",
+  "text": "Friday",
+  "voice": "af_heart"
+ },
+ {
+  "key": "0e68b936",
+  "text": "Saturday",
+  "voice": "af_heart"
+ },
+ {
+  "key": "d0f065f9",
+  "text": "Sunday",
+  "voice": "af_heart"
+ },
+ {
+  "key": "b6032c0f",
+  "text": "hour",
+  "voice": "af_heart"
+ },
+ {
+  "key": "38e70f69",
+  "text": "minute",
+  "voice": "af_heart"
+ },
+ {
+  "key": "d5c6965d",
+  "text": "week",
+  "voice": "af_heart"
+ },
+ {
+  "key": "7c3f812f",
+  "text": "morning",
+  "voice": "af_heart"
+ },
+ {
+  "key": "ac247217",
+  "text": "afternoon",
+  "voice": "af_heart"
+ },
+ {
+  "key": "c3b8342f",
+  "text": "evening",
+  "voice": "af_heart"
+ },
+ {
+  "key": "1f73ce42",
+  "text": "What time is it?",
+  "voice": "af_heart"
+ },
+ {
+  "key": "4727e413",
+  "text": "It's seven o'clock",
+  "voice": "af_heart"
+ },
+ {
+  "key": "13ba3092",
+  "text": "I work on Monday",
+  "voice": "af_heart"
+ },
+ {
+  "key": "78d305db",
+  "text": "See you on Friday",
+  "voice": "af_heart"
+ },
+ {
+  "key": "9ecfac84",
+  "text": "The class is in the afternoon",
+  "voice": "af_heart"
+ },
+ {
+  "key": "ecc908c2",
+  "text": "wake up",
+  "voice": "af_heart"
+ },
+ {
+  "key": "91336f30",
+  "text": "get up",
+  "voice": "af_heart"
+ },
+ {
+  "key": "b203b399",
+  "text": "take a shower",
+  "voice": "af_heart"
+ },
+ {
+  "key": "1d31d982",
+  "text": "have breakfast",
+  "voice": "af_heart"
+ },
+ {
+  "key": "326ea19d",
+  "text": "go to work",
+  "voice": "af_heart"
+ },
+ {
+  "key": "c73d9c8b",
+  "text": "have lunch",
+  "voice": "af_heart"
+ },
+ {
+  "key": "01670440",
+  "text": "come home",
+  "voice": "af_heart"
+ },
+ {
+  "key": "c2075ec9",
+  "text": "have dinner",
+  "voice": "af_heart"
+ },
+ {
+  "key": "812e5d77",
+  "text": "go to bed",
+  "voice": "af_heart"
+ },
+ {
+  "key": "0391d612",
+  "text": "usually",
+  "voice": "af_heart"
+ },
+ {
+  "key": "9a6320f7",
+  "text": "often",
+  "voice": "af_heart"
+ },
+ {
+  "key": "5d689621",
+  "text": "sometimes",
+  "voice": "af_heart"
+ },
+ {
+  "key": "96a1d067",
+  "text": "I wake up at seven",
+  "voice": "af_heart"
+ },
+ {
+  "key": "daf15776",
+  "text": "She goes to work by bus",
+  "voice": "af_heart"
+ },
+ {
+  "key": "1799ae18",
+  "text": "We have lunch at noon",
+  "voice": "af_heart"
+ },
+ {
+  "key": "e70616bd",
+  "text": "He usually has dinner at home",
+  "voice": "af_heart"
+ },
+ {
+  "key": "eaafdbda",
+  "text": "I go to bed at eleven",
+  "voice": "af_heart"
+ },
+ {
+  "key": "16fb7f77",
+  "text": "bedroom",
+  "voice": "af_heart"
+ },
+ {
+  "key": "33e6572f",
+  "text": "kitchen",
+  "voice": "af_heart"
+ },
+ {
+  "key": "03b1d87b",
+  "text": "living room",
+  "voice": "af_heart"
+ },
+ {
+  "key": "21f5b729",
+  "text": "door",
+  "voice": "af_heart"
+ },
+ {
+  "key": "a172b7dd",
+  "text": "window",
+  "voice": "af_heart"
+ },
+ {
+  "key": "4a9c9bdf",
+  "text": "table",
+  "voice": "af_heart"
+ },
+ {
+  "key": "5cb49d8a",
+  "text": "chair",
+  "voice": "af_heart"
+ },
+ {
+  "key": "50ae46ec",
+  "text": "bed",
+  "voice": "af_heart"
+ },
+ {
+  "key": "2bab0c25",
+  "text": "couch",
+  "voice": "af_heart"
+ },
+ {
+  "key": "6815c86c",
+  "text": "key",
+  "voice": "af_heart"
+ },
+ {
+  "key": "6bf0ef3b",
+  "text": "lamp",
+  "voice": "af_heart"
+ },
+ {
+  "key": "b1c2ce91",
+  "text": "apartment",
+  "voice": "af_heart"
+ },
+ {
+  "key": "5e327ac2",
+  "text": "There is a couch in the living room",
+  "voice": "af_heart"
+ },
+ {
+  "key": "3a8b3ffb",
+  "text": "The kitchen is small",
+  "voice": "af_heart"
+ },
+ {
+  "key": "8451db35",
+  "text": "Where is the key?",
+  "voice": "af_heart"
+ },
+ {
+  "key": "1058f330",
+  "text": "My bedroom has two windows",
+  "voice": "af_heart"
+ },
+ {
+  "key": "cc56694a",
+  "text": "Close the door, please",
+  "voice": "af_heart"
+ },
+ {
+  "key": "43e36503",
+  "text": "shirt",
+  "voice": "af_heart"
+ },
+ {
+  "key": "a8136946",
+  "text": "T-shirt",
+  "voice": "af_heart"
+ },
+ {
+  "key": "de2337e1",
+  "text": "pants",
+  "voice": "af_heart"
+ },
+ {
+  "key": "68e41ef0",
+  "text": "dress",
+  "voice": "af_heart"
+ },
+ {
+  "key": "be2f5538",
+  "text": "skirt",
+  "voice": "af_heart"
+ },
+ {
+  "key": "b3068a53",
+  "text": "shoes",
+  "voice": "af_heart"
+ },
+ {
+  "key": "100e165b",
+  "text": "jacket",
+  "voice": "af_heart"
+ },
+ {
+  "key": "dc398e12",
+  "text": "coat",
+  "voice": "af_heart"
+ },
+ {
+  "key": "f2bf17c2",
+  "text": "hat",
+  "voice": "af_heart"
+ },
+ {
+  "key": "19519f98",
+  "text": "sweater",
+  "voice": "af_heart"
+ },
+ {
+  "key": "9e725352",
+  "text": "socks",
+  "voice": "af_heart"
+ },
+ {
+  "key": "7f5f6abe",
+  "text": "scarf",
+  "voice": "af_heart"
+ },
+ {
+  "key": "e4bc209e",
+  "text": "wear",
+  "voice": "af_heart"
+ },
+ {
+  "key": "21745b34",
+  "text": "I like your jacket",
+  "voice": "af_heart"
+ },
+ {
+  "key": "04558c6a",
+  "text": "These shoes are too big",
+  "voice": "af_heart"
+ },
+ {
+  "key": "35a9622a",
+  "text": "Can I try it on?",
+  "voice": "af_heart"
+ },
+ {
+  "key": "9e21cac5",
+  "text": "She is wearing a red dress",
+  "voice": "af_heart"
+ },
+ {
+  "key": "d0e47324",
+  "text": "How much is this hat?",
+  "voice": "af_heart"
+ },
+ {
+  "key": "36404793",
+  "text": "weather",
+  "voice": "af_heart"
+ },
+ {
+  "key": "e04e3f61",
+  "text": "sun",
+  "voice": "af_heart"
+ },
+ {
+  "key": "89a3b5d3",
+  "text": "rain",
+  "voice": "af_heart"
+ },
+ {
+  "key": "848317f2",
+  "text": "snow",
+  "voice": "af_heart"
+ },
+ {
+  "key": "1414f107",
+  "text": "wind",
+  "voice": "af_heart"
+ },
+ {
+  "key": "fec3a7d4",
+  "text": "hot",
+  "voice": "af_heart"
+ },
+ {
+  "key": "ea44dd0f",
+  "text": "cold",
+  "voice": "af_heart"
+ },
+ {
+  "key": "81fa6638",
+  "text": "warm",
+  "voice": "af_heart"
+ },
+ {
+  "key": "2dbc1605",
+  "text": "cloudy",
+  "voice": "af_heart"
+ },
+ {
+  "key": "fce32734",
+  "text": "summer",
+  "voice": "af_heart"
+ },
+ {
+  "key": "c4bb620c",
+  "text": "winter",
+  "voice": "af_heart"
+ },
+ {
+  "key": "63f1336c",
+  "text": "spring",
+  "voice": "af_heart"
+ },
+ {
+  "key": "f85a0760",
+  "text": "fall",
+  "voice": "af_heart"
+ },
+ {
+  "key": "3e4c060c",
+  "text": "It's hot today",
+  "voice": "af_heart"
+ },
+ {
+  "key": "198c4ebc",
+  "text": "It's raining",
+  "voice": "af_heart"
+ },
+ {
+  "key": "0a0734c6",
+  "text": "What's the weather like?",
+  "voice": "af_heart"
+ },
+ {
+  "key": "d98a3b09",
+  "text": "I love summer",
+  "voice": "af_heart"
+ },
+ {
+  "key": "d5fe09d4",
+  "text": "It's cold in winter",
+  "voice": "af_heart"
+ },
+ {
+  "key": "32694bc3",
+  "text": "head",
+  "voice": "af_heart"
+ },
+ {
+  "key": "8ba8ed1a",
+  "text": "eye",
+  "voice": "af_heart"
+ },
+ {
+  "key": "666e1bb3",
+  "text": "ear",
+  "voice": "af_heart"
+ },
+ {
+  "key": "918d404a",
+  "text": "nose",
+  "voice": "af_heart"
+ },
+ {
+  "key": "742581dc",
+  "text": "mouth",
+  "voice": "af_heart"
+ },
+ {
+  "key": "c4ba2f20",
+  "text": "hand",
+  "voice": "af_heart"
+ },
+ {
+  "key": "386f27b5",
+  "text": "arm",
+  "voice": "af_heart"
+ },
+ {
+  "key": "3f6ae937",
+  "text": "leg",
+  "voice": "af_heart"
+ },
+ {
+  "key": "2d505a99",
+  "text": "foot",
+  "voice": "af_heart"
+ },
+ {
+  "key": "5bb421a2",
+  "text": "back",
+  "voice": "af_heart"
+ },
+ {
+  "key": "31b23887",
+  "text": "sick",
+  "voice": "af_heart"
+ },
+ {
+  "key": "a1f02512",
+  "text": "doctor",
+  "voice": "af_heart"
+ },
+ {
+  "key": "62bdfdb8",
+  "text": "hurt",
+  "voice": "af_heart"
+ },
+ {
+  "key": "3c6345f1",
+  "text": "My head hurts",
+  "voice": "af_heart"
+ },
+ {
+  "key": "98527516",
+  "text": "I feel sick",
+  "voice": "af_heart"
+ },
+ {
+  "key": "888125f6",
+  "text": "I need a doctor",
+  "voice": "af_heart"
+ },
+ {
+  "key": "3cd6e633",
+  "text": "She has blue eyes",
+  "voice": "af_heart"
+ },
+ {
+  "key": "2660b14f",
+  "text": "Wash your hands",
+  "voice": "af_heart"
+ },
+ {
+  "key": "03274595",
+  "text": "teacher",
+  "voice": "af_heart"
+ },
+ {
+  "key": "00313120",
+  "text": "student",
+  "voice": "af_heart"
+ },
+ {
+  "key": "f79f39aa",
+  "text": "nurse",
+  "voice": "af_heart"
+ },
+ {
+  "key": "9c3dd718",
+  "text": "engineer",
+  "voice": "af_heart"
+ },
+ {
+  "key": "ef3e2929",
+  "text": "cook",
+  "voice": "af_heart"
+ },
+ {
+  "key": "e55419df",
+  "text": "driver",
+  "voice": "af_heart"
+ },
+ {
+  "key": "7a1dd997",
+  "text": "waiter",
+  "voice": "af_heart"
+ },
+ {
+  "key": "92a761cd",
+  "text": "police officer",
+  "voice": "af_heart"
+ },
+ {
+  "key": "d2d74d01",
+  "text": "lawyer",
+  "voice": "af_heart"
+ },
+ {
+  "key": "808e8652",
+  "text": "farmer",
+  "voice": "af_heart"
+ },
+ {
+  "key": "22244cde",
+  "text": "artist",
+  "voice": "af_heart"
+ },
+ {
+  "key": "ddd42fdc",
+  "text": "job",
+  "voice": "af_heart"
+ },
+ {
+  "key": "4f9cd7b3",
+  "text": "hospital",
+  "voice": "af_heart"
+ },
+ {
+  "key": "b9f7a551",
+  "text": "What do you do?",
+  "voice": "af_heart"
+ },
+ {
+  "key": "49e66f6d",
+  "text": "I'm a teacher",
+  "voice": "af_heart"
+ },
+ {
+  "key": "961de2b9",
+  "text": "She works in a hospital",
+  "voice": "af_heart"
+ },
+ {
+  "key": "4ded67ea",
+  "text": "He is a good cook",
+  "voice": "af_heart"
+ },
+ {
+  "key": "96020bf0",
+  "text": "I don't have a job",
+  "voice": "af_heart"
+ },
+ {
+  "key": "3b952e97",
+  "text": "bank",
+  "voice": "af_heart"
+ },
+ {
+  "key": "9f519cc9",
+  "text": "school",
+  "voice": "af_heart"
+ },
+ {
+  "key": "63780eb9",
+  "text": "park",
+  "voice": "af_heart"
+ },
+ {
+  "key": "9f312044",
+  "text": "supermarket",
+  "voice": "af_heart"
+ },
+ {
+  "key": "97487236",
+  "text": "restaurant",
+  "voice": "af_heart"
+ },
+ {
+  "key": "7d8c66dd",
+  "text": "hotel",
+  "voice": "af_heart"
+ },
+ {
+  "key": "b4816015",
+  "text": "museum",
+  "voice": "af_heart"
+ },
+ {
+  "key": "30e12fe2",
+  "text": "church",
+  "voice": "af_heart"
+ },
+ {
+  "key": "90f6fbd0",
+  "text": "library",
+  "voice": "af_heart"
+ },
+ {
+  "key": "f7bf775c",
+  "text": "pharmacy",
+  "voice": "af_heart"
+ },
+ {
+  "key": "866a3091",
+  "text": "post office",
+  "voice": "af_heart"
+ },
+ {
+  "key": "244a2150",
+  "text": "corner",
+  "voice": "af_heart"
+ },
+ {
+  "key": "54f3570f",
+  "text": "near",
+  "voice": "af_heart"
+ },
+ {
+  "key": "13d187eb",
+  "text": "Is there a bank near here?",
+  "voice": "af_heart"
+ },
+ {
+  "key": "100bc1df",
+  "text": "The museum is next to the park",
+  "voice": "af_heart"
+ },
+ {
+  "key": "e503b372",
+  "text": "Go straight ahead",
+  "voice": "af_heart"
+ },
+ {
+  "key": "2341c754",
+  "text": "The pharmacy is on the corner",
+  "voice": "af_heart"
+ },
+ {
+  "key": "e15169fb",
+  "text": "I'm going to the supermarket",
+  "voice": "af_heart"
+ },
+ {
+  "key": "65d5776b",
+  "text": "buy",
+  "voice": "af_heart"
+ },
+ {
+  "key": "5e5b9905",
+  "text": "sell",
+  "voice": "af_heart"
+ },
+ {
+  "key": "5e560689",
+  "text": "pay",
+  "voice": "af_heart"
+ },
+ {
+  "key": "0b44452a",
+  "text": "price",
+  "voice": "af_heart"
+ },
+ {
+  "key": "906ad500",
+  "text": "cheap",
+  "voice": "af_heart"
+ },
+ {
+  "key": "953e947e",
+  "text": "expensive",
+  "voice": "af_heart"
+ },
+ {
+  "key": "e150c94f",
+  "text": "money",
+  "voice": "af_heart"
+ },
+ {
+  "key": "8827595f",
+  "text": "card",
+  "voice": "af_heart"
+ },
+ {
+  "key": "962530d2",
+  "text": "cash",
+  "voice": "af_heart"
+ },
+ {
+  "key": "c7e7bc2e",
+  "text": "store",
+  "voice": "af_heart"
+ },
+ {
+  "key": "63b75f31",
+  "text": "bag",
+  "voice": "af_heart"
+ },
+ {
+  "key": "eae6b243",
+  "text": "receipt",
+  "voice": "af_heart"
+ },
+ {
+  "key": "23a0d95c",
+  "text": "size",
+  "voice": "af_heart"
+ },
+ {
+  "key": "f6c176b9",
+  "text": "It's too expensive",
+  "voice": "af_heart"
+ },
+ {
+  "key": "3661654a",
+  "text": "Can I pay by card?",
+  "voice": "af_heart"
+ },
+ {
+  "key": "d91f617b",
+  "text": "I'm just looking",
+  "voice": "af_heart"
+ },
+ {
+  "key": "2ffdb77e",
+  "text": "Do you have a smaller size?",
+  "voice": "af_heart"
+ },
+ {
+  "key": "99e4dd3a",
+  "text": "menu",
+  "voice": "af_heart"
+ },
+ {
+  "key": "732c1097",
+  "text": "order",
+  "voice": "af_heart"
+ },
+ {
+  "key": "b3711c47",
+  "text": "check",
+  "voice": "af_heart"
+ },
+ {
+  "key": "f624f702",
+  "text": "soup",
+  "voice": "af_heart"
+ },
+ {
+  "key": "73a6862a",
+  "text": "salad",
+  "voice": "af_heart"
+ },
+ {
+  "key": "f161ff1c",
+  "text": "chicken",
+  "voice": "af_heart"
+ },
+ {
+  "key": "afad8963",
+  "text": "fish",
+  "voice": "af_heart"
+ },
+ {
+  "key": "b75b8129",
+  "text": "dessert",
+  "voice": "af_heart"
+ },
+ {
+  "key": "f203a92b",
+  "text": "glass",
+  "voice": "af_heart"
+ },
+ {
+  "key": "c9011403",
+  "text": "plate",
+  "voice": "af_heart"
+ },
+ {
+  "key": "3e58c421",
+  "text": "fork",
+  "voice": "af_heart"
+ },
+ {
+  "key": "7183f6da",
+  "text": "knife",
+  "voice": "af_heart"
+ },
+ {
+  "key": "336f28b6",
+  "text": "spoon",
+  "voice": "af_heart"
+ },
+ {
+  "key": "0411098b",
+  "text": "A table for two, please",
+  "voice": "af_heart"
+ },
+ {
+  "key": "09751a26",
+  "text": "I'd like the chicken",
+  "voice": "af_heart"
+ },
+ {
+  "key": "53659582",
+  "text": "Can I have the check, please?",
+  "voice": "af_heart"
+ },
+ {
+  "key": "5fde2f6c",
+  "text": "The soup is delicious",
+  "voice": "af_heart"
+ },
+ {
+  "key": "837faf68",
+  "text": "Do you have any dessert?",
+  "voice": "af_heart"
+ },
+ {
+  "key": "5fd56df9",
+  "text": "bus",
+  "voice": "af_heart"
+ },
+ {
+  "key": "0e5e77a9",
+  "text": "taxi",
+  "voice": "af_heart"
+ },
+ {
+  "key": "a3c91014",
+  "text": "subway",
+  "voice": "af_heart"
+ },
+ {
+  "key": "c4602668",
+  "text": "bike",
+  "voice": "af_heart"
+ },
+ {
+  "key": "cccb0055",
+  "text": "plane",
+  "voice": "af_heart"
+ },
+ {
+  "key": "dcb746fb",
+  "text": "boat",
+  "voice": "af_heart"
+ },
+ {
+  "key": "514ef933",
+  "text": "bus stop",
+  "voice": "af_heart"
+ },
+ {
+  "key": "1faee677",
+  "text": "drive",
+  "voice": "af_heart"
+ },
+ {
+  "key": "a0262210",
+  "text": "walk",
+  "voice": "af_heart"
+ },
+ {
+  "key": "dfa2efb1",
+  "text": "map",
+  "voice": "af_heart"
+ },
+ {
+  "key": "bcf819ee",
+  "text": "far",
+  "voice": "af_heart"
+ },
+ {
+  "key": "cb532ae5",
+  "text": "stop",
+  "voice": "af_heart"
+ },
+ {
+  "key": "82db4d21",
+  "text": "late",
+  "voice": "af_heart"
+ },
+ {
+  "key": "83b49c84",
+  "text": "I take the subway every day",
+  "voice": "af_heart"
+ },
+ {
+  "key": "cc9e2498",
+  "text": "Where is the bus stop?",
+  "voice": "af_heart"
+ },
+ {
+  "key": "d808a1f2",
+  "text": "I walk to school",
+  "voice": "af_heart"
+ },
+ {
+  "key": "cb23cf3d",
+  "text": "One ticket to Boston, please",
+  "voice": "af_heart"
+ },
+ {
+  "key": "5eda7294",
+  "text": "Is it far?",
+  "voice": "af_heart"
+ },
+ {
+  "key": "9d2cfb7d",
+  "text": "January",
+  "voice": "af_heart"
+ },
+ {
+  "key": "fca77633",
+  "text": "February",
+  "voice": "af_heart"
+ },
+ {
+  "key": "c0846390",
+  "text": "March",
+  "voice": "af_heart"
+ },
+ {
+  "key": "98dbac97",
+  "text": "April",
+  "voice": "af_heart"
+ },
+ {
+  "key": "3ba7e226",
+  "text": "May",
+  "voice": "af_heart"
+ },
+ {
+  "key": "e920f785",
+  "text": "June",
+  "voice": "af_heart"
+ },
+ {
+  "key": "011ca01f",
+  "text": "July",
+  "voice": "af_heart"
+ },
+ {
+  "key": "5ddb609c",
+  "text": "August",
+  "voice": "af_heart"
+ },
+ {
+  "key": "c212b600",
+  "text": "September",
+  "voice": "af_heart"
+ },
+ {
+  "key": "ecf21807",
+  "text": "October",
+  "voice": "af_heart"
+ },
+ {
+  "key": "3ea53a3f",
+  "text": "November",
+  "voice": "af_heart"
+ },
+ {
+  "key": "662dcc9e",
+  "text": "December",
+  "voice": "af_heart"
+ },
+ {
+  "key": "efeb5a2c",
+  "text": "birthday",
+  "voice": "af_heart"
+ },
+ {
+  "key": "a194d136",
+  "text": "My birthday is in May",
+  "voice": "af_heart"
+ },
+ {
+  "key": "332fec60",
+  "text": "When is your birthday?",
+  "voice": "af_heart"
+ },
+ {
+  "key": "7693627c",
+  "text": "Today is March third",
+  "voice": "af_heart"
+ },
+ {
+  "key": "1d1f1833",
+  "text": "Christmas is in December",
+  "voice": "af_heart"
+ },
+ {
+  "key": "5d9f3698",
+  "text": "We travel in July",
+  "voice": "af_heart"
+ },
+ {
+  "key": "9f9c4fd4",
+  "text": "music",
+  "voice": "af_heart"
+ },
+ {
+  "key": "aef39ccf",
+  "text": "movie",
+  "voice": "af_heart"
+ },
+ {
+  "key": "4249d707",
+  "text": "game",
+  "voice": "af_heart"
+ },
+ {
+  "key": "2f54deed",
+  "text": "sport",
+  "voice": "af_heart"
+ },
+ {
+  "key": "04a9735e",
+  "text": "soccer",
+  "voice": "af_heart"
+ },
+ {
+  "key": "71da140d",
+  "text": "swim",
+  "voice": "af_heart"
+ },
+ {
+  "key": "f815289c",
+  "text": "dance",
+  "voice": "af_heart"
+ },
+ {
+  "key": "15d2601e",
+  "text": "sing",
+  "voice": "af_heart"
+ },
+ {
+  "key": "c2cbd863",
+  "text": "play",
+  "voice": "af_heart"
+ },
+ {
+  "key": "5fb7b228",
+  "text": "watch",
+  "voice": "af_heart"
+ },
+ {
+  "key": "3b3b76a6",
+  "text": "listen",
+  "voice": "af_heart"
+ },
+ {
+  "key": "e66176f9",
+  "text": "travel",
+  "voice": "af_heart"
+ },
+ {
+  "key": "24350218",
+  "text": "I like listening to music",
+  "voice": "af_heart"
+ },
+ {
+  "key": "fc4ee3df",
+  "text": "Do you play soccer?",
+  "voice": "af_heart"
+ },
+ {
+  "key": "3e4da764",
+  "text": "She loves dancing",
+  "voice": "af_heart"
+ },
+ {
+  "key": "4604e4ff",
+  "text": "We watch movies on Saturday",
+  "voice": "af_heart"
+ },
+ {
+  "key": "df807192",
+  "text": "What do you do in your free time?",
+  "voice": "af_heart"
+ },
+ {
+  "key": "112cdf96",
+  "text": "tall",
+  "voice": "af_heart"
+ },
+ {
+  "key": "ba226bd5",
+  "text": "short",
+  "voice": "af_heart"
+ },
+ {
+  "key": "58446843",
+  "text": "young",
+  "voice": "af_heart"
+ },
+ {
+  "key": "bd2b9bd6",
+  "text": "old",
+  "voice": "af_heart"
+ },
+ {
+  "key": "1f951fd4",
+  "text": "beautiful",
+  "voice": "af_heart"
+ },
+ {
+  "key": "e5819366",
+  "text": "ugly",
+  "voice": "af_heart"
+ },
+ {
+  "key": "c52bb172",
+  "text": "thin",
+  "voice": "af_heart"
+ },
+ {
+  "key": "d4b676b9",
+  "text": "hair",
+  "voice": "af_heart"
+ },
+ {
+  "key": "c2ecdf53",
+  "text": "long",
+  "voice": "af_heart"
+ },
+ {
+  "key": "816f8d46",
+  "text": "curly",
+  "voice": "af_heart"
+ },
+ {
+  "key": "bfec2606",
+  "text": "blond",
+  "voice": "af_heart"
+ },
+ {
+  "key": "d913e243",
+  "text": "kind",
+  "voice": "af_heart"
+ },
+ {
+  "key": "42abb7cb",
+  "text": "funny",
+  "voice": "af_heart"
+ },
+ {
+  "key": "eb513f57",
+  "text": "She has long hair",
+  "voice": "af_heart"
+ },
+ {
+  "key": "4ebf9597",
+  "text": "He is tall and thin",
+  "voice": "af_heart"
+ },
+ {
+  "key": "50fafb34",
+  "text": "My grandmother is very kind",
+  "voice": "af_heart"
+ },
+ {
+  "key": "665fce4a",
+  "text": "What does he look like?",
+  "voice": "af_heart"
+ },
+ {
+  "key": "98975bdd",
+  "text": "They are young",
+  "voice": "af_heart"
+ },
+ {
+  "key": "99863551",
+  "text": "happy",
+  "voice": "af_heart"
+ },
+ {
+  "key": "e61cac07",
+  "text": "sad",
+  "voice": "af_heart"
+ },
+ {
+  "key": "720c3fd5",
+  "text": "tired",
+  "voice": "af_heart"
+ },
+ {
+  "key": "10f5d87c",
+  "text": "hungry",
+  "voice": "af_heart"
+ },
+ {
+  "key": "652f2c70",
+  "text": "thirsty",
+  "voice": "af_heart"
+ },
+ {
+  "key": "b50aaefe",
+  "text": "angry",
+  "voice": "af_heart"
+ },
+ {
+  "key": "3f32c75d",
+  "text": "scared",
+  "voice": "af_heart"
+ },
+ {
+  "key": "eda17c15",
+  "text": "bored",
+  "voice": "af_heart"
+ },
+ {
+  "key": "5cfb6080",
+  "text": "busy",
+  "voice": "af_heart"
+ },
+ {
+  "key": "a1121c17",
+  "text": "worried",
+  "voice": "af_heart"
+ },
+ {
+  "key": "264281a5",
+  "text": "excited",
+  "voice": "af_heart"
+ },
+ {
+  "key": "8d8512e3",
+  "text": "sleepy",
+  "voice": "af_heart"
+ },
+ {
+  "key": "b33572bd",
+  "text": "feel",
+  "voice": "af_heart"
+ },
+ {
+  "key": "59d1f87d",
+  "text": "I'm hungry",
+  "voice": "af_heart"
+ },
+ {
+  "key": "1f093395",
+  "text": "Are you tired?",
+  "voice": "af_heart"
+ },
+ {
+  "key": "41fe736a",
+  "text": "She is very happy today",
+  "voice": "af_heart"
+ },
+ {
+  "key": "223936ae",
+  "text": "Don't be sad",
+  "voice": "af_heart"
+ },
+ {
+  "key": "6f728507",
+  "text": "I'm a little scared",
+  "voice": "af_heart"
+ },
+ {
+  "key": "ab3e0bff",
+  "text": "class",
+  "voice": "af_heart"
+ },
+ {
+  "key": "1c90ef81",
+  "text": "lesson",
+  "voice": "af_heart"
+ },
+ {
+  "key": "6d3a0633",
+  "text": "homework",
+  "voice": "af_heart"
+ },
+ {
+  "key": "6f4b93f0",
+  "text": "pen",
+  "voice": "af_heart"
+ },
+ {
+  "key": "78627a04",
+  "text": "pencil",
+  "voice": "af_heart"
+ },
+ {
+  "key": "4dec6320",
+  "text": "notebook",
+  "voice": "af_heart"
+ },
+ {
+  "key": "2cacaa39",
+  "text": "paper",
+  "voice": "af_heart"
+ },
+ {
+  "key": "b1514998",
+  "text": "computer",
+  "voice": "af_heart"
+ },
+ {
+  "key": "aa8eba31",
+  "text": "office",
+  "voice": "af_heart"
+ },
+ {
+  "key": "0d8b883a",
+  "text": "meeting",
+  "voice": "af_heart"
+ },
+ {
+  "key": "d18a160c",
+  "text": "boss",
+  "voice": "af_heart"
+ },
+ {
+  "key": "7f697715",
+  "text": "learn",
+  "voice": "af_heart"
+ },
+ {
+  "key": "1d1a14a2",
+  "text": "teach",
+  "voice": "af_heart"
+ },
+ {
+  "key": "565c3f63",
+  "text": "I have class today",
+  "voice": "af_heart"
+ },
+ {
+  "key": "aa34b128",
+  "text": "Can I borrow a pen?",
+  "voice": "af_heart"
+ },
+ {
+  "key": "c54bae03",
+  "text": "The meeting is at ten",
+  "voice": "af_heart"
+ },
+ {
+  "key": "a6e59a52",
+  "text": "I'm learning English",
+  "voice": "af_heart"
+ },
+ {
+  "key": "c0ee1441",
+  "text": "My boss is nice",
+  "voice": "af_heart"
+ },
+ {
+  "key": "e668bd09",
+  "text": "dog",
+  "voice": "af_heart"
+ },
+ {
+  "key": "06745c07",
+  "text": "cat",
+  "voice": "af_heart"
+ },
+ {
+  "key": "9b8951a6",
+  "text": "horse",
+  "voice": "af_heart"
+ },
+ {
+  "key": "977128b2",
+  "text": "bird",
+  "voice": "af_heart"
+ },
+ {
+  "key": "f78ddc50",
+  "text": "cow",
+  "voice": "af_heart"
+ },
+ {
+  "key": "6840fb8f",
+  "text": "pig",
+  "voice": "af_heart"
+ },
+ {
+  "key": "592318c4",
+  "text": "mouse",
+  "voice": "af_heart"
+ },
+ {
+  "key": "cb619ce5",
+  "text": "rabbit",
+  "voice": "af_heart"
+ },
+ {
+  "key": "f2dead7f",
+  "text": "lion",
+  "voice": "af_heart"
+ },
+ {
+  "key": "8a524c53",
+  "text": "bear",
+  "voice": "af_heart"
+ },
+ {
+  "key": "6a164f08",
+  "text": "monkey",
+  "voice": "af_heart"
+ },
+ {
+  "key": "07cc25f4",
+  "text": "sheep",
+  "voice": "af_heart"
+ },
+ {
+  "key": "bb323378",
+  "text": "duck",
+  "voice": "af_heart"
+ },
+ {
+  "key": "5bf16557",
+  "text": "I have a dog",
+  "voice": "af_heart"
+ },
+ {
+  "key": "00bae145",
+  "text": "The cat is sleeping",
+  "voice": "af_heart"
+ },
+ {
+  "key": "73fb5968",
+  "text": "Do you like animals?",
+  "voice": "af_heart"
+ },
+ {
+  "key": "b35c1178",
+  "text": "Birds can fly",
+  "voice": "af_heart"
+ },
+ {
+  "key": "b3b8e6eb",
+  "text": "There is a horse on the farm",
+  "voice": "af_heart"
+ },
+ {
+  "key": "f0743965",
+  "text": "can",
+  "voice": "af_heart"
+ },
+ {
+  "key": "ed786bd6",
+  "text": "can't",
+  "voice": "af_heart"
+ },
+ {
+  "key": "3871a3fa",
+  "text": "help",
+  "voice": "af_heart"
+ },
+ {
+  "key": "d35ec4c9",
+  "text": "open",
+  "voice": "af_heart"
+ },
+ {
+  "key": "27cb3b23",
+  "text": "close",
+  "voice": "af_heart"
+ },
+ {
+  "key": "7013d630",
+  "text": "carry",
+  "voice": "af_heart"
+ },
+ {
+  "key": "0ec63aab",
+  "text": "understand",
+  "voice": "af_heart"
+ },
+ {
+  "key": "bdf0855a",
+  "text": "find",
+  "voice": "af_heart"
+ },
+ {
+  "key": "892e4ca0",
+  "text": "wait",
+  "voice": "af_heart"
+ },
+ {
+  "key": "bff162e2",
+  "text": "fly",
+  "voice": "af_heart"
+ },
+ {
+  "key": "b2e48278",
+  "text": "fix",
+  "voice": "af_heart"
+ },
+ {
+  "key": "c84b99e2",
+  "text": "remember",
+  "voice": "af_heart"
+ },
+ {
+  "key": "282c316c",
+  "text": "forget",
+  "voice": "af_heart"
+ },
+ {
+  "key": "a1490e8e",
+  "text": "I can swim",
+  "voice": "af_heart"
+ },
+ {
+  "key": "e99f913e",
+  "text": "I can't find my keys",
+  "voice": "af_heart"
+ },
+ {
+  "key": "a164eeda",
+  "text": "She can speak three languages",
+  "voice": "af_heart"
+ },
+ {
+  "key": "da660e45",
+  "text": "Wait for me, please",
+  "voice": "af_heart"
+ },
+ {
+  "key": "4742d9e9",
+  "text": "right now",
+  "voice": "af_heart"
+ },
+ {
+  "key": "1460a7f7",
+  "text": "cooking",
+  "voice": "af_heart"
+ },
+ {
+  "key": "f1fe9ddb",
+  "text": "eating",
+  "voice": "af_heart"
+ },
+ {
+  "key": "35572b80",
+  "text": "sleeping",
+  "voice": "af_heart"
+ },
+ {
+  "key": "147eb74c",
+  "text": "running",
+  "voice": "af_heart"
+ },
+ {
+  "key": "eeda06a8",
+  "text": "waiting",
+  "voice": "af_heart"
+ },
+ {
+  "key": "d59a4b69",
+  "text": "talking",
+  "voice": "af_heart"
+ },
+ {
+  "key": "eeb0c085",
+  "text": "raining",
+  "voice": "af_heart"
+ },
+ {
+  "key": "71ef5835",
+  "text": "playing",
+  "voice": "af_heart"
+ },
+ {
+  "key": "04d33a22",
+  "text": "studying",
+  "voice": "af_heart"
+ },
+ {
+  "key": "df66914f",
+  "text": "writing",
+  "voice": "af_heart"
+ },
+ {
+  "key": "9cd71404",
+  "text": "doing",
+  "voice": "af_heart"
+ },
+ {
+  "key": "f21e1b5a",
+  "text": "What are you doing?",
+  "voice": "af_heart"
+ },
+ {
+  "key": "57e4f5cc",
+  "text": "I'm cooking dinner",
+  "voice": "af_heart"
+ },
+ {
+  "key": "db3b2c7b",
+  "text": "They are playing in the park",
+  "voice": "af_heart"
+ },
+ {
+  "key": "43ba6db1",
+  "text": "She is talking on the phone",
+  "voice": "af_heart"
+ },
+ {
+  "key": "f4e5c9d6",
+  "text": "We are waiting for the bus",
+  "voice": "af_heart"
+ },
+ {
+  "key": "16e2c1f2",
+  "text": "was",
+  "voice": "af_heart"
+ },
+ {
+  "key": "c7eb512c",
+  "text": "were",
+  "voice": "af_heart"
+ },
+ {
+  "key": "25fb1e63",
+  "text": "last night",
+  "voice": "af_heart"
+ },
+ {
+  "key": "e6f9c64b",
+  "text": "last week",
+  "voice": "af_heart"
+ },
+ {
+  "key": "3641595a",
+  "text": "ago",
+  "voice": "af_heart"
+ },
+ {
+  "key": "c487c2fe",
+  "text": "born",
+  "voice": "af_heart"
+ },
+ {
+  "key": "7fe4b3b0",
+  "text": "there was",
+  "voice": "af_heart"
+ },
+ {
+  "key": "c2e0bb26",
+  "text": "there were",
+  "voice": "af_heart"
+ },
+ {
+  "key": "2d084d1f",
+  "text": "at home",
+  "voice": "af_heart"
+ },
+ {
+  "key": "3530569c",
+  "text": "early",
+  "voice": "af_heart"
+ },
+ {
+  "key": "fb1355ee",
+  "text": "great",
+  "voice": "af_heart"
+ },
+ {
+  "key": "a58bf5dd",
+  "text": "I was at home yesterday",
+  "voice": "af_heart"
+ },
+ {
+  "key": "d91defcd",
+  "text": "Where were you last night?",
+  "voice": "af_heart"
+ },
+ {
+  "key": "4244424d",
+  "text": "It was a great day",
+  "voice": "af_heart"
+ },
+ {
+  "key": "b80f404a",
+  "text": "We were late",
+  "voice": "af_heart"
+ },
+ {
+  "key": "b375892b",
+  "text": "I was born in Brazil",
+  "voice": "af_heart"
+ },
+ {
+  "key": "2483ee0e",
+  "text": "excuse me",
+  "voice": "af_heart"
+ },
+ {
+  "key": "b69943ed",
+  "text": "of course",
+  "voice": "af_heart"
+ },
+ {
+  "key": "e13cb2ab",
+  "text": "maybe",
+  "voice": "af_heart"
+ },
+ {
+  "key": "b33fe54f",
+  "text": "again",
+  "voice": "af_heart"
+ },
+ {
+  "key": "1ab97f1f",
+  "text": "slowly",
+  "voice": "af_heart"
+ },
+ {
+  "key": "d99ba82a",
+  "text": "repeat",
+  "voice": "af_heart"
+ },
+ {
+  "key": "9ede2954",
+  "text": "mean",
+  "voice": "af_heart"
+ },
+ {
+  "key": "6a98e9fd",
+  "text": "word",
+  "voice": "af_heart"
+ },
+ {
+  "key": "06d5a845",
+  "text": "question",
+  "voice": "af_heart"
+ },
+ {
+  "key": "848019df",
+  "text": "answer",
+  "voice": "af_heart"
+ },
+ {
+  "key": "bdeb87dc",
+  "text": "problem",
+  "voice": "af_heart"
+ },
+ {
+  "key": "1efb9680",
+  "text": "sure",
+  "voice": "af_heart"
+ },
+ {
+  "key": "842c6f1c",
+  "text": "Excuse me, can you repeat that?",
+  "voice": "af_heart"
+ },
+ {
+  "key": "b6c1395d",
+  "text": "Can you speak slowly, please?",
+  "voice": "af_heart"
+ },
+ {
+  "key": "ee37e306",
+  "text": "What does this word mean?",
+  "voice": "af_heart"
+ },
+ {
+  "key": "3725c31f",
+  "text": "How do you say obrigado in English?",
+  "voice": "af_heart"
+ },
+ {
+  "key": "3604c9dc",
+  "text": "No problem!",
+  "voice": "af_heart"
+ },
+ {
   "key": "7cc7ca5b",
   "text": "think",
   "voice": "af_heart"
@@ -575,11 +2510,6 @@
   "voice": "af_heart"
  },
  {
-  "key": "07cc25f4",
-  "text": "sheep",
-  "voice": "af_heart"
- },
- {
   "key": "07f017af",
   "text": "live",
   "voice": "af_heart"
@@ -600,33 +2530,13 @@
   "voice": "af_heart"
  },
  {
-  "key": "99863551",
-  "text": "happy",
-  "voice": "af_heart"
- },
- {
   "key": "28693c05",
   "text": "hear",
   "voice": "af_heart"
  },
  {
-  "key": "666e1bb3",
-  "text": "ear",
-  "voice": "af_heart"
- },
- {
   "key": "adc649b8",
   "text": "hold",
-  "voice": "af_heart"
- },
- {
-  "key": "bd2b9bd6",
-  "text": "old",
-  "voice": "af_heart"
- },
- {
-  "key": "f2bf17c2",
-  "text": "hat",
   "voice": "af_heart"
  },
  {
@@ -637,16 +2547,6 @@
  {
   "key": "fa6031d8",
   "text": "good",
-  "voice": "af_heart"
- },
- {
-  "key": "5bb421a2",
-  "text": "back",
-  "voice": "af_heart"
- },
- {
-  "key": "63b75f31",
-  "text": "bag",
   "voice": "af_heart"
  },
  {
@@ -685,16 +2585,6 @@
   "voice": "af_heart"
  },
  {
-  "key": "bff162e2",
-  "text": "fly",
-  "voice": "af_heart"
- },
- {
-  "key": "06745c07",
-  "text": "cat",
-  "voice": "af_heart"
- },
- {
   "key": "c9ad5a6b",
   "text": "men",
   "voice": "af_heart"
@@ -705,18 +2595,8 @@
   "voice": "af_heart"
  },
  {
-  "key": "50ae46ec",
-  "text": "bed",
-  "voice": "af_heart"
- },
- {
   "key": "e2befe92",
   "text": "had",
-  "voice": "af_heart"
- },
- {
-  "key": "32694bc3",
-  "text": "head",
   "voice": "af_heart"
  },
  {
@@ -1273,21 +3153,6 @@
   "key": "0845abfe",
   "text": "“Me is”? Wow. Okay, take it easy, buddy.",
   "voice": "af_sarah"
- },
- {
-  "key": "a172b7dd",
-  "text": "window",
-  "voice": "af_heart"
- },
- {
-  "key": "21f5b729",
-  "text": "door",
-  "voice": "af_heart"
- },
- {
-  "key": "5cb49d8a",
-  "text": "chair",
-  "voice": "af_heart"
  },
  {
   "key": "7d7eabcb",
@@ -1930,11 +3795,6 @@
   "voice": "am_onyx"
  },
  {
-  "key": "4d62bdfa",
-  "text": "How old are you?",
-  "voice": "am_onyx"
- },
- {
   "key": "a147d0ee",
   "text": "I'm not sure. Maybe twenty?",
   "voice": "am_michael"
@@ -2290,41 +4150,6 @@
   "voice": "af_bella"
  },
  {
-  "key": "3a56e759",
-  "text": "Monday",
-  "voice": "af_heart"
- },
- {
-  "key": "fe18fbb0",
-  "text": "Tuesday",
-  "voice": "af_heart"
- },
- {
-  "key": "e8239b77",
-  "text": "Wednesday",
-  "voice": "af_heart"
- },
- {
-  "key": "99eb4fd7",
-  "text": "Thursday",
-  "voice": "af_heart"
- },
- {
-  "key": "bc09cf52",
-  "text": "Friday",
-  "voice": "af_heart"
- },
- {
-  "key": "0e68b936",
-  "text": "Saturday",
-  "voice": "af_heart"
- },
- {
-  "key": "d0f065f9",
-  "text": "Sunday",
-  "voice": "af_heart"
- },
- {
   "key": "699f86a9",
   "text": "Newbie! It's quarter to eight! Hurry!",
   "voice": "af_sarah"
@@ -2475,11 +4300,6 @@
   "voice": "am_fenrir"
  },
  {
-  "key": "1f73ce42",
-  "text": "What time is it?",
-  "voice": "am_michael"
- },
- {
   "key": "6ddcc920",
   "text": "I always eat breakfast.",
   "voice": "am_michael"
@@ -2532,31 +4352,6 @@
  {
   "key": "46b24e1d",
   "text": "bakery",
-  "voice": "af_heart"
- },
- {
-  "key": "3b952e97",
-  "text": "bank",
-  "voice": "af_heart"
- },
- {
-  "key": "9f519cc9",
-  "text": "school",
-  "voice": "af_heart"
- },
- {
-  "key": "63780eb9",
-  "text": "park",
-  "voice": "af_heart"
- },
- {
-  "key": "4f9cd7b3",
-  "text": "hospital",
-  "voice": "af_heart"
- },
- {
-  "key": "90f6fbd0",
-  "text": "library",
   "voice": "af_heart"
  },
  {
@@ -2642,11 +4437,6 @@
  {
   "key": "eb71e6b4",
   "text": "forty-two",
-  "voice": "af_heart"
- },
- {
-  "key": "8583378f",
-  "text": "forty",
   "voice": "af_heart"
  },
  {
@@ -2757,11 +4547,6 @@
  {
   "key": "e02e3c3f",
   "text": "It's next to the bank.",
-  "voice": "am_michael"
- },
- {
-  "key": "13d187eb",
-  "text": "Is there a bank near here?",
   "voice": "am_michael"
  },
  {
@@ -3035,16 +4820,6 @@
   "voice": "af_heart"
  },
  {
-  "key": "f161ff1c",
-  "text": "chicken",
-  "voice": "af_heart"
- },
- {
-  "key": "73a6862a",
-  "text": "salad",
-  "voice": "af_heart"
- },
- {
   "key": "8aea8859",
   "text": "cake",
   "voice": "af_heart"
@@ -3315,33 +5090,13 @@
   "voice": "af_nova"
  },
  {
-  "key": "43e36503",
-  "text": "shirt",
-  "voice": "af_heart"
- },
- {
   "key": "25ec829c",
   "text": "trousers",
   "voice": "af_heart"
  },
  {
-  "key": "68e41ef0",
-  "text": "dress",
-  "voice": "af_heart"
- },
- {
-  "key": "100e165b",
-  "text": "jacket",
-  "voice": "af_heart"
- },
- {
   "key": "fffa7852",
   "text": "boots",
-  "voice": "af_heart"
- },
- {
-  "key": "9e725352",
-  "text": "socks",
   "voice": "af_heart"
  },
  {
@@ -3500,11 +5255,6 @@
   "voice": "af_nova"
  },
  {
-  "key": "3ba7e226",
-  "text": "May",
-  "voice": "af_nicole"
- },
- {
   "key": "cdf45549",
   "text": "Is this your bag? Over here, by my stall?",
   "voice": "af_nova"
@@ -3575,16 +5325,6 @@
   "voice": "af_heart"
  },
  {
-  "key": "eeb0c085",
-  "text": "raining",
-  "voice": "af_heart"
- },
- {
-  "key": "2dbc1605",
-  "text": "cloudy",
-  "voice": "af_heart"
- },
- {
   "key": "1af8295a",
   "text": "windy",
   "voice": "af_heart"
@@ -3592,11 +5332,6 @@
  {
   "key": "ad3c122e",
   "text": "snowing",
-  "voice": "af_heart"
- },
- {
-  "key": "ea44dd0f",
-  "text": "cold",
   "voice": "af_heart"
  },
  {
@@ -4669,31 +6404,16 @@
   "tts": "dee"
  },
  {
-  "key": "e668bd09",
-  "text": "dog",
-  "voice": "af_heart"
- },
- {
   "key": "c30bf539",
   "text": "F",
   "voice": "af_heart",
   "tts": "eff"
  },
  {
-  "key": "afad8963",
-  "text": "fish",
-  "voice": "af_heart"
- },
- {
   "key": "c20bf3a6",
   "text": "G",
   "voice": "af_heart",
   "tts": "jee"
- },
- {
-  "key": "4249d707",
-  "text": "game",
-  "voice": "af_heart"
  },
  {
   "key": "cd0c04f7",
@@ -4712,11 +6432,6 @@
   "text": "K",
   "voice": "af_heart",
   "tts": "kay"
- },
- {
-  "key": "6815c86c",
-  "text": "key",
-  "voice": "af_heart"
  },
  {
   "key": "c90bfeab",
@@ -4776,11 +6491,6 @@
   "tts": "ess"
  },
  {
-  "key": "e04e3f61",
-  "text": "sun",
-  "voice": "af_heart"
- },
- {
   "key": "d10c0b43",
   "text": "T",
   "voice": "af_heart",
@@ -4823,11 +6533,6 @@
  {
   "key": "927c3c2b",
   "text": "zoo",
-  "voice": "af_heart"
- },
- {
-  "key": "7c3f812f",
-  "text": "morning",
   "voice": "af_heart"
  },
  {
@@ -5061,18 +6766,8 @@
   "voice": "af_heart"
  },
  {
-  "key": "0ec63aab",
-  "text": "understand",
-  "voice": "af_heart"
- },
- {
   "key": "52fed105",
   "text": "Can",
-  "voice": "af_heart"
- },
- {
-  "key": "3871a3fa",
-  "text": "help",
   "voice": "af_heart"
  },
  {
@@ -5106,18 +6801,498 @@
   "voice": "af_heart"
  },
  {
-  "key": "623f367d",
-  "text": "Hey",
+  "key": "7ee93563",
+  "text": "hundred",
   "voice": "af_heart"
  },
  {
-  "key": "f0743965",
-  "text": "can",
+  "key": "fe00a57c",
+  "text": "I'm",
+  "voice": "af_heart"
+ },
+ {
+  "key": "825d8b1f",
+  "text": "twenty-five",
+  "voice": "af_heart"
+ },
+ {
+  "key": "46e8d230",
+  "text": "It",
+  "voice": "af_heart"
+ },
+ {
+  "key": "1424bf11",
+  "text": "costs",
+  "voice": "af_heart"
+ },
+ {
+  "key": "7395fea4",
+  "text": "dollars",
+  "voice": "af_heart"
+ },
+ {
+  "key": "5ea746fd",
+  "text": "There",
+  "voice": "af_heart"
+ },
+ {
+  "key": "a070a5a9",
+  "text": "students",
+  "voice": "af_heart"
+ },
+ {
+  "key": "41387a9e",
+  "text": "in",
+  "voice": "af_heart"
+ },
+ {
+  "key": "77688e8b",
+  "text": "grandfather",
+  "voice": "af_heart"
+ },
+ {
+  "key": "5d3c9be4",
+  "text": "time",
+  "voice": "af_heart"
+ },
+ {
+  "key": "28cb3c32",
+  "text": "It's",
+  "voice": "af_heart"
+ },
+ {
+  "key": "5fc7021f",
+  "text": "o'clock",
+  "voice": "af_heart"
+ },
+ {
+  "key": "61342fd0",
+  "text": "on",
+  "voice": "af_heart"
+ },
+ {
+  "key": "ae33040d",
+  "text": "wake",
+  "voice": "af_heart"
+ },
+ {
+  "key": "43430b20",
+  "text": "up",
   "voice": "af_heart"
  },
  {
   "key": "540ca757",
   "text": "get",
+  "voice": "af_heart"
+ },
+ {
+  "key": "0a339056",
+  "text": "take",
+  "voice": "af_heart"
+ },
+ {
+  "key": "f90cbb4b",
+  "text": "shower",
+  "voice": "af_heart"
+ },
+ {
+  "key": "9a32f866",
+  "text": "breakfast",
+  "voice": "af_heart"
+ },
+ {
+  "key": "cf1ef61f",
+  "text": "lunch",
+  "voice": "af_heart"
+ },
+ {
+  "key": "fd42bc61",
+  "text": "come",
+  "voice": "af_heart"
+ },
+ {
+  "key": "d2c8c28e",
+  "text": "home",
+  "voice": "af_heart"
+ },
+ {
+  "key": "57b20f7d",
+  "text": "dinner",
+  "voice": "af_heart"
+ },
+ {
+  "key": "09784e5b",
+  "text": "goes",
+  "voice": "af_heart"
+ },
+ {
+  "key": "542bcc94",
+  "text": "by",
+  "voice": "af_heart"
+ },
+ {
+  "key": "88ab4733",
+  "text": "noon",
+  "voice": "af_heart"
+ },
+ {
+  "key": "edbf0fe3",
+  "text": "has",
+  "voice": "af_heart"
+ },
+ {
+  "key": "05bfb038",
+  "text": "living",
+  "voice": "af_heart"
+ },
+ {
+  "key": "37fd327a",
+  "text": "room",
+  "voice": "af_heart"
+ },
+ {
+  "key": "a2c4f48c",
+  "text": "small",
+  "voice": "af_heart"
+ },
+ {
+  "key": "d59726ea",
+  "text": "windows",
+  "voice": "af_heart"
+ },
+ {
+  "key": "cd86acc3",
+  "text": "Close",
+  "voice": "af_heart"
+ },
+ {
+  "key": "7aa9b1a8",
+  "text": "These",
+  "voice": "af_heart"
+ },
+ {
+  "key": "9e10ce11",
+  "text": "too",
+  "voice": "af_heart"
+ },
+ {
+  "key": "ac1db00e",
+  "text": "try",
+  "voice": "af_heart"
+ },
+ {
+  "key": "c6d35f72",
+  "text": "wearing",
+  "voice": "af_heart"
+ },
+ {
+  "key": "8b86c991",
+  "text": "What's",
+  "voice": "af_heart"
+ },
+ {
+  "key": "3c168691",
+  "text": "hurts",
+  "voice": "af_heart"
+ },
+ {
+  "key": "43edbc4b",
+  "text": "eyes",
+  "voice": "af_heart"
+ },
+ {
+  "key": "239f0d8e",
+  "text": "Wash",
+  "voice": "af_heart"
+ },
+ {
+  "key": "04187fa9",
+  "text": "hands",
+  "voice": "af_heart"
+ },
+ {
+  "key": "e2c119fb",
+  "text": "police",
+  "voice": "af_heart"
+ },
+ {
+  "key": "c1af3779",
+  "text": "officer",
+  "voice": "af_heart"
+ },
+ {
+  "key": "621cd814",
+  "text": "do",
+  "voice": "af_heart"
+ },
+ {
+  "key": "4492b3e9",
+  "text": "works",
+  "voice": "af_heart"
+ },
+ {
+  "key": "89e7fa47",
+  "text": "post",
+  "voice": "af_heart"
+ },
+ {
+  "key": "4de8dd35",
+  "text": "Is",
+  "voice": "af_heart"
+ },
+ {
+  "key": "5cb68de8",
+  "text": "next",
+  "voice": "af_heart"
+ },
+ {
+  "key": "41d0c56b",
+  "text": "Go",
+  "voice": "af_heart"
+ },
+ {
+  "key": "28ff8847",
+  "text": "straight",
+  "voice": "af_heart"
+ },
+ {
+  "key": "ca24650e",
+  "text": "ahead",
+  "voice": "af_heart"
+ },
+ {
+  "key": "0b4ec68d",
+  "text": "going",
+  "voice": "af_heart"
+ },
+ {
+  "key": "8f259e5f",
+  "text": "just",
+  "voice": "af_heart"
+ },
+ {
+  "key": "5506547a",
+  "text": "looking",
+  "voice": "af_heart"
+ },
+ {
+  "key": "0d51613b",
+  "text": "smaller",
+  "voice": "af_heart"
+ },
+ {
+  "key": "acf38390",
+  "text": "for",
+  "voice": "af_heart"
+ },
+ {
+  "key": "0700b3a7",
+  "text": "I'd",
+  "voice": "af_heart"
+ },
+ {
+  "key": "35dcc586",
+  "text": "delicious",
+  "voice": "af_heart"
+ },
+ {
+  "key": "2c29f04d",
+  "text": "any",
+  "voice": "af_heart"
+ },
+ {
+  "key": "1cb1b18f",
+  "text": "One",
+  "voice": "af_heart"
+ },
+ {
+  "key": "dc36a144",
+  "text": "Boston",
+  "voice": "af_heart"
+ },
+ {
+  "key": "021e3a39",
+  "text": "When",
+  "voice": "af_heart"
+ },
+ {
+  "key": "e7c0775e",
+  "text": "Today",
+  "voice": "af_heart"
+ },
+ {
+  "key": "69f9493e",
+  "text": "third",
+  "voice": "af_heart"
+ },
+ {
+  "key": "a9bd7d9b",
+  "text": "Christmas",
+  "voice": "af_heart"
+ },
+ {
+  "key": "77104bea",
+  "text": "listening",
+  "voice": "af_heart"
+ },
+ {
+  "key": "2f4bd506",
+  "text": "loves",
+  "voice": "af_heart"
+ },
+ {
+  "key": "60e75e8f",
+  "text": "dancing",
+  "voice": "af_heart"
+ },
+ {
+  "key": "257fbbf4",
+  "text": "movies",
+  "voice": "af_heart"
+ },
+ {
+  "key": "99b3eedb",
+  "text": "free",
+  "voice": "af_heart"
+ },
+ {
+  "key": "0f29c2a6",
+  "text": "and",
+  "voice": "af_heart"
+ },
+ {
+  "key": "20dc1db0",
+  "text": "does",
+  "voice": "af_heart"
+ },
+ {
+  "key": "5c3ae3b6",
+  "text": "he",
+  "voice": "af_heart"
+ },
+ {
+  "key": "e6ef5696",
+  "text": "look",
+  "voice": "af_heart"
+ },
+ {
+  "key": "584f211f",
+  "text": "They",
+  "voice": "af_heart"
+ },
+ {
+  "key": "a2fb5eed",
+  "text": "Are",
+  "voice": "af_heart"
+ },
+ {
+  "key": "3baadc0d",
+  "text": "Don't",
+  "voice": "af_heart"
+ },
+ {
+  "key": "382ba080",
+  "text": "be",
+  "voice": "af_heart"
+ },
+ {
+  "key": "0c6175c1",
+  "text": "little",
+  "voice": "af_heart"
+ },
+ {
+  "key": "65950d80",
+  "text": "borrow",
+  "voice": "af_heart"
+ },
+ {
+  "key": "1231a1fc",
+  "text": "nice",
+  "voice": "af_heart"
+ },
+ {
+  "key": "ed88e86a",
+  "text": "animals",
+  "voice": "af_heart"
+ },
+ {
+  "key": "e0d0f573",
+  "text": "Birds",
+  "voice": "af_heart"
+ },
+ {
+  "key": "fd902939",
+  "text": "farm",
+  "voice": "af_heart"
+ },
+ {
+  "key": "f94a08cd",
+  "text": "keys",
+  "voice": "af_heart"
+ },
+ {
+  "key": "bb953498",
+  "text": "languages",
+  "voice": "af_heart"
+ },
+ {
+  "key": "0bd501c0",
+  "text": "Wait",
+  "voice": "af_heart"
+ },
+ {
+  "key": "63e1d819",
+  "text": "last",
+  "voice": "af_heart"
+ },
+ {
+  "key": "808bf777",
+  "text": "Brazil",
+  "voice": "af_heart"
+ },
+ {
+  "key": "6c370998",
+  "text": "excuse",
+  "voice": "af_heart"
+ },
+ {
+  "key": "69343c68",
+  "text": "of",
+  "voice": "af_heart"
+ },
+ {
+  "key": "d1f81558",
+  "text": "course",
+  "voice": "af_heart"
+ },
+ {
+  "key": "5993d9b8",
+  "text": "Excuse",
+  "voice": "af_heart"
+ },
+ {
+  "key": "cb18332c",
+  "text": "that",
+  "voice": "af_heart"
+ },
+ {
+  "key": "c91c7e60",
+  "text": "say",
+  "voice": "af_heart"
+ },
+ {
+  "key": "aeea89a8",
+  "text": "obrigado",
+  "voice": "af_heart"
+ },
+ {
+  "key": "61e6be1a",
+  "text": "No",
+  "voice": "af_heart"
+ },
+ {
+  "key": "623f367d",
+  "text": "Hey",
   "voice": "af_heart"
  },
  {
@@ -5133,11 +7308,6 @@
  {
   "key": "78c7c40f",
   "text": "thing",
-  "voice": "af_heart"
- },
- {
-  "key": "23a0d95c",
-  "text": "size",
   "voice": "af_heart"
  },
  {
@@ -5196,11 +7366,6 @@
   "voice": "af_heart"
  },
  {
-  "key": "bd93ede1",
-  "text": "fifty",
-  "voice": "af_heart"
- },
- {
   "key": "a167b1eb",
   "text": "Here",
   "voice": "af_heart"
@@ -5216,33 +7381,13 @@
   "voice": "af_heart"
  },
  {
-  "key": "9e10ce11",
-  "text": "too",
-  "voice": "af_heart"
- },
- {
-  "key": "fe00a57c",
-  "text": "I'm",
-  "voice": "af_heart"
- },
- {
   "key": "77484f38",
   "text": "Jake",
   "voice": "af_heart"
  },
  {
-  "key": "8b86c991",
-  "text": "What's",
-  "voice": "af_heart"
- },
- {
   "key": "95cd8075",
   "text": "from",
-  "voice": "af_heart"
- },
- {
-  "key": "808bf777",
-  "text": "Brazil",
   "voice": "af_heart"
  },
  {
@@ -5261,11 +7406,6 @@
   "voice": "af_heart"
  },
  {
-  "key": "61342fd0",
-  "text": "on",
-  "voice": "af_heart"
- },
- {
   "key": "f9efa80a",
   "text": "vacation",
   "voice": "af_heart"
@@ -5281,18 +7421,8 @@
   "voice": "af_heart"
  },
  {
-  "key": "621cd814",
-  "text": "do",
-  "voice": "af_heart"
- },
- {
   "key": "42521417",
   "text": "so",
-  "voice": "af_heart"
- },
- {
-  "key": "bcf819ee",
-  "text": "far",
   "voice": "af_heart"
  },
  {
@@ -5301,23 +7431,8 @@
   "voice": "af_heart"
  },
  {
-  "key": "16e2c1f2",
-  "text": "was",
-  "voice": "af_heart"
- },
- {
-  "key": "0d8b883a",
-  "text": "meeting",
-  "voice": "af_heart"
- },
- {
   "key": "ba9eeb49",
   "text": "okay",
-  "voice": "af_heart"
- },
- {
-  "key": "e6ef5696",
-  "text": "look",
   "voice": "af_heart"
  },
  {
@@ -5341,18 +7456,8 @@
   "voice": "af_heart"
  },
  {
-  "key": "a3c91014",
-  "text": "subway",
-  "voice": "af_heart"
- },
- {
   "key": "a89ef012",
   "text": "it's",
-  "voice": "af_heart"
- },
- {
-  "key": "8f259e5f",
-  "text": "just",
   "voice": "af_heart"
  },
  {
@@ -5363,11 +7468,6 @@
  {
   "key": "3db9b915",
   "text": "down",
-  "voice": "af_heart"
- },
- {
-  "key": "cb18332c",
-  "text": "that",
   "voice": "af_heart"
  },
  {
@@ -5386,11 +7486,6 @@
   "voice": "af_heart"
  },
  {
-  "key": "ed786bd6",
-  "text": "can't",
-  "voice": "af_heart"
- },
- {
   "key": "689219d9",
   "text": "miss",
   "voice": "af_heart"
@@ -5406,16 +7501,6 @@
   "voice": "af_heart"
  },
  {
-  "key": "61e6be1a",
-  "text": "No",
-  "voice": "af_heart"
- },
- {
-  "key": "bdeb87dc",
-  "text": "problem",
-  "voice": "af_heart"
- },
- {
   "key": "67eb44ba",
   "text": "Hi",
   "voice": "af_heart"
@@ -5423,11 +7508,6 @@
  {
   "key": "660ec0f4",
   "text": "ready",
-  "voice": "af_heart"
- },
- {
-  "key": "732c1097",
-  "text": "order",
   "voice": "af_heart"
  },
  {
@@ -5466,11 +7546,6 @@
   "voice": "af_heart"
  },
  {
-  "key": "382ba080",
-  "text": "be",
-  "voice": "af_heart"
- },
- {
   "key": "e2a61acc",
   "text": "Enjoy",
   "voice": "af_heart"
@@ -5478,11 +7553,6 @@
  {
   "key": "6fc5ca7f",
   "text": "looks",
-  "voice": "af_heart"
- },
- {
-  "key": "fb1355ee",
-  "text": "great",
   "voice": "af_heart"
  },
  {
@@ -5506,11 +7576,6 @@
   "voice": "af_heart"
  },
  {
-  "key": "b3711c47",
-  "text": "check",
-  "voice": "af_heart"
- },
- {
   "key": "27e17df3",
   "text": "welcome",
   "voice": "af_heart"
@@ -5521,11 +7586,6 @@
   "voice": "af_heart"
  },
  {
-  "key": "41387a9e",
-  "text": "in",
-  "voice": "af_heart"
- },
- {
   "key": "be35d2b9",
   "text": "reservation",
   "voice": "af_heart"
@@ -5533,11 +7593,6 @@
  {
   "key": "a34ac38e",
   "text": "Great",
-  "voice": "af_heart"
- },
- {
-  "key": "63e1d819",
-  "text": "last",
   "voice": "af_heart"
  },
  {
@@ -5576,16 +7631,6 @@
   "voice": "af_heart"
  },
  {
-  "key": "37fd327a",
-  "text": "room",
-  "voice": "af_heart"
- },
- {
-  "key": "f5352bb4",
-  "text": "twelve",
-  "voice": "af_heart"
- },
- {
   "key": "da9c223e",
   "text": "time's",
   "voice": "af_heart"
@@ -5601,16 +7646,6 @@
   "voice": "af_heart"
  },
  {
-  "key": "8ff53680",
-  "text": "eleven",
-  "voice": "af_heart"
- },
- {
-  "key": "4de8dd35",
-  "text": "Is",
-  "voice": "af_heart"
- },
- {
   "key": "07286448",
   "text": "wifi",
   "voice": "af_heart"
@@ -5618,21 +7653,6 @@
  {
   "key": "79cc63fa",
   "text": "password's",
-  "voice": "af_heart"
- },
- {
-  "key": "8827595f",
-  "text": "card",
-  "voice": "af_heart"
- },
- {
-  "key": "bdf0855a",
-  "text": "find",
-  "voice": "af_heart"
- },
- {
-  "key": "5506547a",
-  "text": "looking",
   "voice": "af_heart"
  },
  {
@@ -5661,11 +7681,6 @@
   "voice": "af_heart"
  },
  {
-  "key": "ac1db00e",
-  "text": "try",
-  "voice": "af_heart"
- },
- {
   "key": "9b2c20a0",
   "text": "Fitting",
   "voice": "af_heart"
@@ -5691,18 +7706,8 @@
   "voice": "af_heart"
  },
  {
-  "key": "46e8d230",
-  "text": "It",
-  "voice": "af_heart"
- },
- {
   "key": "b0afc98d",
   "text": "fits",
-  "voice": "af_heart"
- },
- {
-  "key": "0a339056",
-  "text": "take",
   "voice": "af_heart"
  },
  {
@@ -5711,28 +7716,13 @@
   "voice": "af_heart"
  },
  {
-  "key": "825d8b1f",
-  "text": "twenty-five",
-  "voice": "af_heart"
- },
- {
   "key": "2a8d6e8f",
   "text": "bucks",
   "voice": "af_heart"
  },
  {
-  "key": "5e560689",
-  "text": "pay",
-  "voice": "af_heart"
- },
- {
   "key": "68e48a88",
   "text": "Of",
-  "voice": "af_heart"
- },
- {
-  "key": "d1f81558",
-  "text": "course",
   "voice": "af_heart"
  },
  {
@@ -5743,11 +7733,6 @@
  {
   "key": "8dd31791",
   "text": "Done",
-  "voice": "af_heart"
- },
- {
-  "key": "43430b20",
-  "text": "up",
   "voice": "af_heart"
  },
  {
@@ -5771,28 +7756,8 @@
   "voice": "af_heart"
  },
  {
-  "key": "aef39ccf",
-  "text": "movie",
-  "voice": "af_heart"
- },
- {
   "key": "0662faa5",
   "text": "sounds",
-  "voice": "af_heart"
- },
- {
-  "key": "5d3c9be4",
-  "text": "time",
-  "voice": "af_heart"
- },
- {
-  "key": "4492b3e9",
-  "text": "works",
-  "voice": "af_heart"
- },
- {
-  "key": "acf38390",
-  "text": "for",
   "voice": "af_heart"
  },
  {
@@ -5803,11 +7768,6 @@
  {
   "key": "e40ddc70",
   "text": "headache",
-  "voice": "af_heart"
- },
- {
-  "key": "c2ecdf53",
-  "text": "long",
   "voice": "af_heart"
  },
  {
@@ -5841,11 +7801,6 @@
   "voice": "af_heart"
  },
  {
-  "key": "69343c68",
-  "text": "of",
-  "voice": "af_heart"
- },
- {
   "key": "903cb9ad",
   "text": "Will",
   "voice": "af_heart"
@@ -5868,16 +7823,6 @@
  {
   "key": "5136dd21",
   "text": "stayed",
-  "voice": "af_heart"
- },
- {
-  "key": "d2c8c28e",
-  "text": "home",
-  "voice": "af_heart"
- },
- {
-  "key": "0f29c2a6",
-  "text": "and",
   "voice": "af_heart"
  },
  {
@@ -5931,11 +7876,6 @@
   "voice": "af_heart"
  },
  {
-  "key": "0b4ec68d",
-  "text": "going",
-  "voice": "af_heart"
- },
- {
   "key": "6ed196a4",
   "text": "Doing",
   "voice": "af_heart"
@@ -5953,11 +7893,6 @@
  {
   "key": "04d092fd",
   "text": "total",
-  "voice": "af_heart"
- },
- {
-  "key": "c7eb512c",
-  "text": "were",
   "voice": "af_heart"
  },
  {
@@ -6011,11 +7946,6 @@
   "voice": "af_heart"
  },
  {
-  "key": "1efb9680",
-  "text": "sure",
-  "voice": "af_heart"
- },
- {
   "key": "97413796",
   "text": "weird",
   "voice": "af_heart"
@@ -6033,11 +7963,6 @@
  {
   "key": "9918f4ae",
   "text": "really",
-  "voice": "af_heart"
- },
- {
-  "key": "720c3fd5",
-  "text": "tired",
   "voice": "af_heart"
  },
  {
@@ -6068,11 +7993,6 @@
  {
   "key": "7de0c4cd",
   "text": "Haha",
-  "voice": "af_heart"
- },
- {
-  "key": "42abb7cb",
-  "text": "funny",
   "voice": "af_heart"
  },
  {
@@ -6131,11 +8051,6 @@
   "voice": "af_heart"
  },
  {
-  "key": "99b3eedb",
-  "text": "free",
-  "voice": "af_heart"
- },
- {
   "key": "8e4139ed",
   "text": "coins",
   "voice": "af_heart"
@@ -6181,16 +8096,6 @@
   "voice": "af_heart"
  },
  {
-  "key": "28cb3c32",
-  "text": "It's",
-  "voice": "af_heart"
- },
- {
-  "key": "542bcc94",
-  "text": "by",
-  "voice": "af_heart"
- },
- {
   "key": "64ff7b9f",
   "text": "found",
   "voice": "af_heart"
@@ -6198,11 +8103,6 @@
  {
   "key": "7d6f0881",
   "text": "Come",
-  "voice": "af_heart"
- },
- {
-  "key": "10f5d87c",
-  "text": "hungry",
   "voice": "af_heart"
  },
  {
@@ -6271,11 +8171,6 @@
   "voice": "af_heart"
  },
  {
-  "key": "9a32f866",
-  "text": "breakfast",
-  "voice": "af_heart"
- },
- {
   "key": "f2fc373d",
   "text": "bracelet",
   "voice": "af_heart"
@@ -6298,11 +8193,6 @@
  {
   "key": "3845ff3e",
   "text": "before",
-  "voice": "af_heart"
- },
- {
-  "key": "41d0c56b",
-  "text": "Go",
   "voice": "af_heart"
  },
  {
@@ -6366,11 +8256,6 @@
   "voice": "af_heart"
  },
  {
-  "key": "0c6175c1",
-  "text": "little",
-  "voice": "af_heart"
- },
- {
   "key": "5feb3822",
   "text": "Ha",
   "voice": "af_heart"
@@ -6398,11 +8283,6 @@
  {
   "key": "e1978fa2",
   "text": "many",
-  "voice": "af_heart"
- },
- {
-  "key": "9ede2954",
-  "text": "mean",
   "voice": "af_heart"
  },
  {
@@ -6443,11 +8323,6 @@
  {
   "key": "b3a43630",
   "text": "Yes",
-  "voice": "af_heart"
- },
- {
-  "key": "0b44452a",
-  "text": "price",
   "voice": "af_heart"
  },
  {
@@ -6496,11 +8371,6 @@
   "voice": "af_heart"
  },
  {
-  "key": "892e4ca0",
-  "text": "wait",
-  "voice": "af_heart"
- },
- {
   "key": "a19a8c3f",
   "text": "grab",
   "voice": "af_heart"
@@ -6541,11 +8411,6 @@
   "voice": "af_heart"
  },
  {
-  "key": "63374a36",
-  "text": "thirteen",
-  "voice": "af_heart"
- },
- {
   "key": "fc34871f",
   "text": "Looks",
   "voice": "af_heart"
@@ -6576,18 +8441,8 @@
   "voice": "af_heart"
  },
  {
-  "key": "43edbc4b",
-  "text": "eyes",
-  "voice": "af_heart"
- },
- {
   "key": "7f2c2a34",
   "text": "Move",
-  "voice": "af_heart"
- },
- {
-  "key": "5993d9b8",
-  "text": "Excuse",
   "voice": "af_heart"
  },
  {
@@ -6601,23 +8456,8 @@
   "voice": "af_heart"
  },
  {
-  "key": "0bd501c0",
-  "text": "Wait",
-  "voice": "af_heart"
- },
- {
   "key": "256f9e1c",
   "text": "Let's",
-  "voice": "af_heart"
- },
- {
-  "key": "b33fe54f",
-  "text": "again",
-  "voice": "af_heart"
- },
- {
-  "key": "1231a1fc",
-  "text": "nice",
   "voice": "af_heart"
  },
  {
@@ -6633,11 +8473,6 @@
  {
   "key": "6dbf9171",
   "text": "Still",
-  "voice": "af_heart"
- },
- {
-  "key": "5cfb6080",
-  "text": "busy",
   "voice": "af_heart"
  },
  {
@@ -6666,11 +8501,6 @@
   "voice": "af_heart"
  },
  {
-  "key": "c84b99e2",
-  "text": "remember",
-  "voice": "af_heart"
- },
- {
   "key": "67d07dca",
   "text": "Your",
   "voice": "af_heart"
@@ -6683,11 +8513,6 @@
  {
   "key": "b338c84b",
   "text": "Maybe",
-  "voice": "af_heart"
- },
- {
-  "key": "00500da8",
-  "text": "twenty",
   "voice": "af_heart"
  },
  {
@@ -6711,11 +8536,6 @@
   "voice": "af_heart"
  },
  {
-  "key": "ddd42fdc",
-  "text": "job",
-  "voice": "af_heart"
- },
- {
   "key": "7459deae",
   "text": "perfect",
   "voice": "af_heart"
@@ -6728,11 +8548,6 @@
  {
   "key": "29742e5c",
   "text": "Show",
-  "voice": "af_heart"
- },
- {
-  "key": "c4ba2f20",
-  "text": "hand",
   "voice": "af_heart"
  },
  {
@@ -6758,16 +8573,6 @@
  {
   "key": "2001734c",
   "text": "Nothing's",
-  "voice": "af_heart"
- },
- {
-  "key": "fd42bc61",
-  "text": "come",
-  "voice": "af_heart"
- },
- {
-  "key": "3baadc0d",
-  "text": "Don't",
   "voice": "af_heart"
  },
  {
@@ -6801,16 +8606,6 @@
   "voice": "af_heart"
  },
  {
-  "key": "584f211f",
-  "text": "They",
-  "voice": "af_heart"
- },
- {
-  "key": "7013d630",
-  "text": "carry",
-  "voice": "af_heart"
- },
- {
   "key": "514c98f2",
   "text": "boxes",
   "voice": "af_heart"
@@ -6838,11 +8633,6 @@
  {
   "key": "4645d6c2",
   "text": "Tell",
-  "voice": "af_heart"
- },
- {
-  "key": "20dc1db0",
-  "text": "does",
   "voice": "af_heart"
  },
  {
@@ -6886,11 +8676,6 @@
   "voice": "af_heart"
  },
  {
-  "key": "147eb74c",
-  "text": "running",
-  "voice": "af_heart"
- },
- {
   "key": "54ea875b",
   "text": "away",
   "voice": "af_heart"
@@ -6921,11 +8706,6 @@
   "voice": "af_heart"
  },
  {
-  "key": "5e5b9905",
-  "text": "sell",
-  "voice": "af_heart"
- },
- {
   "key": "c21cf202",
   "text": "Remember",
   "voice": "af_heart"
@@ -6936,33 +8716,8 @@
   "voice": "af_heart"
  },
  {
-  "key": "7f697715",
-  "text": "learn",
-  "voice": "af_heart"
- },
- {
   "key": "029402af",
   "text": "fast",
-  "voice": "af_heart"
- },
- {
-  "key": "82db4d21",
-  "text": "late",
-  "voice": "af_heart"
- },
- {
-  "key": "c91c7e60",
-  "text": "say",
-  "voice": "af_heart"
- },
- {
-  "key": "e7c0775e",
-  "text": "Today",
-  "voice": "af_heart"
- },
- {
-  "key": "1cb1b18f",
-  "text": "One",
   "voice": "af_heart"
  },
  {
@@ -6978,11 +8733,6 @@
  {
   "key": "d71c946a",
   "text": "saw",
-  "voice": "af_heart"
- },
- {
-  "key": "3641595a",
-  "text": "ago",
   "voice": "af_heart"
  },
  {
@@ -7031,16 +8781,6 @@
   "voice": "af_heart"
  },
  {
-  "key": "5fc7021f",
-  "text": "o'clock",
-  "voice": "af_heart"
- },
- {
-  "key": "b6032c0f",
-  "text": "hour",
-  "voice": "af_heart"
- },
- {
   "key": "652b04df",
   "text": "start",
   "voice": "af_heart"
@@ -7078,16 +8818,6 @@
  {
   "key": "9a688bf3",
   "text": "She's",
-  "voice": "af_heart"
- },
- {
-  "key": "ef3e2929",
-  "text": "cook",
-  "voice": "af_heart"
- },
- {
-  "key": "0391d612",
-  "text": "usually",
   "voice": "af_heart"
  },
  {
@@ -7186,11 +8916,6 @@
   "voice": "af_heart"
  },
  {
-  "key": "1ab97f1f",
-  "text": "slowly",
-  "voice": "af_heart"
- },
- {
   "key": "40f50df6",
   "text": "King",
   "voice": "af_heart"
@@ -7256,18 +8981,8 @@
   "voice": "af_heart"
  },
  {
-  "key": "09784e5b",
-  "text": "goes",
-  "voice": "af_heart"
- },
- {
   "key": "1dcc6917",
   "text": "Only",
-  "voice": "af_heart"
- },
- {
-  "key": "5c3ae3b6",
-  "text": "he",
   "voice": "af_heart"
  },
  {
@@ -7311,18 +9026,8 @@
   "voice": "af_heart"
  },
  {
-  "key": "28ff8847",
-  "text": "straight",
-  "voice": "af_heart"
- },
- {
   "key": "914bd27a",
   "text": "turn",
-  "voice": "af_heart"
- },
- {
-  "key": "5cb68de8",
-  "text": "next",
   "voice": "af_heart"
  },
  {
@@ -7401,23 +9106,8 @@
   "voice": "af_heart"
  },
  {
-  "key": "54f3570f",
-  "text": "near",
-  "voice": "af_heart"
- },
- {
-  "key": "a2fb5eed",
-  "text": "Are",
-  "voice": "af_heart"
- },
- {
   "key": "58dd75e4",
   "text": "ships",
-  "voice": "af_heart"
- },
- {
-  "key": "2c29f04d",
-  "text": "any",
   "voice": "af_heart"
  },
  {
@@ -7436,18 +9126,8 @@
   "voice": "af_heart"
  },
  {
-  "key": "5ea746fd",
-  "text": "There",
-  "voice": "af_heart"
- },
- {
   "key": "e5185c1a",
   "text": "than",
-  "voice": "af_heart"
- },
- {
-  "key": "edbf0fe3",
-  "text": "has",
   "voice": "af_heart"
  },
  {
@@ -7531,11 +9211,6 @@
   "voice": "af_heart"
  },
  {
-  "key": "06d5a845",
-  "text": "question",
-  "voice": "af_heart"
- },
- {
   "key": "ea6e4ac9",
   "text": "sailor",
   "voice": "af_heart"
@@ -7551,16 +9226,6 @@
   "voice": "af_heart"
  },
  {
-  "key": "a2c4f48c",
-  "text": "small",
-  "voice": "af_heart"
- },
- {
-  "key": "dcb746fb",
-  "text": "boat",
-  "voice": "af_heart"
- },
- {
   "key": "a025d330",
   "text": "He's",
   "voice": "af_heart"
@@ -7568,11 +9233,6 @@
  {
   "key": "312fd389",
   "text": "picture",
-  "voice": "af_heart"
- },
- {
-  "key": "d4b676b9",
-  "text": "hair",
   "voice": "af_heart"
  },
  {
@@ -7603,11 +9263,6 @@
  {
   "key": "c617f7a2",
   "text": "tell",
-  "voice": "af_heart"
- },
- {
-  "key": "112cdf96",
-  "text": "tall",
   "voice": "af_heart"
  },
  {
@@ -7711,23 +9366,8 @@
   "voice": "af_heart"
  },
  {
-  "key": "99e4dd3a",
-  "text": "menu",
-  "voice": "af_heart"
- },
- {
-  "key": "f624f702",
-  "text": "soup",
-  "voice": "af_heart"
- },
- {
   "key": "7ac4d962",
   "text": "would",
-  "voice": "af_heart"
- },
- {
-  "key": "0700b3a7",
-  "text": "I'd",
   "voice": "af_heart"
  },
  {
@@ -7738,11 +9378,6 @@
  {
   "key": "ec7e97cf",
   "text": "recipe",
-  "voice": "af_heart"
- },
- {
-  "key": "f203a92b",
-  "text": "glass",
   "voice": "af_heart"
  },
  {
@@ -7771,11 +9406,6 @@
   "voice": "af_heart"
  },
  {
-  "key": "1460a7f7",
-  "text": "cooking",
-  "voice": "af_heart"
- },
- {
   "key": "60d56f8c",
   "text": "but",
   "voice": "af_heart"
@@ -7793,11 +9423,6 @@
  {
   "key": "9de96441",
   "text": "dishes",
-  "voice": "af_heart"
- },
- {
-  "key": "9cd71404",
-  "text": "doing",
   "voice": "af_heart"
  },
  {
@@ -7826,11 +9451,6 @@
   "voice": "af_heart"
  },
  {
-  "key": "71da140d",
-  "text": "swim",
-  "voice": "af_heart"
- },
- {
   "key": "9dc3aa14",
   "text": "Add",
   "voice": "af_heart"
@@ -7843,11 +9463,6 @@
  {
   "key": "5fa45c2c",
   "text": "Tonight's",
-  "voice": "af_heart"
- },
- {
-  "key": "57b20f7d",
-  "text": "dinner",
   "voice": "af_heart"
  },
  {
@@ -7866,11 +9481,6 @@
   "voice": "af_heart"
  },
  {
-  "key": "e61cac07",
-  "text": "sad",
-  "voice": "af_heart"
- },
- {
   "key": "c32281d5",
   "text": "Festival",
   "voice": "af_heart"
@@ -7886,11 +9496,6 @@
   "voice": "af_heart"
  },
  {
-  "key": "021e3a39",
-  "text": "When",
-  "voice": "af_heart"
- },
- {
   "key": "e29c4bb5",
   "text": "festival",
   "voice": "af_heart"
@@ -7901,18 +9506,8 @@
   "voice": "af_heart"
  },
  {
-  "key": "07cc2b2a",
-  "text": "fifteen",
-  "voice": "af_heart"
- },
- {
   "key": "d094a1d5",
   "text": "boot",
-  "voice": "af_heart"
- },
- {
-  "key": "0d51613b",
-  "text": "smaller",
   "voice": "af_heart"
  },
  {
@@ -7951,11 +9546,6 @@
   "voice": "af_heart"
  },
  {
-  "key": "efeb5a2c",
-  "text": "birthday",
-  "voice": "af_heart"
- },
- {
   "key": "8a7324ef",
   "text": "gift",
   "voice": "af_heart"
@@ -7976,26 +9566,6 @@
   "voice": "af_heart"
  },
  {
-  "key": "63f1336c",
-  "text": "spring",
-  "voice": "af_heart"
- },
- {
-  "key": "81fa6638",
-  "text": "warm",
-  "voice": "af_heart"
- },
- {
-  "key": "c4bb620c",
-  "text": "winter",
-  "voice": "af_heart"
- },
- {
-  "key": "fce32734",
-  "text": "summer",
-  "voice": "af_heart"
- },
- {
   "key": "b224312f",
   "text": "Over",
   "voice": "af_heart"
@@ -8011,23 +9581,8 @@
   "voice": "af_heart"
  },
  {
-  "key": "7aa9b1a8",
-  "text": "These",
-  "voice": "af_heart"
- },
- {
-  "key": "36404793",
-  "text": "weather",
-  "voice": "af_heart"
- },
- {
   "key": "21d9d8e7",
   "text": "wet",
-  "voice": "af_heart"
- },
- {
-  "key": "eeda06a8",
-  "text": "waiting",
   "voice": "af_heart"
  },
  {
@@ -8086,11 +9641,6 @@
   "voice": "af_heart"
  },
  {
-  "key": "9b8951a6",
-  "text": "horse",
-  "voice": "af_heart"
- },
- {
   "key": "54d4daaf",
   "text": "useful",
   "voice": "af_heart"
@@ -8113,11 +9663,6 @@
  {
   "key": "0bd2c6d5",
   "text": "him",
-  "voice": "af_heart"
- },
- {
-  "key": "d913e243",
-  "text": "kind",
   "voice": "af_heart"
  },
  {
@@ -8166,11 +9711,6 @@
   "voice": "af_heart"
  },
  {
-  "key": "ba226bd5",
-  "text": "short",
-  "voice": "af_heart"
- },
- {
   "key": "93d394b6",
   "text": "Tall",
   "voice": "af_heart"
@@ -8191,11 +9731,6 @@
   "voice": "af_heart"
  },
  {
-  "key": "3f32c75d",
-  "text": "scared",
-  "voice": "af_heart"
- },
- {
   "key": "8a438c87",
   "text": "wasn't",
   "voice": "af_heart"
@@ -8203,11 +9738,6 @@
  {
   "key": "eadc8c31",
   "text": "even",
-  "voice": "af_heart"
- },
- {
-  "key": "b50aaefe",
-  "text": "angry",
   "voice": "af_heart"
  },
  {
@@ -8276,11 +9806,6 @@
   "voice": "af_heart"
  },
  {
-  "key": "1f951fd4",
-  "text": "beautiful",
-  "voice": "af_heart"
- },
- {
   "key": "1d794a89",
   "text": "A-R-I",
   "voice": "af_heart"
@@ -8318,11 +9843,6 @@
  {
   "key": "ee80391c",
   "text": "strangers",
-  "voice": "af_heart"
- },
- {
-  "key": "d5c6965d",
-  "text": "week",
   "voice": "af_heart"
  },
  {
