@@ -4,6 +4,8 @@ Aprenda idiomas jogando e falando em voz alta. É um jogo no navegador, sem inst
 
 ## Como funciona
 
+- **Início:** a primeira tela. A ação principal é sempre estudar: a próxima lição, ou o Treino quando há 8 ou mais palavras e frases para revisar. Logo abaixo, atalhos para Lições, Treino, Pronúncia, Conversas, Alfabeto e Caderno. Depois vem o capítulo atual da história do idioma (com o cenário HD-2D e quantas palavras das frases do capítulo você já viu nas lições). Idiomas sem história própria mostram um aviso, sem inventar capítulo. No celular, a barra de baixo tem Início, Lições, Treino, História e Mais.
+
 - **Mapa de fases:** inglês e russo têm o nível A1 completo: 30 unidades no inglês e 31 no russo (o russo começa pelo alfabeto cirílico), com cerca de 380 palavras e 140 frases cada, de números, horas e rotina até compras, transporte, verbos de movimento e o passado. Espanhol, francês e italiano têm 8 unidades por enquanto. Cada unidade tem 3 lições, uma prova de fala e um baú de recompensa.
 - **Gramática em pílulas:** o Guia de cada unidade nova traz uma regra curta da unidade, explicada em português (por exemplo, por que o russo diz я был e я была).
 - **Teste de nível:** quem responde no plano que já sabe um pouco do idioma pode fazer um teste rápido, de 4 em 4 unidades. Acertando, as unidades são liberadas e as palavras delas vão para o Treino.

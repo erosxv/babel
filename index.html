@@ -112,6 +112,35 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .card{background:var(--surface);border:2px solid var(--line);border-radius:18px;padding:18px}
 .card h3{font-size:19px;margin-bottom:10px}
 .only-narrow{display:none}
+/* Início */
+.home{display:grid;gap:16px}
+.home .eyebrow{display:flex;align-items:center;gap:6px;margin:0 0 6px;font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--gold)}
+.home .eyebrow svg{width:16px;height:16px}
+.home-next{background:linear-gradient(135deg,color-mix(in srgb,var(--lang) 30%,var(--surface)),var(--surface-2));border-color:color-mix(in srgb,var(--lang) 45%,var(--line))}
+.home-next h2{font-size:24px;margin:0 0 4px}
+.home-next>p.muted{margin:0 0 12px;font-weight:700;max-width:60ch}
+.home-unit{display:grid;gap:6px;margin-bottom:14px}.home-unit small{color:var(--muted);font-weight:700}
+.home-unit .bar{height:10px}
+.home-acts{display:flex;flex-wrap:wrap;gap:10px}
+.home-next .linkish{margin-top:10px}
+.home-tools{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.home-tool{position:relative;display:flex;align-items:center;gap:10px;text-align:left;border:2px solid var(--line-2);border-bottom-width:4px;border-radius:14px;background:var(--surface);color:var(--ink);padding:12px;font:inherit;cursor:pointer;min-width:0}
+.home-tool:hover{border-color:var(--lang)}
+.home-tool svg{width:26px;height:26px;flex:none;color:var(--lang)}
+.home-tool b{display:block;font-size:16px}.home-tool small{display:block;color:var(--muted);font-weight:700;font-size:13px}
+.home-tool span{min-width:0}
+.home-tool .dot{position:absolute;top:8px;right:8px;width:9px;height:9px;border-radius:50%;background:var(--bad)}
+.home-story{padding:0;overflow:hidden;display:grid;grid-template-columns:minmax(0,1fr)}
+.home-story .home-stage{border-radius:0;aspect-ratio:240/90;max-height:300px}
+.home-story .hs-body{padding:16px 18px;display:flex;flex-direction:column;gap:6px}
+.home-story h3{margin:0}.home-story p{margin:0;font-weight:700}
+.home-story .hs-words{display:flex;align-items:center;gap:6px;font-size:14px}.hs-words svg{width:16px;height:16px;color:var(--gold);flex:none}
+.home-story .hs-foot{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;padding-top:8px}
+@media (max-width:760px){
+  .home-tools{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .home-story .home-stage{aspect-ratio:16/10}
+  .home-acts .btn{width:100%}
+}
 .pop .hard-btn{margin-top:8px;width:100%;white-space:normal}.pop .hard-btn svg{color:var(--heart)}
 .pop .hard-note{margin:6px 0 0;font-size:13px;color:var(--muted);font-weight:700}
 
@@ -780,7 +809,7 @@ textarea.lines::placeholder{color:#a3acbb}
   .nav{position:fixed;left:0;right:0;bottom:0;top:auto;z-index:30;flex-direction:row;justify-content:space-around;background:var(--bg);border-top:2px solid var(--line);
     padding:6px max(4px,env(safe-area-inset-right,0px)) calc(6px + env(safe-area-inset-bottom,0px)) max(4px,env(safe-area-inset-left,0px));gap:0}
   .nav button{flex-direction:column;gap:3px;padding:6px 2px;font-size:11px;flex:1 1 0;min-width:0;align-items:center;letter-spacing:.02em}
-  .nav button:not([data-v="learn"],[data-v="story"],[data-v="talk"],[data-v="friends"],[data-v="more"]){display:none}
+  .nav button:not([data-v="home"],[data-v="learn"],[data-v="train"],[data-v="story"],[data-v="more"]){display:none}
   .nav .dot{position:absolute;margin:0;transform:translate(14px,-2px)}
   .nav button{position:relative}
   .logo span{display:none}
@@ -935,6 +964,7 @@ const P = {
   down: '<path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M12 3.5v12M7 11l5 5 5-5M4.5 20.5h15"/>',
   left: '<path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M15 5l-7 7 7 7"/>',
   right: '<path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>',
+  map: '<path fill="currentColor" opacity=".55" d="M3 6.2l5.5-2.2v14.8L3 21z"/><path fill="currentColor" d="M8.5 4l7 2.4v14.8l-7-2.4z"/><path fill="currentColor" opacity=".55" d="M15.5 6.4L21 4.2V19l-5.5 2.2z"/>',
   slow: '<path fill="currentColor" d="M4 15.5c0-3.6 3-6.5 6.6-6.5 3.2 0 5.8 2.2 6.4 5.2h1.4a1.6 1.6 0 1 1 0 3.3H5.6A1.6 1.6 0 0 1 4 15.5z"/><circle cx="18.5" cy="9" r="2.3" fill="currentColor"/>',
 };
 const I = (n, cls = "i") => `<svg class="${cls}" viewBox="0 0 24 24" aria-hidden="true">${P[n]}</svg>`;
@@ -942,7 +972,7 @@ const I = (n, cls = "i") => `<svg class="${cls}" viewBox="0 0 24 24" aria-hidden
 // ---------- state ----------
 const KEY = "babel-save-v1"; // name from before the app was renamed; kept so saved progress survives
 const fresh = () => ({
-  v: 1, onboarded: false, lang: "en", view: "learn", xp: 0, coins: 50, hearts: 5, heartsAt: Date.now(),
+  v: 1, onboarded: false, lang: "en", view: "home", xp: 0, coins: 50, hearts: 5, heartsAt: Date.now(),
   streak: 0, bestStreak: 0, lastDay: null, freezes: 0, goal: 30, day: {}, boostUntil: 0,
   sound: true, translit: true, progress: {}, chests: {}, srs: {}, ach: {}, quests: {}, speech: {}, talks: {}, voicePick: {}, story: {}, bag: [], noMicUntil: 0, plan: {}, coop: {}, abc: {}, placed: {}, skill: {},
   stats: { lessons: 0, perfect: 0, maxCombo: 0, reviews: 0, langs: {}, correct: 0, answered: 0, owl: false, early: false, chests: 0, spoken: 0, spokenGreat: 0, speechTests: 0, talks: 0, story: 0 },
@@ -953,6 +983,7 @@ try {
   if (raw && typeof raw === "object") { S = Object.assign(fresh(), raw); S.stats = Object.assign(fresh().stats, raw.stats || {}); }
 } catch {}
 if (!LANGS[S.lang]) S.lang = "en";
+if (!S.homeSeen) { S.view = "home"; S.homeSeen = true; }  // saves from before the Início page open on it once
 function save() { S.savedAt = Date.now(); try { localStorage.setItem(KEY, JSON.stringify(S)); } catch {} cloudSoon(); }
 // Notes live under their own key, so "Apagar progresso" never touches them. They go only when the learner
 // deletes a page or the whole notebook of a language.
@@ -1451,7 +1482,7 @@ function applyLangColor() {
   document.documentElement.style.setProperty("--lang-dark", L.dark);
 }
 // On phones the bottom bar keeps only these; "Mais" opens a sheet with every other section.
-const NAV_MAIN = ["learn", "story", "talk", "friends"];
+const NAV_MAIN = ["home", "learn", "train", "story"];
 let NAVS = [], NAV_DOT = () => "";
 function navMoreHtml() {
   return `<h2>Mais seções</h2><div class="more-grid">${NAVS.filter(([v]) => !NAV_MAIN.includes(v)).map(([v, ic, label]) =>
@@ -1469,7 +1500,8 @@ function renderChrome() {
     <button class="stat heart" data-act="heartsInfo" title="Vidas">${I("heart")}${S.hearts}</button>
     <button class="stat xp" data-act="go" data-v="profile" title="Nível ${lv.L}">${I("bolt")}${lv.L}${boosted() ? '<span class="boost-tag">2x</span>' : ""}</button>`;
   const due = dueWords(S.lang).length;
-  const navs = [["learn", "home", "Aprender", "Aprender"], ["abc", "abc", "Alfabeto", "ABC"], ["story", "book", "História", "História"], ["talk", "chat", "Conversas", "Papo"], ["speak", "mic", "Pronúncia", "Fala"], ["train", "target", "Treino", "Treino"], ["notes", "pen", "Caderno", "Caderno"], ["ach", "trophy", "Conquistas", "Troféus"], ["shop", "bag", "Loja", "Loja"], ["friends", "users", "Amigos", "Amigos"], ["profile", "user", "Perfil", "Perfil"]];
+  // study tools first, then the story and the rest
+  const navs = [["home", "home", "Início", "Início"], ["learn", "map", "Lições", "Lições"], ["abc", "abc", "Alfabeto", "ABC"], ["train", "target", "Treino", "Treino"], ["speak", "mic", "Pronúncia", "Fala"], ["talk", "chat", "Conversas", "Papo"], ["story", "book", "História", "História"], ["notes", "pen", "Caderno", "Caderno"], ["ach", "trophy", "Conquistas", "Troféus"], ["shop", "bag", "Loja", "Loja"], ["friends", "users", "Amigos", "Amigos"], ["profile", "user", "Perfil", "Perfil"]];
   const dotOf = v => (v === "train" && due >= 4 ? '<i class="dot" title="Palavras para revisar"></i>' : "") + (v === "friends" && unreadTotal() ? '<i class="dot" title="Mensagens novas"></i>' : "");
   const inMore = !NAV_MAIN.includes(S.view);
   $("#nav").innerHTML = navs.map(([v, ic, label, short]) =>
@@ -1531,6 +1563,80 @@ function viewLearn() {
   });
   if (!cur) html += `<div class="card course-done">${I("trophy", "i tower-big")}<h2>Curso completo!</h2><p class="muted">Você terminou todas as unidades de ${esc(L.name)}. Continue no Treino para não esquecer, ou comece outro idioma.</p></div>`;
   return html;
+}
+// ---------- Início ----------
+// The study hub. The main action is always studying: the next lesson, or the review when many words are
+// waiting. The story of the language comes beside it, as the place where those words are used, and every
+// study tool is one tap away. Only real data is shown.
+const HOME_REVIEW = 8;  // from this many items waiting, the review becomes the main action
+const wordsOf = t => (first(t).toLowerCase().match(/[\p{L}\p{M}]+(?:['’-][\p{L}\p{M}]+)*/gu) || []);
+// the chapter to show: the first one not finished yet (they open in order), or the last one when all are done
+function storyNow(l) {
+  const st = storyOf(l); if (!st) return null;
+  const done = c => !!(S.story || {})[c.id];
+  const k = st.chapters.findIndex(c => !done(c));
+  return { st, ch: st.chapters[k < 0 ? st.chapters.length - 1 : k], k: k < 0 ? st.chapters.length - 1 : k, allDone: k < 0 };
+}
+// how many words of the chapter's phrases the learner has already met in lessons or reviews
+function chapterWords(l, ch) {
+  const all = new Set((ch.phrases || []).flatMap(p => wordsOf(p[0])).filter(w => w.length > 1));
+  const seen = new Set(seenWords(l).flatMap(w => wordsOf(w[0])));
+  return { n: all.size, known: [...all].filter(w => seen.has(w)).length };
+}
+function homeNextHtml(lang) {
+  const L = LANGS[lang], cur = currentOf(lang), due = dueWords(lang).length + duePhrases(lang).length, canReview = seenWords(lang).length >= 4;
+  const review = canReview && due ? `<button class="btn ${cur && due < HOME_REVIEW ? "ghost" : ""}" data-act="review">${I("target")}Treinar · ${due} para revisar</button>` : "";
+  if (!cur) return `<section class="card home-next"><p class="eyebrow">${I("trophy")}Curso de ${esc(L.name)} completo</p><h2>Agora é manter vivo o que você aprendeu</h2>
+    <p class="muted">O treino traz de volta as palavras e frases que estão começando a sumir.</p><div class="home-acts">${review || `<button class="btn" data-act="go" data-v="learn">${I("map")}Ver as lições</button>`}</div></section>`;
+  const unit = L.units[cur.u], ls = lessonsOf(lang, cur.u)[cur.l], doneHere = [0, 1, 2, 3].filter(l => isDone(lang, cur.u, l)).length;
+  const reviewFirst = canReview && due >= HOME_REVIEW;
+  const lessonBtn = `<button class="btn ${reviewFirst ? "ghost" : ""}" data-act="start" data-u="${cur.u}" data-l="${cur.l}">${I(ls.speech ? "mic" : "book")}${isDone(lang, 0, 0) || cur.u ? "Continuar" : "Começar"}: ${esc(ls.name)}</button>`;
+  return `<section class="card home-next">
+    <p class="eyebrow">${I("map")}${reviewFirst ? "Primeiro, uma revisão" : "Sua próxima lição"}</p>
+    <h2>Unidade ${cur.u + 1} · ${esc(unit.t)}</h2>
+    <p class="muted">${reviewFirst ? `${due} palavras e frases estão começando a sumir da memória. Um treino rápido traz de volta, e depois a lição fica mais fácil.` : esc(unit.d)}</p>
+    <div class="home-unit"><div class="bar"><i style="width:${doneHere / NL * 100}%"></i></div><small>${doneHere} de ${NL} etapas desta unidade · ${coursePct(lang)}% do curso</small></div>
+    <div class="home-acts">${reviewFirst ? review + lessonBtn : lessonBtn + review}</div>
+    ${placeOpen(lang) ? `<button class="linkish" data-act="placeStart">Já sabe um pouco de ${esc(L.name)}? Faça o teste de nível</button>` : ""}
+  </section>`;
+}
+function homeStoryHtml(lang) {
+  if (!STORY[lang]) return `<section class="card home-story soon"><div class="hs-body"><p class="eyebrow">${I("book")}História</p>
+    <h3>A história de ${esc(LANGS[lang].learning)} ainda está sendo escrita</h3><p class="muted">Cada idioma vai ter a sua, com personagens e lugares próprios. As lições, o treino e a pronúncia de ${esc(LANGS[lang].learning)} já estão disponíveis, e a aba História mostra a de inglês enquanto isso.</p></div></section>`;
+  const { st, ch, k, allDone } = storyNow(lang), arc = st.arcs[ch.arc], rec = (S.story || {})[ch.id];
+  const scene = (ch.nodes.find(n => n.scene) || { scene: "room" }).scene, who = (ch.nodes.find(n => n.say) || {}).say, c = who && st.cast[who];
+  const b = HD && who && HD.bust(who);
+  const actor = b ? `<div class="actor bust" style="--ac:${c.color}"><div class="fr"><img class="b0" src="${b.base}" alt=""><img class="b1" src="${b.blink}" alt=""></div><small>${esc(c.name)}</small></div>` : "";
+  const wd = chapterWords(lang, ch), doneN = st.chapters.filter(x => (S.story || {})[x.id]).length;
+  return `<section class="card home-story">
+    <div class="stage bg-${scene} home-stage">${stageLayers(scene, actor)}<span class="stage-label">Capítulo ${ch.n}</span></div>
+    <div class="hs-body">
+      <p class="eyebrow">${I("book")}Na história · Arco ${ch.arc + 1}: ${esc(arc.t)}</p>
+      <h3>${esc(ch.t)} <span class="muted">· ${esc(ch.tPt)}</span></h3>
+      <p class="muted">${allDone ? `Você terminou os ${st.chapters.length} capítulos do arco. Os próximos estão sendo escritos; dá para jogar de novo e buscar as 3 estrelas.` : esc(ch.blurb)}</p>
+      ${wd.n ? `<p class="hs-words">${I("star")}Você já viu <b>${wd.known} de ${wd.n}</b> palavras das frases deste capítulo nas lições.</p>` : ""}
+      <div class="hs-foot"><small class="muted">${doneN} de ${st.chapters.length} capítulos${rec ? ` · melhor: ${rec.stars} de 3 estrelas` : ""}</small>
+        <button class="btn ghost" data-act="syStart" data-id="${ch.id}">${I("book")}${allDone || rec ? "Jogar de novo" : k ? "Continuar a história" : "Começar a história"}</button></div>
+    </div></section>`;
+}
+function homeToolsHtml(lang) {
+  const due = dueWords(lang).length + duePhrases(lang).length, talks = talksOf(lang), talked = talks.filter(t => talkRec(lang, t.id)).length;
+  const tools = [
+    ["learn", "map", "Lições", `${coursePct(lang)}% do curso`],
+    ["train", "target", "Treino", seenWords(lang).length < 4 ? "Libera depois da 1ª lição" : due ? `${due} para revisar` : "Nada pendente agora"],
+    ["speak", "mic", "Pronúncia", `Os sons de ${LANGS[lang].learning}`],
+    ["talk", "chat", "Conversas", talks.length ? `${talked} de ${talks.length} feitas` : "Em breve neste idioma"],
+    ...(abcOf(lang) ? [["abc", "abc", "Alfabeto", "Letras e sons"]] : []),
+    ["notes", "pen", "Caderno", "Suas anotações"],
+  ];
+  return `<section class="home-tools" aria-label="Estudar direto">${tools.map(([v, ic, t, sub]) =>
+    `<button class="home-tool" data-act="go" data-v="${v}">${I(ic)}<span><b>${t}</b><small>${esc(sub)}</small></span>${v === "train" && due >= 4 ? '<i class="dot"></i>' : ""}</button>`).join("")}</section>`;
+}
+function viewHome() {
+  const lang = S.lang, L = LANGS[lang];
+  return `<div class="page-head"><h1>Início</h1><p>Seu ${esc(L.learning)} de hoje: estude, revise e use o que aprendeu na história.</p></div>
+    <div class="home">${homeNextHtml(lang)}${homeToolsHtml(lang)}${homeStoryHtml(lang)}
+      <div class="only-narrow card">${goalHtml()}</div><div class="only-narrow card"><h3>Missões do dia</h3>${questsHtml()}</div></div>`;
 }
 function popHtml(u, l, ls, state) {
   if (state === "locked") return `<div class="pop locked"><h4>${esc(ls.name)}</h4><p class="muted">Complete as lições anteriores para liberar esta.</p></div>`;
@@ -2152,7 +2258,7 @@ function render() {
   if (!S.onboarded || PL) { renderOnboarding(); return; }
   $("#app").querySelector(".top").hidden = false; $("#shell").hidden = false; $("#onb").hidden = true;
   regen(); renderChrome();
-  const v = { learn: viewLearn, abc: viewAbc, story: viewStory, talk: viewTalk, notes: viewNotes, speak: viewSpeak, train: viewTrain, ach: viewAch, shop: viewShop, friends: viewFriends, profile: viewProfile }[S.view] || viewLearn;
+  const v = { home: viewHome, learn: viewLearn, abc: viewAbc, story: viewStory, talk: viewTalk, notes: viewNotes, speak: viewSpeak, train: viewTrain, ach: viewAch, shop: viewShop, friends: viewFriends, profile: viewProfile }[S.view] || viewLearn;
   $("#view").innerHTML = v();
 }
 
