@@ -112,8 +112,33 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .card{background:var(--surface);border:2px solid var(--line);border-radius:18px;padding:18px}
 .card h3{font-size:19px;margin-bottom:10px}
 .only-narrow{display:none}
+/* Domínio */
+.skill-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.skill-card{display:grid;gap:8px;align-content:start}
+.skill-card.weak{border-color:color-mix(in srgb,var(--gold) 60%,var(--line))}
+.sk-head{display:flex;gap:10px;align-items:flex-start}
+.sk-head{align-items:center}.sk-head h3{margin:0;font-size:17px}.sk-what{font-weight:700;font-size:13px;margin-top:-4px}
+.sk-ic{display:grid;place-items:center;width:36px;height:36px;border-radius:10px;background:color-mix(in srgb,var(--lang) 22%,var(--surface));flex:none}
+.sk-ic svg{width:20px;height:20px;color:var(--lang)}
+.sk-num{text-align:right;flex:none;display:grid;line-height:1.1}.sk-num b{display:block;font-family:var(--display);font-size:24px;color:var(--gold)}
+.sk-num span{font-size:12px;font-weight:800;color:var(--muted)}.sk-num.few b{color:var(--locked-ink)}
+.skill-card .bar{height:8px}
+.sk-src{margin:0;font-size:13px;font-weight:700;color:var(--muted)}
+.sk-facts{margin:0;padding-left:18px;font-size:14px;font-weight:700}
+.sk-act{margin-top:2px}
+.mastery-tip h3{margin:0 0 4px}.mastery-tip p.muted{margin:0 0 10px;font-weight:700}
+.mastery-tip .eyebrow{display:flex;align-items:center;gap:6px;margin:0 0 6px;font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--gold)}
+.mastery-tip .eyebrow svg{width:16px;height:16px}
+.home-mastery{display:grid;gap:10px;text-align:left;font:inherit;color:var(--ink);cursor:pointer;width:100%}
+.home-mastery:hover{border-color:var(--lang)}
+.hm-title{display:flex;align-items:center;gap:8px}.hm-title svg{width:20px;height:20px;color:var(--lang)}.hm-title small{margin-left:auto;font-weight:800}
+.hm-row{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:6px}
+.hm-sk{display:grid;justify-items:center;gap:2px;padding:6px 2px;border-radius:10px;background:var(--surface-2);min-width:0}
+.hm-sk svg{width:18px;height:18px;color:var(--lang)}.hm-sk small{font-size:11px;font-weight:800;color:var(--muted);max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.hm-sk b{font-family:var(--display);font-size:15px}
+@media (max-width:760px){ .skill-grid{grid-template-columns:1fr} .hm-row{grid-template-columns:repeat(3,minmax(0,1fr))} }
 /* Início */
-.home{display:grid;gap:16px}
+.home{display:grid;grid-template-columns:minmax(0,1fr);gap:16px}
 .home .eyebrow{display:flex;align-items:center;gap:6px;margin:0 0 6px;font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--gold)}
 .home .eyebrow svg{width:16px;height:16px}
 .home-next{background:linear-gradient(135deg,color-mix(in srgb,var(--lang) 30%,var(--surface)),var(--surface-2));border-color:color-mix(in srgb,var(--lang) 45%,var(--line))}
@@ -139,7 +164,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 @media (max-width:760px){
   .home-tools{grid-template-columns:repeat(2,minmax(0,1fr))}
   .home-story .home-stage{aspect-ratio:16/10}
-  .home-acts .btn{width:100%}
+  .home-acts .btn{width:100%;white-space:normal}
 }
 .pop .hard-btn{margin-top:8px;width:100%;white-space:normal}.pop .hard-btn svg{color:var(--heart)}
 .pop .hard-note{margin:6px 0 0;font-size:13px;color:var(--muted);font-weight:700}
@@ -965,6 +990,7 @@ const P = {
   left: '<path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M15 5l-7 7 7 7"/>',
   right: '<path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>',
   map: '<path fill="currentColor" opacity=".55" d="M3 6.2l5.5-2.2v14.8L3 21z"/><path fill="currentColor" d="M8.5 4l7 2.4v14.8l-7-2.4z"/><path fill="currentColor" opacity=".55" d="M15.5 6.4L21 4.2V19l-5.5 2.2z"/>',
+  stats: '<rect x="4" y="12" width="4" height="8" rx="1.2" fill="currentColor" opacity=".55"/><rect x="10" y="7" width="4" height="13" rx="1.2" fill="currentColor"/><rect x="16" y="3.5" width="4" height="16.5" rx="1.2" fill="currentColor" opacity=".8"/>',
   slow: '<path fill="currentColor" d="M4 15.5c0-3.6 3-6.5 6.6-6.5 3.2 0 5.8 2.2 6.4 5.2h1.4a1.6 1.6 0 1 1 0 3.3H5.6A1.6 1.6 0 0 1 4 15.5z"/><circle cx="18.5" cy="9" r="2.3" fill="currentColor"/>',
 };
 const I = (n, cls = "i") => `<svg class="${cls}" viewBox="0 0 24 24" aria-hidden="true">${P[n]}</svg>`;
@@ -1501,7 +1527,7 @@ function renderChrome() {
     <button class="stat xp" data-act="go" data-v="profile" title="Nível ${lv.L}">${I("bolt")}${lv.L}${boosted() ? '<span class="boost-tag">2x</span>' : ""}</button>`;
   const due = dueWords(S.lang).length;
   // study tools first, then the story and the rest
-  const navs = [["home", "home", "Início", "Início"], ["learn", "map", "Lições", "Lições"], ["abc", "abc", "Alfabeto", "ABC"], ["train", "target", "Treino", "Treino"], ["speak", "mic", "Pronúncia", "Fala"], ["talk", "chat", "Conversas", "Papo"], ["story", "book", "História", "História"], ["notes", "pen", "Caderno", "Caderno"], ["ach", "trophy", "Conquistas", "Troféus"], ["shop", "bag", "Loja", "Loja"], ["friends", "users", "Amigos", "Amigos"], ["profile", "user", "Perfil", "Perfil"]];
+  const navs = [["home", "home", "Início", "Início"], ["learn", "map", "Lições", "Lições"], ["abc", "abc", "Alfabeto", "ABC"], ["train", "target", "Treino", "Treino"], ["speak", "mic", "Pronúncia", "Fala"], ["talk", "chat", "Conversas", "Papo"], ["mastery", "stats", "Domínio", "Domínio"], ["story", "book", "História", "História"], ["notes", "pen", "Caderno", "Caderno"], ["ach", "trophy", "Conquistas", "Troféus"], ["shop", "bag", "Loja", "Loja"], ["friends", "users", "Amigos", "Amigos"], ["profile", "user", "Perfil", "Perfil"]];
   const dotOf = v => (v === "train" && due >= 4 ? '<i class="dot" title="Palavras para revisar"></i>' : "") + (v === "friends" && unreadTotal() ? '<i class="dot" title="Mensagens novas"></i>' : "");
   const inMore = !NAV_MAIN.includes(S.view);
   $("#nav").innerHTML = navs.map(([v, ic, label, short]) =>
@@ -1564,6 +1590,96 @@ function viewLearn() {
   if (!cur) html += `<div class="card course-done">${I("trophy", "i tower-big")}<h2>Curso completo!</h2><p class="muted">Você terminou todas as unidades de ${esc(L.name)}. Continue no Treino para não esquecer, ou comece outro idioma.</p></div>`;
   return html;
 }
+// ---------- Domínio ----------
+// What is going well and what needs work, per skill of the current language. Only real answers count
+// (S.skill, plus the review strength of each word, the best speaking scores and finished conversations).
+// With fewer than SKILL_MIN answers a skill says "pouco histórico" instead of a number. The number shown
+// is the share of right answers among the last ones (up to 30), never a guessed level.
+const SKILL_MIN = 10;
+const SKILL_INFO = {
+  vocab: { ic: "book", name: "Vocabulário", what: "Escolher e escrever palavras, ligar pares." },
+  grammar: { ic: "pen", name: "Gramática", what: "Montar frases na ordem certa." },
+  listen: { ic: "speaker", name: "Compreensão auditiva", what: "Ouvir e escolher, ditado, sons parecidos e achar o que pedem na história." },
+  read: { ic: "abc", name: "Leitura", what: "Traduzir frases para o português e responder tocando na história." },
+  speak: { ic: "mic", name: "Pronúncia", what: "Exercícios de falar em voz alta." },
+  talk: { ic: "chat", name: "Conversação", what: "Conversas guiadas e respostas faladas na história (vale o acerto de primeira)." },
+};
+function skillStat(lang, kind) {
+  const r = ((S.skill || {})[lang] || {})[kind] || { n: 0, ok: 0, h: "" };
+  const recent = r.h.length, rightRecent = [...r.h].filter(c => c === "1").length;
+  const enough = r.n >= SKILL_MIN && recent >= SKILL_MIN;
+  return { n: r.n, ok: r.ok, recent, pct: enough ? Math.round(rightRecent / recent * 100) : null };
+}
+const skillWord = pct => pct >= 85 ? "Firme" : pct >= 65 ? "Em progresso" : "Precisa de reforço";
+// extra facts the app already knew before the skill record existed
+function skillFacts(lang, kind) {
+  if (kind === "vocab") {
+    const all = allWords(lang).length, seen = seenWords(lang), strong = seen.filter(w => srs(lang, w).s >= 4).length, due = dueWords(lang).length;
+    return [`${learnedCount(lang)} de ${all} palavras do curso aprendidas`, `${strong} bem fixadas na memória`, due ? `${due} para revisar agora` : "nenhuma para revisar agora"];
+  }
+  if (kind === "speak") {
+    const sc = Object.entries(S.speech || {}).filter(([k]) => k.startsWith(lang + ":")).map(([, v]) => v);
+    return sc.length ? [`melhor nota média: ${Math.round(sc.reduce((a, b) => a + b, 0) / sc.length)}% em ${sc.length} ${sc.length === 1 ? "palavra ou frase" : "palavras e frases"}`] : ["nenhuma fala avaliada ainda"];
+  }
+  if (kind === "talk") {
+    const t = talksOf(lang), done = t.filter(x => talkRec(lang, x.id));
+    return t.length ? [`${done.length} de ${t.length} conversas feitas`] : ["conversas deste idioma em breve"];
+  }
+  if (kind === "read" && STORY[lang]) {
+    const st = STORY[lang]; return [`${st.chapters.filter(c => (S.story || {})[c.id]).length} de ${st.chapters.length} capítulos da história lidos`];
+  }
+  return [];
+}
+// what to do to train each skill: the act and its label
+function skillAction(lang, kind) {
+  const canReview = seenWords(lang).length >= 4, cur = currentOf(lang);
+  const lesson = cur ? `<button class="btn small" data-act="start" data-u="${cur.u}" data-l="${cur.l}">${I("book")}Próxima lição</button>` : "";
+  const review = canReview ? `<button class="btn small" data-act="review">${I("target")}Treinar</button>` : lesson;
+  return {
+    vocab: review, grammar: review || lesson,
+    listen: `<button class="btn small" data-act="go" data-v="speak">${I("speaker")}Treinar o ouvido</button>`,
+    read: STORY[lang] ? `<button class="btn small" data-act="go" data-v="story">${I("book")}Ler na história</button>` : review,
+    speak: `<button class="btn small" data-act="go" data-v="speak">${I("mic")}Treinar pronúncia</button>`,
+    talk: talksOf(lang).length ? `<button class="btn small" data-act="go" data-v="talk">${I("chat")}Conversar</button>` : review,
+  }[kind] || lesson;
+}
+// the skill to work on: the lowest recent accuracy among skills with enough answers
+function weakestSkill(lang) {
+  const rated = SKILLS.map(k => [k, skillStat(lang, k).pct]).filter(([, p]) => p != null).sort((a, b) => a[1] - b[1]);
+  return rated.length ? rated[0][0] : null;
+}
+function viewMastery() {
+  const lang = S.lang, L = LANGS[lang], weak = weakestSkill(lang), cur = currentOf(lang);
+  const weakW = seenWords(lang).slice().sort((a, b) => srs(lang, a).s - srs(lang, b).s || srs(lang, a).due - srs(lang, b).due).slice(0, 6);
+  const tip = weak ? `<div class="card mastery-tip"><p class="eyebrow">${I("target")}Sugestão</p><h3>Reforce ${SKILL_INFO[weak].name.toLowerCase()}</h3>
+      <p class="muted">É a habilidade com menos acertos nas suas últimas respostas de ${esc(L.learning)} (${skillStat(lang, weak).pct}%).</p><div class="home-acts">${skillAction(lang, weak)}</div></div>`
+    : `<div class="card mastery-tip"><p class="eyebrow">${I("target")}Sugestão</p><h3>Continue estudando para o painel ganhar dados</h3>
+      <p class="muted">Cada habilidade mostra seus acertos depois de ${SKILL_MIN} respostas. Até lá, aparece "pouco histórico". Nada aqui é estimado.</p>
+      <div class="home-acts">${cur ? `<button class="btn small" data-act="start" data-u="${cur.u}" data-l="${cur.l}">${I("book")}Próxima lição</button>` : ""}${seenWords(lang).length >= 4 ? `<button class="btn small ghost" data-act="review">${I("target")}Treinar</button>` : ""}</div></div>`;
+  const cards = SKILLS.map(k => {
+    const i = SKILL_INFO[k], st = skillStat(lang, k), facts = skillFacts(lang, k);
+    const head = st.pct != null
+      ? `<div class="sk-num"><b>${st.pct}%</b><span>${skillWord(st.pct)}</span></div>`
+      : `<div class="sk-num few"><b>—</b><span>Pouco histórico</span></div>`;
+    return `<div class="card skill-card ${k === weak ? "weak" : ""}"><div class="sk-head"><span class="sk-ic">${I(i.ic)}</span><h3 class="grow">${i.name}</h3>${head}</div><small class="sk-what muted">${i.what}</small>
+      ${st.pct != null ? `<div class="bar"><i style="width:${st.pct}%"></i></div>` : ""}
+      <p class="sk-src">${st.pct != null ? `Acertos nas últimas ${st.recent} respostas · ${st.n} no total` : st.n ? `${st.n} ${st.n === 1 ? "resposta" : "respostas"} até agora; o número aparece a partir de ${SKILL_MIN}` : "Nenhuma resposta registrada ainda"}</p>
+      ${facts.length ? `<ul class="sk-facts">${facts.map(f => `<li>${esc(f)}</li>`).join("")}</ul>` : ""}
+      <div class="sk-act">${skillAction(lang, k)}</div></div>`;
+  }).join("");
+  const words = weakW.length ? `<div class="card"><h3>Palavras para reforçar</h3><p class="muted" style="margin:-4px 0 8px;font-weight:700;font-size:14px">As mais fracas na sua revisão. O Treino cobra primeiro as que venceram o prazo e depois as mais fracas.</p><div class="wlist">
+      ${weakW.map(w => { const sv = srs(lang, w).s; return `<div class="wrow"><button class="say" data-act="say" data-t="${esc(w[0])}" aria-label="Ouvir">${I("speaker")}</button><div class="w">${esc(first(w[0]))}<small>${esc(w[1].replace(/\//g, ", "))}</small></div>
+        <div class="str" title="Força ${sv} de 5">${[1, 2, 3, 4, 5].map(n => `<i class="${n <= sv ? "on" : ""}"></i>`).join("")}</div></div>`; }).join("")}</div>
+      ${seenWords(lang).length >= 4 ? `<div class="sk-act" style="margin-top:12px"><button class="btn small" data-act="review">${I("target")}Treinar agora</button></div>` : ""}</div>` : "";
+  return `<div class="page-head"><h1>Domínio</h1><p>Como está o seu ${esc(L.learning)} em cada habilidade, contado só com as suas respostas.</p></div>
+    <div class="stack">${tip}<div class="skill-grid">${cards}</div>${words}</div>`;
+}
+// the small summary on Início
+function homeMasteryHtml(lang) {
+  return `<button class="card home-mastery" data-act="go" data-v="mastery"><span class="hm-title">${I("stats")}<b>Seu domínio</b><small class="muted">ver tudo</small></span>
+    <span class="hm-row">${SKILLS.map(k => { const st = skillStat(lang, k); return `<span class="hm-sk" title="${SKILL_INFO[k].name}">${I(SKILL_INFO[k].ic)}<small>${SKILL_INFO[k].name.split(" ")[0]}</small><b>${st.pct != null ? st.pct + "%" : "—"}</b></span>`; }).join("")}</span></button>`;
+}
+
 // ---------- Início ----------
 // The study hub. The main action is always studying: the next lesson, or the review when many words are
 // waiting. The story of the language comes beside it, as the place where those words are used, and every
@@ -1635,7 +1751,7 @@ function homeToolsHtml(lang) {
 function viewHome() {
   const lang = S.lang, L = LANGS[lang];
   return `<div class="page-head"><h1>Início</h1><p>Seu ${esc(L.learning)} de hoje: estude, revise e use o que aprendeu na história.</p></div>
-    <div class="home">${homeNextHtml(lang)}${homeToolsHtml(lang)}${homeStoryHtml(lang)}
+    <div class="home">${homeNextHtml(lang)}${homeToolsHtml(lang)}${homeMasteryHtml(lang)}${homeStoryHtml(lang)}
       <div class="only-narrow card">${goalHtml()}</div><div class="only-narrow card"><h3>Missões do dia</h3>${questsHtml()}</div></div>`;
 }
 function popHtml(u, l, ls, state) {
@@ -2258,7 +2374,7 @@ function render() {
   if (!S.onboarded || PL) { renderOnboarding(); return; }
   $("#app").querySelector(".top").hidden = false; $("#shell").hidden = false; $("#onb").hidden = true;
   regen(); renderChrome();
-  const v = { home: viewHome, learn: viewLearn, abc: viewAbc, story: viewStory, talk: viewTalk, notes: viewNotes, speak: viewSpeak, train: viewTrain, ach: viewAch, shop: viewShop, friends: viewFriends, profile: viewProfile }[S.view] || viewLearn;
+  const v = { home: viewHome, mastery: viewMastery, learn: viewLearn, abc: viewAbc, story: viewStory, talk: viewTalk, notes: viewNotes, speak: viewSpeak, train: viewTrain, ach: viewAch, shop: viewShop, friends: viewFriends, profile: viewProfile }[S.view] || viewLearn;
   $("#view").innerHTML = v();
 }
 
