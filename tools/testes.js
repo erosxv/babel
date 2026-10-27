@@ -107,6 +107,20 @@ for (const [base, other, name] of [[A, B, "A+B"], [B, A, "B+A"]]) {
     for (const k in S.srs) ok(m.srs[k] && m.srs[k].s >= S.srs[k].s, `${name}: palavra ${k} perdeu nível na revisão`);
   }
 }
+// acertos por habilidade: em cada idioma e habilidade fica o registro com mais respostas, e um save antigo
+// (sem registro) nunca apaga o de outro aparelho
+const withSkill = Object.assign({}, A, { skill: { en: { vocab: { n: 40, ok: 30, h: "1101" }, listen: { n: 3, ok: 1, h: "100" } }, ru: { speak: { n: 9, ok: 8, h: "111111110" } } } });
+const otherSkill = Object.assign({}, B, { skill: { en: { vocab: { n: 12, ok: 12, h: "111111111111" }, listen: { n: 20, ok: 15, h: "1" } } } });
+for (const [base, other, name] of [[withSkill, otherSkill, "A+B"], [otherSkill, withSkill, "B+A"]]) {
+  const m = ctx.mergeSaves(base, other);
+  ok(m.skill.en.vocab.n === 40 && m.skill.en.listen.n === 20 && m.skill.ru.speak.n === 9, `${name}: habilidades deviam ficar com o maior registro (${JSON.stringify(m.skill)})`);
+}
+for (const [base, other, name] of [[A, withSkill, "antigo+novo"], [withSkill, A, "novo+antigo"]]) {
+  const m = ctx.mergeSaves(base, other);
+  ok(m.skill.en && m.skill.en.vocab.n === 40, `${name}: o save sem habilidades apagou o registro`);
+}
+ok(JSON.stringify(ctx.loadFrom(store(a)).skill) === "{}", "save antigo: o registro de habilidades devia começar vazio, sem inventar dados");
+
 const empty = ctx.loadFrom({ getItem: () => null });
 ok(empty.coins === 50 && empty.hearts === 5 && !empty.onboarded, "sem save: devia começar do zero com 50 moedas e 5 vidas");
 const broken = ctx.loadFrom({ getItem: () => "{isto não é json" });

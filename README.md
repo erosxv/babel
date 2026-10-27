@@ -10,6 +10,7 @@ Aprenda idiomas jogando e falando em voz alta. É um jogo no navegador, sem inst
 - **Exercícios variados:** palavra nova, escolher a tradução, ouvir e escolher, formar pares, montar frases com peças, escrever a resposta, falar em voz alta e treino de ouvido.
 - **XP e níveis:** cada acerto vale XP, com bônus de combo para acertos seguidos. Os níveis vão de Turista a Mestre do Xibolete.
 - **Vidas:** só valem no **Desafio**, um modo opcional para refazer uma lição já concluída: cada erro custa 1 vida, e terminar dá +10 moedas e +20 XP. Nas lições normais, no treino, na fala e na história, errar não custa nada: você vê a explicação e a pergunta volta mais tarde. Uma vida volta a cada 30 minutos, e um treino completo devolve 1.
+- **Acertos por habilidade:** cada resposta conta para uma habilidade do idioma em que foi dada: vocabulário, gramática (montar frases), compreensão auditiva (ouvir, ditado, sons parecidos), leitura (traduzir frases e responder tocando na história), pronúncia e conversação (conversas e respostas faladas na história). Fica em `S.skill[idioma]`, com o total, os acertos e as últimas 30 respostas. Começa vazio: nada é estimado de antes.
 - **Testes:** `node tools/testes.js` confere o conteúdo, as histórias e se saves antigos (em `tools/saves-exemplo/`) abrem sem perder nada. Rode antes de publicar.
 - **Sequência de dias, meta diária e missões do dia.** Uma das missões é sempre de fala.
 - **Moedas e loja:** recarga de vidas, protetor de sequência e XP em dobro.

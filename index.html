@@ -944,7 +944,7 @@ const KEY = "babel-save-v1"; // name from before the app was renamed; kept so sa
 const fresh = () => ({
   v: 1, onboarded: false, lang: "en", view: "learn", xp: 0, coins: 50, hearts: 5, heartsAt: Date.now(),
   streak: 0, bestStreak: 0, lastDay: null, freezes: 0, goal: 30, day: {}, boostUntil: 0,
-  sound: true, translit: true, progress: {}, chests: {}, srs: {}, ach: {}, quests: {}, speech: {}, talks: {}, voicePick: {}, story: {}, bag: [], noMicUntil: 0, plan: {}, coop: {}, abc: {}, placed: {},
+  sound: true, translit: true, progress: {}, chests: {}, srs: {}, ach: {}, quests: {}, speech: {}, talks: {}, voicePick: {}, story: {}, bag: [], noMicUntil: 0, plan: {}, coop: {}, abc: {}, placed: {}, skill: {},
   stats: { lessons: 0, perfect: 0, maxCombo: 0, reviews: 0, langs: {}, correct: 0, answered: 0, owl: false, early: false, chests: 0, spoken: 0, spokenGreat: 0, speechTests: 0, talks: 0, story: 0 },
 });
 let S = fresh();
@@ -1073,6 +1073,22 @@ const seenWords = lang => allWords(lang).filter(w => srs(lang, w).seen);
 const learnedCount = lang => allWords(lang).filter(w => srs(lang, w).s >= 1).length;
 const totalLearned = () => LKEYS.reduce((n, k) => n + learnedCount(k), 0);
 const dueWords = lang => seenWords(lang).filter(w => srs(lang, w).due <= Date.now()).sort((a, b) => srs(lang, a).s - srs(lang, b).s);
+
+// ---------- skills ----------
+// Every real answer counts for one skill of the language it was given in, so the learner can see what is
+// going well and what needs review. Kept per language in S.skill[lang][kind] = { n, ok, h }:
+// n answers, ok right ones, h the last 30 as "1"/"0" (recent accuracy). It starts empty: nothing is guessed
+// from before this existed.
+const SKILLS = ["vocab", "grammar", "listen", "read", "speak", "talk"];
+// which skill each lesson exercise trains
+// (build: Portuguese sentence → put the words of the language in order; buildRev: read a sentence of the language → Portuguese)
+const SKILL_OF = { choose: "vocab", chooseRev: "vocab", type: "vocab", pairs: "vocab", buildRev: "read", build: "grammar", listen: "listen", dictation: "listen", minimal: "listen", speak: "speak" };
+function skillHit(lang, kind, ok) {
+  if (!SKILLS.includes(kind) || !lang) return;
+  const r = ((S.skill ||= {})[lang] ||= {})[kind] ||= { n: 0, ok: 0, h: "" };
+  r.n++; if (ok) r.ok++;
+  r.h = (r.h + (ok ? "1" : "0")).slice(-30);
+}
 
 // ---------- xp, levels, hearts, streak ----------
 function lvl(xp) { let L = 1, acc = 0, need = 100; while (xp >= acc + need) { acc += need; L++; need = 100 + 40 * (L - 1); } return { L, into: xp - acc, need }; }
@@ -1770,6 +1786,7 @@ function mergeSaves(base, other) {
   m.abc = maxBy(base.abc, other.abc, (x, y) => maxBy(x, y, num));
   m.speech = Object.assign({}, other.speech, base.speech);
   m.talks = Object.assign({}, other.talks, base.talks);
+  m.skill = maxBy(base.skill, other.skill, (x, y) => maxBy(x, y, (a, b) => ((b && b.n) || 0) > ((a && a.n) || 0) ? b : a));
   for (const k in other.stats || {}) if (typeof other.stats[k] === "number") m.stats[k] = num(m.stats[k], other.stats[k]);
   m.stats.langs = maxBy(m.stats.langs, (other.stats || {}).langs, num);
   m.savedAt = Math.max(base.savedAt || 0, other.savedAt || 0);
@@ -2551,6 +2568,7 @@ function check(skip) {
     }
   }
   LS.answered++; S.stats.answered++;
+  skillHit(lang, SKILL_OF[it.k], ok);
   if (ok) {
     LS.combo++; LS.maxCombo = Math.max(LS.maxCombo, LS.combo); LS.correct++; S.stats.correct++; LS.graded++;
     const gain = 10 + (LS.combo >= 3 ? Math.min(10, (LS.combo - 2) * 2) : 0);
@@ -2576,6 +2594,7 @@ function resolveSpeak(ok, score) {
   const it = curItem(), lang = LS.lang;
   stopListening(); it.listening = false;
   LS.answered++; S.stats.answered++; LS.graded++;
+  skillHit(lang, "speak", ok);
   if (it.best != null) LS.spk.push(it.best);
   if (ok) {
     LS.combo++; LS.maxCombo = Math.max(LS.maxCombo, LS.combo); LS.correct++; S.stats.correct++;
@@ -2637,6 +2656,7 @@ function pairTap(side, i) {
       it.matched.add(a[0]); srsHit(LS.lang, a, true); it.pickL = it.pickR = null;
       if (it.matched.size === it.left.length) {
         LS.combo++; LS.maxCombo = Math.max(LS.maxCombo, LS.combo); LS.graded++; LS.correct++; LS.answered++; S.stats.correct++; S.stats.answered++;
+        skillHit(LS.lang, "vocab", !it.missed);
         const gain = it.missed ? 10 : 15; LS.xp += gain;
         LS.state = "ok"; LS.fb = { title: it.missed ? "Pares completos!" : "Todos de primeira!", gain, note: "" };
         sfx("ok"); save();
@@ -2860,6 +2880,7 @@ function talkGive() {
   save(); renderTalk();
 }
 function talkNext() {
+  if (TK.fb) { skillHit(TK.lang, "talk", TK.fb.ok && !TK.tries && TK.wrong == null); save(); }
   TK.i++; TK.tries = 0; TK.hint = false; TK.opts = null; TK.chosen = null; TK.miss = null; TK.err = ""; TK.fb = null; TK.wrong = null;
   if (TK.i >= TK.talk.steps.length) { finishTalk(); return; }
   TK.log.push({ who: "npc", step: TK.i });
@@ -3061,6 +3082,7 @@ function syScore(score) { SY.scores.push(score); countSpoken(score); if (score >
 function syChoose(o, score, res, quiet) {
   const n = syNode(); if (!n.choice || SY.pick) return;
   SY.pick = o; SY.pickScore = score ?? null; SY.pickRes = res || null; SY.back = null;
+  skillHit(SY.l, score != null ? "talk" : "read", !!o.ok);
   if (o.ok) {
     SY.xp += score != null ? 15 : 10; sfx("ok");
     if (score != null) syScore(score);
@@ -3547,7 +3569,7 @@ const A = {
   },
   syFind: d => {
     const n = syNode(), o = n.objs[+d.i];
-    if (o.w === n.find) { SY.found = true; SY.xp += 5; sfx("ok"); renderStory(); return; }
+    if (o.w === n.find) { SY.found = true; SY.xp += 5; skillHit(SY.l, "listen", SY.miss == null); sfx("ok"); save(); renderStory(); return; }
     SY.miss = +d.i; if (S.sound) tone(300, 0, .15, "triangle", .07); renderStory(); speak(n.line, SY.l);
   },
   syCoin: d => { const k = +d.i; SY.hand = k < SY.hand ? k : k + 1; SY.payFb = null; if (S.sound) tone(880, 0, .06, "sine", .06); renderStory(); },
