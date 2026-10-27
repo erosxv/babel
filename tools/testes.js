@@ -145,6 +145,21 @@ vm.runInContext([cut("const pad = ", ";"), cut("const dkey = ", ";"), cut("const
   ok(m.week["2026-10-19"].d2 && m.week["2026-10-19"].d4 && m.week["2026-10-26"].d2, `juntar aparelhos perdeu marcos já pagos (${JSON.stringify(m.week)})`);
   ok(JSON.stringify(ctx.loadFrom(store(a)).week) === "{}", "save antigo: a semana devia começar vazia");
 }
+// Mercado do Viajante: pulseiras e títulos de jornada.js fazem sentido, cada título tem regra no app,
+// pulseiras compradas em um aparelho nunca somem ao juntar, e um save antigo começa sem nada comprado
+{
+  ok(J.pulseiras.filter(b => !b.preco).length === 1, "jornada.js: devia haver exatamente uma pulseira grátis (preço 0)");
+  ok(new Set(J.pulseiras.map(b => b.id)).size === J.pulseiras.length, "jornada.js: ids de pulseiras repetidos");
+  for (const b of J.pulseiras) ok(b.id && b.nome && /^#[0-9a-f]{6}$/i.test(b.cor) && b.preco >= 0, `jornada.js: pulseira incompleta ${JSON.stringify(b)}`);
+  ok(J.estante >= 1, "jornada.js: a estante precisa de pelo menos 1 lugar");
+  const rules = cut("const TITLE_RULES = {", "\n};");
+  ok(new Set(J.titulos.map(t => t.id)).size === J.titulos.length, "jornada.js: ids de títulos repetidos");
+  for (const t of J.titulos) ok(t.nome && t.texto && rules.includes(`\n  ${t.id}: `), `título "${t.id}": falta nome, texto ou a regra em TITLE_RULES (index.html)`);
+  const m = ctx.mergeSaves(Object.assign({}, A, { bracelets: { jade: true }, bracelet: "jade" }), Object.assign({}, B, { bracelets: { rubi: true }, bracelet: "rubi", shelf: ["a1c1"], titleSel: "leitor" }));
+  ok(m.bracelets.jade && m.bracelets.rubi && m.bracelet === "jade" && m.shelf[0] === "a1c1" && m.titleSel === "leitor", `juntar aparelhos perdeu pulseiras ou escolhas (${JSON.stringify([m.bracelets, m.bracelet, m.shelf, m.titleSel])})`);
+  const old = ctx.loadFrom(store(a));
+  ok(JSON.stringify(old.bracelets) === "{}" && old.bracelet === "" && old.shelf.length === 0 && old.titleSel === "", "save antigo: devia começar sem pulseiras compradas nem escolhas");
+}
 
 const empty = ctx.loadFrom({ getItem: () => null });
 ok(empty.coins === 50 && empty.hearts === 5 && !empty.onboarded, "sem save: devia começar do zero com 50 moedas e 5 vidas");

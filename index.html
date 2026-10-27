@@ -113,6 +113,29 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .card{background:var(--surface);border:2px solid var(--line);border-radius:18px;padding:18px}
 .card h3{font-size:19px;margin-bottom:10px}
 .only-narrow{display:none}
+/* Mercado do Viajante */
+.mk-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.mk-tabs .chip{display:inline-flex;align-items:center;gap:6px}.mk-tabs .chip svg{width:16px;height:16px}
+.mk-note{font-weight:700;margin:0 0 12px}
+.mk-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.mk-br{display:grid;justify-items:center;gap:8px;padding:14px 8px;border-radius:14px;background:var(--surface-2);border:2px solid transparent;text-align:center}
+.mk-br.on{border-color:var(--lang)}
+.bracelet.mk-prev{position:static;background:#241a33}
+.mk-h{display:flex;align-items:center;gap:8px;margin:14px 0 8px;font-size:16px}
+.mk-sv{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+.sv{display:grid;justify-items:center;gap:2px;padding:10px 4px;border-radius:12px;background:var(--surface-2);border:2px solid transparent;font:inherit;color:var(--ink);cursor:pointer;min-width:0;text-align:center}
+.sv i{font-style:normal;font-size:28px;line-height:1.2}.sv i svg{width:22px;height:22px;color:var(--locked-ink)}
+.sv b{font-size:13px;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.sv small{font-size:12px;font-weight:700;color:var(--muted);max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.sv em{font-style:normal;font-size:11px;font-weight:800;color:var(--muted)}
+.sv.on{border-color:var(--lang)}.sv.on em{color:var(--lang)}
+.sv.locked{cursor:default;opacity:.6}
+.shelf{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px;align-items:flex-end}
+.sv-mini{display:grid;justify-items:center;gap:2px;width:72px;padding:6px 2px 4px;border:0;background:none;font:inherit;color:var(--ink);cursor:pointer}
+.sv-mini i{font-style:normal;font-size:34px;line-height:1.1;filter:drop-shadow(0 3px 0 rgba(0,0,0,.25))}
+.sv-mini small{font-size:11px;font-weight:800;color:var(--muted);max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.shelf-board{height:10px;margin-top:2px;border-radius:4px;background:linear-gradient(180deg,#8a5a3a,#5c3a24);box-shadow:0 4px 0 rgba(0,0,0,.25)}
+@media (max-width:760px){ .mk-grid{grid-template-columns:repeat(2,minmax(0,1fr))} .mk-sv{grid-template-columns:repeat(3,minmax(0,1fr))} }
 /* Semana da jornada */
 .week-card{display:grid;gap:10px;width:100%;text-align:left;font:inherit;color:var(--ink);background:none;border:0;padding:0;cursor:pointer}
 .wk-top{display:flex;align-items:baseline;gap:8px}.wk-top small{margin-left:auto;font-weight:800}
@@ -624,10 +647,10 @@ img.pix.mini.face{width:26px;height:26px;object-fit:cover;object-position:50% 22
 .actor{display:grid;justify-items:center;gap:0;animation:slidein .35s both}
 .actor span{width:92px;height:92px;border-radius:50%;background:var(--ac);color:#fff;display:grid;place-items:center;font-family:var(--display);font-size:44px;box-shadow:0 6px 0 rgba(0,0,0,.25),inset 0 -6px 0 rgba(0,0,0,.15);border:4px solid rgba(255,255,255,.85)}
 .actor small{position:absolute;bottom:8px;left:50%;transform:translateX(-50%);background:#fff;color:#2b2b2b;font-weight:800;border-radius:8px;padding:2px 8px;font-size:12px;white-space:nowrap}
-.bracelet{position:absolute;right:10px;top:10px;display:flex;align-items:center;gap:4px;background:rgba(0,0,0,.45);color:#ffe08a;border-radius:12px;padding:4px 10px;font-family:var(--display)}
+.bracelet{position:absolute;right:10px;top:10px;display:flex;align-items:center;gap:4px;background:rgba(0,0,0,.45);color:var(--br,#ffe08a);border-radius:12px;padding:4px 10px;font-family:var(--display)}
 .bracelet svg{width:22px;height:22px}
 .bracelet.glow{animation:glow 1.2s ease-out}
-@keyframes glow{0%{box-shadow:0 0 0 0 rgba(255,224,138,.9);transform:scale(1.25)}100%{box-shadow:0 0 0 22px rgba(255,224,138,0);transform:none}}
+@keyframes glow{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--br,#ffe08a) 90%,transparent);transform:scale(1.25)}100%{box-shadow:0 0 0 22px color-mix(in srgb,var(--br,#ffe08a) 0%,transparent);transform:none}}
 .vn-box{display:grid;gap:12px}
 .vn-nar{margin:0;font-size:18px;font-weight:700;line-height:1.5;font-style:italic;color:var(--ink);background:var(--surface);border:2px solid var(--line);border-radius:16px;padding:14px 16px}
 .vn-line{background:var(--surface);border:2px solid var(--line);border-left:6px solid var(--ac);border-radius:16px;padding:10px 14px}
@@ -1027,7 +1050,7 @@ const KEY = "babel-save-v1"; // name from before the app was renamed; kept so sa
 const fresh = () => ({
   v: 1, onboarded: false, lang: "en", view: "home", xp: 0, coins: 50, hearts: 5, heartsAt: Date.now(),
   streak: 0, bestStreak: 0, lastDay: null, freezes: 0, goal: 30, day: {}, boostUntil: 0,
-  sound: true, translit: true, progress: {}, chests: {}, srs: {}, ach: {}, quests: {}, speech: {}, talks: {}, voicePick: {}, story: {}, bag: [], noMicUntil: 0, plan: {}, coop: {}, abc: {}, placed: {}, skill: {}, week: {},
+  sound: true, translit: true, progress: {}, chests: {}, srs: {}, ach: {}, quests: {}, speech: {}, talks: {}, voicePick: {}, story: {}, bag: [], noMicUntil: 0, plan: {}, coop: {}, abc: {}, placed: {}, skill: {}, week: {}, bracelets: {}, bracelet: "", shelf: [], titleSel: "",
   stats: { lessons: 0, perfect: 0, maxCombo: 0, reviews: 0, langs: {}, correct: 0, answered: 0, owl: false, early: false, chests: 0, spoken: 0, spokenGreat: 0, speechTests: 0, talks: 0, story: 0 },
 });
 let S = fresh();
@@ -1340,6 +1363,43 @@ const SHOP = [
   { id: "boost", name: "XP em dobro", desc: "Todo XP vale o dobro pelos próximos 15 minutos.", price: 100, icon: "bolt", color: "var(--xp)", can: () => !boosted(), why: "Já está ativo", buy: () => { S.boostUntil = Date.now() + 15 * 60e3; } },
 ];
 
+// ---------- Mercado do Viajante ----------
+// Supplies (SHOP above) are bought with coins. Bracelet colours are bought too and change the bracelet that
+// glows in the story. Souvenirs are free: each finished story chapter gives one, and the learner picks which
+// go on the profile shelf. Titles are earned by studying (TITLE_RULES), never bought. Names, prices and the
+// shelf size live in jornada.js.
+const BRACELETS = JOR.pulseiras && JOR.pulseiras.length ? JOR.pulseiras : [{ id: "ouro", nome: "Ouro", cor: "#ffe08a", preco: 0 }];
+const SHELF_MAX = JOR.estante || 6;
+const ownsBracelet = id => { const b = BRACELETS.find(x => x.id === id); return !!b && (!b.preco || !!(S.bracelets || {})[id]); };
+const braceletNow = () => BRACELETS.find(b => b.id === S.bracelet && ownsBracelet(b.id)) || BRACELETS.find(b => !b.preco) || BRACELETS[0];
+// the souvenir of a chapter: the last thing the learner got in it, or a postcard of the place
+function souvenirOf(lang, ch) {
+  const st = STORY[lang], got = [];
+  for (const n of ch.nodes) { if (n.give) got.push(n.give); for (const o of n.choice || []) if (o.give) got.push(o.give); for (const o of n.explore || []) if (o.take) got.push(o.take); }
+  const it = got.length && st.items[got[got.length - 1]];
+  return it ? { id: ch.id, lang, n: ch.n, ic: it.ic, w: it.w, pt: it.pt, ex: it.ex, exPt: it.exPt, ch: ch.tPt }
+    : { id: ch.id, lang, n: ch.n, ic: "🖼️", w: ch.t, pt: ch.tPt, post: true, ch: ch.tPt };
+}
+const souvenirsOf = lang => STORY[lang] ? STORY[lang].chapters.map(c => Object.assign(souvenirOf(lang, c), { have: !!(S.story || {})[c.id] })) : [];
+const allSouvenirs = () => Object.keys(STORY).flatMap(souvenirsOf).filter(x => x.have);
+// what is on the shelf: the chosen ones still earned, or the latest earned when nothing was chosen
+function shelfNow() {
+  const have = allSouvenirs(), chosen = (S.shelf || []).map(id => have.find(x => x.id === id)).filter(Boolean);
+  return (S.shelf || []).length ? chosen.slice(0, SHELF_MAX) : have.slice(-SHELF_MAX);
+}
+const TITLE_RULES = {
+  unidade1: () => LKEYS.some(k => unitDone(k, 0)),
+  memoria: () => Object.values(S.srs || {}).filter(r => r.s >= 4).length >= 50,
+  ouvido: () => LKEYS.some(k => { const r = skillStat(k, "listen"); return r.n >= 30 && r.pct >= 85; }),
+  voz: () => LKEYS.some(k => { const r = skillStat(k, "speak"); return r.n >= 30 && r.pct >= 85; }),
+  conversa: () => LKEYS.reduce((a, k) => a + talksOf(k).filter(t => talkRec(k, t.id)).length, 0) >= 5,
+  leitor: () => Object.keys(STORY).reduce((a, k) => a + STORY[k].chapters.filter(c => (S.story || {})[c.id]).length, 0) >= 5,
+  semana: () => Object.values(S.week || {}).some(w => w.d6),
+  dois: () => LKEYS.filter(k => Object.keys((S.progress || {})[k] || {}).length).length >= 2,
+};
+const titlesAll = () => (JOR.titulos || []).map(t => Object.assign({ have: !!(TITLE_RULES[t.id] && TITLE_RULES[t.id]()) }, t));
+const titleShown = () => { const t = titlesAll().find(x => x.id === S.titleSel && x.have); return t ? t.nome : titleOf(lvl(S.xp).L); };
+
 // ---------- audio ----------
 let AC = null;
 function ac() {
@@ -1605,7 +1665,7 @@ function renderChrome() {
     <button class="stat xp" data-act="go" data-v="profile" title="Nível ${lv.L}">${I("bolt")}${lv.L}${boosted() ? '<span class="boost-tag">2x</span>' : ""}</button>`;
   const due = dueWords(S.lang).length;
   // study tools first, then the story and the rest
-  const navs = [["home", "home", "Início", "Início"], ["learn", "map", "Lições", "Lições"], ["abc", "abc", "Alfabeto", "ABC"], ["train", "target", "Treino", "Treino"], ["speak", "mic", "Pronúncia", "Fala"], ["talk", "chat", "Conversas", "Papo"], ["mastery", "stats", "Domínio", "Domínio"], ["story", "book", "História", "História"], ["notes", "pen", "Caderno", "Caderno"], ["ach", "trophy", "Conquistas", "Troféus"], ["shop", "bag", "Loja", "Loja"], ["friends", "users", "Amigos", "Amigos"], ["profile", "user", "Perfil", "Perfil"]];
+  const navs = [["home", "home", "Início", "Início"], ["learn", "map", "Lições", "Lições"], ["abc", "abc", "Alfabeto", "ABC"], ["train", "target", "Treino", "Treino"], ["speak", "mic", "Pronúncia", "Fala"], ["talk", "chat", "Conversas", "Papo"], ["mastery", "stats", "Domínio", "Domínio"], ["story", "book", "História", "História"], ["notes", "pen", "Caderno", "Caderno"], ["ach", "trophy", "Conquistas", "Troféus"], ["shop", "bag", "Mercado", "Mercado"], ["friends", "users", "Amigos", "Amigos"], ["profile", "user", "Perfil", "Perfil"]];
   const dotOf = v => (v === "train" && due >= 4 ? '<i class="dot" title="Palavras para revisar"></i>' : "") + (v === "friends" && unreadTotal() ? '<i class="dot" title="Mensagens novas"></i>' : "");
   const inMore = !NAV_MAIN.includes(S.view);
   $("#nav").innerHTML = navs.map(([v, ic, label, short]) =>
@@ -1891,19 +1951,53 @@ function viewAch() {
     ACH.map(a => { const [v, t] = a.p(), got = !!S.ach[a.id]; return `<div class="ach ${got ? "" : "lock"}"><div class="medal">${I("medal")}</div><strong>${esc(a.name)}</strong><p>${esc(a.desc)}</p>
       ${got ? `<small>Desbloqueada em ${new Date(S.ach[a.id] + "T12:00").toLocaleDateString("pt-BR")}</small>` : `<div class="bar"><i style="width:${Math.min(1, v / t) * 100}%"></i></div><small>${Math.min(v, t)} / ${t}</small>`}</div>`; }).join("") + "</div>";
 }
+let MK = "sup";  // the market section on screen
 function viewShop() {
-  return `<div class="page-head"><h1>Loja</h1><p>Você tem <b style="color:var(--coin)">${S.coins} moedas</b>. Ganhe mais completando lições, missões do dia, baús e conquistas.</p></div>
-    <div class="card">${SHOP.map(it => { const ok = it.can(), afford = S.coins >= it.price; return `<div class="shop-item"><div class="ic" style="background:${it.color}">${I(it.icon)}</div>
+  const tabs = [["sup", "bag", "Suprimentos"], ["pul", "zig", "Pulseiras"], ["lem", "star", "Lembranças"], ["tit", "medal", "Títulos"]];
+  const body = { sup: mkSupplies, pul: mkBracelets, lem: mkSouvenirs, tit: mkTitles }[MK] || mkSupplies;
+  return `<div class="page-head"><h1>Mercado do Viajante</h1><p>Você tem <b style="color:var(--coin)">${S.coins} moedas</b>. Lembranças e títulos não se compram: vêm dos capítulos e do seu estudo.</p></div>
+    <div class="mk-tabs" role="tablist">${tabs.map(([id, ic, n]) => `<button class="chip" role="tab" data-act="mkTab" data-t="${id}" aria-selected="${MK === id}" aria-pressed="${MK === id}">${I(ic)}${n}</button>`).join("")}</div>
+    ${body()}`;
+}
+function mkBracelets() {
+  const now = braceletNow();
+  return `<div class="card"><p class="muted mk-note">A pulseira aparece no canto do palco da história e brilha quando você responde bem. A cor vale em todas as histórias.</p>
+    <div class="mk-grid">${BRACELETS.map(b => { const own = ownsBracelet(b.id), on = now.id === b.id;
+      return `<div class="mk-br ${on ? "on" : ""}"><span class="bracelet mk-prev" style="--br:${b.cor}">${I("zig")}<b>3</b></span><strong>${esc(b.nome)}</strong>
+        ${on ? `<span class="chip">${I("check")}Em uso</span>` : own ? `<button class="btn small ghost" data-act="mkWear" data-id="${b.id}">Usar</button>`
+          : `<button class="btn small" data-act="mkBuyBr" data-id="${b.id}" ${S.coins >= b.preco ? "" : "disabled"}><span class="price">${I("gem")}${b.preco}</span></button>`}</div>`; }).join("")}</div></div>`;
+}
+function mkSouvenirs() {
+  const shelf = shelfNow().map(x => x.id), langs = Object.keys(STORY).filter(k => LANGS[k]);
+  return `<div class="card"><p class="muted mk-note">Cada capítulo terminado da história deixa uma lembrança, de graça. Toque para pôr ou tirar da estante do perfil (cabem ${SHELF_MAX}). Cada uma traz a palavra no idioma da história.</p>
+    ${langs.map(k => `<h3 class="mk-h"><span class="badge" style="--bc:${LANGS[k].color}">${LANGS[k].code}</span>${esc(LANGS[k].name)}</h3><div class="mk-sv">${souvenirsOf(k).map(x => x.have
+      ? `<button class="sv ${shelf.includes(x.id) ? "on" : ""}" data-act="mkShelf" data-id="${x.id}" aria-pressed="${shelf.includes(x.id)}"><i>${x.ic}</i><b>${esc(x.w)}</b><small>${esc(x.pt)}</small><em>${shelf.includes(x.id) ? "na estante" : "cap. " + x.n}</em></button>`
+      : `<div class="sv locked"><i>${I("lock")}</i><b>Capítulo ${x.n}</b><small>termine para ganhar</small></div>`).join("")}</div>`).join("")}</div>`;
+}
+function mkTitles() {
+  const shown = titleShown();
+  return `<div class="card"><p class="muted mk-note">Títulos vêm do que você estuda. Escolha um para aparecer no seu perfil no lugar do título do nível (${esc(titleOf(lvl(S.xp).L))}).</p>
+    <div class="wk-list">${titlesAll().map(t => `<div class="wk-li ${t.have ? "done" : ""}">${I(t.have ? "medal" : "lock")}<div><b>${esc(t.nome)}</b><small>${esc(t.texto)}</small></div>
+      ${t.have ? (S.titleSel === t.id ? `<button class="btn small ghost" data-act="mkTitle" data-id="">Tirar</button>` : `<button class="btn small" data-act="mkTitle" data-id="${t.id}">Usar</button>`) : `<span>ainda não</span>`}</div>`).join("")}</div>
+    <p class="muted mk-note" style="margin-top:10px">No perfil agora: <b>${esc(shown)}</b></p></div>`;
+}
+function mkSupplies() {
+  return `<div class="card">${SHOP.map(it => { const ok = it.can(), afford = S.coins >= it.price; return `<div class="shop-item"><div class="ic" style="background:${it.color}">${I(it.icon)}</div>
       <div><strong>${esc(it.name)}</strong><p>${esc(it.desc)}${it.id === "freeze" ? ` Você tem ${S.freezes}.` : ""}${it.id === "boost" && boosted() ? ` Ativo por mais ${Math.ceil((S.boostUntil - Date.now()) / 60e3)} min.` : ""}</p></div>
       <button class="btn small ${ok && afford ? "" : ""}" data-act="buy" data-id="${it.id}" ${ok && afford ? "" : "disabled"}>${ok ? `<span class="price">${I("gem")}${it.price}</span>` : esc(it.why)}</button></div>`; }).join("")}</div>
     <div class="card" style="margin-top:16px"><h3>Como ganhar moedas</h3><div class="wlist">
-      ${[["Lição concluída", "+10"], ["Lição sem erros", "+5 extra"], ["Treino concluído", "+5"], ["Missão do dia", "+15 a +20"], ["Baú de unidade", "+30"], ["Subir de nível", "+25"], ["Conquista", "+" + ACH_REWARD]].map(([a, b]) => `<div class="wrow" style="grid-template-columns:1fr auto"><span class="w">${a}</span><b style="color:var(--coin)">${b}</b></div>`).join("")}</div></div>`;
+      ${[["Lição concluída", "+10"], ["Lição sem erros", "+5 extra"], ["Treino concluído", "+5"], ["Missão do dia", "+15 a +20"], ["Baú de unidade", "+30"], ["Subir de nível", "+25"], ["Conquista", "+" + ACH_REWARD], ["Marcos da semana", JOR.marcos.map(m => "+" + m.moedas).join(" / ")]].map(([a, b]) => `<div class="wrow" style="grid-template-columns:1fr auto"><span class="w">${a}</span><b style="color:var(--coin)">${b}</b></div>`).join("")}</div></div>`;
 }
 function viewProfile() {
   const lv = lvl(S.xp), acc = S.stats.answered ? Math.round(S.stats.correct / S.stats.answered * 100) : 0;
   const tiles = [["bolt", "var(--xp)", S.xp, "XP total"], ["flame", "var(--flame)", S.bestStreak, "maior sequência"], ["book", "var(--lang)", S.stats.lessons, "lições"], ["star", "var(--gold)", totalLearned(), "palavras aprendidas"], ["target", "var(--ok)", acc + "%", "de acertos"], ["trophy", "var(--gold-dark)", Object.keys(S.ach).length, "conquistas"]];
-  return `<div class="page-head"><h1>Perfil</h1><p>Nível ${lv.L} · ${titleOf(lv.L)}</p></div><div class="stack">
+  const shelf = shelfNow();
+  return `<div class="page-head"><h1>Perfil</h1><p>Nível ${lv.L} · ${esc(titleShown())}</p></div><div class="stack">
     <div class="card">${levelHtml()}</div>
+    <div class="card"><div class="wk-top"><h3 style="margin:0">Sua estante</h3><button class="linkish" style="margin-left:auto" data-act="mkGo" data-t="lem">arrumar</button></div>
+      ${shelf.length ? `<div class="shelf">${shelf.map(x => `<button class="sv-mini" data-act="svInfo" data-id="${x.id}" title="${esc(x.w)} · ${esc(x.pt)}"><i>${x.ic}</i><small>${esc(x.pt)}</small></button>`).join("")}</div>`
+        : `<p class="muted" style="font-weight:700;margin:8px 0 0">${allSouvenirs().length ? "Estante vazia. Escolha lembranças no Mercado." : "Termine um capítulo da história para ganhar a primeira lembrança."}</p>`}
+      <div class="shelf-board"></div></div>
     <button class="btn ghost only-phone" data-act="go" data-v="ach">${I("trophy")}Ver conquistas</button>
     <div class="tiles">${tiles.map(([ic, c, v, l]) => `<div class="tile"><span style="color:${c}">${I(ic)}</span><div><b>${v}</b><span>${l}</span></div></div>`).join("")}</div>
     <div class="card"><h3>Seus idiomas</h3>${LKEYS.map(k => { const L = LANGS[k], p = coursePct(k); return `<button class="lang-row" data-act="setLang" data-k="${k}"><span class="badge" style="--bc:${L.color}">${L.code}</span>
@@ -2087,6 +2181,9 @@ function mergeSaves(base, other) {
   m.abc = maxBy(base.abc, other.abc, (x, y) => maxBy(x, y, num));
   m.speech = Object.assign({}, other.speech, base.speech);
   m.talks = Object.assign({}, other.talks, base.talks);
+  m.bracelets = Object.assign({}, other.bracelets, base.bracelets);
+  for (const k of ["bracelet", "titleSel"]) m[k] = base[k] || other[k] || "";
+  m.shelf = (base.shelf && base.shelf.length ? base.shelf : other.shelf) || [];
   m.week = maxBy(base.week, other.week, (x, y) => Object.assign({}, x, y));  // milestones paid on either device
   m.skill = maxBy(base.skill, other.skill, (x, y) => maxBy(x, y, (a, b) => ((b && b.n) || 0) > ((a && a.n) || 0) ? b : a));
   for (const k in other.stats || {}) if (typeof other.stats[k] === "number") m.stats[k] = num(m.stats[k], other.stats[k]);
@@ -3536,7 +3633,7 @@ function renderStory() {
   paintLesson(`<div class="l-top"><button class="x" data-act="syQuit" aria-label="Sair da história">${I("x")}</button><div class="bar"><i style="width:${SY.i / N * 100}%"></i></div>
       <span class="purse-n" title="Moedas na história">${I("gem")}${SY.purse}</span><button class="bag-btn" data-act="syBag" aria-label="Mochila">${I("bag")}<b>${bagN}</b></button></div>
     <div class="l-body"><div class="l-in vn">
-      <div class="stage bg-${SY.scene}">${stageLayers(SY.scene, SY.who && !n.nar ? syActor(SY.who) : "")}<span class="stage-label">${esc(SY.label)}</span><button class="sy-pause" data-act="syPause" data-p="false" aria-label="Pausar a fala">${I("pause")}</button><div class="bracelet ${SY.glow ? "glow" : ""}" title="Brilhos da pulseira: ${SY.shards}">${I("zig")}<b>${SY.shards}</b></div></div>
+      <div class="stage bg-${SY.scene}">${stageLayers(SY.scene, SY.who && !n.nar ? syActor(SY.who) : "")}<span class="stage-label">${esc(SY.label)}</span><button class="sy-pause" data-act="syPause" data-p="false" aria-label="Pausar a fala">${I("pause")}</button><div class="bracelet ${SY.glow ? "glow" : ""}" style="--br:${braceletNow().cor}" title="Pulseira ${esc(braceletNow().nome)} · brilhos: ${SY.shards}">${I("zig")}<b>${SY.shards}</b></div></div>
       <div class="vn-box">${box}</div>
     </div></div>
     <div class="l-foot"><div class="l-foot-in vn-foot">${foot}</div></div>`, "s" + SY.i + (SY.pick ? "p" : ""));
@@ -3818,10 +3915,34 @@ const A = {
     if (!it || !it.can() || S.coins < it.price) return;
     S.coins -= it.price; it.buy(); save(); sfx("coin"); render(); toast(`${it.name} comprado.`, it.icon);
   },
+  mkTab: d => { MK = d.t; render(); },
+  mkGo: d => { MK = d.t; S.view = "shop"; save(); render(); scrollTo(0, 0); },
+  mkBuyBr: d => {
+    const b = BRACELETS.find(x => x.id === d.id);
+    if (!b || ownsBracelet(b.id) || S.coins < b.preco) return;
+    S.coins -= b.preco; (S.bracelets ||= {})[b.id] = true; S.bracelet = b.id; save(); sfx("coin"); render(); toast(`Pulseira ${esc(b.nome)} comprada e em uso.`, "zig");
+  },
+  mkWear: d => { if (!ownsBracelet(d.id)) return; S.bracelet = d.id; save(); render(); },
+  mkShelf: d => {
+    const cur = shelfNow().map(x => x.id);
+    if (cur.includes(d.id)) S.shelf = cur.filter(x => x !== d.id);
+    else if (cur.length >= SHELF_MAX) { toast(`A estante tem ${SHELF_MAX} lugares. Tire uma lembrança antes.`, "star"); return; }
+    else S.shelf = cur.concat(d.id);
+    if (!S.shelf.length) S.shelf = ["-"];  // an empty shelf by choice stays empty
+    save(); render();
+  },
+  mkTitle: d => { S.titleSel = d.id; save(); render(); },
+  svInfo: d => {
+    const x = allSouvenirs().find(v => v.id === d.id); if (!x) return;
+    modal(`<div style="font-size:56px;text-align:center">${x.ic}</div><h2 style="text-align:center">${esc(x.w)}</h2><p class="muted" style="text-align:center;font-weight:800;margin-top:-6px">${esc(x.pt)}</p>
+      ${x.ex ? `<p style="text-align:center;font-weight:700">${esc(x.ex)}<br><small class="muted">${esc(x.exPt)}</small></p>` : ""}
+      <p class="muted" style="text-align:center;font-weight:700;font-size:14px">Lembrança do capítulo ${x.n}: ${esc(x.ch)}</p>
+      <div class="acts"><button class="btn ghost" data-act="say" data-t="${esc(x.ex || x.w)}" data-l="${x.lang}">${I("speaker")}Ouvir</button><button class="btn" data-act="closeModal">Ok</button></div>`);
+  },
   buyRefill: () => { if (S.coins < 60) return; S.coins -= 60; S.hearts = MAX_HEARTS; S.heartsAt = Date.now(); save(); closeModal(); render(); sfx("coin"); toast("Vidas recarregadas.", "heart"); },
   refillGo: () => { if (S.coins < 60) return; S.coins -= 60; S.hearts = MAX_HEARTS; S.heartsAt = Date.now(); save(); closeModal(); sfx("coin"); LS.pos++; LS.state = "answer"; LS.sel = null; if (LS.pos >= LS.queue.length) finish(); else renderLesson(); },
   heartsInfo: () => modal(`<h2>${S.hearts} de ${MAX_HEARTS} vidas</h2><p class="muted" style="font-weight:700">As vidas só valem no <b>Desafio</b>: um modo opcional para refazer uma lição já concluída, em que cada erro custa 1 vida e terminar dá +10 moedas e +20 XP. Nas lições normais, no treino, na fala e na história, errar não custa nada: você vê a explicação e tenta de novo. ${S.hearts < MAX_HEARTS ? `A próxima vida volta em ${nextHeartMin()} min.` : "Suas vidas estão cheias."} Cada treino completo devolve 1.</p>
-    <div class="acts"><button class="btn" data-act="closeModal">Ok</button>${S.hearts < MAX_HEARTS ? `<button class="btn ghost" data-act="go" data-v="shop">Ir à loja</button>` : ""}</div>`),
+    <div class="acts"><button class="btn" data-act="closeModal">Ok</button>${S.hearts < MAX_HEARTS ? `<button class="btn ghost" data-act="go" data-v="shop">Ir ao Mercado</button>` : ""}</div>`),
   weekInfo: () => {
     const t = dkey(), paid = (S.week || {})[weekOf()[0]] || {}, n = weekCount();
     const rows = [4, 3, 2, 1, 0].map(b => `<div class="cal-row">${weekOf(t, b).map(k => `<span class="cal-d ${dayStudied(k) ? "on" : k === t ? "today" : k > t ? "next" : ""}" title="${k.slice(8)}/${k.slice(5, 7)}">${keyDate(k).getDate()}</span>`).join("")}<small>${weekCount(b)}/7</small></div>`).join("");
