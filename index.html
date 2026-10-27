@@ -96,6 +96,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .stat svg{width:22px;height:22px}
 .stat.flame{color:var(--flame)} .stat.coin{color:var(--coin)} .stat.heart{color:var(--heart)} .stat.xp{color:var(--xp)}
 .stat.flame.off{color:var(--locked-ink)}
+.stat.week{color:var(--lang)} .stat.week.off{color:var(--muted)}
 .boost-tag{font-size:11px;background:var(--xp);color:#fff;border-radius:6px;padding:1px 5px;margin-left:2px}
 
 /* shell */
@@ -112,6 +113,30 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .card{background:var(--surface);border:2px solid var(--line);border-radius:18px;padding:18px}
 .card h3{font-size:19px;margin-bottom:10px}
 .only-narrow{display:none}
+/* Semana da jornada */
+.week-card{display:grid;gap:10px;width:100%;text-align:left;font:inherit;color:var(--ink);background:none;border:0;padding:0;cursor:pointer}
+.wk-top{display:flex;align-items:baseline;gap:8px}.wk-top small{margin-left:auto;font-weight:800}
+.wk-days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px}
+.wk-d{display:grid;justify-items:center;gap:3px}
+.wk-d i{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;font-style:normal;font-weight:800;font-size:13px;background:var(--surface-2);color:var(--muted)}
+.wk-d.on i{background:var(--lang);color:#fff}.wk-d.on svg{width:16px;height:16px}
+.wk-d.today i{box-shadow:inset 0 0 0 2px var(--lang);color:var(--ink)}
+.wk-d.next i{opacity:.45}
+.wk-d small{font-size:11px;font-weight:800;color:var(--muted)}
+.wk-marks{display:flex;gap:6px;flex-wrap:wrap}
+.wk-m{display:flex;align-items:center;gap:4px;padding:4px 8px;border-radius:999px;background:var(--surface-2);font-size:12px;font-weight:800;color:var(--muted)}
+.wk-m svg{width:13px;height:13px}.wk-m small{color:var(--coin);font-weight:800}
+.wk-m.done{color:var(--ink);background:color-mix(in srgb,var(--lang) 25%,var(--surface-2))}
+.cal{display:grid;gap:6px}
+.cal-row{display:grid;grid-template-columns:repeat(7,minmax(0,1fr)) 36px;gap:6px;align-items:center}
+.cal-row > small{text-align:center;font-weight:800;color:var(--muted);font-size:12px}
+.cal-d{display:grid;place-items:center;height:32px;border-radius:8px;background:var(--surface-2);font-weight:800;font-size:13px;color:var(--muted)}
+.cal-d.on{background:var(--lang);color:#fff}.cal-d.today{box-shadow:inset 0 0 0 2px var(--lang);color:var(--ink)}.cal-d.next{opacity:.35}
+.wk-list{display:grid;gap:8px;margin-bottom:12px}
+.wk-li{display:flex;gap:10px;align-items:center;padding:8px 10px;border-radius:10px;background:var(--surface-2)}
+.wk-li > svg{width:20px;height:20px;color:var(--gold);flex:none}.wk-li.done > svg{color:var(--lang)}
+.wk-li div{flex:1;min-width:0}.wk-li div b{display:block}.wk-li div small{font-weight:700;color:var(--muted)}
+.wk-li > span{display:grid;justify-items:end;font-size:12px;font-weight:800;color:var(--muted)}.wk-li > span b{color:var(--coin);font-size:15px}
 /* Domínio */
 .skill-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
 .skill-card{display:grid;gap:8px;align-content:start}
@@ -938,6 +963,7 @@ textarea.lines::placeholder{color:#a3acbb}
 <script src="historia-ru.js"></script>
 <script src="glossario.js"></script>
 <script src="alfabeto.js"></script>
+<script src="jornada.js"></script>
 <script>
 (() => {
 "use strict";
@@ -990,6 +1016,7 @@ const P = {
   left: '<path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M15 5l-7 7 7 7"/>',
   right: '<path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>',
   map: '<path fill="currentColor" opacity=".55" d="M3 6.2l5.5-2.2v14.8L3 21z"/><path fill="currentColor" d="M8.5 4l7 2.4v14.8l-7-2.4z"/><path fill="currentColor" opacity=".55" d="M15.5 6.4L21 4.2V19l-5.5 2.2z"/>',
+  cal: '<rect x="3.5" y="5" width="17" height="15.5" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path fill="currentColor" d="M3.5 7.5a2.5 2.5 0 0 1 2.5-2.5h12a2.5 2.5 0 0 1 2.5 2.5V10h-17z"/><path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M8 3v4M16 3v4"/><rect x="7" y="13" width="3" height="3" rx=".8" fill="currentColor"/><rect x="14" y="13" width="3" height="3" rx=".8" fill="currentColor" opacity=".5"/>',
   stats: '<rect x="4" y="12" width="4" height="8" rx="1.2" fill="currentColor" opacity=".55"/><rect x="10" y="7" width="4" height="13" rx="1.2" fill="currentColor"/><rect x="16" y="3.5" width="4" height="16.5" rx="1.2" fill="currentColor" opacity=".8"/>',
   slow: '<path fill="currentColor" d="M4 15.5c0-3.6 3-6.5 6.6-6.5 3.2 0 5.8 2.2 6.4 5.2h1.4a1.6 1.6 0 1 1 0 3.3H5.6A1.6 1.6 0 0 1 4 15.5z"/><circle cx="18.5" cy="9" r="2.3" fill="currentColor"/>',
 };
@@ -1000,7 +1027,7 @@ const KEY = "babel-save-v1"; // name from before the app was renamed; kept so sa
 const fresh = () => ({
   v: 1, onboarded: false, lang: "en", view: "home", xp: 0, coins: 50, hearts: 5, heartsAt: Date.now(),
   streak: 0, bestStreak: 0, lastDay: null, freezes: 0, goal: 30, day: {}, boostUntil: 0,
-  sound: true, translit: true, progress: {}, chests: {}, srs: {}, ach: {}, quests: {}, speech: {}, talks: {}, voicePick: {}, story: {}, bag: [], noMicUntil: 0, plan: {}, coop: {}, abc: {}, placed: {}, skill: {},
+  sound: true, translit: true, progress: {}, chests: {}, srs: {}, ach: {}, quests: {}, speech: {}, talks: {}, voicePick: {}, story: {}, bag: [], noMicUntil: 0, plan: {}, coop: {}, abc: {}, placed: {}, skill: {}, week: {},
   stats: { lessons: 0, perfect: 0, maxCombo: 0, reviews: 0, langs: {}, correct: 0, answered: 0, owl: false, early: false, chests: 0, spoken: 0, spokenGreat: 0, speechTests: 0, talks: 0, story: 0 },
 });
 let S = fresh();
@@ -1049,6 +1076,7 @@ setInterval(() => {
   (d.sec ||= {})[k] = had + 5;
   save();
   if (had < goal && had + 5 >= goal) { sfx("done"); toast(`Meta de hoje cumprida: ${goalMin(k)} min de ${LANGS[k].learning}!`, "flame"); }
+  for (const g of claimWeek()) { sfx("done"); toast(`Marco da semana: ${esc(g.text)}. +${g.reward} moedas`, "star"); save(); renderChrome(); }
   document.querySelectorAll(".goal").forEach(g => { g.outerHTML = goalHtml(); });
 }, 5000);
 
@@ -1214,7 +1242,58 @@ function claimQuests() {
     const q = QUESTS[id];
     if (!S.quests[k][id] && q.val(d) >= q.target()) { S.quests[k][id] = true; S.coins += q.reward; got.push({ text: q.text(), reward: q.reward }); }
   }
+  return got.concat(claimWeek());
+}
+
+// ---------- semana da jornada ----------
+// The week (Monday to Sunday) and its milestones come from jornada.js. A day counts as studied when it gave XP
+// or had JOR.minutosDia minutes of study time, in any language. Each milestone pays once a week; what was
+// paid is kept in S.week[monday] = { milestoneId: true } (the last 12 weeks).
+const JOR = Object.assign({ minutosDia: 3, marcos: [], voltaDias: 3, volta: { titulo: "Que bom ter você de volta!", texto: "" } }, window.XIB_JORNADA || {});
+const WEEKDAYS = ["Seg", "Ter", "Qua", "Qui", "Sex", "Sáb", "Dom"];
+const keyDate = k => new Date(k + "T12:00");
+function weekOf(k = dkey(), back = 0) {
+  const d = keyDate(k); d.setDate(d.getDate() - (d.getDay() + 6) % 7 - 7 * back);
+  return Array.from({ length: 7 }, (_, i) => { const x = new Date(d); x.setDate(d.getDate() + i); return dkey(x); });
+}
+function dayStudied(k) {
+  const d = S.day[k]; if (!d) return false;
+  const sec = Object.values(d.sec || {}).reduce((a, b) => a + (+b || 0), 0);
+  return d.xp > 0 || sec >= JOR.minutosDia * 60;
+}
+const weekCount = (back = 0) => weekOf(dkey(), back).filter(dayStudied).length;
+function claimWeek() {
+  const days = weekOf(), n = days.filter(dayStudied).length, got = [];
+  const w = (S.week ||= {})[days[0]] ||= {};
+  for (const m of JOR.marcos) if (!w[m.id] && n >= m.dias) { w[m.id] = true; S.coins += m.moedas; got.push({ label: "Marco da semana", text: m.nome, reward: m.moedas }); }
+  const old = weekOf(dkey(), 12)[0];
+  for (const k of Object.keys(S.week)) if (k < old) delete S.week[k];
   return got;
+}
+// the 7 days of this week as small circles
+function weekDotsHtml() {
+  const t = dkey();
+  return `<div class="wk-days">${weekOf().map((k, i) => {
+    const st = dayStudied(k) ? "on" : k === t ? "today" : k > t ? "next" : "off";
+    return `<span class="wk-d ${st}" title="${WEEKDAYS[i]} ${k.slice(8)}/${k.slice(5, 7)}${st === "on" ? ": estudou" : ""}"><i>${st === "on" ? I("check") : keyDate(k).getDate()}</i><small>${WEEKDAYS[i]}</small></span>`;
+  }).join("")}</div>`;
+}
+function weekHtml() {
+  const n = weekCount(), paid = (S.week || {})[weekOf()[0]] || {};
+  return `<button class="week-card" data-act="weekInfo" aria-label="Ver o calendário"><span class="wk-top"><b>Sua semana</b><small class="muted">${n} de 7 dias</small></span>${weekDotsHtml()}
+    <span class="wk-marks">${JOR.marcos.map(m => `<span class="wk-m ${paid[m.id] ? "done" : ""}" title="${esc(m.texto)}">${I(paid[m.id] ? "check" : "star")}${m.dias} dias<small>+${m.moedas}</small></span>`).join("")}</span></button>`;
+}
+// the welcome after some days away (once per return)
+function welcomeBack(last) {
+  if (!S.onboarded || !last || S.welcomeFor === dkey()) return false;
+  const away = Math.round((keyDate(dkey()) - keyDate(last)) / 864e5);
+  if (away < JOR.voltaDias) return false;
+  S.welcomeFor = dkey(); save();
+  const canReview = seenWords(S.lang).length >= 4, cur = currentOf(S.lang);
+  modal(`<div style="color:var(--lang);font-size:56px;text-align:center">${I("cal")}</div><h2 style="text-align:center">${esc(JOR.volta.titulo)}</h2>
+    <p class="muted" style="font-weight:700;text-align:center">${esc(JOR.volta.texto.replace("{dias}", away))}</p>
+    <div class="acts">${canReview ? `<button class="btn" data-act="review">${I("target")}Treino curto</button>` : ""}${cur ? `<button class="btn ${canReview ? "ghost" : ""}" data-act="welcomeLesson" data-u="${cur.u}" data-l="${cur.l}">${I("book")}Próxima lição</button>` : `<button class="btn ghost" data-act="closeModal">Ok</button>`}</div>`);
+  return true;
 }
 const ACH = [
   { id: "first", name: "Primeiro passo", desc: "Complete sua primeira lição", p: () => [S.stats.lessons, 1] },
@@ -1521,9 +1600,8 @@ function renderChrome() {
   $("#langBtn").innerHTML = `<span class="badge">${L.code}</span><span class="lname">${esc(L.name)}</span>`;
   const lv = lvl(S.xp);
   $("#stats").innerHTML = `
-    <button class="stat flame ${studiedToday() ? "" : "off"}" data-act="streakInfo" title="Sequência de dias">${I("flame")}${S.streak}</button>
+    <button class="stat week ${studiedToday() ? "" : "off"}" data-act="weekInfo" title="Dias estudados nesta semana">${I("cal")}${weekCount()}/7</button>
     <button class="stat coin" data-act="go" data-v="shop" title="Moedas">${I("gem")}${S.coins}</button>
-    <button class="stat heart" data-act="heartsInfo" title="Vidas">${I("heart")}${S.hearts}</button>
     <button class="stat xp" data-act="go" data-v="profile" title="Nível ${lv.L}">${I("bolt")}${lv.L}${boosted() ? '<span class="boost-tag">2x</span>' : ""}</button>`;
   const due = dueWords(S.lang).length;
   // study tools first, then the story and the rest
@@ -1555,6 +1633,7 @@ function levelHtml() {
 }
 function sideHtml() {
   return `<div class="card">${goalHtml()}</div>
+    <div class="card">${weekHtml()}</div>
     <div class="card"><h3>Missões do dia</h3>${questsHtml()}</div>
     <div class="card"><h3>Seu nível</h3>${levelHtml()}</div>`;
 }
@@ -1752,7 +1831,7 @@ function viewHome() {
   const lang = S.lang, L = LANGS[lang];
   return `<div class="page-head"><h1>Início</h1><p>Seu ${esc(L.learning)} de hoje: estude, revise e use o que aprendeu na história.</p></div>
     <div class="home">${homeNextHtml(lang)}${homeToolsHtml(lang)}${homeMasteryHtml(lang)}${homeStoryHtml(lang)}
-      <div class="only-narrow card">${goalHtml()}</div><div class="only-narrow card"><h3>Missões do dia</h3>${questsHtml()}</div></div>`;
+      <div class="only-narrow card">${goalHtml()}</div><div class="only-narrow card">${weekHtml()}</div><div class="only-narrow card"><h3>Missões do dia</h3>${questsHtml()}</div></div>`;
 }
 function popHtml(u, l, ls, state) {
   if (state === "locked") return `<div class="pop locked"><h4>${esc(ls.name)}</h4><p class="muted">Complete as lições anteriores para liberar esta.</p></div>`;
@@ -2008,6 +2087,7 @@ function mergeSaves(base, other) {
   m.abc = maxBy(base.abc, other.abc, (x, y) => maxBy(x, y, num));
   m.speech = Object.assign({}, other.speech, base.speech);
   m.talks = Object.assign({}, other.talks, base.talks);
+  m.week = maxBy(base.week, other.week, (x, y) => Object.assign({}, x, y));  // milestones paid on either device
   m.skill = maxBy(base.skill, other.skill, (x, y) => maxBy(x, y, (a, b) => ((b && b.n) || 0) > ((a && a.n) || 0) ? b : a));
   for (const k in other.stats || {}) if (typeof other.stats[k] === "number") m.stats[k] = num(m.stats[k], other.stats[k]);
   m.stats.langs = maxBy(m.stats.langs, (other.stats || {}).langs, num);
@@ -2969,7 +3049,7 @@ function finish() {
   if (lvAfter > lvBefore) rewards.push(`<div class="rw lvlup">${I("bolt")}<div>Nível ${lvAfter}: ${titleOf(lvAfter)}!<small>+${25 * (lvAfter - lvBefore)} moedas de bônus</small></div></div>`);
   if (streakUp) rewards.push(`<div class="rw" style="color:var(--flame)">${I("flame")}<div>Sequência de ${S.streak} ${S.streak === 1 ? "dia" : "dias"}!<small>Volte amanhã para manter o fogo aceso</small></div></div>`);
   if (unitFinished) rewards.push(`<div class="rw" style="color:var(--gold-dark)">${I("chest")}<div>Unidade concluída!<small>Abra o baú no mapa para ganhar 30 moedas</small></div></div>`);
-  for (const q of quests) rewards.push(`<div class="rw" style="color:var(--xp)">${I("target")}<div>Missão cumprida: ${esc(q.text)}<small>+${q.reward} moedas</small></div></div>`);
+  for (const q of quests) rewards.push(`<div class="rw" style="color:var(--xp)">${I("target")}<div>${esc(q.label || "Missão cumprida")}: ${esc(q.text)}<small>+${q.reward} moedas</small></div></div>`);
   for (const a of achs) rewards.push(`<div class="rw" style="color:var(--gold-dark)">${I("medal")}<div>Conquista: ${esc(a.name)}<small>${esc(a.desc)} · +${ACH_REWARD} moedas</small></div></div>`);
   const spkSub = spkAvg == null ? "" : spkAvg >= GREAT ? " Sua pronúncia está ótima." : spkAvg >= PASS ? " Sua fala já dá para entender bem." : " Continue falando em voz alta: a pronúncia melhora com a repetição.";
   const title = LS.mode === "review" ? "Treino concluído!" : LS.mode === "practice" ? "Treino de fala concluído!" : LS.speechTest ? "Prova de fala concluída!" : LS.hard ? (perfect ? "Desafio perfeito!" : "Desafio vencido!") : perfect ? "Lição perfeita!" : "Lição concluída!";
@@ -3132,7 +3212,7 @@ function renderTalkEnd() {
   const rewards = [`<div class="rw" style="color:var(--coin)">${I("gem")}<div>+${e.coins} moedas<small>por completar a conversa</small></div></div>`];
   if (e.lvUp) rewards.push(`<div class="rw lvlup">${I("bolt")}<div>Nível ${e.lvAfter}: ${titleOf(e.lvAfter)}!<small>+25 moedas de bônus</small></div></div>`);
   if (e.streakUp) rewards.push(`<div class="rw" style="color:var(--flame)">${I("flame")}<div>Sequência de ${S.streak} ${S.streak === 1 ? "dia" : "dias"}!<small>Volte amanhã para manter o fogo aceso</small></div></div>`);
-  for (const q of e.quests) rewards.push(`<div class="rw" style="color:var(--xp)">${I("target")}<div>Missão cumprida: ${esc(q.text)}<small>+${q.reward} moedas</small></div></div>`);
+  for (const q of e.quests) rewards.push(`<div class="rw" style="color:var(--xp)">${I("target")}<div>${esc(q.label || "Missão cumprida")}: ${esc(q.text)}<small>+${q.reward} moedas</small></div></div>`);
   for (const a of e.achs) rewards.push(`<div class="rw" style="color:var(--gold-dark)">${I("medal")}<div>Conquista: ${esc(a.name)}<small>${esc(a.desc)} · +${ACH_REWARD} moedas</small></div></div>`);
   const stars = e.avg == null ? 0 : starsOf(e.avg);
   paintLesson(`<div class="l-body"><div class="end">
@@ -3486,7 +3566,7 @@ function renderStoryEnd() {
   const rewards = [`<div class="rw" style="color:var(--coin)">${I("gem")}<div>+${e.coins} ${e.coins === 1 ? "moeda" : "moedas"}<small>${e.coins === 1 ? "a que sobrou" : "as que sobraram"} no seu bolso em Shinar</small></div></div>`];
   if (e.lvUp) rewards.push(`<div class="rw lvlup">${I("bolt")}<div>Nível ${e.lvAfter}: ${titleOf(e.lvAfter)}!<small>+25 moedas de bônus</small></div></div>`);
   if (e.streakUp) rewards.push(`<div class="rw" style="color:var(--flame)">${I("flame")}<div>Sequência de ${S.streak} ${S.streak === 1 ? "dia" : "dias"}!<small>Volte amanhã para manter o fogo aceso</small></div></div>`);
-  for (const q of e.quests) rewards.push(`<div class="rw" style="color:var(--xp)">${I("target")}<div>Missão cumprida: ${esc(q.text)}<small>+${q.reward} moedas</small></div></div>`);
+  for (const q of e.quests) rewards.push(`<div class="rw" style="color:var(--xp)">${I("target")}<div>${esc(q.label || "Missão cumprida")}: ${esc(q.text)}<small>+${q.reward} moedas</small></div></div>`);
   for (const a of e.achs) rewards.push(`<div class="rw" style="color:var(--gold-dark)">${I("medal")}<div>Conquista: ${esc(a.name)}<small>${esc(a.desc)} · +${ACH_REWARD} moedas</small></div></div>`);
   paintLesson(`<div class="l-body"><div class="end">
     <div class="stars">${[1, 2, 3].map(i => `<span class="${i <= e.stars ? "on" : ""}">${I("star")}</span>`).join("")}</div>
@@ -3742,6 +3822,17 @@ const A = {
   refillGo: () => { if (S.coins < 60) return; S.coins -= 60; S.hearts = MAX_HEARTS; S.heartsAt = Date.now(); save(); closeModal(); sfx("coin"); LS.pos++; LS.state = "answer"; LS.sel = null; if (LS.pos >= LS.queue.length) finish(); else renderLesson(); },
   heartsInfo: () => modal(`<h2>${S.hearts} de ${MAX_HEARTS} vidas</h2><p class="muted" style="font-weight:700">As vidas só valem no <b>Desafio</b>: um modo opcional para refazer uma lição já concluída, em que cada erro custa 1 vida e terminar dá +10 moedas e +20 XP. Nas lições normais, no treino, na fala e na história, errar não custa nada: você vê a explicação e tenta de novo. ${S.hearts < MAX_HEARTS ? `A próxima vida volta em ${nextHeartMin()} min.` : "Suas vidas estão cheias."} Cada treino completo devolve 1.</p>
     <div class="acts"><button class="btn" data-act="closeModal">Ok</button>${S.hearts < MAX_HEARTS ? `<button class="btn ghost" data-act="go" data-v="shop">Ir à loja</button>` : ""}</div>`),
+  weekInfo: () => {
+    const t = dkey(), paid = (S.week || {})[weekOf()[0]] || {}, n = weekCount();
+    const rows = [4, 3, 2, 1, 0].map(b => `<div class="cal-row">${weekOf(t, b).map(k => `<span class="cal-d ${dayStudied(k) ? "on" : k === t ? "today" : k > t ? "next" : ""}" title="${k.slice(8)}/${k.slice(5, 7)}">${keyDate(k).getDate()}</span>`).join("")}<small>${weekCount(b)}/7</small></div>`).join("");
+    modal(`<h2>Sua jornada</h2><p class="muted" style="font-weight:700;margin-top:-6px">Os dias coloridos são os que você estudou nas últimas 5 semanas.</p>
+      <div class="cal"><div class="cal-row cal-head">${WEEKDAYS.map(d => `<small>${d[0]}</small>`).join("")}<small></small></div>${rows}</div>
+      <h3 style="margin:16px 0 6px">Marcos desta semana · ${n} de 7 dias</h3>
+      <div class="wk-list">${JOR.marcos.map(m => `<div class="wk-li ${paid[m.id] ? "done" : ""}">${I(paid[m.id] ? "check" : "star")}<div><b>${esc(m.nome)}</b><small>${esc(m.texto)}</small></div><span>${paid[m.id] ? "Recebido" : n >= m.dias ? "" : `faltam ${m.dias - n}`}<b>+${m.moedas}</b></span></div>`).join("")}</div>
+      <p class="muted" style="font-weight:700;font-size:14px">Cada marco paga uma vez por semana. A semana começa na segunda. Sequência atual: ${S.streak} ${S.streak === 1 ? "dia" : "dias"} (recorde ${S.bestStreak}). Protetores guardados: ${S.freezes}.</p>
+      <div class="acts"><button class="btn" data-act="closeModal">Ok</button></div>`);
+  },
+  welcomeLesson: d => { closeModal(); startLesson(+d.u, +d.l); },
   streakInfo: () => modal(`<div style="color:var(--flame);font-size:56px;text-align:center">${I("flame")}</div><h2 style="text-align:center">Sequência de ${S.streak} ${S.streak === 1 ? "dia" : "dias"}</h2>
     <p class="muted" style="font-weight:700;text-align:center">${studiedToday() ? "Você já estudou hoje. Volte amanhã para continuar." : "Faça uma lição hoje para manter a sequência."} Seu recorde é ${S.bestStreak} ${S.bestStreak === 1 ? "dia" : "dias"}. Protetores guardados: ${S.freezes}.</p>
     <div class="acts"><button class="btn" data-act="closeModal">Ok</button></div>`),
@@ -4038,13 +4129,17 @@ if (S.onboarded && !standalone() && !S.installHint && matchMedia("(max-width:760
 }
 
 // ---------- boot ----------
+const lastStudy = S.lastDay;  // read before a protector moves it to yesterday
 checkStreak();
+const weekGot = claimWeek(); if (weekGot.length) save();
 regen();
 if (S.onboarded) { const c = currentOf(S.lang); if (c && S.view === "learn" && !isDone(S.lang, 0, 0)) pop = `${c.u}-${c.l}`; }
 LKEYS.forEach(syncPhrases);
 if (S.onboarded && !S.plan[S.lang]) PL = { steps: ["why", "level", "goal", "ready"], i: 0, lang: S.lang };  // people who started before the plan existed answer once
 render();
+if (!PL && welcomeBack(lastStudy)) streakNotice = "";
 if (streakNotice) toast(esc(streakNotice), "flame");
+for (const g of weekGot) toast(`Marco da semana: ${esc(g.text)}. +${g.reward} moedas`, "star");
 { const inv = new URLSearchParams(location.search).get("amigo");
   if (inv) { FR.add = inv.toUpperCase().slice(0, 6); if (S.onboarded) { S.view = "friends"; render(); } history.replaceState(null, "", location.pathname); } }
 frLoad();

@@ -15,7 +15,7 @@ const section = t => console.log("\n" + t);
 // ---------- 1. conteúdo ----------
 section("1. Conteúdo");
 global.window = {};
-for (const f of ["data.js", "conversas.js", "historia.js", "historia-ru.js", "glossario.js", "alfabeto.js"]) require(path.join(ROOT, f));
+for (const f of ["data.js", "conversas.js", "historia.js", "historia-ru.js", "glossario.js", "alfabeto.js", "jornada.js"]) require(path.join(ROOT, f));
 const LANGS = window.BABEL_LANGS, STORY = window.XIB_STORY, TALKS = window.XIB_TALKS;
 for (const [k, L] of Object.entries(LANGS)) {
   ok(L.units.length > 0, `${k}: sem unidades`);
@@ -120,6 +120,31 @@ for (const [base, other, name] of [[A, withSkill, "antigo+novo"], [withSkill, A,
   ok(m.skill.en && m.skill.en.vocab.n === 40, `${name}: o save sem habilidades apagou o registro`);
 }
 ok(JSON.stringify(ctx.loadFrom(store(a)).skill) === "{}", "save antigo: o registro de habilidades devia começar vazio, sem inventar dados");
+
+// semana da jornada: os marcos de jornada.js fazem sentido, pagam uma vez por semana e juntar aparelhos não perde nenhum
+const J = window.XIB_JORNADA;
+ok(J && J.marcos.length && J.volta && J.volta.titulo && J.voltaDias >= 1, "jornada.js: faltam marcos, voltaDias ou o texto de volta");
+ok(new Set(J.marcos.map(m => m.id)).size === J.marcos.length, "jornada.js: ids de marcos repetidos");
+for (const m of J.marcos) ok(m.id && m.dias >= 1 && m.dias <= 7 && m.moedas > 0 && m.nome && m.texto, `jornada.js: marco incompleto ${JSON.stringify(m)}`);
+const wctx = { Date, Math, Object, window: { XIB_JORNADA: J }, S: null, esc: x => x, I: x => x };
+vm.createContext(wctx);
+vm.runInContext([cut("const pad = ", ";"), cut("const dkey = ", ";"), cut("const JOR = ", "\n  return got;\n}")].join("\n") + "\nthis.weekOf = weekOf; this.claimWeek = claimWeek; this.dkey = dkey;", wctx);
+{
+  const t = wctx.dkey(), days = wctx.weekOf();
+  ok(days.length === 7 && days.includes(t) && new Date(days[0] + "T12:00").getDay() === 1, `a semana devia ir de segunda a domingo e conter hoje (${days})`);
+  const S = wctx.S = { coins: 0, week: {}, day: {} };
+  for (const k of days) if (k <= t) S.day[k] = { xp: 10 };
+  S.day[wctx.weekOf(t, 1)[0]] = { xp: 50 };  // last week does not count for this one
+  S.day[days[0]] = S.day[days[0]] || {}; S.day[days[0]].sec = { en: 600 };  // minutes alone count too
+  const n = days.filter(k => k <= t).length, due = J.marcos.filter(m => m.dias <= n);
+  const got = wctx.claimWeek();
+  ok(got.length === due.length && S.coins === due.reduce((a, m) => a + m.moedas, 0), `marcos: com ${n} dias devia pagar ${due.length} marcos (pagou ${got.length}, ${S.coins} moedas)`);
+  const again = wctx.claimWeek();
+  ok(again.length === 0 && S.coins === due.reduce((a, m) => a + m.moedas, 0), "marcos: pagaram duas vezes na mesma semana");
+  const m = ctx.mergeSaves(Object.assign({}, A, { week: { "2026-10-19": { d2: true } } }), Object.assign({}, B, { week: { "2026-10-19": { d4: true }, "2026-10-26": { d2: true } } }));
+  ok(m.week["2026-10-19"].d2 && m.week["2026-10-19"].d4 && m.week["2026-10-26"].d2, `juntar aparelhos perdeu marcos já pagos (${JSON.stringify(m.week)})`);
+  ok(JSON.stringify(ctx.loadFrom(store(a)).week) === "{}", "save antigo: a semana devia começar vazia");
+}
 
 const empty = ctx.loadFrom({ getItem: () => null });
 ok(empty.coins === 50 && empty.hearts === 5 && !empty.onboarded, "sem save: devia começar do zero com 50 moedas e 5 vidas");
